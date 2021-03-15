@@ -8,24 +8,4 @@ body {
   font-family: cairo;
   font-size: 18px;
 }
-
-.small {
-  font-size: 0.5rem;
-}
-
-.normal {
-  font-size: 1rem;
-}
-
-.big {
-  font-size: 2rem;
-}
-
-.large {
-  font-size: 4rem;
-}
-
-.giant {
-  font-size: 8rem;
-}
 /*# sourceMappingURL=main.css.map */
