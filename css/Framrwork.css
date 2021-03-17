@@ -24,7 +24,7 @@
 }
 
 body {
-  text-transform: capitalize;
+  /*text-transform: capitalize;*/
   perspective: 600px;
   min-height: 2000px;
 }
@@ -134,7 +134,7 @@ body {
   font-size: 4rem; // 64 px
 }
 
-.font-iant-128px {
+.font-giant-128px {
   font-size: 8rem; // 128 px
 }
 
@@ -2000,26 +2000,23 @@ body {
 .zIndex-2 {
   z-index: 2;
 }
-
 .zIndex-1 {
   z-index: 1;
 }
-
 /* End zIndex*/
-
 /* Start display*/
 .display-b {
   display: block;
 }
-
 .display-i {
   display: inline;
 }
-
 .display-ib {
   display: inline-block;
 }
-
+.display-n {
+  display: none;
+}
 /* End display*/
 
 /* Start lineHeight */

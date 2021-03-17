@@ -8,4 +8,14 @@ body {
   font-family: cairo;
   font-size: 18px;
 }
+
+.jqvideo13 {
+  background-color: aqua;
+  font-weight: bolder;
+}
+
+.jqvideo131 {
+  width: 50%;
+  margin: auto;
+}
 /*# sourceMappingURL=main.css.map */

@@ -344,3 +344,111 @@ document.getElementById("video30").innerHTML = videoa30;
 var videoa301 = ["hossam", "rashad", "ahmed"];
 videoa301 = videoa301.shift();
 document.getElementById("video301").innerHTML = videoa301;
+/*********************************************** */
+// video31
+// sort | reverse
+// sort بيراتب الاحلااف بى الابجدية و الارقام بى الاصغار الى الاكبار
+//reverse بيعكاس الابجديات
+var videoa31 = ["hossam", "rashad", "ahmed"];
+document.getElementById("video31").innerHTML = videoa31.sort();
+document.getElementById("video311").innerHTML = videoa31.reverse();
+/******************************************/
+// video32
+// combine | slice
+//slice(start, end) هو انو دكا بيقطاع من عند عنصار انت بتحددهولو
+// slice بيقبال القيم بى السالب لو عاوز تبدا من تحت
+//concat بيضيف الارى الجديدة فى الاخار
+var videoa32 = ["hossam", "rashad", "ahmed"];
+document.getElementById("video32").innerHTML = videoa32.slice(1);
+var girl = "cayan";
+document.getElementById("video321").innerHTML = videoa32.concat(girl);
+/****************************************** */
+// video33
+// search in array
+// indexOf بتبحث عن كلمة فى الاراى
+// lastIndexOf بيبحس من الاخار الى الاوال
+// .indexOf("cayan" , 5); كدا انت بتبدا البحث من عند مكان محح فى الاراى
+var videoa33 = [
+  "cayan",
+  "hossam",
+  "rashad",
+  "ahmed",
+  "abboud",
+  "abboud",
+  "hegazy",
+];
+document.getElementById("video33").innerHTML = videoa33.indexOf("cayan");
+/*************************************** */
+// video34
+// مراجعة على الاراى
+var videoa34 = ["hossam", "rashad", "ahmed"];
+if (Array.isArray(videoa34)) {
+  document.getElementById("video341").innerHTML = videoa34 + "yes it is array";
+} else {
+  document.getElementById("video341").innerHTML =
+    videoa34 + "no it is not array";
+}
+// lingth
+var array34 = ["hossam", "rashad", "ahmed"];
+// get array
+document.getElementById("video342").innerHTML = array34.length + " عدد الاراى ";
+// set array
+array34.length = 1;
+document.getElementById("video343").innerHTML =
+  array34.length + " عدد الاراى بعد ما خاليتع عنصر واحد ";
+// تحويل الاراى الى استرانج
+var array341 = ["hossam", "rashad", "ahmed"];
+array341.toString();
+document.getElementById("video344").innerHTML = array341.join(" ");
+// طريقة انو انا اضيف عنصر على الاراى
+array341[array341.length] = "mairem";
+document.getElementById("video345").innerHTML = array341.join(" ");
+array341.push("love");
+document.getElementById("video346").innerHTML = array341.join(" ");
+array341.unshift("cayan");
+document.getElementById("video347").innerHTML = array341.join(" ");
+array341.splice(0, 0, "my girl");
+document.getElementById("video347").innerHTML = array341.join(" ");
+// طريقة ازالة عنصر من الاراى
+array341.splice(6, 1, "my girl");
+document.getElementById("video348").innerHTML = array341.join(" ");
+array341.pop();
+document.getElementById("video349").innerHTML = array341.join(" ");
+array341.shift();
+document.getElementById("video3510").innerHTML = array341.join(" ");
+// ترتيب الاراى
+array341.sort();
+document.getElementById("video3511").innerHTML = array341.join(" ");
+array341.reverse();
+document.getElementById("video3512").innerHTML = array341.join(" ");
+// طريقة انو انت تختار ايه اللى يظهار شريحة من الاراى اللى تظهار
+var array342 = ["cayan", "hossam", "rashad", "ahmed"];
+array342.slice(1, 2);
+document.getElementById("video3513").innerHTML = array342;
+// طريقة دامج اكتار من اراى مع بعض
+var array343 = ["cayan", "hossam", "rashad", "ahmed"];
+var array344 = ["كيان", "حسام", "رشاد", "احمد"];
+document.getElementById("video3514").innerHTML = array343
+  .concat(array344)
+  .join(" ");
+// طريقة البحث
+var array345 = ["cayan", "hossam", "rashad", "ahmed"];
+document.getElementById("video3515").innerHTML = array345.indexOf(/rashad/i);
+document.getElementById("video3516").innerHTML = array345.lastIndexOf(
+  /rashad/i
+);
+/********************** */
+// video 35
+// string
+var string35 = "Lorem Ipsum Dolor Sit Amet   Elit. Quisquam, Dolor";
+document.getElementById("video35").innerHTML = string35;
+// عشان اجيب نوع الدات
+document.getElementById("video351").innerHTML = typeof string35;
+/***-************************ */
+// video 36
+// string methods indexOf || lastIndexOf || search
+// search الباحث فى الاسترانج
+var string36 = "Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor";
+document.getElementById("video36").innerHTML = string35.search("Amet");
+// طريقة البحث بى الرجيلار اكسبراشان اللى هو من غير ما تكون الحروف حساسة
+document.getElementById("video361").innerHTML = string35.search(/elit/i);
