@@ -1,0 +1,8 @@
+//@include borderRadius(20px); علشان تستدعيها و تختار الرقم اللى انت عاوزة بيمزاجك
+@mixin borderRadius($number) {
+  border-radius: $number;
+  -webkit-border-radius: $number;
+  -moz-border-radius: $number;
+  -ms-border-radius: $number;
+  -o-border-radius: $number;
+}

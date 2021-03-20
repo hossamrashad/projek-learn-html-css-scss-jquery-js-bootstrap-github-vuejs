@@ -1,0 +1,38 @@
+/**
+***
+***
+***
+*/
+body, .jqvideo13, .jqdivvideo9 {
+  background-size: cover;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+body {
+  font-family: cairo;
+  font-size: 18px;
+}
+
+.jqvideo13 {
+  background-color: aqua;
+  font-weight: bolder;
+}
+
+.jqvideo131 {
+  width: 50%;
+  margin: auto;
+}
+
+.hossamsasstest {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+/*# sourceMappingURL=framework.css.map */

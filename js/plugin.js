@@ -1,4 +1,8 @@
+/*jslint plusplus: true, evil: true */
 /* global document, console, alert, prompt*/
+// jslint plusplus: true for error for ++
+// evil: true for error document.write
+
 /**
  *
  *  innerHTML   هو انو العنصار المختار يساوى الحاجة اللى انت بتكتبها
@@ -10,13 +14,12 @@
 
 var //some vers
   x = 10,
-  s = 15,
-  d = 20;
+  s = 15;
 document.getElementById("video5").innerHTML = x;
 if (x + s === 30) {
-  console.log("good");
+  //console.log("good");
 } else {
-  console.log("bad");
+  //console.log("bad");
 }
 // video 8
 // data type
@@ -32,7 +35,7 @@ if (x + s === 30) {
  */
 var // Boolean
   hasdiscount = true;
-if ((hasdiscount = true)) {
+if (hasdiscount == true) {
   var mainprice = 400;
 } else {
   var mainprice = 450;
@@ -65,7 +68,7 @@ document.getElementById("video85").innerHTML = lorem8;
  */
 var age8 = 29;
 document.getElementById("video86").innerHTML = age8;
-console.log(typeof age8);
+//console.log(typeof age8);
 document.getElementById("video87").innerHTML = typeof age8;
 /************************************ */
 // video 9
@@ -123,6 +126,7 @@ function sayHi15() {
   "use strict";
   alert("Hello Frome Function");
 }
+document.getElementById("video15").innerHTML = sayHi15();
 // sayHi15(); لو عاوز تشاغال الفانكشان تلقاى
 /********************** */
 // video 16
@@ -157,7 +161,7 @@ document.getElementById("video18").innerHTML = Math.random();
   "use strict";
   var name = "Hossam";
   //return name;
-  console.log("welcome");
+  //console.log("welcome");
 })();
 function calck18(amount) {
   "use strict";
@@ -444,6 +448,10 @@ var string35 = "Lorem Ipsum Dolor Sit Amet   Elit. Quisquam, Dolor";
 document.getElementById("video35").innerHTML = string35;
 // عشان اجيب نوع الدات
 document.getElementById("video351").innerHTML = typeof string35;
+// toString
+var string35toString = string35.toString();
+document.getElementById("video352").innerHTML = string35toString;
+document.getElementById("video353").innerHTML = typeof string35;
 /***-************************ */
 // video 36
 // string methods indexOf || lastIndexOf || search
@@ -452,3 +460,361 @@ var string36 = "Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor";
 document.getElementById("video36").innerHTML = string35.search("Amet");
 // طريقة البحث بى الرجيلار اكسبراشان اللى هو من غير ما تكون الحروف حساسة
 document.getElementById("video361").innerHTML = string35.search(/elit/i);
+/************************ */
+// video37
+// split || slice || || substr || extract
+// split(separator, limit) output = Object
+// الاسبلات اللى هو انو انت تخرج جزاء من الاسترانج
+var string37 = "Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor";
+document.getElementById("video37").innerHTML = string37.split() + " = split";
+//split بتغاير الاسترانج الى ابجاكت
+document.getElementById("video371").innerHTML =
+  typeof string37.split() + " نوع الدات اللى بتخرجو الاسبلات";
+// لو سبت القوسين فاضين بيحط كومة بين كل حرف و التانى
+document.getElementById("video372").innerHTML = string37.split("");
+document.getElementById("video373").innerHTML = string37.split(" ");
+// 5 اللى هو عدد العناصر اللى هخرجها
+document.getElementById("video374").innerHTML =
+  string37.split(" ", 5) + " عدد العناصر اللى هيخرجها السبرايتوار";
+// slice(start, end) output = string
+// تخراج من الاسترانج شريحة
+document.getElementById("video375").innerHTML = string37.slice();
+document.getElementById("video376").innerHTML =
+  typeof string37.slice() + " نوع الدات اللى بيخرجها الاسليس";
+//
+document.getElementById("video377").innerHTML =
+  string37.slice(2, 18) + "عدد العناصر اللى هيخرجها الاسليس";
+//
+// substr(start, length)
+document.getElementById("video378").innerHTML = string37.substr();
+document.getElementById("video379").innerHTML = string37.substr(5, 20);
+// substr(start, end)
+document.getElementById("video3710").innerHTML = string37.substring();
+document.getElementById("video3711").innerHTML = string37.substring(5, 20);
+/*******************************************/
+// video 38
+// اليزنى كود
+/**
+ * charAt(index )
+ * charCodeAt
+ * replace(value , new value)
+ */
+var string38 = "Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor";
+//
+document.getElementById("video38").innerHTML =
+  string38.charAt() + " = charAt =  بيعرافك الحرف رقم كام";
+// charCodeAt اللى هو راقم الزراير فى الكيبارد
+document.getElementById("video381").innerHTML =
+  string38.charCodeAt() + " = charCodeAt = رقم الحرف فى الكيبارد";
+// الربليس بتغاير من حاجة الى حاجة تانى
+// gi اللى هى فى جميع الانحا و الاى اللى هو لو الحروف كبتال او اسمول
+document.getElementById("video382").innerHTML = string38.replace(
+  /Lorem/gi,
+  "hossam" +
+    " /Lorem/gi gi الجاى اللى هو الجلوبال الاى اللى هو الحروف غير حسسة "
+);
+/********************************* */
+// video 39
+/*
+  String.fromCharCode( Num1, Num2, Num3, Num4 )
+  concat(String, String, String, String)
+*/
+
+// fromCharCode بتكتاب الكلام بى الراقا
+
+var string39 = String.fromCharCode(72, 111, 115, 115, 109);
+document.getElementById("video39").innerHTML = string39;
+
+// concat الكونكات بتجماع بين اكتار من فاريبال و التانى مع بعض
+var string391 = "Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor";
+var string392 = "Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor";
+document.getElementById("video391").innerHTML = string391.concat(string392);
+/******************************* */
+// toLowerCase() بيحاوال الاحراف الى اصموال
+
+var string40 = "I Love Js",
+  mySmallString = string40.toLowerCase();
+document.getElementById("video40").innerHTML = string40.toLowerCase();
+document.getElementById("video401").innerHTML = mySmallString;
+//toUpperCase() بيحاول الاحراف الى كابتال
+var string401 = "I Love Js",
+  mySmallString = string401.toUpperCase();
+document.getElementById("video402").innerHTML = string401.toUpperCase();
+document.getElementById("video403").innerHTML = mySmallString;
+/*********************************** */
+// video 41
+// trim() بيشيل المسافات اللى فى بداية الاسترانج و فى نهاية
+var string41 =
+  "                        Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor";
+document.getElementById("video41").innerHTML = string41;
+// Link
+
+var string411 = "Google";
+
+document.getElementById("video41").innerHTML =
+  string411 +
+  " Go To Google By This Link => " +
+  string411.link("http://www.google.com");
+/************************************ */
+//Before Chain
+
+var myNumber42 = 120,
+  myString42 = myNumber42.toString();
+
+document.getElementById("video42").innerHTML = myNumber42;
+document.getElementById("video421").innerHTML = myString42;
+var myNewNumber42 = myString42.replace(2, 3);
+
+document.getElementById("video422").innerHTML = myNewNumber42;
+
+var myLastNumber42 = myNewNumber42.split("");
+
+document.getElementById("video423").innerHTML = myLastNumber42;
+
+// After Chain
+
+var myNumber421 = 120,
+  myString421 = myNumber421.toString().replace(0, 3).split("");
+
+document.getElementById("video424").innerHTML = myNumber421;
+document.getElementById("video425").innerHTML = myString421;
+/************************************* */
+//vidro 43
+// Length
+
+var myString43 = 'I Love \\"Programming\\" Languages';
+document.getElementById("video43").innerHTML = myString43;
+
+// Convert
+
+var myString431 = 120,
+  myNewString431 = String(myString431);
+
+document.getElementById("video431").innerHTML =
+  myString431 + " " + typeof myString431;
+document.getElementById("video432").innerHTML =
+  myNewString431 + " " + typeof myNewString431;
+
+// Index Of
+
+var myString432 = "I Love Programming Languages",
+  mySearch432 = myString432.indexOf("L", 10);
+
+document.getElementById("video433").innerHTML = mySearch432;
+// Last Index Of
+
+var myString434 = "I Love Programming Languages",
+  mySearch434 = myString434.lastIndexOf("L", 10);
+
+document.getElementById("video434").innerHTML = mySearch434;
+
+// Search
+
+var myString435 = "I Love Programming Languages",
+  mySearch435 = myString435.search("P");
+
+document.getElementById("video435").innerHTML = mySearch435;
+
+// Search
+
+var myString436 = "I Love Programming Languages",
+  mySplit436 = myString436.split(" ");
+
+document.getElementById("video436").innerHTML = mySplit436;
+
+// Slice
+
+var myString437 = "I Love Programming Languages",
+  mySplit437 = myString437.slice(2, 7);
+
+document.getElementById("video437").innerHTML =
+  mySplit437 + "<b>slice(2, 7)</b>";
+// Substr
+
+var myString438 = "I Love Programming Languages",
+  mySplit438 = myString438.substr(2, 10);
+
+document.getElementById("video438").innerHTML = mySplit438 + " <b>substr</b>";
+
+// Substring
+
+var myString439 = "I Love Programming Languages",
+  mySplit439 = myString439.substring(2, 10);
+
+document.getElementById("video439").innerHTML =
+  mySplit439 + " <b>substring</b>";
+
+// Char Code At
+
+var myString4310 = "I Love Programming Languages",
+  mySplit4310 = myString4310.charAt(4);
+
+document.getElementById("video4310").innerHTML =
+  mySplit4310 + "<b> charAt(4)</b>";
+
+// Char Code At
+
+var myString4311 = "I Love Programming Languages",
+  mySplit4311 = myString4311.charCodeAt(4);
+
+document.getElementById("video4311").innerHTML =
+  mySplit4311 + "<b> charCodeAt(4)</b>";
+// Replace
+
+var myString4312 = "I Love Programming Languages",
+  mySplit4312 = myString4312.replace("L", "X");
+
+document.getElementById("video4312").innerHTML =
+  mySplit4312 + " <b>replace('l' , 'x')</b>";
+
+var myString4313 = "I Love Programming Languages",
+  mySplit4313 = myString4313.replace(/L/gi, "X");
+
+document.getElementById("video4313").innerHTML = mySplit4313;
+// Concat + Chain
+
+var myString4314 = "I Love Programming Languages",
+  mySplit4314 = myString4314.concat(" Too Much").toLowerCase().split(" ", 3);
+
+document.getElementById("video4314").innerHTML = mySplit4314;
+
+// Trim
+
+var myString4315 = "      I Love Programming Languages  ",
+  mySplit4315 = myString4315.trim();
+
+document.getElementById("video4315").innerHTML = mySplit4315;
+// Link
+
+var myString4316 = "      I Love Programming Languages  ",
+  mySplit4316 = myString4316.link("http://www.google.com");
+
+document.getElementById("video4316").innerHTML = mySplit4316;
+/**************************************************** */
+/*
+ for بتتعامل مع الاراى
+  For Loop Syntax 
+
+  for ( Initialization; Condition; Final Expression ) {
+
+    // Statement
+
+  }
+
+  Initialization: Executed Before The Loop Once
+  Condition: Define The Condition To Run The Loop
+  Final Expression: Executed Everytime The Code Run
+
+*/
+// First Example
+
+var i;
+
+for (i = 0; i <= 10; i++) {
+  console.log(i);
+  document.getElementById("video44").innerHTML = i;
+}
+var friends44 = ["Ahmed", "Sayed", "Mahmoud", "Kamel", "Salah", "Gamal"];
+
+var fori;
+
+for (fori = 0; fori <= friends44.length; fori++) {
+  console.log(friends44[fori]);
+  document.getElementById("video441").innerHTML = friends44[fori];
+}
+document.getElementById("video442").innerHTML = friends44 + "<br>" + friends44;
+/**************************************** */
+// video 45
+// for in بتتعامل مع الابجاكت
+/*
+  For ... In Loop Syntax
+
+  for (Property in Object) {
+
+    if ( Object.hasOwnProperty(Variable) ) {
+
+      // Statement
+
+    }
+
+  }
+
+*/
+var myCar45 = {
+  colour: "White",
+  type: "Sedan",
+  price: "50.000",
+  model: "2015",
+};
+var prop45;
+
+for (prop45 in myCar45) {
+  console.log(prop45 + ": " + myCar45[prop45]);
+  document.getElementById("video45").innerHTML =
+    prop45 + ": " + myCar45[prop45];
+}
+document.getElementById("video451").innerHTML = prop45 + ": " + myCar45[prop45];
+//
+var myCar452 = {
+  colour: "White",
+  type: "Sedan",
+  price: "50.000",
+  model: "2015",
+};
+var prop452;
+for (prop452 in myCar452) {
+  if (myCar452.hasOwnProperty(prop452)) {
+    console.log(prop452 + ": " + myCar452[prop452]);
+    document.getElementById("video452").innerHTML =
+      prop452 + ": " + myCar452[prop452];
+  }
+}
+/*********************************** */
+// for advinced
+var foradvinced;
+
+for (foradvinced = 0; foradvinced <= 10; foradvinced++) {
+  console.log(foradvinced);
+  document.getElementById("video46").innerHTML = foradvinced;
+}
+
+// Second Example
+
+var foradvinced2 = 0;
+
+for (; foradvinced2 <= 10; foradvinced2++) {
+  console.log(foradvinced2);
+  document.getElementById("video461").innerHTML = foradvinced2;
+}
+// Third Example
+
+var foradvinced3 = 0;
+
+for (; ; foradvinced3++) {
+  if (foradvinced3 > 10) break;
+
+  console.log(foradvinced3);
+  document.getElementById("video462").innerHTML = foradvinced3;
+}
+
+// Generate Years Function
+
+function generateYears(Start, End) {
+  "use strict";
+
+  var years;
+
+  document.write("<select>");
+
+  for (years = Start; years <= End; years++) {
+    document.write('<option value="' + years + '">' + years + "</option>");
+  }
+
+  document.write("</select>");
+}
+
+document.getElementsByTagName("video463").innerHTML = generateYears(1900, 2015); // Mahmoud
+generateYears(1900, 2015);
+generateYears(1950, 2010); // Ahmed
+
+generateYears(2000, 2012); // Osama

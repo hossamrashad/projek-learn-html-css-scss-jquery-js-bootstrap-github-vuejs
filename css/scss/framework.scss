@@ -1,0 +1,37 @@
+@import "css3/feature-css3";
+@import "mixin/mixin";
+// الفكراه انو انت لو الفلوات اللى انت عاملو فى حالة استخدام الغة هيكون على حسب الديركشان
+$direction: ltr;
+$floatleft: left;
+$floatright: right;
+@if $direction == ltr {
+  $floatleft: left;
+  $floatright: right;
+} @else {
+  $floatleft: right;
+  $floatright: left;
+}
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+body {
+  font-family: cairo;
+  font-size: 18px;
+  @extend %cover;
+}
+.jqvideo13 {
+  background-color: aqua;
+  font-weight: bolder;
+  @extend %cover;
+}
+.jqvideo131 {
+  width: 50%;
+  margin: auto;
+}
+.jqdivvideo9 {
+  @extend %cover;
+}
+.hossamsasstest {
+  @include borderRadius(20px);
+}
