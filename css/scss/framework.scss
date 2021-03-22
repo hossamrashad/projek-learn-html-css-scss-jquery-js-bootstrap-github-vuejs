@@ -4,6 +4,7 @@
 $direction: ltr;
 $floatleft: left;
 $floatright: right;
+$cairoFont: "cairo";
 @if $direction == ltr {
   $floatleft: left;
   $floatright: right;
@@ -16,9 +17,9 @@ $floatright: right;
   text-transform: capitalize;
 }
 body {
-  font-family: cairo;
   font-size: 18px;
   @extend %cover;
+  font-family: $cairoFont;
 }
 .jqvideo13 {
   background-color: aqua;

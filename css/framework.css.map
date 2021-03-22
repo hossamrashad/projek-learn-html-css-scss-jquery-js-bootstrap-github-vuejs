@@ -1,11 +1,1 @@
-{
-    "version": 3,
-    "mappings": "ACAA;;;;EAIE;ADaF,ACZA,IDYI,EAKJ,UAAU,EASV,YAAY,CC1BL;EACL,eAAe,EAAE,KAAK;CACvB;;ADMD,AAAA,CAAC,CAAC;EACA,UAAU,EAAE,UAAU;EACtB,cAAc,EAAE,UAAU;CAC3B;;AACD,AAAA,IAAI,CAAC;EACH,WAAW,EAAE,KAAK;EAClB,SAAS,EAAE,IAAI;CAEhB;;AACD,AAAA,UAAU,CAAC;EACT,gBAAgB,EAAE,IAAI;EACtB,WAAW,EAAE,MAAM;CAEpB;;AACD,AAAA,WAAW,CAAC;EACV,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,IAAI;CACb;;AAID,AAAA,eAAe,CAAC;EEhCd,aAAa,EFiCS,IAAI;EEhC1B,qBAAqB,EFgCC,IAAI;EE/B1B,kBAAkB,EF+BI,IAAI;EE9B1B,iBAAiB,EF8BK,IAAI;EE7B1B,gBAAgB,EF6BM,IAAI;CAC3B",
-    "sources": [
-        "scss/framework.scss",
-        "scss/css3/_feature-css3.scss",
-        "scss/mixin/_mixin.scss"
-    ],
-    "names": [],
-    "file": "framework.css"
-}
+{"version":3,"sourceRoot":"","sources":["scss/css3/_feature-css3.scss","scss/frameWork.scss","scss/mixin/_mixin.scss"],"names":[],"mappings":"AAAA;AAAA;AAAA;AAAA;AAAA;AAKA;EACE;;;ACQF;EACE;EACA;;;AAEF;EACE;EAEA,aAfU;;;AAiBZ;EACE;EACA;;;AAGF;EACE;EACA;;;AAKF;ECjCE,eDkCsB;ECjCtB,uBDiCsB;EChCtB,oBDgCsB;EC/BtB,mBD+BsB;EC9BtB,kBD8BsB","file":"frameWork.css"}
