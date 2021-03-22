@@ -1,10 +1,65 @@
 @import "css3/feature-css3";
 @import "mixin/mixin";
+@import "./var/extend";
+@import "./var/font";
+@import "./var/widthHeight";
 // الفكراه انو انت لو الفلوات اللى انت عاملو فى حالة استخدام الغة هيكون على حسب الديركشان
 $direction: ltr;
 $floatleft: left;
 $floatright: right;
-$cairoFont: "cairo";
+
+.video8 {
+  .video81 {
+    background-color: #eee;
+    width: $mainWidth / 4;
+
+    float: left;
+    border: 1px solid #3498db;
+  }
+  .video82 {
+    background-color: #eee;
+    width: $mainWidth / 4;
+    float: left;
+  }
+  .video83 {
+    background-color: #eee;
+    width: $mainWidth / 4;
+    float: left;
+  }
+  .video84 {
+    background-color: #eee;
+    width: $mainWidth / 4;
+    float: left;
+  }
+}
+.video12 {
+  .video121 {
+    background-color: #eee;
+    width: $mainWidth / 4;
+    @include borderRadius(50px);
+    float: left;
+    border: 1px solid #3498db;
+  }
+  .video122 {
+    background-color: #eee;
+    width: $mainWidth / 4;
+    float: left;
+    height: 200px;
+    display: block;
+    @include borderRadius(50%);
+  }
+  .video123 {
+    background-color: #eee;
+    width: $mainWidth / 4;
+    float: left;
+  }
+  .video124 {
+    background-color: #eee;
+    width: $mainWidth / 4;
+    float: left;
+  }
+}
+
 @if $direction == ltr {
   $floatleft: left;
   $floatright: right;
@@ -12,14 +67,23 @@ $cairoFont: "cairo";
   $floatleft: right;
   $floatright: left;
 }
+
 * {
   box-sizing: border-box;
   text-transform: capitalize;
 }
+
 body {
   font-size: 18px;
-  @extend %cover;
-  font-family: $cairoFont;
+
+  font-family: $arFontFamily;
+}
+.fontEn {
+  font-family: $enFontFamily;
+  height: $mainHeightVh / 2;
+}
+.fontAr {
+  font-family: $arFontFamily;
 }
 .jqvideo13 {
   background-color: aqua;

@@ -1,10 +1,68 @@
-/**
-***
-***
-***
-*/
-.jqdivvideo9, .jqvideo13, body {
+@charset "UTF-8";
+.jqdivvideo9, .jqvideo13 {
   background-size: cover;
+}
+
+/*
+@include borderRadius(20px);
+
+علشان تستدعيها و تختار الرقم اللى انت عاوزة بيمزاجك
+
+*/
+.video8 .video81 {
+  background-color: #eee;
+  width: 25%;
+  float: left;
+  border: 1px solid #3498db;
+}
+.video8 .video82 {
+  background-color: #eee;
+  width: 25%;
+  float: left;
+}
+.video8 .video83 {
+  background-color: #eee;
+  width: 25%;
+  float: left;
+}
+.video8 .video84 {
+  background-color: #eee;
+  width: 25%;
+  float: left;
+}
+
+.video12 .video121 {
+  background-color: #eee;
+  width: 25%;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  float: left;
+  border: 1px solid #3498db;
+}
+.video12 .video122 {
+  background-color: #eee;
+  width: 25%;
+  float: left;
+  height: 200px;
+  display: block;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.video12 .video123 {
+  background-color: #eee;
+  width: 25%;
+  float: left;
+}
+.video12 .video124 {
+  background-color: #eee;
+  width: 25%;
+  float: left;
 }
 
 * {
@@ -14,7 +72,16 @@
 
 body {
   font-size: 18px;
-  font-family: "cairo";
+  font-family: "Droid Arabic Kufi";
+}
+
+.fontEn {
+  font-family: "Tahoma, Arial";
+  height: 50vh;
+}
+
+.fontAr {
+  font-family: "Droid Arabic Kufi";
 }
 
 .jqvideo13 {
