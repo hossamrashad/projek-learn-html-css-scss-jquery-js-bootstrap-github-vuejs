@@ -1,0 +1,127 @@
+$font: 15px;
+@for $i from $font through 200 {
+  .fontSize#{$i} {
+    font-size: 1px + $i;
+  }
+}
+// padding
+$padding: 0px;
+@for $i from $padding through 200 {
+  .padding-t-#{$i} {
+    padding-top: 1px + $i;
+  }
+}
+@for $i from $padding through 200 {
+  .padding-b-#{$i} {
+    padding-bottom: 1px + $i;
+  }
+}
+@for $i from $padding through 200 {
+  .padding-l-#{$i} {
+    padding-left: 1px + $i;
+  }
+}
+@for $i from $padding through 200 {
+  .padding-r-#{$i} {
+    padding-right: 1px + $i;
+  }
+}
+@for $i from $padding through 200 {
+  .padding-tb-#{$i} {
+    padding-top: 1px + $i;
+    padding-bottom: 1px + $i;
+  }
+}
+@for $i from $padding through 200 {
+  .padding-rl-#{$i} {
+    padding-right: 1px + $i;
+    padding-left: 1px + $i;
+  }
+}
+// margin
+$margin: 0px;
+@for $i from $margin through 200 {
+  .margin-t-#{$i} {
+    margin-top: 1px + $i;
+  }
+}
+@for $i from $margin through 200 {
+  .margin-b-#{$i} {
+    margin-bottom: 1px + $i;
+  }
+}
+@for $i from $margin through 200 {
+  .margin-l-#{$i} {
+    margin-left: 1px + $i;
+  }
+}
+@for $i from $margin through 200 {
+  .margin-r-#{$i} {
+    margin-right: 1px + $i;
+  }
+}
+@for $i from $margin through 200 {
+  .margin-tb-#{$i} {
+    margin-top: 1px + $i;
+    margin-bottom: 1px + $i;
+  }
+}
+@for $i from $margin through 200 {
+  .margin-rl-#{$i} {
+    margin-right: 1px + $i;
+    margin-left: 1px + $i;
+  }
+}
+// width + height
+$width: 10px;
+@for $i from $width through 1000 {
+  .width-#{$i} {
+    width: 1px + $i;
+  }
+}
+$height: 10px;
+@for $i from $height through 500 {
+  .height-#{$i} {
+    height: 1px + $i;
+  }
+}
+// line height
+$lineHeight: 1px;
+@for $i from $lineHeight through 500 {
+  .lineHeight-#{$i} {
+    line-height: 1px + $i;
+  }
+}
+
+// box shadow
+
+//@mixin boxShadow($right, $button, $spread, $color) {
+//  -o-box-shadow: $right $button $spread $color;
+//  -ms-box-shadow: $right $button $spread $color;
+//  box-shadow: $right $button $spread $color;
+//}
+
+// $boxShadow: 0px;
+//@for $i from $boxShadow to 20 {
+//  .boxShadow-r-#{$i} {
+//    @include boxShadow(10px + $i, 0px, 10px, #000);
+//  }
+//}
+//@for $i from $boxShadow to 20 {
+// .boxShadow-l-#{$i} {
+//  @include boxShadow(-10px + $i, 0px, 10px, #000);
+//}
+//}
+//my grid
+
+$gridnum: 12;
+%gridboot {
+  float: left;
+  padding: 10px;
+}
+@for $i from 1 through $gridnum {
+  .col-my-#{$i} {
+    width: (100%/ ($gridnum / $i));
+    @extend %gridboot;
+  }
+}
