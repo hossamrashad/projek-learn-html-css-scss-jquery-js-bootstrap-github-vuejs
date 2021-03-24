@@ -1,6 +1,6 @@
 $socialList: facebook, twitter, instagram;
 @each $social in $socialList {
-  .#{$social} {
+  .icon-#{$social} {
     background: url(../images/socila/#{$social}.png);
     height: 200px;
   }

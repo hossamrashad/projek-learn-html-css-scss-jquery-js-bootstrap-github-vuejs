@@ -1,0 +1,18 @@
+// global for all pages
+body {
+  font: {
+    family: cairo;
+    size: 16px;
+  }
+}
+ul,
+ol {
+  // global ul + li style
+  @include horizontal-list;
+}
+a {
+  text-decoration: none;
+  @include hover {
+    text-decoration: none;
+  }
+}

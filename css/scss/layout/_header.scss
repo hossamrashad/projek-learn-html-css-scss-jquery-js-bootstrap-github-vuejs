@@ -1,0 +1,52 @@
+// navbar bootstrap
+.navbar {
+  border-bottom: 1px solid $textcolor;
+  // like logo
+  .navbar-brand {
+    a {
+    }
+  }
+  // dropdown menu for mobail
+  .navbar-toggler {
+    // span = img
+    .navbar-toggler-icon {
+    }
+  }
+  // div = container for ul
+  .navbar-collapse {
+    // ul link
+    .navbar-nav {
+      width: 100%;
+      background-color: $maincolor;
+      @include borderRadius(5px);
+      // li
+      .nav-item {
+        width: 20%;
+        // a
+        .nav-link {
+          color: #fff;
+          font-weight: bolder;
+          text-transform: capitalize;
+          @include hover {
+            color: $textcolor;
+          }
+        }
+      }
+      // li
+      .nav-item.active {
+        // a
+        .nav-link {
+        }
+      }
+      // li dropdown
+      .dropdown {
+        // div dropdown
+        .dropdown-menu {
+          // a item
+          .dropdown-item {
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+//
+@import "./helpers/variables";
+@import "./helpers/mixins";
+@import "./layout/grid";
+@import "./components/buttons";
+
+// import one
+@import "./pages/global";
+@import "./layout/header";
+
+// import tow
+@import "./pages/homePage";
+@import "./components/buttons";
+
+// import three
+@import "./layout/footer";
+@import "./layout/media";
+:root {
+  --colo3498db: #3498db;
+}
+.tast {
+  background-color: var(--colo3498db);
+}

@@ -1,0 +1,110 @@
+// borderRadius
+@mixin borderRadius($number) {
+  border-radius: $number;
+  -webkit-border-radius: $number;
+  -moz-border-radius: $number;
+  -ms-border-radius: $number;
+  -o-border-radius: $number;
+}
+// transition
+@mixin transition($number) {
+  transition: all $number ease-in-out;
+  -webkit-transition: all $number ease-in-out;
+  -moz-transition: all $number ease-in-out;
+  -ms-transition: all $number ease-in-out;
+  -o-transition: all $number ease-in-out;
+}
+// hover
+@mixin hover {
+  &:not([disabled]):hover {
+    @content;
+  }
+}
+/* ul */
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@mixin horizontal-list {
+  @include reset-list;
+
+  li {
+    display: inline-block;
+    margin: {
+      left: -2px;
+      right: 2em;
+    }
+  }
+}
+//  box-shadow: horizontal     |  vertical     |  blur | spread | color | inset
+//  box-shadow: right + left   |  top + button |  blur | spread | color | inset
+
+@mixin boxShadow($right, $button, $spread, $color) {
+  -o-box-shadow: $right $button $spread $color;
+  -ms-box-shadow: $right $button $spread $color;
+  box-shadow: $right $button $spread $color;
+}
+
+// media
+// @media(max-width:767px){};   xs   || mobile
+// @media(min-width:768px){};   sm
+// @media(max-width:991 px){};  md
+// @media(min-width:992px){};   md
+// @media(min-width:1200px){};  lg
+@mixin xsmedia {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin smmedia {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin mdmedia {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+@mixin lgmedia {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+// overlay
+@mixin overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// prefix
+@mixin prefixer($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  #{$property}: $value;
+}
+
+// animation
+@mixin KeyFrame($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+// opacity
+@mixin opacity($value) {
+  zoom: 1;
+  $opacity-ie: $value * 100;
+  filter: alpha(opacity = $opacity-ie);
+  -webkit-filter: alpha(opacity = $opacity-ie);
+  opacity: $value;
+}
