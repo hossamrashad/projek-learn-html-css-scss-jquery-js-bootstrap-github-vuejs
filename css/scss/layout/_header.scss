@@ -1,6 +1,6 @@
 // navbar bootstrap
 .navbar {
-  border-bottom: 1px solid $textcolor;
+  border-bottom: 1px solid $text-color;
   // like logo
   .navbar-brand {
     a {
@@ -17,7 +17,7 @@
     // ul link
     .navbar-nav {
       width: 100%;
-      background-color: $maincolor;
+      background-color: map-get($colors, 15);
       @include borderRadius(5px);
       // li
       .nav-item {
@@ -28,7 +28,6 @@
           font-weight: bolder;
           text-transform: capitalize;
           @include hover {
-            color: $textcolor;
           }
         }
       }
@@ -47,6 +46,27 @@
           }
         }
       }
+    }
+  }
+}
+.box-tow {
+  background-color: map-get($colors, 36);
+
+  @include mq(767px) {
+    background-color: map-get($colors, 5);
+  }
+  .test {
+    @include mq(1500px, 1900px) {
+      background-color: map-get($colors, 15);
+    }
+  }
+}
+.img-test {
+  div {
+    @include grid-right(5, 2%);
+
+    img {
+      width: 100%;
     }
   }
 }

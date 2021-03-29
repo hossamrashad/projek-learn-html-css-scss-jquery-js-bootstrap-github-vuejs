@@ -123,3 +123,53 @@
   justify-content: center;
   align-items: center;
 }
+
+// clearfix
+// clear float
+// @include clearfix;
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+// grid
+//@include grid-left;
+
+@mixin grid-left($cols, $mgn) {
+  float: left;
+  margin-right: $mgn;
+  margin-bottom: $mgn;
+  width: ((100% - (($cols - 1) * $mgn)) / $cols);
+  &:nth-child(#{$cols}n) {
+    margin-right: 0;
+  }
+}
+//@include grid-right;
+
+@mixin grid-right($cols, $mgn) {
+  float: right;
+  margin-left: $mgn;
+  margin-bottom: $mgn;
+  width: ((100% - (($cols - 1) * $mgn)) / $cols);
+  &:nth-child(#{$cols}n) {
+    margin-left: 0;
+  }
+}
+
+// media
+
+@mixin mq($arg...) {
+  @if length($arg) ==1 {
+    @media screen and (max-width: nth($arg , 1  )) {
+      @content;
+    }
+  }
+  @if length($arg) == 2 {
+    @media screen and (max-width: nth($arg , 1 )) and (max-width: nth($arg , 2 )) {
+      @content;
+    }
+  }
+}

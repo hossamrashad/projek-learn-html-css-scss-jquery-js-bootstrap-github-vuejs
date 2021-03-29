@@ -7,8 +7,7 @@ $font-page: 16px;
 // EN Font Family
 
 $arFontFamily: "Droid Arabic Kufi";
-
-$cairoFont: "cairo";
+$cairo-Font: "cairo";
 
 // EN Font Family
 
@@ -16,14 +15,76 @@ $enFontFamily: "Tahoma, Arial";
 
 // width
 
-$mainWidth: 100%;
+$main-width100: 100%;
+$main-height100: 100%;
+$main-height100Vh: 100vh;
 
-$mainHeight: 100%;
+// direction
 
-$mainHeightVh: 100vh;
+$dir-ltr: ltr;
+$dir-rtl: rtl;
+
+// text align
+
+$text-align-center: center;
+$text-align-right: right;
+$text-align-left: left;
 
 // color
 
-$maincolor: #3498db;
-
-$textcolor: #9c9c9c;
+$color-3498db: #3498db;
+$text-color: #9c9c9c;
+// color: map-get($colors, 1);
+$colors: (
+  51: #ffffff,
+  37: #e4fbff,
+  12: #ecf0f1,
+  47: #f4f9f9,
+  13: #95a5a6,
+  24: #969696,
+  23: #737373,
+  25: #766a65,
+  36: #9e9d89,
+  1: #0099e5,
+  20: #0984e3,
+  17: #2980b9,
+  30: #0652dd,
+  21: #0066a1,
+  46: #046582,
+  42: #4a47a3,
+  11: #34495e,
+  3: #34bf49,
+  4: #00a98f,
+  31: #ed4c67,
+  40: #f14668,
+  6: #be0027,
+  26: #cc0000,
+  2: #ff4c4c,
+  14: #e74c3c,
+  39: #6b011f,
+  41: #6b011f,
+  28: #4f1302,
+  29: #432d0f,
+  15: #e67e22,
+  16: #f1c40f,
+  18: #f39c12,
+  7: #cf8d2e,
+  8: #e4e932,
+  22: #629aa9,
+  27: #545963,
+  32: #12cbc4,
+  10: #1abc9c,
+  9: #2c9f45,
+  33: #289672,
+  34: #29bb89,
+  35: #1e6f5c,
+  38: #caf7e3,
+  43: #709fb0,
+  44: #f39189,
+  45: #bb8082,
+  19: #6c5ce7,
+  48: #7868e6,
+  49: #3c415c,
+  50: #301b3f,
+  5: #000000,
+);

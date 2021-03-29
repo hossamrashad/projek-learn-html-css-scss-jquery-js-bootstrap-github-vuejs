@@ -12,7 +12,7 @@
     //@include transition(0.5s);
 
     @include hover {
-      background-color: rgba($maincolor, 0.5);
+      background-color: rgba($text-color, 0.5);
       @include prefixer(box-shadow, 10px 10px 10px #ccc, webkit moz o ms);
     }
   }

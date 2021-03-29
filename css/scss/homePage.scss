@@ -19,8 +19,7 @@
   --colo3498db: #3498db;
 }
 .tast {
-  background-color: var(--colo3498db);
+  //background-color: var(--colo3498db);
   height: (100vh / 2);
-  // بيخالى العنصر فى النص
-  @include flexCenter;
+  background-color: map-get($colors, 10);
 }
