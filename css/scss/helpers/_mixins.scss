@@ -1,4 +1,5 @@
 // borderRadius
+// @include borderRadius(5px);
 @mixin borderRadius($number) {
   border-radius: $number;
   -webkit-border-radius: $number;
@@ -7,6 +8,7 @@
   -o-border-radius: $number;
 }
 // transition
+// @include transition(0.5s);
 @mixin transition($number) {
   transition: all $number ease-in-out;
   -webkit-transition: all $number ease-in-out;
@@ -15,12 +17,14 @@
   -o-transition: all $number ease-in-out;
 }
 // hover
+// @include hover {}
 @mixin hover {
   &:not([disabled]):hover {
     @content;
   }
 }
-/* ul */
+// ul
+// @include horizontal-list;
 @mixin reset-list {
   margin: 0;
   padding: 0;
@@ -40,6 +44,7 @@
 //  box-shadow: horizontal     |  vertical     |  blur | spread | color | inset
 //  box-shadow: right + left   |  top + button |  blur | spread | color | inset
 
+//  @include boxShadow(-1px, 0px, 10px, #000);
 @mixin boxShadow($right, $button, $spread, $color) {
   -o-box-shadow: $right $button $spread $color;
   -ms-box-shadow: $right $button $spread $color;
@@ -83,6 +88,7 @@
 }
 
 // prefix
+// @include prefixer(box-shadow, 10px 10px 10px #ccc, webkit moz o ms);
 @mixin prefixer($property, $value, $prefixes: ()) {
   @each $prefix in $prefixes {
     #{'-' + $prefix + '-' + $property}: $value;
@@ -101,10 +107,19 @@
 }
 
 // opacity
+//  @include opacity(0.5);
 @mixin opacity($value) {
   zoom: 1;
   $opacity-ie: $value * 100;
   filter: alpha(opacity = $opacity-ie);
   -webkit-filter: alpha(opacity = $opacity-ie);
   opacity: $value;
+}
+
+// element center
+// @include flexCenter;
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

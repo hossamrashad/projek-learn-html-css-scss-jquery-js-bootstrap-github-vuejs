@@ -12,7 +12,13 @@ ol {
 }
 a {
   text-decoration: none;
+  outline: none;
   @include hover {
     text-decoration: none;
+    outline: none;
+  }
+  &:focus {
+    text-decoration: none;
+    outline: none;
   }
 }
