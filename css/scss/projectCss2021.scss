@@ -1,0 +1,476 @@
+@import "./helpers/mixin";
+@import "./components/color";
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: cairo;
+  font-size: 25px;
+  margin: 0px 15px;
+  text-transform: capitalize;
+}
+
+//
+// div {
+//   background-color: red; /* Color Name */
+//   background-color: rgb(0 0 0 / 50%); /* Red, Green, Blue, Alpha Channel */
+//   background-color: #FF0000; /* Color Hex Code */
+//   background-image: url("../images/social/facebook.png");
+//   background-repeat: repeat;
+//   background-attachment: fixed;
+//   background-position: left top;
+//   background-size: auto;
+// }
+.video-6 {
+  .test-1 {
+    color: #f00;
+  }
+
+  .test-2 {
+    background-color: rgb(0, 255, 0);
+  }
+  .test-3 {
+    background-color: #0000ff;
+    color: #fff;
+  }
+  .test-4 {
+    background-image: url("../images/social/facebook.png");
+    height: 100px;
+  }
+  .test-5 {
+    > div {
+      @include grid-left(1, 2%);
+      height: 300px;
+      color: map-get($colors, 41);
+      font-size: 50px;
+      border: 3px solid #000;
+    }
+    .box-1 {
+      background-image: url("../images/social/instagram.png");
+      background-repeat: repeat;
+    }
+    .box-2 {
+      background-image: url("../images/social/instagram.png");
+      background-repeat: no-repeat;
+    }
+    .box-3 {
+      background-image: url("../images/social/instagram.png");
+      background-repeat: repeat-x;
+    }
+    .box-4 {
+      background-image: url("../images/social/instagram.png");
+      background-repeat: repeat-y;
+    }
+  }
+  .test-6 {
+    > div {
+      @include grid-left(1, 2%);
+      height: 300px;
+      color: map-get($colors, 61);
+      font-size: 50px;
+      border: 3px solid #000;
+    }
+    .box-1 {
+      background-image: url("../images/social/instagram.png");
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+    }
+    .box-2 {
+      background-image: url("../images/social/instagram.png");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  }
+  .test-7 {
+    > div {
+      @include grid-left(1, 2%);
+      height: 300px;
+      color: map-get($colors, 81);
+      font-size: 50px;
+      border: 3px solid #000;
+    }
+    .box-1 {
+      background-image: url("../images/social/twitter.png");
+      background-repeat: no-repeat;
+      background-position: left top;
+      // background-position: 100px 10px;
+      // background-position: 10% 0%;
+    }
+    .box-2 {
+      background-image: url("../images/social/twitter.png");
+      background-repeat: no-repeat;
+      background-position: left center;
+    }
+    .box-3 {
+      background-image: url("../images/social/twitter.png");
+      background-repeat: no-repeat;
+      background-position: left bottom;
+    }
+    .box-4 {
+      background-image: url("../images/social/twitter.png");
+      background-repeat: no-repeat;
+      background-position: center top;
+    }
+    .box-5 {
+      background-image: url("../images/social/twitter.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    .box-6 {
+      background-image: url("../images/social/twitter.png");
+      background-repeat: no-repeat;
+      background-position: center bottom;
+    }
+    .box-7 {
+      background-image: url("../images/social/twitter.png");
+      background-repeat: no-repeat;
+      background-position: right top;
+    }
+    .box-8 {
+      background-image: url("../images/social/twitter.png");
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+    .box-9 {
+      background-image: url("../images/social/twitter.png");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    }
+  }
+  .test-8 {
+    > div {
+      @include grid-left(1, 2%);
+      height: 300px;
+      color: map-get($colors, 85);
+      font-size: 50px;
+      border: 3px solid #000;
+    }
+    .box-1 {
+      background-image: url("https://placeimg.com/1000/1000/any");
+      background-repeat: no-repeat;
+      background-size: auto;
+    }
+    .box-2 {
+      background-image: url("https://placeimg.com/1000/1000/any");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .box-3 {
+      background-image: url("https://placeimg.com/1000/1000/any");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .box-4 {
+      background-image: url("https://placeimg.com/1000/100/any");
+      background-repeat: no-repeat;
+      background-size: 50% 60%;
+    }
+  }
+}
+
+.video-7 {
+  background-color: map-get($colors, 2);
+
+  //  Top Right Bottom Left
+  //  10px 10px 10px 10px
+  //  padding: 10px; */
+
+  //  Top Right Bottom Left
+  //  10px 20px 10px 20px
+  //  padding: 10px 20px;
+
+  //  Top Right Left Bottom
+  //  10px 20px 15px
+  //  padding: 10px 20px 15px;
+
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.video-9 {
+  background-color: #ddd;
+  padding: 10px;
+  width: 70%;
+  // margin: 10px;
+  // margin: 10%;
+  // margin-top: 10px;
+  // margin-bottom: 20px;
+  // margin-left: 30px;
+  // margin-right: 40px;
+  margin: auto;
+
+  // border-top-width: 20px;
+  // border-left-width: 30px;
+  // border-right-width: 50px;
+  // border-bottom-width: 100px;
+  border-width: 10px;
+
+  // border-top-color: #000;
+  // border-right-color: #0000ff;
+  // border-bottom-color: #ddd;
+  // border-left-color: #f00;
+  border-color: red;
+
+  // border-style: dashed;
+  // border-style: dotted;
+  // border-style: double;
+  // border-style: groove;
+  // border-style: hidden;
+  // border-style: inherit;
+  // border-style: initial;
+  // border-style: inset;
+  // border-style: none;
+  // border-style: outset;
+  // border-style: ridge;
+  // border-style: unset;
+  border-style: solid;
+
+  // short code
+  border: 10px solid red;
+}
+.video11 {
+  // Block
+
+  // - Take Full Width If No Width
+  // - Add Line Break
+  // - Respect Padding, Margin, Width, Height
+
+  // Inline
+
+  // - Do Not Respect Width, Height
+  // - Respect Padding And Margin [ Just Wight + Left ]
+  // - Do Not Add Line Break
+  // - Allow Elements Before And After It in The Same Line
+
+  // Inline-Block
+
+  // - Allow Elements Before And After It in The Same Line
+  // - Respect Padding, Margin, Width, Height
+  span {
+    background-color: #eee;
+    display: inline-block;
+  }
+}
+
+// video 12 visibility
+.video-12 {
+  div {
+    background-color: red;
+    margin: 10px 0;
+  }
+  .first {
+    visibility: hidden;
+  }
+}
+//
+.project-work-9-12-1 {
+  margin-top: 20px;
+  border: 5px solid #3498db;
+  > div {
+    display: inline-block;
+    padding: 35px;
+    background-color: #ddd;
+    font-size: 60px;
+  }
+  .box-1 {
+    outline-color: #000;
+    margin: 20px 20px;
+    outline-style: solid;
+    outline-width: 5px;
+    border-color: #f00;
+    border-style: solid;
+    border-width: 5px;
+  }
+  .box-2 {
+    outline-color: #000;
+    margin: 20px 20px;
+    outline-style: solid;
+    outline-width: 5px;
+    border-color: #00f #080;
+    border-style: solid;
+    border-width: 5px;
+  }
+  .box-3 {
+    outline-color: #000;
+    margin: 20px 20px;
+    outline-style: solid;
+    outline-width: 5px;
+    border-color: #f00 #080 #00f #ff0;
+    border-style: dashed;
+    border-width: 5px;
+  }
+}
+.project-work-9-12-2 {
+  margin-top: 20px;
+  border: 5px solid #3498db;
+  > div {
+    display: block;
+    padding: 35px;
+    background-color: #ddd;
+    font-size: 60px;
+  }
+  .box-1 {
+    margin: 20px 20px;
+    border-color: map-get($colors, 73);
+    border-left-style: solid;
+    border-left-width: 15px;
+  }
+  .box-2 {
+    visibility: hidden;
+  }
+  .box-3 {
+    margin: 20px 20px;
+    border-color: map-get($colors, 49);
+    border-left-style: solid;
+    border-left-width: 15px;
+  }
+}
+
+// video 13 grouping
+
+.video-13 {
+  .one {
+    border-bottom: 2px solid red;
+    color: red;
+  }
+  .two {
+    border-bottom: 2px solid green;
+    color: green;
+  }
+  .three {
+    border-bottom: 2px solid blue;
+    color: blue;
+  }
+  .four {
+    border-bottom: 2px solid black;
+    color: black;
+  }
+  .one,
+  .two,
+  .three,
+  .four,
+  .my-p {
+    padding: 15px;
+    margin: 12px 0;
+    background-color: #ededed;
+  }
+}
+// Dimensions – Width And Height
+.width {
+  width: 400px;
+  min-width: 500px;
+  max-width: 500px;
+  width: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.video-15 {
+  > div {
+    background-color: #999;
+    padding: 10px;
+    margin: 10px;
+  }
+  .test-1 {
+    width: 500px;
+  }
+  .test-2 {
+    width: 50%;
+  }
+  .test-3 {
+    min-width: 600px;
+  }
+  .test-4 {
+    max-width: 700px;
+  }
+  .test-5 {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+  .test-6 {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .test-7 {
+    // بيكون عرض العنصر على اد المحتو اللى جواه
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    color: map-get($colors, 1);
+  }
+  .test-8 {
+    height: 100px;
+  }
+  .test-9 {
+    height: 10%;
+  }
+  .test-10 {
+    min-height: 150px;
+  }
+  .test-11 {
+    max-height: 200px;
+  }
+  .test-12 {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
+  .test-13 {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .test-14 {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+// video 16 overflow
+.video-16 {
+  > div {
+    float: left;
+    width: 22%;
+    margin-bottom: 8%;
+    margin-right: 2%;
+    height: 200px;
+    background-color: #ddd;
+  }
+  .test-1 {
+    overflow: visible;
+  }
+  .test-2 {
+    overflow: hidden;
+  }
+  .test-3 {
+    overflow: scroll;
+  }
+  .test-4 {
+    overflow: auto;
+  }
+  .test-5 {
+    // y الطول
+    overflow-y: hidden;
+  }
+  .test-6 {
+    // x العرض
+    overflow-x: hidden;
+  }
+}
+
+.video-17 {
+  background-color: #ce1010;
+  color: hsl(242deg 88% 45%);
+  // text-shadow: ;
+  text-shadow: 0px -20px 0px hsl(0deg 0% 13%);
+}

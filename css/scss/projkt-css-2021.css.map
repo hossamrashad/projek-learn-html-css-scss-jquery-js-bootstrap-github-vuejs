@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,IAAI,CAAC;EACH,UAAU,EAAE,IAAI;EAChB,WAAW,EAAE,KAAK;CACnB;;AAUD,AACE,OADK,CACL,MAAM,CAAC;EACL,gBAAgB,EAAE,GAAG;EAAE,gBAAgB;CACxC",
-    "sources": [
-        "css2021/projkt-css-2021.scss"
-    ],
-    "names": [],
-    "file": "projkt-css-2021.css"
-}

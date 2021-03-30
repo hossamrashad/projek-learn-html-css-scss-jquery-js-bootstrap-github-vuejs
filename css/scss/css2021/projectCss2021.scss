@@ -2,6 +2,7 @@ body {
   background: #fff;
   font-family: cairo;
 }
+
 // video 5
 // background
 // div {
@@ -16,14 +17,17 @@ body {
     // Color Name
     background-color: red;
   }
+
   .test-2 {
     // Red, Green, Blue, Alpha Channel
     background-color: rgb(0 0 0 / 50%);
   }
+
   .test-3 {
     // Color Hex Code
     background-color: #ff0000;
   }
+
   .test-4 {
     background-image: url("../../images/social/facebook.png");
   }

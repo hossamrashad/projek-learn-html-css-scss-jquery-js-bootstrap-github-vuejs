@@ -1,0 +1,472 @@
+:root {
+  --color-3498db: #3498db;
+  --color-ffffff: #ffffff;
+}
+
+body {
+  background: var(--color-ffffff);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: cairo;
+  font-size: 25px;
+  margin: 0px 15px;
+  text-transform: capitalize;
+}
+
+.video-6 .test-1 {
+  color: #f00;
+}
+
+.video-6 .test-2 {
+  background-color: lime;
+}
+
+.video-6 .test-3 {
+  background-color: #0000ff;
+  color: #fff;
+}
+
+.video-6 .test-4 {
+  background-image: url("../images/social/facebook.png");
+  height: 100px;
+}
+
+.video-6 .test-5 > div {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 100%;
+  height: 300px;
+  color: #34bf49;
+  font-size: 50px;
+  border: 3px solid #000;
+}
+
+.video-6 .test-5 > div:nth-child(1n) {
+  margin-right: 0;
+}
+
+.video-6 .test-5 .box-1 {
+  background-image: url("../images/social/instagram.png");
+  background-repeat: repeat;
+}
+
+.video-6 .test-5 .box-2 {
+  background-image: url("../images/social/instagram.png");
+  background-repeat: no-repeat;
+}
+
+.video-6 .test-5 .box-3 {
+  background-image: url("../images/social/instagram.png");
+  background-repeat: repeat-x;
+}
+
+.video-6 .test-5 .box-4 {
+  background-image: url("../images/social/instagram.png");
+  background-repeat: repeat-y;
+}
+
+.video-6 .test-6 > div {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 100%;
+  height: 300px;
+  color: #ed4c67;
+  font-size: 50px;
+  border: 3px solid #000;
+}
+
+.video-6 .test-6 > div:nth-child(1n) {
+  margin-right: 0;
+}
+
+.video-6 .test-6 .box-1 {
+  background-image: url("../images/social/instagram.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.video-6 .test-6 .box-2 {
+  background-image: url("../images/social/instagram.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.video-6 .test-7 > div {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 100%;
+  height: 300px;
+  color: #e67e22;
+  font-size: 50px;
+  border: 3px solid #000;
+}
+
+.video-6 .test-7 > div:nth-child(1n) {
+  margin-right: 0;
+}
+
+.video-6 .test-7 .box-1 {
+  background-image: url("../images/social/twitter.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.video-6 .test-7 .box-2 {
+  background-image: url("../images/social/twitter.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.video-6 .test-7 .box-3 {
+  background-image: url("../images/social/twitter.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.video-6 .test-7 .box-4 {
+  background-image: url("../images/social/twitter.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.video-6 .test-7 .box-5 {
+  background-image: url("../images/social/twitter.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.video-6 .test-7 .box-6 {
+  background-image: url("../images/social/twitter.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.video-6 .test-7 .box-7 {
+  background-image: url("../images/social/twitter.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.video-6 .test-7 .box-8 {
+  background-image: url("../images/social/twitter.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.video-6 .test-7 .box-9 {
+  background-image: url("../images/social/twitter.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.video-6 .test-8 > div {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 100%;
+  height: 300px;
+  color: #e4e932;
+  font-size: 50px;
+  border: 3px solid #000;
+}
+
+.video-6 .test-8 > div:nth-child(1n) {
+  margin-right: 0;
+}
+
+.video-6 .test-8 .box-1 {
+  background-image: url("https://placeimg.com/1000/1000/any");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.video-6 .test-8 .box-2 {
+  background-image: url("https://placeimg.com/1000/1000/any");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.video-6 .test-8 .box-3 {
+  background-image: url("https://placeimg.com/1000/1000/any");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.video-6 .test-8 .box-4 {
+  background-image: url("https://placeimg.com/1000/100/any");
+  background-repeat: no-repeat;
+  background-size: 50% 60%;
+}
+
+.video-7 {
+  background-color: #e4fbff;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.video-9 {
+  background-color: #ddd;
+  padding: 10px;
+  width: 70%;
+  margin: auto;
+  border-width: 10px;
+  border-color: red;
+  border-style: solid;
+  border: 10px solid red;
+}
+
+.video11 span {
+  background-color: #eee;
+  display: inline-block;
+}
+
+.video-12 div {
+  background-color: red;
+  margin: 10px 0;
+}
+
+.video-12 .first {
+  visibility: hidden;
+}
+
+.project-work-9-12-1 {
+  margin-top: 20px;
+  border: 5px solid #3498db;
+}
+
+.project-work-9-12-1 > div {
+  display: inline-block;
+  padding: 35px;
+  background-color: #ddd;
+  font-size: 60px;
+}
+
+.project-work-9-12-1 .box-1 {
+  outline-color: #000;
+  margin: 20px 20px;
+  outline-style: solid;
+  outline-width: 5px;
+  border-color: #f00;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.project-work-9-12-1 .box-2 {
+  outline-color: #000;
+  margin: 20px 20px;
+  outline-style: solid;
+  outline-width: 5px;
+  border-color: #00f #080;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.project-work-9-12-1 .box-3 {
+  outline-color: #000;
+  margin: 20px 20px;
+  outline-style: solid;
+  outline-width: 5px;
+  border-color: #f00 #080 #00f #ff0;
+  border-style: dashed;
+  border-width: 5px;
+}
+
+.project-work-9-12-2 {
+  margin-top: 20px;
+  border: 5px solid #3498db;
+}
+
+.project-work-9-12-2 > div {
+  display: block;
+  padding: 35px;
+  background-color: #ddd;
+  font-size: 60px;
+}
+
+.project-work-9-12-2 .box-1 {
+  margin: 20px 20px;
+  border-color: #e91e63;
+  border-left-style: solid;
+  border-left-width: 15px;
+}
+
+.project-work-9-12-2 .box-2 {
+  visibility: hidden;
+}
+
+.project-work-9-12-2 .box-3 {
+  margin: 20px 20px;
+  border-color: #009688;
+  border-left-style: solid;
+  border-left-width: 15px;
+}
+
+.video-13 .one {
+  border-bottom: 2px solid red;
+  color: red;
+}
+
+.video-13 .two {
+  border-bottom: 2px solid green;
+  color: green;
+}
+
+.video-13 .three {
+  border-bottom: 2px solid blue;
+  color: blue;
+}
+
+.video-13 .four {
+  border-bottom: 2px solid black;
+  color: black;
+}
+
+.video-13 .one,
+.video-13 .two,
+.video-13 .three,
+.video-13 .four,
+.video-13 .my-p {
+  padding: 15px;
+  margin: 12px 0;
+  background-color: #ededed;
+}
+
+.width {
+  width: 400px;
+  min-width: 500px;
+  max-width: 500px;
+  width: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.video-15 > div {
+  background-color: #999;
+  padding: 10px;
+  margin: 10px;
+}
+
+.video-15 .test-1 {
+  width: 500px;
+}
+
+.video-15 .test-2 {
+  width: 50%;
+}
+
+.video-15 .test-3 {
+  min-width: 600px;
+}
+
+.video-15 .test-4 {
+  max-width: 700px;
+}
+
+.video-15 .test-5 {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.video-15 .test-6 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.video-15 .test-7 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #ffffff;
+}
+
+.video-15 .test-8 {
+  height: 100px;
+}
+
+.video-15 .test-9 {
+  height: 10%;
+}
+
+.video-15 .test-10 {
+  min-height: 150px;
+}
+
+.video-15 .test-11 {
+  max-height: 200px;
+}
+
+.video-15 .test-12 {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.video-15 .test-13 {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.video-15 .test-14 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.video-16 > div {
+  float: left;
+  width: 22%;
+  margin-bottom: 8%;
+  margin-right: 2%;
+  height: 200px;
+  background-color: #ddd;
+}
+
+.video-16 .test-1 {
+  overflow: visible;
+}
+
+.video-16 .test-2 {
+  overflow: hidden;
+}
+
+.video-16 .test-3 {
+  overflow: scroll;
+}
+
+.video-16 .test-4 {
+  overflow: auto;
+}
+
+.video-16 .test-5 {
+  overflow-y: hidden;
+}
+
+.video-16 .test-6 {
+  overflow-x: hidden;
+}
+
+.video-17 {
+  background-color: #f9f9f9;
+  color: rebeccapurple;
+  text-shadow: 0 0 0 red;
+}
+/*# sourceMappingURL=projectCss2021.css.map */
