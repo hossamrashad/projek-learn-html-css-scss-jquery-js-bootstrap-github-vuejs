@@ -160,7 +160,8 @@
 }
 
 // media
-
+// @include mq(767px) {}
+// @include mq(1500px, 1900px) {}
 @mixin mq($arg...) {
   @if length($arg) ==1 {
     @media screen and (max-width: nth($arg , 1  )) {

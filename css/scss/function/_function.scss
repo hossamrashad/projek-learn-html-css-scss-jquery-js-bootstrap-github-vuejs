@@ -1,0 +1,28 @@
+$container-width: 100%;
+@function half($width) {
+  @return $width / 2;
+}
+@function one-third($width) {
+  @return $width / 3;
+}
+@function one-fourth($width) {
+  @return $width / 4;
+}
+.func10 {
+  .col2 > div {
+    width: half($container-width);
+    float: left;
+  }
+}
+.func10 {
+  .col3 > div {
+    width: one-third($container-width);
+    float: left;
+  }
+}
+.func10 {
+  .col4 > div {
+    width: one-fourth($container-width);
+    float: left;
+  }
+}

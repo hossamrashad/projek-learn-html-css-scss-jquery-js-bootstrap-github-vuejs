@@ -1,18 +1,85 @@
-/* Error: The target selector was not found.
- * Use "@extend %cover !optional" to avoid this error.
- *    ,
- * 25 |   @extend %cover;
- *    |   ^^^^^^^^^^^^^^
- *    '
- *   E:\projek-learn\css\scss\frameWork.scss 25:3  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: The target selector was not found.\aUse "@extend %cover !optional" to avoid this error.\a    \2577 \a 25 \2502    @extend %cover;\d\a    \2502    ^^^^^^^^^^^^^^\a    \2575 \a   E:\\projek-learn\\css\\scss\\frameWork.scss 25:3  root stylesheet';
+.animation.animated-item-1 {
+  -webkit-animation: fadeInUp 300ms linear 300ms both;
+  animation: fadeInUp 300ms linear 300ms both;
 }
+
+.animation.animated-item-2 {
+  -webkit-animation: fadeInUp 300ms linear 600ms both;
+  animation: fadeInUp 300ms linear 600ms both;
+}
+
+.animation.animated-item-3 {
+  -webkit-animation: fadeInUp 300ms linear 900ms both;
+  animation: fadeInUp 300ms linear 900ms both;
+}
+
+.animation.animated-item-4 {
+  -webkit-animation: fadeInUp 300ms linear 1200ms both;
+  animation: fadeInUp 300ms linear 1200ms both;
+}
+
+.animation.animated-item-5 {
+  -webkit-animation: fadeInUp 300ms linear 1500ms both;
+  animation: fadeInUp 300ms linear 1500ms both;
+}
+
+.animation.animated-item-6 {
+  -webkit-animation: fadeInUp 300ms linear 1750ms both;
+  animation: fadeInUp 300ms linear 1750ms both;
+}
+
+.animation.animated-item-7 {
+  -webkit-animation: fadeInUp 300ms linear 2000ms both;
+  animation: fadeInUp 300ms linear 2000ms both;
+}
+
+.animation.animated-item-7 {
+  -webkit-animation: fadeInUp 300ms linear 2250ms both;
+  animation: fadeInUp 300ms linear 2250ms both;
+}
+
+.animation.animated-item-8 {
+  -webkit-animation: fadeInUp 300ms linear 2500ms both;
+  animation: fadeInUp 300ms linear 2500ms both;
+}
+
+.animation.animated-item-9 {
+  -webkit-animation: fadeInUp 300ms linear 2750ms both;
+  animation: fadeInUp 300ms linear 2750ms both;
+}
+
+.animation.animated-item-10 {
+  -webkit-animation: fadeInUp 300ms linear 3000ms both;
+  animation: fadeInUp 300ms linear 3000ms both;
+}
+
+.icon-facebook {
+  background: url(../images/socila/facebook.png);
+  height: 200px;
+}
+
+.icon-twitter {
+  background: url(../images/socila/twitter.png);
+  height: 200px;
+}
+
+.icon-instagram {
+  background: url(../images/socila/instagram.png);
+  height: 200px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.jqvideo13 {
+  background-color: aqua;
+  font-weight: bolder;
+}
+
+.jqvideo131 {
+  width: 50%;
+  margin: auto;
+}
+/*# sourceMappingURL=frameWork.css.map */

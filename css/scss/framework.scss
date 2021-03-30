@@ -1,19 +1,19 @@
 @import "css3/feature-css3";
-@import "./helpers/mixins";
+@import "./helpers/mixin";
 @import "helpers/extend";
 @import "helpers/variables";
 @import "./myAnimation/animation";
 @import "each/each";
 // الفكراه انو انت لو الفلوات اللى انت عاملو فى حالة استخدام الغة هيكون على حسب الديركشان
 $direction: ltr;
-$floatleft: left;
-$floatright: right;
+$float-left: left;
+$float-right: right;
 @if $direction == ltr {
-  $floatleft: left;
-  $floatright: right;
+  $float-left: left;
+  $float-right: right;
 } @else {
-  $floatleft: right;
-  $floatright: left;
+  $float-left: right;
+  $float-right: left;
 }
 * {
   box-sizing: border-box;
@@ -28,5 +28,5 @@ $floatright: right;
   margin: auto;
 }
 .jqdivvideo9 {
-  @extend %cover;
+  //@extend %cover;
 }

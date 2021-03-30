@@ -1,8 +1,11 @@
 //
+@import "./components/color";
 @import "./helpers/variables";
-@import "./helpers/mixins";
-@import "./layout/grid";
+@import "./helpers/mixin";
 @import "./components/buttons";
+@import "./components/border";
+@import "./layout/grid";
+@import "./function/function";
 
 // import one
 @import "./pages/global";
@@ -10,16 +13,15 @@
 
 // import tow
 @import "./pages/homePage";
-@import "./components/buttons";
 
 // import three
 @import "./layout/footer";
 @import "./layout/media";
-:root {
-  --colo3498db: #3498db;
-}
-.tast {
-  //background-color: var(--colo3498db);
+
+.test {
   height: (100vh / 2);
-  background-color: map-get($colors, 10);
+  background-color: map-get($colors, 21);
+}
+.abc {
+  padding: 10px == 10px;
 }
