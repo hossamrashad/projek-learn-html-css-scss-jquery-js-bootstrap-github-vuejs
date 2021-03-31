@@ -19,6 +19,10 @@ body {
   text-transform: capitalize;
 }
 
+.clearfix {
+  clear: both;
+}
+
 .video-6 .test-1 {
   color: #f00;
 }
@@ -464,9 +468,92 @@ body {
   overflow-x: hidden;
 }
 
+.video-16::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .video-17 {
-  background-color: #f9f9f9;
-  color: rebeccapurple;
-  text-shadow: 0 0 0 red;
+  background-color: #9c9c9c;
+  color: #0099e5;
+  text-shadow: 0px -30px 0 #34bf49;
+}
+
+.video-18 {
+  text-align: center;
+  direction: ltr;
+}
+
+.video-18 img {
+  vertical-align: middle;
+}
+
+.video-19 .text-decoration > div {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 23.5%;
+  font-size: 17px;
+}
+
+.video-19 .text-decoration > div:nth-child(4n) {
+  margin-right: 0;
+}
+
+.video-19 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.video-19 ul li {
+  display: inline-block;
+  margin-left: -2px;
+  margin-right: 2em;
+}
+
+.video-19 > .text-decoration > div:nth-child(1) h3 {
+  text-decoration: line-through;
+}
+
+.video-19 .text-decoration > div:nth-child(2) h3 {
+  text-decoration: overline;
+}
+
+.video-19 > .text-decoration > div:nth-child(3) h3 {
+  text-decoration: underline;
+}
+
+.video-19 .text-decoration > div:nth-child(4) h3 {
+  text-decoration: none;
+}
+
+.video-19 .text-transform > div {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 23.5%;
+  font-size: 17px;
+}
+
+.video-19 .text-transform > div:nth-child(4n) {
+  margin-right: 0;
+}
+
+.video-19 > .text-transform > div:nth-child(1) h3 {
+  text-transform: capitalize;
+}
+
+.video-19 .text-transform > div:nth-child(2) h3 {
+  text-transform: lowercase;
+}
+
+.video-19 > .text-transform > div:nth-child(3) h3 {
+  text-transform: uppercase;
+}
+
+.video-19 .text-transform > div:nth-child(4) h3 {
+  text-transform: none;
 }
 /*# sourceMappingURL=projectCss2021.css.map */

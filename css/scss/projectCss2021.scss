@@ -9,7 +9,9 @@ body {
   margin: 0px 15px;
   text-transform: capitalize;
 }
-
+.clearfix {
+  clear: both;
+}
 //
 // div {
 //   background-color: red; /* Color Name */
@@ -466,11 +468,89 @@ body {
     // x العرض
     overflow-x: hidden;
   }
+  // clear float
+  @include clearfix;
 }
 
 .video-17 {
-  background-color: #ce1010;
-  color: hsl(242deg 88% 45%);
-  // text-shadow: ;
-  text-shadow: 0px -20px 0px hsl(0deg 0% 13%);
+  background-color: #9c9c9c;
+  color: map-get($colors, 21);
+  // text-shadow: right & left || top & bottom || blur || color ;
+  text-shadow: 0px -30px 0 map-get($colors, 41);
+}
+.video-18 {
+  // text-align: left;
+  // text-align: right;
+  text-align: center;
+  // direction: rtl;
+  direction: ltr;
+  img {
+    // top //
+    // vertical-align: top;
+    // vertical-align: text-top;
+    // bottom //
+    // vertical-align: bottom;
+    // vertical-align: text-bottom;
+    // vertical-align: sub;
+    // vertical-align: super;
+    // vertical-align: baseline;
+
+    // middle //
+    // vertical-align: -webkit-baseline-middle;
+    vertical-align: middle;
+  }
+}
+.video-19 {
+  .text-decoration > div {
+    @include grid-left(4, 2%);
+    font-size: 17px;
+  }
+  ul {
+    // global ul + li style
+    @include horizontal-list;
+  }
+  > .text-decoration > div:nth-child(1) {
+    h3 {
+      text-decoration: line-through;
+    }
+  }
+  .text-decoration > div:nth-child(2) {
+    h3 {
+      text-decoration: overline;
+    }
+  }
+  > .text-decoration > div:nth-child(3) {
+    h3 {
+      text-decoration: underline;
+    }
+  }
+  .text-decoration > div:nth-child(4) {
+    h3 {
+      text-decoration: none;
+    }
+  }
+  .text-transform > div {
+    @include grid-left(4, 2%);
+    font-size: 17px;
+  }
+  > .text-transform > div:nth-child(1) {
+    h3 {
+      text-transform: capitalize;
+    }
+  }
+  .text-transform > div:nth-child(2) {
+    h3 {
+      text-transform: lowercase;
+    }
+  }
+  > .text-transform > div:nth-child(3) {
+    h3 {
+      text-transform: uppercase;
+    }
+  }
+  .text-transform > div:nth-child(4) {
+    h3 {
+      text-transform: none;
+    }
+  }
 }
