@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&family=Changa:wght@200;300;400;500;600;700;800&family=El+Messiri:wght@400;500;600;700&family=Lateef&family=Markazi+Text:wght@400;500;600;700&family=Mirza:wght@400;500;600;700&family=Scheherazade:wght@400;700&family=Short+Stack&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
 :root {
   --color-3498db: #3498db;
   --color-ffffff: #ffffff;
@@ -17,10 +18,34 @@ body {
   font-size: 25px;
   margin: 0px 15px;
   text-transform: capitalize;
+  min-height: 20000px;
 }
 
 .clearfix {
   clear: both;
+}
+
+.video-6 {
+  /* Keyword values */
+  color: currentcolor;
+  /* <named-color> values */
+  color: red;
+  color: orange;
+  color: tan;
+  color: rebeccapurple;
+  /* <hex-color> values */
+  color: #090;
+  color: #009900;
+  color: #090a;
+  color: #009900aa;
+  /* <rgb()> values */
+  color: rgba(34, 12, 64, 0.6);
+  /* <hsl()> values */
+  color: rgba(255, 128, 0, 0.6);
+  /* Global values */
+  color: inherit;
+  color: initial;
+  color: unset;
 }
 
 .video-6 .test-1 {
@@ -222,8 +247,28 @@ body {
   padding: 10px;
   width: 70%;
   margin: auto;
+  border-top-width: 20px;
+  border-left-width: 30px;
+  border-right-width: 50px;
+  border-bottom-width: 100px;
   border-width: 10px;
+  border-top-color: #000;
+  border-right-color: #0000ff;
+  border-bottom-color: #ddd;
+  border-left-color: #f00;
   border-color: red;
+  border-style: dashed;
+  border-style: dotted;
+  border-style: double;
+  border-style: groove;
+  border-style: hidden;
+  border-style: inherit;
+  border-style: initial;
+  border-style: inset;
+  border-style: none;
+  border-style: outset;
+  border-style: ridge;
+  border-style: unset;
   border-style: solid;
   border: 10px solid red;
 }
@@ -555,5 +600,933 @@ body {
 
 .video-19 .text-transform > div:nth-child(4) h3 {
   text-transform: none;
+}
+
+.video-20::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.video-20 > div {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 49%;
+  font-size: 20px;
+  border: 1px solid #ed4c67;
+}
+
+.video-20 > div:nth-child(2n) {
+  margin-right: 0;
+}
+
+.video-20 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.video-20 ul li {
+  display: inline-block;
+  margin-left: -2px;
+  margin-right: 2em;
+}
+
+.video-20 > div:nth-child(1) h3 {
+  letter-spacing: 5px;
+  border: 2px solid #000000;
+}
+
+.video-20 > div:nth-child(2) h3 {
+  text-indent: 40px;
+  border: 2px solid #000000;
+}
+
+.video-20 > div:nth-child(3) p {
+  line-height: 1.5;
+  border: 2px solid #000000;
+}
+
+.video-20 > div:nth-child(4) h3 {
+  word-spacing: normal;
+  word-spacing: 3px;
+  word-spacing: 0.3em;
+  word-spacing: 50%;
+  word-spacing: 200%;
+  word-spacing: inherit;
+  word-spacing: initial;
+  word-spacing: unset;
+  word-spacing: 75px;
+  border: 2px solid #000000;
+}
+
+.video-20 > div:nth-child(5) p {
+  white-space: normal;
+  white-space: nowrap;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  white-space: break-spaces;
+  white-space: inherit;
+  white-space: initial;
+  white-space: unset;
+  white-space: nowrap;
+  border: 2px solid #000000;
+}
+
+.video-20 > div:nth-child(7) p {
+  word-break: normal;
+  word-break: break-all;
+  word-break: keep-all;
+  word-break: break-word;
+  word-break: inherit;
+  word-break: initial;
+  word-break: unset;
+  word-break: break-all;
+  border: 2px solid #000000;
+}
+
+.video-21 div {
+  background-color: #ddd;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  text-overflow: inherit;
+  text-overflow: initial;
+  text-overflow: unset;
+  text-overflow: ellipsis;
+}
+
+.video-21 div:hover {
+  overflow: hidden;
+  width: 450px;
+}
+
+.video-22 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.video-22 div {
+  text-align: center;
+  padding: 20px;
+  background-color: #eee;
+  font-size: 20px;
+  border: 2px solid blue;
+}
+
+.video-22 div p {
+  border: 2px solid;
+  border-color: inherit;
+  padding: inherit;
+}
+
+.video-23 {
+  padding-top: 10px;
+  font-family: Gill Sans Extrabold, sans-serif;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  font-family: serif;
+  font-family: sans-serif;
+  font-family: monospace;
+  font-family: cursive;
+  font-family: fantasy;
+  font-family: system-ui;
+  font-family: ui-serif;
+  font-family: ui-sans-serif;
+  font-family: ui-monospace;
+  font-family: ui-rounded;
+  font-family: emoji;
+  font-family: math;
+  font-family: fangsong;
+  font-family: inherit;
+  font-family: initial;
+  font-family: unset;
+}
+
+.video-23 .with-ser {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.video-23 .with-ser span {
+  color: #3498db;
+}
+
+.video-23 .san-ser {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.video-23 .san-ser span {
+  color: #3498db;
+}
+
+.video-23 .with-ser,
+.video-23 .san-ser {
+  background-color: #eee;
+  padding: inherit;
+}
+
+.video-24 {
+  font-size: xx-small;
+  font-size: x-small;
+  font-size: small;
+  font-size: medium;
+  font-size: large;
+  font-size: x-large;
+  font-size: xx-large;
+  font-size: xxx-large;
+  font-size: smaller;
+  font-size: larger;
+  font-size: 12px;
+  font-size: 0.8em;
+  font-size: 80%;
+  font-size: inherit;
+  font-size: initial;
+  font-size: unset;
+}
+
+.video-24 div {
+  font-size: 40px;
+}
+
+.video-24 .test {
+  font-size: 1em;
+}
+
+.video-24 span {
+  font-size: 5vw;
+}
+
+.video-24 p {
+  font-size: 2rem;
+}
+
+.video-24 .vw {
+  font-size: 15vw;
+}
+
+.video-24 .vh {
+  font-size: 10vh;
+}
+
+.video-25 {
+  text-transform: none;
+}
+
+.video-25 div {
+  font-variant: small-caps;
+  font-variant: common-ligatures small-caps;
+  font-variant: inherit;
+  font-variant: initial;
+  font-variant: unset;
+  font-variant: small-caps;
+  font-weight: normal;
+  font-weight: bold;
+  font-weight: lighter;
+  font-weight: bolder;
+  font-weight: 100;
+  font-weight: 200;
+  font-weight: 300;
+  font-weight: 400;
+  font-weight: 500;
+  font-weight: 600;
+  font-weight: 700;
+  font-weight: 800;
+  font-weight: 900;
+  font-weight: inherit;
+  font-weight: initial;
+  font-weight: unset;
+  font-weight: bold;
+}
+
+.video-25 p {
+  font-family: "Short Stack", cursive;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.video-26 button {
+  background: transparent;
+  border: none;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  cursor: auto;
+  cursor: url(hand.cur), pointer;
+  cursor: url(cursor1.png) 4 12, auto;
+  cursor: url(cursor2.png) 2 2, pointer;
+  cursor: inherit;
+  cursor: initial;
+  cursor: unset;
+  cursor: pointer;
+  cursor: url(../images/social/facebook.png) 2 2, pointer;
+}
+
+.video-27 .parent {
+  background-color: red;
+  padding: 10px;
+}
+
+.video-27 .parent::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.video-27 .parent div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #eee;
+  width: 25%;
+  float: left;
+  float: right;
+  float: none;
+  float: inline-start;
+  float: inline-end;
+  float: inherit;
+  float: initial;
+  float: unset;
+  float: left;
+}
+
+.video-27 .clear {
+  clear: both;
+}
+
+.video-28 {
+  padding: 0;
+  margin: 0;
+  border: 1px solid #000000;
+}
+
+.video-28::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.video-28 div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #eee;
+  float: left;
+  margin-left: 10px;
+  width: calc((100% - 60px) / 4);
+}
+
+.video-29 {
+  margin-top: 20px;
+}
+
+.video-29 div {
+  color: white;
+  width: 100px;
+  padding: 10px;
+}
+
+.video-29 .one {
+  background-color: red;
+  opacity: 0.1;
+}
+
+.video-29 .two {
+  background-color: green;
+}
+
+.video-30 {
+  position: relative;
+}
+
+.video-30 div {
+  color: white;
+  width: 200px;
+  padding: 10px;
+}
+
+.video-30 .one {
+  background-color: red;
+  top: 0px;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.video-30 .two {
+  background-color: green;
+}
+
+.video-31 {
+  height: 200px;
+  display: inline-block;
+  position: relative;
+  width: 80%;
+}
+
+.video-31 div {
+  color: white;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  position: absolute;
+}
+
+.video-31 .one {
+  background-color: red;
+  left: 135px;
+  top: 90px;
+  z-index: 3;
+}
+
+.video-31 .two {
+  background-color: green;
+  left: 75px;
+  top: 45px;
+  z-index: 2;
+}
+
+.video-31 .three {
+  background-color: blue;
+  z-index: 1;
+}
+
+.video-32 ul {
+  list-style-type: disc;
+  list-style-type: circle;
+  list-style-type: square;
+  list-style-type: decimal;
+  list-style-type: georgian;
+  list-style-type: trad-chinese-informal;
+  list-style-type: kannada;
+  list-style-type: "-";
+  list-style-type: custom-counter-style;
+  list-style-type: none;
+  list-style-type: inherit;
+  list-style-type: initial;
+  list-style-type: unset;
+  list-style-type: lower-armenian;
+  list-style-type: armenian;
+  list-style-type: circle;
+  list-style-type: decimal;
+  list-style-type: decimal-leading-zero;
+  list-style-type: georgian;
+  list-style-type: lower-alpha;
+  list-style-type: lower-greek;
+  list-style-type: lower-latin;
+  list-style-type: lower-roman;
+  list-style-type: square;
+  list-style-type: upper-alpha;
+  list-style-type: none;
+  list-style-type: "\f2cc";
+  font-family: fontawesome;
+  list-style-position: outside;
+  list-style-position: inside;
+  list-style: disc inside;
+}
+
+.video-32 li {
+  background-color: #eee;
+  margin-bottom: 20px;
+}
+
+.video-33 table {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-spacing: 0;
+}
+
+.video-33 table td {
+  padding: 15px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+
+.video-33 table thead td {
+  background-color: #f44336;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border-color: #f35246;
+}
+
+.video-34 .one {
+  background-color: red;
+  color: white;
+}
+
+.video-34 .two {
+  background-color: #eee;
+  width: 100px;
+  height: 100px;
+}
+
+.video-34 a {
+  color: green;
+  text-decoration: none;
+}
+
+.video-34 a:hover {
+  color: red;
+}
+
+.video-34 a:visited {
+  color: blue;
+}
+
+.video-34 p:empty {
+  border: 10px solid red;
+}
+
+.video-34 div:empty {
+  border: 10px solid red;
+}
+
+.video-34 .ch:checked + label {
+  border: 5px solid #000;
+}
+
+.video-34 .in {
+  border-color: #0004ff;
+  outline: none;
+}
+
+.video-34 .in:focus {
+  border-color: red;
+  outline: none;
+}
+
+.video-35 .one span {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.video-35 .two::first-letter {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.video-35 .three::first-line {
+  font-weight: bold;
+  color: green;
+}
+
+.video-35 ::-moz-selection {
+  background-color: black;
+  color: yellow;
+}
+
+.video-35 ::-moz-selection {
+  background-color: black;
+  color: yellow;
+}
+
+.video-35 ::selection {
+  background-color: black;
+  color: yellow;
+}
+
+.video-36 {
+  font-family: "Markazi Text", serif;
+}
+
+.video-36 .parent {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.video-36 .one {
+  background-color: #eee;
+  padding: 10px;
+  width: 600px;
+  float: left;
+  position: relative;
+}
+
+.video-36 .one::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  right: 0px;
+  top: 0;
+  background-color: #009688;
+}
+
+.video-36 .one::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: -20px;
+  margin-top: -10px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent #009688 transparent transparent;
+}
+
+.video-36 .user {
+  background-color: #eee;
+  width: 50px;
+  margin-right: 20px;
+  padding: 10px;
+  height: 100px;
+  float: left;
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.video-36 .user::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50px;
+  margin-top: -5px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent transparent #009688;
+}
+
+.video-37 .parent {
+  margin-bottom: 20px;
+  overflow: hidden;
+  counter-increment: members-counter;
+}
+
+.video-37 .one {
+  background-color: #eee;
+  padding: 10px;
+  width: 600px;
+  float: left;
+  position: relative;
+}
+
+.video-37 .one::before {
+  content: attr(data-text);
+  display: none;
+}
+
+.video-37 .one:hover::before {
+  display: block;
+  position: absolute;
+  background-color: red;
+  color: white;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: bold;
+  right: -50px;
+  top: 10%;
+  margin-top: -50px;
+}
+
+.video-37 .one::after {
+  content: counter(members-counter);
+  position: absolute;
+  background-color: red;
+  color: white;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-weight: bold;
+  right: -25px;
+  top: 50%;
+  margin-top: -25px;
+}
+
+.video-37 .user {
+  background-color: #eee;
+  width: 70px;
+  margin-right: 20px;
+  padding: 10px;
+  height: 100px;
+  float: left;
+  font-size: 50px;
+  text-align: center;
+}
+
+.video-37 ul {
+  list-style: none;
+}
+
+.video-37 ul li {
+  position: relative;
+}
+
+.video-37 ul li::before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  margin-top: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #009688 transparent transparent;
+}
+
+.class {
+  border-radius: 10px;
+}
+
+.video-39 div {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  margin: 20px auto;
+  /* The syntax of the first radius allows one to four values */
+  /* Radius is set for all 4 sides */
+  border-radius: 10px;
+  /* top-left-and-bottom-right | top-right-and-bottom-left */
+  border-radius: 10px 5%;
+  /* top-left | top-right-and-bottom-left | bottom-right */
+  border-radius: 2px 4px 2px;
+  /* top-left | top-right | bottom-right | bottom-left */
+  border-radius: 1px 0 3px 4px;
+  /* The syntax of the second radius allows one to four values */
+  /* (first radius values) / radius */
+  border-radius: 10px / 20px;
+  /* (first radius values) / top-left-and-bottom-right | top-right-and-bottom-left */
+  border-radius: 10px 5% / 20px 30px;
+  /* (first radius values) / top-left | top-right-and-bottom-left | bottom-right */
+  border-radius: 10px 5px 2em / 20px 25px 30%;
+  /* (first radius values) / top-left | top-right | bottom-right | bottom-left */
+  border-radius: 10px 5% / 20px 25em 30px 35em;
+  /* Global values */
+  border-radius: inherit;
+  border-radius: initial;
+  border-radius: unset;
+  border-radius: 6px;
+  /* border-top-left-radius: 20px 20px;
+    border-bottom-right-radius: 20px; */
+}
+
+.video-40 div {
+  padding: 20px;
+  background-color: #eee;
+  margin: 20px auto;
+  width: 300px;
+  /* Keyword values */
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  /* offset-x | offset-y | color */
+  -webkit-box-shadow: 60px -16px teal;
+          box-shadow: 60px -16px teal;
+  /* offset-x | offset-y | blur-radius | color */
+  -webkit-box-shadow: 10px 5px 5px black;
+          box-shadow: 10px 5px 5px black;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  /* inset | offset-x | offset-y | color */
+  -webkit-box-shadow: inset 5em 1em gold;
+          box-shadow: inset 5em 1em gold;
+  /* Any number of shadows, separated by commas */
+  -webkit-box-shadow: 3px 3px red, -1em 0 0.4em olive;
+          box-shadow: 3px 3px red, -1em 0 0.4em olive;
+  /* Global keywords */
+  -webkit-box-shadow: inherit;
+          box-shadow: inherit;
+  -webkit-box-shadow: initial;
+          box-shadow: initial;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  -webkit-box-shadow: 20px 0px 10px 0 #f10000, 0 0 10px 0 #000, -1px -20px 10px 0 #080, -20px 0px 10px 0 #00f, 0px 20px 10px 0 yellow;
+          box-shadow: 20px 0px 10px 0 #f10000, 0 0 10px 0 #000, -1px -20px 10px 0 #080, -20px 0px 10px 0 #00f, 0px 20px 10px 0 yellow;
+}
+
+.video-41 .parent {
+  width: 600px;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ddd;
+}
+
+.video-41 .one {
+  background-color: #eee;
+  width: 300px;
+  float: left;
+  padding: 10px;
+  border: 1px solid red;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.video-42 .one {
+  background-color: #eee;
+  width: 200px;
+  height: 100px;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-property: width;
+  transition-property: width;
+  /* Keyword values */
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-timing-function: step-start;
+          transition-timing-function: step-start;
+  -webkit-transition-timing-function: step-end;
+          transition-timing-function: step-end;
+  /* Function values */
+  -webkit-transition-timing-function: steps(4, jump-end);
+          transition-timing-function: steps(4, jump-end);
+  -webkit-transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+          transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+  /* Steps Function keywords */
+  -webkit-transition-timing-function: steps(4, jump-start);
+          transition-timing-function: steps(4, jump-start);
+  -webkit-transition-timing-function: steps(10, jump-end);
+          transition-timing-function: steps(10, jump-end);
+  -webkit-transition-timing-function: steps(20, jump-none);
+          transition-timing-function: steps(20, jump-none);
+  -webkit-transition-timing-function: steps(5, jump-both);
+          transition-timing-function: steps(5, jump-both);
+  -webkit-transition-timing-function: steps(6, start);
+          transition-timing-function: steps(6, start);
+  -webkit-transition-timing-function: steps(8, end);
+          transition-timing-function: steps(8, end);
+  /* Multiple timing functions */
+  -webkit-transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+          transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+  /* Global values */
+  -webkit-transition-timing-function: inherit;
+          transition-timing-function: inherit;
+  -webkit-transition-timing-function: initial;
+          transition-timing-function: initial;
+  -webkit-transition-timing-function: unset;
+          transition-timing-function: unset;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: all 2s 0.5s linear;
+  transition: all 2s 0.5s linear;
+}
+
+.video-42 .one:hover {
+  width: 280px;
+  height: 120px;
+}
+
+.video-43 .one {
+  background-color: #eee !important;
+}
+
+.video-44 {
+  /*
+  The Margin Collapse
+  [1] Only Vertical Margin Collapse
+  [2] Bigger Margin Wins
+  [3] Margin Collapsing With Elements Without Anything Between
+  [4] Nesting Does Not Prevent Collapse
+*/
+}
+
+.video-44 .parent {
+  overflow: hidden;
+  margin: auto;
+  width: 400px;
+  height: 200px;
+  padding: 10px;
+  background-color: #eee;
+}
+
+.video-44 .parent .one,
+.video-44 .parent .two {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.video-44 .one {
+  background-color: #ddd;
+  border: 1px solid #000000;
+}
+
+.video-44 .two {
+  background-color: #aaa;
+}
+
+.video-44 .up {
+  background-color: red;
+  color: white;
+  height: 80px;
+  margin-bottom: 40px;
+}
+
+.video-44 .down {
+  background-color: green;
+  color: white;
+  height: 80px;
+  margin-top: 40px;
+}
+
+.video-45 {
+  /*
+  CSS Variables
+  - Global Variable
+  - Local Variable
+  var(Variable Name, Fall Back Value)
+*/
+}
+
+.video-45 :root {
+  --main-color: blue;
+  --mainPadding: 10px;
+}
+
+.video-45 .main {
+  background-color: var(--color-3498db, #f00);
+  color: white;
+  padding: calc(20px + var(--mainPadding));
+}
+
+.video-45 h2 {
+  color: var(--color-3498db);
+  background-color: #eee;
+  padding: var(--mainPadding);
+}
+
+.video-45 p {
+  color: var(--color-3498db);
+  border: 2px solid var(--mainColor);
+  padding: var(--mainPadding);
+}
+
+.video-45 a:hover {
+  color: var(--color-3498db);
+}
+
+.video-45 .local {
+  --color-3498db: black;
+  background-color: var(--color-3498db);
+  color: white;
 }
 /*# sourceMappingURL=projectCss2021.css.map */

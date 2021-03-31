@@ -1,6 +1,8 @@
 @import "./helpers/mixin";
 @import "./components/color";
+@import "./components/font";
 * {
+  // box-sizing: content-box;
   box-sizing: border-box;
 }
 body {
@@ -8,6 +10,7 @@ body {
   font-size: 25px;
   margin: 0px 15px;
   text-transform: capitalize;
+  min-height: 20000px;
 }
 .clearfix {
   clear: both;
@@ -24,6 +27,41 @@ body {
 //   background-size: auto;
 // }
 .video-6 {
+  /* Keyword values */
+  color: currentcolor;
+
+  /* <named-color> values */
+  color: red;
+  color: orange;
+  color: tan;
+  color: rebeccapurple;
+
+  /* <hex-color> values */
+  color: #090;
+  color: #009900;
+  color: #090a;
+  color: #009900aa;
+
+  /* <rgb()> values */
+  //color: rgb(34, 12, 64, 0.6);
+  color: rgba(34, 12, 64, 0.6);
+  // color: rgb(34 12 64 / 0.6);
+  // color: rgba(34 12 64 / 0.3);
+  // color: rgb(34 12 64 / 60%);
+  // color: rgba(34.6 12 64 / 30%);
+
+  /* <hsl()> values */
+  //color: hsl(30, 100%, 50%, 0.6);
+  color: hsla(30, 100%, 50%, 0.6);
+  //color: hsl(30 100% 50% / 0.6);
+  //color: hsla(30 100% 50% / 0.6);
+  // color: hsl(30 100% 50% / 60%);
+  // color: hsla(30.2 100% 50% / 60%);
+
+  /* Global values */
+  color: inherit;
+  color: initial;
+  color: unset;
   .test-1 {
     color: #f00;
   }
@@ -201,30 +239,30 @@ body {
   // margin-right: 40px;
   margin: auto;
 
-  // border-top-width: 20px;
-  // border-left-width: 30px;
-  // border-right-width: 50px;
-  // border-bottom-width: 100px;
+  border-top-width: 20px;
+  border-left-width: 30px;
+  border-right-width: 50px;
+  border-bottom-width: 100px;
   border-width: 10px;
 
-  // border-top-color: #000;
-  // border-right-color: #0000ff;
-  // border-bottom-color: #ddd;
-  // border-left-color: #f00;
+  border-top-color: #000;
+  border-right-color: #0000ff;
+  border-bottom-color: #ddd;
+  border-left-color: #f00;
   border-color: red;
 
-  // border-style: dashed;
-  // border-style: dotted;
-  // border-style: double;
-  // border-style: groove;
-  // border-style: hidden;
-  // border-style: inherit;
-  // border-style: initial;
-  // border-style: inset;
-  // border-style: none;
-  // border-style: outset;
-  // border-style: ridge;
-  // border-style: unset;
+  border-style: dashed;
+  border-style: dotted;
+  border-style: double;
+  border-style: groove;
+  border-style: hidden;
+  border-style: inherit;
+  border-style: initial;
+  border-style: inset;
+  border-style: none;
+  border-style: outset;
+  border-style: ridge;
+  border-style: unset;
   border-style: solid;
 
   // short code
@@ -552,5 +590,983 @@ body {
     h3 {
       text-transform: none;
     }
+  }
+}
+
+// video 20
+.video-20 {
+  // clear float
+  @include clearfix;
+  > div {
+    @include grid-left(2, 2%);
+    font-size: 20px;
+    border: 1px solid map-get($colors, 61);
+  }
+  ul {
+    // global ul + li style
+    @include horizontal-list;
+  }
+  > div:nth-child(1) {
+    h3 {
+      letter-spacing: 5px;
+      border: 2px solid map-get($colors, 500);
+    }
+  }
+  > div:nth-child(2) {
+    h3 {
+      text-indent: 40px;
+      border: 2px solid map-get($colors, 500);
+    }
+  }
+  > div:nth-child(3) {
+    p {
+      line-height: 1.5;
+      border: 2px solid map-get($colors, 500);
+    }
+  }
+  > div:nth-child(4) {
+    h3 {
+      // Keyword value
+      word-spacing: normal;
+
+      // <length> values
+      word-spacing: 3px;
+      word-spacing: 0.3em;
+
+      // <percentage> values
+      word-spacing: 50%;
+      word-spacing: 200%;
+
+      // Global values
+      word-spacing: inherit;
+      word-spacing: initial;
+      word-spacing: unset;
+      word-spacing: 75px;
+      border: 2px solid map-get($colors, 500);
+    }
+  }
+  > div:nth-child(5) {
+    p {
+      // Keyword values
+      white-space: normal;
+      white-space: nowrap;
+      white-space: pre;
+      white-space: pre-wrap;
+      white-space: pre-line;
+      white-space: break-spaces;
+
+      // Global values
+      white-space: inherit;
+      white-space: initial;
+      white-space: unset;
+      white-space: nowrap;
+      border: 2px solid map-get($colors, 500);
+    }
+  }
+  > div:nth-child(7) {
+    p {
+      // Keyword values
+      word-break: normal;
+      word-break: break-all;
+      word-break: keep-all;
+      word-break: break-word; // deprecated
+
+      // Global values
+      word-break: inherit;
+      word-break: initial;
+      word-break: unset;
+      word-break: break-all;
+      border: 2px solid map-get($colors, 500);
+    }
+  }
+}
+// video 21
+.video-21 {
+  div {
+    background-color: #ddd;
+    padding: 10px;
+    width: 200px;
+    @include transition(0.5s);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    text-overflow: inherit;
+    text-overflow: initial;
+    text-overflow: unset;
+    text-overflow: ellipsis;
+  }
+  div:hover {
+    overflow: hidden;
+    width: 450px;
+  }
+}
+
+.video-22 {
+  font-family: Arial, Helvetica, sans-serif;
+  div {
+    text-align: center;
+    padding: 20px;
+    background-color: #eee;
+    font-size: 20px;
+    border: 2px solid blue;
+  }
+  div p {
+    border: 2px solid;
+    // inherit هو انو العنصر ياخد الخواص بتاعت الاب اللى هو فية فى الخصية دى
+    border-color: inherit;
+    padding: inherit;
+  }
+}
+// font family
+.video-23 {
+  padding-top: 10px;
+  // A font family name and a generic family name
+  font-family: Gill Sans Extrabold, sans-serif;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+
+  // A generic family name only
+  font-family: serif;
+  font-family: sans-serif;
+  font-family: monospace;
+  font-family: cursive;
+  font-family: fantasy;
+  font-family: system-ui;
+  font-family: ui-serif;
+  font-family: ui-sans-serif;
+  font-family: ui-monospace;
+  font-family: ui-rounded;
+  font-family: emoji;
+  font-family: math;
+  font-family: fangsong;
+
+  // Global values
+  font-family: inherit;
+  font-family: initial;
+  font-family: unset;
+  .with-ser {
+    font-family: "Times New Roman", Times, serif;
+    span {
+      color: #3498db;
+    }
+  }
+  .san-ser {
+    font-family: Arial, Helvetica, sans-serif;
+    span {
+      color: #3498db;
+    }
+  }
+  .with-ser,
+  .san-ser {
+    background-color: #eee;
+    padding: inherit;
+  }
+}
+// video 24
+.video-24 {
+  // <absolute-size> values
+  font-size: xx-small;
+  font-size: x-small;
+  font-size: small;
+  font-size: medium;
+  font-size: large;
+  font-size: x-large;
+  font-size: xx-large;
+  font-size: xxx-large;
+
+  // <relative-size> values
+  font-size: smaller;
+  font-size: larger;
+
+  // <length> values
+  font-size: 12px;
+  font-size: 0.8em;
+
+  // <percentage> values
+  // 80% من حجم الخاط للاب اللى هو فية
+  font-size: 80%;
+
+  // Global values
+  font-size: inherit;
+  font-size: initial;
+  font-size: unset;
+
+  div {
+    font-size: 40px;
+  }
+  .test {
+    // 1em بياخد مرة من الاب اللى هو فية اد حجم الخط المستخدام
+    font-size: 1em;
+  }
+  span {
+    font-size: 5vw;
+  }
+  p {
+    // 2rem بياخد من العنصر الاتش تى ال ام و حجم الخاط فية 32 بيكسال
+    font-size: 2rem;
+  }
+  .vw {
+    // 5vw اللى هو المساحةالفاضية من العنصر فى الصفحة و بيحسبها ازاى
+    // يعنى لو المساحة الصفحة 900 بي اكس عو بيضرب الرقم من غير اصفار فى الفنت اللى انت حاطو
+
+    font-size: 15vw;
+  }
+  .vh {
+    font-size: 10vh;
+  }
+}
+// video 25
+.video-25 {
+  text-transform: none;
+  div {
+    font-variant: small-caps;
+    font-variant: common-ligatures small-caps;
+
+    // Global values
+    font-variant: inherit;
+    font-variant: initial;
+    font-variant: unset;
+    // بيعمال اول حرف كبتال
+    font-variant: small-caps;
+    // Keyword values
+    font-weight: normal;
+    font-weight: bold;
+
+    // Keyword values relative to the parent
+    font-weight: lighter;
+    font-weight: bolder;
+
+    // Numeric keyword values
+    font-weight: 100;
+    font-weight: 200;
+    font-weight: 300;
+    font-weight: 400; // normal
+    font-weight: 500;
+    font-weight: 600;
+    font-weight: 700; // bold
+    font-weight: 800;
+    font-weight: 900;
+
+    // Global values
+    font-weight: inherit;
+    font-weight: initial;
+    font-weight: unset;
+    font-weight: bold;
+  }
+  p {
+    font-family: $font-ar-1;
+    text-transform: uppercase;
+    // font-style: normal;
+    // font-style: oblique;
+    // font-style: unset;
+    // font-style: inherit;
+    font-style: italic;
+  }
+}
+// video 26
+.video-26 {
+  button {
+    background: transparent;
+    border: none;
+    color: red;
+    font-weight: bold;
+    // Keyword value
+    cursor: pointer;
+    cursor: auto;
+
+    // URL, with a keyword fallback
+    cursor: url(hand.cur), pointer;
+
+    // URL and coordinates, with a keyword fallback
+    cursor: url(cursor1.png) 4 12, auto;
+    cursor: url(cursor2.png) 2 2, pointer;
+
+    // Global values
+    cursor: inherit;
+    cursor: initial;
+    cursor: unset;
+    cursor: pointer;
+    cursor: url(../images/social/facebook.png) 2 2, pointer;
+  }
+}
+// video 27 float
+.video-27 {
+  .parent {
+    background-color: red;
+    padding: 10px;
+    // clear float
+    @include clearfix;
+  }
+  .parent div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #eee;
+    width: 25%;
+    // Keyword values
+    float: left;
+    float: right;
+    float: none;
+    float: inline-start;
+    float: inline-end;
+
+    // Global values
+    float: inherit;
+    float: initial;
+    float: unset;
+    float: left;
+  }
+  .clear {
+    clear: both;
+  }
+}
+// video 28
+.video-28 {
+  padding: 0;
+  margin: 0;
+  border: 1px solid map-get($colors, 500);
+  // clear float
+  @include clearfix;
+  // Content Width Is: 100%
+  // 6 Spaces  10px * 6 => 60px From Content Width
+  // 100% - 60px Available Space
+  // 5 Elements The Width Is: (100% - 60px) / 5
+  div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #eee;
+    float: left;
+    // margin left = 10px
+    margin-left: 10px;
+    // width 60px = total margin left || / 4 = total Element
+    width: calc((100% - 60px) / 4);
+  }
+}
+// video 29
+.video-29 {
+  margin-top: 20px;
+  div {
+    color: white;
+    width: 100px;
+    padding: 10px;
+  }
+  .one {
+    background-color: red;
+    opacity: 0.1;
+  }
+  .two {
+    background-color: green;
+  }
+}
+// video 30
+.video-30 {
+  position: relative;
+  div {
+    color: white;
+    width: 200px;
+    padding: 10px;
+  }
+  .one {
+    background-color: red;
+    // position: absolute;
+    // position: fixed;
+    // position: static;
+    // position: inherit;
+    // position: relative;
+    top: 0px;
+    position: -webkit-sticky;
+    position: sticky;
+    //position: absolute;
+  }
+  .two {
+    background-color: green;
+  }
+}
+// video 31 z-index
+.video-31 {
+  height: 200px;
+  display: inline-block;
+  position: relative;
+  width: 80%;
+  div {
+    color: white;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    position: absolute;
+  }
+  .one {
+    background-color: red;
+    left: 135px;
+    top: 90px;
+    z-index: 3;
+  }
+  .two {
+    background-color: green;
+    left: 75px;
+    top: 45px;
+    z-index: 2;
+  }
+  .three {
+    background-color: blue;
+    z-index: 1;
+  }
+}
+// video 32
+.video-32 {
+  ul {
+    // Partial list of types
+    list-style-type: disc;
+    list-style-type: circle;
+    list-style-type: square;
+    list-style-type: decimal;
+    list-style-type: georgian;
+    list-style-type: trad-chinese-informal;
+    list-style-type: kannada;
+
+    // <string> value
+    list-style-type: "-";
+
+    // Identifier matching an @counter-style rule
+    list-style-type: custom-counter-style;
+
+    // Keyword value
+    list-style-type: none;
+
+    // Global values
+    list-style-type: inherit;
+    list-style-type: initial;
+    list-style-type: unset;
+
+    list-style-type: lower-armenian;
+    list-style-type: armenian;
+    list-style-type: circle; // دواير
+    list-style-type: decimal; // 1 ارقام
+    list-style-type: decimal-leading-zero; // 01 ارقام
+    list-style-type: georgian;
+    list-style-type: lower-alpha; // a b c
+    list-style-type: lower-greek; // a b c
+    list-style-type: lower-latin; // a b c
+    list-style-type: lower-roman; // i | ii | iii
+    list-style-type: square; // مريعات
+    list-style-type: upper-alpha; // A B C
+    list-style-type: none;
+    list-style-type: "\f2cc";
+    font-family: fontawesome;
+    // list-style-position
+    list-style-position: outside;
+    list-style-position: inside;
+
+    // list-style-image
+    //list-style-image: url(../../images/social/facebook.png);
+
+    // short code
+    // type || position || image
+    list-style: disc inside;
+  }
+  li {
+    background-color: #eee;
+    margin-bottom: 20px;
+  }
+}
+// table
+.video-33 {
+  table {
+    width: 100%;
+    border: 1px solid #ccc;
+    // البردار اللى بين العناصر التيبال
+    border-spacing: 0;
+  }
+  table td {
+    padding: 15px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+  }
+  table thead td {
+    background-color: #f44336;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    border-color: #f35246;
+  }
+}
+// video 34
+.video-34 {
+  .one {
+    background-color: red;
+    color: white;
+  }
+  .two {
+    background-color: #eee;
+    width: 100px;
+    height: 100px;
+  }
+  a {
+    color: green;
+    text-decoration: none;
+  }
+  a:hover {
+    color: red;
+  }
+  // اللى هى اللنكات اللى انت ظرتها
+  a:visited {
+    color: blue;
+  }
+  // العنصار الفاضى
+  p:empty {
+    border: 10px solid red;
+  }
+  div:empty {
+    border: 10px solid red;
+  }
+  //  .ch:checked + label || يعنى العنصر الاتشكد ساعت مادوس علية يجيب اليبال اللى بعدو
+  .ch:checked + label {
+    //display: none;
+    border: 5px solid #000;
+  }
+  .in {
+    border-color: rgb(0, 4, 255);
+    outline: none;
+  }
+  // ساععت ما تدوس علية
+  .in:focus {
+    border-color: red;
+    outline: none;
+  }
+}
+//
+.video-35 {
+  .one span {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+  }
+  .two::first-letter {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+  }
+  .three::first-line {
+    font-weight: bold;
+    color: green;
+  }
+  ::-moz-selection {
+    background-color: black;
+    color: yellow;
+  }
+  // اللى هو ساعت ما تيجى تاخد التاكاست كوبى الخبفية و لون الكلام
+  ::-moz-selection {
+    background-color: black;
+    color: yellow;
+  }
+  ::selection {
+    background-color: black;
+    color: yellow;
+  }
+}
+
+// video 36
+.video-36 {
+  font-family: $font-ar-3;
+  .parent {
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .one {
+    background-color: #eee;
+    padding: 10px;
+    width: 600px;
+    float: left;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 100%;
+      right: 0px;
+      top: 0;
+      background-color: #009688;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 50%;
+      left: -20px;
+      margin-top: -10px;
+      border-style: solid;
+      border-width: 10px;
+      border-color: transparent #009688 transparent transparent;
+    }
+  }
+  .user {
+    background-color: #eee;
+    width: 50px;
+    margin-right: 20px;
+    padding: 10px;
+    height: 100px;
+    float: left;
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 50%;
+      left: 50px;
+      margin-top: -5px;
+      border-style: solid;
+      border-width: 10px;
+      border-color: transparent transparent transparent #009688;
+    }
+  }
+}
+//
+.video-37 {
+  .parent {
+    margin-bottom: 20px;
+    overflow: hidden;
+    // هو العدلد اللى بيعدالك عدد العناصر اللى فى الاب
+    counter-increment: members-counter;
+  }
+  .one {
+    background-color: #eee;
+    padding: 10px;
+    width: 600px;
+    float: left;
+    position: relative;
+  }
+  .one::before {
+    // ممكن تجيب الاتربيوت بتاع العنصر و تعرضو فى الكونتانت
+    content: attr(data-text);
+    display: none;
+  }
+  .one:hover::before {
+    display: block;
+    position: absolute;
+    background-color: red;
+    color: white;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    right: -50px;
+    top: 10%;
+    margin-top: -50px;
+  }
+  .one::after {
+    content: counter(members-counter);
+    position: absolute;
+    background-color: red;
+    color: white;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    right: -25px;
+    top: 50%;
+    margin-top: -25px;
+  }
+  .user {
+    background-color: #eee;
+    width: 70px;
+    margin-right: 20px;
+    padding: 10px;
+    height: 100px;
+    float: left;
+    font-size: 50px;
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+  }
+  ul li {
+    position: relative;
+  }
+  ul li::before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    margin-top: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #009688 transparent transparent;
+  }
+}
+
+// video 38
+
+// Vendors Prefixes
+
+// Chrome
+// Safari
+// Firefox
+// IE, Edge
+// Opera
+
+// [1] New CSS Feature Appeared
+// [2] Browsers Tests The Feature In Version X
+// [3] Browsers Add Prefix To Give Developers The Ability To Use It
+// [4] The Feature Is Fully Supported In Version Y, No Need For Prefix
+
+// -webkit- => Chrome, Safari, New Opera Version
+// -moz- => Firefox
+// -ms- => Ie, Edge
+// -o- => Old Version of Opera
+
+.class {
+  // -webkit-border-radius: 10px;
+  // -moz-border-radius: 10px;
+  // -o-border-radius: 10px;
+  // -ms-border-radius: 10px;
+  // border-radius: 10px;
+  border-radius: 10px;
+}
+
+// [1] Most of Users Is Using Modern Browsers
+// [2] Vs Code Addon To Add The Prefix
+// [3] Task Runner
+
+// video 39 border radius
+.video-39 {
+  div {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    margin: 20px auto;
+    /* The syntax of the first radius allows one to four values */
+    /* Radius is set for all 4 sides */
+    border-radius: 10px;
+
+    /* top-left-and-bottom-right | top-right-and-bottom-left */
+    border-radius: 10px 5%;
+
+    /* top-left | top-right-and-bottom-left | bottom-right */
+    border-radius: 2px 4px 2px;
+
+    /* top-left | top-right | bottom-right | bottom-left */
+    border-radius: 1px 0 3px 4px;
+
+    /* The syntax of the second radius allows one to four values */
+    /* (first radius values) / radius */
+    border-radius: 10px / 20px;
+
+    /* (first radius values) / top-left-and-bottom-right | top-right-and-bottom-left */
+    border-radius: 10px 5% / 20px 30px;
+
+    /* (first radius values) / top-left | top-right-and-bottom-left | bottom-right */
+    border-radius: 10px 5px 2em / 20px 25px 30%;
+
+    /* (first radius values) / top-left | top-right | bottom-right | bottom-left */
+    border-radius: 10px 5% / 20px 25em 30px 35em;
+
+    /* Global values */
+    border-radius: inherit;
+    border-radius: initial;
+    border-radius: unset;
+    border-radius: 6px;
+    /* border-top-left-radius: 20px 20px;
+    border-bottom-right-radius: 20px; */
+  }
+}
+
+// video 40 box shadow
+.video-40 {
+  div {
+    padding: 20px;
+    background-color: #eee;
+    margin: 20px auto;
+    width: 300px;
+    /* Keyword values */
+    box-shadow: none;
+
+    /* offset-x | offset-y | color */
+    box-shadow: 60px -16px teal;
+
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 10px 5px 5px black;
+
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+    /* inset | offset-x | offset-y | color */
+    box-shadow: inset 5em 1em gold;
+
+    /* Any number of shadows, separated by commas */
+    box-shadow: 3px 3px red, -1em 0 0.4em olive;
+
+    /* Global keywords */
+    box-shadow: inherit;
+    box-shadow: initial;
+    box-shadow: unset;
+    box-shadow: 20px 0px 10px 0 #f10000, 0 0 10px 0 #000, -1px -20px 10px 0 #080,
+      -20px 0px 10px 0 #00f, 0px 20px 10px 0 yellow;
+  }
+}
+// video 41
+.video-41 {
+  .parent {
+    width: 600px;
+    overflow: hidden;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ddd;
+  }
+  .one {
+    background-color: #eee;
+    width: 300px;
+    float: left;
+    padding: 10px;
+    border: 1px solid red;
+    box-sizing: border-box;
+  }
+}
+// transition
+.video-42 {
+  .one {
+    background-color: #eee;
+    width: 200px;
+    height: 100px;
+    // مده الانتقال فى تنفيز الخاصية
+    transition-duration: 1s;
+    // مده التاخير فى الانتقال
+    transition-delay: 0.2s;
+    // الخاصية اللى هيطبق عليها الترنزيشان
+    transition-property: all;
+    transition-property: width;
+    //
+    /* Keyword values */
+    transition-timing-function: ease; // يبدا بطى و ينتهى سريع
+    transition-timing-function: ease-in; // بيبدا بطى
+    transition-timing-function: ease-out; // بينتهى يطى
+    transition-timing-function: ease-in-out; // بيبدا و ينتهى بطى
+    transition-timing-function: linear; // خطى فى نفس السرعة
+    transition-timing-function: step-start;
+    transition-timing-function: step-end;
+
+    /* Function values */
+    transition-timing-function: steps(4, jump-end);
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+
+    /* Steps Function keywords */
+    transition-timing-function: steps(4, jump-start);
+    transition-timing-function: steps(10, jump-end);
+    transition-timing-function: steps(20, jump-none);
+    transition-timing-function: steps(5, jump-both);
+    transition-timing-function: steps(6, start);
+    transition-timing-function: steps(8, end);
+
+    /* Multiple timing functions */
+    transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+
+    /* Global values */
+    transition-timing-function: inherit;
+    transition-timing-function: initial;
+    transition-timing-function: unset;
+    transition-timing-function: ease-in-out;
+    // short code
+    transition: all 2s 0.5s linear;
+  }
+  .one:hover {
+    width: 280px;
+    height: 120px;
+  }
+}
+.video-43 {
+  .one {
+    background-color: #eee !important;
+  }
+}
+//
+.video-44 {
+  /*
+  The Margin Collapse
+  [1] Only Vertical Margin Collapse
+  [2] Bigger Margin Wins
+  [3] Margin Collapsing With Elements Without Anything Between
+  [4] Nesting Does Not Prevent Collapse
+*/
+  .parent {
+    overflow: hidden;
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    background-color: #eee;
+  }
+  .parent .one,
+  .parent .two {
+    float: left;
+    width: 50%;
+    height: 100%;
+  }
+  .one {
+    background-color: #ddd;
+    border: 1px solid map-get($colors, 500);
+  }
+  .two {
+    background-color: #aaa;
+  }
+  .up {
+    background-color: red;
+    color: white;
+    height: 80px;
+    margin-bottom: 40px;
+  }
+  .down {
+    background-color: green;
+    color: white;
+    height: 80px;
+    margin-top: 40px;
+  }
+}
+// variables
+.video-45 {
+  /*
+  CSS Variables
+  - Global Variable
+  - Local Variable
+  var(Variable Name, Fall Back Value)
+*/
+
+  :root {
+    --main-color: blue;
+    --mainPadding: 10px;
+    // --color-3498db: #3498db;
+  }
+  .main {
+    background-color: var(--color-3498db, #f00 !global);
+    color: rgb(255, 255, 255);
+    padding: calc(20px + var(--mainPadding));
+  }
+  h2 {
+    color: var(--color-3498db);
+    background-color: #eee;
+    padding: var(--mainPadding);
+  }
+  p {
+    color: var(--color-3498db);
+    border: 2px solid var(--mainColor);
+    padding: var(--mainPadding);
+  }
+  a:hover {
+    color: var(--color-3498db);
+  }
+  .local {
+    --color-3498db: black;
+    background-color: var(--color-3498db);
+    color: rgb(255, 255, 255);
   }
 }
