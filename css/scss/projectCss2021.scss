@@ -1547,7 +1547,7 @@ body {
     // --color-3498db: #3498db;
   }
   .main {
-    background-color: var(--color-3498db, #f00 !global);
+    background-color: var(--color-3498db, #f00);
     color: rgb(255, 255, 255);
     padding: calc(20px + var(--mainPadding));
   }
@@ -1568,5 +1568,47 @@ body {
     --color-3498db: black;
     background-color: var(--color-3498db);
     color: rgb(255, 255, 255);
+  }
+}
+// flex box
+.video-46 {
+  /*
+  Flexible Box
+  For Parent
+  - display: flex => To Start Flexible Box
+  - flex-direction: row => Default Value
+  - flex-wrap: nowrap => Default Value
+  - flex-flow: [Flex-Direction] + [Flex-Wrap]
+*/
+
+  .flex {
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .flex div {
+    background-color: #f00;
+    color: white;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+  }
+  .float {
+    overflow: hidden;
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+  }
+  .float div {
+    background-color: #f00;
+    color: white;
+    float: right;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
   }
 }
