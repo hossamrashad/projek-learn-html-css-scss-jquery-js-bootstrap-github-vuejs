@@ -1,0 +1,61 @@
+// scroll to top
+// scroll-to-top-1
+#scroll-to-top-1 {
+  background-color: #333;
+  color: #fff;
+  display: block;
+  padding: 0px 5px 3px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+  z-index: 900000;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  @include borderRadius(10px);
+  border: 2px solid map-get($colors, 9);
+  @include hover {
+    color: #fff;
+  }
+}
+// scroll-to-top-2
+#scroll-to-top-2 {
+  background-color: #2b3c4d;
+  color: #fff;
+  display: block;
+  padding: 5px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+  z-index: 900000;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  @include borderRadius(10px);
+  border: 2px solid map-get($colors, 9);
+  @include hover {
+    color: #fff;
+  }
+}
+// scroll-to-top-3
+#scroll-to-top-3 {
+  background-color: #007bff;
+  color: #fff;
+  display: block;
+  padding: 5px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+  z-index: 900000;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  @include borderRadius(10px);
+  border: 2px solid map-get($colors, 9);
+  @include hover {
+    color: #fff;
+  }
+}

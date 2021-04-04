@@ -1576,9 +1576,25 @@ body {
   Flexible Box
   For Parent
   - display: flex => To Start Flexible Box
+
   - flex-direction: row => Default Value
+  - flex-direction: column;
+  - flex-direction: column-reverse;
+  - flex-direction: row;
+  - flex-direction: row-reverse;
+  - flex-direction: inherit;
+  - flex-direction: initial;
+  - flex-direction: unset;
+
   - flex-wrap: nowrap => Default Value
+  - flex-wrap: nowrap;
+  - flex-wrap: wrap;
+  - flex-wrap: inherit;
+  - flex-wrap: initial;
+  - flex-wrap: unset;
+  
   - flex-flow: [Flex-Direction] + [Flex-Wrap]
+
 */
 
   .flex {
@@ -1587,7 +1603,9 @@ body {
     padding: 20px;
     margin: 20px auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
   }
   .flex div {
     background-color: #f00;
