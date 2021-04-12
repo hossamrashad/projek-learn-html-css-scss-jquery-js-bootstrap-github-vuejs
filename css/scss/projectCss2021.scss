@@ -4,12 +4,22 @@
 
 // background-colo
 /*
- * background-colo
- * background-image
- * background-repeat
- * background-attachment
-*  background-position
-* 
+ * color                          || red #f00 #ff0000 rgb(255 0 0) rgba(255 0 0 1)
+ * background-colo                || red #f00 #ff0000 rgb(255 0 0) rgba(255 0 0 1)
+ * background-image               || url()
+ * background-repeat              || repeat; no-repeat; repeat-x; repeat-y;
+ * background-attachment          || scroll; fixed;
+ * background-size                || auto; cover; contain; 50% 60%;
+ * background-position            || Left Top; Left Center; Left Bottom; Center Top;
+ * padding                        || top right bottom left 
+ * margin                         || top right bottom lef
+ * border                         || border-color: ; border-style: ; border-width: ;
+ * display                        || block; inline-block; flex; grid; none;
+ * 
+ * 
+ * 
+ * 
+ * 
 */
 * {
   // box-sizing: content-box;
@@ -117,7 +127,7 @@ body {
   /* <rgb()> values */
   //color: rgb(34, 12, 64, 0.6);
   color: rgba(34, 12, 64, 0.6);
-  // color: rgb(34 12 64 / 0.6);
+  // color: rgb(34 12 64 / 60%);
   // color: rgba(34 12 64 / 0.3);
   // color: rgb(34 12 64 / 60%);
   // color: rgba(34.6 12 64 / 30%);
@@ -326,6 +336,23 @@ body {
   // margin-bottom: 20px;
   // margin-left: 30px;
   // margin-right: 40px;
+  /* Apply to all four sides */
+  margin: 1em;
+  margin: -3px;
+
+  /* vertical | horizontal */
+  margin: 5% auto;
+
+  /* top | horizontal | bottom */
+  margin: 1em auto 2em;
+
+  /* top | right | bottom | left */
+  margin: 2px 1em 0 auto;
+
+  /* Global values */
+  margin: inherit;
+  margin: initial;
+  margin: unset;
   margin: auto;
 
   border-top-width: 20px;
@@ -357,7 +384,47 @@ body {
   // short code
   border: 10px solid red;
 }
-.video11 {
+.video-11 {
+  background-color: rgb(137, 179, 172);
+  height: 300px;
+  margin: 50px auto;
+  /* legacy values */
+  display: block;
+  display: inline;
+  display: inline-block;
+  display: flex;
+  display: inline-flex;
+  display: grid;
+  display: inline-grid;
+  display: flow-root;
+
+  /* box generation */
+  display: none;
+  display: contents;
+
+  /* two-value syntax */
+  display: block flow;
+  display: inline flow;
+  display: inline flow-root;
+  display: block flex;
+  display: inline flex;
+  display: block grid;
+  display: inline grid;
+  display: block flow-root;
+
+  /* other values */
+  display: table;
+
+  /* all table elements have an equivalent CSS display value */
+  display: table-row;
+  display: list-item;
+
+  /* Global values */
+  display: inherit;
+  display: initial;
+  display: unset;
+  display: block;
+
   // Block
 
   // - Take Full Width If No Width
@@ -375,8 +442,11 @@ body {
 
   // - Allow Elements Before And After It in The Same Line
   // - Respect Padding, Margin, Width, Height
+  div {
+    background-color: #d35400;
+  }
   span {
-    background-color: #eee;
+    background-color: rgb(27, 121, 53);
     display: inline-block;
   }
 }
@@ -388,6 +458,15 @@ body {
     margin: 10px 0;
   }
   .first {
+    /* Keyword values */
+    visibility: visible;
+    visibility: hidden;
+    visibility: collapse;
+
+    /* Global values */
+    visibility: inherit;
+    visibility: initial;
+    visibility: unset;
     visibility: hidden;
   }
 }
@@ -486,6 +565,23 @@ body {
 }
 // Dimensions – Width And Height
 .width {
+  /* <length> values */
+  width: 300px;
+  width: 25em;
+
+  /* <percentage> value */
+  width: 75%;
+
+  /* Keyword values */
+  width: max-content;
+  width: min-content;
+  width: fit-content(20em);
+  width: auto;
+
+  /* Global values */
+  width: inherit;
+  width: initial;
+  width: unset;
   width: 400px;
   min-width: 500px;
   max-width: 500px;
@@ -576,6 +672,18 @@ body {
     background-color: #ddd;
   }
   .test-1 {
+    /* Keyword values */
+    overflow: visible;
+    overflow: hidden;
+    overflow: clip;
+    overflow: scroll;
+    overflow: auto;
+    overflow: hidden visible;
+
+    /* Global values */
+    overflow: inherit;
+    overflow: initial;
+    overflow: unset;
     overflow: visible;
   }
   .test-2 {
@@ -598,7 +706,7 @@ body {
   // clear float
   @include clearfix;
 }
-
+// text-shadow
 .video-17 {
   background-color: #9c9c9c;
   color: map-get($colors, 21);
@@ -606,12 +714,55 @@ body {
   text-shadow: 0px -30px 0 map-get($colors, 41);
 }
 .video-18 {
+  /* Keyword values */
+  text-align: left;
+  text-align: right;
+  text-align: center;
+  text-align: justify;
+  text-align: justify-all;
+  text-align: start;
+  text-align: end;
+  text-align: match-parent;
+
+  /* Character-based alignment in a table column */
+  text-align: ".";
+  text-align: "." center;
+
+  /* Block alignment values (Non-standard syntax) */
+  text-align: -moz-center;
+  text-align: -webkit-center;
+
+  /* Global values */
+  text-align: inherit;
+  text-align: initial;
+  text-align: unset;
   // text-align: left;
   // text-align: right;
   text-align: center;
   // direction: rtl;
   direction: ltr;
   img {
+    /* Keyword values */
+    vertical-align: baseline;
+    vertical-align: sub;
+    vertical-align: super;
+    vertical-align: text-top;
+    vertical-align: text-bottom;
+    vertical-align: middle;
+    vertical-align: top;
+    vertical-align: bottom;
+
+    /* <length> values */
+    vertical-align: 10em;
+    vertical-align: 4px;
+
+    /* <percentage> values */
+    vertical-align: 20%;
+
+    /* Global values */
+    vertical-align: inherit;
+    vertical-align: initial;
+    vertical-align: unset;
     // top //
     // vertical-align: top;
     // vertical-align: text-top;
@@ -625,6 +776,9 @@ body {
     // middle //
     // vertical-align: -webkit-baseline-middle;
     vertical-align: middle;
+  }
+  .test span {
+    vertical-align: top;
   }
 }
 .video-19 {
@@ -659,9 +813,24 @@ body {
   .text-transform > div {
     @include grid-left(4, 2%);
     font-size: 17px;
+    display: inline-block;
+    border: 1px solid #3498db;
+    text-align: center;
   }
   > .text-transform > div:nth-child(1) {
     h3 {
+      /* Keyword values */
+      text-transform: none;
+      text-transform: capitalize;
+      text-transform: uppercase;
+      text-transform: lowercase;
+      text-transform: full-width;
+      text-transform: full-size-kana;
+
+      /* Global values */
+      text-transform: inherit;
+      text-transform: initial;
+      text-transform: unset;
       text-transform: capitalize;
     }
   }
@@ -697,18 +866,67 @@ body {
   }
   > div:nth-child(1) {
     h3 {
+      /* Keyword value */
+      letter-spacing: normal;
+
+      /* <length> values */
+      letter-spacing: 0.3em;
+      letter-spacing: 3px;
+      letter-spacing: 0.3px;
+
+      /* Global values */
+      letter-spacing: inherit;
+      letter-spacing: initial;
+      letter-spacing: unset;
+
       letter-spacing: 5px;
       border: 2px solid map-get($colors, 500);
     }
   }
   > div:nth-child(2) {
     h3 {
+      /* <length> values */
+      text-indent: 3mm;
+      text-indent: 40px;
+
+      /* <percentage> value
+   relative to the containing block width */
+      text-indent: 15%;
+
+      /* Keyword values */
+      text-indent: 5em each-line;
+      text-indent: 5em hanging;
+      text-indent: 5em hanging each-line;
+
+      /* Global values */
+      text-indent: inherit;
+      text-indent: initial;
+      text-indent: unset;
+
       text-indent: 40px;
       border: 2px solid map-get($colors, 500);
     }
   }
   > div:nth-child(3) {
     p {
+      /* Keyword value */
+      line-height: normal;
+
+      /* Unitless values: use this number multiplied
+by the element's font size */
+      line-height: 3.5;
+
+      /* <length> values */
+      line-height: 3em;
+
+      /* <percentage> values */
+      line-height: 34%;
+
+      /* Global values */
+      line-height: inherit;
+      line-height: initial;
+      line-height: unset;
+
       line-height: 1.5;
       border: 2px solid map-get($colors, 500);
     }
@@ -897,7 +1115,7 @@ body {
     // 5vw اللى هو المساحةالفاضية من العنصر فى الصفحة و بيحسبها ازاى
     // يعنى لو المساحة الصفحة 900 بي اكس عو بيضرب الرقم من غير اصفار فى الفنت اللى انت حاطو
 
-    font-size: 15vw;
+    font-size: 10vw;
   }
   .vh {
     font-size: 10vh;
