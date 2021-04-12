@@ -15,11 +15,30 @@
  * margin                         || top right bottom lef
  * border                         || border-color: ; border-style: ; border-width: ;
  * display                        || block; inline-block; flex; grid; none;
- * 
- * 
- * 
- * 
- * 
+ * visibility                     || visible; hidden;
+ * width                          || 300px; 75%; max-content; min-content; fit-content; it-content(20em);
+ * overflow                       || hidden; visible; scroll; auto;
+ * text-shadow                    || 0px -30px 0 map-get($colors, 41);
+ * text-align                     || left; right; center; start; end;
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+
 */
 * {
   // box-sizing: content-box;
@@ -35,7 +54,6 @@ body {
 .clearfix {
   clear: both;
 }
-//
 .video-5 {
   height: 500px;
   color: #fff;
@@ -289,7 +307,6 @@ body {
     }
   }
 }
-
 .video-7 {
   background-color: map-get($colors, 2);
   padding: 10px;
@@ -325,7 +342,6 @@ body {
   padding-bottom: 10px;
   padding-top: 10px;
 }
-
 .video-9 {
   background-color: #ddd;
   padding: 10px;
@@ -450,7 +466,6 @@ body {
     display: inline-block;
   }
 }
-
 // video 12 visibility
 .video-12 {
   div {
@@ -533,9 +548,7 @@ body {
     border-left-width: 15px;
   }
 }
-
 // video 13 grouping
-
 .video-13 {
   .one {
     border-bottom: 2px solid red;
@@ -596,7 +609,7 @@ body {
   width: -moz-min-content;
   width: min-content;
 }
-
+// width
 .video-15 {
   > div {
     background-color: #999;
@@ -660,7 +673,6 @@ body {
     height: fit-content;
   }
 }
-
 // video 16 overflow
 .video-16 {
   > div {
