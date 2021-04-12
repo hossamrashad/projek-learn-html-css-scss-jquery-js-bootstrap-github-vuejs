@@ -1,6 +1,16 @@
 @import "./helpers/mixin";
 @import "./components/color";
 @import "./components/font";
+
+// background-colo
+/*
+ * background-colo
+ * background-image
+ * background-repeat
+ * background-attachment
+*  background-position
+* 
+*/
 * {
   // box-sizing: content-box;
   box-sizing: border-box;
@@ -16,16 +26,78 @@ body {
   clear: both;
 }
 //
-// div {
-//   background-color: red; /* Color Name */
-//   background-color: rgb(0 0 0 / 50%); /* Red, Green, Blue, Alpha Channel */
-//   background-color: #FF0000; /* Color Hex Code */
-//   background-image: url("../images/social/facebook.png");
-//   background-repeat: repeat;
-//   background-attachment: fixed;
-//   background-position: left top;
-//   background-size: auto;
-// }
+.video-5 {
+  height: 500px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  background-color: red; /* Color Name */
+  background-color: rgb(0, 255, 0); /* Red, Green, Blue, Alpha Channel */
+  background-color: #ff0000; /* Color Hex Code */
+  background-image: linear-gradient(
+      rgba(0, 0, 255, 0.5),
+      rgba(255, 255, 0, 0.5)
+    ),
+    url("../images/social/facebook.png");
+  /* Keyword values */
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  background-repeat: repeat; // default
+  background-repeat: space;
+  background-repeat: round;
+  background-repeat: no-repeat;
+
+  /* Two-value syntax: horizontal | vertical */
+  background-repeat: repeat space;
+  background-repeat: repeat repeat;
+  background-repeat: round space;
+  background-repeat: no-repeat round;
+
+  /* Global values */
+  background-repeat: inherit;
+  background-repeat: initial;
+  background-repeat: unset;
+  background-repeat: repeat;
+  /* Keyword values */
+  background-attachment: scroll;
+  background-attachment: fixed;
+  background-attachment: local;
+
+  /* Global values */
+  background-attachment: inherit;
+  background-attachment: initial;
+  background-attachment: unset;
+  background-attachment: fixed;
+  background-position: left top;
+  /* Keyword values */
+  background-size: cover;
+  background-size: contain;
+
+  /* One-value syntax */
+  /* the width of the image (height becomes 'auto') */
+  background-size: 50%;
+  background-size: 3.2em;
+  background-size: 12px;
+  background-size: auto;
+
+  /* Two-value syntax */
+  /* first value: width of the image, second value: height */
+  background-size: 50% auto;
+  background-size: 3em 25%;
+  background-size: auto 6px;
+  background-size: auto auto;
+
+  /* Multiple backgrounds */
+  background-size: auto, auto; /* Not to be confused with `auto auto` */
+  background-size: 50%, 25%, 25%;
+  background-size: 6px, auto, contain;
+
+  /* Global values */
+  background-size: inherit;
+  background-size: initial;
+  background-size: unset;
+  background-size: auto;
+}
 .video-6 {
   /* Keyword values */
   color: currentcolor;
@@ -210,6 +282,23 @@ body {
 
 .video-7 {
   background-color: map-get($colors, 2);
+  padding: 10px;
+  /* Apply to all four sides */
+  padding: 1em;
+
+  /* vertical | horizontal */
+  padding: 5% 10%;
+
+  /* top | horizontal | bottom */
+  padding: 1em 2em 2em;
+
+  /* top | right | bottom | left */
+  padding: 5px 1em 0 2em;
+
+  /* Global values */
+  padding: inherit;
+  padding: initial;
+  padding: unset;
 
   //  Top Right Bottom Left
   //  10px 10px 10px 10px
@@ -1628,5 +1717,749 @@ body {
     width: 25%;
     text-align: center;
     padding: 20px;
+  }
+}
+
+// video 47
+
+.video-47 {
+  /*
+  Flexible Box
+  For Parent
+  - display: flex => To Start Flexible Box
+  - flex-direction: row => Default Value
+  - flex-wrap: nowrap => Default Value
+  - flex-flow: [Flex-Direction] + [Flex-Wrap]
+  ---
+  - justify-content: flex-start => Default Value
+*/
+
+  * {
+    box-sizing: border-box;
+  }
+  .flex {
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    justify-content: space-between;
+    //justify-content: end;
+    justify-self: start;
+    justify-content: flex-start;
+    justify-content: center;
+  }
+  .flex div {
+    background-color: #f00;
+    color: white;
+    width: calc(95% / 3);
+    text-align: center;
+    padding: 20px;
+  }
+  .float {
+    overflow: hidden;
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+  }
+  .float div {
+    background-color: #f00;
+    color: white;
+    float: right;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+// video 48
+.video-48 {
+  /*
+  Flexible Box
+  For Parent
+  - display: flex => To Start Flexible Box
+  - flex-direction: row => Default Value
+  - flex-wrap: nowrap => Default Value
+  - flex-flow: [Flex-Direction] + [Flex-Wrap]
+  ---
+  - justify-content: flex-start => Default Value
+  - align-items: stretch => Default Value
+*/
+
+  * {
+    box-sizing: border-box;
+  }
+  .flex {
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  .flex div {
+    background-color: #f00;
+    color: white;
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 20px;
+  }
+  .flex .one,
+  .float .one {
+    height: 80px;
+  }
+  .float {
+    overflow: hidden;
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+  }
+  .float div {
+    background-color: #f00;
+    color: white;
+    float: right;
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 20px;
+  }
+
+  .center {
+    background-color: blue;
+    color: white;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+// video 49
+.video-49 {
+  /*
+  Flexible Box
+  For Parent
+  - display: flex => To Start Flexible Box
+  - flex-direction: row => Default Value
+  - flex-wrap: nowrap => Default Value
+  - flex-flow: [Flex-Direction] + [Flex-Wrap]
+  ---
+  - justify-content: flex-start => Default Value
+  - align-items: stretch => Default Value
+
+  - align-content: stretch => Default Value
+*/
+  * {
+    box-sizing: border-box;
+  }
+  .flex {
+    background-color: #eee;
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: space-between;
+  }
+  .flex div {
+    background-color: #f00;
+    color: white;
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+// video 50
+.video-50 {
+  /*
+  Flexible Box
+  For Parent
+  - display: flex => To Start Flexible Box
+  - flex-direction: row => Default Value
+  - flex-wrap: nowrap => Default Value
+  - flex-flow: [Flex-Direction] + [Flex-Wrap]
+  - justify-content: flex-start => Default Value
+  - align-items: stretch => Default Value
+  - align-content: stretch => Default Value
+  For Child
+  - flex-grow: 0 => Default Value
+  - flex-shrink: 1 => Default Value
+  - order: 0 => Default Value
+*/
+
+  .flex {
+    background-color: #eee;
+    width: 800px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+  }
+  .flex div {
+    background-color: #f00;
+    color: white;
+    width: 80px;
+    text-align: center;
+    padding: 20px;
+    margin-right: 5px;
+    flex-grow: 1;
+  }
+}
+
+// video 51
+.video-51 {
+  /*
+  Flexible Box
+  For Parent
+  - display: flex => To Start Flexible Box
+  - flex-direction: row => Default Value
+  - flex-wrap: nowrap => Default Value
+  - flex-flow: [Flex-Direction] + [Flex-Wrap]
+  - justify-content: flex-start => Default Value
+  - align-items: stretch => Default Value
+  - align-content: stretch => Default Value
+  For Child
+  - flex-grow: 0 => Default Value
+  - flex-shrink: 1 => Default Value
+  - order: 0 => Default Value
+  - flex-basis: auto => Default Value
+  - flex: [Flex Grow] [Flex Shrink] [Flex Basis] 0 1 Auto
+*/
+
+  * {
+    box-sizing: border-box;
+  }
+  .flex {
+    background-color: #eee;
+    width: 800px;
+    padding: 20px;
+    margin: 20px auto;
+    display: inline-flex;
+  }
+  .flex div {
+    background-color: #f00;
+    color: white;
+    width: 80px;
+    text-align: center;
+    padding: 20px;
+    margin-right: 5px;
+    flex-grow: 1;
+  }
+  .in {
+    display: inline-block;
+  }
+}
+
+// video 52
+.video-52 {
+  /*
+  Flexible Box
+  For Parent
+  - display: flex => To Start Flexible Box
+  - flex-direction: row => Default Value
+  - flex-wrap: nowrap => Default Value
+  - flex-flow: [Flex-Direction] + [Flex-Wrap]
+  - justify-content: flex-start => Default Value
+  - align-items: stretch => Default Value
+  - align-content: stretch => Default Value
+  For Child
+  - flex-grow: 0 => Default Value
+  - flex-shrink: 1 => Default Value
+  - order: 0 => Default Value
+  - flex-basis: auto => Default Value
+  - flex: [Flex Grow] [Flex Shrink] [Flex Basis] 0 1 Auto
+  - align-self: auto => Default Value
+*/
+
+  * {
+    box-sizing: border-box;
+  }
+  .flex {
+    background-color: #eee;
+    width: 800px;
+    height: 300px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    align-items: flex-start;
+  }
+  .flex div {
+    background-color: #f00;
+    color: white;
+    width: 80px;
+    text-align: center;
+    padding: 20px;
+    margin-right: 5px;
+    flex-grow: 1;
+
+    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-start;
+    justify-content: space-evenly;
+  }
+}
+
+// video 54
+.video-54 {
+  > div {
+    @include grid-left(4, 2%);
+  }
+  .box-one {
+    img {
+      // URLtoSVGfilter
+      -webkit-filter: url("filters.svg#filter-id");
+      filter: url("filters.svg#filter-id");
+      // <filter-function>values
+      -webkit-filter: blur(5px);
+      filter: blur(5px);
+      // -webkit-filter: ;
+      // filter: brightness(0.4);
+      // -webkit-filter: contrast(200%);
+      // filter: contrast(200%);
+      // -webkit-filter: drop-shadow(16px 16px 20px blue);
+      // filter: drop-shadow(16px 16px 20px blue);
+      // -webkit-filter: grayscale(50%);
+      // filter: grayscale(50%);
+      // -webkit-filter: hue-rotate(90deg);
+      // filter: hue-rotate(90deg);
+      // -webkit-filter: invert(75%);
+      // filter: invert(75%);
+      -webkit-filter: opacity(25%);
+      filter: opacity(25%);
+      -webkit-filter: saturate(30%);
+      filter: saturate(30%);
+      -webkit-filter: sepia(60%);
+      filter: sepia(60%);
+      // Multiplefilters
+      -webkit-filter: contrast(175%) brightness(3%);
+      filter: contrast(175%) brightness(3%);
+      //Usenofilter
+      -webkit-filter: none;
+      filter: none;
+      //Globalvalues
+      -webkit-filter: inherit;
+      filter: inherit;
+      -webkit-filter: initial;
+      filter: initial;
+      -webkit-filter: unset;
+      filter: unset;
+      transition: 0.3s;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+    img:hover {
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+    }
+  }
+  .box-tow {
+    img {
+      filter: blur(4px);
+      -webkit-filter: blur(4px);
+    }
+    img:hover {
+      -webkit-filter: blur(0);
+      filter: blur(0);
+    }
+  }
+  .box-three {
+    // بتعمال الصورة معكوسة من غير الوان
+    img {
+      filter: invert(100%);
+      -webkit-filter: invert(100%);
+    }
+    img:hover {
+      filter: invert(0);
+      -webkit-filter: invert(0);
+    }
+  }
+}
+.clear {
+  // clear float
+  @include clearfix;
+}
+// video 55
+.video-55 {
+  /*
+  Gradients
+  linear-gradient(Direction || Angle, Color Stop 1, Color Stop 2, ....)
+*/
+
+  .box-1 {
+    width: 400px;
+    height: 200px;
+    color: #eee;
+    margin: 20px auto;
+    position: relative;
+    padding: 10px;
+    background-image: linear-gradient(
+      to right,
+      #2980b9 20%,
+      #27ae60 20%,
+      #27ae60 40%,
+      #d35400 40%,
+      #d35400 60%,
+      #8e44ad 60%,
+      #8e44ad 80%,
+      #c0392b 80%
+    );
+  }
+  .box-2 {
+    width: 400px;
+    height: 200px;
+    background-color: #eee;
+    margin: 20px auto;
+    position: relative;
+    padding: 10px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 100%;
+      background-color: red;
+      height: 20px;
+      background-image: linear-gradient(
+        to right,
+        #2980b9 20%,
+        #27ae60 20%,
+        #27ae60 40%,
+        #d35400 40%,
+        #d35400 60%,
+        #8e44ad 60%,
+        #8e44ad 80%,
+        #c0392b 80%
+      );
+    }
+  }
+}
+
+// video 56
+.video-56 {
+  input {
+    caret-color: red;
+  }
+  a {
+    // لو عاوز تواقف عمال النك و الافتراضى اوتو
+    pointer-events: none;
+  }
+}
+
+.video-57 {
+  /*
+  Grid
+  Parent
+  - display: grid | inline-grid
+  - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Repeat]
+*/
+
+  * {
+    box-sizing: border-box;
+  }
+  .parent {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: repeat(2, auto) repeat(2, 1fr);
+  }
+  .parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+// video 58
+.video-58 {
+  /*
+  Grid
+  Parent
+  - display: grid | inline-grid
+  - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+  - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+  - gap: [Row Gap] [Column Gap]
+*/
+
+  * {
+    box-sizing: border-box;
+  }
+  .parent {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /* row-gap: 10px;
+  column-gap: 10px; */
+    gap: 10px 10px;
+  }
+  .parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+// video 59
+.video-59 {
+  /*
+  Grid
+  Parent
+  - display: grid | inline-grid
+  - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+  - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+  - gap: [Row Gap] [Column Gap]
+  - justify-content
+  - align-content
+*/
+
+  * {
+    box-sizing: border-box;
+  }
+  .parent {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 10px 10px;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+  .parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+// video 60
+.video-60 {
+  /*
+  Grid
+  Parent
+  - display: grid | inline-grid
+  - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+  - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+  - gap: [Row Gap] [Column Gap]
+  - justify-content
+  - align-content
+*/
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  ul {
+    list-style: none;
+  }
+  ul li {
+    display: inline-block;
+  }
+  .page {
+    height: 100vh;
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas:
+      "logo logo nav nav nav nav nav nav nav nav"
+      "cont cont cont cont cont cont cont . side side"
+      "foot foot foot foot foot foot foot foot foot foot";
+  }
+  h2 {
+    grid-area: logo;
+    background-color: red;
+    color: white;
+  }
+  nav {
+    grid-area: nav;
+    background-color: blue;
+    color: white;
+  }
+  section {
+    grid-area: cont;
+    background-color: yellow;
+    color: white;
+  }
+  aside {
+    grid-area: side;
+    background-color: green;
+    color: white;
+  }
+  footer {
+    grid-area: foot;
+    background-color: black;
+    color: white;
+  }
+}
+
+// video 61
+.video-61 {
+  /*
+  Grid
+  Parent
+  - display: grid | inline-grid
+  - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+  - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+  - gap: [Row Gap] [Column Gap]
+  - justify-content
+  - align-content
+  - grid-template-areas
+  Child
+  - grid-column: [Grid-Column-Start] [Grid-Column-End]
+  - grid-row: [Grid-Row-Start] [Grid-Row-End]
+*/
+
+  * {
+    box-sizing: border-box;
+  }
+  .parent {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 10px 10px;
+  }
+  .parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+//
+.video-62 {
+  /*
+  Grid
+  Parent
+  - display: grid | inline-grid
+  - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+  - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+  - gap: [Row Gap] [Column Gap]
+  - justify-content
+  - align-content
+  - grid-template-areas
+  Child
+  - grid-column: [Grid-Column-Start] [Grid-Column-End]
+  - grid-row: [Grid-Row-Start] [Grid-Row-End]
+  - grid-area: [Grid-Row-Start] [Grid-Column-Start] [Grid-Row-End] [Grid-Column-End]
+*/
+
+  * {
+    box-sizing: border-box;
+  }
+  .parent {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 10px 10px;
+  }
+  .parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+// video 63
+.video-63 {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  .parent {
+    margin: 20px auto;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  .parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+//
+.video-65 {
+  div {
+    margin: 200px auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 0, 0 / 39%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    @include transition(0.5s);
+    &:hover {
+      // transform: scaleX(2);
+      // transform: scaleY(2);
+      // transform: scale(2, 2);
+      // transform: scale(1.5, 2);
+      // -webkit-transform: scale(1.5, 2);
+      // -moz-transform: scale(1.5, 2);
+      // -ms-transform: scale(1.5, 2);
+      // -o-transform: scale(1.5, 2);
+      @include scale(1.5, 2);
+    }
+  }
+}
+
+// video 66
+.video-66 {
+  div {
+    margin: 200px auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(151, 62, 62);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    transform: rotate(45deg);
+    transform: rotate(1turn);
+    transform: rotate(0.5turn);
+    transform: rotate(0.25turn);
   }
 }

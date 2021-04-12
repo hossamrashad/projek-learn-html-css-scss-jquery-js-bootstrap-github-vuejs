@@ -16,6 +16,16 @@
   -ms-transition: all $number ease-in-out;
   -o-transition: all $number ease-in-out;
 }
+
+// scale
+// @include scale(1.5, 1.5);
+@mixin scale($width, $height) {
+  transform: scale($width, $height);
+  -webkit-transform: scale($width, $height);
+  -moz-transform: scale($width, $height);
+  -ms-transform: scale($width, $height);
+  -o-transform: scale($width, $height);
+}
 // hover
 // @include hover {}
 @mixin hover {
