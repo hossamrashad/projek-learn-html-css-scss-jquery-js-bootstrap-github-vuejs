@@ -9,31 +9,34 @@ body {
 }
 
 /*
- * color                          || red #f00 #ff0000 rgb(255 0 0) rgba(255 0 0 1)
- * background-colo                || red #f00 #ff0000 rgb(255 0 0) rgba(255 0 0 1)
- * background-image               || url()
- * background-repeat              || repeat; no-repeat; repeat-x; repeat-y;
- * background-attachment          || scroll; fixed;
- * background-size                || auto; cover; contain; 50% 60%;
- * background-position            || Left Top; Left Center; Left Bottom; Center Top;
- * padding                        || top right bottom left 
- * margin                         || top right bottom lef
- * border                         || border-color: ; border-style: ; border-width: ;
- * display                        || block; inline-block; flex; grid; none;
- * visibility                     || visible; hidden;
- * width                          || 300px; 75%; max-content; min-content; fit-content; it-content(20em);
- * overflow                       || hidden; visible; scroll; auto;
- * text-shadow                    || 0px -30px 0 map-get($colors, 41);
- * text-align                     || left; right; center; start; end;
- *
- *
- *
- *
- *
- *
- *
- *
- *
+ * color                   || red #f00 #ff0000 rgb(255 0 0) rgba(255 0 0 1)
+ * background-colo         || red #f00 #ff0000 rgb(255 0 0) rgba(255 0 0 1)
+ * background-image        || url()
+ * background-repeat       || repeat; no-repeat; repeat-x; repeat-y;
+ * background-attachment   || scroll; fixed;
+ * background-size         || auto; cover; contain; 50% 60%;
+ * background-position     || Left Top; Left Center; Left Bottom; Center Top;
+ * padding                 || top right bottom left 
+ * margin                  || top right bottom lef
+ * border                  || border-color: ; border-style: ; border-width: ;
+ * display                 || block; inline-block; flex; grid; none;
+ * visibility              || visible; hidden;
+ * width                   || 300px; 75%; max-content; min-content; fit-content; it-content(20em);
+ * overflow                || hidden; visible; scroll; auto;
+ * text-shadow             || 0px -30px 0 map-get($colors, 41);
+ * text-align              || left; right; center; start; end;
+ * text-decoration         || normal; none;
+ * text-transform          || none; capitalize; uppercase; lowercase;
+ * letter-spacing          || normal; 3px; 0.3em;
+ * white-space             || normal; nowrap;
+ * text-overflow           || clip; ellipsis;
+ * font-family             || "Times New Roman", Times, serif; serif; sans-serif;
+ * font-size               || 12px; 1em; 5vw; 2rem; 10vh; small; medium; large; smaller; larger;
+ * font-variant            || normal; small-caps; bold;
+ * font-weight             || normal; bold; 700;
+ * font-style              || normal; italic;
+ *                         || inherit
+ *                         || 
  *
  *
  *
@@ -757,6 +760,12 @@ body {
   text-align: unset;
   text-align: center;
   direction: ltr;
+}
+
+.video-18 .box-test {
+  text-align: unset;
+  background-color: #009688;
+  color: #000;
 }
 
 .video-18 img {
