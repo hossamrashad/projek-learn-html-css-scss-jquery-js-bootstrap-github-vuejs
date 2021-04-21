@@ -3,25 +3,27 @@
 @import "./components/font";
 @import "./components/buttons";
 
-// background-colo
 /*
  * color                       || red #f00 #ff0000 rgb(255 0 0) rgba(255 0 0 1)
  * background-colo             || red #f00 #ff0000 rgb(255 0 0) rgba(255 0 0 1)
  * background-image            || url()
  * background-repeat           || repeat; no-repeat; repeat-x; repeat-y;
  * background-attachment       || scroll; fixed;
- * background-size             || auto; cover; contain; 50% 60%;
- * background-position         || Left Top; Left Center; Left Bottom; Center Top;
+ * background-position         || Left Top; Left Center; Left Bottom; Center Top; 10px  50px; 30% 40%;
+ * background-size             || auto; cover; contain; 100px 200px; 100% 100%;
  * padding                     || top right bottom left 
- * margin                      || top right bottom lef
+ * margin                      || top right bottom lef auto
  * border                      || border-color: ; border-style: ; border-width: ;
+ * outline                     || auto; none;
  * display                     || block; inline-block; flex; grid; none;
  * visibility                  || visible; hidden;
- * width                       || 300px; 75%; max-content; min-content; fit-content; it-content(20em);
+ * width                       || 300px; 75%; max-width: 100px; min-width: 200px; fit-content; max-content; min-content; it-content(20em);
  * overflow                    || hidden; visible; scroll; auto;
- * text-shadow                 || 0px -30px 0 map-get($colors, 41);
+ * text-shadow                 || right & left || top & bottom || blur || color ; 0px -30px 0 red;
  * text-align                  || left; right; center; start; end;
- * text-decoration             || normal; none;
+ * direction                   || ltr; rtl;
+ * vertical-align              || middle; sub; super; text-top; text-bottom; top; bottom;
+ * text-decoration             || normal; none; line-through; overline; underline;
  * text-transform              || none; capitalize; uppercase; lowercase;
  * letter-spacing              || normal; 3px; 0.3em;
  * white-space                 || normal; nowrap;
@@ -161,13 +163,15 @@
 body {
   font-family: cairo;
   font-size: 25px;
-  margin: 0px 15px;
+  margin: 0px;
+  padding: 0;
   text-transform: capitalize;
   min-height: 20000px;
 }
 .clearfix {
   clear: both;
 }
+// background-colo
 .video-5 {
   height: 500px;
   color: #fff;
@@ -741,6 +745,7 @@ body {
   }
   .test-4 {
     max-width: 700px;
+    min-width: 300px;
   }
   .test-5 {
     width: -webkit-min-content;
@@ -839,6 +844,7 @@ body {
   // text-shadow: right & left || top & bottom || blur || color ;
   text-shadow: 0px -30px 0 map-get($colors, 41);
 }
+// video 18 text-align
 .video-18 {
   .box-test {
     text-align: unset;
@@ -912,6 +918,7 @@ body {
     vertical-align: top;
   }
 }
+// text-decoration ||  text-transform
 .video-19 {
   .text-decoration > div {
     @include grid-left(4, 2%);
@@ -982,17 +989,23 @@ body {
   }
 }
 // video 20
+// letter-spacing: text-indent: line-height: word-spacing: white-space:
 .video-20 {
   // clear float
   @include clearfix;
   > div {
-    @include grid-left(2, 2%);
+    // @include grid-left(2, 2%);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
     font-size: 20px;
     border: 1px solid map-get($colors, 61);
+    margin-right: 1%;
+    gap: 10px 20px;
   }
   ul {
     // global ul + li style
     @include horizontal-list;
+    padding: 20px;
   }
   > div:nth-child(1) {
     h3 {
@@ -1856,7 +1869,7 @@ by the element's font size */
 // video 41
 .video-41 {
   .parent {
-    width: 600px;
+    width: 90%;
     overflow: hidden;
     margin: 20px auto;
     padding: 20px 0px;
@@ -2040,7 +2053,7 @@ by the element's font size */
 
   .flex {
     background-color: #eee;
-    width: 600px;
+    width: 90%;
     padding: 20px;
     margin: 20px auto;
     display: flex;
@@ -2050,7 +2063,7 @@ by the element's font size */
     div {
       background-color: #f00;
       color: white;
-      width: 25%;
+      width: 20%;
       text-align: center;
       padding: 20px;
     }
@@ -2058,14 +2071,14 @@ by the element's font size */
   .float {
     overflow: hidden;
     background-color: #eee;
-    width: 600px;
+    width: 90%;
     padding: 20px;
     margin: 20px auto;
     div {
       background-color: #f00;
       color: white;
       float: right;
-      width: 25%;
+      width: 20%;
       text-align: center;
       padding: 20px;
     }
@@ -2089,7 +2102,7 @@ by the element's font size */
   }
   .flex {
     background-color: #eee;
-    width: 600px;
+    width: 90%;
     padding: 20px;
     margin: 20px auto;
     display: flex;
@@ -2104,7 +2117,7 @@ by the element's font size */
     div {
       background-color: #f00;
       color: white;
-      width: calc(95% / 3);
+      width: calc(90% / 3);
       text-align: center;
       padding: 20px;
     }
@@ -2112,14 +2125,14 @@ by the element's font size */
   .float {
     overflow: hidden;
     background-color: #eee;
-    width: 600px;
+    width: 90%;
     padding: 20px;
     margin: 20px auto;
     div {
       background-color: #f00;
       color: white;
       float: right;
-      width: 25%;
+      width: 20%;
       text-align: center;
       padding: 20px;
     }
@@ -2145,7 +2158,7 @@ by the element's font size */
   }
   .flex {
     background-color: #eee;
-    width: 600px;
+    width: 90%;
     padding: 20px;
     margin: 20px auto;
     display: flex;
@@ -2155,7 +2168,7 @@ by the element's font size */
   .flex div {
     background-color: #f00;
     color: white;
-    width: calc(100% / 3);
+    width: calc(90% / 3);
     text-align: center;
     padding: 20px;
   }
@@ -2166,7 +2179,7 @@ by the element's font size */
   .float {
     overflow: hidden;
     background-color: #eee;
-    width: 600px;
+    width: 90%;
     padding: 20px;
     margin: 20px auto;
   }
@@ -2174,7 +2187,7 @@ by the element's font size */
     background-color: #f00;
     color: white;
     float: right;
-    width: calc(100% / 3);
+    width: calc(90% / 3);
     text-align: center;
     padding: 20px;
   }
@@ -2209,7 +2222,7 @@ by the element's font size */
   }
   .flex {
     background-color: #eee;
-    width: 600px;
+    width: 90%;
     height: 400px;
     padding: 20px;
     margin: 20px auto;
@@ -2247,7 +2260,7 @@ by the element's font size */
 
   .flex {
     background-color: #eee;
-    width: 800px;
+    width: 90%;
     padding: 20px;
     margin: 20px auto;
     display: flex;
@@ -2288,7 +2301,7 @@ by the element's font size */
   }
   .flex {
     background-color: #eee;
-    width: 800px;
+    width: 90%;
     padding: 20px;
     margin: 20px auto;
     display: inline-flex;
@@ -2333,7 +2346,7 @@ by the element's font size */
   }
   .flex {
     background-color: #eee;
-    width: 800px;
+    width: 90%;
     height: 300px;
     padding: 20px;
     margin: 20px auto;
@@ -2504,8 +2517,8 @@ by the element's font size */
     box-sizing: border-box;
   }
   .parent {
-    margin: 20px auto;
-    width: 800px;
+    margin: 0;
+    width: 100%;
     height: 500px;
     background-color: #ddd;
     display: grid;
@@ -2514,7 +2527,7 @@ by the element's font size */
   .parent div {
     background-color: red;
     color: white;
-    padding: 20px;
+    padding: 0px;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
@@ -2536,12 +2549,12 @@ by the element's font size */
   }
   .parent {
     margin: 20px auto;
-    width: 800px;
-    height: 500px;
+    width: 100%;
+    height: 100vh;
     background-color: #ddd;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     /* row-gap: 10px;
   column-gap: 10px; */
     gap: 10px 10px;
@@ -2574,11 +2587,11 @@ by the element's font size */
   }
   .parent {
     margin: 20px auto;
-    width: 800px;
+    width: 100%;
     height: 500px;
     background-color: #ddd;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, auto);
     gap: 10px 10px;
     justify-content: space-between;
@@ -2591,6 +2604,7 @@ by the element's font size */
     font-size: 30px;
     font-weight: bold;
     text-align: center;
+    width: 100%;
   }
 }
 // video 60
@@ -2677,8 +2691,8 @@ by the element's font size */
   }
   .parent {
     margin: 20px auto;
-    width: 800px;
-    height: 500px;
+    width: 100%;
+    height: 100vh;
     background-color: #ddd;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -2692,6 +2706,12 @@ by the element's font size */
     font-size: 30px;
     font-weight: bold;
     text-align: center;
+  }
+  .test-1 {
+    // grid-column: 1 / 6;
+    // grid-column: span 6;
+    grid-column: 2 / span 5;
+    grid-row: 2 / span 5;
   }
 }
 //
@@ -2717,13 +2737,13 @@ by the element's font size */
   }
   .parent {
     margin: 20px auto;
-    width: 800px;
+    width: 90%;
     height: 500px;
     background-color: #ddd;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(3, auto);
-    gap: 10px 10px;
+    // gap: 10px 10px;
   }
   .parent div {
     background-color: red;
@@ -2761,7 +2781,7 @@ by the element's font size */
 .video-65 {
   position: relative;
   .parent {
-    width: 500px;
+    width: 90%;
     height: 300px;
     background-color: rgb(216, 216, 216);
     margin: 100px auto;
@@ -3700,3 +3720,34 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   - revert CSS Level [4]
   - all
 */
+.css-parent-grid {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  //  الاعمدة بى العرض من العنصر اللى هو فية
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  // عدد الاعمدة فى الطول من العنصر اللى هو فية
+  // grid-template-rows: repeat(3, 1fr);
+  // اللى هو المارجان بين العناصر
+  gap: 10px 1%;
+  // grid-column: 4 / 6;
+  // grid-column-start: span 3;
+  // grid-column-end: span 3;
+  /*
+  justify-content: space-between;
+  align-content: space-between;
+  */
+  // grid-template-areas: "logo logo navb navb navb navb navb navb navb navb";
+  // .logo {
+  //   grid-area: logo;
+  // }
+  // .navb {
+  //   grid-area: navb;
+  // }
+  .css-child-grid {
+    // grid-column: 1 / 6;
+    // grid-column: span 6;
+    // grid-column: 2 / span 6;
+    // grid-row: 2 / span 5;
+  }
+}
