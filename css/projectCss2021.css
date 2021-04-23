@@ -192,6 +192,18 @@ body {
   border-color: transparent #009688 transparent transparent;
 }
 
+.cayan-112 {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  position: fixed;
+  top: 10%;
+  right: 0;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

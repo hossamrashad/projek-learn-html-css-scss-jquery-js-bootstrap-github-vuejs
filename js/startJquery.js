@@ -1,7 +1,32 @@
 /* global document, console, alert, prompt, $*/
+
+/*
+ * short code document.ready    || $(function () {  });
+ *
+ * Events                       || 1- click 2- dblclick 3- mouseenter 4- mouseleave 5- hover
+ *
+ * effect                       || hide ||show ||toggle
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+
 /**
  * $ بتعابر على الجي كويرى
  * $ = JQuery
+ * window.onload      =     javascript
+ * document.ready     =     jquery
  *
  * compressed  هش هتعادالى على الجى كويرى
  * uncompressed  ijuh]hg ugdih
@@ -13,6 +38,11 @@ $(function () {
   $("#jqvidero2 p").hide();
 });
 */
+// الشرط كواد للدكيمانت رادى
+$(function () {
+  // My Code Here
+});
+// Events = 1 - click 2 - dblclick
 $(document).ready(function () {
   "use strict";
   $("#jqvidero2 .jqpvideo2").hide();
@@ -56,10 +86,12 @@ $(document).ready(function () {
 $(document).ready(function () {
   $("#jqbtnvideo34").hover(
     function () {
+      // mouse enter
       $(this).css("backgroundColor", "#3498db");
       $("#jqpvideo34").css("color", "#3498db");
     },
     function () {
+      // mouse live
       $(this).css("backgroundColor", "#f00");
       $("#jqpvideo34").css("color", "#f00");
     }
