@@ -1,11 +1,11 @@
 /* global document, console, alert, prompt, $*/
 
 /*
- * short code document.ready    || $(function () {  });
+ * short code document.ready || $(function () {  });
  *
- * Events                       || 1- click 2- dblclick 3- mouseenter 4- mouseleave 5- hover
+ * Events                    || 1- click 2- dblclick 3- mouseenter 4- mouseleave 5- hover
  *
- * effect                       || hide ||show ||toggle
+ * effect                    || hide ||show ||toggle
  *
  *
  *
