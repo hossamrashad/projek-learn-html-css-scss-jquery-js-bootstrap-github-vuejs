@@ -26,33 +26,42 @@
  * text-decoration             || normal; none; line-through; overline; underline;
  * text-transform              || none; capitalize; uppercase; lowercase;
  * letter-spacing              || normal; 3px; 0.3em;
+ * text-indent                 || 0px; 10px;
+ * Line-Height                 || normal; 100%; 1.6;
+ * word-spacing                || normal;
  * white-space                 || normal; nowrap;
+ * word-break                  || normal; break-all;
  * text-overflow               || clip; ellipsis;
  * font-family                 || "Times New Roman", Times, serif; serif; sans-serif;
- * font-size                   || 12px; 1em; 5vw; 2rem; 10vh; small; medium; large; smaller; larger;
+ * font-size
+ * || 12px; from parent body 16px 1em; from html 32px 2rem; from width screen 100 = 1vw = 100%  5vw;
+ * 10vh; small; medium; large; smaller; larger;
  * font-variant                || normal; small-caps; 
  * font-weight                 || normal; bold; 700;
- * font-style                  || normal; italic;
+ * font-style                  
+ * || normal; italic; list-style-type: "\f2cc"; font-family: fontawesome;
  *                             || inherit
- * cursor                      || pointer; 
+ * cursor                      || pointer;
+ * float                       || none; left; right; 
  * width                       || calc((100% - 60px) / 4);
  * opacity                     || 1; 0.9; 0.8;
- * position                    || relative; absolute; fixed; sticky;
+ * position                    || sticky; relative; absolute; fixed; 
  * z-index                     || 1; 2; 3;
  * list-style                  || circle; none; 
- *                             || :hover :focus :active :visited :empty :checked 
- *                             || ::first-letter ::first-line ::selection
- *                             || ::after ::before
+ * || :hover :focus :active :visited :empty :checked 
+ * || ::first-letter ::first-line ::selection
+ * || ::after ::before
  * counter-increment           || members-counter;
  * content                     || ""; attr(data-title); counter(members-counter);
- * border-radius               || 10px; 50%;
+ * border-radius               || 0; 10px; 50%;
  * box-shadow                  || 20px 0px 10px 0 #3498db
- * box-sizing                  || content-box; border-box;
+ * offset-x width left & right | offset-y height top & bottom | blur-radius | spread-radius | color | inset
+ * box-sizing                  || content-box; border-box; -webkit- || -moz-
  * transition-duration         || 6s;
  * transition-delay            || 0.2s;
  * transition-property         || all; width , height;
  * transition-timing-function  || ease; ease-in-out; linear; ease-out; ease-in;
- * transition                  || all 2s 0.5s linear;
+ * transition                  || property = all | duration = 2s | delay = 0s | timing-function = ease;
  *                             || !important
  ******************************************************************************
  *************************** For Parent****************************************
@@ -1168,7 +1177,7 @@ by the element's font size */
     padding: 20px;
     background-color: #eee;
     font-size: 20px;
-    border: 2px solid blue;
+    border: 2px solid rgb(70, 5, 5);
   }
   div p {
     border: 2px solid;
@@ -1179,11 +1188,12 @@ by the element's font size */
 }
 // font family
 .video-23 {
-  padding-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   // A font family name and a generic family name
   font-family: Gill Sans Extrabold, sans-serif;
   font-family: "Goudy Bookletter 1911", sans-serif;
-
+  font-family: "Times New Roman", Times, serif;
   // A generic family name only
   font-family: serif;
   font-family: sans-serif;
@@ -1198,7 +1208,7 @@ by the element's font size */
   font-family: emoji;
   font-family: math;
   font-family: fangsong;
-
+  font-family: Bookman;
   // Global values
   font-family: inherit;
   font-family: initial;
@@ -1345,7 +1355,16 @@ by the element's font size */
     cursor: initial;
     cursor: unset;
     cursor: pointer;
-    cursor: url(../images/social/facebook.png) 2 2, pointer;
+    cursor: url(../images/social/facebook.png);
+  }
+  .p-one {
+    cursor: url(../images/social/facebook.png);
+  }
+  .p-tow {
+    cursor: cell;
+  }
+  .p-three {
+    cursor: e-resize;
   }
 }
 // video 27 float
@@ -1419,12 +1438,14 @@ by the element's font size */
     background-color: green;
   }
 }
-// video 30
+// video 30 position
 .video-30 {
   position: relative;
   div {
     color: white;
-    width: 200px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     padding: 10px;
   }
   .one {
@@ -1441,6 +1462,9 @@ by the element's font size */
   }
   .two {
     background-color: green;
+    position: absolute;
+    left: calc(100% - 50%);
+    top: calc(100% - 90%);
   }
 }
 // video 31 z-index
@@ -1449,6 +1473,7 @@ by the element's font size */
   display: inline-block;
   position: relative;
   width: 80%;
+  @include transition(0.5s);
   div {
     color: white;
     width: 100%;
@@ -1459,21 +1484,40 @@ by the element's font size */
   .one {
     background-color: red;
     left: 135px;
-    top: 90px;
+    top: 131px;
     z-index: 3;
+    @include transition(0.5s);
   }
   .two {
     background-color: green;
     left: 75px;
-    top: 45px;
+    top: 130px;
     z-index: 2;
   }
   .three {
     background-color: blue;
     z-index: 1;
+    @include transition(0.5s);
+  }
+  &:hover {
+    .one {
+      background-color: blue;
+      z-index: 1;
+      left: 0;
+      @include transition(0.5s);
+    }
+    .two {
+    }
+    .three {
+      background-color: red;
+      left: 135px;
+      top: 131px;
+      z-index: 3;
+      @include transition(0.5s);
+    }
   }
 }
-// video 32
+// video 32 list-style
 .video-32 {
   ul {
     // Partial list of types
@@ -1595,7 +1639,7 @@ by the element's font size */
     outline: none;
   }
 }
-//
+// video 35 first-letter
 .video-35 {
   .one span {
     display: inline-block;
@@ -1630,7 +1674,7 @@ by the element's font size */
   }
 }
 
-// video 36
+// video 36 :before  after
 .video-36 {
   font-family: $font-ar-3;
   .parent {
@@ -1644,15 +1688,6 @@ by the element's font size */
     float: left;
     position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: 5px;
-      height: 100%;
-      right: 0px;
-      top: 0;
-      background-color: #009688;
-    }
     &::before {
       content: "";
       position: absolute;
@@ -1664,6 +1699,15 @@ by the element's font size */
       border-style: solid;
       border-width: 10px;
       border-color: transparent #009688 transparent transparent;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 100%;
+      right: 0px;
+      top: 0;
+      background-color: #009688;
     }
   }
   .user {
@@ -1690,7 +1734,7 @@ by the element's font size */
     }
   }
 }
-//
+// video 37 content & counter-increment
 .video-37 {
   .parent {
     margin-bottom: 20px;
@@ -1704,11 +1748,13 @@ by the element's font size */
     width: 600px;
     float: left;
     position: relative;
+    @include transition(0.5s);
   }
   .one::before {
     // ممكن تجيب الاتربيوت بتاع العنصر و تعرضو فى الكونتانت
     content: attr(data-text);
     display: none;
+    @include transition(0.5s);
   }
   .one:hover::before {
     display: block;
@@ -1723,6 +1769,7 @@ by the element's font size */
     right: -50px;
     bottom: 10%;
     margin-top: -50px;
+    @include transition(0.5s);
   }
   .one::after {
     content: counter(members-counter);
@@ -1766,9 +1813,7 @@ by the element's font size */
     border-color: transparent #009688 transparent transparent;
   }
 }
-
 // video 38
-
 .video-38 {
   // Vendors Prefixes
 
@@ -1796,11 +1841,9 @@ by the element's font size */
   // border-radius: 10px;
   border-radius: 10px;
 }
-
 // [1] Most of Users Is Using Modern Browsers
 // [2] Vs Code Addon To Add The Prefix
 // [3] Task Runner
-
 // video 39 border radius
 .video-39 {
   div {
@@ -1859,7 +1902,7 @@ by the element's font size */
     /* offset-x | offset-y | blur-radius | color */
     box-shadow: 10px 5px 5px black;
 
-    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    /* offset-x | offset-y | blur-radius | spread-radius | color | inset*/
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
     /* inset | offset-x | offset-y | color */
@@ -1876,28 +1919,42 @@ by the element's font size */
       -20px 0px 10px 0 #00f, 0px 20px 10px 0 yellow;
   }
 }
-// video 41
+// video 41 box-model
 .video-41 {
   .parent {
     width: 90%;
     overflow: hidden;
     margin: 20px auto;
-    padding: 20px 0px;
-    background-color: #ddd;
+    padding: 20px;
+    background-color: #ddd; // clear float
+    @include clearfix;
   }
   .one {
-    background-color: #eee;
-    width: 300px;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
     float: left;
     padding: 10px;
     border: 10px solid #000;
   }
 }
-// transition
+// video 42 transition
 .video-42 {
+  // clear float
+  @include clearfix;
+  > div {
+    width: 30%;
+    float: left;
+  }
+  > div:nth-child(2) {
+    float: right;
+    transition: all 2s linear;
+    -webkit-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -ms-transition: all 2s linear;
+    -o-transition: all 2s linear;
+  }
   .one {
     background-color: #eee;
-    width: 200px;
     height: 100px;
     // مده الانتقال فى تنفيز الخاصية
     transition-duration: 1s;
@@ -1937,6 +1994,7 @@ by the element's font size */
     transition-timing-function: unset;
     transition-timing-function: ease-in-out;
     // short code
+    // property || duration || delay || timing-function
     transition: all 0.5s 0s linear;
     -webkit-transition: all 0.5s 0s linear;
     -moz-transition: all 0.5s 0s linear;
@@ -1944,16 +2002,18 @@ by the element's font size */
     -o-transition: all 0.5s 0s linear;
   }
   .one:hover {
-    width: 280px;
+    width: 40%;
     height: 120px;
   }
 }
+// video 43 !important
 .video-43 {
   .one {
     background-color: #eee !important;
   }
+  margin-bottom: 100px;
 }
-//
+// video 44 Margin Collapse
 .video-44 {
   /*
   The Margin Collapse
@@ -1996,7 +2056,7 @@ by the element's font size */
     margin-top: 40px;
   }
 }
-// variables
+// video 45 variables
 .video-45 {
   /*
   CSS Variables
@@ -2006,9 +2066,9 @@ by the element's font size */
 */
 
   :root {
-    // --main-color: blue;
+    --main-color: blue;
     --mainPadding: 10px;
-    // --color-3498db: #3498db;
+    --color-3498db: #3498db;
   }
   .main {
     background-color: var(--color-3498db, #f00);

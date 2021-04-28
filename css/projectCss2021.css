@@ -61,33 +61,42 @@ body {
  * text-decoration             || normal; none; line-through; overline; underline;
  * text-transform              || none; capitalize; uppercase; lowercase;
  * letter-spacing              || normal; 3px; 0.3em;
+ * text-indent                 || 0px; 10px;
+ * Line-Height                 || normal; 100%; 1.6;
+ * word-spacing                || normal;
  * white-space                 || normal; nowrap;
+ * word-break                  || normal; break-all;
  * text-overflow               || clip; ellipsis;
  * font-family                 || "Times New Roman", Times, serif; serif; sans-serif;
- * font-size                   || 12px; 1em; 5vw; 2rem; 10vh; small; medium; large; smaller; larger;
+ * font-size
+ * || 12px; from parent body 16px 1em; from html 32px 2rem; from width screen 100 = 1vw = 100%  5vw;
+ * 10vh; small; medium; large; smaller; larger;
  * font-variant                || normal; small-caps; 
  * font-weight                 || normal; bold; 700;
- * font-style                  || normal; italic;
+ * font-style                  
+ * || normal; italic; list-style-type: "\f2cc"; font-family: fontawesome;
  *                             || inherit
- * cursor                      || pointer; 
+ * cursor                      || pointer;
+ * float                       || none; left; right; 
  * width                       || calc((100% - 60px) / 4);
  * opacity                     || 1; 0.9; 0.8;
- * position                    || relative; absolute; fixed; sticky;
+ * position                    || sticky; relative; absolute; fixed; 
  * z-index                     || 1; 2; 3;
  * list-style                  || circle; none; 
- *                             || :hover :focus :active :visited :empty :checked 
- *                             || ::first-letter ::first-line ::selection
- *                             || ::after ::before
+ * || :hover :focus :active :visited :empty :checked 
+ * || ::first-letter ::first-line ::selection
+ * || ::after ::before
  * counter-increment           || members-counter;
  * content                     || ""; attr(data-title); counter(members-counter);
- * border-radius               || 10px; 50%;
+ * border-radius               || 0; 10px; 50%;
  * box-shadow                  || 20px 0px 10px 0 #3498db
- * box-sizing                  || content-box; border-box;
+ * offset-x width left & right | offset-y height top & bottom | blur-radius | spread-radius | color | inset
+ * box-sizing                  || content-box; border-box; -webkit- || -moz-
  * transition-duration         || 6s;
  * transition-delay            || 0.2s;
  * transition-property         || all; width , height;
  * transition-timing-function  || ease; ease-in-out; linear; ease-out; ease-in;
- * transition                  || all 2s 0.5s linear;
+ * transition                  || property = all | duration = 2s | delay = 0s | timing-function = ease;
  *                             || !important
  ******************************************************************************
  *************************** For Parent****************************************
@@ -1187,7 +1196,7 @@ by the element's font size */
   padding: 20px;
   background-color: #eee;
   font-size: 20px;
-  border: 2px solid blue;
+  border: 2px solid #460505;
 }
 
 .video-22 div p {
@@ -1197,9 +1206,11 @@ by the element's font size */
 }
 
 .video-23 {
-  padding-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-family: Gill Sans Extrabold, sans-serif;
   font-family: "Goudy Bookletter 1911", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   font-family: serif;
   font-family: sans-serif;
   font-family: monospace;
@@ -1213,6 +1224,7 @@ by the element's font size */
   font-family: emoji;
   font-family: math;
   font-family: fangsong;
+  font-family: Bookman;
   font-family: inherit;
   font-family: initial;
   font-family: unset;
@@ -1333,7 +1345,19 @@ by the element's font size */
   cursor: initial;
   cursor: unset;
   cursor: pointer;
-  cursor: url(../images/social/facebook.png) 2 2, pointer;
+  cursor: url(../images/social/facebook.png);
+}
+
+.video-26 .p-one {
+  cursor: url(../images/social/facebook.png);
+}
+
+.video-26 .p-tow {
+  cursor: cell;
+}
+
+.video-26 .p-three {
+  cursor: e-resize;
 }
 
 .video-27 .parent {
@@ -1412,7 +1436,9 @@ by the element's font size */
 
 .video-30 div {
   color: white;
-  width: 200px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 10px;
 }
 
@@ -1425,6 +1451,9 @@ by the element's font size */
 
 .video-30 .two {
   background-color: green;
+  position: absolute;
+  left: calc(100% - 50%);
+  top: calc(100% - 90%);
 }
 
 .video-31 {
@@ -1432,6 +1461,11 @@ by the element's font size */
   display: inline-block;
   position: relative;
   width: 80%;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
 
 .video-31 div {
@@ -1445,20 +1479,53 @@ by the element's font size */
 .video-31 .one {
   background-color: red;
   left: 135px;
-  top: 90px;
+  top: 131px;
   z-index: 3;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
 
 .video-31 .two {
   background-color: green;
   left: 75px;
-  top: 45px;
+  top: 130px;
   z-index: 2;
 }
 
 .video-31 .three {
   background-color: blue;
   z-index: 1;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.video-31:hover .one {
+  background-color: blue;
+  z-index: 1;
+  left: 0;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.video-31:hover .three {
+  background-color: red;
+  left: 135px;
+  top: 131px;
+  z-index: 3;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
 
 .video-32 ul {
@@ -1619,16 +1686,6 @@ by the element's font size */
   position: relative;
 }
 
-.video-36 .one::after {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 100%;
-  right: 0px;
-  top: 0;
-  background-color: #009688;
-}
-
 .video-36 .one::before {
   content: "";
   position: absolute;
@@ -1640,6 +1697,16 @@ by the element's font size */
   border-style: solid;
   border-width: 10px;
   border-color: transparent #009688 transparent transparent;
+}
+
+.video-36 .one::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  right: 0px;
+  top: 0;
+  background-color: #009688;
 }
 
 .video-36 .user {
@@ -1679,11 +1746,21 @@ by the element's font size */
   width: 600px;
   float: left;
   position: relative;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
 
 .video-37 .one::before {
   content: attr(data-text);
   display: none;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
 
 .video-37 .one:hover::before {
@@ -1699,6 +1776,11 @@ by the element's font size */
   right: -50px;
   bottom: 10%;
   margin-top: -50px;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
 
 .video-37 .one::after {
@@ -1797,7 +1879,7 @@ by the element's font size */
   /* offset-x | offset-y | blur-radius | color */
   -webkit-box-shadow: 10px 5px 5px black;
           box-shadow: 10px 5px 5px black;
-  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  /* offset-x | offset-y | blur-radius | spread-radius | color | inset*/
   -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   /* inset | offset-x | offset-y | color */
@@ -1821,21 +1903,46 @@ by the element's font size */
   width: 90%;
   overflow: hidden;
   margin: 20px auto;
-  padding: 20px 0px;
+  padding: 20px;
   background-color: #ddd;
 }
 
+.video-41 .parent::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .video-41 .one {
-  background-color: #eee;
-  width: 300px;
+  background-color: white;
+  width: 50%;
   float: left;
   padding: 10px;
   border: 10px solid #000;
 }
 
+.video-42::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.video-42 > div {
+  width: 30%;
+  float: left;
+}
+
+.video-42 > div:nth-child(2) {
+  float: right;
+  transition: all 2s linear;
+  -webkit-transition: all 2s linear;
+  -moz-transition: all 2s linear;
+  -ms-transition: all 2s linear;
+  -o-transition: all 2s linear;
+}
+
 .video-42 .one {
   background-color: #eee;
-  width: 200px;
   height: 100px;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
@@ -1897,8 +2004,12 @@ by the element's font size */
 }
 
 .video-42 .one:hover {
-  width: 280px;
+  width: 40%;
   height: 120px;
+}
+
+.video-43 {
+  margin-bottom: 100px;
 }
 
 .video-43 .one {
@@ -1964,7 +2075,9 @@ by the element's font size */
 }
 
 .video-45 :root {
+  --main-color: blue;
   --mainPadding: 10px;
+  --color-3498db: #3498db;
 }
 
 .video-45 .main {
