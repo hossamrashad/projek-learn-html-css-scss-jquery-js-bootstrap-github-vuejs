@@ -63,13 +63,13 @@
  * transition-timing-function  || ease; ease-in-out; linear; ease-out; ease-in;
  * transition                  || property = all | duration = 2s | delay = 0s | timing-function = ease;
  *                             || !important
- ******************************************************************************
- *************************** For Parent****************************************
+ *************************** Flexible Box  ***************************
+ *************************** For Parent    ***************************
  * display                     || flex; inline-flex;
  * flex-direction              || row; row-reverse; column; column-reverse; work with direction
  * flex-wrap                   || nowrap; wrap; wrap-reverse;
  * flex-flow                   || [Flex-Direction] + [Flex-Wrap]
- * justify-content             || flex-start; center; flex-end; space-between; space-around; space-evenly; 
+ * justify-content             || flex-start; flex-end; center; space-between; space-around; space-evenly; 
  * align-items                 || stretch; center; flex-end; flex-start;
  * align-content               || stretch; space-between; flex-start; flex-end; space-around; space-evenly;
  *************************** For Child ****************************************
@@ -2126,15 +2126,19 @@ by the element's font size */
     width: 90%;
     padding: 20px;
     margin: 20px auto;
+    // flex; || inline-flex;
     display: flex;
+    // row; || row-reverse; || column; || column-reverse;
     flex-direction: row;
     flex-direction: row-reverse;
     flex-direction: column;
     flex-direction: column-reverse;
     flex-direction: row;
+    // nowrap; || wrap;
     flex-wrap: nowrap;
     flex-wrap: wrap;
     flex-wrap: wrap-reverse;
+    // [Flex-Direction] = row; + [Flex-Wrap] = nowrap;
     flex-flow: row wrap;
     @include xs-media {
       flex-direction: column;
@@ -2209,13 +2213,15 @@ by the element's font size */
     justify-self: start;
     justify-content: flex-start;
     justify-content: center;
+    justify-content: space-between;
 
     div {
       background-color: #f00;
       color: white;
-      width: calc(90% / 3);
+      width: calc(99% / 4);
       text-align: center;
       padding: 20px;
+      margin-bottom: 2%;
     }
   }
   .float {
@@ -2249,9 +2255,6 @@ by the element's font size */
   - align-items: stretch => Default Value
 */
 
-  * {
-    box-sizing: border-box;
-  }
   .flex {
     background-color: #eee;
     width: 90%;
@@ -2260,17 +2263,22 @@ by the element's font size */
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-  }
-  .flex div {
-    background-color: #f00;
-    color: white;
-    width: calc(90% / 3);
-    text-align: center;
-    padding: 20px;
+
+    div {
+      background-color: #f00;
+      color: white;
+      width: calc(90% / 3);
+      text-align: center;
+      padding: 20px;
+    }
   }
   .flex .one,
   .float .one {
     height: 80px;
+  }
+  .flex .two,
+  .float .two {
+    height: 150px;
   }
   .float {
     overflow: hidden;
@@ -2278,27 +2286,27 @@ by the element's font size */
     width: 90%;
     padding: 20px;
     margin: 20px auto;
+    div {
+      background-color: #f00;
+      color: white;
+      float: right;
+      width: calc(90% / 3);
+      text-align: center;
+      padding: 20px;
+    }
   }
-  .float div {
-    background-color: #f00;
-    color: white;
-    float: right;
-    width: calc(90% / 3);
-    text-align: center;
-    padding: 20px;
-  }
-
   .center {
-    background-color: blue;
+    background-color: #244961;
     color: white;
     width: 300px;
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
   }
 }
-// video 49
+// video 49 align-content
 .video-49 {
   /*
   Flexible Box
@@ -2336,7 +2344,7 @@ by the element's font size */
   }
 }
 
-// video 50
+// video 50 Flexible Box For Child
 .video-50 {
   /*
   Flexible Box
@@ -2360,19 +2368,23 @@ by the element's font size */
     padding: 20px;
     margin: 20px auto;
     display: flex;
-  }
-  .flex div {
-    background-color: #f00;
-    color: white;
-    width: 80px;
-    text-align: center;
-    padding: 20px;
-    margin-right: 5px;
-    flex-grow: 1;
+    div {
+      background-color: #f00;
+      color: white;
+      width: 80px;
+      text-align: center;
+      padding: 20px;
+      margin-right: 5px;
+      flex-grow: 1;
+    }
+    div:nth-child(2) {
+      flex-grow: 3;
+      background-color: #0000ff;
+    }
   }
 }
 
-// video 51
+// video 51 Flexible Box flex-basis
 .video-51 {
   /*
   Flexible Box
@@ -2465,10 +2477,10 @@ by the element's font size */
   }
 }
 
-// video 54
+// video 54 filter
 .video-54 {
   > div {
-    @include grid-left(4, 2%);
+    @include grid-left(3, 2%);
   }
   .box-one {
     img {
@@ -3846,4 +3858,42 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
     // grid-column: 2 / span 6;
     // grid-row: 2 / span 5;
   }
+}
+.Parent-flex {
+  // flex; || inline-flex;
+  display: flex;
+  // row; || row-reverse; || column; || column-reverse;
+  flex-direction: row;
+  // nowrap; || wrap;
+  flex-wrap: nowrap;
+  // [Flex-Direction] = row; + [Flex-Wrap] = nowrap;
+  flex-flow: row wrap;
+  // flex-start; | flex-end; | center; |space-between; || space-around; | space-evenly;
+  justify-content: flex-start;
+  // stretch; | center; | flex-start; | flex-end;
+  align-items: stretch;
+  // stretch; | center; | flex-start; | flex-end; | space-between; || space-around; | space-evenly;
+  align-content: stretch;
+  .child-flex {
+    flex-grow: 0;
+    flex-shrink: 1;
+    order: 0;
+    // px work with width & height
+    flex-basis: auto;
+    // flex: [Flex Grow] [Flex Shrink] [Flex Basis] 0 1 Auto
+    flex: 0 1 auto;
+    // auto; | center; | flex-start; | flex-end;
+    align-self: auto;
+  }
+}
+.filter {
+  -webkit-filter: blur(4px);
+  //wihte&black
+  filter: grayscale(0);
+  -webkit-filter: blur(4px);
+  // blur
+  filter: blur(4px);
+  -webkit-filter: invert(0);
+  // no color
+  filter: invert(0);
 }
