@@ -2094,7 +2094,7 @@ by the element's font size */
     color: rgb(255, 255, 255);
   }
 }
-// flex box
+// video 46 flex box
 .video-46 {
   /*
   Flexible Box
@@ -2128,14 +2128,40 @@ by the element's font size */
     margin: 20px auto;
     display: flex;
     flex-direction: row;
+    flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    flex-direction: row;
+    flex-wrap: nowrap;
     flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     flex-flow: row wrap;
+    @include xs-media {
+      flex-direction: column;
+    }
+    @include sm-media {
+    }
+    @include md-media {
+    }
+    @include lg-media {
+    }
     div {
       background-color: #f00;
       color: white;
-      width: 20%;
+      margin-left: 1%;
+      margin-bottom: 1%;
+      width: calc((97% - 1%) / 4);
       text-align: center;
       padding: 20px;
+      @include xs-media {
+        width: calc((98% - 1%) / 1);
+      }
+      @include sm-media {
+      }
+      @include md-media {
+      }
+      @include lg-media {
+      }
     }
   }
   .float {

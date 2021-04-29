@@ -2147,18 +2147,43 @@ by the element's font size */
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  flex-direction: row-reverse;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
   -ms-flex-flow: row wrap;
       flex-flow: row wrap;
+}
+
+@media (max-width: 767px) {
+  .video-46 .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .video-46 .flex div {
   background-color: #f00;
   color: white;
-  width: 20%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  width: calc((97% - 1%) / 4);
   text-align: center;
   padding: 20px;
+}
+
+@media (max-width: 767px) {
+  .video-46 .flex div {
+    width: calc((98% - 1%) / 1);
+  }
 }
 
 .video-46 .float {
