@@ -26,6 +26,110 @@
   -ms-transform: scale($width, $height);
   -o-transform: scale($width, $height);
 }
+@mixin scaleX($width) {
+  transform: scaleX($width);
+  -webkit-transform: scaleX($width);
+  -moz-transform: scaleX($width);
+  -ms-transform: scaleX($width);
+  -o-transform: scaleX($width);
+}
+@mixin scaleY($height) {
+  transform: scaleY($height);
+  -webkit-transform: scaleY($height);
+  -moz-transform: scaleY($height);
+  -ms-transform: scaleY($height);
+  -o-transform: scaleY($height);
+}
+// rotate
+// @include rotate(10deg);
+@mixin rotate($number) {
+  transform: rotate($number);
+  -webkit-transform: rotate($number);
+  -moz-transform: rotate($number);
+  -ms-transform: rotate($number);
+  -o-transform: rotate($number);
+}
+@mixin rotateY($number) {
+  transform: rotateY($number);
+  -webkit-transform: rotateY($number);
+  -moz-transform: rotateY($number);
+  -ms-transform: rotateY($number);
+  -o-transform: rotateY($number);
+}
+@mixin rotateX($number) {
+  transform: rotateX($number);
+  -webkit-transform: rotateX($number);
+  -moz-transform: rotateX($number);
+  -ms-transform: rotateX($number);
+  -o-transform: rotateX($number);
+}
+@mixin rotateZ($number) {
+  transform: rotateZ($number);
+  -webkit-transform: rotateZ($number);
+  -moz-transform: rotateZ($number);
+  -ms-transform: rotateZ($number);
+  -o-transform: rotateZ($number);
+}
+// skew
+// @include skew(10px, 10px);
+@mixin skew($width, $height) {
+  transform: skew($width, $height);
+  -webkit-transform: skew($width, $height);
+  -moz-transform: skew($width, $height);
+  -ms-transform: skew($width, $height);
+  -o-transform: skew($width, $height);
+}
+@mixin skewX($width) {
+  transform: skewX($width);
+  -webkit-transform: skewX($width);
+  -moz-transform: skewX($width);
+  -ms-transform: skewX($width);
+  -o-transform: skewX($width);
+}
+@mixin skewY($height) {
+  transform: skewY($height);
+  -webkit-transform: skewY($height);
+  -moz-transform: skewY($height);
+  -ms-transform: skewY($height);
+  -o-transform: skewY($height);
+}
+// $translateX, $translateY, $scaleX, $skewY, $skewX ,$scaleY
+// @include matrix( 1, 0, 0, 1, 0, 0 );
+@mixin matrix($translateX, $translateY, $scaleX, $skewY, $skewX, $scaleY) {
+  transform: matrix($translateX, $translateY, $scaleX, $skewY, $skewX, $scaleY);
+  -webkit-transform: matrix(
+    $translateX,
+    $translateY,
+    $scaleX,
+    $skewY,
+    $skewX,
+    $scaleY
+  );
+  -moz-transform: matrix(
+    $translateX,
+    $translateY,
+    $scaleX,
+    $skewY,
+    $skewX,
+    $scaleY
+  );
+  -ms-transform: matrix(
+    $translateX,
+    $translateY,
+    $scaleX,
+    $skewY,
+    $skewX,
+    $scaleY
+  );
+  -o-transform: matrix(
+    $translateX,
+    $translateY,
+    $scaleX,
+    $skewY,
+    $skewX,
+    $scaleY
+  );
+}
 // hover
 // @include hover {}
 @mixin hover {
@@ -184,4 +288,27 @@
       @content;
     }
   }
+}
+// translate
+// @include translate(10px, 10px);
+@mixin translate($width, $height) {
+  transform: translate($width, $height);
+  -webkit-transform: translate($width, $height);
+  -moz-transform: translate($width, $height);
+  -ms-transform: translate($width, $height);
+  -o-transform: translate($width, $height);
+}
+@mixin translateX($width) {
+  transform: translateX($width);
+  -webkit-transform: translateX($width);
+  -moz-transform: translateX($width);
+  -ms-transform: translateX($width);
+  -o-transform: translateX($width);
+}
+@mixin translateY($height) {
+  transform: translateY($height);
+  -webkit-transform: translateY($height);
+  -moz-transform: translateY($height);
+  -ms-transform: translateY($height);
+  -o-transform: translateY($height);
 }

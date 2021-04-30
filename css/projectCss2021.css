@@ -122,11 +122,12 @@ body {
  *              linear-gradient( 90deg ,  #2980b9 , #27ae60 ,)
  * caret-color                 || red; لون الافالش اللى فى الكتابة 
  * pointer-events              || all; none; 
+
  *******************************************************************************
  *************************** For Parent grid ****************************************
  * display                     || grid | inline-grid
  * grid-template-columns       || [Number Of Rows In] =>  [Px, %, Auto, Repeat, 1fr]
-   100px 100px ; 33% 33% 33%; auto auto auto auto; repeat(6, auto)
+  100px 100px ; 33% 33% 33%; auto auto auto auto; repeat(6, auto)
  * grid-template-rows          || [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
  * row-gap                     || 0px; 10px; المسافات اللى فى العرض
  * column-gap                  || 0px; 10px; المسافات اللى فى الطول
@@ -2681,6 +2682,10 @@ by the element's font size */
   pointer-events: none;
 }
 
+.video-56 p {
+  caret-color: red;
+}
+
 .video-57 {
   /*
   Grid
@@ -2702,6 +2707,16 @@ by the element's font size */
   background-color: #ddd;
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 100px 100px 200px;
+      grid-template-columns: 100px 100px 200px;
+  -ms-grid-columns: 100px 100px 50%;
+      grid-template-columns: 100px 100px 50%;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  -ms-grid-columns: 100px 200px 25% auto;
+      grid-template-columns: 100px 200px 25% auto;
   -ms-grid-columns: (auto)[2] (1fr)[2];
       grid-template-columns: repeat(2, auto) repeat(2, 1fr);
 }
@@ -2742,8 +2757,6 @@ by the element's font size */
       grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: (1fr)[4];
       grid-template-rows: repeat(4, 1fr);
-  /* row-gap: 10px;
-  column-gap: 10px; */
   gap: 10px 10px;
 }
 
@@ -2987,6 +3000,17 @@ by the element's font size */
   text-align: center;
 }
 
+.video-62 .parent div:nth-child(9) {
+  background-color: green;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 5;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 6;
+  grid-area: 2 / 2 / 5 / 6;
+}
+
 .video-63 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2999,8 +3023,8 @@ by the element's font size */
   background-color: #ddd;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .video-63 .parent div {
@@ -3014,24 +3038,90 @@ by the element's font size */
 
 .video-65 {
   position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
 }
 
 .video-65 .parent {
-  width: 90%;
-  height: 300px;
-  background-color: #d8d8d8;
-  margin: 100px auto;
-  position: relative;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translate(-10%, -50%);
+  -webkit-transform: translate(-10%, -50%);
+  -moz-transform: translate(-10%, -50%);
+  -ms-transform: translate(-10%, -50%);
+  -o-transform: translate(-10%, -50%);
+  width: 25%;
+  height: 250px;
+  background-color: #ddd;
+}
+
+.video-65 .parent .x-axis::before {
+  content: "X-axis";
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  background-color: #fff;
+  width: 90px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.video-65 .parent .x-axis::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  bottom: -50px;
+  left: 0;
+  position: absolute;
+}
+
+.video-65 .parent .y-axis::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #000;
+  left: -50px;
+  position: absolute;
+}
+
+.video-65 .parent .y-axis::after {
+  content: "Y-axis";
+  position: absolute;
+  left: -95px;
+  top: 50%;
+  transform: translateY(-50%) rotate(270deg);
+  -webkit-transform: translateY(-50%) rotate(270deg);
+  -moz-transform: translateY(-50%) rotate(270deg);
+  -ms-transform: translateY(-50%) rotate(270deg);
+  -o-transform: translateY(-50%) rotate(270deg);
+  background-color: #fff;
+  width: 90px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
 }
 
 .video-65 .parent > div {
-  position: absolute;
-  width: 250px;
-  height: 150px;
-  margin-top: 75px;
-  margin-left: 125px;
-  background-color: #e78282;
-  color: white;
+  width: 70%;
+  height: 70%;
+  background-color: #cf2d63;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 15%;
+  margin-left: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3041,8 +3131,6 @@ by the element's font size */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-weight: bold;
-  font-size: 30px;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -3050,7 +3138,7 @@ by the element's font size */
   -o-transition: all 0.5s ease-in-out;
 }
 
-.video-65 .parent > div:hover {
+.video-65 .parent > div:not([disabled]):hover {
   transform: scale(2, 2);
   -webkit-transform: scale(2, 2);
   -moz-transform: scale(2, 2);
@@ -3058,26 +3146,134 @@ by the element's font size */
   -o-transform: scale(2, 2);
 }
 
-.video-65 .x {
-  position: absolute;
-  bottom: -60px;
-  left: 46%;
+.video-65 .parent:nth-child(2) {
+  left: 55%;
+  transform: translate(-55%, -50%);
+  -webkit-transform: translate(-55%, -50%);
+  -moz-transform: translate(-55%, -50%);
+  -ms-transform: translate(-55%, -50%);
+  -o-transform: translate(-55%, -50%);
 }
 
-.video-65 .y {
-  position: absolute;
-  top: 38%;
-  left: 15%;
-  -webkit-transform: rotate(268deg);
-          transform: rotate(268deg);
+.video-65 .parent:nth-child(2) > div {
+  background-color: #3e8147;
 }
 
-.video-66 > div {
-  margin: 200px auto;
-  width: 300px;
-  height: 300px;
-  background-color: #973e3e;
-  color: white;
+.video-65 .parent:nth-child(2) > div:not([disabled]):hover {
+  transform: scaleX(2);
+  -webkit-transform: scaleX(2);
+  -moz-transform: scaleX(2);
+  -ms-transform: scaleX(2);
+  -o-transform: scaleX(2);
+}
+
+.video-65 .parent:nth-child(3) {
+  left: 100%;
+  transform: translate(-100%, -50%);
+  -webkit-transform: translate(-100%, -50%);
+  -moz-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  -o-transform: translate(-100%, -50%);
+}
+
+.video-65 .parent:nth-child(3) > div {
+  background-color: #3489db;
+}
+
+.video-65 .parent:nth-child(3) > div:not([disabled]):hover {
+  transform: scaleY(2);
+  -webkit-transform: scaleY(2);
+  -moz-transform: scaleY(2);
+  -ms-transform: scaleY(2);
+  -o-transform: scaleY(2);
+}
+
+.video-66 {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #919191;
+}
+
+.video-66 .parent {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translate(-10%, -50%);
+  -webkit-transform: translate(-10%, -50%);
+  -moz-transform: translate(-10%, -50%);
+  -ms-transform: translate(-10%, -50%);
+  -o-transform: translate(-10%, -50%);
+  width: 25%;
+  height: 250px;
+  background-color: #ddd;
+}
+
+.video-66 .parent .x-axis::before {
+  content: "X-axis";
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  background-color: #fff;
+  width: 90px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.video-66 .parent .x-axis::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  bottom: -50px;
+  left: 0;
+  position: absolute;
+}
+
+.video-66 .parent .y-axis::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #000;
+  left: -50px;
+  position: absolute;
+}
+
+.video-66 .parent .y-axis::after {
+  content: "Y-axis";
+  position: absolute;
+  left: -95px;
+  top: 50%;
+  transform: translateY(-50%) rotate(270deg);
+  -webkit-transform: translateY(-50%) rotate(270deg);
+  -moz-transform: translateY(-50%) rotate(270deg);
+  -ms-transform: translateY(-50%) rotate(270deg);
+  -o-transform: translateY(-50%) rotate(270deg);
+  background-color: #fff;
+  width: 90px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.video-66 .parent > div {
+  width: 70%;
+  height: 70%;
+  background-color: #cf2d63;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 15%;
+  margin-left: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3087,8 +3283,6 @@ by the element's font size */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-weight: bold;
-  font-size: 30px;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -3096,25 +3290,148 @@ by the element's font size */
   -o-transition: all 0.5s ease-in-out;
 }
 
-.video-66 > div:not([disabled]):hover {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(1turn);
-          transform: rotate(1turn);
-  -webkit-transform: rotate(0.5turn);
-          transform: rotate(0.5turn);
-  transform: rotate(0.25turn);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
+.video-66 .parent > div:not([disabled]):hover {
+  transform: translate(100%, 100%);
+  -webkit-transform: translate(100%, 100%);
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
 }
 
-.video-67 > div {
-  margin: 200px auto;
-  width: 300px;
-  height: 300px;
-  background-color: #e78282;
-  color: white;
+.video-66 .parent:nth-child(2) {
+  left: 55%;
+  transform: translate(-55%, -50%);
+  -webkit-transform: translate(-55%, -50%);
+  -moz-transform: translate(-55%, -50%);
+  -ms-transform: translate(-55%, -50%);
+  -o-transform: translate(-55%, -50%);
+}
+
+.video-66 .parent:nth-child(2) > div {
+  background-color: #3e8147;
+}
+
+.video-66 .parent:nth-child(2) > div:not([disabled]):hover {
+  transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+
+.video-66 .parent:nth-child(3) {
+  left: 100%;
+  transform: translate(-100%, -50%);
+  -webkit-transform: translate(-100%, -50%);
+  -moz-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  -o-transform: translate(-100%, -50%);
+}
+
+.video-66 .parent:nth-child(3) > div {
+  background-color: #3489db;
+}
+
+.video-66 .parent:nth-child(3) > div:not([disabled]):hover {
+  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+.video-67 {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #dda3a3;
+}
+
+.video-67 .parent {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translate(-10%, -50%);
+  -webkit-transform: translate(-10%, -50%);
+  -moz-transform: translate(-10%, -50%);
+  -ms-transform: translate(-10%, -50%);
+  -o-transform: translate(-10%, -50%);
+  width: 25%;
+  height: 250px;
+  background-color: #ddd;
+}
+
+.video-67 .parent .x-axis::before {
+  content: "X-axis";
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  background-color: #fff;
+  width: 90px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.video-67 .parent .x-axis::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  bottom: -50px;
+  left: 0;
+  position: absolute;
+}
+
+.video-67 .parent .y-axis::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #000;
+  left: -50px;
+  position: absolute;
+}
+
+.video-67 .parent .y-axis::after {
+  content: "Y-axis";
+  position: absolute;
+  left: -95px;
+  top: 50%;
+  transform: translateY(-50%) rotate(270deg);
+  -webkit-transform: translateY(-50%) rotate(270deg);
+  -moz-transform: translateY(-50%) rotate(270deg);
+  -ms-transform: translateY(-50%) rotate(270deg);
+  -o-transform: translateY(-50%) rotate(270deg);
+  background-color: #fff;
+  width: 90px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.video-67 .parent > div {
+  width: 70%;
+  height: 70%;
+  background-color: #cf2d63;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 15%;
+  margin-left: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3124,10 +3441,61 @@ by the element's font size */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-weight: bold;
-  font-size: 30px;
-  -webkit-transform: translate(-100px, -100px);
-          transform: translate(-100px, -100px);
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.video-67 .parent > div:not([disabled]):hover {
+  transform: translate(100%, 100%);
+  -webkit-transform: translate(100%, 100%);
+  -moz-transform: translate(100%, 100%);
+  -ms-transform: translate(100%, 100%);
+  -o-transform: translate(100%, 100%);
+}
+
+.video-67 .parent:nth-child(2) {
+  left: 55%;
+  transform: translate(-55%, -50%);
+  -webkit-transform: translate(-55%, -50%);
+  -moz-transform: translate(-55%, -50%);
+  -ms-transform: translate(-55%, -50%);
+  -o-transform: translate(-55%, -50%);
+}
+
+.video-67 .parent:nth-child(2) > div {
+  background-color: #3e8147;
+}
+
+.video-67 .parent:nth-child(2) > div:not([disabled]):hover {
+  transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
+}
+
+.video-67 .parent:nth-child(3) {
+  left: 100%;
+  transform: translate(-100%, -50%);
+  -webkit-transform: translate(-100%, -50%);
+  -moz-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  -o-transform: translate(-100%, -50%);
+}
+
+.video-67 .parent:nth-child(3) > div {
+  background-color: #3489db;
+}
+
+.video-67 .parent:nth-child(3) > div:not([disabled]):hover {
+  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
 }
 
 .video-68 h2 {
@@ -3154,11 +3522,11 @@ by the element's font size */
   width: 100%;
   height: 100%;
   z-index: -1;
-  transform: skewX(20deg);
-  -webkit-transform: skewX(20deg);
-  -moz-transform: skewX(20deg);
-  -ms-transform: skewX(20deg);
-  -o-transform: skewX(20deg);
+  transform: skew(20deg, 10deg);
+  -webkit-transform: skew(20deg, 10deg);
+  -moz-transform: skew(20deg, 10deg);
+  -ms-transform: skew(20deg, 10deg);
+  -o-transform: skew(20deg, 10deg);
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -3225,10 +3593,13 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
           align-items: center;
   font-weight: bold;
   font-size: 30px;
-  -webkit-transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
-          transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
   -webkit-transform: translateX(20px) translateY(20px) scaleX(1.2) skewY(15deg) skewX(0deg) scaleY(1.2);
           transform: translateX(20px) translateY(20px) scaleX(1.2) skewY(15deg) skewX(0deg) scaleY(1.2);
+  transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
+  -webkit-transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
+  -moz-transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
+  -ms-transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
+  -o-transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
 }
 
 .video-70 {
@@ -3277,15 +3648,6 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   background-color: #ddd;
 }
 
-.video-70 .parent .x-axis::after {
-  content: "";
-  width: 100%;
-  height: 2px;
-  background-color: #000;
-  bottom: -50px;
-  position: absolute;
-}
-
 .video-70 .parent .x-axis::before {
   content: "X-axis";
   position: absolute;
@@ -3301,6 +3663,16 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   text-align: center;
   font-weight: bold;
   z-index: 1;
+}
+
+.video-70 .parent .x-axis::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  bottom: -50px;
+  left: 0;
+  position: absolute;
 }
 
 .video-70 .parent .y-axis::before {
@@ -3410,11 +3782,11 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
 }
 
 .video-71 div:not([disabled]):hover {
-  transform: rotate3d(0, 1, 1, 90deg);
-  -webkit-transform: rotate3d(0, 1, 1, 90deg);
-  -moz-transform: rotate3d(0, 1, 1, 90deg);
-  -ms-transform: rotate3d(0, 1, 1, 90deg);
-  -o-transform: rotate3d(0, 1, 1, 90deg);
+  transform: rotate3d(0, 1, 1, 360deg);
+  -webkit-transform: rotate3d(0, 1, 1, 360deg);
+  -moz-transform: rotate3d(0, 1, 1, 360deg);
+  -ms-transform: rotate3d(0, 1, 1, 360deg);
+  -o-transform: rotate3d(0, 1, 1, 360deg);
 }
 
 .video-73 .parent-back-face {
@@ -4098,5 +4470,69 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   filter: blur(4px);
   -webkit-filter: invert(0);
   filter: invert(0);
+}
+
+.parent-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0px 0px;
+}
+
+.test-maraim {
+  width: 50%;
+  height: 300px;
+  position: relative;
+}
+
+.test-maraim .maraim-atef {
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.test-maraim .maraim-atef:nth-child(1) {
+  background-color: #2980b9;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.test-maraim .maraim-atef:nth-child(2) {
+  background-color: #29b4b9;
+  z-index: -1;
+  opacity: 0;
+  transform: rotateZ(90deg);
+  -webkit-transform: rotateZ(90deg);
+  -moz-transform: rotateZ(90deg);
+  -ms-transform: rotateZ(90deg);
+  -o-transform: rotateZ(90deg);
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.test-maraim:hover .maraim-atef:nth-child(2) {
+  transform: rotateZ(0deg);
+  -webkit-transform: rotateZ(0deg);
+  -moz-transform: rotateZ(0deg);
+  -ms-transform: rotateZ(0deg);
+  -o-transform: rotateZ(0deg);
+  z-index: 1;
+  opacity: 1;
 }
 /*# sourceMappingURL=projectCss2021.css.map */

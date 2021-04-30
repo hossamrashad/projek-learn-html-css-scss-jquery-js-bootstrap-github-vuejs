@@ -87,11 +87,12 @@
  *              linear-gradient( 90deg ,  #2980b9 , #27ae60 ,)
  * caret-color                 || red; لون الافالش اللى فى الكتابة 
  * pointer-events              || all; none; 
+
  *******************************************************************************
  *************************** For Parent grid ****************************************
  * display                     || grid | inline-grid
  * grid-template-columns       || [Number Of Rows In] =>  [Px, %, Auto, Repeat, 1fr]
-   100px 100px ; 33% 33% 33%; auto auto auto auto; repeat(6, auto)
+  100px 100px ; 33% 33% 33%; auto auto auto auto; repeat(6, auto)
  * grid-template-rows          || [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
  * row-gap                     || 0px; 10px; المسافات اللى فى العرض
  * column-gap                  || 0px; 10px; المسافات اللى فى الطول
@@ -2556,7 +2557,7 @@ by the element's font size */
   // clear float
   @include clearfix;
 }
-// video 55
+// video 55 linear-gradient
 .video-55 {
   /*
   Gradients
@@ -2601,7 +2602,6 @@ by the element's font size */
     }
   }
 }
-
 // video 56
 .video-56 {
   input {
@@ -2611,8 +2611,11 @@ by the element's font size */
     // لو عاوز تواقف عمال النك و الافتراضى اوتو
     pointer-events: none;
   }
+  p {
+    caret-color: red;
+  }
 }
-
+// video 57 grid
 .video-57 {
   /*
   Grid
@@ -2630,6 +2633,11 @@ by the element's font size */
     height: 500px;
     background-color: #ddd;
     display: grid;
+    grid-template-columns: 100px 100px 200px;
+    grid-template-columns: 100px 100px 50%;
+    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(4, auto);
+    grid-template-columns: 100px 200px 25% auto;
     grid-template-columns: repeat(2, auto) repeat(2, 1fr);
   }
   .parent div {
@@ -2663,8 +2671,8 @@ by the element's font size */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    /* row-gap: 10px;
-  column-gap: 10px; */
+    // row-gap: 10px;
+    // column-gap: 10px;
     gap: 10px 10px;
   }
   .parent div {
@@ -2776,7 +2784,6 @@ by the element's font size */
     color: white;
   }
 }
-
 // video 61
 .video-61 {
   /*
@@ -2861,8 +2868,15 @@ by the element's font size */
     font-weight: bold;
     text-align: center;
   }
+  .parent div:nth-child(9) {
+    background-color: green;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-area: 2 / 2 / 5 / 6;
+  }
 }
-
 // video 63
 .video-63 {
   * {
@@ -2874,7 +2888,7 @@ by the element's font size */
     height: 500px;
     background-color: #ddd;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
   .parent div {
     background-color: red;
@@ -2885,94 +2899,334 @@ by the element's font size */
     text-align: center;
   }
 }
-//
+// video 65 transform scale 2d
 .video-65 {
+  // scaleX(2);
+  // scaleY(2);
+  // scale(2, 2);
   position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
   .parent {
-    width: 90%;
-    height: 300px;
-    background-color: rgb(216, 216, 216);
-    margin: 100px auto;
-    position: relative;
-
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    @include translate(-10%, -50%);
+    width: 25%;
+    height: 250px;
+    background-color: #ddd;
+    .x-axis {
+      &::before {
+        content: "X-axis";
+        position: absolute;
+        bottom: -70px;
+        left: 50%;
+        @include translateX(-50%);
+        background-color: #fff;
+        width: 90px;
+        text-align: center;
+        font-weight: bold;
+        z-index: 1;
+      }
+      &::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        bottom: -50px;
+        left: 0;
+        position: absolute;
+      }
+    }
+    .y-axis {
+      &::before {
+        content: "";
+        width: 2px;
+        height: 100%;
+        background-color: #000;
+        left: -50px;
+        position: absolute;
+      }
+      &::after {
+        content: "Y-axis";
+        position: absolute;
+        left: -95px;
+        top: 50%;
+        transform: translateY(-50%) rotate(270deg);
+        -webkit-transform: translateY(-50%) rotate(270deg);
+        -moz-transform: translateY(-50%) rotate(270deg);
+        -ms-transform: translateY(-50%) rotate(270deg);
+        -o-transform: translateY(-50%) rotate(270deg);
+        background-color: #fff;
+        width: 90px;
+        text-align: center;
+        font-weight: bold;
+        z-index: 1;
+      }
+    }
     > div {
-      position: absolute;
-      width: 250px;
-      height: 150px;
-      margin-top: 75px;
-      margin-left: 125px;
-      background-color: #e78282;
-      color: white;
-      @include flexCenter;
+      width: 70%;
+      height: 70%;
+      background-color: #cf2d63;
+      color: #fff;
       font-weight: bold;
       font-size: 30px;
+      margin-top: 15%;
+      margin-left: 15%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       @include transition(0.5s);
-      &:hover {
-        // transform: scaleX(2);
-        // transform: scaleY(2);
-        // transform: scale(2, 2);
-        // transform: scale(1.5, 2);
-        // -webkit-transform: scale(1.5, 2);
-        // -moz-transform: scale(1.5, 2);
-        // -ms-transform: scale(1.5, 2);
-        // -o-transform: scale(1.5, 2);
+      @include hover {
         @include scale(2, 2);
       }
     }
   }
-  .x {
-    position: absolute;
-    bottom: -60px;
-    left: 46%;
+  .parent:nth-child(2) {
+    left: 55%;
+    @include translate(-55%, -50%);
+    > div {
+      background-color: #3e8147;
+      @include hover {
+        @include scaleX(2);
+      }
+    }
   }
-  .y {
-    position: absolute;
-    top: 38%;
-    left: 15%;
-    transform: rotate(268deg);
+  .parent:nth-child(3) {
+    left: 100%;
+    @include translate(-100%, -50%);
+    > div {
+      background-color: #3489db;
+      @include hover {
+        @include scaleY(2);
+      }
+    }
   }
 }
 
-// video 66
+// Video 66 Transform Rotate 2d
 .video-66 {
-  > div {
-    margin: 200px auto;
-    width: 300px;
-    height: 300px;
-    background-color: rgb(151, 62, 62);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 30px;
-    @include transition(0.5s);
-    @include hover {
-      transform: rotate(45deg);
-      transform: rotate(1turn);
-      transform: rotate(0.5turn);
-      transform: rotate(0.25turn);
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
+  // Rotate(2);
+  // Rotate(2);
+  // Rotate(2, 2);
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(145, 145, 145);
+  .parent {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    @include translate(-10%, -50%);
+    width: 25%;
+    height: 250px;
+    background-color: #ddd;
+    .x-axis {
+      &::before {
+        content: "X-axis";
+        position: absolute;
+        bottom: -70px;
+        left: 50%;
+        @include translateX(-50%);
+        background-color: #fff;
+        width: 90px;
+        text-align: center;
+        font-weight: bold;
+        z-index: 1;
+      }
+      &::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        bottom: -50px;
+        left: 0;
+        position: absolute;
+      }
+    }
+    .y-axis {
+      &::before {
+        content: "";
+        width: 2px;
+        height: 100%;
+        background-color: #000;
+        left: -50px;
+        position: absolute;
+      }
+      &::after {
+        content: "Y-axis";
+        position: absolute;
+        left: -95px;
+        top: 50%;
+        transform: translateY(-50%) rotate(270deg);
+        -webkit-transform: translateY(-50%) rotate(270deg);
+        -moz-transform: translateY(-50%) rotate(270deg);
+        -ms-transform: translateY(-50%) rotate(270deg);
+        -o-transform: translateY(-50%) rotate(270deg);
+        background-color: #fff;
+        width: 90px;
+        text-align: center;
+        font-weight: bold;
+        z-index: 1;
+      }
+    }
+    > div {
+      width: 70%;
+      height: 70%;
+      background-color: #cf2d63;
+      color: #fff;
+      font-weight: bold;
+      font-size: 30px;
+      margin-top: 15%;
+      margin-left: 15%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include transition(0.5s);
+
+      @include hover {
+        @include translate(100%, 100%);
+        @include rotate(360deg);
+      }
+    }
+  }
+  .parent:nth-child(2) {
+    left: 55%;
+    @include translate(-55%, -50%);
+    > div {
+      background-color: #3e8147;
+      @include hover {
+        @include translateX(50%);
+        @include rotate(90deg);
+      }
+    }
+  }
+  .parent:nth-child(3) {
+    left: 100%;
+    @include translate(-100%, -50%);
+    > div {
+      background-color: #3489db;
+      @include hover {
+        @include translateY(50%);
+        @include rotate(-90deg);
+      }
     }
   }
 }
 // video 67 translate
 .video-67 {
-  > div {
-    margin: 200px auto;
-    width: 300px;
-    height: 300px;
-    background-color: #e78282;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 30px;
-    transform: translate(-100px, -100px);
+  // translatey(2);
+  // translatex(2);
+  // translate(2, 2);
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(221, 163, 163);
+  .parent {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    @include translate(-10%, -50%);
+    width: 25%;
+    height: 250px;
+    background-color: #ddd;
+    .x-axis {
+      &::before {
+        content: "X-axis";
+        position: absolute;
+        bottom: -70px;
+        left: 50%;
+        @include translateX(-50%);
+        background-color: #fff;
+        width: 90px;
+        text-align: center;
+        font-weight: bold;
+        z-index: 1;
+      }
+      &::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        bottom: -50px;
+        left: 0;
+        position: absolute;
+      }
+    }
+    .y-axis {
+      &::before {
+        content: "";
+        width: 2px;
+        height: 100%;
+        background-color: #000;
+        left: -50px;
+        position: absolute;
+      }
+      &::after {
+        content: "Y-axis";
+        position: absolute;
+        left: -95px;
+        top: 50%;
+        transform: translateY(-50%) rotate(270deg);
+        -webkit-transform: translateY(-50%) rotate(270deg);
+        -moz-transform: translateY(-50%) rotate(270deg);
+        -ms-transform: translateY(-50%) rotate(270deg);
+        -o-transform: translateY(-50%) rotate(270deg);
+        background-color: #fff;
+        width: 90px;
+        text-align: center;
+        font-weight: bold;
+        z-index: 1;
+      }
+    }
+    > div {
+      width: 70%;
+      height: 70%;
+      background-color: #cf2d63;
+      color: #fff;
+      font-weight: bold;
+      font-size: 30px;
+      margin-top: 15%;
+      margin-left: 15%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include transition(0.5s);
+
+      @include hover {
+        @include translate(100%, 100%);
+      }
+    }
+  }
+  .parent:nth-child(2) {
+    left: 55%;
+    @include translate(-55%, -50%);
+    > div {
+      background-color: #3e8147;
+      @include hover {
+        @include translateX(50%);
+      }
+    }
+  }
+  .parent:nth-child(3) {
+    left: 100%;
+    @include translate(-100%, -50%);
+    > div {
+      background-color: #3489db;
+      @include hover {
+        @include translateY(50%);
+      }
+    }
   }
 }
 // video 68
@@ -2995,11 +3249,7 @@ by the element's font size */
       width: 100%;
       height: 100%;
       z-index: -1;
-      transform: skewX(20deg);
-      -webkit-transform: skewX(20deg);
-      -moz-transform: skewX(20deg);
-      -ms-transform: skewX(20deg);
-      -o-transform: skewX(20deg);
+      @include skew(20deg, 10deg);
       @include transition(0.5s);
     }
     &:hover::before {
@@ -3049,12 +3299,14 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
     align-items: center;
     font-weight: bold;
     font-size: 30px;
-    transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
+
     transform: translateX(20px) translateY(20px) scaleX(1.2) skewY(15deg)
       skewX(0deg) scaleY(1.2);
+    // translateX, translateY, scaleX, skewY, skewX ,scaleY
+    @include matrix(1.2, 0.2679, 0, 1.2, 20, 20);
   }
 }
-// video 70
+// video 70 transform-origin
 .video-70 {
   position: relative;
   overflow: hidden;
@@ -3089,39 +3341,31 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
+    @include translate(-50%, -50%);
     width: 300px;
     height: 300px;
     background-color: #ddd;
-
     .x-axis {
+      &::before {
+        content: "X-axis";
+        position: absolute;
+        bottom: -70px;
+        left: 50%;
+        @include translateX(-50%);
+        background-color: #fff;
+        width: 90px;
+        text-align: center;
+        font-weight: bold;
+        z-index: 1;
+      }
       &::after {
         content: "";
         width: 100%;
         height: 2px;
         background-color: #000;
         bottom: -50px;
+        left: 0;
         position: absolute;
-      }
-      &::before {
-        content: "X-axis";
-        position: absolute;
-        bottom: -70px;
-        left: 50%;
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
-        background-color: #fff;
-        width: 90px;
-        text-align: center;
-        font-weight: bold;
-        z-index: 1;
       }
     }
     .y-axis {
@@ -3150,7 +3394,6 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
         z-index: 1;
       }
     }
-
     .origin {
       position: absolute;
       left: 50%;
@@ -3213,11 +3456,11 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
       //-moz-transform: rotate3d(0, 1, 1, 65deg);
       //-ms-transform: rotate3d(0, 1, 1, 65deg);
       //-o-transform: rotate3d(0, 1, 1, 65deg);
-      transform: rotate3d(0, 1, 1, 90deg);
-      -webkit-transform: rotate3d(0, 1, 1, 90deg);
-      -moz-transform: rotate3d(0, 1, 1, 90deg);
-      -ms-transform: rotate3d(0, 1, 1, 90deg);
-      -o-transform: rotate3d(0, 1, 1, 90deg);
+      transform: rotate3d(0, 1, 1, 360deg);
+      -webkit-transform: rotate3d(0, 1, 1, 360deg);
+      -moz-transform: rotate3d(0, 1, 1, 360deg);
+      -ms-transform: rotate3d(0, 1, 1, 360deg);
+      -o-transform: rotate3d(0, 1, 1, 360deg);
     }
   }
 }
@@ -3896,4 +4139,62 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   -webkit-filter: invert(0);
   // no color
   filter: invert(0);
+}
+.parent-grid {
+  // grid; inline-grid;
+  // 1
+  display: grid;
+  // auto; 100px; 50%; repeat(2 , 50%; auto; 1fr; auto-fill, minmax(200px, 1fr)); 1fr
+  // 2 width
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  // auto; 100px; 50%; repeat(2 , 50%; auto; 1fr; auto-fill, minmax(200px, 1fr)); 1fr;
+  // grid-template-rows: repeat(auto-fill, minmax(200px, 1fr)); // height
+  // row-gap: 10px;
+  // column-gap: 10px;
+  // 3  height & width
+  gap: 0px 0px;
+  // "logo logo nav nav nav nav nav nav nav nav";
+  // grid-template-areas: "logo logo nav nav nav nav nav nav nav nav";
+  .child-grid {
+    //grid-area: auto;
+    //grid-column: 1 / 6;
+    //grid-column: span 6;
+    //grid-column: 2 / span 5;
+    //grid-row: 2 / span 5;
+    //grid-row-start: 2;
+    //grid-row-end: 5;
+    //grid-column-start: 2;
+    //grid-column-end: 6;
+    //grid-area: 2 / 2 / 5 / 6;
+  }
+}
+.test-maraim {
+  width: 50%;
+  height: 300px;
+  position: relative;
+  .maraim-atef {
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    @include transition(0.5s);
+  }
+  .maraim-atef:nth-child(1) {
+    background-color: #2980b9;
+    @include transition(0.5s);
+  }
+  .maraim-atef:nth-child(2) {
+    background-color: #29b4b9;
+    z-index: -1;
+    opacity: 0;
+    @include rotateZ(90deg);
+    transform-origin: right center;
+    @include transition(0.5s);
+  }
+  &:hover .maraim-atef:nth-child(2) {
+    @include rotateZ(0deg);
+    z-index: 1;
+    opacity: 1;
+  }
 }
