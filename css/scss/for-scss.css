@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/*
+1 - var $maincolor : #3498db;
+2 - &:hover
+extend لو عاوز تاخد خواص من كلاس معين
+3 - extend = @extend . class
+4 - %class لو عاوز تلغى انو ميكنش كلاس هتخلية بليس هولدار وبتستدعية بى علامة فى المية
+*/
+.class1 {
+  color: aqua;
+}
+/*# sourceMappingURL=for-scss.css.map */

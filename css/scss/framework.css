@@ -1,0 +1,30 @@
+.icon-facebook {
+  background: url(../images/socila/facebook.png);
+  height: 200px;
+}
+
+.icon-twitter {
+  background: url(../images/socila/twitter.png);
+  height: 200px;
+}
+
+.icon-instagram {
+  background: url(../images/socila/instagram.png);
+  height: 200px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.jqvideo13 {
+  background-color: aqua;
+  font-weight: bolder;
+}
+
+.jqvideo131 {
+  width: 50%;
+  margin: auto;
+}
+/*# sourceMappingURL=framework.css.map */

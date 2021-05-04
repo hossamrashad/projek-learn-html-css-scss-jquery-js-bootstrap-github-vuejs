@@ -19,9 +19,9 @@
     <style>
       .mune-fixed {
         list-style: none;
-        position: fixed;
+        position: fixed !important;
         z-index: 100000;
-        left: calc(-280px);
+        left: calc(-330px);
         transition: 1s;
       }
       .mune-fixed:hover {
@@ -31,7 +31,7 @@
         display: block;
         width: 300px;
         background-color: #333;
-        height: 60px;
+        min-height: 60px;
       }
       .mune-fixed li:nth-child(1) {
         top: 0px;
@@ -53,10 +53,12 @@
         font-size: 30px;
         color: #fff;
       }
+      .height100vh{height: 100vh;}
+      .height50vh{height: calc(100vh / 2);}
     </style>
   </head>
 
-  <body class="text-c">
+  <body class="text-c" style="padding: 100px 20px;">
     <ul class="mune-fixed">
       <li><a href="learn-sass.html">scss</a></li>
       <li><a href="learnCss2021.html">Css 2021</a></li>
@@ -64,6 +66,50 @@
       <li><a href="jquery-learn.html">jquery</a></li>
       <li><a href="template-one-2021.html">template html & css 2021</a></li>
     </ul>
+     <!-- Start video 4 -->
+     <section class="parent-video-4 height100vh" id="parent-video-4" >
+      <!-- Start container -->
+      <div class="container-fluid">
+        <!-- Start row-->
+        <div class="row">
+          <!-- Start col -->
+          <div class="col-sm-7">
+            <iframe
+              src="https://elzero.org/javascript-where-to-put-javascript-code/"
+              frameborder="0"
+              width="100%"
+              style=" height: calc(100vh - 200px);"
+            ></iframe>
+            <a
+              href="https://elzero.org/javascript-where-to-put-javascript-code/"
+              target="_blank"
+              class="btn btn-primary"
+              >opan</a
+            >
+          </div>
+          <!-- End col -->
+          <!-- Start col -->
+          <div class="col-sm-5">
+            <h2 class="h3">video 39 Concatenating</h2>
+            <div id="video39"></div>
+            <div id="video391"></div>
+            <div id="video392"></div>
+            <div id="video393"></div>
+            <div id="video394"></div>
+            <div id="video395"></div>
+            <div id="video396"></div>
+            <div id="video397"></div>
+            <div id="video398"></div>
+            <div id="video399"></div>
+            <div id="video3910"></div>
+          </div>
+          <!-- End col -->
+        </div>
+        <!-- End row-->
+      </div>
+      <!-- End container -->
+    </section>
+    <!-- End section -->
     <div class="hossamsasstest">hossam</div>
     <div id="video5" class=""></div>
     <div id="video7" class="normal"></div>
