@@ -62,16 +62,33 @@
  *
  * Math.random(); بطالع رقام عشواء
  *
- * event onload | onclick | ondblclick
- * window.onload = in Jquery $(docume nt).ready();
+ * event window onload
+ * event button onclick | ondblclick
+ * Event input  onkeyup | onkeypress | onkeydown | onchange
+ * Event mouse  onmouseover | onmouseleave | onmousedown
+ * window.onload = in Jquery $(document).ready();
  * window.load = ساعت ما الصفحة تحامل
  * window.onload = function(){}
  *
- *Event input = onkeyup | onkeypress | onkeydown
+ *  ---------- Array ------------
+ * var ArrayName = ["Hassan", "Soha", "Ahmed", "Zahra", "Hind"];
  *
+ * if (Array.isArray(ArrayName)) {}
+ * if (ArrayName.constructor === Array) {}
  *
+ * عدد الحروف فى العنصار
+ * ArrayName.length; بجيب عدد عناصر الاراى
+ * ArrayName.length = 3 ; بطبع 3 عناصر من الاراى
  *
+ * لو عاوز اخالى الاراى استرانج
+ * toString(); toLocaleString();
  *
+ * لو عاوز اطباع التاريخ
+ * var date = new Date();
+ * toString(); toLocaleDateString();
+ *
+ * لو عاوز اجمع الاراى و كمان اغير الكومة اللى هى افتراضى لحاجة تانية
+ * join(" ");
  *
  *
  *
@@ -705,7 +722,7 @@ var input23 = document.getElementById("video-23-input"),
   div232 = document.getElementById("video-232-div"),
   div233 = document.getElementById("video-233-div");
 
-  input23.onkeyup = function () {
+input23.onkeyup = function () {
   "use strict";
   div231.innerHTML = "onkeyup " + input23.value * 3.75;
 };
@@ -721,86 +738,157 @@ input23.onkeydown = function () {
 /***************************** */
 // video24
 // onmouseover | onmouseout
-var div24 = document.getElementById("video-24");
-div24.onmouseover = function () {
-  "use strict";
-  div24.innerHTML = "mouse over";
+
+var video24input = document.getElementById("video24input"),
+  video24div = document.getElementById("video24div"),
+  video241div = document.getElementById("video241div"),
+  video242div = document.getElementById("video242div"),
+  video24button = document.getElementById("video24button"),
+  video24currency = document.getElementById("video24currency");
+
+video24div.onmouseover = function () {
+  video24div.innerHTML = " on mouse over";
 };
-div24.onmouseout = function () {
-  "use strict";
-  div24.innerHTML = "mouse out";
+video24div.onmouseleave = function () {
+  video24div.innerHTML = " on mouse leave";
 };
-var inpout24 = document.getElementById("input24"),
-  div241 = document.getElementById("video241");
-currency = document.getElementById("currency");
-currency.onchange = function () {
+
+video24input.onchange = function () {
   "use strict";
-  div241.innerHTML = inpout24.value * currency.value;
+  video241div.innerHTML = video24input.value * 3;
 };
-//
-var divcolor22 = document.getElementById("divcolor242");
-color24 = document.getElementById("color24");
-color24.onchange = function () {
+video24currency.onchange = function () {
   "use strict";
-  divcolor22.style.backgroundColor = color24.value;
-  divcolor22.innerHTML = color24.value;
+  video242div.innerHTML =
+    "worth " + video241input.value * video24currency.value + " Egyptian pound";
 };
 /****************************************** */
 // video25
 // array طريقة الطباعة الاراى كلها او عنصر من عناصر الاراى
-var videoa25 = ["hossam", "rashad", "ahmed", "abboud"];
-document.getElementById("video25").innerHTML = videoa25;
-document.getElementById("video251").innerHTML = videoa25[0];
+/*
+        Syntax
+        var arrayName = ["Element1", "Element2", "Element3"]
+      */
+var video25div = document.getElementById("video25div"),
+  video252div = document.getElementById("video252div"),
+  video253div = document.getElementById("video253div"),
+  video254div = document.getElementById("video254div"),
+  video255div = document.getElementById("video255div"),
+  video256div = document.getElementById("video256div"),
+  video257div = document.getElementById("video257div");
+
+// Example One
+
+var friendOne = "Hassan",
+  friendTwo = "Soha",
+  friendThree = "Ahmed",
+  friendFour = "Zahra",
+  friendFive = "Hind";
+var friends = new Array();
+
+friends[0] = "Hassan";
+friends[1] = "Soha";
+friends[2] = "Ahmed";
+friends[3] = "Zahra";
+friends[4] = "Hind";
+
+video25div.innerHTML = friends;
+// Example Two
+
+var friends252 = new Array("Hassan", "Soha", "Ahmed", "Zahra", "Hind");
+video252div.innerHTML = friends252;
+
+var friends253 = new Array("Hassan", "Soha", "Ahmed", "Zahra", "Hind"); // Formatted Code
+video253div.innerHTML = friends253;
+
+var friends254 = []; // Literal Way => Empty Array
+
+// Fill The Array
+
+friends254[0] = "Hassan";
+friends254[1] = "Soha";
+friends254[2] = "Ahmed";
+video254div.innerHTML = friends254;
+
+// The Good Syntax
+
+var friends255 = ["Hassan", "Soha", "Ahmed", "Zahra", "Hind"];
+video255div.innerHTML = friends255;
+
+var friends256 = [
+  // Formatted Code
+  "Hassan",
+  "Soha",
+  "Ahmed",
+  "Zahra",
+  "Hind",
+];
+video256div.innerHTML = friends256;
+
+var friends257 = [
+  // Formatted Code
+  "Hassan",
+  "Soha",
+  "Ahmed",
+  "Zahra",
+  "Hind",
+];
+video257div.innerHTML = friends257[0];
 /******************** */
 //video 26
 // check if this array
-var videoa26 = ["hossam", "rashad", "ahmed", "abboud"],
-  sta26 = "hossam";
-if (Array.isArray(videoa26)) {
-  document.getElementById("video26").innerHTML = "yes it is array";
-} else {
-  document.getElementById("video26").innerHTML = "no  it net is array";
+var arrayname26 = ["Hossam", "Rashad", "Ahmed"],
+  arrayname261 = ["Hossam", "Rashad", "  "],
+  video26div = document.getElementById("video26div");
+if (Array.isArray(arrayname26)) {
+  video26div.innerHTML = arrayname26;
 }
 // طريقة تانية اشيك بيها على الاراى
-
-if (sta26.constructor === Array) {
-  document.getElementById("video261").innerHTML = "yes it is array";
-} else {
-  document.getElementById("video261").innerHTML = "no  it net is array";
+if (arrayname261.constructor === Array) {
+  video261div.innerHTML = arrayname261;
 }
+
 /****************************************/
 // video 27
 // array get|set  || length
 // length هو عدد العناصر اللى فى الاللمانت او عدد الاحراف اللى فى الاسترانج
-var videoa27 = ["hossam", "rashad", "ahmed", "abboud"];
-var div27 = document.getElementById("video27");
+var video27array = ["hossam", "rashad", "ahmed", "abboud"],
+  video27div = document.getElementById("video27div"),
+  video271div = document.getElementById("video271div");
 // get array
-div27.innerHTML = videoa27;
-console.log(videoa27);
+video27div.innerHTML = video27array;
+video271div.innerHTML =
+  video27array.length + " عدد العناصر اللى فى الاراى" + "<h2>get array</h2>";
+
 // set array كدا انا خاليت عنصرين بس اللى فى الاراى
-var videoa271 = ["hossam", "rashad", "ahmed", "abboud"];
-var div271 = document.getElementById("video271");
-videoa271.length = 2;
-div271.innerHTML = videoa271;
-console.log(videoa271);
+var video271array = ["hossam", "rashad", "ahmed", "abboud"],
+  video272div = document.getElementById("video272div");
+video271array.length = 2;
+video272div.innerHTML = video271array + " <h2 class='lead'>set array </h2> ";
 /************************************ */
 // video28
 // convert array to string
-var videoa28 = ["hossam", "rashad", "ahmed", "abboud"];
-videoa28 = videoa28.toString();
-document.getElementById("video28").innerHTML = videoa28 + " it is toString";
-var mydate = new Date();
-document.getElementById("video281").innerHTML = mydate;
-var mydate2 = new Date();
-mydate2 = mydate2.toString();
-document.getElementById("video282").innerHTML = mydate2;
-var mydate3 = new Date();
-mydate3 = mydate3.toLocaleDateString();
-document.getElementById("video283").innerHTML =
-  mydate3 + " it is toLocaleDateString";
-var videoa284 = ["hossam", "rashad", "ahmed", "abboud"];
+var video28array = ["hossam ", "rashad ", "ahmed ", "abboud "];
+document.getElementById("video28div").innerHTML = video28array + " it is Array";
+video28array = video28array.toString();
+document.getElementById("video281div").innerHTML =
+  video28array + " it is toString";
+video28array = video28array.toLocaleString();
+document.getElementById("video282div").innerHTML =
+  video28array + " it is toLocaleString";
+var video28date = new Date();
+document.getElementById("video283div").innerHTML = video28date;
+var video281date = new Date();
+video281date = video281date.toString();
+document.getElementById("video284div").innerHTML = video281date;
+var video285date = new Date();
+video2851date = video285date.toLocaleDateString();
+document.getElementById("video285div").innerHTML =
+  video2851date + " it is toLocaleDateString";
+var video28array1 = ["hossam", "rashad", "ahmed", "abboud"];
+document.getElementById("video286div").innerHTML = video28array1;
 // join بيجماع الاراى و الديفالت اللى بحطو بيناهم الكومة و لو عاوز تغير الكومة بى حاجة تانى بيكون بين القوسين
-document.getElementById("video284").innerHTML = videoa284.join("+ ");
+document.getElementById("video287div").innerHTML = video28array1.join(" ");
 /******************************* */
 //video29
 // adding element to array
