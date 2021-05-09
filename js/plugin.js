@@ -3,6 +3,82 @@
 // jslint plusplus: true for error for ++
 // evil: true for error document.write
 
+/*
+ *
+ * document.write("<p>Hello from file</p>");
+ * var firstName = "Hossam";
+ * document.getElementById("test").innerHTML = firstName; // Simple Function
+ * // Single Line Comment
+ * /* Multi Line Comment Line 1
+ * .innerHTML =
+ *
+ * ********************* Data Type ************************
+ *
+ * Boolean: true , false;
+ * array ["Hossam", "rashad", "ahmed"];
+ * object = {first: "hossam", lastName: "Rashad"};
+ * string = "Lorem ipsum dolor sit.";
+ * undefined
+ * Null
+ * NaN = not Anumber
+ * symbol
+ * ---- typeof ------ typeof var;
+ *
+ * --------------- Output To Screen ----------
+ * 1 alert
+ * 2 document.write();
+ * 3 innerHTML
+ * 4 console
+ *
+ *
+ *  -------- operators --------
+ *   + - * /
+ *   %
+ *   ++
+ *   --
+ *
+ *
+ * ------------------ Conditional Operators ----------
+ * > اكبار من
+ * < اصغر من
+ * >= اكبار من او يساوى
+ * <= اصغار من او تساوى
+ * == يساوى القيمة
+ * === يساوى القيمة و نوع الداتا تيب
+ *
+ *
+ *
+ * ----------- function -------------
+ * function functionName() {
+ *
+ * "use strict";
+ *
+ * alert("Hossam Rashad");
+ *
+ * return Thing;
+ *
+ * }
+ * functionName(); علشان تشغال الفنكشان طلقاي
+ *
+ * Math.random(); بطالع رقام عشواء
+ *
+ * event onload | onclick | ondblclick
+ * window.onload = in Jquery $(docume nt).ready();
+ * window.load = ساعت ما الصفحة تحامل
+ * window.onload = function(){}
+ *
+ *Event input = onkeyup | onkeypress | onkeydown
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+
+document.write("<p>Hello from file</p>");
+
 /**
  *
  *  innerHTML   هو انو العنصار المختار يساوى الحاجة اللى انت بتكتبها
@@ -10,17 +86,41 @@
  *
  *
  */
+// video 5 JavaScript Syntax
+
 // some vers
 
 var //some vers
-  x = 10,
-  s = 15;
-document.getElementById("video5").innerHTML = x;
+  x = 15,
+  s = 15,
+  firstName = "Hossam";
+document.getElementById("video-5").innerHTML = " var number = " + x;
+document.getElementById("video-51").innerHTML = "var string = " + firstName;
 if (x + s === 30) {
-  //console.log("good");
+  document.getElementById("video-52").innerHTML =
+    "if number 10 + 15  =  30 " + " yes it is = " + (x + s);
 } else {
-  //console.log("bad");
+  document.getElementById("video-52").innerHTML =
+    "if number 10 + 15  =  " + (x + s);
 }
+// video 7
+/*
+  Start With Letters, Underscore, $
+  var = Javascript Variable Keyword
+  myPrice = Variable Name
+  ( = ) = Assignment Operator
+  100 = Variable Value
+*/
+
+var mainPrice = 450,
+  mySmallDiscount = 50,
+  myMediumDiscount = 100,
+  myBigDiscount = 250;
+
+document.getElementById("video-7").innerHTML = mainPrice;
+document.getElementById("video-71").innerHTML = mainPrice - mySmallDiscount; // 450 - 50 = 400
+document.getElementById("video-72").innerHTML = mainPrice - myMediumDiscount; // 450 - 100 = 350
+document.getElementById("video-73").innerHTML = mainPrice - myBigDiscount; // 450 - 250 = 200
 // video 8
 // data type
 /** typeof بيعرافك نوع العنصر من انواع الدات تيب
@@ -40,46 +140,83 @@ if (hasdiscount == true) {
 } else {
   var mainprice = 450;
 }
-document.getElementById("video8").innerHTML = mainprice;
+document.getElementById("video-8").innerHTML = mainprice;
 /**
  * array
  * fileName طريقة طباعة جميع العناصر اللى فى الاراى
  * fileName[0] طريقة طباعة عنصر محدد من الاراى
  */
-var // array
-  fileName = ["Hossam", "rashad", "ahmed"];
-document.getElementById("video81").innerHTML = fileName;
-document.getElementById("video82").innerHTML = fileName[0];
+// array = ["Hossam", "rashad", "ahmed"];
+var fileName = ["Hossam", "rashad", "ahmed"];
+document.getElementById("video-81").innerHTML = fileName;
+document.getElementById("video-82").innerHTML = fileName[0];
 /**
- * object
+ * object= { firstnName: "hossam", lastName: "Rashad" };
  * info
  * info.lastName الطريقة الصحيصة للطباعة من الابجاكت
  */
-var info = { firstnName: "hossam", lastName: "Rashad" };
-document.getElementById("video83").innerHTML = info;
-document.getElementById("video84").innerHTML = info.lastName;
+var info = {
+  firstnName: "hossam",
+  lastName: "Rashad",
+};
+document.getElementById("video-83").innerHTML = info;
+document.getElementById("video-84").innerHTML = info.lastName;
 /**
  *string النصوص
+ *string  "Lorem ipsum 'dolor' sit .";
  */
 var lorem8 = "Lorem ipsum 'dolor' sit .";
-document.getElementById("video85").innerHTML = lorem8;
+document.getElementById("video-85").innerHTML = lorem8;
 /**
- * number
+ * number = 29;
  */
 var age8 = 29;
-document.getElementById("video86").innerHTML = age8;
+document.getElementById("video-86").innerHTML = age8;
 //console.log(typeof age8);
-document.getElementById("video87").innerHTML = typeof age8;
+document.getElementById("video-87").innerHTML = typeof age8;
 /************************************ */
-// video 9
-//video 10
+// video 9 Concatenation
+var video9Name = "Hossam",
+  video9Age = 30,
+  video9Country = "Egypt";
+
+document.getElementById("video-9").innerHTML =
+  "My Name Is: " +
+  video9Name +
+  "<br>" +
+  "My Age Is: " +
+  " <span style='color: blue;font-size: 50px;'>" +
+  video9Age +
+  "</span>" +
+  "<br>" +
+  "My Country Is: " +
+  video9Country;
+//video 10 Output To Screen
 // output data to screen
 /**
+ * Output To Screen
  * 1 alert
  * 2 document.write();
  * 3 innerHTML
  * 4 console
  */
+
+var video10Name = "Hossam",
+  video10myAge = 30,
+  video10Div = document.getElementById("video-10");
+
+alert("Hello My Name Is " + video10Name + " And My Age Is " + video10myAge);
+
+document.write(
+  "Hello My Name Is " + video10Name + " And My Age Is " + video10myAge
+);
+
+video10Div.innerHTML =
+  "Hello My Name Is " + video10Name + " And My Age Is " + video10myAge;
+
+console.log(
+  "Hello My Name Is " + video10Name + " And My Age Is " + video10myAge
+);
 /******************************* */
 // video 11
 /**
@@ -89,17 +226,106 @@ document.getElementById("video87").innerHTML = typeof age8;
  * ++
  * --
  */
+// Addition +
+var x = 100,
+  y = 200,
+  z = x + y; // z = 100 + 200 = 300
+
+// Subtraction -
+var x = 1000,
+  y = 150,
+  z = x - y; // z = 1000 - 150 = 850
+
+// String And Number
+
+var x = "Hossam",
+  y = 150,
+  z = x - y; // z = "Hossam" - 150 = NAN
+
+// Divide /
+
+var x = 1000,
+  y = 150,
+  z = x / y;
+
+// Multiplication *
+
+var x = 1000,
+  y = 20,
+  z = x * y; // z = 1000 * 20 = 20000
+
+// Modulus %
+
+var x = 20,
+  y = 2,
+  z = x % y; // z = 20 % 2 = 0
+
+document.getElementById("video-11").innerHTML = z;
+
+// Increment
+
+var myCounter = 1;
+
+document.getElementById("video-111").innerHTML = myCounter++;
 /********************** */
 // video 12
+
 // if | else | else if
+/*
+
+============
+== Syntax ==
+============
+
+if (Condition 1) {
+
+} else if (Condition 2) {
+
+} else {
+
+   Other Than Condition 1 Or 2
+
+}
+
+*/
+
+var ticketPrice = 2000; // Ticket Price Variable
+
+if (ticketPrice < 1500) {
+  // If The Ticket Cheaper Than 1500
+  // Display Message That Its Cheap
+  console.log("This Is Cheap");
+  document.getElementById("video-12").innerHTML = "This Is Cheap";
+} else if (ticketPrice == 2000) {
+  // If Ticket Price Is 2000
+  // Display Message That Its Good
+  console.log("Yes Its Good Price");
+  document.getElementById("video-12").innerHTML = "Yes Its Good Price";
+} else {
+  // Display Message That Its Expensive
+  console.log("No Its Expensive");
+  document.getElementById("video-12").innerHTML = "No Its Expensive";
+}
+
+// Test Prompt
+
+var video12yourAge = prompt("Whats Your Age?");
+
+if (video12yourAge < 18) {
+  document.getElementById("video-121").innerHTML =
+    "Sorry Ur Age Is " + video12yourAge + " U R Not Allowed Here";
+} else {
+  document.getElementById("video-121").innerHTML =
+    "Sorry Ur Age Is " + video12yourAge + " U R Welcome Here";
+}
 var ticketPrice = 2000;
 
 if (ticketPrice < 1500) {
-  document.getElementById("video12").innerHTML = 1500;
+  document.getElementById("video-122").innerHTML = 1500;
 } else if (ticketPrice == 2000) {
-  document.getElementById("video12").innerHTML = 2000;
+  document.getElementById("video-122").innerHTML = 2000;
 } else {
-  document.getElementById("video12").innerHTML = "i Don't Have many";
+  document.getElementById("video-122").innerHTML = "i Don't Have many";
 }
 /*********************************** */
 // video 13
@@ -111,70 +337,302 @@ if (ticketPrice < 1500) {
  * == يساوى القيمة
  * === يساوى القيمة و نوع الداتا تيب
  */
+/*
+  ( = ) Assignment Operator
+  ( == ) Equal Comparison Operator
+  ( === ) Identical Operator
+*/
+
+var video13myPrice = 40;
+
+if (video13myPrice > 50) {
+  alert("Sorry The Price Is " + video13myPrice + " And All I Have Is 50");
+  document.getElementById("video-13").innerHTML =
+    "Sorry The Price Is " + video13myPrice + " And All I Have Is 50";
+} else {
+  alert("Good The Price Is " + video13myPrice + " And I Have Is 50");
+  document.getElementById("video-13").innerHTML =
+    "Good The Price Is " + video13myPrice + " And I Have Is 50";
+}
+
+// Test ==
+
+var video131myPrice = "50";
+
+if (video131myPrice == 50) {
+  alert("Good");
+  document.getElementById("video-131").innerHTML = "good";
+} else {
+  alert("Bad");
+  document.getElementById("video-131").innerHTML = "bad";
+}
+
+// Test ===
+
+var video13hossam = "50"; // Data Type Is String
+
+if (video13hossam === 50) {
+  // Data Type Is Number
+
+  alert("Good");
+  document.getElementById("video-132").innerHTML = "good";
+} else {
+  alert("Bad");
+  document.getElementById("video-132").innerHTML = "bad";
+}
 /*************************************** */
 // video 14
 /**
+ * ( ! ) Not
+ * ( != ) Not Equal
+ * ( === ) Identical Operator
+ * ( && ) And
+ * ( || ) Or
+ * ! لا
  * != لا تساوء
  * !== لا تساوى القيمة و لا تساوى الدات تيب
  * &&      =  and
  * ||      =  or
  */
+// Not Equal
+
+var video14age = "50"; // Data Type Is String
+
+if (video14age != 50) {
+  // Data Type Is Number
+
+  alert("Good");
+  document.getElementById("video-14").innerHTML = "!= Good Not Equal";
+} else {
+  alert("Bad");
+  document.getElementById("video-14").innerHTML = "!= bad Not Equal";
+}
+
+// Not Identical
+
+var video141age = "32"; // Data Type Is String
+
+if (video141age !== 32) {
+  // Data Type Is Number
+
+  alert("Good");
+  document.getElementById("video-141").innerHTML = "!==  Identical";
+} else {
+  alert("Bad");
+  document.getElementById("video-141").innerHTML = "!== Not Identical";
+}
+
+// Advanced Example
+
+var video142name = "Hossam",
+  video142age = "32";
+
+if (video142age == 32) {
+  alert("Good Age");
+  document.getElementById("video-142").innerHTML = "Good Age";
+} else if (video142name == "Hossam") {
+  alert("Good Name");
+  document.getElementById("video-142").innerHTML = "Good Name";
+} else {
+  alert("Bad");
+  document.getElementById("video-142").innerHTML = "bad Name & age";
+}
+
+// Second Example
+
+var video143name = "hossam",
+  video143age = "32",
+  video143address = "KSA";
+
+if (video143age == 32 && video143name == "hossam" && video143address == "KSA") {
+  alert("Good");
+  document.getElementById("video-143").innerHTML = "Good";
+} else {
+  alert("Bad");
+  document.getElementById("video-143").innerHTML = "Bad";
+}
+
+// Second Example With Comments And Edits
+
+var video144name = "hossam",
+  video144age = 32,
+  video144address = "KSA";
+
+if (
+  video144age === 32 && // If The Age Value = 32 And Data Type Is Number Then True
+  video144name == "hossam" && // If The Name Value Is Osama And Data Type Is String Then True
+  video144address == "KSA" // If The Address Value Is KSA And Data Type Is String Then True
+) {
+  alert("Good Your Name Is " + name);
+  document.getElementById("video-144").innerHTML = "Good Your Name Is " + name;
+} else {
+  alert("Bad");
+  document.getElementById("video-144").innerHTML = "Bad Your Name Is " + name;
+}
+
+// Testing || Or
+
+// Second Example With Comments And Edits
+
+var video145name = "Ahmed",
+  video145age = 33,
+  video145address = "Egypt";
+
+if (
+  video145age === 32 ||
+  video145name === "Hassan" ||
+  video145address === "Egypt"
+) {
+  alert("Good");
+  document.getElementById("video-145").innerHTML = "good";
+} else {
+  alert("Bad");
+  document.getElementById("video-145").innerHTML = "bad";
+}
 /*********************** */
 // video 15
 // function
+/*
+  function = Function Keyword in JavaScript
+  sayHi = Function Name
+*/
 function sayHi15() {
   "use strict";
-  alert("Hello Frome Function");
+
+  alert("Hello From Function");
+
+  document.getElementById("video-15").innerHTML = "Hello From Function";
 }
-document.getElementById("video15").innerHTML = sayHi15();
+// First Example
+
+function sayHi151() {
+  "use strict";
+
+  var video151myName = "Hossam";
+
+  if (video151myName === "Hossam") {
+    alert("Hello " + video151myName + " From Inside The Function");
+
+    document.getElementById("video-151").innerHTML = "Hello From Function";
+  }
+}
+
+sayHi151();
+
+// Second Example
+
+function sayHi152() {
+  "use strict";
+
+  var video152myName = "Sayed";
+
+  if (video152myName === "Osama") {
+    alert("Hello " + video152myName + " You Are Welcome");
+  } else {
+    alert("Hello " + video152myName + " You Are Not Welcome");
+  }
+}
+sayHi152();
+
+// document.getElementById("video-15").innerHTML = sayHi15();
 // sayHi15(); لو عاوز تشاغال الفانكشان تلقاى
+
 /********************** */
 // video 16
 // return
-function myInfo() {
+function video16myInfo() {
   "use strict";
+
   var myInfo = "haitham",
     myAge16 = 29;
+
   return myInfo + " " + myAge16;
 }
-document.getElementById("video16").innerHTML = myInfo();
+document.getElementById("video-16").innerHTML = video16myInfo();
+// First Example
+
+function video161() {
+  "use strict";
+
+  var video161name = "Hossam",
+    video161age = 30;
+
+  return video161age + 20;
+}
+var video161var = video161();
+
+document.getElementById("video-161").innerHTML = video161var;
+
+// Second Example => Your Age In Days
+
+function video162myAgeInDays() {
+  "use strict";
+
+  var video162myAge = 32;
+
+  return video162myAge * 365;
+}
+
+var daysCalc = video162myAgeInDays();
+
+document.getElementById("video-162").innerHTML =
+  "Your Age In Days = " + video162myAgeInDays() + " Days.";
+
+// Third Example => Your Age In Hours
+
+function myAgeInHours() {
+  "use strict";
+
+  var myAge = 32;
+
+  return myAge * 365 * 24;
+}
+
+var hoursCalc = myAgeInHours();
+
+document.getElementById("video-163").innerHTML =
+  "Ur Age In Hours = " + hoursCalc + " Hours.";
+
 /**************************/
 // video 17
 // parameters
-function myAgeInDays(myAge) {
+
+function video17myAgeInDays(video17myAge) {
   "use strict";
-  return "your age in days " + myAge * 365;
+
+  return "your age in days " + video17myAge * 365;
 }
-document.getElementById("video17").innerHTML = myAgeInDays(10);
-function myFillName(firstNamem, lmiddleNmae) {
+
+document.getElementById("video-17").innerHTML = video17myAgeInDays(10);
+
+function video171myFillName(firstNamem, lmiddleNmae) {
   "use strict";
+
   return firstNamem + " " + lmiddleNmae;
 }
-document.getElementById("video171").innerHTML = myFillName("haitham", "rashad");
+
+document.getElementById("video-171").innerHTML = video171myFillName(
+  "haitham",
+  "rashad"
+);
+
 /***************************** */
 // video 18
+
 // function self invoke
+
 // Math.random(); بطالع رقام عشواء
-document.getElementById("video18").innerHTML = Math.random();
+
+document.getElementById("video-18").innerHTML = Math.random();
+
 // self invoke علشان اشغال الفانكششان تلقائى
-(function sayMyName() {
+
+(function video181myFunc() {
   "use strict";
-  var name = "Hossam";
-  //return name;
-  //console.log("welcome");
+
+  alert("FUNCTION self invoke");
 })();
-function calck18(amount) {
-  "use strict";
-  var result = amount * 3.75;
-  return result;
-}
-document.getElementById("video181").innerHTML = calck18(10);
-// طريقة السلف انفوك فى الارارت
-(function calck181() {
-  " use strict ";
-  var price18 = document.getElementById("video181").innerHTML;
-  //alert(price18 * 12);
-})();
+
 /**
  * الفكرة انو يكون عندى حقل ادخال اخالى اللى يتكتب فية
  * يطلع فى داف و يكون القيمة مضروبة فى رقم
@@ -182,9 +640,9 @@ document.getElementById("video181").innerHTML = calck18(10);
  */
 function dollar() {
   "use strict";
-  var amount = document.getElementById("input18").value,
+  var amount = document.getElementById("video-182-input-dollar").value,
     result = amount * 3.5,
-    video182 = document.getElementById("video182");
+    video182 = document.getElementById("video-182");
   // الحقل مينفعش يكون فاضى
   if (amount === "") {
     video182.innerHTML = "the input it is empty";
@@ -199,14 +657,17 @@ function dollar() {
   } else if (amount < 0) {
     video182.innerHTML = " the value must not be negative number";
   } else {
-    video182.innerHTML = amount + " = " + result;
+    video182.innerHTML = amount + " * 3.75 " + " = " + result;
   }
 }
+// First Example
+
 /************************ */
-// video 19
+// video-19
 // switch case
 /****************************** */
-// video20
+// video-20
+
 /************************************************************ */
 // video21
 /*************************************** */
@@ -215,29 +676,52 @@ function dollar() {
 // window.onload = in Jquery window.ready();
 // window.load = ساعت ما الصفحة تحامل
 window.onload = function () {
-  document.getElementById("video22").innerHTML = "window is load";
+  document.getElementById("video-22").innerHTML = "   <h1>window is load</h1>";
 };
 // window.onclick
 window.onclick = function () {
-  document.getElementById("video22").innerHTML = "window is click";
+  document.getElementById("video-221").innerHTML = "<h1>window is click</h1>";
 };
 // window ondblclick
 window.ondblclick = function () {
-  document.getElementById("video22").innerHTML = "window is ondblclick";
+  document.getElementById("video-222").innerHTML =
+    "<h1>window is ondblclick</h1>";
 };
+function changeMeClick() {
+  document.getElementById("video-223").innerHTML = "<h1>window is click</h1>";
+}
+// window ondblclick
+function changeMeDblClick() {
+  document.getElementById("video-224").innerHTML =
+    "<h1>window is ondblclick</h1>";
+}
 /********************************** */
 // video 23
 // onkeydown | onkeypress | pnkayup
-var input23 = document.getElementById("input23"),
-  div23 = document.getElementById("video23");
-input23.onkeyup = function () {
+var input23 = document.getElementById("video-23-input"),
+  button23 = document.getElementById("video-23-button"),
+  div23 = document.getElementById("video-23-div"),
+  div231 = document.getElementById("video-231-div"),
+  div232 = document.getElementById("video-232-div"),
+  div233 = document.getElementById("video-233-div");
+
+  input23.onkeyup = function () {
   "use strict";
-  div23.innerHTML = input23.value;
+  div231.innerHTML = "onkeyup " + input23.value * 3.75;
 };
+input23.onkeypress = function () {
+  "use strict";
+  div232.innerHTML = "onkeypress " + input23.value * 3.75;
+};
+input23.onkeydown = function () {
+  "use strict";
+  div233.innerHTML = "onkeydown " + input23.value * 3.75;
+};
+
 /***************************** */
 // video24
 // onmouseover | onmouseout
-var div24 = document.getElementById("video24");
+var div24 = document.getElementById("video-24");
 div24.onmouseover = function () {
   "use strict";
   div24.innerHTML = "mouse over";

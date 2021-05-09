@@ -5,35 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      .css-grid {
-        width: 100%;
-        height: 100vh;
-        display: grid;
-        grid-template-columns: repeat(2, auto) repeat(2, 1fr);
 
-        grid-template-rows: repeat(1, 1fr);
-
-        gap: 10px 10px;
-        /*
-  justify-content: space-between;
-  align-content: space-between;
-  */
-        grid-template-areas: "logo logo nav nav nav nav nav nav nav nav";
-      }
-      .herder {
-        grid-area: logo;
-      }
-      .nav {
-        grid-area: nav;
-      }
-    </style>
     <style>
       .mune-fixed {
         list-style: none;
         position: fixed;
         z-index: 100000;
-        left: calc(-280px);
+        left: calc(-335px);
         transition: 1s;
       }
       .mune-fixed:hover {
@@ -84,5 +62,52 @@
       <div class="three">three</div>
       <div class="three">three</div>
     </div>
+    <br />
+    <hr />
+    <div class="col-sm-5">
+      <h2 class="h2">Events Explain => onkeydown, onkeypress, onkeyup</h2>
+      <input id="input" type="text">
+      <button id="button">Calculate</button>
+      <div id="div"></div>
+    </div>
+    <!-- End col -->
+    <script>
+      /*global console, alert, prompt*/
+
+// Button On Click Example
+
+var myInput = document.getElementById("input"),
+
+myDiv = document.getElementById("div"),
+
+myButton = document.getElementById("button");
+
+// Element.Event = Function () { // Code }
+
+myButton.onclick = function () {
+
+"use strict";
+
+myDiv.innerHTML = myInput.value * 3.75;
+
+}
+
+// Field On Keyup + Keydown + Keypress Examples
+
+var myInput = document.getElementById("input"),
+
+myDiv = document.getElementById("div");
+
+// Element.Event = Function () { // Code }
+
+myInput.onkeyup = function () {
+
+"use strict";
+
+myDiv.innerHTML = myInput.value * 3.75;
+
+}
+    </script>
+    <script></script>
   </body>
 </html>
