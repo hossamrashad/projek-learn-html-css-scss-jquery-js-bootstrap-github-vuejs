@@ -1319,7 +1319,7 @@ var video40string = "I Love Js",
   video403div = document.getElementById("video403div"),
   video404div = document.getElementById("video404div"),
   video405div = document.getElementById("video405div");
-video401div.innerHTML = string40.toLowerCase();
+video401div.innerHTML = video40string.toLowerCase();
 document.getElementById("video401").innerHTML = mySmallString;
 //toUpperCase() بيحاول الاحراف الى كابتال
 var string401 = "I Love Js",
