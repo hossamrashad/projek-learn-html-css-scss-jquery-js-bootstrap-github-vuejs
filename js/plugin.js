@@ -90,6 +90,35 @@
  * لو عاوز اجمع الاراى و كمان اغير الكومة اللى هى افتراضى لحاجة تانية
  * join(" ");
  *
+ * add In Array
+ * ArrayName[4] = "abboud";
+ * ArrayName[ArrayName.length] = "Hegazy";
+ * ArrayName.push("hegazy");
+ * فى اخار الاراى
+ * ArrayName.unshift("Cayan");
+ * ArrayName.splice(2, ArrayName.length, "Rashad");
+ * ArrayName.splice(2, 0, "Rashad");
+ *
+ * Remove Items From Array
+ * .splice(3, 1);
+ * بيحزاف اخار عنصر فى الاراى
+ * ArrayName.pop();
+ * بيحزاف  اول  عنصر فى الاراى
+ * ArrayName.shift();
+ *
+ * ترتيب الاراى
+ * ArrayName.sort(); ترتيب ابجدى
+ * ArrayName.reverse(); ترتيب معكوس
+ *
+ *
+ * طريقة البحث فى الاراى
+ * indexOf ('array-item-search') | indexOf('array-item-search', 5)
+ * lastIndexOf ('array-item-search') | indexOf('array-item-search', 5)
+ *
+ *
+ *
+ *
+ *
  *
  *
  */
@@ -893,126 +922,199 @@ document.getElementById("video287div").innerHTML = video28array1.join(" ");
 //video29
 // adding element to array
 // ازاى تضيف عنصر اللى الاراى
-var videoa29 = ["hossam", "rashad", "ahmed", "abboud"];
+var video29array = ["hossam", "rashad", "ahmed", "abboud"],
+  video29div = document.getElementById("video29div"),
+  video291div = document.getElementById("video291div"),
+  video292div = document.getElementById("video292div"),
+  video293div = document.getElementById("video293div"),
+  video294div = document.getElementById("video294div"),
+  video295div = document.getElementById("video295div"),
+  video296div = document.getElementById("video296div");
 // بيضيف العنصر فى اخار الاراى
-videoa29[4] = "abboud";
-document.getElementById("video29").innerHTML = videoa29;
+video29array[4] = "abboud";
+video29div.innerHTML = video29array;
 // بيضيف العنصر فى اخار الاراى
-videoa29.push("hegazy");
-document.getElementById("video291").innerHTML = videoa29;
+video29array[video29array.length] = "Hegazy";
+video291div.innerHTML = video29array;
+// بيضيف العنصر فى اخار الاراى
+video29array.push("hegazy");
+video292div.innerHTML = video29array;
 // بيضيف العنصار فى اوال الاراى
-videoa29.unshift("Cayan");
-document.getElementById("video291").innerHTML = videoa29;
+video29array.unshift("Cayan");
+video293div.innerHTML = video29array;
+// لو عاوز اضيف عنصر و اشيل اباقى
+video29array.splice(2, video29array.length, "Rashad");
+video294div.innerHTML = video29array;
+//
+video29array.splice(2, 0, "Rashad");
+video295div.innerHTML = video29array;
 /**
  * arayy.splice(index, how many do you will remove , item)
  * لو انت مش عاوز تشيل خالى مكان الهاو منى صفر
  */
-videoa29.splice(7, 0, "mairam");
-document.getElementById("video292").innerHTML = videoa29;
+// videoa29.splice(7, 0, "mairam");
+// document.getElementById("video292").innerHTML = videoa29;
 /****************************************** */
 // video30
 /* pop المفروض انو بيحزاف اخار حاجة من الاراى بس معاية هو ظاهر اخر حاجة بس و خفاء الباقى
  */
-var videoa30 = ["hossam", "rashad", "ahmed"];
-videoa30 = videoa30.pop();
-document.getElementById("video30").innerHTML = videoa30;
-// shift بيحزاف اول عنصر من الاراى
-var videoa301 = ["hossam", "rashad", "ahmed"];
-videoa301 = videoa301.shift();
-document.getElementById("video301").innerHTML = videoa301;
+var video30array = ["hossam", "Rashad", " Ahmed", "Abboud"],
+  video30div = document.getElementById("video30div"),
+  video301div = document.getElementById("video301div"),
+  video302div = document.getElementById("video302div"),
+  video303div = document.getElementById("video303div"),
+  video304div = document.getElementById("video304div"),
+  video305div = document.getElementById("video305div");
+
+video30array.splice(3, 1);
+video301div.innerHTML = video30array;
+// بيحزاف اخار عنصر فى الاراى
+video30array.pop();
+video302div.innerHTML = video30array;
+
+// بيحزاف  اول  عنصر فى الاراى
+video30array.shift();
+video303div.innerHTML = video30array;
 /*********************************************** */
 // video31
 // sort | reverse
 // sort بيراتب الاحلااف بى الابجدية و الارقام بى الاصغار الى الاكبار
 //reverse بيعكاس الابجديات
-var videoa31 = ["hossam", "rashad", "ahmed"];
-document.getElementById("video31").innerHTML = videoa31.sort();
-document.getElementById("video311").innerHTML = videoa31.reverse();
+var video31array = ["hossam", "rashad", "ahmed"];
+document.getElementById("video31div").innerHTML =
+  "Array Sort = " + video31array.sort();
+document.getElementById("video311div").innerHTML =
+  "Array  Reverse" + video31array.reverse();
 /******************************************/
 // video32
 // combine | slice
 //slice(start, end) هو انو دكا بيقطاع من عند عنصار انت بتحددهولو
 // slice بيقبال القيم بى السالب لو عاوز تبدا من تحت
 //concat بيضيف الارى الجديدة فى الاخار
-var videoa32 = ["hossam", "rashad", "ahmed"];
-document.getElementById("video32").innerHTML = videoa32.slice(1);
-var girl = "cayan";
-document.getElementById("video321").innerHTML = videoa32.concat(girl);
+var video32array = ["hossam", "rashad", "ahmed", "Abboud"],
+  video32div = document.getElementById("video32div"),
+  video321div = document.getElementById("video321div"),
+  video322div = document.getElementById("video322div");
+video32div.innerHTML = video32array.slice(1, 4);
+video321div.innerHTML = video32array.slice(-3);
+var girl = "cayan",
+  girl2 = "cayan";
+video322div.innerHTML = video32array.concat(girl, girl2);
 /****************************************** */
 // video33
 // search in array
 // indexOf بتبحث عن كلمة فى الاراى
 // lastIndexOf بيبحس من الاخار الى الاوال
 // .indexOf("cayan" , 5); كدا انت بتبدا البحث من عند مكان محح فى الاراى
-var videoa33 = [
-  "cayan",
-  "hossam",
-  "rashad",
-  "ahmed",
-  "abboud",
-  "abboud",
-  "hegazy",
-];
-document.getElementById("video33").innerHTML = videoa33.indexOf("cayan");
+var video33array = [
+    "cayan",
+    "hossam",
+    "rashad",
+    "ahmed",
+    "abboud",
+    "abboud",
+    "hegazy",
+  ],
+  video33div = document.getElementById("video33div"),
+  video331div = document.getElementById("video331div"),
+  video332div = document.getElementById("video332div"),
+  video333div = document.getElementById("video333div");
+video33div.innerHTML = "indexOf (name) " + video33array.indexOf("cayan");
+video331div.innerHTML =
+  "indexOf ('name', 2) " + video33array.indexOf("hegazy", 2);
+video332div.innerHTML =
+  " lastIndexOf('name') " + video33array.lastIndexOf("hossam");
+video333div.innerHTML =
+  " lastIndexOf('name', 3) " + video33array.lastIndexOf("ahmed", 3);
 /*************************************** */
 // video34
 // مراجعة على الاراى
-var videoa34 = ["hossam", "rashad", "ahmed"];
-if (Array.isArray(videoa34)) {
-  document.getElementById("video341").innerHTML = videoa34 + "yes it is array";
+var video34array = ["hossam", "rashad", "ahmed"],
+  video34div = document.getElementById("video34div"),
+  video341div = document.getElementById("video341div"),
+  video342div = document.getElementById("video342div"),
+  video343div = document.getElementById("video343div"),
+  video344div = document.getElementById("video344div"),
+  video345div = document.getElementById("video345div"),
+  video346div = document.getElementById("video346div"),
+  video347div = document.getElementById("video347div"),
+  video348div = document.getElementById("video348div"),
+  video349div = document.getElementById("video349div"),
+  video3410div = document.getElementById("video3410div"),
+  video3411div = document.getElementById("video3411div"),
+  video3412div = document.getElementById("video3412div"),
+  video3413div = document.getElementById("video3413div"),
+  video3414div = document.getElementById("video3414div"),
+  video3415div = document.getElementById("video3415div"),
+  video3416div = document.getElementById("video3416div");
+
+if (Array.isArray(video34array)) {
+  video34div.innerHTML = video34array + " | yes it is array";
 } else {
-  document.getElementById("video341").innerHTML =
-    videoa34 + "no it is not array";
+  video34div.innerHTML = video34array + "no it is not array";
 }
-// lingth
-var array34 = ["hossam", "rashad", "ahmed"];
+
+// length
+var video34array1 = ["hossam", "rashad", "ahmed"];
+
 // get array
-document.getElementById("video342").innerHTML = array34.length + " عدد الاراى ";
+video341div.innerHTML = video34array1.length + " عدد الاراى ";
+
 // set array
-array34.length = 1;
-document.getElementById("video343").innerHTML =
-  array34.length + " عدد الاراى بعد ما خاليتع عنصر واحد ";
+video34array1.length = 1;
+video342div.innerHTML =
+  video34array1.length + " عدد الاراى بعد ما خاليتع عنصر واحد ";
+
 // تحويل الاراى الى استرانج
-var array341 = ["hossam", "rashad", "ahmed"];
-array341.toString();
-document.getElementById("video344").innerHTML = array341.join(" ");
+var video34array2 = ["hossam", "rashad", "ahmed"];
+video34array2.toString();
+video343div.innerHTML = video34array2.join(" ") + " toString ";
+
 // طريقة انو انا اضيف عنصر على الاراى
-array341[array341.length] = "mairem";
-document.getElementById("video345").innerHTML = array341.join(" ");
-array341.push("love");
-document.getElementById("video346").innerHTML = array341.join(" ");
-array341.unshift("cayan");
-document.getElementById("video347").innerHTML = array341.join(" ");
-array341.splice(0, 0, "my girl");
-document.getElementById("video347").innerHTML = array341.join(" ");
+var video34array3 = ["hossam", "rashad", "ahmed"];
+video34array3[video34array3.length] = "mairem";
+video344div.innerHTML = video34array3.join(" ") + " ||| Add item to array";
+
+video34array3.push("love");
+video345div.innerHTML = video34array3.join(" ") + " || add  push to end";
+
+video34array3.unshift("cayan");
+video346div.innerHTML = video34array3.join(" ") + " || add unshift to Start";
+
+video34array3.splice(0, 0, "my girl");
+video347div.innerHTML = video34array3.join(" ") + " || add splice to any where";
+
 // طريقة ازالة عنصر من الاراى
-array341.splice(6, 1, "my girl");
-document.getElementById("video348").innerHTML = array341.join(" ");
-array341.pop();
-document.getElementById("video349").innerHTML = array341.join(" ");
-array341.shift();
-document.getElementById("video3510").innerHTML = array341.join(" ");
+video34array3.splice(0, 1, "my girl");
+video348div.innerHTML =
+  video34array3.join(" ") + " || remove splice to any where";
+
+video34array3.pop();
+video349div.innerHTML = video34array3.join(" ") + " || remove pop to End";
+
+video34array3.shift();
+video3410div.innerHTML = video34array3 + " || remove pop to Start";
 // ترتيب الاراى
-array341.sort();
-document.getElementById("video3511").innerHTML = array341.join(" ");
-array341.reverse();
-document.getElementById("video3512").innerHTML = array341.join(" ");
+video34array3.sort();
+video3411div.innerHTML = video34array3.join(" ") + " || sort array 1 2 3";
+video34array3.reverse();
+video3412div.innerHTML = video34array3.join(" ") + " || sort array  3 2 1";
+
 // طريقة انو انت تختار ايه اللى يظهار شريحة من الاراى اللى تظهار
-var array342 = ["cayan", "hossam", "rashad", "ahmed"];
-array342.slice(1, 2);
-document.getElementById("video3513").innerHTML = array342;
+var video34array4 = ["cayan", "hossam", "rashad", "ahmed"];
+video34array4.slice(1, 2);
+video3413div.innerHTML = video34array4 + " || appear array  ";
+
 // طريقة دامج اكتار من اراى مع بعض
-var array343 = ["cayan", "hossam", "rashad", "ahmed"];
-var array344 = ["كيان", "حسام", "رشاد", "احمد"];
-document.getElementById("video3514").innerHTML = array343
-  .concat(array344)
-  .join(" ");
+var video34array5 = ["cayan", "hossam", "rashad", "ahmed"];
+var video34array6 = ["كيان", "حسام", "رشاد", "احمد"];
+video3414div.innerHTML =
+  video34array5.concat(video34array6).join(" ") + " || add array to array";
+
 // طريقة البحث
-var array345 = ["cayan", "hossam", "rashad", "ahmed"];
-document.getElementById("video3515").innerHTML = array345.indexOf(/rashad/i);
-document.getElementById("video3516").innerHTML = array345.lastIndexOf(
-  /rashad/i
-);
+var video34array7 = ["cayan", "hossam", "rashad", "ahmed"];
+video3415div.innerHTML = video34array7.indexOf("hossam");
+video3416div.innerHTML = video34array7.lastIndexOf("cayan");
 /********************** */
 // video 35
 // string
