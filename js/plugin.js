@@ -1310,22 +1310,27 @@ var string391 = "Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor";
 var string392 = "Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor";
 document.getElementById("video391").innerHTML = string391.concat(string392);
 /******************************* */
-// toLowerCase() بيحاوال الاحراف الى اصموال
+// video-40
+
 
 var video40string = "I Love Js",
-  video40SmallString = string40.toLowerCase(),
+  video40SmallString = video40string.toLowerCase(),
+  video40largestring = video40string.toUpperCase(),
   video401div = document.getElementById("video401div"),
   video402div = document.getElementById("video402div"),
   video403div = document.getElementById("video403div"),
   video404div = document.getElementById("video404div"),
   video405div = document.getElementById("video405div");
-video401div.innerHTML = video40string.toLowerCase();
-document.getElementById("video401").innerHTML = mySmallString;
+
+    
+// toLowerCase() بيحاوال الاحراف الى اصموال
+video401div.innerHTML = video40string;
+
+video402div.innerHTML = video40SmallString + " = toLowerCase ";
+
 //toUpperCase() بيحاول الاحراف الى كابتال
-var string401 = "I Love Js",
-  mySmallString = string401.toUpperCase();
-document.getElementById("video402").innerHTML = string401.toUpperCase();
-document.getElementById("video403").innerHTML = mySmallString;
+
+video403div.innerHTML = video40largestring + " = toUpperCase";
 /*********************************** */
 // video 41
 // trim() بيشيل المسافات اللى فى بداية الاسترانج و فى نهاية
