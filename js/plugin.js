@@ -1408,7 +1408,7 @@ var myString435 = "I Love Programming Languages",
 
 document.getElementById("video435").innerHTML = mySearch435;
 
-// Search
+// split
 
 var myString436 = "I Love Programming Languages",
   mySplit436 = myString436.split(" ");
@@ -1479,7 +1479,7 @@ var myString4315 = "      I Love Programming Languages  ",
 document.getElementById("video4315").innerHTML = mySplit4315;
 // Link
 
-var myString4316 = "      I Love Programming Languages  ",
+var myString4316 = "      google  ",
   mySplit4316 = myString4316.link("http://www.google.com");
 
 document.getElementById("video4316").innerHTML = mySplit4316;
