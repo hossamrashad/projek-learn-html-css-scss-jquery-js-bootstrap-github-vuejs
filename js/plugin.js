@@ -1349,31 +1349,28 @@ video413div.innerHTML =
   video412string +
   " Go To Google By This Link => " +
   video412string.link("http://www.google.com");
-  
 /************************************ */
 //Before Chain
 // video-42
 
-var myNumber42 = 120,
-  myString42 = myNumber42.toString();
+var video42number = 120,
+  video42numbertostring = video42number.toString(),
+  video42replace = video42numbertostring.replace(2, 3),
+  video421div = document.getElementById("video421div"),
+  video422div = document.getElementById("video422div"),
+  video423div = document.getElementById("video423div"),
+  video424div = document.getElementById("video424div"),
+  video425div = document.getElementById("video425div");
 
-document.getElementById("video42").innerHTML = myNumber42;
-document.getElementById("video421").innerHTML = myString42;
-var myNewNumber42 = myString42.replace(2, 3);
+video421div.innerHTML = video42number + " =  Number";
 
-document.getElementById("video422").innerHTML = myNewNumber42;
+video422div.innerHTML = video42numbertostring + " = toString";
 
-var myLastNumber42 = myNewNumber42.split("");
+video423div.innerHTML = video42replace + " = replace(2, 3)";
 
-document.getElementById("video423").innerHTML = myLastNumber42;
+video424div.innerHTML = video42replace.split("") + " = split('')";
 
-// After Chain
-
-var myNumber421 = 120,
-  myString421 = myNumber421.toString().replace(0, 3).split("");
-
-document.getElementById("video424").innerHTML = myNumber421;
-document.getElementById("video425").innerHTML = myString421;
+video425div.innerHTML = video42number.toString().replace(2, 4).split("");
 /************************************* */
 //vidro 43
 // Length
