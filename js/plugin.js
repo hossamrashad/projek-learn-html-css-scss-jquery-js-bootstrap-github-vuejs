@@ -1292,26 +1292,22 @@ video387div.innerHTML = video38string.replace(/Ipsum/gi, "hossam");
 
 // fromCharCode بتكتاب الكلام بى الراقا
 var video39string = String.fromCharCode(72, 111, 115, 115, 109),
-video391div = document.getElementById("video391div"),
-video391div = document.getElementById("video391div"),
-video391div = document.getElementById("video391div"),
-video391div = document.getElementById("video391div"),
-video391div = document.getElementById("video391div"),
-video39string1 = "HOssam Rashad",
-video39string2 = " HOssam Rashad";
+  video391div = document.getElementById("video391div"),
+  video391div = document.getElementById("video391div"),
+  video391div = document.getElementById("video391div"),
+  video391div = document.getElementById("video391div"),
+  video391div = document.getElementById("video391div"),
+  video39string1 = "HOssam Rashad",
+  video39string2 = " HOssam Rashad";
 // طباعة الاسترانج عن طريق الارقام الحروف
 video391div.innerHTML = video39string;
-// الدمج بين الاسترانج و التانى 
-video392div.innerHTML = video39string1.concat( video39string2);
-
-
+// الدمج بين الاسترانج و التانى
 // concat الكونكات بتجماع بين اكتار من فاريبال و التانى مع بعض
-var string391 = "Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor";
-var string392 = "Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor";
-document.getElementById("video391").innerHTML = string391.concat(string392);
+
+video392div.innerHTML = video39string1.concat(video39string2);
+
 /******************************* */
 // video-40
-
 
 var video40string = "I Love Js",
   video40SmallString = video40string.toLowerCase(),
@@ -1322,7 +1318,6 @@ var video40string = "I Love Js",
   video404div = document.getElementById("video404div"),
   video405div = document.getElementById("video405div");
 
-    
 // toLowerCase() بيحاوال الاحراف الى اصموال
 video401div.innerHTML = video40string;
 
@@ -1334,19 +1329,30 @@ video403div.innerHTML = video40largestring + " = toUpperCase";
 /*********************************** */
 // video 41
 // trim() بيشيل المسافات اللى فى بداية الاسترانج و فى نهاية
-var string41 =
-  "                        Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor";
-document.getElementById("video41").innerHTML = string41;
+var video41string = "       Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor",
+  video41trim = video41string.trim(),
+  video411div = document.getElementById("video411div"),
+  video412div = document.getElementById("video412div"),
+  video413div = document.getElementById("video413div"),
+  video414div = document.getElementById("video414div"),
+  video415div = document.getElementById("video415div");
+
+video411div.innerHTML = video41string;
+
+video412div.innerHTML = video41trim;
+
 // Link
 
-var string411 = "Google";
+var video412string = "Google";
 
-document.getElementById("video41").innerHTML =
-  string411 +
+video413div.innerHTML =
+  video412string +
   " Go To Google By This Link => " +
-  string411.link("http://www.google.com");
+  video412string.link("http://www.google.com");
+  
 /************************************ */
 //Before Chain
+// video-42
 
 var myNumber42 = 120,
   myString42 = myNumber42.toString();
