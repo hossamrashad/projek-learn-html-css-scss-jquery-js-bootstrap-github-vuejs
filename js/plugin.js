@@ -1312,9 +1312,14 @@ document.getElementById("video391").innerHTML = string391.concat(string392);
 /******************************* */
 // toLowerCase() بيحاوال الاحراف الى اصموال
 
-var string40 = "I Love Js",
-  mySmallString = string40.toLowerCase();
-document.getElementById("video40").innerHTML = string40.toLowerCase();
+var video40string = "I Love Js",
+  video40SmallString = string40.toLowerCase(),
+  video401div = document.getElementById("video401div"),
+  video402div = document.getElementById("video402div"),
+  video403div = document.getElementById("video403div"),
+  video404div = document.getElementById("video404div"),
+  video405div = document.getElementById("video405div");
+video401div.innerHTML = string40.toLowerCase();
 document.getElementById("video401").innerHTML = mySmallString;
 //toUpperCase() بيحاول الاحراف الى كابتال
 var string401 = "I Love Js",
