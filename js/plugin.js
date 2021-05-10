@@ -1118,53 +1118,125 @@ video3416div.innerHTML = video34array7.lastIndexOf("cayan");
 /********************** */
 // video 35
 // string
-var string35 = "Lorem Ipsum Dolor Sit Amet   Elit. Quisquam, Dolor";
-document.getElementById("video35").innerHTML = string35;
+var video35string = "Lorem Ipsum Dolor Sit Amet   Elit. Quisquam, Dolor",
+  video35number = 100,
+  video35div = document.getElementById("video35div"),
+  video351div = document.getElementById("video351div"),
+  video352div = document.getElementById("video352div"),
+  video353div = document.getElementById("video353div"),
+  video354div = document.getElementById("video354div"),
+  video355div = document.getElementById("video355div"),
+  video356div = document.getElementById("video356div"),
+  video357div = document.getElementById("video357div"),
+  video358div = document.getElementById("video358div"),
+  video359div = document.getElementById("video359div"),
+  video3510div = document.getElementById("video3105div");
+video35div.innerHTML = video35string;
 // عشان اجيب نوع الدات
-document.getElementById("video351").innerHTML = typeof string35;
+video351div.innerHTML = typeof video35string;
 // toString
-var string35toString = string35.toString();
-document.getElementById("video352").innerHTML = string35toString;
-document.getElementById("video353").innerHTML = typeof string35;
+var video3535toString = video35string.toString();
+video352div.innerHTML = video3535toString;
+video353div.innerHTML = typeof video3535toString;
+// عدد الحروف اللى فى الاسترانج
+video354div.innerHTML = video35string.length;
+// علشان احول الرقام الى استرانج
+video356div.innerHTML = video35number;
+video357div.innerHTML = typeof video35number;
+var video35numberrtostring = video35number.toString();
+video358div.innerHTML = video35numberrtostring;
+video359div.innerHTML = typeof video35numberrtostring;
 /***-************************ */
 // video 36
 // string methods indexOf || lastIndexOf || search
 // search الباحث فى الاسترانج
-var string36 = "Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor";
-document.getElementById("video36").innerHTML = string35.search("Amet");
+var video36string = "Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor",
+  video36div = document.getElementById("video36div"),
+  video361div = document.getElementById("video361div"),
+  video362div = document.getElementById("video362div"),
+  video363div = document.getElementById("video363div"),
+  video364div = document.getElementById("video364div"),
+  video365div = document.getElementById("video365div"),
+  video366div = document.getElementById("video366div"),
+  video367div = document.getElementById("video367div"),
+  video368div = document.getElementById("video368div"),
+  video369div = document.getElementById("video369div"),
+  video3610div = document.getElementById("video3610div");
+
+video36div.innerHTML =
+  "indexOf( ' name item in array ') = " + video36string.indexOf("Amet");
+
+video361div.innerHTML =
+  "indexOf( ' name item in array', 2 ) = " + video36string.indexOf("Amet", 5);
+
+video362div.innerHTML =
+  "lastIndexOf( ' name item in array ') = " + video36string.lastIndexOf("Amet");
+
+video363div.innerHTML =
+  "lastIndexOf( ' name item in array', 2 ) = " +
+  video36string.lastIndexOf("Amet", 60);
+
+video364div.innerHTML =
+  "search( ' name item in array' ) = " + video36string.search("Amet");
+
 // طريقة البحث بى الرجيلار اكسبراشان اللى هو من غير ما تكون الحروف حساسة
-document.getElementById("video361").innerHTML = string35.search(/elit/i);
+video365div.innerHTML =
+  "search( ' name item in array' ) = " + video36string.search(/amet/i);
 /************************ */
 // video37
 // split || slice || || substr || extract
-// split(separator, limit) output = Object
-// الاسبلات اللى هو انو انت تخرج جزاء من الاسترانج
-var string37 = "Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor";
-document.getElementById("video37").innerHTML = string37.split() + " = split";
-//split بتغاير الاسترانج الى ابجاكت
-document.getElementById("video371").innerHTML =
-  typeof string37.split() + " نوع الدات اللى بتخرجو الاسبلات";
-// لو سبت القوسين فاضين بيحط كومة بين كل حرف و التانى
-document.getElementById("video372").innerHTML = string37.split("");
-document.getElementById("video373").innerHTML = string37.split(" ");
-// 5 اللى هو عدد العناصر اللى هخرجها
-document.getElementById("video374").innerHTML =
-  string37.split(" ", 5) + " عدد العناصر اللى هيخرجها السبرايتوار";
-// slice(start, end) output = string
-// تخراج من الاسترانج شريحة
-document.getElementById("video375").innerHTML = string37.slice();
-document.getElementById("video376").innerHTML =
-  typeof string37.slice() + " نوع الدات اللى بيخرجها الاسليس";
-//
-document.getElementById("video377").innerHTML =
-  string37.slice(2, 18) + "عدد العناصر اللى هيخرجها الاسليس";
-//
-// substr(start, length)
-document.getElementById("video378").innerHTML = string37.substr();
-document.getElementById("video379").innerHTML = string37.substr(5, 20);
-// substr(start, end)
-document.getElementById("video3710").innerHTML = string37.substring();
-document.getElementById("video3711").innerHTML = string37.substring(5, 20);
+      // split(separator, limit) output = Object
+      // الاسبلات اللى هو انو انت تخرج جزاء من الاسترانج
+      var video37string = "Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor ",
+        video37div = document.getElementById("video37div"),
+        video371div = document.getElementById("video371div"),
+        video372div = document.getElementById("video372div"),
+        video373div = document.getElementById("video373div"),
+        video374div = document.getElementById("video374div"),
+        video375div = document.getElementById("video375div"),
+        video376div = document.getElementById("video376div"),
+        video377div = document.getElementById("video377div"),
+        video378div = document.getElementById("video378div"),
+        video379div = document.getElementById("video379div"),
+        video3710div = document.getElementById("video3710div"),
+        video3711div = document.getElementById("video3711div"),
+        video3712div = document.getElementById("video3712div"),
+        video37split = video37string.split();
+
+      video37div.innerHTML = video37string + " + " + typeof video37string;
+
+      video371div.innerHTML =
+        video37string.split() + " = split + " + typeof video37split;
+      //split بتغاير الاسترانج الى اوبجاكت
+      video372div.innerHTML =
+        typeof video37split + " نوع الدات اللى بتخرجو الاسبلات";
+
+      // لو سبت القوسين فاضين بيحط كومة بين كل حرف و التانى
+      video373div.innerHTML = video37string.split("");
+      video374div.innerHTML = video37string.split(" ");
+
+      // 5 اللى هو عدد العناصر اللى هخرجها
+      video375div.innerHTML =
+        video37string.split(" ", 5) + " عدد العناصر اللى هيخرجها السبرايتوار";
+
+      // slice(start, end) output = string
+      // تخراج من الاسترانج شريحة
+      video376div.innerHTML = video37string.slice();
+      video377div.innerHTML =
+        typeof video37string.slice() + " نوع الدات اللى بيخرجها الاسليس";
+      //
+      video378div.innerHTML =
+        video37string.slice(2, 18) + "عدد العناصر اللى هيخرجها الاسليس";
+      //
+      // substr(start, length)
+      video379div.innerHTML = video37string.substr() + " =  substr ()";
+      video3710div.innerHTML =
+        video37string.substr(5, 12) + " =  substr (5 , 12)";
+
+      // substr(start, end)
+      video3711div.innerHTML = video37string.substring();
+      video3712div.innerHTML = video37string.substring(5, 20);
+
 /*******************************************/
 // video 38
 // اليزنى كود
@@ -1173,20 +1245,7 @@ document.getElementById("video3711").innerHTML = string37.substring(5, 20);
  * charCodeAt
  * replace(value , new value)
  */
-var string38 = "Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor";
-//
-document.getElementById("video38").innerHTML =
-  string38.charAt() + " = charAt =  بيعرافك الحرف رقم كام";
-// charCodeAt اللى هو راقم الزراير فى الكيبارد
-document.getElementById("video381").innerHTML =
-  string38.charCodeAt() + " = charCodeAt = رقم الحرف فى الكيبارد";
-// الربليس بتغاير من حاجة الى حاجة تانى
-// gi اللى هى فى جميع الانحا و الاى اللى هو لو الحروف كبتال او اسمول
-document.getElementById("video382").innerHTML = string38.replace(
-  /Lorem/gi,
-  "hossam" +
-    " /Lorem/gi gi الجاى اللى هو الجلوبال الاى اللى هو الحروف غير حسسة "
-);
+
 /********************************* */
 // video 39
 /*

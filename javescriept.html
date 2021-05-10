@@ -1,1967 +1,1756 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>javascript-strings-methods-find-and-replace-string</title>
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
 
-    <link rel="stylesheet" href="css/Framrwork.css" />
-    <link rel="stylesheet" href="css/for-scss.css" />
-    <link rel="stylesheet" href="css/framework.css" />
-    <style>
-      .mune-fixed {
-        list-style: none;
-        position: fixed !important;
-        z-index: 100000;
-        left: calc(-330px);
-        transition: 1s;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>javascript-strings-methods-find-and-replace-string</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-      .mune-fixed:hover {
-        left: 0%;
-      }
+  <link rel="stylesheet" href="css/Framrwork.css" />
+  <link rel="stylesheet" href="css/for-scss.css" />
+  <link rel="stylesheet" href="css/framework.css" />
+  <style>
+    .mune-fixed {
+      list-style: none;
+      position: fixed !important;
+      z-index: 100000;
+      left: calc(-330px);
+      transition: 1s;
+    }
 
-      .mune-fixed li {
-        display: block;
-        width: 300px;
-        background-color: #333;
-        min-height: 60px;
-      }
+    .mune-fixed:hover {
+      left: 0%;
+    }
 
-      .mune-fixed li:nth-child(1) {
-        top: 0px;
-      }
+    .mune-fixed li {
+      display: block;
+      width: 300px;
+      background-color: #333;
+      min-height: 60px;
+    }
 
-      .mune-fixed li:nth-child(2) {
-        top: 30px;
-      }
+    .mune-fixed li:nth-child(1) {
+      top: 0px;
+    }
 
-      .mune-fixed li:nth-child(3) {
-        top: 60px;
-      }
+    .mune-fixed li:nth-child(2) {
+      top: 30px;
+    }
 
-      .mune-fixed li:nth-child(4) {
-        top: 90px;
-      }
+    .mune-fixed li:nth-child(3) {
+      top: 60px;
+    }
 
-      .mune-fixed li:nth-child(5) {
-        top: 120px;
-      }
+    .mune-fixed li:nth-child(4) {
+      top: 90px;
+    }
 
-      .mune-fixed li a {
-        text-decoration: none;
-        font-size: 30px;
-        color: #fff;
-      }
+    .mune-fixed li:nth-child(5) {
+      top: 120px;
+    }
 
-      .height100vh {
-        height: 100vh;
-      }
+    .mune-fixed li a {
+      text-decoration: none;
+      font-size: 30px;
+      color: #fff;
+    }
 
-      .height50vh {
-        height: calc(100vh / 2);
-      }
+    .height100vh {
+      height: 100vh;
+    }
 
-      html,
-      body {
-        text-transform: capitalize;
-      }
-    </style>
-  </head>
+    .height50vh {
+      height: calc(100vh / 2);
+    }
 
-  <body class="text-c" style="padding: 0 20px">
-    <ul class="mune-fixed">
-      <li><a href="learn-sass.html">scss</a></li>
-      <li><a href="learnCss2021.html">Css 2021</a></li>
-      <li><a href="javescriept.html">javascript </a></li>
-      <li><a href="jquery-learn.html">jquery</a></li>
-      <li>
-        <a href="template-one-2021.html">template html & css 2021</a>
-      </li>
-    </ul>
-    <!-- Start video 4 -->
-    <section class="parent-video-4 height100vh" id="parent-video-4">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h3">video 4</h2>
-        <!-- Start row-->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-where-to-put-javascript-code/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-where-to-put-javascript-code/"
-              target="_blank"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h3">Where To Put Javascript Code</h2>
-            <script>
-              document.write("<p>Hello from head body</p>");
-            </script>
-            <p>Hello from body</p>
-            <script>
-              document.write("<p>Hello from footer body</p>");
-            </script>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row-->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <hr />
-    <!-- Start section video 5 -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2>video 5</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-syntax/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-syntax/"
-              class="btn btn-primary"
-              target="_blank"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2>JavaScript Syntax</h2>
-            <div id="video-5"></div>
-            <div id="video-51"></div>
-            <div id="video-52"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <h2></h2>
-    <!-- Start section -->
-    <section class="parent-video-6 height100vh" id="parent-video-6">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 6</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-comments/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-comments/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">comments</h2>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <!-- Start section -->
-    <section>
-      <!-- Start container -->
-      <div class="container">
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-6">1</div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-6">1</div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <hr />
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 7</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-variables/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <br />
-            <br />
-            <br />
-            <a
-              href="https://elzero.org/javascript-variables/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Variables</h2>
-            <div id="video-7"></div>
-            <div id="video-71"></div>
-            <div id="video-72"></div>
-            <div id="video-73"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <hr />
-    <!-- Start section video 8 -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 8</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-data-types/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <br />
-            <br />
-            <br />
-            <a
-              href="https://elzero.org/javascript-data-types/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Data Types</h2>
-            <div class="">
-              Boolean: True, False <br />
-              Array: ["facebook.com", "youtube.com", "google.com"]<br />
-              Object: {firstName: "hossam", lastName: "Mohamed"}<br />
-              String: "JavaScript"<br />
-              Number: 32<br />
-              Undefined<br />
-              Null<br />
-              NAN = Not A Number<br />
-              Symbol<br />
-              <hr />
-              <div id="video-8" class="large"></div>
-              <div id="video-81"></div>
-              <div id="video-82"></div>
-              <div id="video-83"></div>
-              <div id="video-84"></div>
-              <div id="video-85"></div>
-              <div id="video-86"></div>
-              <div id="video-87"></div>
-            </div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <!-- Start section video 9 -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 9</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-concatenation/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-concatenation/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Concatenation</h2>
-            <div id="video-9"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fliud">
-        <h2 class="h2">video 10</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-output-to-screen/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-output-to-screen/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Output To Screen</h2>
-            <h2 class="h3">مخرجات الجافا اسكربت</h2>
-            <p class="lead">1 - alert(" element")</p>
-            <p class="lead">2 - document.write(" element ")</p>
-            <p class="lead">3 - .innerHTML = (" element ")</p>
-            <p class="lead">4 - console.log(" element ")</p>
-            <hr />
-            <div id="video-10"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <hr />
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 11</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-operators/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-operators/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Operators</h2>
-            <ul>
-              <li>+ - * /</li>
-              <li>%</li>
-              <li>++</li>
-              <li>--</li>
-            </ul>
-            <div id="video-11"></div>
-            <div id="video-111"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <hr />
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 12</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-control-flow-if-else-if-else/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-control-flow-if-else-if-else/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Control Flow – If, Else If, Else</h2>
-            <hr />
-            <br />
-            <div id="video-12"></div>
-            <hr />
-            <br />
-            <div id="video-121"></div>
-            <hr />
-            <br />
-            <div id="video-122"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <hr />
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 13</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-conditional-operators/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-conditional-operators/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Conditional Operators</h2>
-            <br />
-            <hr />
-            <div>
-              <= اصغار من او تساوى <br />
-              == يساوى القيمة <br />
-              === يساوى القيمة و نوع الداتا تيب
-            </div>
-            <hr />
-            <br />
-            <div id="video-13"></div>
-            <br />
-            <hr />
-            <div id="video-131"></div>
-            <br />
-            <hr />
-            <div id="video-132"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 14</h2>
-        <br />
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-logical-operators/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-logical-operators/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Logical Operators</h2>
-            <p class="lead">!= لا تساوى</p>
-            <div id="video-14"></div>
-            <br />
-            <hr />
-            <p class="lead">!== لاتساوى القيمة و الدات تيب</p>
-            <div id="video-141"></div>
-            <br />
-            <hr />
-            <p class="lead">if elseif else</p>
-            <div id="video-142"></div>
-            <br />
-            <hr />
-            <p class="lead">&& علامة و كذا</p>
-            <div id="video-143"></div>
-            <br />
-            <hr />
-            <p class="lead">&& علامة و كذا</p>
-            <div id="video-144"></div>
-            <br />
-            <hr />
-            <p class="lead">|| علامة او</p>
-            <div id="video-145"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <hr />
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 15</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-function-basic/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-function-basic/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Function – Basic</h2>
-            <br />
-            <div class="">
-              function functionName() {} <br />
-              functionName(); علشان تشغال الفنكشان طلقاي
-            </div>
-            <br />
-            <button id="15" onclick=" sayHi15()">click to see function</button>
-            <div class="">طريقة تشغيل الفنكشان طلقاء</div>
-            <div id="video-15"></div>
-            <br />
-            <hr />
-            <button id="15" onclick=" sayHi151()">click to see function</button>
-            <div id="video-151"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <!-- Start section -->
-    <section class="">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 16</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-function-return/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-function-return/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Function – Return</h2>
-            <hr />
-            <br />
-            <div id="video-16"></div>
-            <div id="video-161"></div>
-            <div id="video-162"></div>
-            <div id="video-163"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <hr />
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 17</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-function-with-parameters/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-function-with-parameters/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Function – With Parameters</h2>
-            <hr />
-            <br />
-            <div id="video-17"></div>
-            <div id="video-171"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <hr />
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 18</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-function-advanced-and-self-invoked/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe
-            ><a
-              href="https://elzero.org/javascript-function-advanced-and-self-invoked/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">function advanced and self invoked</h2>
-            <hr />
-            <br />
-            <p class="lead">Math.random(); بطالع رقام عشواء</p>
-            <hr />
-            <br />
-            <div id="video-18"></div>
-            <hr />
-            <br />
-            <p class="lead">self invoke علشان اشغال الفانكششان تلقائى</p>
-            <div id="video-181"></div>
-            <br />
-            <hr />
-            <div class="margin-auto text-c">
-              <input type="text" id="video-182-input-dollar" class="" />
-              <button onclick="dollar()" class="btn btn-danger">dollar</button>
-              <br />
-              <hr />
-              <div id="video-182"></div>
-            </div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
+    html,
+    body {
+      text-transform: capitalize;
+    }
+  </style>
+</head>
 
-    <hr />
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 22</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-events-onload-onclick-ondblclick/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-events-onload-onclick-ondblclick/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Events Explain => onload, onclick, ondblclick</h2>
-            <div id="video-22">window.onload</div>
-            <br />
-            <hr />
-            <div id="video-221">window.onclick</div>
-            <br />
-            <hr />
-            <div id="video-222">window.ondblclick</div>
-            <br />
-            <hr />
-            <button onclick="changeMeClick()">changeMeClick</button>
-            <div id="video-223"></div>
-            <br />
-            <hr />
-            <button onclick="changeMeDblClick()">changeMeClick</button>
-            <div id="video-224"></div>
-          </div>
-          <!-- End col -->
+<body class="text-c" style="padding: 0 20px">
+  <ul class="mune-fixed">
+    <li><a href="learn-sass.html">scss</a></li>
+    <li><a href="learnCss2021.html">Css 2021</a></li>
+    <li><a href="javescriept.html">javascript </a></li>
+    <li><a href="jquery-learn.html">jquery</a></li>
+    <li>
+      <a href="template-one-2021.html">template html & css 2021</a>
+    </li>
+  </ul>
+  <!-- Start video 4 -->
+  <section class="parent-video-4 height100vh" id="parent-video-4">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h3">video 4</h2>
+      <!-- Start row-->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-where-to-put-javascript-code/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-where-to-put-javascript-code/" target="_blank"
+            class="btn btn-primary">open</a>
         </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 23</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-events-onkeydown-onkeypress-onkeyup/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-events-onkeydown-onkeypress-onkeyup/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Events Explain => onkeydown, onkeypress, onkeyup</h2>
-            <input id="video-23-input" type="text" value="" />
-            <button id="video-23-button" class="btn btn-danger">click</button>
-            <div id="video-23-div"></div>
-            <br />
-            <hr />
-            <div id="video-231-div">onkeyup</div>
-            <br />
-            <hr />
-            <div id="video-232-div">onkeypress</div>
-            <br />
-            <hr />
-            <div id="video-233-div">onkeydown</div>
-            <br />
-            <hr />
-          </div>
-          <!-- End col -->
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h3">Where To Put Javascript Code</h2>
+          <script>
+            document.write("<p>Hello from head body</p>");
+          </script>
+          <p>Hello from body</p>
+          <script>
+            document.write("<p>Hello from footer body</p>");
+          </script>
         </div>
-        <!-- End row -->
+        <!-- End col -->
       </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 24</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-events-onmouseover-onmouseout-onchange/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-events-onmouseover-onmouseout-onchange/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
+      <!-- End row-->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <hr />
+  <!-- Start section video 5 -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2>video 5</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-syntax/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-syntax/" class="btn btn-primary" target="_blank">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2>JavaScript Syntax</h2>
+          <div id="video-5"></div>
+          <div id="video-51"></div>
+          <div id="video-52"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <h2></h2>
+  <!-- Start section -->
+  <section class="parent-video-6 height100vh" id="parent-video-6">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 6</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-comments/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-comments/" target="_blank" id="a-link" class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">comments</h2>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <!-- Start section -->
+  <section>
+    <!-- Start container -->
+    <div class="container">
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-6">1</div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-6">1</div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <hr />
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 7</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-variables/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <br />
+          <br />
+          <br />
+          <a href="https://elzero.org/javascript-variables/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Variables</h2>
+          <div id="video-7"></div>
+          <div id="video-71"></div>
+          <div id="video-72"></div>
+          <div id="video-73"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <hr />
+  <!-- Start section video 8 -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 8</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-data-types/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <br />
+          <br />
+          <br />
+          <a href="https://elzero.org/javascript-data-types/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Data Types</h2>
+          <div class="">
+            Boolean: True, False <br />
+            Array: ["facebook.com", "youtube.com", "google.com"]<br />
+            Object: {firstName: "hossam", lastName: "Mohamed"}<br />
+            String: "JavaScript"<br />
+            Number: 32<br />
+            Undefined<br />
+            Null<br />
+            NAN = Not A Number<br />
+            Symbol<br />
+            <hr />
+            <div id="video-8" class="large"></div>
+            <div id="video-81"></div>
+            <div id="video-82"></div>
+            <div id="video-83"></div>
+            <div id="video-84"></div>
+            <div id="video-85"></div>
+            <div id="video-86"></div>
+            <div id="video-87"></div>
           </div>
-          <!-- End col -->
-          <!-- Start col -->
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <!-- Start section video 9 -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 9</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-concatenation/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-concatenation/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Concatenation</h2>
+          <div id="video-9"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fliud">
+      <h2 class="h2">video 10</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-output-to-screen/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-output-to-screen/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Output To Screen</h2>
+          <h2 class="h3">مخرجات الجافا اسكربت</h2>
+          <p class="lead">1 - alert(" element")</p>
+          <p class="lead">2 - document.write(" element ")</p>
+          <p class="lead">3 - .innerHTML = (" element ")</p>
+          <p class="lead">4 - console.log(" element ")</p>
+          <hr />
+          <div id="video-10"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <hr />
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 11</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-operators/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-operators/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Operators</h2>
+          <ul>
+            <li>+ - * /</li>
+            <li>%</li>
+            <li>++</li>
+            <li>--</li>
+          </ul>
+          <div id="video-11"></div>
+          <div id="video-111"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <hr />
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 12</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-control-flow-if-else-if-else/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-control-flow-if-else-if-else/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Control Flow – If, Else If, Else</h2>
+          <hr />
+          <br />
+          <div id="video-12"></div>
+          <hr />
+          <br />
+          <div id="video-121"></div>
+          <hr />
+          <br />
+          <div id="video-122"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <hr />
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 13</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-conditional-operators/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-conditional-operators/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Conditional Operators</h2>
+          <br />
+          <hr />
+          <div>
+            <= اصغار من او تساوى <br />
+            == يساوى القيمة <br />
+            === يساوى القيمة و نوع الداتا تيب
+          </div>
+          <hr />
+          <br />
+          <div id="video-13"></div>
+          <br />
+          <hr />
+          <div id="video-131"></div>
+          <br />
+          <hr />
+          <div id="video-132"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 14</h2>
+      <br />
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-logical-operators/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-logical-operators/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Logical Operators</h2>
+          <p class="lead">!= لا تساوى</p>
+          <div id="video-14"></div>
+          <br />
+          <hr />
+          <p class="lead">!== لاتساوى القيمة و الدات تيب</p>
+          <div id="video-141"></div>
+          <br />
+          <hr />
+          <p class="lead">if elseif else</p>
+          <div id="video-142"></div>
+          <br />
+          <hr />
+          <p class="lead">&& علامة و كذا</p>
+          <div id="video-143"></div>
+          <br />
+          <hr />
+          <p class="lead">&& علامة و كذا</p>
+          <div id="video-144"></div>
+          <br />
+          <hr />
+          <p class="lead">|| علامة او</p>
+          <div id="video-145"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <hr />
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 15</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-function-basic/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-function-basic/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Function – Basic</h2>
+          <br />
+          <div class="">
+            function functionName() {} <br />
+            functionName(); علشان تشغال الفنكشان طلقاي
+          </div>
+          <br />
+          <button id="15" onclick=" sayHi15()">click to see function</button>
+          <div class="">طريقة تشغيل الفنكشان طلقاء</div>
+          <div id="video-15"></div>
+          <br />
+          <hr />
+          <button id="15" onclick=" sayHi151()">click to see function</button>
+          <div id="video-151"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <!-- Start section -->
+  <section class="">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 16</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-function-return/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-function-return/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Function – Return</h2>
+          <hr />
+          <br />
+          <div id="video-16"></div>
+          <div id="video-161"></div>
+          <div id="video-162"></div>
+          <div id="video-163"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <hr />
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 17</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-function-with-parameters/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-function-with-parameters/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Function – With Parameters</h2>
+          <hr />
+          <br />
+          <div id="video-17"></div>
+          <div id="video-171"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <hr />
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 18</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-function-advanced-and-self-invoked/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe><a
+            href="https://elzero.org/javascript-function-advanced-and-self-invoked/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">function advanced and self invoked</h2>
+          <hr />
+          <br />
+          <p class="lead">Math.random(); بطالع رقام عشواء</p>
+          <hr />
+          <br />
+          <div id="video-18"></div>
+          <hr />
+          <br />
+          <p class="lead">self invoke علشان اشغال الفانكششان تلقائى</p>
+          <div id="video-181"></div>
+          <br />
+          <hr />
+          <div class="margin-auto text-c">
+            <input type="text" id="video-182-input-dollar" class="" />
+            <button onclick="dollar()" class="btn btn-danger">dollar</button>
+            <br />
+            <hr />
+            <div id="video-182"></div>
+          </div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
 
-          <div class="col-sm-5">
-            <h2 class="h2">
-              Events Part 3 – onmouseover, onmouseout, onchange
-            </h2>
+  <hr />
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 22</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-events-onload-onclick-ondblclick/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-events-onload-onclick-ondblclick/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Events Explain => onload, onclick, ondblclick</h2>
+          <div id="video-22">window.onload</div>
+          <br />
+          <hr />
+          <div id="video-221">window.onclick</div>
+          <br />
+          <hr />
+          <div id="video-222">window.ondblclick</div>
+          <br />
+          <hr />
+          <button onclick="changeMeClick()">changeMeClick</button>
+          <div id="video-223"></div>
+          <br />
+          <hr />
+          <button onclick="changeMeDblClick()">changeMeClick</button>
+          <div id="video-224"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 23</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-events-onkeydown-onkeypress-onkeyup/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-events-onkeydown-onkeypress-onkeyup/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Events Explain => onkeydown, onkeypress, onkeyup</h2>
+          <input id="video-23-input" type="text" value="" />
+          <button id="video-23-button" class="btn btn-danger">click</button>
+          <div id="video-23-div"></div>
+          <br />
+          <hr />
+          <div id="video-231-div">onkeyup</div>
+          <br />
+          <hr />
+          <div id="video-232-div">onkeypress</div>
+          <br />
+          <hr />
+          <div id="video-233-div">onkeydown</div>
+          <br />
+          <hr />
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 24</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-events-onmouseover-onmouseout-onchange/" frameborder="0"
+            width="100%" style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-events-onmouseover-onmouseout-onchange/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
 
-            <h2 class="h2">Events Explain => onkeydown, onkeypress, onkeyup</h2>
-            <input id="video24input" type="text" />
-            <button id="video24button">Calculate</button>
-            <div id="video24div">lorem</div>
-            <div id="video241div"></div>
-            <input id="video241input" type="text" />
-            <select name="" id="video24currency">
-              <option value="8">dollar</option>
-              <option value="2">Riyal</option>
-              <option value="4">Yin</option>
-            </select>
-            <div id="video242div"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 25</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-array-intro/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-array-intro/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Array – Intro</h2>
-            <div id="video25div"></div>
-            <br />
-            <hr />
-            <div id="video252div"></div>
-            <br />
-            <hr />
-            <div id="video253div"></div>
-            <br />
-            <hr />
-            <div id="video254div"></div>
-            <br />
-            <hr />
-            <div id="video255div"></div>
-            <br />
-            <hr />
-            <div id="video256div"></div>
-            <br />
-            <hr />
-            <div id="video257div"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 26</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-array-check-array/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-array-check-array/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2"></h2>
-            <div id="video26div"></div>
-            <div id="video261div"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 27</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-array-get-set-length/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-array-get-set-length/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Array – Get, Set Length</h2>
-            <div id="video27div"></div>
-            <hr />
-            <br />
-            <div id="video271div"></div>
-            <hr />
-            <br />
-            <div id="video272div"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 28</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-array-convert-to-string/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-array-convert-to-string/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Array – Convert To String</h2>
-            <br />
-            <hr />
-            <div id="video28div"></div>
-            <hr />
-            <br />
-            <div id="video281div"></div>
-            <hr />
-            <br />
-            <div id="video282div"></div>
-            <hr />
-            <br />
-            <div id="video283div"></div>
-            <hr />
-            <br />
-            <div id="video284div"></div>
-            <hr />
-            <br />
-            <div id="video285div"></div>
-            <hr />
-            <br />
-            <div id="video286div"></div>
-            <hr />
-            <br />
-            <div id="video287div"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 29</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-array-adding-items-to-array/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-array-adding-items-to-array/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Array – Adding Items To Array</h2>
-            <hr />
-            <br />
-            <div id="video29div"></div>
-            <hr />
-            <br />
-            <div id="video291div"></div>
-            <hr />
-            <br />
-            <div id="video292div"></div>
-            <hr />
-            <br />
-            <div id="video293div"></div>
-            <hr />
-            <br />
-            <div id="video294div"></div>
-            <hr />
-            <br />
-            <div id="video295div"></div>
-            <hr />
-            <br />
-            <div id="video296div"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 30</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-array-remove-items-from-array/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-array-remove-items-from-array/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Array – Remove Items From Array</h2>
-            <br />
-            <hr />
-            <div id="video30div"></div>
-            <br />
-            <hr />
-            <div id="video301div"></div>
-            <br />
-            <hr />
-            <div id="video302div"></div>
-            <br />
-            <hr />
-            <div id="video303div"></div>
-            <br />
-            <hr />
-            <div id="video304div"></div>
-            <br />
-            <hr />
-            <div id="video305div"></div>
-            <br />
-            <hr />
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
+        <div class="col-sm-5">
+          <h2 class="h2">
+            Events Part 3 – onmouseover, onmouseout, onchange
+          </h2>
 
-    <br />
-    <hr />
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 31</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-array-sort-items/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-array-sort-items/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Array – Sort Items</h2>
-            <br />
-            <hr />
-            <div id="video31div"></div>
-            <br />
-            <hr />
-            <div id="video311div"></div>
-          </div>
+          <h2 class="h2">Events Explain => onkeydown, onkeypress, onkeyup</h2>
+          <input id="video24input" type="text" />
+          <button id="video24button">Calculate</button>
+          <div id="video24div">lorem</div>
+          <div id="video241div"></div>
+          <input id="video241input" type="text" />
+          <select name="" id="video24currency">
+            <option value="8">dollar</option>
+            <option value="2">Riyal</option>
+            <option value="4">Yin</option>
+          </select>
+          <div id="video242div"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 25</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-array-intro/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-array-intro/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Array – Intro</h2>
+          <div id="video25div"></div>
+          <br />
+          <hr />
+          <div id="video252div"></div>
+          <br />
+          <hr />
+          <div id="video253div"></div>
+          <br />
+          <hr />
+          <div id="video254div"></div>
+          <br />
+          <hr />
+          <div id="video255div"></div>
+          <br />
+          <hr />
+          <div id="video256div"></div>
+          <br />
+          <hr />
+          <div id="video257div"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 26</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-array-check-array/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-array-check-array/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2"></h2>
+          <div id="video26div"></div>
+          <div id="video261div"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 27</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-array-get-set-length/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-array-get-set-length/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Array – Get, Set Length</h2>
+          <div id="video27div"></div>
+          <hr />
+          <br />
+          <div id="video271div"></div>
+          <hr />
+          <br />
+          <div id="video272div"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 28</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-array-convert-to-string/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-array-convert-to-string/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Array – Convert To String</h2>
+          <br />
+          <hr />
+          <div id="video28div"></div>
+          <hr />
+          <br />
+          <div id="video281div"></div>
+          <hr />
+          <br />
+          <div id="video282div"></div>
+          <hr />
+          <br />
+          <div id="video283div"></div>
+          <hr />
+          <br />
+          <div id="video284div"></div>
+          <hr />
+          <br />
+          <div id="video285div"></div>
+          <hr />
+          <br />
+          <div id="video286div"></div>
+          <hr />
+          <br />
+          <div id="video287div"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 29</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-array-adding-items-to-array/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-array-adding-items-to-array/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Array – Adding Items To Array</h2>
+          <hr />
+          <br />
+          <div id="video29div"></div>
+          <hr />
+          <br />
+          <div id="video291div"></div>
+          <hr />
+          <br />
+          <div id="video292div"></div>
+          <hr />
+          <br />
+          <div id="video293div"></div>
+          <hr />
+          <br />
+          <div id="video294div"></div>
+          <hr />
+          <br />
+          <div id="video295div"></div>
+          <hr />
+          <br />
+          <div id="video296div"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 30</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-array-remove-items-from-array/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-array-remove-items-from-array/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Array – Remove Items From Array</h2>
+          <br />
+          <hr />
+          <div id="video30div"></div>
+          <br />
+          <hr />
+          <div id="video301div"></div>
+          <br />
+          <hr />
+          <div id="video302div"></div>
+          <br />
+          <hr />
+          <div id="video303div"></div>
+          <br />
+          <hr />
+          <div id="video304div"></div>
+          <br />
+          <hr />
+          <div id="video305div"></div>
+          <br />
+          <hr />
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+
+  <br />
+  <hr />
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 31</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-array-sort-items/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-array-sort-items/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Array – Sort Items</h2>
+          <br />
+          <hr />
+          <div id="video31div"></div>
+          <br />
+          <hr />
+          <div id="video311div"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+
+  <hr />
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 32</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-array-combining-and-slicing/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-array-combining-and-slicing/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Array – Combining And Slicing</h2>
+          <hr />
+          <br />
+          <div id="video32div"></div>
+          <hr />
+          <br />
+          <div id="video321div"></div>
+          <hr />
+          <br />
+          <div id="video322div"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+
+  <hr />
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 33</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-array-search/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-array-search/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Array – Search</h2>
+          <br />
+          <hr />
+          <div id="video33div"></div>
+          <br />
+          <hr />
+          <div id="video331div"></div>
+          <br />
+          <hr />
+          <div id="video332div"></div>
+          <br />
+          <hr />
+          <div id="video333div"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+
+  <!-- Start section -->
+  <section style="min-height: 100vh;">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 34</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-array-methods-practice/" frameborder="0" width="100%"
+            style="height: calc(100vh - 200px) "></iframe>
+          <a href="https://elzero.org/javascript-array-methods-practice/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">video 34 مراجعة على الاراى</h2>
+          <br />
+          <hr />
+          <div id="video34div"></div>
+          <br />
+          <hr />
+          <div id="video341div"></div>
+          <br />
+          <hr />
+          <div id="video342div"></div>
+          <br />
+          <hr />
+          <div id="video343div"></div>
+          <br />
+          <hr />
+          <div id="video344div"></div>
+          <br />
+          <hr />
+          <div id="video345div"></div>
+          <br />
+          <hr />
+          <div id="video346div"></div>
+          <br />
+          <hr />
+          <div id="video347div"></div>
+          <br />
+          <hr />
+          <div id="video348div"></div>
+          <br />
+          <hr />
+          <div id="video349div"></div>
+          <br />
+          <hr />
+          <div id="video3410div"></div>
+          <br />
+          <hr />
+          <div id="video3411div"></div>
+          <br />
+          <hr />
+          <div id="video3412div"></div>
+          <br />
+          <hr />
+          <div id="video3413div"></div>
+          <br />
+          <hr />
+          <div id="video3414div"></div>
+          <br />
+          <hr />
+          <div id="video3415div"></div>
+          <br />
+          <hr />
+          <div id="video3416div"></div>
+          <br>
+
           <!-- End col -->
         </div>
         <!-- End row -->
       </div>
       <!-- End container -->
-    </section>
-    <!-- End section -->
+  </section>
+  <!-- End section -->
+  <hr />
+  <br />
 
-    <hr />
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 32</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-array-combining-and-slicing/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-array-combining-and-slicing/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Array – Combining And Slicing</h2>
-            <hr />
-            <br />
-            <div id="video32div"></div>
-            <hr />
-            <br />
-            <div id="video321div"></div>
-            <hr />
-            <br />
-            <div id="video322div"></div>
-          </div>
-          <!-- End col -->
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 35 </h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-strings-methods-convert-to-string/" frameborder="0" width="100%"
+            style=" height: calc(100vh - 200px) "></iframe>
+          <a href="https://elzero.org/javascript-strings-methods-convert-to-string/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
         </div>
-        <!-- End row -->
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Strings Methods – Convert To String</h2>
+          <div id="video35div"></div>
+          <div id="video351div"></div>
+          <div id="video352div"></div>
+          <div id="video353div"></div>
+          <div id="video354div"></div>
+          <div id="video355div"></div>
+          <div id="video356div"></div>
+          <div id="video357div"></div>
+          <div id="video358div"></div>
+          <div id="video359div"></div>
+          <div id="video3510div"></div>
+        </div>
+        <!-- End col -->
       </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <hr />
+  <br />
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 36</h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-strings-methods-locate-a-string/" frameborder="0" width="100%"
+            style=" height: calc(100vh - 200px ) "></iframe>
+          <a href="https://elzero.org/javascript-strings-methods-locate-a-string/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Strings Methods – Locate A String</h2>
+          <hr><br>
+          <div id="video36div"></div>
+          <hr><br>
+          <div id="video361div"></div>
+          <hr><br>
+          <div id="video362div"></div>
+          <hr><br>
+          <div id="video363div"></div>
+          <hr><br>
+          <div id="video364div"></div>
+          <hr><br>
+          <div id="video365div"></div>
+          <hr><br>
+          <div id="video366div"></div>
+          <hr><br>
+          <div id="video367div"></div>
+          <hr><br>
+          <div id="video368div"></div>
+          <hr><br>
+          <div id="video369div"></div>
+          <hr><br>
+          <div id="video3610div"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <hr />
+  <br />
+  <!-- Start section -->
+  <section style="height: min-content;">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <h2 class="h2">video 37 </h2>
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-strings-methods-split-and-extract-string/" frameborder="0"
+            width="100%" style=" height: calc(100vh - 200px ) "></iframe> <a
+            href="https://elzero.org/javascript-strings-methods-split-and-extract-string/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h2">Strings Methods – Split And Extract String</h2>
+          <br />
+          <hr />
+          <div id="video37div"></div>
+          <br />
+          <hr />
+          <div id="video371div"></div>
+          <br />
+          <hr />
+          <div id="video372div"></div>
+          <br />
+          <hr />
+          <div id="video373div"></div>
+          <br />
+          <hr />
+          <div id="video374div"></div>
+          <br />
+          <hr />
+          <div id="video375div"></div>
+          <br />
+          <hr />
+          <div id="video376div"></div>
+          <br />
+          <hr />
+          <div id="video377div"></div>
+          <br />
+          <hr />
+          <div id="video378div"></div>
+          <br />
+          <hr />
+          <div id="video379div"></div>
+          <br />
+          <hr />
+          <div id="video3710div"></div>
+          <br />
+          <hr />
+          <div id="video3711div"></div>
+          <br />
+          <hr />
+          <div id="video3712div"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
 
-    <hr />
-    <!-- Start section -->
-    <section class="height100vh">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 33</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-array-search/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px)"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-array-search/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">Array – Search</h2>
-            <br />
-            <hr />
-            <div id="video33div"></div>
-            <br />
-            <hr />
-            <div id="video331div"></div>
-            <br />
-            <hr />
-            <div id="video332div"></div>
-            <br />
-            <hr />
-            <div id="video333div"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
 
-    <!-- Start section -->
-    <section style="min-height: 100vh;">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <h2 class="h2">video 34</h2>
-        <!-- Start row -->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-array-methods-practice/"
-              frameborder="0"
-              width="100%"
-              style="height: calc(100vh - 200px) "
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-array-methods-practice/"
-              target="_blank"
-              id="a-link"
-              class="btn btn-primary"
-              >open</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h2">video 34 مراجعة على الاراى</h2>
-            <br />
-            <hr />
-            <div id="video34div"></div>
-            <br />
-            <hr />
-            <div id="video341div"></div>
-            <br />
-            <hr />
-            <div id="video342div"></div>
-            <br />
-            <hr />
-            <div id="video343div"></div>
-            <br />
-            <hr />
-            <div id="video344div"></div>
-            <br />
-            <hr />
-            <div id="video345div"></div>
-            <br />
-            <hr />
-            <div id="video346div"></div>
-            <br />
-            <hr />
-            <div id="video347div"></div>
-            <br />
-            <hr />
-            <div id="video348div"></div>
-            <br />
-            <hr />
-            <div id="video349div"></div>
-            <br />
-            <hr />
-            <div id="video3410div"></div>
-            <br />
-            <hr />
-            <div id="video3411div"></div>
-            <br />
-            <hr />
-            <div id="video3412div"></div>
-            <br />
-            <hr />
-            <div id="video3413div"></div>
-            <br />
-            <hr />
-            <div id="video3414div"></div>
-            <br />
-            <hr />
-            <div id="video3415div"></div>
-            <br />
-            <hr />
-            <div id="video3416div"></div>
-            <br>
-          
-          <!-- End col -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <hr />
-    <div></div>
-    <hr />
-    <br />
-    <div id="video35"></div>
-    <div id="video351"></div>
-    <div id="video352"></div>
-    <div id="video353"></div>
-    <hr />
-    <br />
-    <div id="video36"></div>
-    <div id="video361"></div>
-    <div id="video362"></div>
-    <div id="video363"></div>
-    <hr />
-    <br />
-    <h2 class="h3">video 37</h2>
-    <div id="video37"></div>
-    <div id="video371"></div>
-    <div id="video372"></div>
-    <div id="video373"></div>
-    <div id="video374"></div>
-    <div id="video375"></div>
-    <div id="video376"></div>
-    <div id="video377"></div>
-    <div id="video378"></div>
-    <div id="video379"></div>
-    <div id="video3710"></div>
-    <div id="video3711"></div>
-    <hr />
-    <br />
-    <!-- Start section -->
-    <section class="" id="">
-      <!-- Start container -->
-      <div class="container">
-        <!-- Start row-->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-strings-methods-find-and-replace-string/"
-              frameborder="0"
-              width="100%"
-              height="400px"
-            ></iframe>
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h3">video 38</h2>
-            <div id="video38"></div>
-            <div id="video381"></div>
-            <div id="video382"></div>
-            <div id="video383"></div>
-            <div id="video384"></div>
-            <div id="video385"></div>
-            <div id="video386"></div>
-            <div id="video387"></div>
-            <div id="video388"></div>
-            <div id="video389"></div>
-            <div id="video3810"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row-->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <hr />
-    <br />
-    <!-- Start section -->
-    <section class="" id="">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <!-- Start row-->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-strings-methods-concatenating/"
-              frameborder="0"
-              width="100%"
-              height="400px"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-strings-methods-concatenating/"
-              target="_blank"
-              class="btn btn-primary"
-              >opan</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h3">video 39 Concatenating</h2>
-            <div id="video39"></div>
-            <div id="video391"></div>
-            <div id="video392"></div>
-            <div id="video393"></div>
-            <div id="video394"></div>
-            <div id="video395"></div>
-            <div id="video396"></div>
-            <div id="video397"></div>
-            <div id="video398"></div>
-            <div id="video399"></div>
-            <div id="video3910"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row-->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <!-- Start section -->
-    <section class="" id="">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <!-- Start row-->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-strings-methods-convert-string-letters/"
-              frameborder="0"
-              width="100%"
-              height="400px"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-strings-methods-convert-string-letters/"
-              target="_blank"
-              class="btn btn-primary"
-              >opan</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h3">video 40 Convert String</h2>
-            <h3 class="h4">
-              طريقة تحويل الحروف من الكبتال الى الصموال و العكس
-            </h3>
-            <div id="video40"></div>
-            <div id="video401"></div>
-            <div id="video402"></div>
-            <div id="video403"></div>
-            <div id="video404"></div>
-            <div id="video405"></div>
-            <div id="video406"></div>
-            <div id="video407"></div>
-            <div id="video408"></div>
-            <div id="video409"></div>
-            <div id="video4010"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row-->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <!-- Start section -->
-    <section class="" id="">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <!-- Start row-->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-strings-methods-all-references/"
-              frameborder="0"
-              width="100%"
-              height="400px"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-strings-methods-all-references/"
-              target="_blank"
-              class="btn btn-primary"
-              >opan</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h3">video 41 All References</h2>
-            <h3 class="h4">
-              طريقة تحويل الحروف من الكبتال الى الصموال و العكس
-            </h3>
-            <div id="video41"></div>
-            <div id="video411"></div>
-            <div id="video412"></div>
-            <div id="video413"></div>
-            <div id="video414"></div>
-            <div id="video415"></div>
-            <div id="video416"></div>
-            <div id="video417"></div>
-            <div id="video418"></div>
-            <div id="video419"></div>
-            <div id="video4110"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row-->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <!-- Start section -->
-    <section class="" id="">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <!-- Start row-->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-strings-methods-chain/"
-              frameborder="0"
-              width="100%"
-              height="400px"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-strings-methods-chain/"
-              target="_blank"
-              class="btn btn-primary"
-              >opan</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h3">
-              video 42 Chain <br />
-              هو كتابة كود جنب كود يطلع ناتاج
-            </h2>
-            <h3 class="h4"></h3>
-            <div id="video42"></div>
-            <div id="video421"></div>
-            <div id="video422"></div>
-            <div id="video423"></div>
-            <div id="video424"></div>
-            <div id="video425"></div>
-            <div id="video426"></div>
-            <div id="video427"></div>
-            <div id="video428"></div>
-            <div id="video429"></div>
-            <div id="video4210"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row-->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <br />
-    <hr />
-    <!-- Start section -->
-    <section class="" id="">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <!-- Start row-->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-strings-methods-practice/"
-              frameborder="0"
-              width="100%"
-              height="400px"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-strings-methods-practice/"
-              target="_blank"
-              class="btn btn-primary"
-              >opan</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h3">video 43 Chain <br />مراجعة على الاسترانج</h2>
-            <h3 class="h4"></h3>
-            <div id="video43"></div>
-            <div id="video431"></div>
-            <div id="video432"></div>
-            <div id="video433"></div>
-            <div id="video434"></div>
-            <div id="video435"></div>
-            <div id="video436"></div>
-            <div id="video437"></div>
-            <div id="video438"></div>
-            <div id="video439"></div>
-            <div id="video4310"></div>
-            <div id="video4311"></div>
-            <div id="video4312"></div>
-            <div id="video4313"></div>
-            <div id="video4314"></div>
-            <div id="video4315"></div>
-            <div id="video4316"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row-->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <br />
-    <hr />
-    <!-- Start section -->
-    <section class="" id="">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <!-- Start row-->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-loop-for/"
-              frameborder="0"
-              width="100%"
-              height="400px"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-loop-for/"
-              target="_blank"
-              class="btn btn-primary"
-              >opan</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h3">video 44 for loop <br /></h2>
-            <h3 class="h4"></h3>
-            <div id="video44"></div>
-            <div id="video441"></div>
-            <div id="video442"></div>
-            <div id="video443"></div>
-            <div id="video444"></div>
-            <div id="video445"></div>
-            <div id="video446"></div>
-            <div id="video447"></div>
-            <div id="video448"></div>
-            <div id="video449"></div>
-            <div id="video4410"></div>
-            <div id="video4411"></div>
-            <div id="video4412"></div>
-            <div id="video4413"></div>
-            <div id="video4414"></div>
-            <div id="video4415"></div>
-            <div id="video4416"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row-->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <hr />
-    <br />
-    <!-- Start section -->
-    <section class="" id="">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <!-- Start row-->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-loop-for-in/"
-              frameborder="0"
-              width="100%"
-              height="400px"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-loop-for-in/"
-              target="_blank"
-              class="btn btn-primary"
-              >opan</a
-            >
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h3">video 45 for in loop <br /></h2>
-            <h3 class="h4"></h3>
-            <div id="video45"></div>
-            <div id="video451"></div>
-            <div id="video452"></div>
-            <div id="video453"></div>
-            <div id="video454"></div>
-            <div id="video455"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row-->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <hr />
-    <br />
-    <!-- Start section -->
-    <section class="" id="">
-      <!-- Start container -->
-      <div class="container-fluid">
-        <!-- Start row-->
-        <div class="row">
-          <!-- Start col -->
-          <div class="col-sm-7">
-            <iframe
-              src="https://elzero.org/javascript-loop-for-advanced/"
-              frameborder="0"
-              width="100%"
-              height="400px"
-            ></iframe>
-            <a
-              href="https://elzero.org/javascript-loop-for-advanced/"
-              target="_blank"
-              class="btn btn-primary"
-              >opan</a
-            >
-            <iframe
-              src="https://www.drtuber.com/video/6862657/milf-suspect-ryan-moans-as-tommy-pounded-her-anally"
-              width="100%"
-              height="400px"
-            ></iframe>
-          </div>
-          <!-- End col -->
-          <!-- Start col -->
-          <div class="col-sm-5">
-            <h2 class="h3">video 46 For Advanced <br /></h2>
-            <h3 class="h4"></h3>
-            <div id="video46"></div>
-            <div id="video461"></div>
-            <div id="video462"></div>
-            <div id="video463">
-              <form action="" method="get">
-                <input type="number" />
-              </form>
-            </div>
-            <div id="video464"></div>
-            <div id="video465"></div>
-          </div>
-          <!-- End col -->
-        </div>
-        <!-- End row-->
-      </div>
-      <!-- End container -->
-    </section>
-    <!-- End section -->
-    <br /><br /><br />
-    <hr />
-    <hr />
-    <hr />
-    <hr />
-    <br /><br /><br />
-    <hr />
-    <hr />
-    <hr />
-    <hr />
-    <!----------------------------------------------------------------------------->
-    <!----------------------------------------------------------------------------->
-    <!----------------------------------------------------------------------------->
-    <!----------------------------------------------------------------------------->
-    <!----------------------------------------------------------------------------->
-    <!----------------------------------------------------------------------------->
-    <!-- JQuery -->
+  <hr />
+  <br />
+  <!-- Start section -->
+  <section class="height100vh">
+    <!-- Start container -->
+    <div class="container-fluid">
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- 
+      <h2 class="h3">video 38</h2>
+      <!-- Start row-->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-strings-methods-find-and-replace-string/" frameborder="0"
+            width="100%" style=" height: calc(100vh - 200px)"></iframe>
+          <a href="https://elzero.org/javascript-strings-methods-find-and-replace-string/" target="_blank" id="a-link"
+            class="btn btn-primary">open</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+         
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row-->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <hr />
+  <br />
+  <!-- Start section -->
+  <section class="" id="">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <!-- Start row-->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-strings-methods-concatenating/" frameborder="0" width="100%"
+            height="400px"></iframe>
+          <a href="https://elzero.org/javascript-strings-methods-concatenating/" target="_blank"
+            class="btn btn-primary">opan</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h3">video 39 Concatenating</h2>
+          <div id="video39"></div>
+          <div id="video391"></div>
+          <div id="video392"></div>
+          <div id="video393"></div>
+          <div id="video394"></div>
+          <div id="video395"></div>
+          <div id="video396"></div>
+          <div id="video397"></div>
+          <div id="video398"></div>
+          <div id="video399"></div>
+          <div id="video3910"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row-->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <!-- Start section -->
+  <section class="" id="">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <!-- Start row-->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-strings-methods-convert-string-letters/" frameborder="0"
+            width="100%" height="400px"></iframe>
+          <a href="https://elzero.org/javascript-strings-methods-convert-string-letters/" target="_blank"
+            class="btn btn-primary">opan</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h3">video 40 Convert String</h2>
+          <h3 class="h4">
+            طريقة تحويل الحروف من الكبتال الى الصموال و العكس
+          </h3>
+          <div id="video40"></div>
+          <div id="video401"></div>
+          <div id="video402"></div>
+          <div id="video403"></div>
+          <div id="video404"></div>
+          <div id="video405"></div>
+          <div id="video406"></div>
+          <div id="video407"></div>
+          <div id="video408"></div>
+          <div id="video409"></div>
+          <div id="video4010"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row-->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <!-- Start section -->
+  <section class="" id="">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <!-- Start row-->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-strings-methods-all-references/" frameborder="0" width="100%"
+            height="400px"></iframe>
+          <a href="https://elzero.org/javascript-strings-methods-all-references/" target="_blank"
+            class="btn btn-primary">opan</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h3">video 41 All References</h2>
+          <h3 class="h4">
+            طريقة تحويل الحروف من الكبتال الى الصموال و العكس
+          </h3>
+          <div id="video41"></div>
+          <div id="video411"></div>
+          <div id="video412"></div>
+          <div id="video413"></div>
+          <div id="video414"></div>
+          <div id="video415"></div>
+          <div id="video416"></div>
+          <div id="video417"></div>
+          <div id="video418"></div>
+          <div id="video419"></div>
+          <div id="video4110"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row-->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <!-- Start section -->
+  <section class="" id="">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <!-- Start row-->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-strings-methods-chain/" frameborder="0" width="100%"
+            height="400px"></iframe>
+          <a href="https://elzero.org/javascript-strings-methods-chain/" target="_blank"
+            class="btn btn-primary">opan</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h3">
+            video 42 Chain <br />
+            هو كتابة كود جنب كود يطلع ناتاج
+          </h2>
+          <h3 class="h4"></h3>
+          <div id="video42"></div>
+          <div id="video421"></div>
+          <div id="video422"></div>
+          <div id="video423"></div>
+          <div id="video424"></div>
+          <div id="video425"></div>
+          <div id="video426"></div>
+          <div id="video427"></div>
+          <div id="video428"></div>
+          <div id="video429"></div>
+          <div id="video4210"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row-->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <br />
+  <hr />
+  <!-- Start section -->
+  <section class="" id="">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <!-- Start row-->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-strings-methods-practice/" frameborder="0" width="100%"
+            height="400px"></iframe>
+          <a href="https://elzero.org/javascript-strings-methods-practice/" target="_blank"
+            class="btn btn-primary">opan</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h3">video 43 Chain <br />مراجعة على الاسترانج</h2>
+          <h3 class="h4"></h3>
+          <div id="video43"></div>
+          <div id="video431"></div>
+          <div id="video432"></div>
+          <div id="video433"></div>
+          <div id="video434"></div>
+          <div id="video435"></div>
+          <div id="video436"></div>
+          <div id="video437"></div>
+          <div id="video438"></div>
+          <div id="video439"></div>
+          <div id="video4310"></div>
+          <div id="video4311"></div>
+          <div id="video4312"></div>
+          <div id="video4313"></div>
+          <div id="video4314"></div>
+          <div id="video4315"></div>
+          <div id="video4316"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row-->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <br />
+  <hr />
+  <!-- Start section -->
+  <section class="" id="">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <!-- Start row-->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-loop-for/" frameborder="0" width="100%" height="400px"></iframe>
+          <a href="https://elzero.org/javascript-loop-for/" target="_blank" class="btn btn-primary">opan</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h3">video 44 for loop <br /></h2>
+          <h3 class="h4"></h3>
+          <div id="video44"></div>
+          <div id="video441"></div>
+          <div id="video442"></div>
+          <div id="video443"></div>
+          <div id="video444"></div>
+          <div id="video445"></div>
+          <div id="video446"></div>
+          <div id="video447"></div>
+          <div id="video448"></div>
+          <div id="video449"></div>
+          <div id="video4410"></div>
+          <div id="video4411"></div>
+          <div id="video4412"></div>
+          <div id="video4413"></div>
+          <div id="video4414"></div>
+          <div id="video4415"></div>
+          <div id="video4416"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row-->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <hr />
+  <br />
+  <!-- Start section -->
+  <section class="" id="">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <!-- Start row-->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-loop-for-in/" frameborder="0" width="100%" height="400px"></iframe>
+          <a href="https://elzero.org/javascript-loop-for-in/" target="_blank" class="btn btn-primary">opan</a>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h3">video 45 for in loop <br /></h2>
+          <h3 class="h4"></h3>
+          <div id="video45"></div>
+          <div id="video451"></div>
+          <div id="video452"></div>
+          <div id="video453"></div>
+          <div id="video454"></div>
+          <div id="video455"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row-->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <hr />
+  <br />
+  <!-- Start section -->
+  <section class="" id="">
+    <!-- Start container -->
+    <div class="container-fluid">
+      <!-- Start row-->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-sm-7">
+          <iframe src="https://elzero.org/javascript-loop-for-advanced/" frameborder="0" width="100%"
+            height="400px"></iframe>
+          <a href="https://elzero.org/javascript-loop-for-advanced/" target="_blank" class="btn btn-primary">opan</a>
+          <iframe src="https://www.drtuber.com/video/6862657/milf-suspect-ryan-moans-as-tommy-pounded-her-anally"
+            width="100%" height="400px"></iframe>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+        <div class="col-sm-5">
+          <h2 class="h3">video 46 For Advanced <br /></h2>
+          <h3 class="h4"></h3>
+          <div id="video46"></div>
+          <div id="video461"></div>
+          <div id="video462"></div>
+          <div id="video463">
+            <form action="" method="get">
+              <input type="number" />
+            </form>
+          </div>
+          <div id="video464"></div>
+          <div id="video465"></div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row-->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- End section -->
+  <br /><br /><br />
+  <hr />
+  <hr />
+  <hr />
+  <hr />
+  <br /><br /><br />
+  <hr />
+  <hr />
+  <hr />
+  <hr />
+  <!----------------------------------------------------------------------------->
+  <!----------------------------------------------------------------------------->
+  <!----------------------------------------------------------------------------->
+  <!----------------------------------------------------------------------------->
+  <!----------------------------------------------------------------------------->
+  <!----------------------------------------------------------------------------->
+  <!-- JQuery -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- 
       <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></>
     -->
-    <script src="js/jquery-3-6-0.min.js"></script>
-    <!-- popper js -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <!-- bootstrap js 4.3.1 -->
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/plugin.js"></script>
-  </body>
+  <script src="js/jquery-3-6-0.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js 4.3.1 -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="js/plugin.js"></script>
+</body>
+
 </html>
