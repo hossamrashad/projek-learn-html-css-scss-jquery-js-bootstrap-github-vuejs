@@ -9,7 +9,7 @@
  * var firstName = "Hossam";
  * document.getElementById("test").innerHTML = firstName; // Simple Function
  * // Single Line Comment
- * /* Multi Line Comment Line 1
+ * / Multi Line Comment Line 1
  * .innerHTML =
  *
  * ********************* Data Type ************************
@@ -117,9 +117,62 @@
  *
  *
  *
+ * ------------------- string -----------
+ *
+ * تحويل الاسترانج
+ * toString();
  *
  *
+ * معرفة عدد الحروف اللى فى الاسترانج
+ * .length;
  *
+ *
+ * البحث فى الاسترانج
+ * .indexOf("Word");
+ * .indexOf("Word", number to start);
+ * .lastIndexOf("word");
+ * .lastIndexOf("word", number to start);
+ * .search("word");
+ *
+ * المسفات اللى بين الاسترانج
+ * .split(" "); || typeof = string
+ *
+ *
+ * طريقة استخراج مجموعة من الكلمات معينة
+ * .split(" ", NumberTo End);
+ * .slice(); || typeof = string
+ * .slice(NumberTo Start, NumberTo End);
+ * .substr(); || typeof = string
+ * .substr(NumberTo Start, NumberTo End);
+ * .substring(); || typeof = string
+ * .substring(NumberTo Start, NumberTo End);
+ *
+ *
+ * طريقة تخريج الحرف من الاسترانج
+ * .charAt(); || فاضية بيخارج اول حرف
+ * .charCodeAt() || رقم الحرف فى الكيبارد
+ *
+ *
+ * الاستبدال كلمة بى كلمة تانى
+ * .replace("Old Word", "New Word");
+ *
+ *
+ * كتابة الاسترانج بى الارقام
+ * .fromCharCode( 72, 111, 115, 115, 109 );
+ *
+ * دمج الاسترانج بى استرانج
+ * .concat(String Name);
+ *
+ * طريقة تحويل الحروف من كبتال اللى اصموال
+ * .toLowerCase(); اصموال
+ * .toUpperCase(); كبتال
+ *
+ *
+ * طريقة ازالة المسافات اللى برة الاسترانج
+ * .trim();
+ *
+ * طريقة اضافة لانك بى الجافا اسكربت
+ * .link(" url ");
  *
  */
 
@@ -1256,6 +1309,7 @@ var video38string =
   video388div = document.getElementById("video388div"),
   video389div = document.getElementById("video389div"),
   video3810div = document.getElementById("video3810div");
+
 video38div.innerHTML = video38string;
 // charAt
 // بيجيب الحرف من الرقم بتاعو فى الاسترانج
@@ -1422,6 +1476,7 @@ var myString437 = "I Love Programming Languages",
 
 document.getElementById("video437").innerHTML =
   mySplit437 + "<b>slice(2, 7)</b>";
+
 // Substr
 
 var myString438 = "I Love Programming Languages",
@@ -1484,8 +1539,12 @@ var myString4316 = "      google  ",
 
 document.getElementById("video4316").innerHTML = mySplit4316;
 /**************************************************** */
+
+// video 44 for
+
 /*
  for بتتعامل مع الاراى
+
   For Loop Syntax 
 
   for ( Initialization; Condition; Final Expression ) {
@@ -1494,19 +1553,12 @@ document.getElementById("video4316").innerHTML = mySplit4316;
 
   }
 
-  Initialization: Executed Before The Loop Once
+  Initialization: || start value||  Executed Before The Loop Once
   Condition: Define The Condition To Run The Loop
   Final Expression: Executed Everytime The Code Run
 
 */
-// First Example
 
-var i;
-
-for (i = 0; i <= 10; i++) {
-  console.log(i);
-  document.getElementById("video44").innerHTML = i;
-}
 var friends44 = ["Ahmed", "Sayed", "Mahmoud", "Kamel", "Salah", "Gamal"];
 
 var fori;
