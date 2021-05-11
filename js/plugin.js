@@ -1559,17 +1559,53 @@ document.getElementById("video4316").innerHTML = mySplit4316;
 
 */
 
-var friends44 = ["Ahmed", "Sayed", "Mahmoud", "Kamel", "Salah", "Gamal"];
+// First Example
 
-var fori;
+var i,
+  video441div = document.getElementById("video441div"),
+  video442div = document.getElementById("video442div"),
+  video443div = document.getElementById("video443div"),
+  video444div = document.getElementById("video444div"),
+  video445div = document.getElementById("video445div"),
+  video44array = ["Ahmed", "Sayed", "Mahmoud", "Kamel", "Salah", "Gamal"];
 
-for (fori = 0; fori <= friends44.length; fori++) {
-  console.log(friends44[fori]);
-  document.getElementById("video441").innerHTML = friends44[fori];
+for (i = 0; i <= 10; i++) {
+  console.log(i);
 }
-document.getElementById("video442").innerHTML = friends44 + "<br>" + friends44;
+
+var stringfor44 = "For Example ";
+
+console.log(stringfor44);
+
+for (i = 5; i >= 1; i--) {
+  console.log(i);
+}
+
+console.log(stringfor44);
+
+for (i = 1; i < 10; i = i + 2) {
+  console.log(i);
+}
+
+console.log(stringfor44);
+
+for (i = 1; i < 10; i = i + 1) {
+  console.log(i);
+}
+console.log(stringfor44);
+
+for (i = 1; i < 10; i = i += 1) {
+  console.log(i);
+}
+
+for (i = 0; i < video44array.length; i++) {
+  console.log(video44array[i]);
+  video441div.innerHTML = video44array[i];
+}
+
 /**************************************** */
 // video 45
+
 // for in بتتعامل مع الابجاكت
 /*
   For ... In Loop Syntax
@@ -1585,36 +1621,40 @@ document.getElementById("video442").innerHTML = friends44 + "<br>" + friends44;
   }
 
 */
-var myCar45 = {
-  colour: "White",
-  type: "Sedan",
-  price: "50.000",
-  model: "2015",
-};
-var prop45;
 
-for (prop45 in myCar45) {
-  console.log(prop45 + ": " + myCar45[prop45]);
-  document.getElementById("video45").innerHTML =
-    prop45 + ": " + myCar45[prop45];
-}
-document.getElementById("video451").innerHTML = prop45 + ": " + myCar45[prop45];
-//
-var myCar452 = {
-  colour: "White",
-  type: "Sedan",
-  price: "50.000",
-  model: "2015",
-};
-var prop452;
-for (prop452 in myCar452) {
-  if (myCar452.hasOwnProperty(prop452)) {
-    console.log(prop452 + ": " + myCar452[prop452]);
-    document.getElementById("video452").innerHTML =
-      prop452 + ": " + myCar452[prop452];
+var video45object = {
+    colour: "White",
+    type: "Sedan",
+    price: "50.000",
+    model: "2015",
+  },
+  video45property,
+  video451div = document.getElementById("video451div"),
+  video452div = document.getElementById("video452div"),
+  video453div = document.getElementById("video453div"),
+  video454div = document.getElementById("video454div"),
+  video455div = document.getElementById("video455div"),
+  video456div = document.getElementById("video456div"),
+  video457div = document.getElementById("video457div"),
+  video458div = document.getElementById("video458div"),
+  video459div = document.getElementById("video459div"),
+  video4510div = document.getElementById("video4510div");
+
+video451div.innerHTML = video45object.colour;
+video452div.innerHTML = video45object.type;
+video453div.innerHTML = video45object.price;
+video454div.innerHTML = video45object.model;
+
+for (video45property in video45object) {
+  if (video45object.hasOwnProperty(video45property)) {
+    console.log(video45property + " : " + video45object[video45property]);
+    video455div.innerHTML = video45object[video45property];
   }
 }
+video456div.innerHTML = video45object[video45property];
+
 /*********************************** */
+// video 45
 // for advinced
 var foradvinced;
 
