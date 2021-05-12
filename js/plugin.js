@@ -1,7 +1,11 @@
 /*jslint plusplus: true, evil: true */
-/* global document, console, alert, prompt*/
 // jslint plusplus: true for error for ++
 // evil: true for error document.write
+
+/* global document, console, alert, prompt, $*/
+
+/*global window */
+
 
 /*
  *
@@ -1654,52 +1658,5 @@ for (video45property in video45object) {
 video456div.innerHTML = video45object[video45property];
 
 /*********************************** */
-// video 45
+// video-46
 // for advinced
-var foradvinced;
-
-for (foradvinced = 0; foradvinced <= 10; foradvinced++) {
-  console.log(foradvinced);
-  document.getElementById("video46").innerHTML = foradvinced;
-}
-
-// Second Example
-
-var foradvinced2 = 0;
-
-for (; foradvinced2 <= 10; foradvinced2++) {
-  console.log(foradvinced2);
-  document.getElementById("video461").innerHTML = foradvinced2;
-}
-// Third Example
-
-var foradvinced3 = 0;
-
-for (; ; foradvinced3++) {
-  if (foradvinced3 > 10) break;
-
-  console.log(foradvinced3);
-  document.getElementById("video462").innerHTML = foradvinced3;
-}
-
-// Generate Years Function
-
-function generateYears(Start, End) {
-  "use strict";
-
-  var years;
-
-  document.write("<select>");
-
-  for (years = Start; years <= End; years++) {
-    document.write('<option value="' + years + '">' + years + "</option>");
-  }
-
-  document.write("</select>");
-}
-
-document.getElementsByTagName("video463").innerHTML = generateYears(1900, 2015); // Mahmoud
-generateYears(1900, 2015);
-generateYears(1950, 2010); // Ahmed
-
-generateYears(2000, 2012); // Osama
