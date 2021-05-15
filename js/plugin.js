@@ -2,25 +2,36 @@
 // jslint plusplus: true for error for ++
 // evil: true for error document.write
 
-/* global document, console, alert, prompt, $*/
+/*global console , alert , prompt , $ , document, write */
 
+/*global ADSAFE, report, jslint, bitwise, node*/
+
+/*property charAt, slicexs*/
+
+/*jslint browser: true */
 /*global window */
 
-
 /*
- *
+ * innerHTML   هو انو العنصار المختار يساوى الحاجة اللى انت بتكتبها
+
  * document.write("<p>Hello from file</p>");
+
  * var firstName = "Hossam";
+
  * document.getElementById("test").innerHTML = firstName; // Simple Function
+
  * // Single Line Comment
  * / Multi Line Comment Line 1
- * .innerHTML =
  *
  * ********************* Data Type ************************
  *
  * Boolean: true , false;
- * array ["Hossam", "rashad", "ahmed"];
- * object = {first: "hossam", lastName: "Rashad"};
+ * arrayName ["Hossam", "rashad", "ahmed"];
+ * arrayName طريقة طباعة جميع العناصر اللى فى الاراى
+ * arrayName[0] طريقة طباعة عنصر محدد من الاراى
+ * objectName = {first: "hossam", lastName: "Rashad"};
+ * objectName
+ * objectName.lastName الطريقة الصحيصة للطباعة من الابجاكت
  * string = "Lorem ipsum dolor sit.";
  * undefined
  * Null
@@ -41,7 +52,18 @@
  *   ++
  *   --
  *
- *
+ * ------------- If & Else ---------------
+ * if (Condition 1) {
+ * 
+ * } else if (Condition 2) {
+ * 
+ * } else {
+ * 
+ * Other Than Condition 1 Or 2
+ * 
+ * }
+ * 
+ * 
  * ------------------ Conditional Operators ----------
  * > اكبار من
  * < اصغر من
@@ -49,10 +71,21 @@
  * <= اصغار من او تساوى
  * == يساوى القيمة
  * === يساوى القيمة و نوع الداتا تيب
- *
- *
+ * ( ! ) Not
+ * ( != ) Not Equal
+ * ( === ) Identical Operator
+ * ( && ) And
+ * ( || ) Or
+ * ! لا
+ * != لا تساوء
+ * !== لا تساوى القيمة و لا تساوى الدات تيب
+ * &&      =  and
+ * ||      =  or
+ * 
+ * 
  *
  * ----------- function -------------
+ * 
  * function functionName() {
  *
  * "use strict";
@@ -62,6 +95,7 @@
  * return Thing;
  *
  * }
+ * 
  * functionName(); علشان تشغال الفنكشان طلقاي
  *
  * Math.random(); بطالع رقام عشواء
@@ -76,7 +110,10 @@
  *
  *  ---------- Array ------------
  * var ArrayName = ["Hassan", "Soha", "Ahmed", "Zahra", "Hind"];
+ * var object = { firstnName: "hossam", lastName: "Rashad" };
+ * info.lastName الطريقة الصحيصة للطباعة من الابجاكت
  *
+ * ---- طريقة التاكد من الاراى
  * if (Array.isArray(ArrayName)) {}
  * if (ArrayName.constructor === Array) {}
  *
@@ -98,6 +135,7 @@
  * ArrayName[4] = "abboud";
  * ArrayName[ArrayName.length] = "Hegazy";
  * ArrayName.push("hegazy");
+ *
  * فى اخار الاراى
  * ArrayName.unshift("Cayan");
  * ArrayName.splice(2, ArrayName.length, "Rashad");
@@ -177,6 +215,7 @@
  *
  * طريقة اضافة لانك بى الجافا اسكربت
  * .link(" url ");
+ *
  *
  */
 
@@ -1660,3 +1699,1134 @@ video456div.innerHTML = video45object[video45property];
 /*********************************** */
 // video-46
 // for advinced
+
+var years,
+  video461div = document.getElementById("video461div"),
+  video462div = document.getElementById("video462div"),
+  video463div = document.getElementById("video463div"),
+  video464div = document.getElementById("video464div"),
+  video465div = document.getElementById("video465div"),
+  video466div = document.getElementById("video466div"),
+  video467div = document.getElementById("video467div"),
+  video468div = document.getElementById("video468div"),
+  video469div = document.getElementById("video469div"),
+  video4610div = document.getElementById("video4610div");
+
+// First Example
+
+var i;
+
+for (i = 0; i <= 10; i++) {
+  console.log(i);
+  video461div.innerHTML = i;
+}
+
+// Second Example
+
+var i = 0;
+
+for (; i <= 10; i++) {
+  console.log(i);
+  video462div.innerHTML = i;
+}
+
+// Third Example
+
+var i = 0;
+
+for (; ; i++) {
+  if (i > 10) break;
+
+  console.log(i);
+  video463div.innerHTML = i;
+}
+var i = 0;
+
+for (;;) {
+  if (i > 10) break;
+  video464div.innerHTML = i;
+
+  console.log(i);
+  i++;
+}
+
+function selectYears(Start, End) {
+  "use strict";
+  document.write("<select>");
+  for (years = Start; years <= End; years++) {
+    document.write('<option value="' + years + '">' + years + "</option>");
+    console.log(years);
+  }
+  document.write("</select>");
+  // return years;
+}
+selectYears(1950, 2021); // Hossam
+video4610div.innerHTML = " hossam " + selectYears(2000, 2021);
+
+// video-47
+var years,
+  video471div = document.getElementById("video471div"),
+  video472div = document.getElementById("video472div"),
+  video473div = document.getElementById("video473div"),
+  video474div = document.getElementById("video474div"),
+  video475div = document.getElementById("video475div"),
+  video476div = document.getElementById("video476div"),
+  video477div = document.getElementById("video477div"),
+  video478div = document.getElementById("video478div"),
+  video479div = document.getElementById("video479div"),
+  video4710div = document.getElementById("video4710div");
+
+/*
+
+Syntax While
+
+while (Condition) {
+
+  Statement
+
+}
+
+Syntax Do / While
+
+do {
+
+  Statement
+
+} while ( Condition );
+
+*/
+
+// While
+
+var i = 0;
+
+while (i <= 10) {
+  console.log(i);
+  video4710div.innerHTML = i;
+  i++;
+}
+
+// Generate Years Function With While
+
+function generateYears(Start, End) {
+  "use strict";
+
+  var years = Start;
+
+  document.write("<select>");
+
+  while (years <= End) {
+    document.write('<option value="' + years + '">' + years + "</option>");
+
+    years++;
+  }
+
+  document.write("</select>");
+}
+
+generateYears(1900, 2015); // Mahmoud
+
+generateYears(1950, 2010); // Ahmed
+
+generateYears(2000, 2012); // Osama
+
+// Do While
+
+var i = 0;
+
+do {
+  console.log(i);
+
+  i++;
+} while (i <= 10);
+
+document.write("<br>" + "<hr>");
+
+// Generate Years Function With Do / While
+
+function generateYears(Start, End) {
+  "use strict";
+
+  var years = Start;
+
+  document.write("<select>");
+
+  do {
+    document.write('<option value="' + years + '">' + years + "</option>");
+
+    years++;
+  } while (years <= End);
+
+  document.write("</select>");
+}
+
+generateYears(1900, 2015); // Mahmoud
+
+generateYears(1950, 2010); // Ahmed
+
+generateYears(2000, 2012); // Osama
+
+// video-48
+
+// Continue
+
+var i;
+
+for (i = 1; i < 10; i++) {
+  if (i === 4) {
+    // break; == بيواقاف الوب
+    continue; // بيشيل الرقم اللى يساوى فى الاف و بيكمال الوب
+  }
+
+  console.log(i);
+}
+
+// Label + Break
+
+var i, x;
+
+MainLoop: for (i = 1; i < 5; i++) {
+  ChildLoop: for (x = 15; x < 20; x++) {
+    if (x === 19) {
+      break ChildLoop;
+    }
+
+    console.log(i + " => " + x);
+  }
+}
+
+// Label + Continue
+
+var i, x;
+
+MainLoop: for (i = 1; i < 5; i++) {
+  ChildLoop: for (x = 15; x < 20; x++) {
+    if (x === 17) {
+      continue MainLoop;
+    }
+
+    console.log(i + " => " + x);
+  }
+}
+
+// video-49
+
+// Example One
+
+var i;
+
+for (i = 0; i <= 10; i++) {
+  console.log(i);
+}
+
+// Example Two
+
+var i = 0;
+
+for (;;) {
+  if (i > 10) {
+    break;
+  }
+
+  console.log(i);
+
+  i++;
+}
+
+// Example Three
+
+var myCar = {
+  name: "Toyota",
+
+  type: "Car",
+
+  colour: "Red",
+};
+
+console.log(myCar.name);
+
+var prop;
+
+for (prop in myCar) {
+  if (myCar.hasOwnProperty(prop)) {
+    console.log(myCar[prop]);
+  }
+}
+
+// Example Four
+
+var i = 0;
+
+while (i <= 10) {
+  console.log(i);
+
+  i++;
+}
+
+// Example Five
+
+var i = 0;
+
+do {
+  console.log(i);
+
+  i++;
+} while (i <= 10);
+
+// Example Six
+
+var i, x;
+
+MainLoop: for (i = 0; i < 5; i++) {
+  ChildLoop;
+
+  for (x = 10; x < 14; x++) {
+    continue MainLoop;
+  }
+
+  console.log(i + " => " + x);
+}
+
+// video 49
+
+var i,
+  video491div = document.getElementById("video491div"),
+  video492div = document.getElementById("video492div"),
+  video493div = document.getElementById("video493div"),
+  video494div = document.getElementById("video494div"),
+  video495div = document.getElementById("video495div"),
+  video496div = document.getElementById("video496div"),
+  video497div = document.getElementById("video497div"),
+  video498div = document.getElementById("video498div"),
+  video499div = document.getElementById("video499div"),
+  video4910div = document.getElementById("video4910div");
+// Example One
+
+for (i = 0; i <= 10; i++) {
+  console.log(i);
+
+  //  video491div.innerHTML = i;
+}
+
+// Example Two
+
+var i = 0;
+
+for (;;) {
+  if (i > 10) {
+    break;
+  }
+
+  console.log(i);
+
+  // video492div.innerHTML = i;
+
+  i++;
+}
+
+// Example Three
+
+var myCar = {
+  name: "Toyota",
+
+  type: "Car",
+
+  colour: "Red",
+};
+
+console.log(myCar.name);
+
+var prop;
+
+for (prop in myCar) {
+  if (myCar.hasOwnProperty(prop)) {
+    console.log(myCar[prop]);
+  }
+}
+
+// Example Four
+
+var i = 0;
+
+while (i <= 10) {
+  console.log(i);
+
+  i++;
+}
+
+// Example Five
+
+var i = 0;
+
+do {
+  console.log(i);
+
+  i++;
+} while (i <= 10);
+
+// Example Six
+
+var i, x;
+
+MainLoop: for (i = 0; i < 5; i++) {
+  ChildLoop;
+
+  for (x = 10; x < 14; x++) {
+    continue MainLoop;
+  }
+
+  console.log(i + " => " + x);
+}
+
+// video-50
+
+var i,
+  video501div = document.getElementById("video501div"),
+  video502div = document.getElementById("video502div"),
+  video503div = document.getElementById("video503div"),
+  video504div = document.getElementById("video504div"),
+  video505div = document.getElementById("video505div"),
+  video506div = document.getElementById("video506div"),
+  video507div = document.getElementById("video507div"),
+  video508div = document.getElementById("video508div"),
+  video509div = document.getElementById("video509div"),
+  video5010div = document.getElementById("video5010div"),
+  x = Math.ceil(4.5);
+
+// .ceil(4.5); بيجيب اقراب رقم لفوق من العلامة العشرية
+
+video501div.innerHTML = " <h3 >  " + x + " It Is Ceil</h3>";
+
+// video-51
+
+var i,
+  video511div = document.getElementById("video511div"),
+  video512div = document.getElementById("video512div"),
+  video513div = document.getElementById("video513div"),
+  video514div = document.getElementById("video514div"),
+  video515div = document.getElementById("video515div"),
+  video516div = document.getElementById("video516div"),
+  video517div = document.getElementById("video517div"),
+  video518div = document.getElementById("video518div"),
+  video519div = document.getElementById("video519div"),
+  video5110div = document.getElementById("video5110div"),
+  x = Math.floor(4.5);
+
+// .ceil(4.5); بيجيب اقراب رقم لتحت من العلامة العشرية
+
+video511div.innerHTML = " <h3 >  " + x + " It Is floor</h3>";
+
+// video-52
+
+var i,
+  video521div = document.getElementById("video521div"),
+  video522div = document.getElementById("video522div"),
+  video523div = document.getElementById("video523div"),
+  video524div = document.getElementById("video524div"),
+  video525div = document.getElementById("video525div"),
+  video526div = document.getElementById("video526div"),
+  video527div = document.getElementById("video527div"),
+  video528div = document.getElementById("video528div"),
+  video529div = document.getElementById("video529div"),
+  video5210div = document.getElementById("video5210div"),
+  x = Math.round(4.4);
+
+// .round(4.5); بيجيب اقراب راقم من النص فى المية هل هو اقراب من فوق ولا من تحت
+
+video521div.innerHTML = " <h3 >  " + x + " It Is floor</h3>";
+
+// video-53
+/*
+  Syntax: Math.min(Val, Val, Val, Val)
+  Syntax: Math.max(Val, Val, Val, Val)
+*/
+
+// Example One
+var x = Math.min(100, 10, 50, 1000, -90, -120, -100.5, 150.1);
+
+// Example Two
+var x = Math.max(100, 10, 50, 1000, -90, -120, -100.5, 150.1);
+
+console.log(x);
+
+console.log(Math.floor(Math.round(x) + 10.5));
+
+// video-54
+
+var i,
+  video541div = document.getElementById("video541div"),
+  video542div = document.getElementById("video542div"),
+  video543div = document.getElementById("video543div"),
+  video544div = document.getElementById("video544div"),
+  video545div = document.getElementById("video545div"),
+  video546div = document.getElementById("video546div"),
+  video547div = document.getElementById("video547div"),
+  video548div = document.getElementById("video548div"),
+  video549div = document.getElementById("video549div"),
+  video5410div = document.getElementById("video5410div"),
+  x = Math.round(4.4);
+
+// .round(4.5); بيجيب اقراب راقم من النص فى المية هل هو اقراب من فوق ولا من تحت
+
+video541div.innerHTML = " <h3 >  " + x + " It Is floor</h3>";
+
+/*
+  Syntax: Math.random()
+*/
+
+// Example One
+
+var x = Math.random();
+
+console.log(x * 20);
+
+// Example Two
+
+var x = Math.random();
+
+console.log(Math.floor(x * 10 + 1));
+
+// Example Three
+
+// بطالع رقام عشواى
+
+var x = Math.random(),
+  myEndPattern = 10;
+
+console.log(x * myEndPattern + 1);
+video541div.innerHTML = x * myEndPattern + 1;
+// Example Three
+
+var x543 = Math.random(),
+  myEndPattern = 1000;
+
+console.log(Math.floor(Math.random() * myEndPattern + 1));
+
+video542div.innerHTML = x543.floor;
+
+video542div.innerHTML = Math.floor(Math.random() * myEndPattern + 1);
+
+// video-55
+
+/*
+  Regulat Expression Syntax
+  /Pattern/Attributes
+  Search | Replace | Match | Split | Test
+  Attributes List
+  [ i ] => Case Insensetive
+  [ g ] => Global Search
+  [ m ] => Multi Line Search
+*/
+var i,
+  video551div = document.getElementById("video551div"),
+  video552div = document.getElementById("video552div"),
+  video553div = document.getElementById("video553div"),
+  video554div = document.getElementById("video554div"),
+  video555div = document.getElementById("video555div"),
+  video556div = document.getElementById("video556div"),
+  video557div = document.getElementById("video557div"),
+  video558div = document.getElementById("video558div"),
+  video559div = document.getElementById("video559div"),
+  video5510div = document.getElementById("video5510div"),
+  x = Math.round(4.4),
+  string = "I Love Hossam Web School",
+  result = string.replace(/L/gi, "@");
+
+console.log(result);
+
+video5510div.innerHTML = result;
+
+// video-56
+
+var i,
+  video561div = document.getElementById("video561div"),
+  video562div = document.getElementById("video562div"),
+  video563div = document.getElementById("video563div"),
+  video564div = document.getElementById("video564div"),
+  video565div = document.getElementById("video565div"),
+  video566div = document.getElementById("video566div"),
+  video567div = document.getElementById("video567div"),
+  video568div = document.getElementById("video568div"),
+  video569div = document.getElementById("video569div"),
+  video5610div = document.getElementById("video5610div"),
+  x = Math.round(4.4),
+  string = "I Love Hossam Web School",
+  result = string.replace(/L/gi, "@");
+
+/*
+  Regulat Expression Syntax
+  /Pattern/Attributes
+  Search | Replace | Match | Split | Test
+  Attributes List
+  [ i ] => Case Insensetive
+  [ g ] => Global Search
+  [ m ] => Multi Line Search
+  Brackets Use
+  [...] Character
+  [^...] Not Character
+  [a-z] Range Small Letters
+  [A-Z] Range Capital Letters
+  [0-9] Range Numbers
+  [^0-9] Not Range
+  [A-g] = Range[A-Z] Range[a-g]
+  [0-9a-z] Double Range
+*/
+
+// Example One
+
+var string1 = "I Love Hossam 2 Web 8 School 6",
+  result1 = string.replace(/[e]/gi, "@");
+
+console.log(result1);
+
+video561div.innerHTML = result1 + " <h3> = /[e]/gi, '@' = Character</h3>";
+
+var string2 = "I Love Hossam 2 Web 8 School 6",
+  result2 = string.replace(/[^e]/gi, "@");
+
+console.log(result2);
+
+video562div.innerHTML =
+  result2 + " <h3>/[^e]/gi, '@' = not e = Not Character</h3>";
+
+var string3 = "I Love Hossam 2 Web 8 School 6",
+  result3 = string.replace(/[a-e]/gi, "@");
+
+console.log(result3);
+
+video563div.innerHTML =
+  result3 + " <h3> = /[a-e]/gi, '@' = Range Small Letters</h3>";
+
+var string4 = "I Love Hossam 2 Web 8 School 6",
+  result4 = string.replace(/[^A-E]/gi, "@");
+
+console.log(result4);
+
+video564div.innerHTML =
+  result4 + " <h3> = /[A-E]/gi, '@' = Range Capital  Letters</h3>";
+
+var string5 = "I Love Hossam 2 Web 8 School 6",
+  result5 = string5.replace(/[0-9]/gi, "@");
+
+console.log(result5);
+
+video565div.innerHTML = result5 + " 0 - 9 ";
+
+var string6 = "I Love Hossam 2 Web 8 School 6",
+  result6 = string6.replace(/[^0-9]/gi, "@");
+
+console.log(result6);
+
+video566div.innerHTML = result6 + " 0 - 9 ";
+
+// Example Two
+
+var string7 = "AB XYZ abc hij",
+  result7 = string7.replace(/[A-g]/g, "@");
+
+console.log(result7);
+
+video567div.innerHTML = result7 + " Range[A-Z] Range[a-g] ";
+
+// Example Three
+
+var string8 = "1234567890ABCDEFGHIJKabcdefghijk",
+  result8 = string8.replace(/[0-9a-z]/g, "@");
+
+console.log(result8);
+
+video568div.innerHTML = result8 + " Double Range";
+
+// Example Four
+
+var string = "1234567890ABCDEFGHIJKabcdefghijk",
+  result = string.replace(/[^a-z]/g, "@");
+
+console.log(result);
+
+// Example Five
+
+var string = "1234567890ABCDEFGHIJKabcdefghijk",
+  result = string.replace(/[^A-Z]/g, "@");
+
+console.log(result);
+
+// Example Six
+
+var string = "1234567890ABCDEFGHIJKabcdefghijk",
+  result = string.replace(/[^0-9]/g, "@");
+
+console.log(result);
+
+// video-57
+
+/*
+  Regulat Expression Syntax
+  /Pattern/Attributes
+  Search | Replace | Match | Split | Test
+  Attributes List
+  [ i ] => Case Insensetive
+  [ g ] => Global Search
+  [ m ] => Multi Line Search
+  Brackets Use
+  [...] Character
+  [^...] Not Character
+  [a-z] Range Small Letters
+  [A-Z] Range Capital Letters
+  [0-9] Range Numbers
+  [^0-9] Not Range
+  [A-g] = Range[A-Z] Range[a-g]
+  [0-9a-z] Double Range
+  Quantifiers
+  Letter+ => Word Contains ON Letter
+  Letter{Number} => Word Contains Number Of Letters
+  Letter{Number, Number} => Word Contains Number Or Number
+  Letter{Number,} => Word Contains At Least Number
+*/
+
+// Example One
+
+// e+ كلمة فيها حرف واحد
+
+var string = "I Love Elzero Web School",
+  result = string.replace(/e+/gi, "@");
+
+console.log(result);
+
+// Example Two
+
+// e{3} كلمة فيها اكتار من حرف
+
+var string = "I Love Elzeeero Web School",
+  result = string.replace(/e{3}/gi, "@");
+
+console.log(result);
+
+// Example Three
+
+// e{2 , 3} كلمة تحتوى على رقمين يا داه يا داه فى الارقام
+
+var string = "I Love Elzeeero Web School",
+  result = string.replace(/e{2, 3}/gi, "@");
+
+console.log(result);
+
+// Example Four
+
+//  e{2, } كلمة يكوت فيها على الاقال الرقم اللى انا هحددو
+
+var string = "I Love Elzeero Weeeb Schooeeeel",
+  result = string.replace(/e{2, }/gi, "@");
+
+console.log(result);
+
+//
+
+var string = "I Love Elzeero Weeeb Schooeeeel",
+  result = string.replace(/e{2, 3}/gi, "@");
+
+console.log(result);
+
+// Example Five
+
+var string = "1234567890ABCDEFGHIJKabcdefghijk",
+  result = string.replace(/[^A-Z]/g, "@");
+
+console.log(result);
+
+// Example Six
+
+var string = "1234567890ABCDEFGHIJKabcdefghijk",
+  result = string.replace(/[^0-9]/g, "@");
+
+console.log(result);
+
+// video-58
+
+var i,
+  video581div = document.getElementById("video581div"),
+  video582div = document.getElementById("video582div"),
+  video583div = document.getElementById("video583div"),
+  video584div = document.getElementById("video584div"),
+  video585div = document.getElementById("video585div"),
+  video586div = document.getElementById("video586div"),
+  video587div = document.getElementById("video587div"),
+  video588div = document.getElementById("video588div"),
+  video589div = document.getElementById("video589div"),
+  video5810div = document.getElementById("video5810div"),
+  x = Math.round(4.4),
+  string = "I Love Hossam Web School",
+  result = string.replace(/L/gi, "@");
+
+/*
+  new Date(); // Print Current Date & Time
+  new Date(Milliseconds[5000 = 5 Seconds]); // Print Milliseconds From UTC 1 Jan 1970 00:00:00
+  new Date(DateString[Month Day, Year Hour:Minutes:Seconds]) // Can Add Date String
+  new Date(Year, Month, Day[Hour, Minutes, Seconds, Milliseconds])
+*/
+
+// Normal Date & Time
+
+var theDate1 = new Date();
+
+console.log(theDate1);
+
+video581div.innerHTML = theDate1;
+
+// Date With Milliseconds
+
+var theDate2 = new Date(10000); // 10 Milliseconds
+
+console.log(theDate2);
+
+video582div.innerHTML = theDate2;
+// Date String
+// طريقة طباعة تاريخ عن طريق الاسترانج
+
+var theDate3 = new Date("september 2, 1991 12:20:50");
+
+console.log(theDate3);
+
+video583div.innerHTML = theDate3;
+
+// Date Separated
+// الشهور فى الديت داه بتيدا من الصفر اللى هو شهر يناير
+var theDate4 = new Date(1990, 8, 2, 11, 20, 30, 25);
+
+console.log(theDate4);
+
+video584div.innerHTML = theDate4;
+
+// video-59
+
+/* طريقة طباعة التاريخ
+  Full Format
+  Long Format
+  Short Format
+  ISO Format
+
+  Javascript Ignore Commas
+  Javascript Month Insensetive
+  [Month Day Year] Or [Day Month Year]
+*/
+var video591div = document.getElementById("video591div"),
+  video592div = document.getElementById("video592div"),
+  video593div = document.getElementById("video593div"),
+  video594div = document.getElementById("video594div"),
+  video595div = document.getElementById("video595div"),
+  video596div = document.getElementById("video596div"),
+  video597div = document.getElementById("video597div"),
+  video598div = document.getElementById("video598div"),
+  video599div = document.getElementById("video599div");
+// Example One
+
+var theDate1 = new Date("October 25, 1982 09:20:50");
+
+console.log(theDate1);
+
+video591div.innerHTML = theDate1;
+
+// Example Two
+
+var theDate2 = new Date("Sat October 25, 1982 09:20:50");
+
+console.log(theDate2);
+
+video592div.innerHTML = theDate2;
+
+// Example Three
+
+var theDate3 = new Date("Oct 25, 1982 09:20:50");
+
+console.log(theDate3);
+
+video593div.innerHTML = theDate3;
+
+// Example Four
+
+var theDate4 = new Date("Oct,, 25,,,, ,1982,, ,,09:20:50");
+
+console.log(theDate4);
+
+video594div.innerHTML = theDate4;
+
+// Example Five
+
+var theDate5 = new Date("OCTOBER 25, 1982 09:20:50");
+
+console.log(theDate5);
+
+video595div.innerHTML = theDate5;
+
+// Example Six
+
+// الطريقة المختصرة فى الديت
+
+var theDate6 = new Date("10/25/1982");
+
+console.log(theDate6);
+
+video596div.innerHTML = theDate6;
+
+// Example Seven
+
+// new Date("YYYY-MM-DD hh:mm:ss TZD");
+
+var theDate = new Date("1982-10-25 09:20:50+04:00");
+
+console.log(theDate);
+
+// video-60
+
+var video601div = document.getElementById("video601div"),
+  video602div = document.getElementById("video602div"),
+  video603div = document.getElementById("video603div"),
+  video604div = document.getElementById("video604div"),
+  video605div = document.getElementById("video605div"),
+  video606div = document.getElementById("video606div"),
+  video607div = document.getElementById("video607div"),
+  video608div = document.getElementById("video608div"),
+  video609div = document.getElementById("video609div");
+
+/*
+  getDate() // Day of The Month 1-31
+  getDay() // Day of The Week 0-6
+  getFullYear() // Get The Full Year
+  getHours() // Get Hours 0-23
+  getMinutes() // Get Minutes 0-60
+  getSeconds() // Get Seconds 0-60
+  getMilliseconds() // Get Milliseconds 0-999
+  getTime() / Number of Milliseconds From 1970 Or Specific Date
+  getTimezoneOffset() // Get Def Between UTC And Your Local Time in Minutes
+*/
+
+// Get Date
+
+var theDate1 = new Date(),
+  theDay1 = theDate1.getDate();
+
+console.log(theDate1);
+
+video601div.innerHTML = theDay1;
+
+video602div.innerHTML = theDate1;
+
+// Get Day
+
+var theDate2 = new Date("25 October 1982"),
+  theDay2 = theDate2.getDay();
+
+console.log(theDate2);
+
+video603div.innerHTML = theDay2;
+
+video604div.innerHTML = theDate2;
+
+// Get Full Year
+
+var theDate3 = new Date(),
+  theYear3 = theDate3.getFullYear();
+
+console.log(theYear3);
+
+video605div.innerHTML = theYear3;
+
+// Get Hours
+
+var theDate6 = new Date(),
+  dt6 = theDate6.getHours();
+
+console.log(dt6);
+
+video606div.innerHTML = dt6;
+// Get Minutes
+
+var theDate7 = new Date(),
+  dt7 = theDate7.getMinutes();
+
+console.log(dt7);
+
+video607div.innerHTML = dt7;
+
+// Get Seconds
+
+var theDate8 = new Date(),
+  dt8 = theDate8.getSeconds();
+
+console.log(dt8);
+
+video608div.innerHTML = dt8;
+
+// Get Milliseconds
+
+var theDate9 = new Date(),
+  dt9 = theDate9.getMilliseconds();
+
+console.log(dt9);
+
+video609div.innerHTML = dt9;
+
+// Get Time
+
+var theDate10 = new Date(),
+  dt10 = theDate10.getTime(); // 1460186815705
+
+console.log(dt10);
+
+// Get Time Zone Offset
+
+var theDate11 = new Date(),
+  dt11 = theDate11.getTimezoneOffset();
+
+console.log(dt11);
+
+// video-61
+
+var video611div = document.getElementById("video611div"),
+  video612div = document.getElementById("video612div"),
+  video613div = document.getElementById("video613div"),
+  video614div = document.getElementById("video614div"),
+  video615div = document.getElementById("video615div"),
+  video616div = document.getElementById("video616div"),
+  video617div = document.getElementById("video617div"),
+  video618div = document.getElementById("video618div"),
+  video619div = document.getElementById("video619div");
+
+/*
+  setDate(Day[Requires]) // Day of The Month 1-31
+  setFullYear(Year[Req], Month[Opt], Day[Opt]) // Set The Full Year
+  setHours(Hours[Req], Minutes[Opt], Seconds[Opt], Milli[Opt]) // Set Hours 0-23
+  setMinutes(Minutes[Req], Seconds[Opt], Milli[Opt]) // Set Minutes 0-59
+  setSeconds(Seconds[Req], Milli[Opt]) // Set Seconds 0-59
+  setMilliseconds() // Set Milliseconds 0-999
+  setMonth(Month[Req], Day[Opt])
+*/
+
+// Set Date
+
+var theDate1 = new Date();
+
+theDate1.setDate(31);
+
+console.log(theDate1);
+
+video611div.innerHTML = theDate1;
+// Set Full Year
+
+var theDate2 = new Date();
+
+theDate2.setFullYear(2016, 3, 31);
+
+console.log(theDate2);
+
+video612div.innerHTML = theDate2;
+
+// Set Hours
+
+var theDate = new Date();
+
+theDate.setHours(14);
+
+console.log(theDate);
+
+// Set Minutes
+
+var theDate = new Date();
+
+theDate.setMinutes();
+
+console.log(theDate);
+
+// Set Seconds
+
+var theDate = new Date();
+
+theDate.setSeconds();
+
+console.log(theDate);
+
+// Set Milliseconds
+
+var theDate = new Date();
+
+theDate.setMilliseconds(600000); // 10 Minutes
+
+console.log(theDate);
+
+// Set Month
+
+var theDate = new Date();
+
+theDate.setMonth(-1);
+
+console.log(theDate);
+
+// video-62
+
+var video621div = document.getElementById("video621div"),
+  video622div = document.getElementById("video622div"),
+  video623div = document.getElementById("video623div"),
+  video624div = document.getElementById("video624div"),
+  video625div = document.getElementById("video625div"),
+  video626div = document.getElementById("video626div"),
+  video627div = document.getElementById("video627div"),
+  video628div = document.getElementById("video628div"),
+  video629div = document.getElementById("video629div");
+/*
+  now()
+  parse()
+  toISOString()
+  toDateString()
+  toTimeString()
+*/
+
+// Example One
+
+var theDate = new Date(),
+  now = Date.now(),
+  min = 1000 * 60,
+  hour = min * 24,
+  day = hour * 24,
+  month = day * 30,
+  year = month * 12;
+
+console.log(Math.round(now / year));
+
+video621div.innerHTML = Math.round(now / year);
+
+// Example Two
+
+var theDate = new Date(),
+  now = Date.parse("25 Oct 1982 12:20:50"),
+  min = 1000 * 60,
+  day = hour * 24,
+  month = day * 30,
+  year = month * 12;
+
+console.log(now / year);
+
+video622div.innerHTML = now / year;
+
+// Example Three
+
+var theDate = new Date(),
+  myIso1 = theDate.toISOString();
+myIso2 = theDate.toDateString();
+myIso3 = theDate.toTimeString();
+
+console.log(myIso1);
+
+video623div.innerHTML = myIso1;
+video624div.innerHTML = myIso2;
+video625div.innerHTML = myIso3;
+
+// vdeo-64
+/*
+  toString()
+  بيجيب الاس بتاع الرقم
+  toExponential()
+  تستخدام فى العملات 
+  toFixed()
+  بتراجع الرقم اللى فى الاسترانج الى رقم 
+  parseInt()
+*/
