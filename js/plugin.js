@@ -99,7 +99,8 @@
  * functionName(); علشان تشغال الفنكشان طلقاي
  *
  * Math.random(); بطالع رقام عشواء
- *
+ * 
+ * ----------------- Event -------------------
  * event window onload
  * event button onclick | ondblclick
  * Event input  onkeyup | onkeypress | onkeydown | onchange
@@ -109,17 +110,19 @@
  * window.onload = function(){}
  *
  *  ---------- Array ------------
+ * 
  * var ArrayName = ["Hassan", "Soha", "Ahmed", "Zahra", "Hind"];
  * var object = { firstnName: "hossam", lastName: "Rashad" };
- * info.lastName الطريقة الصحيصة للطباعة من الابجاكت
+ * arrayName طريقة طباعة جميع العناصر اللى فى الاراى
+ * arrayName[0] طريقة طباعة عنصر محدد من الاراى
  *
  * ---- طريقة التاكد من الاراى
  * if (Array.isArray(ArrayName)) {}
  * if (ArrayName.constructor === Array) {}
  *
  * عدد الحروف فى العنصار
- * ArrayName.length; بجيب عدد عناصر الاراى
- * ArrayName.length = 3 ; بطبع 3 عناصر من الاراى
+ * ArrayName.length; = Get Array بجيب عدد عناصر الاراى
+ * ArrayName.length = 3; = Set Array بطبع 3 عناصر من الاراى
  *
  * لو عاوز اخالى الاراى استرانج
  * toString(); toLocaleString();
@@ -131,29 +134,47 @@
  * لو عاوز اجمع الاراى و كمان اغير الكومة اللى هى افتراضى لحاجة تانية
  * join(" ");
  *
- * add In Array
+ *  --------------------- add In Array --------------------
+ * 
+ * فى اوال الاراى
+ * ArrayName.unshift("Cayan");
+ * 
+ *
+ * فى اخار الاراى
  * ArrayName[4] = "abboud";
  * ArrayName[ArrayName.length] = "Hegazy";
  * ArrayName.push("hegazy");
- *
- * فى اخار الاراى
- * ArrayName.unshift("Cayan");
+ *  لو عاوز اضيف عنصر و اشيل الباقى
  * ArrayName.splice(2, ArrayName.length, "Rashad");
  * ArrayName.splice(2, 0, "Rashad");
  *
- * Remove Items From Array
+ * فى مكان معين فى الاراى
+ * .splice(0, 0, "my girl");
+ * 
+ * ------------------- Remove Items From Array ---------------
+ * 
  * .splice(3, 1);
  * بيحزاف اخار عنصر فى الاراى
  * ArrayName.pop();
  * بيحزاف  اول  عنصر فى الاراى
  * ArrayName.shift();
  *
- * ترتيب الاراى
+ * ------------------- ترتيب الاراى --------------
+ * 
  * ArrayName.sort(); ترتيب ابجدى
  * ArrayName.reverse(); ترتيب معكوس
  *
- *
- * طريقة البحث فى الاراى
+ *  ------------------------ اخراج جزاء من الاراى -------------------
+ * 
+ * .slice(1, 4); = يشيل اول عنصار و ينتهى عند الرقم المكتوب بعد الكومة
+ * .slice(-3); = يبدا من الاخار
+ * 
+ * -------------- دامج اراى مع اراى تانى -----------------
+ * 
+ * .concat(arrayName1, arrayName2);
+ * 
+ * --------------------- طريقة البحث فى الاراى ----------------------
+ * 
  * indexOf ('array-item-search') | indexOf('array-item-search', 5)
  * lastIndexOf ('array-item-search') | indexOf('array-item-search', 5)
  *
@@ -169,20 +190,21 @@
  * .length;
  *
  *
- * البحث فى الاسترانج
+ * ------------------- البحث فى الاسترانج------------------------
+ * 
  * .indexOf("Word");
  * .indexOf("Word", number to start);
  * .lastIndexOf("word");
  * .lastIndexOf("word", number to start);
  * .search("word");
  *
- * المسفات اللى بين الاسترانج
- * .split(" "); || typeof = string
- *
- *
+ * -------------------------  المسفات اللى بين الاسترانج -------------------
+ * 
+ * .split(" "); || typeof = object
+ * .split('')  ||  لو سبت القوسين فاضين بيحط كومة بين كل حرف و التانى
+ * 
  * طريقة استخراج مجموعة من الكلمات معينة
  * .split(" ", NumberTo End);
- * .slice(); || typeof = string
  * .slice(NumberTo Start, NumberTo End);
  * .substr(); || typeof = string
  * .substr(NumberTo Start, NumberTo End);
@@ -190,7 +212,8 @@
  * .substring(NumberTo Start, NumberTo End);
  *
  *
- * طريقة تخريج الحرف من الاسترانج
+ * ---------------- طريقة تخريج الحرف من الاسترانج ------------------
+ * 
  * .charAt(); || فاضية بيخارج اول حرف
  * .charCodeAt() || رقم الحرف فى الكيبارد
  *
@@ -200,9 +223,10 @@
  *
  *
  * كتابة الاسترانج بى الارقام
- * .fromCharCode( 72, 111, 115, 115, 109 );
+ * String.fromCharCode( 72, 111, 115, 115, 109 );
  *
- * دمج الاسترانج بى استرانج
+ * ------------ دمج الاسترانج بى استرانج --------------
+ * 
  * .concat(String Name);
  *
  * طريقة تحويل الحروف من كبتال اللى اصموال
@@ -218,6 +242,7 @@
  *
  *
  */
+
 
 document.write("<p>Hello from file</p>");
 
@@ -736,7 +761,9 @@ document.getElementById("video-163").innerHTML =
   "Ur Age In Hours = " + hoursCalc + " Hours.";
 
 /**************************/
+
 // video 17
+
 // parameters
 
 function video17myAgeInDays(video17myAge) {
@@ -784,7 +811,9 @@ function dollar() {
   "use strict";
   var amount = document.getElementById("video-182-input-dollar").value,
     result = amount * 3.5,
+
     video182 = document.getElementById("video-182");
+
   // الحقل مينفعش يكون فاضى
   if (amount === "") {
     video182.innerHTML = "the input it is empty";
@@ -839,7 +868,7 @@ function changeMeDblClick() {
 }
 /********************************** */
 // video 23
-// onkeydown | onkeypress | pnkayup
+// onkeydown | onkeypress | onkayup
 var input23 = document.getElementById("video-23-input"),
   button23 = document.getElementById("video-23-button"),
   div23 = document.getElementById("video-23-div"),
@@ -990,31 +1019,49 @@ var video271array = ["hossam", "rashad", "ahmed", "abboud"],
   video272div = document.getElementById("video272div");
 video271array.length = 2;
 video272div.innerHTML = video271array + " <h2 class='lead'>set array </h2> ";
+
 /************************************ */
+
 // video28
 // convert array to string
+
 var video28array = ["hossam ", "rashad ", "ahmed ", "abboud "];
 document.getElementById("video28div").innerHTML = video28array + " it is Array";
+
 video28array = video28array.toString();
+
 document.getElementById("video281div").innerHTML =
   video28array + " it is toString";
+
 video28array = video28array.toLocaleString();
+
 document.getElementById("video282div").innerHTML =
   video28array + " it is toLocaleString";
+
 var video28date = new Date();
+
 document.getElementById("video283div").innerHTML = video28date;
 var video281date = new Date();
+
 video281date = video281date.toString();
+
 document.getElementById("video284div").innerHTML = video281date;
 var video285date = new Date();
+
 video2851date = video285date.toLocaleDateString();
+
 document.getElementById("video285div").innerHTML =
   video2851date + " it is toLocaleDateString";
+
 var video28array1 = ["hossam", "rashad", "ahmed", "abboud"];
+
 document.getElementById("video286div").innerHTML = video28array1;
+
 // join بيجماع الاراى و الديفالت اللى بحطو بيناهم الكومة و لو عاوز تغير الكومة بى حاجة تانى بيكون بين القوسين
 document.getElementById("video287div").innerHTML = video28array1.join(" ");
+
 /******************************* */
+
 //video29
 // adding element to array
 // ازاى تضيف عنصر اللى الاراى
@@ -1026,18 +1073,23 @@ var video29array = ["hossam", "rashad", "ahmed", "abboud"],
   video294div = document.getElementById("video294div"),
   video295div = document.getElementById("video295div"),
   video296div = document.getElementById("video296div");
+
 // بيضيف العنصر فى اخار الاراى
 video29array[4] = "abboud";
 video29div.innerHTML = video29array;
+
 // بيضيف العنصر فى اخار الاراى
 video29array[video29array.length] = "Hegazy";
 video291div.innerHTML = video29array;
+
 // بيضيف العنصر فى اخار الاراى
 video29array.push("hegazy");
 video292div.innerHTML = video29array;
+
 // بيضيف العنصار فى اوال الاراى
 video29array.unshift("Cayan");
 video293div.innerHTML = video29array;
+
 // لو عاوز اضيف عنصر و اشيل اباقى
 video29array.splice(2, video29array.length, "Rashad");
 video294div.innerHTML = video29array;
@@ -1050,7 +1102,9 @@ video295div.innerHTML = video29array;
  */
 // videoa29.splice(7, 0, "mairam");
 // document.getElementById("video292").innerHTML = videoa29;
+
 /****************************************** */
+
 // video30
 /* pop المفروض انو بيحزاف اخار حاجة من الاراى بس معاية هو ظاهر اخر حاجة بس و خفاء الباقى
  */
@@ -1071,7 +1125,9 @@ video302div.innerHTML = video30array;
 // بيحزاف  اول  عنصر فى الاراى
 video30array.shift();
 video303div.innerHTML = video30array;
+
 /*********************************************** */
+
 // video31
 // sort | reverse
 // sort بيراتب الاحلااف بى الابجدية و الارقام بى الاصغار الى الاكبار
@@ -1081,7 +1137,9 @@ document.getElementById("video31div").innerHTML =
   "Array Sort = " + video31array.sort();
 document.getElementById("video311div").innerHTML =
   "Array  Reverse" + video31array.reverse();
+
 /******************************************/
+
 // video32
 // combine | slice
 //slice(start, end) هو انو دكا بيقطاع من عند عنصار انت بتحددهولو
@@ -1096,12 +1154,15 @@ video321div.innerHTML = video32array.slice(-3);
 var girl = "cayan",
   girl2 = "cayan";
 video322div.innerHTML = video32array.concat(girl, girl2);
+
 /****************************************** */
+
 // video33
 // search in array
 // indexOf بتبحث عن كلمة فى الاراى
 // lastIndexOf بيبحس من الاخار الى الاوال
 // .indexOf("cayan" , 5); كدا انت بتبدا البحث من عند مكان محح فى الاراى
+
 var video33array = [
     "cayan",
     "hossam",
@@ -1115,14 +1176,21 @@ var video33array = [
   video331div = document.getElementById("video331div"),
   video332div = document.getElementById("video332div"),
   video333div = document.getElementById("video333div");
+
 video33div.innerHTML = "indexOf (name) " + video33array.indexOf("cayan");
+
 video331div.innerHTML =
   "indexOf ('name', 2) " + video33array.indexOf("hegazy", 2);
+
 video332div.innerHTML =
   " lastIndexOf('name') " + video33array.lastIndexOf("hossam");
+
 video333div.innerHTML =
   " lastIndexOf('name', 3) " + video33array.lastIndexOf("ahmed", 3);
+
+
 /*************************************** */
+
 // video34
 // مراجعة على الاراى
 var video34array = ["hossam", "rashad", "ahmed"],
@@ -1189,7 +1257,8 @@ video34array3.pop();
 video349div.innerHTML = video34array3.join(" ") + " || remove pop to End";
 
 video34array3.shift();
-video3410div.innerHTML = video34array3 + " || remove pop to Start";
+video3410div.innerHTML = video34array3 + " || remove shift to Start";
+
 // ترتيب الاراى
 video34array3.sort();
 video3411div.innerHTML = video34array3.join(" ") + " || sort array 1 2 3";
@@ -1211,6 +1280,7 @@ video3414div.innerHTML =
 var video34array7 = ["cayan", "hossam", "rashad", "ahmed"];
 video3415div.innerHTML = video34array7.indexOf("hossam");
 video3416div.innerHTML = video34array7.lastIndexOf("cayan");
+
 /********************** */
 // video 35
 // string
@@ -1227,25 +1297,38 @@ var video35string = "Lorem Ipsum Dolor Sit Amet   Elit. Quisquam, Dolor",
   video358div = document.getElementById("video358div"),
   video359div = document.getElementById("video359div"),
   video3510div = document.getElementById("video3105div");
+
 video35div.innerHTML = video35string;
+
 // عشان اجيب نوع الدات
 video351div.innerHTML = typeof video35string;
 // toString
 var video3535toString = video35string.toString();
+
 video352div.innerHTML = video3535toString;
+
 video353div.innerHTML = typeof video3535toString;
+
 // عدد الحروف اللى فى الاسترانج
 video354div.innerHTML = video35string.length;
+
 // علشان احول الرقام الى استرانج
 video356div.innerHTML = video35number;
+
 video357div.innerHTML = typeof video35number;
+
 var video35numberrtostring = video35number.toString();
+
 video358div.innerHTML = video35numberrtostring;
+
 video359div.innerHTML = typeof video35numberrtostring;
-/***-************************ */
+
+/**************************** */
+
 // video 36
 // string methods indexOf || lastIndexOf || search
 // search الباحث فى الاسترانج
+
 var video36string = "Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor",
   video36div = document.getElementById("video36div"),
   video361div = document.getElementById("video361div"),
@@ -1260,29 +1343,32 @@ var video36string = "Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor",
   video3610div = document.getElementById("video3610div");
 
 video36div.innerHTML =
-  "indexOf( ' name item in array ') = " + video36string.indexOf("Amet");
+  "indexOf( ' name item in string ') = " + video36string.indexOf("Amet");
 
 video361div.innerHTML =
-  "indexOf( ' name item in array', 2 ) = " + video36string.indexOf("Amet", 5);
+  "indexOf( ' name item in string', 2 ) = " + video36string.indexOf("Amet", 5);
 
 video362div.innerHTML =
-  "lastIndexOf( ' name item in array ') = " + video36string.lastIndexOf("Amet");
+  "lastIndexOf( ' name item in string ') = " + video36string.lastIndexOf("Amet");
 
 video363div.innerHTML =
-  "lastIndexOf( ' name item in array', 2 ) = " +
+  "lastIndexOf( ' name item in string', 2 ) = " +
   video36string.lastIndexOf("Amet", 60);
 
 video364div.innerHTML =
-  "search( ' name item in array' ) = " + video36string.search("Amet");
+  "search( ' name item in string' ) = " + video36string.search("Amet");
 
 // طريقة البحث بى الرجيلار اكسبراشان اللى هو من غير ما تكون الحروف حساسة
 video365div.innerHTML =
   "search( ' name item in array' ) = " + video36string.search(/amet/i);
+
 /************************ */
+
 // video37
 // split || slice || || substr || extract
 // split(separator, limit) output = Object
 // الاسبلات اللى هو انو انت تخرج جزاء من الاسترانج
+
 var video37string = "Lorem Ipsum Dolor Sit Amet Elit. Quisquam, Dolor ",
   video37div = document.getElementById("video37div"),
   video371div = document.getElementById("video371div"),
@@ -1303,11 +1389,12 @@ video37div.innerHTML = video37string + " + " + typeof video37string;
 
 video371div.innerHTML =
   video37string.split() + " = split + " + typeof video37split;
+
 //split بتغاير الاسترانج الى اوبجاكت
 video372div.innerHTML = typeof video37split + " نوع الدات اللى بتخرجو الاسبلات";
 
 // لو سبت القوسين فاضين بيحط كومة بين كل حرف و التانى
-video373div.innerHTML = video37string.split("");
+video373div.innerHTML = video37string.split("") + ".split('')  ||  لو سبت القوسين فاضين بيحط كومة بين كل حرف و التانى";
 video374div.innerHTML = video37string.split(" ");
 
 // 5 اللى هو عدد العناصر اللى هخرجها
@@ -1319,6 +1406,7 @@ video375div.innerHTML =
 video376div.innerHTML = video37string.slice();
 video377div.innerHTML =
   typeof video37string.slice() + " نوع الدات اللى بيخرجها الاسليس";
+
 //
 video378div.innerHTML =
   video37string.slice(2, 18) + "عدد العناصر اللى هيخرجها الاسليس";
@@ -1332,6 +1420,7 @@ video3711div.innerHTML = video37string.substring();
 video3712div.innerHTML = video37string.substring(5, 20);
 
 /*******************************************/
+
 // video-38
 // اليزنى كود
 /**
@@ -1446,8 +1535,10 @@ video413div.innerHTML =
   video412string +
   " Go To Google By This Link => " +
   video412string.link("http://www.google.com");
+
 /************************************ */
-//Before Chain
+
+// Before Chain
 // video-42
 
 var video42number = 120,
@@ -1468,7 +1559,9 @@ video423div.innerHTML = video42replace + " = replace(2, 3)";
 video424div.innerHTML = video42replace.split("") + " = split('')";
 
 video425div.innerHTML = video42number.toString().replace(2, 4).split("");
+
 /************************************* */
+
 //vidro 43
 // Length
 
@@ -1482,6 +1575,7 @@ var myString431 = 120,
 
 document.getElementById("video431").innerHTML =
   myString431 + " " + typeof myString431;
+
 document.getElementById("video432").innerHTML =
   myNewString431 + " " + typeof myNewString431;
 
@@ -1550,6 +1644,7 @@ var myString4311 = "I Love Programming Languages",
 
 document.getElementById("video4311").innerHTML =
   mySplit4311 + "<b> charCodeAt(4)</b>";
+
 // Replace
 
 var myString4312 = "I Love Programming Languages",
@@ -1562,6 +1657,7 @@ var myString4313 = "I Love Programming Languages",
   mySplit4313 = myString4313.replace(/L/gi, "X");
 
 document.getElementById("video4313").innerHTML = mySplit4313;
+
 // Concat + Chain
 
 var myString4314 = "I Love Programming Languages",

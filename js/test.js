@@ -13,12 +13,49 @@
 /*global window */
 
 
-var video631div = document.getElementById("video631div"),
-  video632div = document.getElementById("video632div"),
-  video633div = document.getElementById("video633div"),
-  video634div = document.getElementById("video634div"),
-  video635div = document.getElementById("video635div"),
-  video636div = document.getElementById("video636div"),
-  video637div = document.getElementById("video637div"),
-  video638div = document.getElementById("video638div"),
-  video639div = document.getElementById("video639div");
+var elementString = document.getElementById("elementString"),
+elementtrim = document.getElementById("elementtrim"),
+stringNormal = "hossam rashad ahmed",
+stringTrim = "          hossam rashad ahmed",
+stringUpper = "HOSSAM RASHAD AHMED  ",
+stringUpperfirst = "Hossam Rashad Ahmed";
+
+test1 = document.getElementById("test1"),
+test2 = document.getElementById("test2"),
+test3 = document.getElementById("test3"),
+test4 = document.getElementById("test4"),
+test5 = document.getElementById("test5"),
+elementFunc = document.getElementById("elementFunc"),
+funcToUpperCase = document.getElementById("funcToUpperCase"),
+funcToTrim = document.getElementById("funcToTrim");
+
+test1.innerHTML = stringNormal;
+
+function functotrim(){
+  "use strict";
+
+var returnStringTrim = stringTrim.trim();
+
+console.log(returnStringTrim);
+
+return returnStringTrim;
+
+}
+
+test2.innerHTML = functotrim() && functoUpperCase();
+
+
+/********************/
+
+function functoUpperCase(){
+
+  "use strict";
+
+var returnstringUpperfirst = stringNormal.toUpperCase();
+
+return returnstringUpperfirst;
+
+}
+
+test3.innerHTML = functoUpperCase();
+
