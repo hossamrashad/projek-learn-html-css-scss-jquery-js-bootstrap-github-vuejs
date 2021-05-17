@@ -27,7 +27,7 @@ test4 = document.getElementById("test4"),
 test5 = document.getElementById("test5"),
 elementFunc = document.getElementById("elementFunc"),
 funcToUpperCase = document.getElementById("funcToUpperCase"),
-funcToTrim = document.getElementById("funcToTrim");
+funcToTrim = document.getElementById("funcToTrim1");
 
 test1.innerHTML = stringNormal;
 
