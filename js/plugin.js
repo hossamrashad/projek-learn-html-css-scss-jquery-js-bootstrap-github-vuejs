@@ -30,7 +30,7 @@
  * arrayName طريقة طباعة جميع العناصر اللى فى الاراى
  * arrayName[0] طريقة طباعة عنصر محدد من الاراى
  * objectName = {first: "hossam", lastName: "Rashad"};
- * objectName
+ * objectName = [Object Object] القيمة المطلوبة من الابجاكت غير معروفة 
  * objectName.lastName الطريقة الصحيصة للطباعة من الابجاكت
  * string = "Lorem ipsum dolor sit.";
  * undefined
@@ -243,7 +243,6 @@
  *
  */
 
-
 document.write("<p>Hello from file</p>");
 
 /**
@@ -326,6 +325,7 @@ var info = {
   firstnName: "hossam",
   lastName: "Rashad",
 };
+// = [Object Object] القيمة المطلوبة من الابجاكت غير معروفة
 document.getElementById("video-83").innerHTML = info;
 document.getElementById("video-84").innerHTML = info.lastName;
 /**
@@ -341,8 +341,11 @@ var age8 = 29;
 document.getElementById("video-86").innerHTML = age8;
 //console.log(typeof age8);
 document.getElementById("video-87").innerHTML = typeof age8;
+
 /************************************ */
+
 // video 9 Concatenation
+
 var video9Name = "Hossam",
   video9Age = 30,
   video9Country = "Egypt";
@@ -384,8 +387,11 @@ video10Div.innerHTML =
 console.log(
   "Hello My Name Is " + video10Name + " And My Age Is " + video10myAge
 );
+
 /******************************* */
+
 // video 11
+
 /**
  * operators
  *  + - * /
@@ -811,7 +817,6 @@ function dollar() {
   "use strict";
   var amount = document.getElementById("video-182-input-dollar").value,
     result = amount * 3.5,
-
     video182 = document.getElementById("video-182");
 
   // الحقل مينفعش يكون فاضى
@@ -1188,7 +1193,6 @@ video332div.innerHTML =
 video333div.innerHTML =
   " lastIndexOf('name', 3) " + video33array.lastIndexOf("ahmed", 3);
 
-
 /*************************************** */
 
 // video34
@@ -1349,7 +1353,8 @@ video361div.innerHTML =
   "indexOf( ' name item in string', 2 ) = " + video36string.indexOf("Amet", 5);
 
 video362div.innerHTML =
-  "lastIndexOf( ' name item in string ') = " + video36string.lastIndexOf("Amet");
+  "lastIndexOf( ' name item in string ') = " +
+  video36string.lastIndexOf("Amet");
 
 video363div.innerHTML =
   "lastIndexOf( ' name item in string', 2 ) = " +
@@ -1394,7 +1399,9 @@ video371div.innerHTML =
 video372div.innerHTML = typeof video37split + " نوع الدات اللى بتخرجو الاسبلات";
 
 // لو سبت القوسين فاضين بيحط كومة بين كل حرف و التانى
-video373div.innerHTML = video37string.split("") + ".split('')  ||  لو سبت القوسين فاضين بيحط كومة بين كل حرف و التانى";
+video373div.innerHTML =
+  video37string.split("") +
+  ".split('')  ||  لو سبت القوسين فاضين بيحط كومة بين كل حرف و التانى";
 video374div.innerHTML = video37string.split(" ");
 
 // 5 اللى هو عدد العناصر اللى هخرجها
