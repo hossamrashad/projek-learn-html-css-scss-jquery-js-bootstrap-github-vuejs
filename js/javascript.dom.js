@@ -10,38 +10,44 @@
 /*global window */
 
 // Dom = document object model
-
+/**
+ * document = نوع الملف و الديكيمنت هو المستند النصى اللى هو الصفحة الانترنات
+ *
+ * object الكان اللى هو العناصر اللى موجوده فى الصفحة
+ *
+ * model اللى هو التراظ اللى هو نوع الابجاكت
+ */
 // whats is do = programming interface for html & xml
 
 /**
  *
- * createElement        = انشاء عنصار
+ * .createElement("p");                  = انشاء عنصار
  *
- * createTextNode       = انشاء تاكست
+ * .createTextNode(" Your Text ");       = انشاء تاكست
  *
- * appendChild          = ضيف فى العنصر
+ * .appendChild(vatName);                = ضيف فى العنصر
  *
  *
  * -------------------------------- اختيار العنصار -----------------
  *
- * document.getElementById(" ");                        ==
+ * document.getElementById(" IdName ");                 ==
  *
- * document.getElementsByTagName('div');                ==
+ * document.getElementsByTagName('div')[0];             ==   First div
  *
- * document.getElementsByClassName('elementClass');     == Not Compatible with IE 8
+ * document.getElementsByClassName('elementClass')[0];  == First Class Not Compatible with IE 8
  *
- * document.querySelectorAll('div.class & div#id');     == Not Compatible with IE 8
+ * document.querySelectorAll('div.class & div#id')[0];  == First class || id Not Compatible with IE 8
  *
  *
  * -------------- اختيار التيتال بتاع الصفحة و الصوار و الفارم ------------
  *
- * document.title                               == اسم الكلام اللى مكتوب فى التيتال
+ * document.title               == اسم الكلام اللى مكتوب فى التيتال
  *
- * document.images;              = بجيب الصورا اللى فى الصفحة عن طريق انو يكون ابجاكت
+ * document.images[0];          = بجيب الصورا اللى فى الصفحة عن طريق انو يكون ابجاكت
  *
- * document.images[0].src;       = بجيب مسار اول صوراة عندى
+ * document.images[0].src;      = بجيب مسار اول صوراة عندى
  *
- *document.images[0].scr;        = بيجيب مسار الصورة او اى صفحة من صفات الصور اللى موجودة فى الصفحة
+ *document.images[0].scr;       = بيجيب مسار الصورة او اى صفحة من صفات الصور اللى موجودة فى الصفحة
  *
  * document.forms.length;       = بيجيب عدد الفارم اللى فى صفحتى
  * document.forms[0].valueName.value;
@@ -57,10 +63,14 @@
 
 var i;
 
+var test = document.getElementById("test");
+
 // video 1 مقدمة
 
 var video1p = document.createElement("p"),
-  video11text = document.createTextNode("Hossam Rashad");
+  video11text = document.createTextNode(
+    "createElement createTextNode appendChild Hossam Rashad"
+  );
 
 video1p.appendChild(video11text);
 
@@ -69,7 +79,7 @@ document.body.appendChild(video1p);
 // video 2 اختيار العنصر
 
 /**
- * document.getElementById(" ");                = اختيار العنصر بى الايدى
+ * document.getElementById(" IdName ");                = اختيار العنصر بى الايدى
  *
  *
  *  document.getElementsByTagName('div');       = بيجيب جميع العناصر اللى جوة الصفحة و ليها وسم داف
@@ -86,7 +96,7 @@ document.body.appendChild(video1p);
 
 var video21div = document.getElementById("video21div");
 
-video21div.innerHTML = "TEXT FROM JAVASCRIPT";
+video21div.innerHTML = "getElementById TEXT FROM JAVASCRIPT";
 
 var video22div = document.getElementsByTagName("div");
 
@@ -164,6 +174,6 @@ function find() {
   // var inputtest4 = document.getElementById("inputtest4").value;
 
   if (document.body.innerText.indexOf("hossam") > -1) {
-    video44div.innerText  = "yas";
+    video44div.innerText = "yas";
   }
 }
