@@ -1,173 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Javascript Dom</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha512-tDXPcamuZsWWd6OsKFyH6nAqh/MjZ/5Yk88T5o+aMfygqNFPan1pLyPFAndRzmOWHKT+jSDzWpJv8krj6x1LMA==" crossorigin="anonymous" />
-    <style>
-      html,
-      body {
-        font-size: 20px;
-        font-weight: bolder;
-        text-transform: capitalize;
-      }
-      .backcolor {
-        background-color: black;
-        color: #fff;
-      }
-      #backcolor {
-        background-color: black;
-        color: #fff;
-      }
-      .backcolor3498db {
-        background-color: #3498db;
-        color: #fff;
-      }
-      #backcolor3498db {
-        background-color: #3498db;
-        color: #fff;
-      }
-      .color333{color: #333;}
-      .colorfff{color: #fff;}
-      .color3498db{color: #3498db;}
-      .color080{color: #080;}
-      .active{margin: 30px auto; width: 50%; padding: 30px;}
-    </style>
-  </head>
-  <body>
-    <div id="test"></div>
-    <div id="video2div">
-      <div id="video21div" class="video2class">Hossam Rashad</div>
-      <div id="video22div" class="video2class">Hossam Rashad</div>
-      <div id="video23div" class="video2class">Hossam Rashad</div>
-      <div id="video24div" class="video2class">Hossam Rashad</div>
-      <div id="video25div" class="video2class">Hossam Rashad</div>
-    </div>
-    <br /><br />
-    <hr />
-    <hr />
-    <div id="video3div">
-      <div id="video31div">Hossam Rashad</div>
-      <div id="video32div">Hossam Rashad</div>
-      <div id="video33div">Hossam Rashad</div>
-      <div id="video34div">Hossam Rashad</div>
-      <div id="video35div">Hossam Rashad</div>
-      <div id="video36div">
-        <img src="//via.placeholder.com/100x100/333" alt="333" />
-        <img src="//via.placeholder.com/100x100/3498db" alt="3498db" />
-        <img src="//via.placeholder.com/100x100/ddd" alt="ddd" />
-        <button
-          onclick="video3image()"
-          style="padding: 10px 20px; align-items: center"
-        >
-          click
-        </button>
-      </div>
 
-      <div id="video37form">
-        <div id="video38div"></div>
-        <form action="">
-          <input type="text" name="test1" value="hello input 1" />
-          <input type="text" name="test2" value="hello input 2" />
-        </form>
-        <form action="">
-          <input type="text" name="test3" value="hello input 3" />
-          <input type="password" name="test4" value="hello input 4" />
-        </form>
-        <div id="video39div"></div>
-      </div>
-    </div>
-    <input type="search" id="inputtest4" value="" />
-    <button onclick="find()">F i n d</button>
-    <div id="video41div">Element 1</div>
-    <div id="video42div">Element 2</div>
-    <div id="video43div">Element 3</div>
-    <div id="video44div">Element 4</div>
-    <div id="video45div">Element 5</div>
-    <div id="video46div"></div>
-    <a id="video46btn" href="#">Google</a>
-    <a id="video47btn" name="facebook">Facebook</a>
-    <div id="video5parent">
-      <div id="video51div">Rovan Hossam <span>Rashad</span></div>
-      <div id="video52div"></div>
-      <div id="video53div"></div>
-      <div id="video54div"></div>
-      <div id="video55div"></div>
-    </div>
-    <br />
-    <hr />
-    <div id="video6parent">
-      <div id="video61div"></div>
-      <div id="video62div"></div>
-      <div id="video63div"></div>
-      <div id="video64div"></div>
-      <div id="video65div"></div>
-      <div id="video6test" class="">
-        <div id="" class="">Dive 1</div>
-        <div id="" class="">Dive 2</div>
-        <img src="" alt="" id="video6img" />
-      </div>
-    </div>
-    <br><hr>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Javascript Dom</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha512-tDXPcamuZsWWd6OsKFyH6nAqh/MjZ/5Yk88T5o+aMfygqNFPan1pLyPFAndRzmOWHKT+jSDzWpJv8krj6x1LMA=="
+    crossorigin="anonymous" />
+  <style>
+    html,
+    body {
+      font-size: 20px;
+      font-weight: bolder;
+      text-transform: capitalize;
+    }
 
-    <div id="video7parent">
-      <div id="video71div"></div>
-      <div id="video72div"></div>
-      <div id="video73div"></div>
-      <div id="video74div"></div>
-      <div id="video75div"></div>
-      
+    .backcolor {
+      background-color: black;
+      color: #fff;
+    }
+
+    #backcolor {
+      background-color: black;
+      color: #fff;
+    }
+
+    .backcolor3498db {
+      background-color: #3498db;
+      color: #fff;
+    }
+
+    #backcolor3498db {
+      background-color: #3498db;
+      color: #fff;
+    }
+
+    .color333 {
+      color: #333;
+    }
+
+    .colorfff {
+      color: #fff;
+    }
+
+    .color3498db {
+      color: #3498db;
+    }
+
+    .color080 {
+      color: #080;
+    }
+
+    .active {
+      margin: 30px auto;
+      width: 50%;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .video231div {
+      padding: 20px;
+      background-color: #eee;
+      border: 10px solid #333;
+      margin: 30px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="test"></div>
+  <div id="video2div">
+    <div id="video21div" class="video2class">Hossam Rashad</div>
+    <div id="video22div" class="video2class">Hossam Rashad</div>
+    <div id="video23div" class="video2class">Hossam Rashad</div>
+    <div id="video24div" class="video2class">Hossam Rashad</div>
+    <div id="video25div" class="video2class">Hossam Rashad</div>
+  </div>
+  <br /><br />
+  <hr />
+  <hr />
+  <div id="video3div">
+    <div id="video31div">Hossam Rashad</div>
+    <div id="video32div">Hossam Rashad</div>
+    <div id="video33div">Hossam Rashad</div>
+    <div id="video34div">Hossam Rashad</div>
+    <div id="video35div">Hossam Rashad</div>
+    <div id="video36div">
+      <img src="//via.placeholder.com/100x100/333" alt="333" />
+      <img src="//via.placeholder.com/100x100/3498db" alt="3498db" />
+      <img src="//via.placeholder.com/100x100/ddd" alt="ddd" />
+      <button onclick="video3image()" style="padding: 10px 20px; align-items: center">
+        click
+      </button>
+    </div>
+
+    <div id="video37form">
+      <div id="video38div"></div>
+      <form action="">
+        <input type="text" name="test1" value="hello input 1" />
+        <input type="text" name="test2" value="hello input 2" />
+      </form>
+      <form action="">
+        <input type="text" name="test3" value="hello input 3" />
+        <input type="password" name="test4" value="hello input 4" />
+      </form>
+      <div id="video39div"></div>
+    </div>
+  </div>
+  <input type="search" id="inputtest4" value="" />
+  <button onclick="find()">F i n d</button>
+  <div id="video41div">Element 1</div>
+  <div id="video42div">Element 2</div>
+  <div id="video43div">Element 3</div>
+  <div id="video44div">Element 4</div>
+  <div id="video45div">Element 5</div>
+  <div id="video46div"></div>
+  <a id="video46btn" href="#">Google</a>
+  <a id="video47btn" name="facebook">Facebook</a>
+  <div id="video5parent">
+    <div id="video51div">Rovan Hossam <span>Rashad</span></div>
+    <div id="video52div"></div>
+    <div id="video53div"></div>
+    <div id="video54div"></div>
+    <div id="video55div"></div>
+  </div>
+  <br />
+  <hr />
+  <div id="video6parent">
+    <div id="video61div"></div>
+    <div id="video62div"></div>
+    <div id="video63div"></div>
+    <div id="video64div"></div>
+    <div id="video65div"></div>
+    <div id="video6test" class="">
+      <div id="" class="">Dive 1</div>
+      <div id="" class="">Dive 2</div>
+      <img src="" alt="" id="video6img" />
+    </div>
+  </div>
+  <br>
+  <hr>
+
+  <div id="video7parent">
+    <div id="video71div"></div>
+    <div id="video72div"></div>
+    <div id="video73div"></div>
+    <div id="video74div"></div>
+    <div id="video75div"></div>
+
     <img src="" alt="" id="video7img">
     <img src="" alt="" id="video71img">
-    </div>
-    <br><hr>
-    <div id="video8parent">
-      <div id="video81div"></div>
+  </div>
+  <br>
+  <hr>
+  <div id="video8parent">
+    <div id="video81div"></div>
     <div id="video82div"></div>
-    <div id="video83div"  class="backcolor">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem architecto assumenda eius a corporis quia veritatis voluptas ipsa, ut consequatur aliquid libero voluptatibus vero praesentium quos non quisquam repudiandae hic?</div>
+    <div id="video83div" class="backcolor">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem architecto
+      assumenda eius a corporis quia veritatis voluptas ipsa, ut consequatur aliquid libero voluptatibus vero
+      praesentium quos non quisquam repudiandae hic?</div>
+  </div>
+  <div id="video84div"></div>
+  <div id="video85div" class="backcolor">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi maxime voluptas, dolor deleniti cum illum quas
+    aperiam sunt rem vitae error voluptatibus sapiente totam ducimus, vero dignissimos tempora. Iure, molestiae.
+  </div>
+
+  <img src="" alt="" id="video8img">
+  <img src="" alt="" id="video81img">
+  </div>
+  <br>
+  <hr>
+  <div id="video9parent">
+    <div id="video91div" class="one test backcolor3498db" alt='video91div'></div>
+    <div id="video92div"></div>
+    <div id="video93div"></div>
+    <div id="video94div"></div>
+    <div id="video95div"></div>
+  </div>
+  <br>
+  <hr>
+  <div id="video10parent">
+    <div id="video101div" class="one test backcolor3498db" alt='video91div'></div>
+    <div id="video102div"></div>
+    <div id="video103div"></div>
+    <div id="video104div"></div>
+    <div id="video105div"></div>
+    <button class="btn btn-primary" id="video10btn">Click</button>
+  </div>
+  <br>
+  <hr>
+  <div id="video11parent">
+    <div id="video111div" class="one test backcolor3498db" alt='video91div'>
+      <h2 class="h1 video11h1 color333 active">Rovan hossam</h2>
+      <p class="color080 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit optio quibusdam maxime
+        necessitatibus ut, eius, earum aspernatur praesentium quos, voluptatibus quas ratione unde nesciunt quo tempore
+        nostrum numquam recusandae nam!</p>
     </div>
-    <div id="video84div"></div>
-    <div id="video85div" class="backcolor">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi maxime voluptas, dolor deleniti cum illum quas aperiam sunt rem vitae error voluptatibus sapiente totam ducimus, vero dignissimos tempora. Iure, molestiae.
+    <div id="video112div"></div>
+    <div id="video113div"></div>
+    <div id="video114div"></div>
+    <div id="video115div"></div>
+    <button class="btn btn-primary" id="video11btn">Click</button>
+  </div>
+  <br>
+  <hr>
+  <div id="video121div">
+    <h2 class="h1 video12h1 color333 active">Rovan hossam</h2>
+    <p class="color080 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit optio quibusdam maxime
+      necessitatibus ut, eius, earum aspernatur praesentium quos, voluptatibus quas ratione unde nesciunt quo tempore
+      nostrum numquam recusandae nam!</p>
+    Rovan
+  </div>
+  <div id="video122div"></div>
+  <div id="video123div"></div>
+  <div id="video124div"></div>
+  <div id="video125div"></div>
+  <br>
+  <hr>
+  <h2 class="h1 text-center">video 13 ||||| append child</h2>
+  <div id="video131div"></div>
+  <div id="video132div"></div>
+  <div id="video133div"></div>
+  <div id="video134div"></div>
+  <div id="video135div"></div>
+  <br>
+  <hr>
+  <h2 class="h1 text-center">video 14 ||||| insert Before</h2>
+  <div id="video141div">
+    <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex perspiciatis quae quasi
+      asperiores laborum velit exercitationem! Vel repudiandae, quae illo adipisci error facere dignissimos
+      necessitatibus harum, ex eos sed!</p>
+    <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex perspiciatis quae quasi
+      asperiores laborum velit exercitationem! Vel repudiandae, quae illo adipisci error facere dignissimos
+      necessitatibus harum, ex eos sed!</p>
+  </div>
+  <div id="video142div"></div>
+  <div id="video143div"></div>
+  <div id="video144div"></div>
+  <div id="video145div"></div>
+  <br>
+  <hr>
+  <h2 class="h1 text-center">video 15 ||||| Remove child </h2>
+
+  <div id="video151div">
+    <p class="">Remove</p>
+    <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi magni ipsa autem voluptas alias in
+      delectus similique veniam beatae, maxime eaque iste sequi necessitatibus eligendi iure ipsum quod quibusdam. Iste.
+    </p>
+  </div>
+  <div id="video152div"></div>
+  <div id="video153div"></div>
+  <div id="video154div"></div>
+  <div id="video155div"></div>
+  <br>
+  <hr>
+  <h2 class="h1 text-center">video 16 ||||| node[Name, Value, Type] </h2>
+  <div id="video161div">
+    Rovan Hossam Rashad
+    <p class="lead">
+      Rovan Hossam Rashad
+    </p>
+    <div class="active">
+      Rovan Hossam Rashad
     </div>
-    
-    <img src="" alt="" id="video8img">
-    <img src="" alt="" id="video81img">
-    </div>
-    <br><hr>
-    <div id="video9parent">
-      <div id="video91div" class="one test backcolor3498db" alt='video91div'></div>
-      <div id="video92div"></div>
-      <div id="video93div"></div>
-      <div id="video94div"></div>
-      <div id="video95div"></div>
-    </div>
-    <br><hr>
-    <div id="video10parent">
-      <div id="video101div" class="one test backcolor3498db" alt='video91div'></div>
-      <div id="video102div"></div>
-      <div id="video103div"></div>
-      <div id="video104div"></div>
-      <div id="video105div"></div>
-      <button class="btn btn-primary" id="video10btn">Click</button>
-    </div>
-    <br> <hr>
-    <div id="video11parent">
-      <div id="video111div" class="one test backcolor3498db" alt='video91div'>
-        <h2 class="h1 video11h1 color333 active">Rovan hossam</h2>
-        <p class="color080 active">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit optio quibusdam maxime necessitatibus ut, eius, earum aspernatur praesentium quos, voluptatibus quas ratione unde nesciunt quo tempore nostrum numquam recusandae nam!</p>
-      </div>
-      <div id="video112div"></div>
-      <div id="video113div"></div>
-      <div id="video114div"></div>
-      <div id="video115div"></div>
-      <button class="btn btn-primary" id="video11btn">Click</button>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous"></script>
-        <script       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"       integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg=="       crossorigin="anonymous"     ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha512-Ah5hWYPzDsVHf9i2EejFBFrG2ZAPmpu4ZJtW4MfSgpZacn+M9QHDt+Hd/wL1tEkk1UgbzqepJr6KnhZjFKB+0A==" crossorigin="anonymous"></script>
-    <script src="js/javascript.dom.js"></script>
-  </body>
+  </div>
+  <div id="video162div"></div>
+  <div id="video163div"></div>
+  <div id="video164div"></div>
+  <div id="video165div"></div>
+  <br>
+  <hr>
+  <h2 class="h1 text-center">video 17 ||||| ConeNode </h2>
+  <div id="video171div">
+    <div class="active color3498db">Rovan Hossam</div>
+  </div>
+  <div id="video172div"></div>
+  <div id="video173div"></div>
+  <div id="video174div"></div>
+  <div id="video175div"></div>
+  <br>
+  <hr>
+  <h2 class="h1 text-center">video 18 ||||| ParentNode, ParentElement </h2>
+  <div id="video181div">
+    <button class="btn btn-info" id="video18btn">Close</button>
+  </div>
+  <div id="video182div"></div>
+  <div id="video183div"></div>
+  <div id="video184div"></div>
+  <div id="video185div"></div>
+  <br>
+  <hr>
+  <h2 class="h1 text-center">video 19 ||||| nextsibling, nextelementsibling </h2>
+  <div id="video191div">
+    First text
+    <p class="lead">this is p</p>
+    second text
+    <div class="">this is div</div>
+    final text
+  </div>
+  <div id="video192div"></div>
+  <div id="video193div"></div>
+  <div id="video194div"></div>
+  <div id="video195div"></div>
+  <br>
+  <hr>
+  <h2 class="h1 text-center">video 20 ||||| Focus, Blur </h2>
+  <div id="video201div">rovan hossam</div>
+  <div id="video202div"></div>
+  <div id="video203div"></div>
+  <div id="video204div"></div>
+  <div id="video205div"></div>
+  <form action="" id="video20form">
+    <input type="text" id="video20input" class="input-group input-group-lg">
+  </form>
+  <br>
+  <hr>
+  <h2 class="h1 text-center">video 21 ||||| click </h2>
+  <div id="video21div">
+    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci necessitatibus, sequi eos
+      doloremque beatae fugiat alias culpa deleniti natus minima dolorum sit minus expedita in maiores impedit,
+      accusantium ipsa atque!</p>
+    <button id="video21btn" class="btn btn-danger">click</button>
+  </div>
+  <br>
+  <hr>
+  <br>
+  <h2 class="h2 text-center">video 22 ||||| addEventListener</h2>
+  <p class="lead text-right " dir="rtl">مجتاج ارجع لانو مش فاهمو </p>
+  <hr><br>
+  <h2 class="h2 text-center">video 23 clientHeight || clientWidth</h2>
+  <div id="video231div" class="video231div">
+    video 23 div
+  </div>
+  <div id="video232div"></div>
+  <div id="video233div"></div>
+  <div id="video234div"></div>
+  <div id="video235div"></div>
+  <hr><br>
+  <hr><br>
+  <hr><br>
+  <hr><br>
+  <hr><br>
+  <hr><br>
+  <hr><br>
+  <hr><br>
+  <hr><br>
+  <hr><br>
+  <hr>
+  <!-- :::::::::::: Jquery :::::::::::: -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+    integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha512-Ah5hWYPzDsVHf9i2EejFBFrG2ZAPmpu4ZJtW4MfSgpZacn+M9QHDt+Hd/wL1tEkk1UgbzqepJr6KnhZjFKB+0A=="
+    crossorigin="anonymous"></script>
+  <script src="js/javascript.dom.js"></script>
+</body>
+
 </html>

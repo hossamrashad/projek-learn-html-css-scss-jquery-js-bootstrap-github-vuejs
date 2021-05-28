@@ -21,11 +21,11 @@
 
 /**
  *
- * .createElement("p");                  = انشاء عنصار
+ * document.createElement("div");                  = انشاء عنصار
  *
- * .createTextNode(" Your Text ");       = انشاء تاكست
+ * document.createTextNode(" Your Text ");       = انشاء تاكست
  *
- * .appendChild(vatName);                = ضيف فى العنصر
+ * .appendChild(varName);                = ضيف فى العنصر و بيضيفو فى الاخر
  *
  *
  * -------------------------------- اختيار العنصار -----------------
@@ -91,20 +91,81 @@
  *
  * Element.classList.remove("backcolor"); ازالة كلاس
  *
- * Element.childElementCount; بيجيب عدد الابناء اللى فى العنصر 
+ * Element.childElementCount; بيجيب عدد الابناء اللى فى العنصر
  *
- * Element.children.length; بيجيب عدد الابناء اللى فى العنصر 
- * 
- * Element.children[0]; بيجيب عدد الابناء اللى فى العنصر 
- * 
- * Element.childNodes; بيجيب عدد الابناء اللى فى العنصر 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
+ * Element.children.length; بيجيب عدد الابناء اللى فى العنصر
+ *
+ * Element.children[0]. ....; بيجيب الابن اللى فى العنصر
+ *
+ * Element.childNodes.length; بيجيب عدد الابناء اللى فى العنصر
+ *
+ * Element.firstElementChild. ...;  بيجيب اول عنصر فى الابن
+ *
+ * Element.firstChild. ...;  بيجيب اول الابن
+ *
+ * Element.lastElementChild. ...;  بيجيب اخار عنصر فى الابن
+ *
+ * Element.lastChild. ...;  بيجيب اخار الابن
+ *
+ * VarName.insertBefore(ElementCreate, Parent.childNodes[3]);
+ * طريقة اضافة عنصر فى المكان اللى انت عاوزة من الاب اللى انت عاوز يظهار فية جوة الابنا العنصار اللى انت  انشاتو بتختار المكان اللى هيظهار فية
+ *
+ *
+ * ------------- ازالة عنصر معين من مكانو ------ ------
+ *
+ * Element.removeChild(ElementParent.childNodes[3]);
+ *
+ *
+ * ---------------- نوع العنصار ----------------
+ * Element.childNodes[0].nodeName; نوع العنصار
+ *
+ * Element.childNodes[0].tagName; نوع العنصار و لازم يكون عنصار مش تكاست
+ *
+ * Element.childNodes[0].nodeValue; قيمة العنصار
+ *
+ * Element.childNodes[0].nodeType; نوع العنصار
+ *
+ * -- nodeType = Element = 1
+ * -- nodeType = text = 3
+ * -- nodeType = attribute = 2
+ * -- nodeType = comment = 8
+ *
+ * ---------------------- طريقة استنساخ عنصر كامل و وضعو فى عنصار ---------
+ *
+ * التراو لانو ياخد العنصار بالاطفال اللى جواه و الفلس بياخد الالتربيوت من غير التكاست او العنصار اللى جواه
+ * Element.childNodes[1].cloneNode(true);
+ *
+ * ----------------------------- الوصول الى الاب بتاع العنصر ---------------
+ * Element.parentNode;
+ *
+ * Element.parentElement;
+ *
+ * ------------------- الوصول الى الاشقاء بتوع العنصار -------------------
+ *
+ * Element.nextSibling.
+ *
+ * Element.nextElementSibling.
+ *
+ * Element.previousSibling.
+ *
+ * Element.previousElementSibling.
+ *
+ * ---------------------- طريقة انو انا اعمل فوكاس على عنصار ----------
+ *
+ * Element.focus();
+ *
+ * Element.blur();
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  */
 
 var i;
@@ -375,7 +436,184 @@ var video111div = document.getElementById("video111div"),
 
 video11btn.onclick = function () {
   "use strict";
-  // video111div.children.remove('active');
-  video112div.classList.toggle("color3498db");
-  console.log(video111div.children);
+  video112div.textContent = video111div.childNodes.className;
+  console.log(video111div.childNodes.textContent);
 };
+
+// video 12
+
+// First/last child | First/last Element child
+
+var video121div = document.getElementById("video121div"),
+  video122div = document.getElementById("video122div"),
+  video123div = document.getElementById("video123div"),
+  video124div = document.getElementById("video124div"),
+  video125div = document.getElementById("video125div");
+
+video122div.textContent = video121div.lastElementChild;
+
+console.log(video121div.lastChild);
+
+// video 13
+
+// Append child
+
+var video131div = document.getElementById("video131div"),
+  video132div = document.getElementById("video132div"),
+  video133div = document.getElementById("video133div"),
+  video134div = document.getElementById("video134div"),
+  video135div = document.getElementById("video135div");
+
+var video13createElement = document.createElement("div"),
+  video13text = document.createTextNode("Rovan Hossam");
+
+video13createElement.appendChild(video13text);
+
+video13createElement.className = "active";
+
+video131div.appendChild(video13createElement);
+
+// video 14
+
+// insert Before
+
+var video141div = document.getElementById("video141div"),
+  video142div = document.getElementById("video142div"),
+  video143div = document.getElementById("video143div"),
+  video144div = document.getElementById("video144div"),
+  video145div = document.getElementById("video145div");
+
+var video14createElement = document.createElement("div"),
+  video14text = document.createTextNode("Rovan Hossam");
+
+video14createElement.appendChild(video14text);
+
+video14createElement.className = "active";
+
+video141div.insertBefore(video14createElement, video141div.childNodes[3]);
+
+// video 15
+
+// remove child
+
+var video151div = document.getElementById("video151div"),
+  video152div = document.getElementById("video152div"),
+  video153div = document.getElementById("video153div"),
+  video154div = document.getElementById("video154div"),
+  video155div = document.getElementById("video155div");
+
+video151div.removeChild(video151div.childNodes[3]);
+
+// video 15
+
+// node[Name, Value, Type]
+
+var video161div = document.getElementById("video161div"),
+  video162div = document.getElementById("video162div"),
+  video163div = document.getElementById("video163div"),
+  video164div = document.getElementById("video164div"),
+  video165div = document.getElementById("video165div");
+
+// video162div.textContent = video161div.childNodes[0].nodeName;
+// video162div.textContent = video161div.childNodes[1].tagName;
+// video162div.textContent = video161div.childNodes[0].nodeValue;
+video162div.textContent = video161div.childNodes[0].nodeType;
+// nodeType = Element = 1
+// nodeType = text = 3
+// nodeType = attribute = 2
+// nodeType = comment = 8
+
+// video 17 ||||| ConeNode
+
+var video171div = document.getElementById("video171div"),
+  video172div = document.getElementById("video172div"),
+  video173div = document.getElementById("video173div"),
+  video174div = document.getElementById("video174div"),
+  video175div = document.getElementById("video175div");
+
+var video17copy = video171div.childNodes[1].cloneNode(true);
+
+video172div.appendChild(video17copy);
+
+// video 18 ||||| ParentNode, ParentElement
+
+var video181div = document.getElementById("video181div"),
+  video182div = document.getElementById("video182div"),
+  video183div = document.getElementById("video183div"),
+  video184div = document.getElementById("video184div"),
+  video185div = document.getElementById("video185div"),
+  video18btn = document.getElementById("video18btn");
+
+video182div.textContent = video18btn.parentNode.id;
+video183div.textContent = video18btn.parentElement.id;
+
+video18btn.onclick = function () {
+  "use strict";
+  this.parentNode.style.display = "None";
+};
+
+// video 19 |||||  next sibling, next element sibling
+
+var video191div = document.getElementById("video191div"),
+  video192div = document.getElementById("video192div"),
+  video193div = document.getElementById("video193div"),
+  video194div = document.getElementById("video194div"),
+  video195div = document.getElementById("video195div");
+
+video191div.childNodes[2].previousElementSibling.className = "backcolor";
+
+video192div.textContent = video191div.childNodes.textContent;
+
+// video 20 |||||  Focus اكون دايس على العنصار , Blur ابعد من على العنصار
+
+var video201div = document.getElementById("video201div"),
+  video202div = document.getElementById("video202div"),
+  video203div = document.getElementById("video203div"),
+  video204div = document.getElementById("video204div"),
+  video205div = document.getElementById("video205div"),
+  video20form = document.getElementById("video20form"),
+  video20input = document.getElementById("video20input");
+
+window.onload = function () {
+  "use strict";
+  video20input.focus();
+};
+
+// video 21 |||||  click
+
+var video21div = document.getElementById("video21div"),
+  video21btn = document.getElementById("video21btn");
+
+video21btn.onclick = function () {
+  "use strict";
+
+  this.parentElement.style.display = "None";
+};
+
+window.onload = function () {
+  "use strivt";
+  // كدا انا شغالت الكلاك ساعت ما الصفحة تحمل
+  // video21btn.click();
+  // طريقة انو انا اخلى الزورار يستانى قابل ما اخلية يشتغال
+  setTimeout(function () {
+    video21btn.click();
+  }, 2200);
+};
+
+// video 22 addEventListener
+
+// video 23 clientHeight || clientWidth
+
+// clientHeight = Viewable Area || المكان اللى ينفاع تشوفو
+// clientHeight = include padding || بتحساب الباداً بتاع العنصار
+// clientHeight = no border || مبتحسبش البوردار
+// clientHeight = no margin || مبتحسبش المارجان
+// clientHeight = no scroll || مبتحسبش الاسكراول
+
+var video231div = document.getElementById("video231div"),
+  video232div = document.getElementById("video232div"),
+  video233div = document.getElementById("video233div"),
+  video234div = document.getElementById("video234div"),
+  video235div = document.getElementById("video235div");
+
+  video232div.textContent = video231div.clientHeight + 'px';
