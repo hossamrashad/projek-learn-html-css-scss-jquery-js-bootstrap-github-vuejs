@@ -6,14 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Javascript Dom</title>
-  <link rel="shortcut icon" href="//via.placeholder.com/100x100/333" type="image/x-icon">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha512-tDXPcamuZsWWd6OsKFyH6nAqh/MjZ/5Yk88T5o+aMfygqNFPan1pLyPFAndRzmOWHKT+jSDzWpJv8krj6x1LMA==" crossorigin="anonymous" />
+  <link rel="shortcut icon" href="images/about.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha512-tDXPcamuZsWWd6OsKFyH6nAqh/MjZ/5Yk88T5o+aMfygqNFPan1pLyPFAndRzmOWHKT+jSDzWpJv8krj6x1LMA=="
+    crossorigin="anonymous" />
   <style>
     html,
     body {
       font-size: 20px;
       font-weight: bolder;
       text-transform: capitalize;
+    }
+
+    img {
+      width: 200px !important;
+      height: 200px !important;
     }
 
     .backcolor {
@@ -93,8 +100,26 @@
       text-align: center;
     }
 
-    .video271divactive{
+    .video271divactive {
       background-color: #333;
+    }
+
+    .video272div {
+      visibility: hidden;
+    }
+
+    .video272divactive {
+      visibility: visible;
+    }
+
+    .video28divcustom {
+      width: 300px;
+      height: 300px;
+      background-color: #349834;
+      color: #349;
+      border: 20px solid#333;
+      overflow: scroll;
+      direction: rtl;
     }
   </style>
 </head>
@@ -118,9 +143,9 @@
     <div id="video34div">Hossam Rashad</div>
     <div id="video35div">Hossam Rashad</div>
     <div id="video36div">
-      <img src="//via.placeholder.com/100x100/333" alt="333" />
-      <img src="//via.placeholder.com/100x100/3498db" alt="3498db" />
-      <img src="//via.placeholder.com/100x100/ddd" alt="ddd" />
+      <img src="images/portfolio-1.jpg" alt="333" class="img-fluid" />
+      <img src="images/portfolio-2.jpg" alt="3498db" />
+      <img src="images/portfolio-3.jpg" alt="ddd" />
       <button onclick="video3image()" style="padding: 10px 20px; align-items: center">
         click
       </button>
@@ -133,8 +158,8 @@
         <input type="text" name="test2" value="hello input 2" />
       </form>
       <form action="">
-        <input type="text" name="test3" value="hello input 3" />
-        <input type="password" name="test4" value="hello input 4"  autocomplete="current-password"/>
+        <input type="text" name="test3" value="hello input 3" autocomplete="username" />
+        <input type="password" name="test4" value="hello input 4" autocomplete="current-password" />
       </form>
       <div id="video39div"></div>
     </div>
@@ -390,25 +415,84 @@
   <hr><br>
   <h2 class="h2 text-center">video 27 scrollleft || scrolltop</h2>
   <div id="video271div" class="video271div">
-    <div id="video271divchild" class="video25d1ivchild">video 25 div</div>
   </div>
-  <div id="video272div"></div>
+  <div id="video272div" class="video272div">fid in scroll top</div>
   <div id="video273div"></div>
   <div id="video274div"></div>
   <div id="video275div"></div>
   <hr><br>
+  <h2 class="h1 text-center">video 28 cliient left ||| client top</h2>
+  <div id="video28divcustom" class="video28divcustom">video28divcustom</div>
+  <div id="video281div" class="video28div"></div>
+  <div id="video282div" class="video28div"></div>
   <hr><br>
+  <h2 class="h1 text-center">video 29 style </h2>
+<div id="video291div"></div>
+<div id="video292div"></div>
+<div id="video293div"></div>
+<div id="video294div"></div>
+<div id="video295div"></div>
   <hr><br>
+  <h2 class="h1 text-center">video 30 document | inputEncoding || lestModified || url</h2>
+  <div id="video301div"></div>
+  <div id="video302div"></div>
+  <div id="video303div"></div>
+  <div id="video304div"></div>
+  <div id="video305div"></div>
   <hr><br>
+  <h2 class="h1 text-center">vide31 creat element || creat text node || create comment</h2>
+  <div id="video311div"></div>
+  <div id="video312div"></div>
   <hr><br>
+  <h2 class="h1 text-center">video 32 create attribute </h2>
+  <div id="video321div">Rovan hossam</div>
   <hr><br>
+  <h2 class="h1 text-center">video33 event how to write</h2>
+  <div id="video331div">
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, cumque aspernatur nostrum at voluptas ipsa ex, et tempore magnam ducimus debitis suscipit quas dolor, placeat temporibus molestiae non libero dicta?
+  </div>
+  <button id="video33btn" class="btn btn-primary" onclick="changecolor()">Click To Change color In Html</button>
+  <button id="video331btn" class="btn btn-danger">Click To Change colorIn Js</button>
+  <button id="video332btn" class="btn btn-info">Click To Change colorIn Js</button>
+  <div id="video332div"></div>
+  <div id="video333div"> <h2 class="h1">yassna</h2></div>
+  <div id="video334div"></div>
+  <div id="video335div"></div>
   <hr><br>
-  <hr>
+  <h2 class="h1 text-center">video 34 event | onload | onscroll | onresize</h2>
+  <div id="video341div"></div>
+  <div id="video342div"></div>
+  <div id="video343div"></div>
+  <div id="video344div"></div>
+  <div id="video345div"></div>
+  <hr><br>
+  <h2 class="h1 text-center">video 35 onfocus | onblur | onsubmit </h2>
+  <div id="video351div">
+    <form action="" id="video35form">
+      <input type="text" id="video35input">
+      <input type="submit" value="go" class="btn btn-primary" id="video35submit">
+    </form>
+  </div>
+  <div id="video352div"></div>
+  <div id="video353div"></div>
+  <hr><br>
+  <h2 class="h1 text-center"> video 36 onclick || on dblclick || on mouse enter  </h2>
+  <div id="video361div"></div>
+  <div id="video362div"></div>
+  <div id="video363div"></div>
+  <div id="video364div"></div>
+  <div id="video365div"></div>
   <!-- :::::::::::: Jquery :::::::::::: -->
-  <script       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"       integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg=="       crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous"></script>
-      
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha512-Ah5hWYPzDsVHf9i2EejFBFrG2ZAPmpu4ZJtW4MfSgpZacn+M9QHDt+Hd/wL1tEkk1UgbzqepJr6KnhZjFKB+0A==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+    integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha512-Ah5hWYPzDsVHf9i2EejFBFrG2ZAPmpu4ZJtW4MfSgpZacn+M9QHDt+Hd/wL1tEkk1UgbzqepJr6KnhZjFKB+0A=="
+    crossorigin="anonymous"></script>
   <script src="js/javascript.dom.js"></script>
 </body>
 

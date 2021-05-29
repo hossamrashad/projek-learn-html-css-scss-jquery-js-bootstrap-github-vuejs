@@ -1,7 +1,7 @@
 /*jslint plusplus: true, evil: true */
 
 // jslint plusplus: true for error for ++
-// evil: true for error document write
+// evil: true for error document.write
 
 /*global console , alert , prompt , $ , document, write */
 
@@ -12,19 +12,19 @@
 /*jslint browser: true */
 /*global window */
 
-var video271div = document.getElementById("video271div"),
-  video272div = document.getElementById("video272div"),
-  video273div = document.getElementById("video273div"),
-  video274div = document.getElementById("video274div"),
-  video275div = document.getElementById("video275div");
+var myDiv = document.getElementById("main");
 
-video271div.onclick = function () {
+myDiv.onclick = function () {
   "use strict";
-  document.body.scrollTop += 100;
-  console.log(document.body.scrollTop);
-  if (document.body.scrollTop > 1000) {
-    this.classList.add("video271divactive");
+
+  document.documentElement.scrollTop += 100;
+
+  console.log(document.documentElement.scrollTop);
+
+  if (document.documentElement.scrollTop > 1000) {
+    this.classList.add("active");
+  }else{
+    this.classList.remove("active");
+
   }
 };
-
-  

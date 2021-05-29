@@ -16,6 +16,7 @@
  * object الكان اللى هو العناصر اللى موجوده فى الصفحة
  *
  * model اللى هو التراظ اللى هو نوع الابجاكت
+ *
  */
 // whats is do = programming interface for html & xml
 
@@ -189,6 +190,72 @@
 // clientHeight = include scroll || بيحسب الاسكراول
  * 
  * 
+ * Element.clientTop; بيحساب الابردار بتاع العنصار من فوق و من على الشمال و في حالة الديركشان عربى بيحساب حجم الاسكرال للعنصار و حجم الاسكرال بيكون 17 بيكسال 
+ * Element.clientLeft; بيحساب الابردار بتاع العنصار من فوق و من على الشمال و في حالة الديركشان عربى بيحساب حجم الاسكرال للعنصار و حجم الاسكرال بيكون 17 بيكسال 
+ * 
+ * 
+ * 
+ * ----------------------- style -----------------
+ * 
+ * Element.style.color = '#3498db';
+ * 
+ * ------------------ document----------------------
+ * 
+ * document.inputEncoding + ' نوع الترميز بتاع الصفحة';
+ * 
+ * document.lastModified + 'بتجيب اخار تعديل عملتو فى الصفحة ';
+ * 
+ * document.URL; بيجيب مسار الصفحة 
+ * 
+ * 
+ * 
+ * ------- creat element || creat text node || create comment -----------
+ * 
+ * Element =  document.createElement("div"),
+ * Element = document.createTextNode("text nod"),
+ * Element = document.createComment("start comment"),
+ * Element = .appendChild(Element);
+ * 
+ * ----------------- طريقة اضافه ارتربيوت للعنصار ---------
+ * 
+ * varName.document.createAttribute("class");
+ * 
+ * varName.value = "backcolor";
+ * 
+ * Element.setAttributeNode(varName);
+ * 
+ * 
+ *  ----------- مهمة --------------------
+ * 
+ * دى اللى بتخالى الزورار يظهار الاسكرال تو تاوب
+ * 
+ * document.documentElement.scrollTop > 1000
+ * 
+ * -- form -- 
+ * Element.onfocus
+ * 
+ * Element.onblur
+ * 
+ * Element.onsubmit
+ * 
+ * Element.onkeydown
+ * 
+ * Element.onkeyup
+ * 
+ * Element.onkeypress
+ * 
+ * 
+ * 
+ *  -- mouse -- 
+ * Element.onclick
+ * 
+ * Element.ondblclick
+ * 
+ * Element.oncontextmenu
+ * 
+ * Element.onmouseenter
+ * 
+ * Element.onmouseleave
  * 
  * 
  * 
@@ -270,7 +337,7 @@ video32div.innerHTML = "<h1>" + document.images[0].src + "</h1>";
 
     video34div.innerHTML = document.images[i].src + "<br>";
 
-    document.write(document.images[i].src + "<br>");
+    // document.write(document.images[i].src + "<br>");
   }
 })();
 
@@ -279,9 +346,9 @@ document.createElement("hr");
 for (i = 0; i < document.images.length; i = i + 1) {
   document.createElement("div").innerText = document.images[i].src;
 }
-var string = "//via.placeholder.com/100x100/333";
+var string = "images/portfolio-1.jpg";
 
-var image = (document.images.src = "//via.placeholder.com/100x100/333");
+var image = (document.images.src = "images/portfolio-1.jpg");
 
 function video3image() {
   "use strict";
@@ -329,7 +396,7 @@ var video51div = document.getElementById("video51div"),
 
 video51div.textContent = video51div.innerHTML;
 
-console.log(video51div);
+// console.log(video51div);
 
 video51div.innerHTML = "yes";
 
@@ -347,7 +414,7 @@ video61div.id = "backcolor";
 video61div.textContent = "hossam";
 video62div.className = "backcolor";
 
-video6img.src = "//via.placeholder.com/100x100/333";
+video6img.src = "images/portfolio-1.jpg";
 
 video6img.alt = video6img.src;
 
@@ -368,14 +435,14 @@ video71div.textContent = video7img.getAttribute("id");
 
 video72div.textContent = video7img.setAttribute(
   "src",
-  "//via.placeholder.com/100x100/333"
+  "images/portfolio-1.jpg"
 );
 
 video73div.setAttribute("name", "hossam");
 
 video72div.textContent = video71img.setAttribute(
   "src",
-  "//via.placeholder.com/100x100/333"
+  "images/portfolio-1.jpg"
 );
 
 video71img.title = document.title;
@@ -478,7 +545,7 @@ var video121div = document.getElementById("video121div"),
 
 video122div.textContent = video121div.lastElementChild;
 
-console.log(video121div.lastChild);
+// console.log(video121div.lastChild);
 
 // video 13
 
@@ -693,18 +760,229 @@ var video271div = document.getElementById("video271div"),
 
 video271div.onclick = function () {
   "use strict";
-  document.body.scrollTop += 100;
-  console.log(document.body.scrollTop);
-  if (document.body.scrollTop > 1000) {
-    this.classList.add("document.body.scrollTop");
+  document.documentElement.scrollLeft += 100;
+  // console.log(document.documentElement.scrollTop);
+  if (document.documentElement.scrollTop > 1000) {
+    this.classList.add("video271divactive");
+  } else {
+    this.classList.remove("video271divactive");
   }
 };
 
 window.onload = function () {
   "use strict";
-  document.body.scrollTop += 100;
-  console.log(document.body.scrollTop);
-  if (document.body.scrollTop > 1000) {
-    this.classList.add("document.body.scrollTop");
+
+  // console.log(document.documentElement.scrollTop);
+
+  if (document.documentElement.scrollTop > video272div.offsetHeight) {
+    setTimeout(function () {
+      video272div.classList.add("video272divactive");
+    }, 2000);
   }
+};
+
+// video 28 client left || client top
+// هو بيحساب الاحجم البوردار و الاسكرال و كمان علشان تشوف الاسكرال لازم تغير الديركشان الى عربى علشان يحسبو و حجم الاسكرال بيكون 17 بيكسال
+
+var video28divcustom = document.getElementById("video28divcustom"),
+  video281div = document.getElementById("video281div"),
+  video282div = document.getElementById("video282div");
+
+video281div.textContent = video28divcustom.clientTop;
+video282div.textContent = video28divcustom.clientLeft;
+
+// video 29 style
+
+var video291div = document.getElementById("video291div"),
+  video292div = document.getElementById("vido292div"),
+  video293div = document.getElementById("vido293div"),
+  video294div = document.getElementById("vido294div"),
+  video295div = document.getElementById("vido295div");
+
+video291div.style.backgroundColor = "#ff0000";
+video291div.style.color = "#00f";
+video291div.style.height = "30px";
+
+var video301div = document.getElementById("video301div"),
+  video302div = document.getElementById("video302div"),
+  video303div = document.getElementById("video303div"),
+  video304div = document.getElementById("video304div"),
+  video305div = document.getElementById("video305div");
+
+video301div.textContent = document.inputEncoding + " نوع الترميز بتاع الصفحة";
+
+video302div.textContent =
+  document.lastModified + "بتجيب اخار تعديل عملتو فى الصفحة ";
+
+// جابلى الصفحة كلها فى الكنسال
+// console.log(document.lastElementChild);
+
+video303div.textContent = document.URL;
+
+// vide31 creat element || creat text node || create comment
+
+var video311div = document.getElementById("video311div"),
+  video311createlement = document.createElement("div"),
+  video311text = document.createTextNode("text nod"),
+  video311commentstart = document.createComment("start comment"),
+  video311commentend = document.createComment("end comment");
+
+video311createlement.appendChild(video311commentstart);
+
+video311createlement.appendChild(video311text);
+
+video311div.appendChild(video311createlement);
+
+video311createlement.appendChild(video311commentend);
+
+// video 32 create attribute
+
+var video321div = document.getElementById("video321div"),
+  video32attribute = document.createAttribute("class");
+
+video32attribute.value = "backcolor";
+
+video321div.setAttributeNode(video32attribute);
+
+// video33 event how to write
+
+var video331div = document.getElementById("video331div"),
+  video333div = document.getElementById("video333div"),
+  video33btn = document.getElementById("video33btn"),
+  video331btn = document.getElementById("video331btn");
+
+video331btn.onclick = function changecolor1() {
+  "use strict";
+
+  video331div.style.color = "#f00";
+};
+// video331btn.onclick = changecolor1();
+
+function changecolor() {
+  "use strict";
+
+  video331div.style.color = "#3498db";
+}
+
+function changecolor2() {
+  "use strict";
+
+  video331div.style.color = "#138496";
+}
+video332btn.onclick = changecolor2;
+
+// video 34 event | onload | onscroll | onresize
+
+var video341div = document.getElementById("video341div"),
+  video342div = document.getElementById("video342div"),
+  video343div = document.getElementById("video343div"),
+  video344div = document.getElementById("video344div"),
+  video345div = document.getElementById("video345div");
+
+window.onload = function () {
+  "use strict";
+  video341div.style.backgroundColor = "#3498db";
+  video341div.style.height = "100px";
+  video341div.style.width = "100px";
+};
+
+window.onscroll = function () {
+  "use strict";
+  // بيحساب جميع المسافه اللى بيعملها الاسكرال
+  // console.log(document.documentElement.scrollTop);
+  if (document.documentElement.scrollTop > 9655) {
+    video342div.textContent = "yes";
+  } else {
+    video342div.textContent = " ";
+  }
+};
+
+window.onresize = function () {
+  "use strict";
+
+  if (document.width >= 1200) {
+    video343div.textContent = "window = 1200px ";
+  } else {
+    video343div.textContent = "window != 1200px ";
+  }
+};
+
+// video 35 onfocus | onblur | onsubmit
+
+var video351div = document.getElementById("video351div"),
+  video352div = document.getElementById("video352div"),
+  video35form = document.getElementById("video35form"),
+  video35input = document.getElementById("video35input"),
+  video35submit = document.getElementById("video35submit");
+
+video35input.onfocus = function () {
+  "use strict";
+
+  video352div.textContent = "focus Message";
+};
+
+video35input.onblur = function () {
+  "use strict";
+
+  // video352div.textContent = " ";
+
+  if (video35input.value == "") {
+    video352div.textContent = " it is embty ";
+  } else if (video35input.value.length < 10) {
+    video352div.textContent = " it is < 10 ";
+  }
+};
+
+video35input.onsubmit = function (e) {
+  e.preventDefault();
+};
+
+// video 36 onclick || on mouse enter
+
+var video361div = document.getElementById("video361div"),
+  video362div = document.getElementById("video362div"),
+  video363div = document.getElementById("video363div"),
+  video364div = document.getElementById("video364div"),
+  video365div = document.getElementById("video365div");
+
+video361div.textContent = " click";
+
+video361div.onclick = function () {
+  "use strict";
+  video362div.textContent = "you are click";
+};
+
+video361div.ondblclick = function () {
+  "use strict";
+  video362div.textContent = "you are dblclick";
+};
+// مينفعش تدوس كلاك يمين على العنصار 
+video361div.oncontextmenu = function (e) {
+
+  "use strict";
+
+  e.preventDefault();
+
+  video362div.textContent = "you are oncontextmenu";
+};
+
+video361div.onmouseenter = function () {
+
+  "use strict";
+  
+
+  video362div.textContent = "you are onmouseenter";
+};
+video361div.onmouseleave = function () {
+
+  "use strict";
+
+  video362div.textContent = "you are onmouseleave";
+};
+
+video361div.onkeypress = function () {
+
+  "use strict";
+
+  video362div.textContent = "you are onmousedown";
 };
