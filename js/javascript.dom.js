@@ -157,15 +157,41 @@
  * Element.blur();
  *
  *
+ * --------------- التعامل مع العرض و الطول ----------
  *
+ * clientHeight || clientWidth
  *
+ * clientHeight = Viewable Area || المكان اللى ينفاع تشوفو
+ * clientHeight = include padding || بتحساب الباداً بتاع العنصار
+ * clientHeight = no border || مبتحسبش البوردار
+ * clientHeight = no margin || مبتحسبش المارجان
+ * clientHeight = no scroll || مبتحسبش الاسكراول
  *
+ * ----
+ * scrollHeight || scrollWidth
  *
+ * All Area Include Invisible Area || بيجيب المساحة المخفية
  *
+ * Include padding || بيجيب البادانج بيحسبو
  *
+ * clientHeight = no border || مبتحسبش البوردار
  *
+ * clientHeight = no margin || مبتحسبش المارجان
  *
- *
+ * clientHeight = no scroll || مبتحسبش الاسكراول
+ * 
+ * 
+ * offsetHeight || offsetWidth
+// clientHeight = Viewable Area || المكان اللى ينفاع تشوفو
+// clientHeight = include padding || بتحساب الباداً بتاع العنصار
+// clientHeight = include border || بيحسب البوردار
+// clientHeight = no margin || مبتحسبش المارجان
+// clientHeight = include scroll || بيحسب الاسكراول
+ * 
+ * 
+ * 
+ * 
+ * 
  */
 
 var i;
@@ -616,4 +642,69 @@ var video231div = document.getElementById("video231div"),
   video234div = document.getElementById("video234div"),
   video235div = document.getElementById("video235div");
 
-  video232div.textContent = video231div.clientHeight + 'px';
+video232div.textContent = video231div.clientHeight + "px";
+
+// video 24 scrollHeight || scrollWidth
+/*
+  All Area Include Invisible Area || بيجيب المساحة المخفية 
+
+  Include padding || بيجيب البادانج بيحسبو
+
+  clientHeight = no border || مبتحسبش البوردار
+  clientHeight = no margin || مبتحسبش المارجان
+  clientHeight = no scroll || مبتحسبش الاسكراول
+
+
+  */
+
+var video241div = document.getElementById("video241div"),
+  video242div = document.getElementById("video242div"),
+  video243div = document.getElementById("video243div"),
+  video244div = document.getElementById("video244div"),
+  video245div = document.getElementById("video245div");
+
+video242div.textContent = video241div.clientHeight + "px";
+video243div.textContent = video241div.scrollHeight + "px";
+
+// video 25 offsetHeight || offsetWidth
+
+// clientHeight = Viewable Area || المكان اللى ينفاع تشوفو
+// clientHeight = include padding || بتحساب الباداً بتاع العنصار
+// clientHeight = include border || بيحسب البوردار
+// clientHeight = no margin || مبتحسبش المارجان
+// clientHeight = include scroll || بيحسب الاسكراول
+
+var video251div = document.getElementById("video251div"),
+  video252div = document.getElementById("video252div"),
+  video253div = document.getElementById("video253div"),
+  video254div = document.getElementById("video254div"),
+  video255div = document.getElementById("video255div");
+
+video252div.textContent = video251div.clientHeight + "px";
+video253div.textContent = video251div.scrollHeight + "px";
+
+// video 27
+
+var video271div = document.getElementById("video271div"),
+  video272div = document.getElementById("video272div"),
+  video273div = document.getElementById("video273div"),
+  video274div = document.getElementById("video274div"),
+  video275div = document.getElementById("video275div");
+
+video271div.onclick = function () {
+  "use strict";
+  document.body.scrollTop += 100;
+  console.log(document.body.scrollTop);
+  if (document.body.scrollTop > 1000) {
+    this.classList.add("document.body.scrollTop");
+  }
+};
+
+window.onload = function () {
+  "use strict";
+  document.body.scrollTop += 100;
+  console.log(document.body.scrollTop);
+  if (document.body.scrollTop > 1000) {
+    this.classList.add("document.body.scrollTop");
+  }
+};

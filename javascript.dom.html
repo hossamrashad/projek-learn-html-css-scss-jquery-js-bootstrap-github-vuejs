@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Javascript Dom</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha512-tDXPcamuZsWWd6OsKFyH6nAqh/MjZ/5Yk88T5o+aMfygqNFPan1pLyPFAndRzmOWHKT+jSDzWpJv8krj6x1LMA=="
-    crossorigin="anonymous" />
+  <link rel="shortcut icon" href="//via.placeholder.com/100x100/333" type="image/x-icon">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha512-tDXPcamuZsWWd6OsKFyH6nAqh/MjZ/5Yk88T5o+aMfygqNFPan1pLyPFAndRzmOWHKT+jSDzWpJv8krj6x1LMA==" crossorigin="anonymous" />
   <style>
     html,
     body {
@@ -60,11 +59,42 @@
       text-align: center;
     }
 
-    .video231div {
+    .video231div,
+    .video241div {
       padding: 20px;
       background-color: #eee;
       border: 10px solid #333;
       margin: 30px auto;
+      overflow: scroll;
+    }
+
+    .video241div {
+      width: 300px;
+      height: 300px;
+      margin: auto;
+    }
+
+    .video24d1ivchild {
+      height: 800px;
+      width: 800px;
+      background-color: #3498db;
+      color: #fff;
+    }
+
+    .video271div {
+      width: 150px;
+      height: 150px;
+      background-color: #3498db;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      color: #fff;
+      line-height: 150px;
+      text-align: center;
+    }
+
+    .video271divactive{
+      background-color: #333;
     }
   </style>
 </head>
@@ -104,7 +134,7 @@
       </form>
       <form action="">
         <input type="text" name="test3" value="hello input 3" />
-        <input type="password" name="test4" value="hello input 4" />
+        <input type="password" name="test4" value="hello input 4"  autocomplete="current-password"/>
       </form>
       <div id="video39div"></div>
     </div>
@@ -340,8 +370,32 @@
   <div id="video234div"></div>
   <div id="video235div"></div>
   <hr><br>
+  <h2 class="h2 text-center">video 24 scrollHeight || scrollWidth</h2>
+  <div id="video241div" class="video241div">
+    <div id="video241divchild" class="video24d1ivchild">video 23 div</div>
+  </div>
+  <div id="video242div"></div>
+  <div id="video243div"></div>
+  <div id="video244div"></div>
+  <div id="video245div"></div>
   <hr><br>
+  <h2 class="h2 text-center">video 25 offsitHeight || offsitWidth</h2>
+  <div id="video251div" class="video241div">
+    <div id="video251divchild" class="video25d1ivchild">video 25 div</div>
+  </div>
+  <div id="video252div"></div>
+  <div id="video253div"></div>
+  <div id="video254div"></div>
+  <div id="video255div"></div>
   <hr><br>
+  <h2 class="h2 text-center">video 27 scrollleft || scrolltop</h2>
+  <div id="video271div" class="video271div">
+    <div id="video271divchild" class="video25d1ivchild">video 25 div</div>
+  </div>
+  <div id="video272div"></div>
+  <div id="video273div"></div>
+  <div id="video274div"></div>
+  <div id="video275div"></div>
   <hr><br>
   <hr><br>
   <hr><br>
@@ -351,15 +405,10 @@
   <hr><br>
   <hr>
   <!-- :::::::::::: Jquery :::::::::::: -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
-    integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-    integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg=="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha512-Ah5hWYPzDsVHf9i2EejFBFrG2ZAPmpu4ZJtW4MfSgpZacn+M9QHDt+Hd/wL1tEkk1UgbzqepJr6KnhZjFKB+0A=="
-    crossorigin="anonymous"></script>
+  <script       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"       integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg=="       crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous"></script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha512-Ah5hWYPzDsVHf9i2EejFBFrG2ZAPmpu4ZJtW4MfSgpZacn+M9QHDt+Hd/wL1tEkk1UgbzqepJr6KnhZjFKB+0A==" crossorigin="anonymous"></script>
   <script src="js/javascript.dom.js"></script>
 </body>
 
