@@ -31,7 +31,7 @@
  *
  * -------------------------------- اختيار العنصار -----------------
  *
- * document.getElementById(" IdName ");                 ==
+ * document.getElementById("IdName ");                 ==
  *
  * document.getElementsByTagName('div')[0];             ==   First div
  *
@@ -583,7 +583,7 @@ video14createElement.appendChild(video14text);
 
 video14createElement.className = "active";
 
-video141div.insertBefore(video14createElement, video141div.childNodes[3]);
+video141div.insertBefore(video14createElement, video141div.childNodes[60]);
 
 // video 15
 

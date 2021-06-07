@@ -141,5 +141,6 @@
     "svn.ignoreMissingSvnWarning": true,
     "cSpell.enableFiletypes": [
         "!handlebars"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
