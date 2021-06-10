@@ -67,6 +67,7 @@ body {
  * white-space                 || normal; nowrap;
  * word-break                  || normal; break-all;
  * text-overflow               || clip; ellipsis;
+ *
  * font-family                 || "Times New Roman", Times, serif; serif; sans-serif;
  * font-size
  * || 12px; from parent body 16px 1em; from html 32px 2rem; from width screen 100 = 1vw = 100%  5vw;
@@ -75,6 +76,7 @@ body {
  * font-weight                 || normal; bold; 700;
  * font-style                  
  * || normal; italic; list-style-type: "\f2cc"; font-family: fontawesome;
+ *
  *                             || inherit
  * cursor                      || pointer;
  * float                       || none; left; right; 

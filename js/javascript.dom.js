@@ -889,11 +889,14 @@ window.onload = function () {
 window.onscroll = function () {
   "use strict";
   // بيحساب جميع المسافه اللى بيعملها الاسكرال
-  // console.log(document.documentElement.scrollTop);
-  if (document.documentElement.scrollTop > 9655) {
+  console.log(document.documentElement.scrollTop);
+  if (document.documentElement.scrollTop > 9755) {
     video342div.textContent = "yes";
+    video341div.textContent = "rovan";
   } else {
     video342div.textContent = " ";
+    video341div.textContent = "hossam ";
+
   }
 };
 
