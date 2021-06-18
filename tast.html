@@ -4,79 +4,105 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
+    <title>Test</title>
     <style>
-      html,
-      body {
-        height: 100%;
-      }
-      html {
-        display: table;
-        width: 100%;
-      }
-      body {
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
-        font-family: georgia;
-        font-size: 230%;
-        line-height: 1em;
-        white-space: nowrap;
-      }
-
-      [title] {
-        position: relative;
-        display: inline-block;
-        box-sizing: border-box; /*border-bottom:.5em solid;*/
-        line-height: 2em;
-        cursor: pointer;
-      }
-
-      [title]:before {
-        content: attr(title);
-        font-family: monospace;
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        left: 50%;
-        margin-left: -50%;
-        font-size: 40%;
-        line-height: 1.5;
-        background: black;
-      }
-      [title]:hover:before,
-      :target:before {
-        background: black;
-        color: yellow;
-      }
-
-      [title] [title]:before {
-        margin-top: 1.5em;
-      }
-      [title] [title] [title]:before {
-        margin-top: 3em;
-      }
-      [title] [title] [title] [title]:before {
-        margin-top: 4.5em;
-      }
-
-      [title]:hover,
-      :target {
-        position: relative;
-        z-index: 1;
-        outline: 50em solid rgba(255, 255, 255, 0.8);
-      }
+      .one {
+  background-color:  #333;
+  height:  100px;
+  width:  49%;
+}
+.tow {
+  color:  #fff;
+  text-align:  center;
+  height:  100%;
+  line-height:  100px;
+}
     </style>
+    <!-- <style>
+      body {
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+      }
+      h1 {
+        font-family: Bebus Neue;
+        font-size: 3rem;
+        color: #fff;
+      }
+      form {
+        max-width: 40vw;
+        display: flex;
+        flex-direction: column;
+      }
+      form label {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+      }
+      form input {
+        border: 2px solid lightslategray;
+        height: 40px;
+        border-radius: 3px;
+        padding: 5px;
+        font-size: 1rem;
+        outline: none;
+      }
+      #div11,
+      #div12,
+      #div13,
+      #div14,
+      #div15 {
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+        border: 5px solid #3498db;
+        background-color: #eee;
+        color: #333;
+      }
+      #div-show {
+        display: block;
+        background-color: bisque;
+        height: 200px;
+        border: 5px solid#f00;
+        width: 100%;
+        font-size: 35px;
+        text-align: center;
+        line-height: 200px;
+        color: #333;
+      }
+    </style> -->
   </head>
   <body>
-   
-    
-
+    <!-- <form action="">
+      <label for="search">choose your magical house</label>
+      <input
+        list="input-search"
+        id="search"
+        name="search"
+        placeholder="type here..."
+      />
+      <datalist id="input-search">
+        <option value="how to become a hacker" data-element=".div11"></option>
+        <option value="how to become a coder" data-element=".div12"></option>
+        <option
+          value="how to become a programmer"
+          data-element=".div13"
+        ></option>
+        <option value="how to become a teacher" data-element=".div14"></option>
+        <option value="how to become a dancer" data-element=".div15"></option>
+         <option value="how to become a musician" data-element=""></option>
+        <option value="how to become a chefs" data-element=""></option>
+        <option value="how to become a rapper" data-element=""></option> 
+      </datalist>
+    </form> -->
+    <div class="one">
+      <div class="tow">Rovan Hossam
+      </div>
+     </div>
     <script src="js/test.js"></script>
-    
-    <script>
-      
-    </script>
   </body>
 </html>

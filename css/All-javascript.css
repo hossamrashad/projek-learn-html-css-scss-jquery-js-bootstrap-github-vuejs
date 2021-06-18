@@ -1,0 +1,222 @@
+html,
+body {
+  font-size: 18px;
+}
+
+.parent-grid-1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(100%, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  gap: 0px 10px;
+}
+
+.parent-grid-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(48%, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+  gap: 0px 10px;
+}
+
+.parent-grid-3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(31%, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
+  gap: 0px 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.hrStyle {
+  height: 10px;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, #2980b9), color-stop(20%, #27ae60), color-stop(40%, #27ae60), color-stop(40%, #d35400), color-stop(60%, #d35400), color-stop(60%, #8e44ad), color-stop(80%, #8e44ad), color-stop(80%, #c0392b));
+  background-image: linear-gradient(to right, #2980b9 20%, #27ae60 20%, #27ae60 40%, #d35400 40%, #d35400 60%, #8e44ad 60%, #8e44ad 80%, #c0392b 80%);
+  width: 100%;
+  border-radius: 3px;
+}
+
+.parent-disc-code {
+  position: relative;
+}
+
+.parent-disc-code pre.pre-language-html {
+  position: relative;
+  padding: 40px 20px 0px 20px;
+  direction: ltr;
+  background: #2d2d2d;
+}
+
+.parent-disc-code pre.pre-language-html::before {
+  content: "HTML";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #16a085;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 1px 10px;
+  letter-spacing: 3px;
+}
+
+.parent-disc-code pre.pre-language-html code.code-language-html {
+  direction: ltr;
+  color: #ccc;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 1em;
+  text-align: left;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.parent-disc-code pre.pre-language-html code.code-language-html .token,
+.parent-disc-code pre.pre-language-html code.code-language-html .equal,
+.parent-disc-code pre.pre-language-html code.code-language-html .punctuation {
+  color: #ccc;
+}
+
+.parent-disc-code pre.pre-language-html code.code-language-html .tag,
+.parent-disc-code pre.pre-language-html code.code-language-html .attr-name {
+  color: #e2777a;
+}
+
+.parent-disc-code pre.pre-language-html code.code-language-html .comment {
+  color: #999;
+}
+
+.parent-disc-code pre.pre-language-html code.code-language-html .attr-value,
+.parent-disc-code pre.pre-language-html code.code-language-html .token.string,
+.parent-disc-code pre.pre-language-html code.code-language-html .token.char,
+.parent-disc-code pre.pre-language-html code.code-language-html .token.regex,
+.parent-disc-code pre.pre-language-html code.code-language-html .token.variable {
+  color: #7ec699;
+}
+
+.parent-disc-code {
+  padding: 0;
+  position: relative;
+}
+
+.parent-disc-code pre.pre-language-css {
+  position: relative;
+  padding: 40px 20px 0px 20px;
+  direction: ltr;
+  background: #2d2d2d;
+}
+
+.parent-disc-code pre.pre-language-css::before {
+  content: "SCC & SCSS";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #c0392b;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 1px 10px;
+  letter-spacing: 3px;
+}
+
+.parent-disc-code pre.pre-language-css code.code-language-css {
+  direction: ltr;
+  color: #ccc;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 1em;
+  text-align: left;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.parent-disc-code pre.pre-language-css code.code-language-css .element {
+  color: #7ec699;
+}
+
+.parent-disc-code pre.pre-language-css code.code-language-css .token {
+  color: #ccc;
+}
+
+.parent-disc-code pre.pre-language-css code.code-language-css .property {
+  color: #00bcd4;
+}
+
+.parent-disc-code pre.pre-language-css code.code-language-css .number {
+  color: #ffeb3b;
+}
+
+.parent-disc-code pre.pre-language-css code.code-language-css .unit {
+  color: #fff;
+}
+
+.parent-disc-code pre.pre-language-css code.code-language-css .comment {
+  color: #9e9e9e;
+}
+
+.parent-disc-code {
+  padding: 0;
+  position: relative;
+}
+
+.parent-disc-code pre.pre-language-javascript {
+  position: relative;
+  padding: 40px 20px 0px 20px;
+  direction: ltr;
+  background: #2d2d2d;
+}
+
+.parent-disc-code pre.pre-language-javascript::before {
+  content: "JAVASCRIPT";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #c5b100;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 1px 10px;
+  letter-spacing: 3px;
+}
+
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript {
+  direction: ltr;
+  color: #ccc;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 1em;
+  text-align: left;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .comment {
+  color: #999;
+}
+
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .var {
+  color: #2196f3;
+}
+
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .var-name {
+  color: #76efff;
+}
+
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .document,
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .token,
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .innerHTML {
+  color: #ffeb3b;
+}
+
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .element {
+  color: #7ec699;
+}
+
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .string {
+  color: #e2777a;
+}
+/*# sourceMappingURL=All-javascript.css.map */

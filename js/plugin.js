@@ -38,7 +38,10 @@
  * NaN = not Anumber
  * symbol
  * ---- typeof ------ typeof var;
- *
+ * علشان اجمع رقم بعد الاستارانج
+ * 
+ * var number = 10 + 12 + " hossam " + (20 + 13);
+ * 
  * --------------- Output To Screen ----------
  * 1 alert
  * 2 document.write();
@@ -284,9 +287,13 @@ var mainPrice = 450,
   myBigDiscount = 250;
 
 document.getElementById("video-7").innerHTML = mainPrice;
-document.getElementById("video-71").innerHTML = mainPrice - mySmallDiscount; // 450 - 50 = 400
-document.getElementById("video-72").innerHTML = mainPrice - myMediumDiscount; // 450 - 100 = 350
-document.getElementById("video-73").innerHTML = mainPrice - myBigDiscount; // 450 - 250 = 200
+// 450 - 50 = 400
+document.getElementById("video-71").innerHTML = mainPrice - mySmallDiscount;
+// 450 - 100 = 350
+document.getElementById("video-72").innerHTML = mainPrice - myMediumDiscount;
+// 450 - 250 = 200
+document.getElementById("video-73").innerHTML = mainPrice - myBigDiscount;
+
 // video 8
 // data type
 /** typeof بيعرافك نوع العنصر من انواع الدات تيب
@@ -299,8 +306,8 @@ document.getElementById("video-73").innerHTML = mainPrice - myBigDiscount; // 45
  * NaN = not Anumber
  * symbol
  */
-var // Boolean
-  hasdiscount = true;
+// Boolean
+var hasdiscount = true;
 if (hasdiscount == true) {
   var mainprice = 400;
 } else {
