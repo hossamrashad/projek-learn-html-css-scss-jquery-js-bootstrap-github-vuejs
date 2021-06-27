@@ -35,5 +35,67 @@
     .
      this is text
      <!--  -->
+     - بتعمل انكلود لصفحة الفاريبارز و صفحة الاميكسان 
+     علشان تستدعى الفاريبال فى الصفحة لو هو كلاس 
+     div(class="child-tow " + varNameTow)
+
+     //-  طريقة طباعة العنصر زاى مهو مكتوب فى المتغير 
+     div(class="text-center") name is: #{bold}
+
+     //- طريقة طباعة العنصر من غير ما يكون زاى مهو مكتوب فى الفاريبال يطبعو زاى الاتش تى الى ام مخرجات 
+      div(class="text-center h3") name is: !{bold}
+
+      //- طريقة استخدام عناصر الجافا اسكربت مع العنصر 
+      div(class="text-center h3") name is: #{bold.toUpperCase()}
+      
+      <!-- طريقة استدعاء الميكسان  -->
+      +mixinName
+      +price('100$')
+
+      <!-- طريقة عمل العنصر بالاك علشان لو انت هتغيرو او هتضيف علية فى صافحة تانية  -->
+      block pageTitle
+       title learn pugjs homepage
+       <!-- لو هتغيرو -->
+       block pageTitle
+        title learn pugjs about page
+       <!-- لو هتضيف علية قابو او بعدو  -->
+       block append pageTitle
+          title learn pugjs homepage + append
+       block append pageTitle
+          title learn pugjs homepage + prepend
+
+    // طريقة اضافة الارترابيوت للعنصار ولازام يكون القوس لازق فى العنصارو علشان تحط الاتربيوت تانى بتفصل بينهم بى فاصلة  
+    div(class="container" id="main") 
+
+    // طريقة اضافة استيل للعنصر الطريقة الاول
+    p(class="lead" style=" background-color: red; color: #fff ") 
+    // الطريقة التانية لاضافة الاستسل من خلال الابجاكت لو عنداك ابجاكت فى الجى اس
+    p(class="lead", style={'background-color': 'red', 'color': '#fff' }) 
+    p(class="lead", style={color: 'red'})
+
+    //- طرقة استخدام المتغير فى العنصر 
+    - var varName = 'font'
+    div(class=varName)
+    //- طريقة اساتخدام المتغير مع كلاس تانى
+    div(class="child " + varName) 
+    //- طريقة استخدام المتغير من صفحة خارجية  بعد استدعا الصفحة 
+    div(class="child-tow " + varNameTow)
+
+    //-  طريقة انو انت تطلع العنصر زاى ميكون مكتوب فى الاتش تى ال ام
+    div= 'this is a <b>good</b>  days'
+
+    //- المتغير اللى انت عاوز تستخدمو فى كل مكان
+    div(class="name") name is: #{Name}
+    //-  طريقة طباعة العنصر زاى مهو مكتوب فى المتغير 
+      div(class="text-center") name is: #{bold}
+      //- طريقة طباعة العنصر من غير ما يكون زاى مهو مكتوب فى الفاريبال يطبعو زاى الاتش تى الى ام مخرجات 
+      div(class="text-center h3") name is: !{bold}
+      //- طريقة استخدام عناصر الجافا اسكربت مع العنصر 
+      div(class="text-center h3") name is: #{bold.toUpperCase()}
+      //- طريقة طباعة المتغير من غير ما يكون مخارج المتغير يعنى يعدى الكود و يتعامل معاه على انو استرنج
+      div(class="text-center") code \#{bold}
+
+      //- طريقة كتابة العنصر جو عنصر بطريقة الباج
+      div hossam #[b(class="rashad h2") rashad] ahmed
   </body>
 </html>
