@@ -1,0 +1,99 @@
+include include-pugjs/variables.pug
+include include-pugjs/mixin.pug
+
+doctype 
+html 
+  head(lang='en') 
+    //- start head
+    //- الانكلود لصفحة خارجية فيها مسارات ملفات
+    include include-pugjs/header.pug
+    block pageTitle
+      title learn pugjs homepage
+    //- start head include
+  body
+    //- start body
+    block mainText
+      div(class="lead") main text in home page 
+    .text hossam rashad
+    div
+      h2 hossam
+      ul 
+        li html 
+        ul 
+          li pugjs
+        li css 
+          ul 
+            li scss 
+        li javascript 
+          ul 
+            li jquery 
+            li vuejs
+
+      +skillList
+      div: a: img
+      //- start comment
+      // start comment
+      // code 
+        code 1
+        code 2
+      p 
+        | hossam 
+        b rashad 
+        |
+        | this is text
+
+        |
+        |
+        .
+          this is text
+    // طريقة اضافة الارترابيوت للعنصار ولازام يكون القوس لازق فى العنصارو علشان تحط الاتربيوت تانى بتفصل بينهم بى فاصلة  
+    div(class="container" id="main") back ground color red
+    p.lead lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore culpa cum adipisci beatae porro minima suscipit ducimus error. Atque possimus dignissimos harum commodi ad culpa quaerat? Veniam ut eos aliquid.
+    p#lead lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore culpa cum adipisci beatae porro minima suscipit ducimus error. Atque possimus dignissimos harum commodi ad culpa quaerat? Veniam ut eos aliquid.
+    // طريقة اضافة استيل للعنصر الطريقة الاول
+    p(class="lead" style=" background-color: red; color: #fff ") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    // الطريقة التانية لاضافة الاستسل من خلال الابجاكت لو عنداك ابجاكت فى الجى اس
+    p(class="lead", style={'background-color': 'red', 'color': '#fff' }) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    p(class="lead", style={color: 'red'}) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    - var varName = 'font'
+    //- طرقة استخدام المتغير فى العنصر 
+    div(class=varName) parent 
+      //- طريقة اساتخدام المتغير مع كلاس تانى
+      div(class="child " + varName) child
+        //- طريقة استخدام المتغير من صفحة خارجية  بعد استدعا الصفحة 
+      div(class="child-tow " + varNameTow) child-tow
+      //-  طريقة انو انت تطلع العنصر زاى ميكون مكتوب فى الاتش تى ال ام
+      div= 'this is a <b>good</b>  days'
+        //- طريقة انو انت تكتاب العنصر 
+      div!= 'this is a <b>good</b>  days'
+      //- التكرار فى العناصر 
+      ul 
+        - for (var x = 0; x<= 10; x++)
+          li item
+          //- التكرار
+          li #{x}
+      //- المتغير اللى انت عاوز تستخدمو فى كل مكان
+      div(class="name") name is: #{Name}
+
+      //-  طريقة طباعة العنصر زاى مهو مكتوب فى المتغير 
+      div(class="text-center") name is: #{bold}
+
+      //- طريقة طباعة العنصر من غير ما يكون زاى مهو مكتوب فى الفاريبال يطبعو زاى الاتش تى الى ام مخرجات 
+      div(class="text-center h3") name is: !{bold}
+
+      //- طريقة استخدام عناصر الجافا اسكربت مع العنصر 
+      div(class="text-center h3") name is: #{bold.toUpperCase()}
+
+      //- طريقة طباعة المتغير من غير ما يكون مخارج المتغير يعنى يعدى الكود و يتعامل معاه على انو استرنج
+      div(class="text-center") code \#{bold}
+
+      //- طريقة كتابة العنصر جو عنصر بطريقة الباج
+      div hossam #[b(class="rashad h2") rashad] ahmed
+      //- طريقة طباعة الميكسان اللى انا عملتو 
+      +skillList
+      //- المكسان دى بستخدمها فى امكن كتير و التحكم فيها من مكان معين 
+      +price('100$')
+      +price('200$')
+    //- الانكلود لصفحة خارجية فيها مسارات ملفات
+    include include-pugjs/footer.pug
+    //- end body 

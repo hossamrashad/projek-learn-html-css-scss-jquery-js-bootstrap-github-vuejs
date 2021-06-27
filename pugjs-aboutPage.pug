@@ -1,0 +1,16 @@
+//-  كدا انا عمالت اكستاند لصفحة الاهوم بادج كاملة 
+extends pugjs-homePage.pug
+block mainText
+  div(class="lead") main text in about page
+  //-  غيارت البادج تايتال لانو انا عاملو فى بلاج
+block pageTitle
+  title learn pugjs about
+
+//- طريقة اضافة على العنصر اللى موجود عنصار تانى 
+block append  mainText
+  div(class="second lead") second child about page
+//- بضيف العنصار قابل العنصار اللى انت عملو بلاك
+block prepend  mainText
+  div(class="second lead") second child about page
+//- فكراه البلاك انو انت تخالى العنصر فى بلاك و تستدعية و لو عاوز تغيرو فى صفحة اللى انت مستدعية فيها بتغيرو 
+

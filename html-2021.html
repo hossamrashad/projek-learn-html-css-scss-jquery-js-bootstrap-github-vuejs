@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--  -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- هو الوصف اللى بيظهار تحت الصفحة فى البحث على جوجل  -->
+    <meta name="description" content="description" />
+    <title>Html 2021</title>
+    <link
+      rel="shortcut icon"
+      href="http://placehold.it/60x60"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/All-style.css" />
+    <style>
+      body {
+        padding: 0 30px;
+      }
+      video::cue {
+        font-size: 200%;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+      b                       => bold
+      strong                  => bold
+      i                       => italic
+      em                      => emphasized
+      mark                    => marked text
+      u                       => underline
+      smaller                 => smaller text
+      del                     => deleted
+      ins                     => inserted text
+      sub                     => subscript
+      sup                     => superscript
+
+      ********************* a ***************
+      href                    = " mailto:bibo2010508@yahoo.com ", 
+      target                  = "_blank"
+      title                   = " "
+      
+      ******************* img ************************
+      src                    = ""
+      alt                    = " text "
+      width                  = "100px"
+      height                 = "100px"
+
+      ***************** ul ol dl ************************
+      ----- ol
+      reversed
+      start="10"
+      type="i"
+      ----li
+      value="12"
+      ----- dl
+      dt
+      dd
+
+      ************************** table ***************
+      table   || border="1" cellpadding=2px
+      <caption>Fall Name</caption>
+       thead > tr > th att colspan="2"
+       tbody > tr > td
+       tfoot > tr > td
+
+       ****************** html5 semantic ********
+       header
+       nav
+       main
+       article
+       aside
+       section
+       figure
+       figcaption
+       footer
+
+       ******************************* audio ************
+      <audio controls autoplay loop muted>
+      <source src="audio/audio-1.mp3" type="audio/mpeg">
+      <source src="audio/audio-1.ogg" type="audio/ogg">
+      <source src="audio/audio-1.wav" type="video/wav">
+      your browser not support audio
+      </audio>
+
+      **************************** video *************
+      <video
+      controls
+      autoplay
+      loop
+      muted
+      width="70%"
+      height="600PX"
+      poster="images/landing.jpg"
+    >
+      <source src="video/55.mp4" type="video/mp4" />
+      <source src="video/55.ogg" type="video/ogg" />
+      your browser not support video
+      <track default src="video/55.vtt" kind="subtitles" srclang="en" label="english"/>
+      <track src="video/55.vtt" kind="subtitles" srclang="ar" label="arabic"/>
+    </video>
+
+    ********************************* form ***************
+    action="" page to send data to the page
+    method="" get post 
+    form action="" method="" novalidate target="_blank"
+    label for="" = id in input
+    input type="text" required placeholder="Uer Name" value="" name="user" autofocus minlength="10" maxlength="20" readonly disabled
+    input type="hidden" || داه انبوت ماخفى 
+    input type="reset" value="reset" || لاعادة الكتابة فى الحقل و مسح اللى انا كتبتو 
+    input type="color" || للالوان 
+    input type="range" min="0" max="100" step="10" value="0" || شريط  بيتحارك 
+    input type="number"  min="10" max="50" step="5"
+    input type="radio"
+    input type="checkbox"
+    select multiple => optgroup => option selected
+    textarea cols="30"  rows="10" placeholder="text area"
+    input type="file"
+    input type="search"
+    input type="url"
+    input type="date"
+    input type="month"
+    input type="time"
+
+    input list="programming" name="programming" placeholder="programming"
+    datalist id="programming"
+    option value="one"
+
+    ************** q & blockquote *******************
+    q & blockquote
+
+    **************************** wbr ***********************
+    wbr = break
+
+    **************** bdi ****************************
+    bdi || تغير اتجاه الكلاف فى السطر اللى بين الوسم داه
+
+    ******************** pre & code *****************
+    pre code
+
+    *********************** iframe ********************** 
+    iframe title="page" src="" frameborder="0" width="100%" height="800px"
+     -->
+    <ul class="mune-fixed">
+      <li><a href="learn-sass.html">scss</a></li>
+      <li><a href="learnCss2021.html">Css 2021</a></li>
+      <li><a href="javescriept.html">javascript </a></li>
+      <li><a href="jquery-learn.html">jquery</a></li>
+      <li><a href="template-one-2021.html">template html & css 2021</a></li>
+    </ul>
+
+    <!-- Start -->
+    <dl>
+      <dt>Html</dt>
+      <dd>Language</dd>
+      <dd>Web</dd>
+    </dl>
+    <p>table</p>
+    <table border="1" cellpadding="2px">
+      <caption>
+        Fall Name
+      </caption>
+      <thead>
+        <tr>
+          <th>Rovan</th>
+          <th>Hossam</th>
+          <th>Rashad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">one</td>
+          <td>tow</td>
+        </tr>
+      </tfoot>
+    </table>
+    <table>
+      <caption>
+        Color names and values
+      </caption>
+      <tbody>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">HEX</th>
+          <th scope="col">HSLa</th>
+          <th scope="col">RGBa</th>
+        </tr>
+        <tr>
+          <th scope="row">Teal</th>
+          <td><code>#51F6F6</code></td>
+          <td><code>hsla(180, 90%, 64%, 1)</code></td>
+          <td><code>rgba(81, 246, 246, 1)</code></td>
+        </tr>
+        <tr>
+          <th scope="row">Goldenrod</th>
+          <td><code>#F6BC57</code></td>
+          <td><code>hsla(38, 90%, 65%, 1)</code></td>
+          <td><code>rgba(246, 188, 87, 1)</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <audio controls autoplay loop muted>
+      <source src="audio/audio-1.mp3" type="audio/mpeg" />
+      <source src="audio/audio-1.ogg" type="audio/ogg" />
+      <source src="audio/audio-1.wav" type="video/wav" />
+      your browser not support audio
+    </audio>
+    <video
+      controls
+      loop
+      muted
+      width="70%"
+      height="200PX"
+      poster="images/landing.jpg"
+    >
+      <source src="video/55.mp4" type="video/mp4" />
+      <source src="video/55.ogg" type="video/ogg" />
+      your browser not support video
+      <track
+        default
+        src="video/55.vtt"
+        kind="subtitles"
+        srclang="en"
+        label="english"
+      />
+      <track src="video/55.vtt" kind="subtitles" srclang="ar" label="arabic" />
+    </video>
+    <hr />
+    <form action="" method="" novalidate target="_blank">
+      <label for="">text</label>
+      <input
+        type="text"
+        required
+        placeholder="Uer Name"
+        value=""
+        name="user"
+        autofocus
+        minlength="10"
+        maxlength="20"
+      />
+      <input type="hidden" name="" id="" />
+      <input type="reset" value="reset" />
+      <label for="color">color</label>
+      <input type="color" name="color" id="color" />
+      <input
+        type="range"
+        name="range"
+        id=""
+        min="0"
+        max="100"
+        step="10"
+        value="0"
+      />
+      <input type="number" name="number" id="" min="10" max="50" step="5" />
+      <hr />
+      <input id="window" type="radio" name="window" value="window" />
+      <label for="window">windows</label>
+      <br />
+      <input id="mac" type="radio" name="mac" value="mac" />
+      <label for="mac">mac</label>
+      <hr />
+      <input id="window1" type="checkbox" name="os" value="windows" checked />
+      <label for="window1">windows</label>
+      <br />
+      <input id="mac1" type="checkbox" name="mac" value="mac" />
+      <label for="mac1">mac</label>
+      <br />
+      <hr />
+      <label for="book">choose book</label>
+      <select name="book" id="book" multiple>
+        <optgroup label="books 1">
+          <option value="book-1">book 1</option>
+          <option value="book-2">book 1</option>
+          <option value="book-3">book 1</option>
+        </optgroup>
+        <optgroup label="books 2">
+          <option value="book-4" selected>book 1</option>
+          <option value="book-5">book 1</option>
+          <option value="book-6">book 1</option>
+        </optgroup>
+      </select>
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="text area"
+      ></textarea>
+      <br />
+      <hr />
+      <input type="file" name="" id="" />
+      <br />
+      <hr />
+      <input type="search" name="" id="" placeholder="search" />
+      <br />
+      <hr />
+      <input type="url" name="" id="" placeholder="url" />
+      <br />
+      <hr />
+      <input type="date" name="" id="" />
+      <br />
+      <hr />
+      <input type="month" name="" id="" />
+      <br />
+      <hr />
+      <input type="time" name="" id="" />
+      <br />
+      <hr />
+      <input list="programming" name="programming" placeholder="programming" />
+      <datalist id="programming">
+        <option value="one0"></option>
+        <option value="tow0"></option>
+        <option value="three0"></option>
+        <option value="four0"></option>
+        <option value="five0"></option>
+      </datalist>
+      <br />
+      <hr />
+      <input type="submit" value="send" />
+    </form>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <q
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos amet sed,
+      modi vero molestias et quas aliquid, quae illo pariatur, fugiat impedit
+      expedita aspernatur ipsum rerum placeat quis consectetur fugit?</q
+    >
+    <hr />
+    <blockquote>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, earum
+      culpa voluptatem, magni ab obcaecati quisquam voluptatum aspernatur quas
+      delectus minus, sit necessitatibus est quae tempora voluptates atque
+      facere repellat?
+    </blockquote>
+    <button>click</button>
+    <p>
+      Loremipsumdolorsitametconsecteturadi<wbr />pisicingelitQuiaearumculpavoluptatemmagniabobcaecatiquisquamv<wbr />oluptatumaspernaturquasdelectusminussitnecessitatibusestquaetemporavoluptatesatque
+      facererepellat?
+    </p>
+    <p>السلام 2 welcome</p>
+    <p><bdi>السلام</bdi> 2 welcome</p>
+    <pre>
+      <code>
+        var x = 500;
+        var w = 200;
+        consol.log(x + w);
+      </code>
+    </pre>
+    <iframe
+      title="page"
+      src="https://hossamrashad.github.io/images-in-github/"
+      frameborder="0"
+      width="100%"
+      height="800px"
+    ></iframe>
+    <!-- End -->
+    <script src="js/test.js"></script>
+  </body>
+</html>
