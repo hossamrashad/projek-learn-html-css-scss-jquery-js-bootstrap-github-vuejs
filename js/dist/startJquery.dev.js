@@ -1,3 +1,5 @@
+"use strict";
+
 /* global document, console, alert, prompt, $*/
 
 /*
@@ -31,6 +33,7 @@
  * compressed  هش هتعادالى على الجى كويرى
  * uncompressed  مش مدغوطو و هتعدل عليها 
  */
+
 /* تقدار تستخدام الفنكشان كدا بس الفرق انو دى مش بتستنى الصفحة تحامل
 وداه الشورط كود
 $(function () {
@@ -39,24 +42,27 @@ $(function () {
 });
 */
 // الشرط كواد للدكيمانت رادى
-$(function () {
-  // My Code Here
-});
-// Events = 1 - click 2 - dblclick
+$(function () {// My Code Here
+}); // Events = 1 - click 2 - dblclick
+
 $(document).ready(function () {
   "use strict";
+
   $("#jqvidero2 .jqpvideo2").hide();
-});
-// طريقة انو انت تكتاب خواص السي اس اس
+}); // طريقة انو انت تكتاب خواص السي اس اس
+
 $(document).ready(function () {
   "use strict";
+
   $("#jqvidero2 .jqvideo21").css("color", "#F00");
 });
 /****************************** */
 // video3
 // event click|| dblclick || mouseenter || mouseLeave || hover
+
 $(document).ready(function () {
   "use strict";
+
   $("#jqbtnvideo3").click(function () {
     // this راجاع على العنصار اللى انا مختارو
     $(this).css("backgroundColor", "#F00");
@@ -65,6 +71,7 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
   "use strict";
+
   $("#jqbtnvideo31").dblclick(function () {
     $(this).css("backgroundColor", "#080");
     $("#jqpvideo31").hide();
@@ -72,6 +79,7 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
   "use strict";
+
   $("#jqbtnvideo32").mouseenter(function () {
     $(this).css("backgroundColor", "#080");
     $("#jqpvideo32").hide();
@@ -84,41 +92,39 @@ $(document).ready(function () {
   });
 });
 $(document).ready(function () {
-  $("#jqbtnvideo34").hover(
-    function () {
-      // mouse enter
-      $(this).css("backgroundColor", "#3498db");
-      $("#jqpvideo34").css("color", "#3498db");
-    },
-    function () {
-      // mouse live
-      $(this).css("backgroundColor", "#f00");
-      $("#jqpvideo34").css("color", "#f00");
-    }
-  );
+  $("#jqbtnvideo34").hover(function () {
+    // mouse enter
+    $(this).css("backgroundColor", "#3498db");
+    $("#jqpvideo34").css("color", "#3498db");
+  }, function () {
+    // mouse live
+    $(this).css("backgroundColor", "#f00");
+    $("#jqpvideo34").css("color", "#f00");
+  });
 });
 /*****************************************/
 // video4
 // effect hide ||show ||toggle
 // بيخالى العنصر دسبالى نان
+
 $(document).ready(function () {
-  "use strict";
-  // hide(speed, callbackFunction(){})
+  "use strict"; // hide(speed, callbackFunction(){})
   // القيمة الافتراضية 400 ميل ثانية
   // speed = slow | fast
   // بيخفى العنصار
+
   $("#jqbtnvideo4").click(function () {
     $("#jqpvideo4").hide(2000, function () {
       $(jqbtnvideo4).css("backgroundColor", "#f00");
     });
-  });
-  // show(speed, callbackFunction(){})
+  }); // show(speed, callbackFunction(){})
   // بيظهار العنصار المختفى
+
   $("#jqbtnvideo41").click(function () {
     $("#jqpvideo41").show();
-  });
-  // toggle(speed, callbackFunction(){})
+  }); // toggle(speed, callbackFunction(){})
   // التاجالى بيعكاس العنصر فى الظهور و الاختفاء
+
   $("#jqbtnvideo42").click(function () {
     $("#jqpvideo42").toggle();
   });
@@ -126,25 +132,26 @@ $(document).ready(function () {
 /****************************** */
 //video5
 // effect fadeIn
+
 $(document).ready(function () {
-  "use strict"; 
-  // fadeIn بيظهار العنصار من الاختفاء و بييكون مختفى بى الاباستى
+  "use strict"; // fadeIn بيظهار العنصار من الاختفاء و بييكون مختفى بى الاباستى
   // fadeIn(speed, callbackFunction(){})
+
   $("#jqbtnvideo5").click(function () {
     $("#jqpvideo5").fadeIn();
-  });
-  //fadeOut بيخفى العنصار
+  }); //fadeOut بيخفى العنصار
   // fadeOut(speed, callbackFunction(){})
+
   $("#jqbtnvideo51").click(function () {
     $("#jqpvideo51").fadeOut();
-  });
-  // fadeToggle لو العنصار ظاهر بيختفى و لو مختفى بيظهار
+  }); // fadeToggle لو العنصار ظاهر بيختفى و لو مختفى بيظهار
   // fadeToggle(speed, callbackFunction(){})
+
   $("#jqbtnvideo52").click(function () {
     $("#jqpvideo52").fadeToggle(2000);
-  });
-  // fadeTo هو انو بتشتاغال على الاباستى بى نسبة معينة
+  }); // fadeTo هو انو بتشتاغال على الاباستى بى نسبة معينة
   // fadeTo(speed, opacity, callbackFunction(){})
+
   $("#jqbtnvideo53").click(function () {
     $("#jqpvideo53").fadeTo(2000, 0.3);
   });
@@ -152,12 +159,14 @@ $(document).ready(function () {
 /******************************************* */
 // video6
 // effect slideDown | slideUp | slideToggle
+
 $(document).ready(function () {
   "use strict";
+
   $("#jqbtnvideo6").click(function () {
     $("#jqpvideo6").slideUp();
-  });
-  //
+  }); //
+
   $("#jqbtnvideo61").click(function () {
     $("#jqpvideo61").slideDown();
   });
@@ -168,52 +177,47 @@ $(document).ready(function () {
 /************************************************ */
 // video7 animate
 // animate({css}, speed, callbackFunction)
+
 $(document).ready(function () {
   "use strict";
-  $("#jqpvideo7").animate(
-    {
-      //width: "60%",
-      //width: "+=50px",
-      //width: "hide", toggle
-      width: "60%",
-      left: "100px",
-      height: "100px",
-      borderRadius: "30px",
-      textAlign: "center",
-      lineHeight: "100px",
-    },
-    200
-  );
-  $("#jqpvideo7").animate(
-    {
-      width: "50%",
-      left: "0px",
-      height: "150px",
-      borderRadius: "10px",
-    },
-    200
-  );
+
+  $("#jqpvideo7").animate({
+    //width: "60%",
+    //width: "+=50px",
+    //width: "hide", toggle
+    width: "60%",
+    left: "100px",
+    height: "100px",
+    borderRadius: "30px",
+    textAlign: "center",
+    lineHeight: "100px"
+  }, 200);
+  $("#jqpvideo7").animate({
+    width: "50%",
+    left: "0px",
+    height: "150px",
+    borderRadius: "10px"
+  }, 200);
 });
 $(document).ready(function () {
   "use strict";
-  $("#jqpvideo71").animate(
-    {
-      width: "60%",
-      left: "20%",
-      margin: "20px",
-      height: "100px",
-      borderRadius: "30px",
-      textAlign: "center",
-      lineHeight: "100px",
-    },
-    200
-  );
+
+  $("#jqpvideo71").animate({
+    width: "60%",
+    left: "20%",
+    margin: "20px",
+    height: "100px",
+    borderRadius: "30px",
+    textAlign: "center",
+    lineHeight: "100px"
+  }, 200);
 });
 /************************ */
 // video 8
 // stop animate بيواقف الانميشان
 // stop(true) بيواقف جميع الانميشان
 // stop(true, true) الترو التانية بتوديك لااخر الانميشان الالول
+
 $(document).ready(function () {
   $("#buttonstop").click(function () {
     $("#divstop").stop();
@@ -222,17 +226,17 @@ $(document).ready(function () {
 /********************************************* */
 // video 9
 // chain هو سلسلة مجموعة افاكت على العنصار المختار
+
 $(document).ready(function () {
   "use strict";
+
   var divvideo9 = $("#jqdivvideo9");
-  divvideo9
-    .css({ backgroundColor: "#f00" })
-    .slideUp()
-    .slideDown(200)
-    .fadeIn(200)
-    .hide(200)
-    .show(200)
-    .animate({ width: "800px", height: "200px" });
+  divvideo9.css({
+    backgroundColor: "#f00"
+  }).slideUp().slideDown(200).fadeIn(200).hide(200).show(200).animate({
+    width: "800px",
+    height: "200px"
+  });
 });
 /************************************ */
 // video 10
@@ -240,8 +244,10 @@ $(document).ready(function () {
 // html بيخارج المحتو كا تاج اتش تى ال ام
 // val و داه خاصة بى حقول الادخال
 // attr وهو صفات العنصار
+
 $(document).ready(function () {
   "use strict";
+
   var div = $("#jqdivvideo10").text();
   $("#jqpvideo10").text(div);
   var div1 = $("#jqdivvideo101").html();
@@ -249,10 +255,11 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
   "use strict";
+
   $("#jqbtn101").click(function () {
     $("#jqpvideo102").text($("#jqinpout101").val());
-  });
-  // الطرية دى بطالع قيمة الاراتربيوت بتاع العنصر فى مكان تانى
+  }); // الطرية دى بطالع قيمة الاراتربيوت بتاع العنصر فى مكان تانى
+
   $("#jqbtn102").click(function () {
     $("#jqinpout102").val($("#jqlink102").attr("class"));
   });
@@ -260,8 +267,8 @@ $(document).ready(function () {
     //$("#jqlink103").attr("class", "btn btn-info");
     // لو عاوز تغاير اكتار من صفة
     $("#jqlink103").attr({
-      class: "btn btn-info",
-      href: "https://www.youtube.com/",
+      "class": "btn btn-info",
+      href: "https://www.youtube.com/"
     });
   });
 });
@@ -273,13 +280,13 @@ $(document).ready(function () {
 //before بتضيف العنصار قبل العنصار النختار برة منو
 //after بيحاط العنصار بعد العنصار المختار بس بره منو
 //
+
 $(document).ready(function () {
-  "use strict";
-  //before
+  "use strict"; //before
   //prepend
+
   $(".jqdivvideo11").after("<p>hello </p>");
-  $("<p>hello </p>").appendTo(".jqdivvideo11");
-  //append
+  $("<p>hello </p>").appendTo(".jqdivvideo11"); //append
   //after
 });
 /*************************** */
@@ -287,8 +294,10 @@ $(document).ready(function () {
 //remove | empty
 // remove بيشيل العنصار من الصفحة نهاياً
 // empty بيفاضى محتو العنصار
+
 $(document).ready(function () {
   "use strict";
+
   $("#jqbtn12").click(function () {
     // طريقة انو انت تشيل عنصار معين من خلال القلاس
     //$("#jqdiv12").remove(".className");
@@ -313,8 +322,10 @@ $(document).ready(function () {
 //$("#jqp13:eq(0)").addClass("jqvideo13 jqvideo131");
 //اللى هو ات تضيف الكلاس و تخفية لو  متضاف على العنصار
 //toggleClass
+
 $(document).ready(function () {
   "use strict";
+
   $("#jqbtn13").click(function () {
     $("#jqp13").toggleClass("jqvideo13 jqvideo131");
   });
@@ -322,8 +333,10 @@ $(document).ready(function () {
 /************************ */
 // video14
 // طريقة انو انت تجيب خواص السى اس اس
+
 $(document).ready(function () {
   "use strict";
+
   $("#jqbtn14").click(function () {
     var color14 = $(".jqp14").css("padding");
     $("#jqinput14").val(color14);

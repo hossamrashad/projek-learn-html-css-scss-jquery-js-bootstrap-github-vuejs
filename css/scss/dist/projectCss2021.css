@@ -12,7 +12,6 @@ body {
 .element-with-border {
   position: relative;
 }
-
 .element-with-border .inner {
   background-color: #0099e5;
   text-align: center;
@@ -26,7 +25,6 @@ body {
   width: 300px;
   padding: 10px 15px;
 }
-
 .element-with-border .inner:before {
   content: "";
   width: 100%;
@@ -110,8 +108,7 @@ body {
  *************************** For Parent    ***************************
  * display                     || flex; inline-flex;
  * flex-direction              || row; row-reverse; column; column-reverse; work with direction
- * للعنصار الزيادة لو عاوز يجو جانب العناصر او العنصار الزيادة ينزال تحتهم 
- * flex-wrap                   || nowrap; wrap; wrap-reverse; item + 
+ * flex-wrap                   || nowrap; wrap; wrap-reverse;
  * flex-flow                   || [Flex-Direction] + [Flex-Wrap]
  * justify-content             || flex-start; flex-end; center; space-between; space-around; space-evenly; 
  * align-items                 || stretch; center; flex-end; flex-start;
@@ -147,7 +144,7 @@ body {
  *
 
  *************************** For Child grid ****************************************
- 
+
  * grid-area                   || logo;
  * grid-column                 || [Grid-Column-Start] [Grid-Column-End] span 3; 2 / span 3; فى العرض
  * grid-row                    || [Grid-Row-Start] [Grid-Row-End] span 3; 2 / span 3; فى الطول
@@ -197,7 +194,6 @@ body {
   bottom: 50%;
   right: 0;
 }
-
 .cayan-111:before {
   content: "";
   position: absolute;
@@ -224,8 +220,7 @@ body {
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -252,7 +247,6 @@ body {
   /* Red, Green, Blue, Alpha Channel */
   background-color: #ff0000;
   /* Color Hex Code */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 255, 0.5)), to(rgba(255, 255, 0, 0.5))), url("../images/social/facebook.png");
   background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url("../images/social/facebook.png");
   /* Keyword values */
   background-repeat: repeat-x;
@@ -330,25 +324,20 @@ body {
   color: initial;
   color: unset;
 }
-
 .video-6 .test-1 {
   color: #f00;
 }
-
 .video-6 .test-2 {
   background-color: lime;
 }
-
 .video-6 .test-3 {
   background-color: #0000ff;
   color: #fff;
 }
-
 .video-6 .test-4 {
   background-image: url("../images/social/facebook.png");
   height: 100px;
 }
-
 .video-6 .test-5 > div {
   float: left;
   margin-right: 2%;
@@ -359,31 +348,25 @@ body {
   font-size: 50px;
   border: 3px solid #000;
 }
-
 .video-6 .test-5 > div:nth-child(1n) {
   margin-right: 0;
 }
-
 .video-6 .test-5 .box-1 {
   background-image: url("../images/social/instagram.png");
   background-repeat: repeat;
 }
-
 .video-6 .test-5 .box-2 {
   background-image: url("../images/social/instagram.png");
   background-repeat: no-repeat;
 }
-
 .video-6 .test-5 .box-3 {
   background-image: url("../images/social/instagram.png");
   background-repeat: repeat-x;
 }
-
 .video-6 .test-5 .box-4 {
   background-image: url("../images/social/instagram.png");
   background-repeat: repeat-y;
 }
-
 .video-6 .test-6 > div {
   float: left;
   margin-right: 2%;
@@ -394,23 +377,19 @@ body {
   font-size: 50px;
   border: 3px solid #000;
 }
-
 .video-6 .test-6 > div:nth-child(1n) {
   margin-right: 0;
 }
-
 .video-6 .test-6 .box-1 {
   background-image: url("../images/social/instagram.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
-
 .video-6 .test-6 .box-2 {
   background-image: url("../images/social/instagram.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
 .video-6 .test-7 > div {
   float: left;
   margin-right: 2%;
@@ -421,65 +400,54 @@ body {
   font-size: 50px;
   border: 3px solid #000;
 }
-
 .video-6 .test-7 > div:nth-child(1n) {
   margin-right: 0;
 }
-
 .video-6 .test-7 .box-1 {
   background-image: url("../images/social/twitter.png");
   background-repeat: no-repeat;
   background-position: left top;
 }
-
 .video-6 .test-7 .box-2 {
   background-image: url("../images/social/twitter.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-
 .video-6 .test-7 .box-3 {
   background-image: url("../images/social/twitter.png");
   background-repeat: no-repeat;
   background-position: left bottom;
 }
-
 .video-6 .test-7 .box-4 {
   background-image: url("../images/social/twitter.png");
   background-repeat: no-repeat;
   background-position: center top;
 }
-
 .video-6 .test-7 .box-5 {
   background-image: url("../images/social/twitter.png");
   background-repeat: no-repeat;
   background-position: center center;
 }
-
 .video-6 .test-7 .box-6 {
   background-image: url("../images/social/twitter.png");
   background-repeat: no-repeat;
   background-position: center bottom;
 }
-
 .video-6 .test-7 .box-7 {
   background-image: url("../images/social/twitter.png");
   background-repeat: no-repeat;
   background-position: right top;
 }
-
 .video-6 .test-7 .box-8 {
   background-image: url("../images/social/twitter.png");
   background-repeat: no-repeat;
   background-position: right center;
 }
-
 .video-6 .test-7 .box-9 {
   background-image: url("../images/social/twitter.png");
   background-repeat: no-repeat;
   background-position: right bottom;
 }
-
 .video-6 .test-8 > div {
   float: left;
   margin-right: 2%;
@@ -490,29 +458,24 @@ body {
   font-size: 50px;
   border: 3px solid #000;
 }
-
 .video-6 .test-8 > div:nth-child(1n) {
   margin-right: 0;
 }
-
 .video-6 .test-8 .box-1 {
   background-image: url("https://placeimg.com/1000/1000/any");
   background-repeat: no-repeat;
   background-size: auto;
 }
-
 .video-6 .test-8 .box-2 {
   background-image: url("https://placeimg.com/1000/1000/any");
   background-repeat: no-repeat;
   background-size: contain;
 }
-
 .video-6 .test-8 .box-3 {
   background-image: url("https://placeimg.com/1000/1000/any");
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .video-6 .test-8 .box-4 {
   background-image: url("https://placeimg.com/1000/100/any");
   background-repeat: no-repeat;
@@ -590,15 +553,9 @@ body {
   display: block;
   display: inline;
   display: inline-block;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  display: -ms-grid;
   display: grid;
-  display: -ms-inline-grid;
   display: inline-grid;
   display: flow-root;
   /* box generation */
@@ -624,11 +581,9 @@ body {
   display: unset;
   display: block;
 }
-
 .video-11 div {
   background-color: #d35400;
 }
-
 .video-11 span {
   background-color: #1b7935;
   display: inline-block;
@@ -638,7 +593,6 @@ body {
   background-color: red;
   margin: 10px 0;
 }
-
 .video-12 .first {
   /* Keyword values */
   visibility: visible;
@@ -655,14 +609,12 @@ body {
   margin-top: 20px;
   border: 5px solid #3498db;
 }
-
 .project-work-9-12-1 > div {
   display: inline-block;
   padding: 35px;
   background-color: #ddd;
   font-size: 60px;
 }
-
 .project-work-9-12-1 .box-1 {
   outline-color: #000;
   margin: 20px 20px;
@@ -672,7 +624,6 @@ body {
   border-style: solid;
   border-width: 5px;
 }
-
 .project-work-9-12-1 .box-2 {
   outline-color: #000;
   margin: 20px 20px;
@@ -682,7 +633,6 @@ body {
   border-style: solid;
   border-width: 5px;
 }
-
 .project-work-9-12-1 .box-3 {
   outline-color: #000;
   margin: 20px 20px;
@@ -697,25 +647,21 @@ body {
   margin-top: 20px;
   border: 5px solid #3498db;
 }
-
 .project-work-9-12-2 > div {
   display: block;
   padding: 35px;
   background-color: #ddd;
   font-size: 60px;
 }
-
 .project-work-9-12-2 .box-1 {
   margin: 20px 20px;
   border-color: #e91e63;
   border-left-style: solid;
   border-left-width: 15px;
 }
-
 .project-work-9-12-2 .box-2 {
   visibility: hidden;
 }
-
 .project-work-9-12-2 .box-3 {
   margin: 20px 20px;
   border-color: #009688;
@@ -727,22 +673,18 @@ body {
   border-bottom: 2px solid red;
   color: red;
 }
-
 .video-13 .two {
   border-bottom: 2px solid green;
   color: green;
 }
-
 .video-13 .three {
   border-bottom: 2px solid blue;
   color: blue;
 }
-
 .video-13 .four {
   border-bottom: 2px solid black;
   color: black;
 }
-
 .video-13 .one,
 .video-13 .two,
 .video-13 .three,
@@ -788,71 +730,57 @@ body {
   padding: 10px;
   margin: 10px;
 }
-
 .video-15 .test-1 {
   width: 500px;
 }
-
 .video-15 .test-2 {
   width: 50%;
 }
-
 .video-15 .test-3 {
   min-width: 600px;
 }
-
 .video-15 .test-4 {
   max-width: 700px;
   min-width: 300px;
 }
-
 .video-15 .test-5 {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
 }
-
 .video-15 .test-6 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
-
 .video-15 .test-7 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   color: #ffffff;
 }
-
 .video-15 .test-8 {
   height: 100px;
 }
-
 .video-15 .test-9 {
   height: 10%;
 }
-
 .video-15 .test-10 {
   min-height: 150px;
 }
-
 .video-15 .test-11 {
   max-height: 200px;
 }
-
 .video-15 .test-12 {
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
 }
-
 .video-15 .test-13 {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
 }
-
 .video-15 .test-14 {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -867,7 +795,6 @@ body {
   height: 200px;
   background-color: #ddd;
 }
-
 .video-16 .test-1 {
   /* Keyword values */
   overflow: visible;
@@ -882,27 +809,21 @@ body {
   overflow: unset;
   overflow: visible;
 }
-
 .video-16 .test-2 {
   overflow: hidden;
 }
-
 .video-16 .test-3 {
   overflow: scroll;
 }
-
 .video-16 .test-4 {
   overflow: auto;
 }
-
 .video-16 .test-5 {
   overflow-y: hidden;
 }
-
 .video-16 .test-6 {
   overflow-x: hidden;
 }
-
 .video-16::after {
   content: "";
   display: block;
@@ -938,13 +859,11 @@ body {
   text-align: center;
   direction: ltr;
 }
-
 .video-18 .box-test {
   text-align: unset;
   background-color: #009688;
   color: #000;
 }
-
 .video-18 img {
   /* Keyword values */
   vertical-align: baseline;
@@ -966,7 +885,6 @@ body {
   vertical-align: unset;
   vertical-align: middle;
 }
-
 .video-18 .test span {
   vertical-align: top;
 }
@@ -978,39 +896,31 @@ body {
   width: 23.5%;
   font-size: 17px;
 }
-
 .video-19 .text-decoration > div:nth-child(4n) {
   margin-right: 0;
 }
-
 .video-19 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
 .video-19 ul li {
   display: inline-block;
   margin-left: -2px;
   margin-right: 2em;
 }
-
 .video-19 > .text-decoration > div:nth-child(1) h3 {
   text-decoration: line-through;
 }
-
 .video-19 .text-decoration > div:nth-child(2) h3 {
   text-decoration: overline;
 }
-
 .video-19 > .text-decoration > div:nth-child(3) h3 {
   text-decoration: underline;
 }
-
 .video-19 .text-decoration > div:nth-child(4) h3 {
   text-decoration: none;
 }
-
 .video-19 .text-transform > div {
   float: left;
   margin-right: 2%;
@@ -1021,11 +931,9 @@ body {
   border: 1px solid #3498db;
   text-align: center;
 }
-
 .video-19 .text-transform > div:nth-child(4n) {
   margin-right: 0;
 }
-
 .video-19 > .text-transform > div:nth-child(1) h3 {
   /* Keyword values */
   text-transform: none;
@@ -1040,15 +948,12 @@ body {
   text-transform: unset;
   text-transform: capitalize;
 }
-
 .video-19 .text-transform > div:nth-child(2) h3 {
   text-transform: lowercase;
 }
-
 .video-19 > .text-transform > div:nth-child(3) h3 {
   text-transform: uppercase;
 }
-
 .video-19 .text-transform > div:nth-child(4) h3 {
   text-transform: none;
 }
@@ -1058,31 +963,25 @@ body {
   display: block;
   clear: both;
 }
-
 .video-20 > div {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(200px, 1fr))[2];
-      grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
   font-size: 20px;
   border: 1px solid #ed4c67;
   margin-right: 1%;
   gap: 10px 20px;
 }
-
 .video-20 ul {
   margin: 0;
   padding: 0;
   list-style: none;
   padding: 20px;
 }
-
 .video-20 ul li {
   display: inline-block;
   margin-left: -2px;
   margin-right: 2em;
 }
-
 .video-20 > div:nth-child(2) h3 {
   /* Keyword value */
   letter-spacing: normal;
@@ -1097,13 +996,12 @@ body {
   letter-spacing: 5px;
   border: 2px solid #000000;
 }
-
 .video-20 > div:nth-child(3) h3 {
   /* <length> values */
   text-indent: 3mm;
   text-indent: 40px;
   /* <percentage> value
-   relative to the containing block width */
+  relative to the containing block width */
   text-indent: 15%;
   /* Keyword values */
   text-indent: 5em each-line;
@@ -1116,12 +1014,11 @@ body {
   text-indent: 40px;
   border: 2px solid #000000;
 }
-
 .video-20 > div:nth-child(4) p {
   /* Keyword value */
   line-height: normal;
   /* Unitless values: use this number multiplied
-by the element's font size */
+  by the element's font size */
   line-height: 3.5;
   /* <length> values */
   line-height: 3em;
@@ -1134,7 +1031,6 @@ by the element's font size */
   line-height: 1.5;
   border: 2px solid #000000;
 }
-
 .video-20 > div:nth-child(5) h3 {
   word-spacing: normal;
   word-spacing: 3px;
@@ -1147,7 +1043,6 @@ by the element's font size */
   word-spacing: 75px;
   border: 2px solid #000000;
 }
-
 .video-20 > div:nth-child(6) p {
   white-space: normal;
   white-space: nowrap;
@@ -1161,7 +1056,6 @@ by the element's font size */
   white-space: nowrap;
   border: 2px solid #000000;
 }
-
 .video-20 > div:nth-child(7) p {
   word-break: normal;
   word-break: break-all;
@@ -1191,7 +1085,6 @@ by the element's font size */
   text-overflow: unset;
   text-overflow: ellipsis;
 }
-
 .video-21 div:hover {
   overflow: hidden;
   width: 450px;
@@ -1200,7 +1093,6 @@ by the element's font size */
 .video-22 {
   font-family: Arial, Helvetica, sans-serif;
 }
-
 .video-22 div {
   text-align: center;
   padding: 20px;
@@ -1208,7 +1100,6 @@ by the element's font size */
   font-size: 20px;
   border: 2px solid #460505;
 }
-
 .video-22 div p {
   border: 2px solid;
   border-color: inherit;
@@ -1239,23 +1130,18 @@ by the element's font size */
   font-family: initial;
   font-family: unset;
 }
-
 .video-23 .with-ser {
   font-family: "Times New Roman", Times, serif;
 }
-
 .video-23 .with-ser span {
   color: #3498db;
 }
-
 .video-23 .san-ser {
   font-family: Arial, Helvetica, sans-serif;
 }
-
 .video-23 .san-ser span {
   color: #3498db;
 }
-
 .video-23 .with-ser,
 .video-23 .san-ser {
   background-color: #eee;
@@ -1280,27 +1166,21 @@ by the element's font size */
   font-size: initial;
   font-size: unset;
 }
-
 .video-24 div {
   font-size: 40px;
 }
-
 .video-24 .test {
   font-size: 1em;
 }
-
 .video-24 span {
   font-size: 5vw;
 }
-
 .video-24 p {
   font-size: 2rem;
 }
-
 .video-24 .vw {
   font-size: 10vw;
 }
-
 .video-24 .vh {
   font-size: 10vh;
 }
@@ -1308,7 +1188,6 @@ by the element's font size */
 .video-25 {
   text-transform: none;
 }
-
 .video-25 div {
   font-variant: small-caps;
   font-variant: common-ligatures small-caps;
@@ -1334,7 +1213,6 @@ by the element's font size */
   font-weight: unset;
   font-weight: bold;
 }
-
 .video-25 p {
   font-family: "Short Stack", cursive;
   text-transform: uppercase;
@@ -1357,15 +1235,12 @@ by the element's font size */
   cursor: pointer;
   cursor: url(../images/social/facebook.png);
 }
-
 .video-26 .p-one {
   cursor: url(../images/social/facebook.png);
 }
-
 .video-26 .p-tow {
   cursor: cell;
 }
-
 .video-26 .p-three {
   cursor: e-resize;
 }
@@ -1374,13 +1249,11 @@ by the element's font size */
   background-color: red;
   padding: 10px;
 }
-
 .video-27 .parent::after {
   content: "";
   display: block;
   clear: both;
 }
-
 .video-27 .parent div {
   border: 2px solid #000;
   padding-top: 10px;
@@ -1404,13 +1277,11 @@ by the element's font size */
   margin: 0;
   border: 1px solid #000000;
 }
-
 .video-28::after {
   content: "";
   display: block;
   clear: both;
 }
-
 .video-28 div {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -1424,18 +1295,15 @@ by the element's font size */
 .video-29 {
   margin-top: 20px;
 }
-
 .video-29 div {
   color: white;
   width: 100px;
   padding: 10px;
 }
-
 .video-29 .one {
   background-color: red;
   opacity: 0.1;
 }
-
 .video-29 .two {
   background-color: green;
 }
@@ -1443,7 +1311,6 @@ by the element's font size */
 .video-30 {
   position: relative;
 }
-
 .video-30 div {
   color: white;
   width: -webkit-fit-content;
@@ -1451,14 +1318,12 @@ by the element's font size */
   width: fit-content;
   padding: 10px;
 }
-
 .video-30 .one {
   background-color: red;
   top: 0px;
   position: -webkit-sticky;
   position: sticky;
 }
-
 .video-30 .two {
   background-color: green;
   position: absolute;
@@ -1477,7 +1342,6 @@ by the element's font size */
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
 }
-
 .video-31 div {
   color: white;
   width: 70%;
@@ -1485,7 +1349,6 @@ by the element's font size */
   text-align: left;
   position: absolute;
 }
-
 .video-31 .one {
   background-color: red;
   left: 135px;
@@ -1497,14 +1360,12 @@ by the element's font size */
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
 }
-
 .video-31 .two {
   background-color: green;
   left: 75px;
   top: 133px;
   z-index: 2;
 }
-
 .video-31 .three {
   background-color: blue;
   z-index: 1;
@@ -1514,7 +1375,6 @@ by the element's font size */
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
 }
-
 .video-31:hover .one {
   background-color: blue;
   z-index: 1;
@@ -1525,7 +1385,6 @@ by the element's font size */
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
 }
-
 .video-31:hover .three {
   background-color: red;
   left: 135px;
@@ -1565,13 +1424,12 @@ by the element's font size */
   list-style-type: square;
   list-style-type: upper-alpha;
   list-style-type: none;
-  list-style-type: "\f2cc";
+  list-style-type: "";
   font-family: fontawesome;
   list-style-position: outside;
   list-style-position: inside;
   list-style: disc inside;
 }
-
 .video-32 li {
   background-color: #eee;
   margin-bottom: 20px;
@@ -1582,13 +1440,11 @@ by the element's font size */
   border: 1px solid #ccc;
   border-spacing: 0;
 }
-
 .video-33 table td {
   padding: 15px;
   background-color: #eee;
   border: 1px solid #ccc;
 }
-
 .video-33 table thead td {
   background-color: #f44336;
   color: #fff;
@@ -1601,43 +1457,34 @@ by the element's font size */
   background-color: red;
   color: white;
 }
-
 .video-34 .two {
   background-color: #eee;
   width: 100px;
   height: 100px;
 }
-
 .video-34 a {
   color: green;
   text-decoration: none;
 }
-
 .video-34 a:hover {
   color: red;
 }
-
 .video-34 a:visited {
   color: blue;
 }
-
 .video-34 p:empty {
   border: 10px solid red;
 }
-
 .video-34 div:empty {
   border: 10px solid red;
 }
-
 .video-34 .ch:checked + label {
   border: 5px solid #000;
 }
-
 .video-34 .in {
   border-color: #0004ff;
   outline: none;
 }
-
 .video-34 .in:focus {
   border-color: red;
   outline: none;
@@ -1650,7 +1497,6 @@ by the element's font size */
   font-size: 60px;
   font-weight: bold;
 }
-
 .video-35 .two::first-letter {
   display: inline-block;
   background-color: red;
@@ -1658,22 +1504,18 @@ by the element's font size */
   font-size: 60px;
   font-weight: bold;
 }
-
 .video-35 .three::first-line {
   font-weight: bold;
   color: green;
 }
-
 .video-35 ::-moz-selection {
   background-color: black;
   color: yellow;
 }
-
 .video-35 ::-moz-selection {
   background-color: black;
   color: yellow;
 }
-
 .video-35 ::selection {
   background-color: black;
   color: yellow;
@@ -1682,12 +1524,10 @@ by the element's font size */
 .video-36 {
   font-family: "Markazi Text", serif;
 }
-
 .video-36 .parent {
   margin-bottom: 20px;
   overflow: hidden;
 }
-
 .video-36 .one {
   background-color: #eee;
   padding: 10px;
@@ -1695,7 +1535,6 @@ by the element's font size */
   float: left;
   position: relative;
 }
-
 .video-36 .one::before {
   content: "";
   position: absolute;
@@ -1706,7 +1545,6 @@ by the element's font size */
   border-width: 10px;
   border-color: transparent #009688 transparent transparent;
 }
-
 .video-36 .one::after {
   content: "";
   position: absolute;
@@ -1716,7 +1554,6 @@ by the element's font size */
   top: 0;
   background-color: #009688;
 }
-
 .video-36 .user {
   background-color: #eee;
   width: 50px;
@@ -1728,7 +1565,6 @@ by the element's font size */
   text-align: center;
   position: relative;
 }
-
 .video-36 .user::before {
   content: "";
   position: absolute;
@@ -1747,7 +1583,6 @@ by the element's font size */
   overflow: hidden;
   counter-increment: members-counter;
 }
-
 .video-37 .one {
   background-color: #eee;
   padding: 10px;
@@ -1760,12 +1595,10 @@ by the element's font size */
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
 }
-
 .video-37 .one .test-Font-Awesome {
   position: relative;
   color: #3498db;
 }
-
 .video-37 .one .test-Font-Awesome::before {
   content: attr(data-text);
   display: none;
@@ -1776,14 +1609,11 @@ by the element's font size */
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
 }
-
 .video-37 .one .test-Font-Awesome:hover::before {
   display: block;
   position: absolute;
   background-color: #3498db;
   color: white;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   font-size: 13px;
   text-align: center;
@@ -1802,7 +1632,6 @@ by the element's font size */
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-
 .video-37 .one::before {
   content: attr(data-text);
   display: none;
@@ -1812,7 +1641,6 @@ by the element's font size */
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
 }
-
 .video-37 .one:hover::before {
   display: block;
   position: absolute;
@@ -1832,7 +1660,6 @@ by the element's font size */
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
 }
-
 .video-37 .one::after {
   content: counter(members-counter);
   position: absolute;
@@ -1846,7 +1673,6 @@ by the element's font size */
   top: 50%;
   margin-top: -25px;
 }
-
 .video-37 .user {
   background-color: #eee;
   width: 70px;
@@ -1857,15 +1683,12 @@ by the element's font size */
   font-size: 50px;
   text-align: center;
 }
-
 .video-37 ul {
   list-style: none;
 }
-
 .video-37 ul li {
   position: relative;
 }
-
 .video-37 ul li::before {
   content: "";
   width: 0;
@@ -1903,20 +1726,20 @@ by the element's font size */
   border-radius: 1px 0 3px 4px;
   /* The syntax of the second radius allows one to four values */
   /* (first radius values) / radius */
-  border-radius: 10px / 20px;
+  border-radius: 10px/20px;
   /* (first radius values) / top-left-and-bottom-right | top-right-and-bottom-left */
-  border-radius: 10px 5% / 20px 30px;
+  border-radius: 10px 5%/20px 30px;
   /* (first radius values) / top-left | top-right-and-bottom-left | bottom-right */
-  border-radius: 10px 5px 2em / 20px 25px 30%;
+  border-radius: 10px 5px 2em/20px 25px 30%;
   /* (first radius values) / top-left | top-right | bottom-right | bottom-left */
-  border-radius: 10px 5% / 20px 25em 30px 35em;
+  border-radius: 10px 5%/20px 25em 30px 35em;
   /* Global values */
   border-radius: inherit;
   border-radius: initial;
   border-radius: unset;
   border-radius: 6px;
   /* border-top-left-radius: 20px 20px;
-    border-bottom-right-radius: 20px; */
+  border-bottom-right-radius: 20px; */
 }
 
 .video-40 div {
@@ -1925,32 +1748,22 @@ by the element's font size */
   margin: 20px auto;
   width: 300px;
   /* Keyword values */
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   /* offset-x | offset-y | color */
-  -webkit-box-shadow: 60px -16px teal;
-          box-shadow: 60px -16px teal;
+  box-shadow: 60px -16px teal;
   /* offset-x | offset-y | blur-radius | color */
-  -webkit-box-shadow: 10px 5px 5px black;
-          box-shadow: 10px 5px 5px black;
+  box-shadow: 10px 5px 5px black;
   /* offset-x | offset-y | blur-radius | spread-radius | color | inset*/
-  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   /* inset | offset-x | offset-y | color */
-  -webkit-box-shadow: inset 5em 1em gold;
-          box-shadow: inset 5em 1em gold;
+  box-shadow: inset 5em 1em gold;
   /* Any number of shadows, separated by commas */
-  -webkit-box-shadow: 3px 3px red, -1em 0 0.4em olive;
-          box-shadow: 3px 3px red, -1em 0 0.4em olive;
+  box-shadow: 3px 3px red, -1em 0 0.4em olive;
   /* Global keywords */
-  -webkit-box-shadow: inherit;
-          box-shadow: inherit;
-  -webkit-box-shadow: initial;
-          box-shadow: initial;
-  -webkit-box-shadow: unset;
-          box-shadow: unset;
-  -webkit-box-shadow: 20px 0px 10px 0 #f10000, 0 0 10px 0 #000, -1px -20px 10px 0 #080, -20px 0px 10px 0 #00f, 0px 20px 10px 0 yellow;
-          box-shadow: 20px 0px 10px 0 #f10000, 0 0 10px 0 #000, -1px -20px 10px 0 #080, -20px 0px 10px 0 #00f, 0px 20px 10px 0 yellow;
+  box-shadow: inherit;
+  box-shadow: initial;
+  box-shadow: unset;
+  box-shadow: 20px 0px 10px 0 #f10000, 0 0 10px 0 #000, -1px -20px 10px 0 #080, -20px 0px 10px 0 #00f, 0px 20px 10px 0 yellow;
 }
 
 .video-41 .parent {
@@ -1960,13 +1773,11 @@ by the element's font size */
   padding: 20px;
   background-color: #ddd;
 }
-
 .video-41 .parent::after {
   content: "";
   display: block;
   clear: both;
 }
-
 .video-41 .one {
   background-color: white;
   width: 50%;
@@ -1980,12 +1791,10 @@ by the element's font size */
   display: block;
   clear: both;
 }
-
 .video-42 > div {
   width: 30%;
   float: left;
 }
-
 .video-42 > div:nth-child(2) {
   float: right;
   transition: all 2s linear;
@@ -1994,61 +1803,37 @@ by the element's font size */
   -ms-transition: all 2s linear;
   -o-transition: all 2s linear;
 }
-
 .video-42 .one {
   background-color: #eee;
   height: 100px;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-  -webkit-transition-property: all;
+  transition-duration: 1s;
+  transition-delay: 0.2s;
   transition-property: all;
-  -webkit-transition-property: width;
   transition-property: width;
   /* Keyword values */
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
-  -webkit-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-timing-function: step-start;
-          transition-timing-function: step-start;
-  -webkit-transition-timing-function: step-end;
-          transition-timing-function: step-end;
+  transition-timing-function: ease;
+  transition-timing-function: ease-in;
+  transition-timing-function: ease-out;
+  transition-timing-function: ease-in-out;
+  transition-timing-function: linear;
+  transition-timing-function: step-start;
+  transition-timing-function: step-end;
   /* Function values */
-  -webkit-transition-timing-function: steps(4, jump-end);
-          transition-timing-function: steps(4, jump-end);
-  -webkit-transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
-          transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+  transition-timing-function: steps(4, jump-end);
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
   /* Steps Function keywords */
-  -webkit-transition-timing-function: steps(4, jump-start);
-          transition-timing-function: steps(4, jump-start);
-  -webkit-transition-timing-function: steps(10, jump-end);
-          transition-timing-function: steps(10, jump-end);
-  -webkit-transition-timing-function: steps(20, jump-none);
-          transition-timing-function: steps(20, jump-none);
-  -webkit-transition-timing-function: steps(5, jump-both);
-          transition-timing-function: steps(5, jump-both);
-  -webkit-transition-timing-function: steps(6, start);
-          transition-timing-function: steps(6, start);
-  -webkit-transition-timing-function: steps(8, end);
-          transition-timing-function: steps(8, end);
+  transition-timing-function: steps(4, jump-start);
+  transition-timing-function: steps(10, jump-end);
+  transition-timing-function: steps(20, jump-none);
+  transition-timing-function: steps(5, jump-both);
+  transition-timing-function: steps(6, start);
+  transition-timing-function: steps(8, end);
   /* Multiple timing functions */
-  -webkit-transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
-          transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+  transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
   /* Global values */
-  -webkit-transition-timing-function: inherit;
-          transition-timing-function: inherit;
-  -webkit-transition-timing-function: initial;
-          transition-timing-function: initial;
-  -webkit-transition-timing-function: unset;
-          transition-timing-function: unset;
+  transition-timing-function: inherit;
+  transition-timing-function: initial;
+  transition-timing-function: unset;
   transition-timing-function: ease-in-out;
   transition: all 0.5s 0s linear;
   -webkit-transition: all 0.5s 0s linear;
@@ -2056,7 +1841,6 @@ by the element's font size */
   -ms-transition: all 0.5s 0s linear;
   -o-transition: all 0.5s 0s linear;
 }
-
 .video-42 .one:hover {
   width: 40%;
   height: 120px;
@@ -2065,21 +1849,19 @@ by the element's font size */
 .video-43 {
   margin-bottom: 100px;
 }
-
 .video-43 .one {
   background-color: #eee !important;
 }
 
 .video-44 {
   /*
-  The Margin Collapse
-  [1] Only Vertical Margin Collapse
-  [2] Bigger Margin Wins
-  [3] Margin Collapsing With Elements Without Anything Between
-  [4] Nesting Does Not Prevent Collapse
-*/
+    The Margin Collapse
+    [1] Only Vertical Margin Collapse
+    [2] Bigger Margin Wins
+    [3] Margin Collapsing With Elements Without Anything Between
+    [4] Nesting Does Not Prevent Collapse
+  */
 }
-
 .video-44 .parent {
   overflow: hidden;
   margin: auto;
@@ -2088,30 +1870,25 @@ by the element's font size */
   padding: 10px;
   background-color: #eee;
 }
-
 .video-44 .parent .one,
 .video-44 .parent .two {
   float: left;
   width: 50%;
   height: 100%;
 }
-
 .video-44 .one {
   background-color: #ddd;
   border: 1px solid #000000;
 }
-
 .video-44 .two {
   background-color: #aaa;
 }
-
 .video-44 .up {
   background-color: red;
   color: white;
   height: 80px;
   margin-bottom: 40px;
 }
-
 .video-44 .down {
   background-color: green;
   color: white;
@@ -2121,41 +1898,35 @@ by the element's font size */
 
 .video-45 {
   /*
-  CSS Variables
-  - Global Variable
-  - Local Variable
-  var(Variable Name, Fall Back Value)
-*/
+    CSS Variables
+    - Global Variable
+    - Local Variable
+    var(Variable Name, Fall Back Value)
+  */
 }
-
 .video-45 :root {
   --main-color: blue;
   --mainPadding: 10px;
   --color-3498db: #3498db;
 }
-
 .video-45 .main {
   background-color: var(--color-3498db, #f00);
   color: white;
   padding: calc(20px + var(--mainPadding));
 }
-
 .video-45 h2 {
   color: var(--color-3498db);
   background-color: #eee;
   padding: var(--mainPadding);
 }
-
 .video-45 p {
   color: var(--color-3498db);
   border: 2px solid var(--mainColor);
   padding: var(--mainPadding);
 }
-
 .video-45 a:hover {
   color: var(--color-3498db);
 }
-
 .video-45 .local {
   --color-3498db: black;
   background-color: var(--color-3498db);
@@ -2164,67 +1935,52 @@ by the element's font size */
 
 .video-46 {
   /*
-  Flexible Box
-  For Parent
-  - display: flex => To Start Flexible Box
+    Flexible Box
+    For Parent
+    - display: flex => To Start Flexible Box
 
-  - flex-direction: row => Default Value
-  - flex-direction: column;
-  - flex-direction: column-reverse;
-  - flex-direction: row;
-  - flex-direction: row-reverse;
-  - flex-direction: inherit;
-  - flex-direction: initial;
-  - flex-direction: unset;
+    - flex-direction: row => Default Value
+    - flex-direction: column;
+    - flex-direction: column-reverse;
+    - flex-direction: row;
+    - flex-direction: row-reverse;
+    - flex-direction: inherit;
+    - flex-direction: initial;
+    - flex-direction: unset;
 
-  - flex-wrap: nowrap => Default Value
-  - flex-wrap: nowrap;
-  - flex-wrap: wrap;
-  - flex-wrap: inherit;
-  - flex-wrap: initial;
-  - flex-wrap: unset;
-  
-  - flex-flow: [Flex-Direction] + [Flex-Wrap]
+    - flex-wrap: nowrap => Default Value
+    - flex-wrap: nowrap;
+    - flex-wrap: wrap;
+    - flex-wrap: inherit;
+    - flex-wrap: initial;
+    - flex-wrap: unset;
 
-*/
+    - flex-flow: [Flex-Direction] + [Flex-Wrap]
+
+  */
 }
-
 .video-46 .flex {
   background-color: #eee;
   width: 90%;
   padding: 20px;
   margin: 20px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   flex-direction: row-reverse;
   flex-direction: column;
   flex-direction: column-reverse;
   flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-wrap: wrap-reverse;
-      flex-wrap: wrap-reverse;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+  flex-flow: row wrap;
   direction: rtl;
 }
-
 @media (max-width: 767px) {
   .video-46 .flex {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
-
 .video-46 .flex div {
   background-color: #2f00ff;
   color: white;
@@ -2234,13 +1990,11 @@ by the element's font size */
   text-align: center;
   padding: 20px;
 }
-
 @media (max-width: 767px) {
   .video-46 .flex div {
     width: calc((98% - 1%) / 1);
   }
 }
-
 .video-46 .float {
   overflow: hidden;
   background-color: #eee;
@@ -2248,7 +2002,6 @@ by the element's font size */
   padding: 20px;
   margin: 20px auto;
 }
-
 .video-46 .float div {
   background-color: #f00;
   color: white;
@@ -2260,48 +2013,33 @@ by the element's font size */
 
 .video-47 {
   /*
-  Flexible Box
-  For Parent
-  - display: flex => To Start Flexible Box
-  - flex-direction: row => Default Value
-  - flex-wrap: nowrap => Default Value
-  - flex-flow: [Flex-Direction] + [Flex-Wrap]
-  ---
-  - justify-content: flex-start => Default Value
-*/
+    Flexible Box
+    For Parent
+    - display: flex => To Start Flexible Box
+    - flex-direction: row => Default Value
+    - flex-wrap: nowrap => Default Value
+    - flex-flow: [Flex-Direction] + [Flex-Wrap]
+    ---
+    - justify-content: flex-start => Default Value
+  */
 }
-
 .video-47 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .video-47 .flex {
   background-color: #eee;
   width: 90%;
   padding: 20px;
   margin: 20px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: center;
+  justify-content: space-between;
   justify-self: start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
   justify-content: center;
   justify-content: space-between;
 }
-
 .video-47 .flex div {
   background-color: #f00;
   color: white;
@@ -2310,7 +2048,6 @@ by the element's font size */
   padding: 20px;
   margin-bottom: 2%;
 }
-
 .video-47 .float {
   overflow: hidden;
   background-color: #eee;
@@ -2318,7 +2055,6 @@ by the element's font size */
   padding: 20px;
   margin: 20px auto;
 }
-
 .video-47 .float div {
   background-color: #f00;
   color: white;
@@ -2330,35 +2066,26 @@ by the element's font size */
 
 .video-48 {
   /*
-  Flexible Box
-  For Parent
-  - display: flex => To Start Flexible Box
-  - flex-direction: row => Default Value
-  - flex-wrap: nowrap => Default Value
-  - flex-flow: [Flex-Direction] + [Flex-Wrap]
-  ---
-  - justify-content: flex-start => Default Value
-  - align-items: stretch => Default Value
-*/
+    Flexible Box
+    For Parent
+    - display: flex => To Start Flexible Box
+    - flex-direction: row => Default Value
+    - flex-wrap: nowrap => Default Value
+    - flex-flow: [Flex-Direction] + [Flex-Wrap]
+    ---
+    - justify-content: flex-start => Default Value
+    - align-items: stretch => Default Value
+  */
 }
-
 .video-48 .flex {
   background-color: #eee;
   width: 90%;
   padding: 20px;
   margin: 20px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
 }
-
 .video-48 .flex div {
   background-color: #f00;
   color: white;
@@ -2366,17 +2093,14 @@ by the element's font size */
   text-align: center;
   padding: 20px;
 }
-
 .video-48 .flex .one,
 .video-48 .float .one {
   height: 80px;
 }
-
 .video-48 .flex .two,
 .video-48 .float .two {
   height: 150px;
 }
-
 .video-48 .float {
   overflow: hidden;
   background-color: #eee;
@@ -2384,7 +2108,6 @@ by the element's font size */
   padding: 20px;
   margin: 20px auto;
 }
-
 .video-48 .float div {
   background-color: #f00;
   color: white;
@@ -2393,63 +2116,46 @@ by the element's font size */
   text-align: center;
   padding: 20px;
 }
-
 .video-48 .center {
   background-color: #244961;
   color: white;
   width: 300px;
   height: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin: auto;
 }
 
 .video-49 {
   /*
-  Flexible Box
-  For Parent
-  - display: flex => To Start Flexible Box
-  - flex-direction: row => Default Value
-  - flex-wrap: nowrap => Default Value
-  - flex-flow: [Flex-Direction] + [Flex-Wrap]
-  ---
-  - justify-content: flex-start => Default Value
-  - align-items: stretch => Default Value
+    Flexible Box
+    For Parent
+    - display: flex => To Start Flexible Box
+    - flex-direction: row => Default Value
+    - flex-wrap: nowrap => Default Value
+    - flex-flow: [Flex-Direction] + [Flex-Wrap]
+    ---
+    - justify-content: flex-start => Default Value
+    - align-items: stretch => Default Value
 
-  - align-content: stretch => Default Value
-*/
+    - align-content: stretch => Default Value
+  */
 }
-
 .video-49 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .video-49 .flex {
   background-color: #eee;
   width: 90%;
   height: 400px;
   padding: 20px;
   margin: 20px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-between;
 }
-
 .video-49 .flex div {
   background-color: #f00;
   color: white;
@@ -2460,32 +2166,28 @@ by the element's font size */
 
 .video-50 {
   /*
-  Flexible Box
-  For Parent
-  - display: flex => To Start Flexible Box
-  - flex-direction: row => Default Value
-  - flex-wrap: nowrap => Default Value
-  - flex-flow: [Flex-Direction] + [Flex-Wrap]
-  - justify-content: flex-start => Default Value
-  - align-items: stretch => Default Value
-  - align-content: stretch => Default Value
-  For Child
-  - flex-grow: 0 => Default Value
-  - flex-shrink: 1 => Default Value
-  - order: 0 => Default Value
-*/
+    Flexible Box
+    For Parent
+    - display: flex => To Start Flexible Box
+    - flex-direction: row => Default Value
+    - flex-wrap: nowrap => Default Value
+    - flex-flow: [Flex-Direction] + [Flex-Wrap]
+    - justify-content: flex-start => Default Value
+    - align-items: stretch => Default Value
+    - align-content: stretch => Default Value
+    For Child
+    - flex-grow: 0 => Default Value
+    - flex-shrink: 1 => Default Value
+    - order: 0 => Default Value
+  */
 }
-
 .video-50 .flex {
   background-color: #eee;
   width: 90%;
   padding: 20px;
   margin: 20px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .video-50 .flex div {
   background-color: #f00;
   color: white;
@@ -2493,53 +2195,42 @@ by the element's font size */
   text-align: center;
   padding: 20px;
   margin-right: 5px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
-
 .video-50 .flex div:nth-child(2) {
-  -webkit-box-flex: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
+  flex-grow: 3;
   background-color: #0000ff;
 }
 
 .video-51 {
   /*
-  Flexible Box
-  For Parent
-  - display: flex => To Start Flexible Box
-  - flex-direction: row => Default Value
-  - flex-wrap: nowrap => Default Value
-  - flex-flow: [Flex-Direction] + [Flex-Wrap]
-  - justify-content: flex-start => Default Value
-  - align-items: stretch => Default Value
-  - align-content: stretch => Default Value
-  For Child
-  - flex-grow: 0 => Default Value
-  - flex-shrink: 1 => Default Value
-  - order: 0 => Default Value
-  - flex-basis: auto => Default Value
-  - flex: [Flex Grow] [Flex Shrink] [Flex Basis] 0 1 Auto
-*/
+    Flexible Box
+    For Parent
+    - display: flex => To Start Flexible Box
+    - flex-direction: row => Default Value
+    - flex-wrap: nowrap => Default Value
+    - flex-flow: [Flex-Direction] + [Flex-Wrap]
+    - justify-content: flex-start => Default Value
+    - align-items: stretch => Default Value
+    - align-content: stretch => Default Value
+    For Child
+    - flex-grow: 0 => Default Value
+    - flex-shrink: 1 => Default Value
+    - order: 0 => Default Value
+    - flex-basis: auto => Default Value
+    - flex: [Flex Grow] [Flex Shrink] [Flex Basis] 0 1 Auto
+  */
 }
-
 .video-51 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .video-51 .flex {
   background-color: #eee;
   width: 90%;
   padding: 20px;
   margin: 20px auto;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
-
 .video-51 .flex div {
   background-color: #f00;
   color: white;
@@ -2547,55 +2238,44 @@ by the element's font size */
   text-align: center;
   padding: 20px;
   margin-right: 5px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
-
 .video-51 .in {
   display: inline-block;
 }
 
 .video-52 {
   /*
-  Flexible Box
-  For Parent
-  - display: flex => To Start Flexible Box
-  - flex-direction: row => Default Value
-  - flex-wrap: nowrap => Default Value
-  - flex-flow: [Flex-Direction] + [Flex-Wrap]
-  - justify-content: flex-start => Default Value
-  - align-items: stretch => Default Value
-  - align-content: stretch => Default Value
-  For Child
-  - flex-grow: 0 => Default Value
-  - flex-shrink: 1 => Default Value
-  - order: 0 => Default Value
-  - flex-basis: auto => Default Value
-  - flex: [Flex Grow] [Flex Shrink] [Flex Basis] 0 1 Auto
-  - align-self: auto => Default Value
-*/
+    Flexible Box
+    For Parent
+    - display: flex => To Start Flexible Box
+    - flex-direction: row => Default Value
+    - flex-wrap: nowrap => Default Value
+    - flex-flow: [Flex-Direction] + [Flex-Wrap]
+    - justify-content: flex-start => Default Value
+    - align-items: stretch => Default Value
+    - align-content: stretch => Default Value
+    For Child
+    - flex-grow: 0 => Default Value
+    - flex-shrink: 1 => Default Value
+    - order: 0 => Default Value
+    - flex-basis: auto => Default Value
+    - flex: [Flex Grow] [Flex Shrink] [Flex Basis] 0 1 Auto
+    - align-self: auto => Default Value
+  */
 }
-
 .video-52 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .video-52 .flex {
   background-color: #eee;
   width: 90%;
   height: 300px;
   padding: 20px;
   margin: 20px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
 }
-
 .video-52 .flex div {
   background-color: #f00;
   color: white;
@@ -2603,21 +2283,11 @@ by the element's font size */
   text-align: center;
   padding: 20px;
   margin-right: 5px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-start;
+  justify-content: space-evenly;
 }
 
 .video-54 > div {
@@ -2626,11 +2296,9 @@ by the element's font size */
   margin-bottom: 2%;
   width: 32%;
 }
-
 .video-54 > div:nth-child(3n) {
   margin-right: 0;
 }
-
 .video-54 .box-one img {
   -webkit-filter: url("filters.svg#filter-id");
   filter: url("filters.svg#filter-id");
@@ -2652,32 +2320,26 @@ by the element's font size */
   filter: initial;
   -webkit-filter: unset;
   filter: unset;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
-
 .video-54 .box-one img:hover {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }
-
 .video-54 .box-tow img {
   filter: blur(4px);
   -webkit-filter: blur(4px);
 }
-
 .video-54 .box-tow img:hover {
   -webkit-filter: blur(0);
   filter: blur(0);
 }
-
 .video-54 .box-three img {
   filter: invert(100%);
   -webkit-filter: invert(100%);
 }
-
 .video-54 .box-three img:hover {
   filter: invert(0);
   -webkit-filter: invert(0);
@@ -2691,11 +2353,10 @@ by the element's font size */
 
 .video-55 {
   /*
-  Gradients
-  linear-gradient(Direction || Angle, Color Stop 1, Color Stop 2, ....)
-*/
+    Gradients
+    linear-gradient(Direction || Angle, Color Stop 1, Color Stop 2, ....)
+  */
 }
-
 .video-55 .box-1 {
   width: 400px;
   height: 200px;
@@ -2703,10 +2364,8 @@ by the element's font size */
   margin: 20px auto;
   position: relative;
   padding: 10px;
-  background-image: -webkit-gradient(linear, right top, left top, from(#2980b9), to(#27ae60));
   background-image: linear-gradient(to left, #2980b9, #27ae60);
 }
-
 .video-55 .box-2 {
   width: 400px;
   height: 200px;
@@ -2715,7 +2374,6 @@ by the element's font size */
   position: relative;
   padding: 10px;
 }
-
 .video-55 .box-2::before {
   content: "";
   position: absolute;
@@ -2724,57 +2382,43 @@ by the element's font size */
   width: 100%;
   background-color: red;
   height: 20px;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, #2980b9), color-stop(20%, #27ae60), color-stop(40%, #27ae60), color-stop(40%, #d35400), color-stop(60%, #d35400), color-stop(60%, #8e44ad), color-stop(80%, #8e44ad), color-stop(80%, #c0392b));
   background-image: linear-gradient(to right, #2980b9 20%, #27ae60 20%, #27ae60 40%, #d35400 40%, #d35400 60%, #8e44ad 60%, #8e44ad 80%, #c0392b 80%);
 }
 
 .video-56 input {
   caret-color: red;
 }
-
 .video-56 a {
   pointer-events: none;
 }
-
 .video-56 p {
   caret-color: red;
 }
 
 .video-57 {
   /*
-  Grid
-  Parent
-  - display: grid | inline-grid
-  - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Repeat]
-*/
+    Grid
+    Parent
+    - display: grid | inline-grid
+    - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Repeat]
+  */
 }
-
 .video-57 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .video-57 .parent {
   margin: 0;
   width: 100%;
   height: 500px;
   background-color: #ddd;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100px 100px 200px;
-      grid-template-columns: 100px 100px 200px;
-  -ms-grid-columns: 100px 100px 50%;
-      grid-template-columns: 100px 100px 50%;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
-  -ms-grid-columns: (auto)[4];
-      grid-template-columns: repeat(4, auto);
-  -ms-grid-columns: 100px 200px 25% auto;
-      grid-template-columns: 100px 200px 25% auto;
-  -ms-grid-columns: (auto)[2] (1fr)[2];
-      grid-template-columns: repeat(2, auto) repeat(2, 1fr);
+  grid-template-columns: 100px 100px 200px;
+  grid-template-columns: 100px 100px 50%;
+  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(4, auto);
+  grid-template-columns: 100px 200px 25% auto;
+  grid-template-columns: repeat(2, auto) repeat(2, 1fr);
 }
-
 .video-57 .parent div {
   background-color: red;
   color: white;
@@ -2786,34 +2430,27 @@ by the element's font size */
 
 .video-58 {
   /*
-  Grid
-  Parent
-  - display: grid | inline-grid
-  - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
-  - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
-  - gap: [Row Gap] [Column Gap]
-*/
+    Grid
+    Parent
+    - display: grid | inline-grid
+    - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - gap: [Row Gap] [Column Gap]
+  */
 }
-
 .video-58 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .video-58 .parent {
   margin: 20px auto;
   width: 100%;
   height: 100vh;
   background-color: #ddd;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: (1fr)[4];
-      grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap: 10px 10px;
 }
-
 .video-58 .parent div {
   background-color: red;
   color: white;
@@ -2825,41 +2462,31 @@ by the element's font size */
 
 .video-59 {
   /*
-  Grid
-  Parent
-  - display: grid | inline-grid
-  - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
-  - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
-  - gap: [Row Gap] [Column Gap]
-  - justify-content
-  - align-content
-*/
+    Grid
+    Parent
+    - display: grid | inline-grid
+    - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - gap: [Row Gap] [Column Gap]
+    - justify-content
+    - align-content
+  */
 }
-
 .video-59 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .video-59 .parent {
   margin: 20px auto;
   width: 100%;
   height: 500px;
   background-color: #ddd;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: (auto)[3];
-      grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
   gap: 10px 10px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+  justify-content: space-between;
+  align-content: space-between;
 }
-
 .video-59 .parent div {
   background-color: red;
   color: white;
@@ -2872,84 +2499,56 @@ by the element's font size */
 
 .video-60 {
   /*
-  Grid
-  Parent
-  - display: grid | inline-grid
-  - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
-  - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
-  - gap: [Row Gap] [Column Gap]
-  - justify-content
-  - align-content
-*/
+    Grid
+    Parent
+    - display: grid | inline-grid
+    - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - gap: [Row Gap] [Column Gap]
+    - justify-content
+    - align-content
+  */
 }
-
 .video-60 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-
 .video-60 ul {
   list-style: none;
 }
-
 .video-60 ul li {
   display: inline-block;
 }
-
 .video-60 .page {
   height: 100vh;
   background-color: #eee;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[10];
-      grid-template-columns: repeat(10, 1fr);
-  -ms-grid-rows: 50px auto 50px;
-      grid-template-rows: 50px auto 50px;
-      grid-template-areas: "logo logo nav nav nav nav nav nav nav nav" "cont cont cont cont cont cont cont . side side" "foot foot foot foot foot foot foot foot foot foot";
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 50px auto 50px;
+  grid-template-areas: "logo logo nav nav nav nav nav nav nav nav" "cont cont cont cont cont cont cont . side side" "foot foot foot foot foot foot foot foot foot foot";
 }
-
 .video-60 h2 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: logo;
   background-color: red;
   color: white;
 }
-
 .video-60 nav {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 8;
   grid-area: nav;
   background-color: blue;
   color: white;
 }
-
 .video-60 section {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 7;
   grid-area: cont;
   background-color: yellow;
   color: white;
 }
-
 .video-60 aside {
-  -ms-grid-row: 2;
-  -ms-grid-column: 9;
-  -ms-grid-column-span: 2;
   grid-area: side;
   background-color: green;
   color: white;
 }
-
 .video-60 footer {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 10;
   grid-area: foot;
   background-color: black;
   color: white;
@@ -2957,40 +2556,33 @@ by the element's font size */
 
 .video-61 {
   /*
-  Grid
-  Parent
-  - display: grid | inline-grid
-  - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
-  - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
-  - gap: [Row Gap] [Column Gap]
-  - justify-content
-  - align-content
-  - grid-template-areas
-  Child
-  - grid-column: [Grid-Column-Start] [Grid-Column-End]
-  - grid-row: [Grid-Row-Start] [Grid-Row-End]
-*/
+    Grid
+    Parent
+    - display: grid | inline-grid
+    - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - gap: [Row Gap] [Column Gap]
+    - justify-content
+    - align-content
+    - grid-template-areas
+    Child
+    - grid-column: [Grid-Column-Start] [Grid-Column-End]
+    - grid-row: [Grid-Row-Start] [Grid-Row-End]
+  */
 }
-
 .video-61 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .video-61 .parent {
   margin: 20px auto;
   width: 100%;
   height: 100vh;
   background-color: #ddd;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[6];
-      grid-template-columns: repeat(6, 1fr);
-  -ms-grid-rows: (auto)[3];
-      grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, auto);
   gap: 10px 10px;
 }
-
 .video-61 .parent div {
   background-color: red;
   color: white;
@@ -2999,52 +2591,40 @@ by the element's font size */
   font-weight: bold;
   text-align: center;
 }
-
 .video-61 .test-1 {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 5;
-  grid-column: 2 / span 5;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 5;
-  grid-row: 2 / span 5;
+  grid-column: 2/span 5;
+  grid-row: 2/span 5;
 }
 
 .video-62 {
   /*
-  Grid
-  Parent
-  - display: grid | inline-grid
-  - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
-  - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
-  - gap: [Row Gap] [Column Gap]
-  - justify-content
-  - align-content
-  - grid-template-areas
-  Child
-  - grid-column: [Grid-Column-Start] [Grid-Column-End]
-  - grid-row: [Grid-Row-Start] [Grid-Row-End]
-  - grid-area: [Grid-Row-Start] [Grid-Column-Start] [Grid-Row-End] [Grid-Column-End]
-*/
+    Grid
+    Parent
+    - display: grid | inline-grid
+    - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - gap: [Row Gap] [Column Gap]
+    - justify-content
+    - align-content
+    - grid-template-areas
+    Child
+    - grid-column: [Grid-Column-Start] [Grid-Column-End]
+    - grid-row: [Grid-Row-Start] [Grid-Row-End]
+    - grid-area: [Grid-Row-Start] [Grid-Column-Start] [Grid-Row-End] [Grid-Column-End]
+  */
 }
-
 .video-62 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .video-62 .parent {
   margin: 20px auto;
   width: 90%;
   height: 500px;
   background-color: #ddd;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[6];
-      grid-template-columns: repeat(6, 1fr);
-  -ms-grid-rows: (auto)[3];
-      grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, auto);
 }
-
 .video-62 .parent div {
   background-color: red;
   color: white;
@@ -3053,34 +2633,26 @@ by the element's font size */
   font-weight: bold;
   text-align: center;
 }
-
 .video-62 .parent div:nth-child(9) {
   background-color: green;
-  -ms-grid-row: 2;
-      grid-row-start: 2;
+  grid-row-start: 2;
   grid-row-end: 5;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
+  grid-column-start: 2;
   grid-column-end: 6;
-  grid-area: 2 / 2 / 5 / 6;
+  grid-area: 2/2/5/6;
 }
 
 .video-63 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
 }
-
 .video-63 .parent {
   margin: 20px auto;
   height: 500px;
   background-color: #ddd;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
-
 .video-63 .parent div {
   background-color: red;
   color: white;
@@ -3099,7 +2671,6 @@ by the element's font size */
   padding: 0;
   background-color: #eee;
 }
-
 .video-65 .parent {
   position: absolute;
   left: 10%;
@@ -3113,7 +2684,6 @@ by the element's font size */
   height: 250px;
   background-color: #ddd;
 }
-
 .video-65 .parent .x-axis::before {
   content: "X-axis";
   position: absolute;
@@ -3130,7 +2700,6 @@ by the element's font size */
   font-weight: bold;
   z-index: 1;
 }
-
 .video-65 .parent .x-axis::after {
   content: "";
   width: 100%;
@@ -3140,7 +2709,6 @@ by the element's font size */
   left: 0;
   position: absolute;
 }
-
 .video-65 .parent .y-axis::before {
   content: "";
   width: 2px;
@@ -3149,7 +2717,6 @@ by the element's font size */
   left: -50px;
   position: absolute;
 }
-
 .video-65 .parent .y-axis::after {
   content: "Y-axis";
   position: absolute;
@@ -3166,7 +2733,6 @@ by the element's font size */
   font-weight: bold;
   z-index: 1;
 }
-
 .video-65 .parent > div {
   width: 70%;
   height: 70%;
@@ -3176,22 +2742,15 @@ by the element's font size */
   font-size: 30px;
   margin-top: 15%;
   margin-left: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
 }
-
 .video-65 .parent > div:not([disabled]):hover {
   transform: scale(2, 2);
   -webkit-transform: scale(2, 2);
@@ -3199,7 +2758,6 @@ by the element's font size */
   -ms-transform: scale(2, 2);
   -o-transform: scale(2, 2);
 }
-
 .video-65 .parent:nth-child(2) {
   left: 55%;
   transform: translate(-55%, -50%);
@@ -3208,11 +2766,9 @@ by the element's font size */
   -ms-transform: translate(-55%, -50%);
   -o-transform: translate(-55%, -50%);
 }
-
 .video-65 .parent:nth-child(2) > div {
   background-color: #3e8147;
 }
-
 .video-65 .parent:nth-child(2) > div:not([disabled]):hover {
   transform: scaleX(2);
   -webkit-transform: scaleX(2);
@@ -3220,7 +2776,6 @@ by the element's font size */
   -ms-transform: scaleX(2);
   -o-transform: scaleX(2);
 }
-
 .video-65 .parent:nth-child(3) {
   left: 100%;
   transform: translate(-100%, -50%);
@@ -3229,11 +2784,9 @@ by the element's font size */
   -ms-transform: translate(-100%, -50%);
   -o-transform: translate(-100%, -50%);
 }
-
 .video-65 .parent:nth-child(3) > div {
   background-color: #3489db;
 }
-
 .video-65 .parent:nth-child(3) > div:not([disabled]):hover {
   transform: scaleY(2);
   -webkit-transform: scaleY(2);
@@ -3251,7 +2804,6 @@ by the element's font size */
   padding: 0;
   background-color: #919191;
 }
-
 .video-66 .parent {
   position: absolute;
   left: 10%;
@@ -3265,7 +2817,6 @@ by the element's font size */
   height: 250px;
   background-color: #ddd;
 }
-
 .video-66 .parent .x-axis::before {
   content: "X-axis";
   position: absolute;
@@ -3282,7 +2833,6 @@ by the element's font size */
   font-weight: bold;
   z-index: 1;
 }
-
 .video-66 .parent .x-axis::after {
   content: "";
   width: 100%;
@@ -3292,7 +2842,6 @@ by the element's font size */
   left: 0;
   position: absolute;
 }
-
 .video-66 .parent .y-axis::before {
   content: "";
   width: 2px;
@@ -3301,7 +2850,6 @@ by the element's font size */
   left: -50px;
   position: absolute;
 }
-
 .video-66 .parent .y-axis::after {
   content: "Y-axis";
   position: absolute;
@@ -3318,7 +2866,6 @@ by the element's font size */
   font-weight: bold;
   z-index: 1;
 }
-
 .video-66 .parent > div {
   width: 70%;
   height: 70%;
@@ -3328,32 +2875,27 @@ by the element's font size */
   font-size: 30px;
   margin-top: 15%;
   margin-left: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
 }
-
 .video-66 .parent > div:not([disabled]):hover {
   transform: translate(100%, 100%);
   -webkit-transform: translate(100%, 100%);
+  -moz-transform: translate(100%, 100%);
+  -ms-transform: translate(100%, 100%);
+  -o-transform: translate(100%, 100%);
   transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   -o-transform: rotate(360deg);
 }
-
 .video-66 .parent:nth-child(2) {
   left: 55%;
   transform: translate(-55%, -50%);
@@ -3362,21 +2904,21 @@ by the element's font size */
   -ms-transform: translate(-55%, -50%);
   -o-transform: translate(-55%, -50%);
 }
-
 .video-66 .parent:nth-child(2) > div {
   background-color: #3e8147;
 }
-
 .video-66 .parent:nth-child(2) > div:not([disabled]):hover {
   transform: translateX(50%);
   -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
 }
-
 .video-66 .parent:nth-child(3) {
   left: 100%;
   transform: translate(-100%, -50%);
@@ -3385,14 +2927,15 @@ by the element's font size */
   -ms-transform: translate(-100%, -50%);
   -o-transform: translate(-100%, -50%);
 }
-
 .video-66 .parent:nth-child(3) > div {
   background-color: #3489db;
 }
-
 .video-66 .parent:nth-child(3) > div:not([disabled]):hover {
   transform: translateY(50%);
   -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -3409,7 +2952,6 @@ by the element's font size */
   padding: 0;
   background-color: #dda3a3;
 }
-
 .video-67 .parent {
   position: absolute;
   left: 10%;
@@ -3423,7 +2965,6 @@ by the element's font size */
   height: 250px;
   background-color: #ddd;
 }
-
 .video-67 .parent .x-axis::before {
   content: "X-axis";
   position: absolute;
@@ -3440,7 +2981,6 @@ by the element's font size */
   font-weight: bold;
   z-index: 1;
 }
-
 .video-67 .parent .x-axis::after {
   content: "";
   width: 100%;
@@ -3450,7 +2990,6 @@ by the element's font size */
   left: 0;
   position: absolute;
 }
-
 .video-67 .parent .y-axis::before {
   content: "";
   width: 2px;
@@ -3459,7 +2998,6 @@ by the element's font size */
   left: -50px;
   position: absolute;
 }
-
 .video-67 .parent .y-axis::after {
   content: "Y-axis";
   position: absolute;
@@ -3476,7 +3014,6 @@ by the element's font size */
   font-weight: bold;
   z-index: 1;
 }
-
 .video-67 .parent > div {
   width: 70%;
   height: 70%;
@@ -3486,22 +3023,15 @@ by the element's font size */
   font-size: 30px;
   margin-top: 15%;
   margin-left: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
 }
-
 .video-67 .parent > div:not([disabled]):hover {
   transform: translate(100%, 100%);
   -webkit-transform: translate(100%, 100%);
@@ -3509,7 +3039,6 @@ by the element's font size */
   -ms-transform: translate(100%, 100%);
   -o-transform: translate(100%, 100%);
 }
-
 .video-67 .parent:nth-child(2) {
   left: 55%;
   transform: translate(-55%, -50%);
@@ -3518,11 +3047,9 @@ by the element's font size */
   -ms-transform: translate(-55%, -50%);
   -o-transform: translate(-55%, -50%);
 }
-
 .video-67 .parent:nth-child(2) > div {
   background-color: #3e8147;
 }
-
 .video-67 .parent:nth-child(2) > div:not([disabled]):hover {
   transform: translateX(50%);
   -webkit-transform: translateX(50%);
@@ -3530,7 +3057,6 @@ by the element's font size */
   -ms-transform: translateX(50%);
   -o-transform: translateX(50%);
 }
-
 .video-67 .parent:nth-child(3) {
   left: 100%;
   transform: translate(-100%, -50%);
@@ -3539,11 +3065,9 @@ by the element's font size */
   -ms-transform: translate(-100%, -50%);
   -o-transform: translate(-100%, -50%);
 }
-
 .video-67 .parent:nth-child(3) > div {
   background-color: #3489db;
 }
-
 .video-67 .parent:nth-child(3) > div:not([disabled]):hover {
   transform: translateY(50%);
   -webkit-transform: translateY(50%);
@@ -3566,7 +3090,6 @@ by the element's font size */
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
 }
-
 .video-68 h2::before {
   content: "";
   background-color: red;
@@ -3587,7 +3110,6 @@ by the element's font size */
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
 }
-
 .video-68 h2:hover::before {
   transform: skewX(0deg);
   -webkit-transform: skewX(0deg);
@@ -3595,31 +3117,21 @@ by the element's font size */
   -ms-transform: skewX(0deg);
   -o-transform: skewX(0deg);
 }
-
 .video-68 div {
   margin: 200px auto;
   width: 200px;
   height: 200px;
   background-color: #e78282;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
   font-size: 30px;
   transform: skewX(10deg);
-  -webkit-transform: skewX(-10deg);
-          transform: skewX(-10deg);
-  -webkit-transform: skewY(10deg);
-          transform: skewY(10deg);
-  -webkit-transform: skewY(-10deg);
-          transform: skewY(-10deg);
+  transform: skewX(-10deg);
+  transform: skewY(10deg);
+  transform: skewY(-10deg);
   transform: skew(10deg, 10deg);
   -webkit-transform: skewX(10deg);
   -moz-transform: skewX(10deg);
@@ -3636,19 +3148,12 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   height: 200px;
   background-color: #3489db;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
   font-size: 30px;
-  -webkit-transform: translateX(20px) translateY(20px) scaleX(1.2) skewY(15deg) skewX(0deg) scaleY(1.2);
-          transform: translateX(20px) translateY(20px) scaleX(1.2) skewY(15deg) skewX(0deg) scaleY(1.2);
+  transform: translateX(20px) translateY(20px) scaleX(1.2) skewY(15deg) skewX(0deg) scaleY(1.2);
   transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
   -webkit-transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
   -moz-transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
@@ -3665,29 +3170,28 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   padding: 0;
   background-color: #eee;
   /*
-  transform-origin
-  Syntax
-  Default Values => 50% 50% 0
-  2D Transform => transform-origin(X, Y)
-  3D Transform => transform-origin(X, Y, Z)
-  X-Axis
-  - CSS Unit [px, em, rem]
-  - %
-  - Keyword
-  -- Left = 0%
-  -- Center = 50%
-  -- Right = 100%
-  Y-Axis
-  - CSS Unit [px, em, rem]
-  - %
-  - Keyword
-  -- Top = 0%
-  -- Center = 50%
-  -- Bottom = 100%
-*/
+    transform-origin
+    Syntax
+    Default Values => 50% 50% 0
+    2D Transform => transform-origin(X, Y)
+    3D Transform => transform-origin(X, Y, Z)
+    X-Axis
+    - CSS Unit [px, em, rem]
+    - %
+    - Keyword
+    -- Left = 0%
+    -- Center = 50%
+    -- Right = 100%
+    Y-Axis
+    - CSS Unit [px, em, rem]
+    - %
+    - Keyword
+    -- Top = 0%
+    -- Center = 50%
+    -- Bottom = 100%
+  */
   overflow: hidden;
 }
-
 .video-70 .parent {
   position: absolute;
   left: 50%;
@@ -3701,7 +3205,6 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   height: 300px;
   background-color: #ddd;
 }
-
 .video-70 .parent .x-axis::before {
   content: "X-axis";
   position: absolute;
@@ -3718,7 +3221,6 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   font-weight: bold;
   z-index: 1;
 }
-
 .video-70 .parent .x-axis::after {
   content: "";
   width: 100%;
@@ -3728,7 +3230,6 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   left: 0;
   position: absolute;
 }
-
 .video-70 .parent .y-axis::before {
   content: "";
   width: 2px;
@@ -3737,7 +3238,6 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   left: -50px;
   position: absolute;
 }
-
 .video-70 .parent .y-axis::after {
   content: "X-axis";
   position: absolute;
@@ -3754,7 +3254,6 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   font-weight: bold;
   z-index: 1;
 }
-
 .video-70 .parent .origin {
   position: absolute;
   left: 50%;
@@ -3774,21 +3273,14 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   -o-border-radius: 50%;
   z-index: 2;
 }
-
 .video-70 .parent > div {
   width: 90%;
   height: 90%;
   background-color: #3489db;
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
   font-size: 30px;
   margin: 5%;
@@ -3797,10 +3289,8 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
+  transform-origin: center center;
 }
-
 .video-70 .parent > div:not([disabled]):hover {
   transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
@@ -3815,26 +3305,18 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   height: 200px;
   background-color: #349834;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
   font-size: 30px;
-  -webkit-transform-origin: right top;
-          transform-origin: right top;
+  transform-origin: right top;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
 }
-
 .video-71 div:not([disabled]):hover {
   transform: rotate3d(0, 1, 1, 360deg);
   -webkit-transform: rotate3d(0, 1, 1, 360deg);
@@ -3844,75 +3326,55 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
 }
 
 .video-73 .parent-back-face {
-  -webkit-perspective: 600px;
-          perspective: 600px;
+  perspective: 600px;
 }
-
 .video-73 .parent-back-face .box {
   position: relative;
   width: 50%;
   min-height: 200px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
+  transform-style: preserve-3d;
   transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
   -webkit-transition: transform 1s;
   -moz-transition: transform 1s;
   -ms-transition: transform 1s;
   -o-transition: transform 1s;
-  -webkit-transform-origin: right center;
-          transform-origin: right center;
+  transform-origin: right center;
 }
-
 .video-73 .parent-back-face .box:not([disabled]):hover {
-  -webkit-transform: translateX(-100%) rotateY(-180deg);
-          transform: translateX(-100%) rotateY(-180deg);
+  transform: translateX(-100%) rotateY(-180deg);
 }
-
 .video-73 .parent-back-face .box .face {
   position: absolute;
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
   font-size: 30px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-
 .video-73 .parent-back-face .box .front {
   background-color: red;
 }
-
 .video-73 .parent-back-face .box .back {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
   color: #000;
 }
 
 .video-74 {
   position: relative;
   /*
-  Animation
-  - KeyFrames
-  - Name
-  - Duration
-*/
+    Animation
+    - KeyFrames
+    - Name
+    - Duration
+  */
   /* Code One */
   /* Code Two */
   /* Code Three */
 }
-
 .video-74 div {
   width: 100px;
   height: 100px;
@@ -3920,18 +3382,11 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   position: absolute;
   left: 50%;
   top: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   color: white;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   -webkit-animation-name: change-color;
   animation-name: change-color;
   /* Single animation */
@@ -3946,7 +3401,6 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   -webkit-animation-duration: 2s;
   animation-duration: 3s;
 }
-
 @-webkit-keyframes change-color {
   from {
     background-color: red;
@@ -3955,7 +3409,6 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
     background-color: blue;
   }
 }
-
 @keyframes change-color {
   from {
     background-color: red;
@@ -3964,7 +3417,6 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
     background-color: blue;
   }
 }
-
 @keyframes change-color {
   0% {
     background-color: red;
@@ -3973,7 +3425,6 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
     background-color: blue;
   }
 }
-
 @keyframes change-color {
   0% {
     background-color: red;
@@ -3992,13 +3443,12 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
 .video-75 {
   position: relative;
   /*
-  Animation
-  - Iteration Count
-  - Timing Function
-  - Spinner Loading
-*/
+    Animation
+    - Iteration Count
+    - Timing Function
+    - Spinner Loading
+  */
 }
-
 .video-75 div {
   width: 100px;
   height: 100px;
@@ -4010,10 +3460,7 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   margin-top: -50px;
   border-radius: 50%;
   border: 5px solid #e91e63;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
   border-left-color: transparent;
   -webkit-animation-name: spin;
   animation-name: spin;
@@ -4074,39 +3521,32 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 }
-
 @-webkit-keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 @keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 .video-76 {
   position: relative;
   /*
-  Animation
-  - Iteration Count
-  - Timing Function
-  - Spinner Loading
-*/
+    Animation
+    - Iteration Count
+    - Timing Function
+    - Spinner Loading
+  */
 }
-
 .video-76 div {
   width: 100px;
   height: 100px;
@@ -4185,12 +3625,10 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   animation-play-state: running;
   animation: coloring 3s linear 2s infinite reverse;
 }
-
 .video-76 div:hover {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
-
 @-webkit-keyframes coloring {
   0% {
     background-color: red;
@@ -4202,7 +3640,6 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
     background-color: black;
   }
 }
-
 @keyframes coloring {
   0% {
     background-color: red;
@@ -4217,31 +3654,22 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
 
 .video-77 {
   /*
-  Loading Animation
-*/
+    Loading Animation
+  */
 }
-
 .video-77 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
 }
-
 .video-77 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #333;
 }
-
 .video-77 .load {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin: 50px auto;
 }
-
 .video-77 .load div {
   width: 20px;
   height: 20px;
@@ -4257,30 +3685,24 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
 }
-
 .video-77 .load .two {
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
 }
-
 .video-77 .load .three {
   -webkit-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
-
 @-webkit-keyframes up-and-down {
   to {
     opacity: 0.2;
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    transform: translateY(-20px);
   }
 }
-
 @keyframes up-and-down {
   to {
     opacity: 0.2;
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    transform: translateY(-20px);
   }
 }
 
@@ -4340,26 +3762,19 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
 */
 .video-83 {
   /*
-  Media Queries
-  Responsive Design
-*/
+    Media Queries
+    Responsive Design
+  */
 }
-
 .video-83 .parent {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin: 20px auto;
 }
-
 .video-83 .parent > div {
   background-color: red;
   color: white;
@@ -4367,25 +3782,21 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   font-size: 20px;
   width: 200px;
 }
-
 @media print {
   .video-83 .parent > div {
     font-size: 100px;
   }
 }
-
 @media print {
   .video-83 .parent > div:first-child {
     display: none;
   }
 }
-
 @media (min-width: 1400px) {
   .video-83 .parent > div {
     background-color: blue;
   }
 }
-
 @media (min-width: 1000px) and (max-width: 1400px) {
   .video-83 .parent > div {
     background-color: blue;
@@ -4401,35 +3812,26 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
 /* Custom */
 .video-85 {
   /*
-  Media Queries
-  Responsive Design
-  - Mobile First
-  - Test Devices
-*/
+    Media Queries
+    Responsive Design
+    - Mobile First
+    - Test Devices
+  */
   /* Mobile */
   /* Small Screens */
   /* Medium Screens */
   /* Large Screens */
   /* Custom */
 }
-
 .video-85 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
 }
-
 .video-85 .parent {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-
 .video-85 .parent > div {
   padding: 20px;
   background-color: red;
@@ -4440,19 +3842,16 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   width: 100%;
   margin-bottom: 5px;
 }
-
 @media (min-width: 768px) {
   .video-85 .parent > div {
     width: calc(50% - 10px);
   }
 }
-
 @media (min-width: 992px) {
   .video-85 .parent > div {
     width: calc(25% - 10px);
   }
 }
-
 /*
   CSS Global Values
   - inherit
@@ -4466,55 +3865,30 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
 .css-parent-grid {
   width: 100%;
   margin: auto;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 10px 1%;
   /*
   justify-content: space-between;
   align-content: space-between;
   */
 }
-
 .Parent-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
 }
-
 .Parent-flex .child-flex {
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
-  -webkit-box-ordinal-group: 1;
-      -ms-flex-order: 0;
-          order: 0;
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
-  -ms-flex: 0 1 auto;
-      flex: 0 1 auto;
-  -ms-flex-item-align: auto;
-      -ms-grid-row-align: auto;
-      align-self: auto;
+  flex-grow: 0;
+  flex-shrink: 1;
+  order: 0;
+  flex-basis: auto;
+  flex: 0 1 auto;
+  align-self: auto;
 }
 
 .filter {
@@ -4527,19 +3901,15 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
 }
 
 .parent-grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 0px 0px;
 }
-
 .test-maraim {
   width: 50%;
   height: 300px;
   position: relative;
 }
-
 .test-maraim .maraim-atef {
   color: #fff;
   display: inline-block;
@@ -4552,7 +3922,6 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
 }
-
 .test-maraim .maraim-atef:nth-child(1) {
   background-color: #2980b9;
   transition: all 0.5s ease-in-out;
@@ -4561,7 +3930,6 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
 }
-
 .test-maraim .maraim-atef:nth-child(2) {
   background-color: #29b4b9;
   z-index: -1;
@@ -4571,15 +3939,13 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   -moz-transform: rotateZ(90deg);
   -ms-transform: rotateZ(90deg);
   -o-transform: rotateZ(90deg);
-  -webkit-transform-origin: right center;
-          transform-origin: right center;
+  transform-origin: right center;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
 }
-
 .test-maraim:hover .maraim-atef:nth-child(2) {
   transform: rotateZ(0deg);
   -webkit-transform: rotateZ(0deg);
@@ -4589,4 +3955,3 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   z-index: 1;
   opacity: 1;
 }
-/*# sourceMappingURL=projectCss2021.css.map */
