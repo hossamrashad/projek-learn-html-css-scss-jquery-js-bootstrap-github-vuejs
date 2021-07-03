@@ -4232,6 +4232,7 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   }
   .maraim-atef:nth-child(2) {
     background-color: #29b4b9;
+    
     z-index: -1;
     opacity: 0;
     @include rotateZ(90deg);
