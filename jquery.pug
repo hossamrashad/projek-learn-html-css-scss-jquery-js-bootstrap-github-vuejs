@@ -101,14 +101,14 @@ html(lang="en")
         hr
         h3(class="h3 text-center mb-5") video 12 Remove Element || remove , empty
         .col-sm-6 
-          button(class="btn btn-info video-12-btn-1", id="video-12-btn-1") click Remove
+          button(class="btn btn-info video-12-btn-1" id="video-12-btn-1") click Remove
           div(class="video-12-div-1" id="video-12-div-1") 
             h3(class="h2") Element Remove
         .col-sm-6 
-          button(class="btn btn-info video-12-btn-2", id="video-12-btn-2") click 
+          button(class="btn btn-info video-12-btn-2" id="video-12-btn-2") click 
           div(class="video-12-div-2" id="video-12-div-2") 
             h3(class="h2") Element Empty
-          button(class="btn btn-info video-12-btn-3", id="video-12-btn-3") click filter
+          button(class="btn btn-info video-12-btn-3" id="video-12-btn-3") click filter
           div(class="video-12-div-3" id="video-12-div-3") 
             h3(class="h2") Element Empty
             h3(class="h2") Element 
@@ -118,17 +118,17 @@ html(lang="en")
         hr
         h3(class="h3 text-center mb-5") video 13 Css Class
         .col-sm-6 
-          button(class="btn btn-info video-13-btn-1", id="video-13-btn-1") click Add Class
+          button(class="btn btn-info video-13-btn-1" id="video-13-btn-1") click Add Class
           div(class="video-13-div-1" id="video-13-div-1") 
             h3(class="h2") Element Add Class
             h3(class="h3") Element Add Class
         .col-sm-6 
-          button(class="btn btn-info video-13-btn-2", id="video-13-btn-2") click Remove Class
+          button(class="btn btn-info video-13-btn-2" id="video-13-btn-2") click Remove Class
           div(class="video-13-div-2" id="video-13-div-2") 
             h3(class="h2 style-test") Element Remove Class
             h3(class="h3") Element Remove Class
         .col-sm-6 
-          button(class="btn btn-info video-13-btn-3", id="video-13-btn-3") click filter 
+          button(class="btn btn-info video-13-btn-3" id="video-13-btn-3") click filter 
           div(class="video-13-div-3" id="video-13-div-3")
             h3(class="h3") Element Class filter first
             h3(class="h3") Element Class filter
@@ -139,7 +139,7 @@ html(lang="en")
             h3(class="h3") Element Class 
             h3(class="h3") Element Class filter last
         .col-sm-6 
-          button(class="btn btn-info video-13-btn-4", id="video-13-btn-4") click Toggle Class 
+          button(class="btn btn-info video-13-btn-4" id="video-13-btn-4") click Toggle Class 
           div(class="video-13-div-4" id="video-13-div-4")
             h3(class="h3 style-test") Element Class filter first
             h3(class="h3 style-test") Element Class filter
@@ -152,20 +152,22 @@ html(lang="en")
         hr
         h3(class="h3 text-center mb-5") video 14 Css Get & Set
         .col-sm-6 
-          button(class="btn btn-danger video-14-btn-1", id="video-14-btn-1") get css attr 
+          button(class="btn btn-danger video-14-btn-1" id="video-14-btn-1") get css attr 
           p(class="lead style-test pt-5 pb-5 mb-2 mt-5 video-14-div-1") Rovan Hossam Rashad
-          input(type="text", name="" id="video-14-input-1" class="video-14-input-1" placeholder="get color ")
+          input(type="text" name="" id="video-14-input-1" class="video-14-input-1" placeholder="get color ")
         .col-sm-6 
-          button(class="btn btn-danger video-14-btn-2", id="video-14-btn-2") set css attr 
+          button(class="btn btn-danger video-14-btn-2" id="video-14-btn-2") set css attr 
           p(class="lead style-test pt-5 pb-5 mb-2 mt-5 video-14-div-2") Rovan Hossam Rashad
-          input(type="text", name="" id="video-14-input-2" class="video-14-input-2" placeholder="set background color ")
+          input(type="text" name="" id="video-14-input-2" class="video-14-input-2" placeholder="set background color ")
         br 
         hr
         br
         h3(class="h3 text-center mb-5") video 15 Dimensions width & height
         //- .col-sm-6 
         div(class="video-15-div-1") 
-        <br>
+        |
+        br
+        |
         <br>
         div(class="video-15-div-2") Element + width
         div(class="video-15-div-3")
@@ -219,27 +221,102 @@ html(lang="en")
         hr
         h3(class="h3 text-center mb-5") video 18 traversing siblings & next & prev
         .col-sm-6 
-          .video-18-parent-one parent one
-          .video-18-parent-tow parent tow
-          .video-18-parent-three parent three
-          .video-18-parent-four parent four
-          p(class="video-18-child") children
+          section(class="video-18-section")
+            .video-18-parent-one parent one
+            .video-18-parent-tow parent tow
+            .video-18-parent-three siblings 
+            .video-18-parent-four parent four
+            p(class="video-18-child") children 
         .col-sm-6 
-          .video-18-parent-one 
-            .video-18-parent-tow-find 
-              .video-18-parent-three 
-                .video-18-parent-four 
-                  .video-18-child-tow find
+          section(class="video-18-section-tow")
+            .video-18-parent-one parent one
+            .video-18-parent-tow parent tow
+            .video-18-parent-three next 
+            .video-18-parent-four parent four
+            p(class="video-18-child") children 
         br
         br
         br
         hr
         .col-sm-6 
-          .video-18-parent-one parent one
+          section(class="video-18-section-three")
+            .video-18-parent-one parent one
             .video-18-parent-tow parent tow
-              .video-18-parent-three parent three
-                .video-18-parent-four parent four
-                  .video-18-child children
+            .video-18-parent-three prev 
+            .video-18-parent-four parent four
+            p(class="video-18-child") children 
+        .col-sm-6 
+          section(class="video-18-section-four")
+            .video-18-parent-one parent one
+            .video-18-parent-tow parent tow
+            .video-18-parent-three Next All 
+            .video-18-parent-four parent four
+            p(class="video-18-child") children 
+        br
+        br
+        br
+        hr
+        .col-sm-6 
+          section(class="video-18-section-five")
+            .video-18-parent-one parent one
+            .video-18-parent-tow parent tow
+            .video-18-parent-three prev All 
+            .video-18-parent-four parent four
+            p(class="video-18-child") children 
+        .col-sm-6 
+          section(class="video-18-section-sex")
+            .video-18-parent-one parent one
+            .video-18-parent-tow parent tow
+            .video-18-parent-three next Until  
+            .video-18-parent-four parent four
+            p(class="video-18-child") children 
+        .col-sm-6 
+          section(class="video-18-section-seven")
+            .video-18-parent-one parent one
+            .video-18-parent-tow parent tow
+            .video-18-parent-three prev Until  
+            .video-18-parent-four parent four
+            p(class="video-18-child") children 
+        br
+        br
+        br
+        hr
+        h3(class="h3 text-center mb-5") video 19 traversing first & last & aq & Filter & not
+        .col-sm-6 
+          section(class="video-19-section-one")
+            .video-19-parent-one first eq ( 0 ) 1
+            .video-19-parent-tow eq ( 1 ) 2
+            .video-19-parent-three eq ( 2 ) 3  
+            .video-19-parent-four eq ( 3 ) 4  
+            .video-19-parent-five eq ( 4 ) 5  
+            .video-19-parent-sex eq ( 5 ) 6  
+            .video-19-parent-seven eq ( 6 ) 7  
+            .video-19-parent-eight eq ( 7 ) 8  
+            .video-19-parent-nine eq ( 8 ) 9  
+            .video-19-parent-ten eq ( 9 ) 10  
+            .video-19-parent-eleven eq ( 10 ) 11  
+            .video-19-parent-twelve eq ( 11 ) 12  
+            .video-19-parent-thirteen eq ( 12 ) 13  
+            .video-19-parent-fourteen eq ( 13 ) 14  
+            .video-19-parent-four last parent four
+        .col-sm-6 
+          section(class="video-19-section-tow")
+            .video-19-parent-one first eq ( 0 ) 1
+            .video-19-parent-tow eq ( 1 ) 2
+            .video-19-parent-three eq ( 2 ) 3  
+            .video-19-parent-four eq ( 3 ) 4  
+            .video-19-parent-five eq ( 4 ) 5  
+            .video-19-parent-sex eq ( 5 ) 6  
+            .video-19-parent-seven eq ( 6 ) 7  
+            .video-19-parent-eight eq ( 7 ) 8  
+            .video-19-parent-nine eq ( 8 ) 9  
+            .video-19-parent-ten eq ( 9 ) 10  
+            .video-19-parent-eleven eq ( 10 ) 11  
+            .video-19-parent-twelve eq ( 11 ) 12  
+            .video-19-parent-thirteen eq ( 12 ) 13  
+            .video-19-parent-fourteen eq ( 13 ) 14  
+            .video-19-parent-four last parent four
+
     script(src="js/jquery-3-6-0.min.js") 
     script(src="js/popper-1.14.7.min.js") 
     script(src="js/bootstrap.js")  

@@ -53,13 +53,32 @@
  *
  *
  *
+ * traversing siblings & next & nextAll & nextUntil & prev & prevAll & prevUntil
+ * $(".Element").siblings()
+ * $(".Element").next()
+ * $(".Element").nextAll()
+ * $(".Element").nextUntil()
+ * $(".Element").prev()
+ * $(".Element").prevAll()
+ * $(".Element").prevUntil()
  *
  *
  *
- *
- *
- *
- *
+ * traversing first & last & aq & Filter & not
+ * $(".Element").first()
+ * $(".Element").last()
+ * $(".Element").eq()
+ * $(".Element").filter()
+ * $(".Element").filter(".className")
+ * $(".Element").filter($(".className"))
+ * $(".Element").filter(":contains('word")
+ * $(".Element").filter(function (funcName){return funcName === 9;})
+ * $(".Element").not()
+ * $(".Element").not(".className")
+ * $(".Element").not($(".className"))
+ * $(".Element").not(":contains('word")
+ * $(".Element").not(function (funcName){return funcName === 9;})
+ * 
  *
  *
  */
@@ -347,6 +366,82 @@ $(document).ready(function () {
   // نوع من الافلاتار عنصر يحتوى على كلمة معينة
   .find($("div:contains('find')")).css({
     border: "4px solid #f00"
+  }); // video 18 traversing siblings & next & prev
+
+  $(".video-18-section, .video-18-section-tow, .video-18-section-three, .video-18-section-four, .video-18-section-five, .video-18-section-sex, .video-18-section-seven").find("*").css({
+    padding: "10px",
+    margin: "10px 0",
+    backgroundColor: "#666",
+    color: "#fafafa"
+  });
+  $(".video-18-section .video-18-parent-three") // .siblings(".video-18-parent-tow")
+  .siblings().css({
+    border: "3px solid #f00"
+  }); // next
+
+  $(".video-18-section-tow .video-18-parent-three") // .next("className")
+  .next().css({
+    border: "3px solid #f00"
+  }); // prev
+
+  $(".video-18-section-three .video-18-parent-three") // .prev("className")
+  .prev().css({
+    border: "3px solid #f00"
+  }); // nextAll
+
+  $(".video-18-section-four .video-18-parent-three") // .nextAll("className")
+  .nextAll().css({
+    border: "3px solid #f00"
+  }); // prevAll
+
+  $(".video-18-section-five .video-18-parent-three") // .prevAll("className")
+  .prevAll().css({
+    border: "3px solid #f00"
+  }); // nextUntil
+
+  $(".video-18-section-sex .video-18-parent-three") // .nextUntil("className")
+  .nextUntil().css({
+    border: "3px solid #f00"
+  }); // prevUntil
+
+  $(".video-18-section-seven .video-18-parent-three") // .prevUntil("className")
+  .prevUntil().css({
+    border: "3px solid #f00"
+  }); // video 19 traversing first & last & aq & Filter & not
+
+  $(".video-19-section-one, .video-19-section-tow").find("*").css({
+    backgroundColor: "#333",
+    color: "#fafafa",
+    padding: "10px",
+    margin: "10px 0"
+  });
+  $(".video-19-section-one div").first().css({
+    border: "5px solid #f00"
+  });
+  $(".video-19-section-one div").last().css({
+    border: "5px solid #f00"
+  });
+  $(".video-19-section-one div").eq(3).css({
+    border: "5px solid #f00"
+  }); // الفلتار بيقبال انو انت تكتب فيه اسم كلاس او ابجاكت او تبحث على كلمة او تكتاب فانكشان كاملة جوة الفلتار
+
+  $(".video-19-section-one div").filter(".video-19-parent-sex").css({
+    border: "5px solid #f00"
+  });
+  $(".video-19-section-one div").filter($(".video-19-parent-eight")).css({
+    border: "5px solid #f00"
+  });
+  $(".video-19-section-one div").filter(function (video19func1) {
+    return video19func1 === 9;
+  }).css({
+    border: "5px solid #f00"
+  }); // not
+
+  $(".video-19-section-tow div").not(".video-19-parent-sex").css({
+    border: "5px solid #f00"
+  });
+  $(".video-19-section-tow div").not(":contains('four").css({
+    border: "5px solid #00f"
   }); // end document
 }); // test chrome
 // function to add button reload page it is for test
@@ -457,5 +552,53 @@ $(function () {
   $(".window-sm").on("click", function () {
     var windowHref = window.location.href;
     window.open(windowHref, "_blank", "width=768,height=1080,menubar=no,status=no", "true");
+  });
+}); // function to font Ar
+
+$(function () {
+  "use strict";
+
+  var fontAr = document.createElement("link");
+  fontAr.href = "https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&family=Changa:wght@200;300;400;500;600;700;800&family=El+Messiri:wght@400;500;600;700&family=Lateef&family=Markazi+Text:wght@400;500;600;700&family=Mirza:wght@400;500;600;700&family=Scheherazade:wght@400;700&family=Short+Stack&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap";
+  document.getElementsByTagName("head")[0].appendChild(fontAr);
+  $("body").append("<input list='fontAr' class='fontAr' placeholder='set font Ar'>");
+  $("body").append("<datalist id='fontAr'></datalist>");
+  $("datalist#fontAr").append("<option value='Cairo, sans-serif'></option>");
+  $("datalist#fontAr").append("<option value='DroidKufi-regular'></option>");
+  $("datalist#fontAr").append("<option value='Droid Arabic Kufi'></option>");
+  $("datalist#fontAr").append("<option value='Short Stack, cursive'></option>");
+  $("datalist#fontAr").append("<option value='Tajawal, sans-serif'></option>");
+  $("datalist#fontAr").append("<option value='Markazi Text, serif'></option>");
+  $("datalist#fontAr").append("<option value='El Messiri, sans-serif'></option>");
+  $("datalist#fontAr").append("<option value='Changa, sans-serif'></option>");
+  $("datalist#fontAr").append("<option value='Mirza, cursive'></option>");
+  $("datalist#fontAr").append("<option value='Lateef, cursive'></option>");
+  $("datalist#fontAr").append("<option value='Scheherazade, serif'></option>");
+  $(".fontAr").css({
+    width: "fit-content",
+    fontSize: "13px",
+    border: "10px solid #333",
+    borderRadius: "10px",
+    padding: "5px 5px",
+    position: "fixed",
+    bottom: "50px",
+    left: "5px"
+  });
+  $("body").append("<button class='fontArBtn'>Test Font</button>");
+  $(".fontArBtn").css({
+    width: "fit-content",
+    backgroundColor: "#bb2d3b",
+    fontSize: "13px",
+    color: "#fff",
+    border: "10px solid #333",
+    borderRadius: "10px",
+    padding: "5px 5px",
+    position: "fixed",
+    bottom: "0px",
+    left: "50px"
+  });
+  $(".fontArBtn").on("click", function () {
+    var setColorVideo14input1 = $(".fontAr").val();
+    $("body").css("fontFamily", setColorVideo14input1);
   });
 });
