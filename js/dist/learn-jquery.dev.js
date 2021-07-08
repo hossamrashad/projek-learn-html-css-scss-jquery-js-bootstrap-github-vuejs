@@ -67,7 +67,7 @@
  * traversing first & last & aq & Filter & not
  * $(".Element").first()
  * $(".Element").last()
- * $(".Element").eq()
+ * $(".Element").eq(0)
  * $(".Element").filter()
  * $(".Element").filter(".className")
  * $(".Element").filter($(".className"))
@@ -78,7 +78,105 @@
  * $(".Element").not($(".className"))
  * $(".Element").not(":contains('word")
  * $(".Element").not(function (funcName){return funcName === 9;})
+ *
+ *
+ *
+ * selectors
+ * ! $(".Element *")                          ||
+ * ! $(".Element p")                          ||
+ * ! $(".Element p.className")                ||
+ * ! $(".Element p#idName")                   ||
+ * ! $(".Element p:first")                    ||
+ * ! $(".Element p:last")                     ||
+ * ! $(".Element p:even")                     ||
+ * ! $(".Element p:odd")                      ||
+ *
+ * ! $(".Element p:first-child")              ||
+ * ! $(".Element p:last-child")               ||
+ * ! $(".Element p:first-of-Type")            ||
+ * ! $(".Element p:last-of-Type")             ||
+ * ! $(".Element p:nth-child(3)")             ||
+ * ! $(".Element p:nth-last-child(2)")        ||
+ * ! $(".Element p:nth-of-type(3)")           ||
+ * ! $(".Element p:nth-last-of-type(3)")      ||
+ *
+ *
+ * ! $(".Element p:only-child")               || only-child
+ * ! $(".Element p:only-of-type")             || only-of-type
+ * ! $(".Element p > span")                   || direct child
+ * ! $(".Element p + span")                   || العنصر اللى بعدو
+ * ! $(".Element p ~ span")                   || الاشقاء
+ * ! $(".Element p:gt(1)")                    ||
+ * ! $(".Element p:lt(1)")                    ||
+ * ! $(".Element p:not(:contains('6')")       || لا يحتوى على كلمة معينة
+ *
+ *
+ * ! $(".Element :header")                    || h1 h2 h3 h4 h5 h6
+ * ! $(".Element :animated")                  || Element with animated
+ * ! $(".Element :focus")                     || input = focus
+ * ! $(".Element :contains('rashad')")        || Element have word
+ * ! $(".Element :has('.className')")         || Element have class name
+ * ! $(".Element :empty")                     || Element Empty
+ * ! $(".Element :parent")                    || Element have parent
+ * ! $(".Element :hidden")                    || Element is display = none
+ * ! $(".Element :visible")                   || Element is visible
+ * ! $(".Element :root")                      || root = html
+ * ! $(".Element :lang('ar')")                || lang
+ *
+ *
+ *
+ * ! $("[title]")                             ||
+ * ! $("[title='titleName']")                 ||
+ * ! $(".Element[title='titleName']")         || =
+ * ! $(".Element[title!='titleName']")        || !=
+ * ! $(".Element[title*='titleName']")        || *=
+ * ! $(".Element[title~='titleName']")        || ~=
+ * ! $(".Element[title^='titleName']")        || ^=
+ *
+ *
+ *
+ *
+ *
+ *
+ * ------------------ Events With on ---------------------
+ * single event
+ * $(".Element-Parent")on("click", "Element-Child", function(){ $(this).hide(); });
  * 
+ * multi event with on
+ * $(".Element-Parent")on("mouseenter mouseleave", "Element-Child", function(){ $(this).toggleClass("className"); });
+ *
+ * map event with on
+ * $(".Element-Parent")on({
+ * mouseenter: function() {
+    $(this).toggleClass("className");
+    },
+  mouseleave: function() {
+    $(this).toggleClass("className");
+    },
+ * });
+ *
+ * custom event with on
+ * $(".Element-Parent").on("customEventDesign", function(event, myHeight, myWidth, myBack) {
+    $(this).height(myHeight).width(myWidth).css({ backgroundColor: myBack });
+    });
+    $(".Element-Parent").on("click", function() {
+    $(this).trigger("customEventDesign", ["200px", "100%", "#999"]);
+    });
+ *
+ *
+ * $(".Element-Parent").on("click", ".Element-Child", function(event) {
+ *      event.preventDefault();
+ *        $(".Element").fadeToggle(500);
+ *       if (event.isDefaultPrevented) {
+ *           $(".Element").text("yes it is");
+ *       } else {
+ *           $(".Element").text("yes it is");
+ *       }
+ *   });
+ *
+ *
+ *
+ *
  *
  *
  */
@@ -442,6 +540,307 @@ $(document).ready(function () {
   });
   $(".video-19-section-tow div").not(":contains('four").css({
     border: "5px solid #00f"
+  }); // video 20 reference
+
+  $(".video-20-div-1 *").css({
+    backgroundColor: "#ffc107"
+  });
+  $(".video-20-div-2 p ").css({
+    backgroundColor: "#ffc107"
+  });
+  $(".video-20-div-3 p.className ").css({
+    backgroundColor: "#ffc107"
+  });
+  $(".video-20-div-4 p#idName ").css({
+    backgroundColor: "#ffc107"
+  });
+  $(".video-20-div-5 p:first ").css({
+    backgroundColor: "#ffc107"
+  });
+  $(".video-20-div-5 p:last ").css({
+    backgroundColor: "#ffc107"
+  });
+  $(".video-20-div-6 p:even ").css({
+    backgroundColor: "#ffc107"
+  });
+  $(".video-20-div-7 p:odd ").css({
+    backgroundColor: "#ffc107"
+  }); // video 21 reference first-child & last-child & first-of-Type & last-of-Type & nth-child(3) & nth-last-child(2) & nth-of-type(3) & nth-last-of-type(3)
+  // :first-child كل عنصر لية اب بيطبق علية الخواص
+
+  $(".video-21-parent-one  p:first-child").css({
+    backgroundColor: "#ffc107"
+  });
+  $(".video-21-parent-one  p:last-child").css({
+    backgroundColor: "#ffc107"
+  }); // :first-of-Type بيدوار على نوع معين انت مديهولو حت و لو قبلو عناصر
+
+  $(".video-21-parent-tow p:first-of-Type").css({
+    backgroundColor: "#ffc107"
+  });
+  $(".video-21-parent-tow p:last-of-Type").css({
+    backgroundColor: "#ffc107"
+  }); // :nth-child(3)
+
+  $(".video-21-parent-three p:nth-child(3)").css({
+    backgroundColor: "#ffc107"
+  });
+  $(".video-21-parent-three p:nth-last-child(2)").css({
+    backgroundColor: "#ffc107"
+  }); //
+
+  $(".video-21-parent-four p:nth-of-type(3)").css({
+    backgroundColor: "#ffc107"
+  });
+  $(".video-21-parent-four p:nth-last-of-type(3)").css({
+    backgroundColor: "#ffc107"
+  }); // video 22 reference
+
+  $(".div-in-div-container p:only-child").css({
+    backgroundColor: "#ffc107"
+  });
+  $(".div-in-div-container-one span:only-of-type").css({
+    backgroundColor: "#ffc107"
+  }); //
+
+  $(".div-in-div-container-three  > p").css({
+    backgroundColor: "#ffc107"
+  }); // + معناها العنصر اللى بعدو
+
+  $(".div-in-div-container-four  p + span").css({
+    backgroundColor: "#ffc107"
+  }); // ~ معناها الاشقاء
+
+  $(".video-22-container-five  div ~ p").css({
+    backgroundColor: "#ffc107"
+  }); //
+
+  $(".video-22-container-sex p:gt(1)").css({
+    backgroundColor: "#ffc107"
+  });
+  $(".video-22-container-sex p:lt(1)").css({
+    backgroundColor: "#ffc107"
+  }); // :not( :contains('6') لا يحتوى على كلمة معينة
+
+  $(".video-22-container-seven p:not( :contains('6'))").css({
+    backgroundColor: "#ffc107"
+  }); // video 23
+
+  $(".video-23-parent-one :header").css({
+    backgroundColor: "#ffc107"
+  });
+  $(".video-23-parent-tow :animated").css({
+    backgroundColor: "#ffc107"
+  });
+  $("input[name='video32input']").focus();
+  $(":focus").css({
+    padding: "10px"
+  });
+  $(".video-23-four div:contains('rashad')").animate({
+    height: "200px"
+  }, 5000).css({
+    backgroundColor: "#666",
+    color: "#fff"
+  });
+  $(".video-23-parent-five div:has('.test-video-23')").css({
+    backgroundColor: "#ffc107"
+  });
+  $(".video-23-btn-sex").css({
+    padding: "3px 20px",
+    margin: "20px auto",
+    display: "block"
+  });
+  $(".video-23-visible").css({
+    backgroundColor: "#999",
+    height: "200px"
+  });
+  $(".video-23-hidden").css({
+    display: "none",
+    backgroundColor: "#c3c3c3",
+    height: "200px"
+  });
+  $(".video-23-btn-sex").on("click", function () {
+    $(".video-23-visible").slideToggle(300);
+    $(".video-23-hidden").slideToggle(300);
+  });
+  $(".video-23-btn-sex-2").on("click", function () {
+    $(":root").addClass("root-test").css({
+      background: "#333"
+    });
+  });
+  $("p:lang('ar')").css({
+    textAlign: "right"
+  }); // ******************************************/
+  // video 20 attr
+  // اختيار العنصار عن طريق الالتربيوت
+
+  $("[alt='image 1']").css({
+    borderRadius: "50% "
+  });
+  $("[title='image 3']").css({
+    borderRadius: "50% "
+  });
+  $("p[lang='en']").css({
+    textAlign: "left"
+  }); // != معناها لا تساوى
+
+  $("p[lang!='en']").css({
+    textAlign: "right"
+  }); // *= يحتوى على كلمة او احراف متكاملة او جوة كلمة
+
+  $("p[title*='المساحة،']").css({
+    border: "3px solid #333",
+    padding: "10px"
+  }); // ~= يحتوى على كلمة منفصلة
+
+  $("p[title*='النص']").css({
+    border: "3px solid #3498db",
+    padding: "10px"
+  }); // ^= عنصر يبدا بى كلمة معينة
+
+  $("p[title*='مثال']").css({
+    border: "3px solid #3498db",
+    padding: "10px"
+  }); // video 25
+
+  $(".video-25-parent :input").css({
+    display: "block"
+  });
+  $(".video-25-parent :text").css({
+    border: "5px solid #f00"
+  });
+  $(".video-25-parent :disabled").css({
+    border: "5px solid #f00"
+  });
+  $(".video-25-parent :enabled").css({
+    border: "5px solid #00f"
+  });
+  $(".video-25-parent :checked").css({
+    border: "5px solid #000"
+  }); // video 26
+  // single event with bind
+
+  $(".video-26-div-one").bind("click", function () {
+    $(this).css({
+      border: "2px solid #333"
+    });
+  }); // multi event with bind
+
+  $(".video-26-div-one").bind("mouseenter mouseleave", function () {
+    $(this).toggleClass("padding");
+  }); // map event with bind
+
+  $(".video-26-div-tow").bind({
+    mouseenter: function mouseenter() {
+      $(this).css({
+        border: "2px solid #333"
+      });
+    },
+    mouseleave: function mouseleave() {
+      $(this).css({
+        border: "0px solid #333"
+      });
+    }
+  }); // custom event with bind
+  // customEvent =  event
+  //
+
+  $(".video-26-div-three").bind("customEvent", function (event, name, age) {
+    $(this).css({
+      border: "2px solid #333"
+    }).text("Rovan Hossam " + name + age);
+  });
+  $(".btn-video-26").on("click", function () {
+    $(".video-26-div-three").trigger("customEvent", ["Rashad", " 30"]);
+  });
+  $(".custom-event-video26-2").css({
+    backgroundColor: "#eee",
+    padding: "10px",
+    width: "70%",
+    margin: "20px auto"
+  }); // customEvent   with design
+
+  var inputBind = $("input[name='input-custom-video-26']").val();
+  $(".custom-event-video26-2").bind("customEventDesign", function (event, myHeight, myWidth, myBack) {
+    $(this).height(myHeight).width(myWidth).css({
+      backgroundColor: myBack
+    });
+  });
+  $(".btn-video-26-2").on("click", function () {
+    $(".custom-event-video26-2").trigger("customEventDesign", ["200px", "100%", "#999"]);
+  }); // video 27 live
+
+  var btnVideo271 = $(".btn-video-27-1");
+  btnVideo271.on("click", function () {
+    $("<p class='add'> add paragraph </p>").insertAfter($(this));
+  });
+  $(".parent-div-video-27 p.add").on("click", function () {
+    $(this).css({
+      background: "red"
+    });
+  }); // input-file
+
+  $(".input-file span").on("click", function () {
+    $("<input type='file'> <span>+</span>").insertAfter($(this));
+  }); // video 29
+
+  var div291 = $(".video-29-div-1");
+  var div292 = $(".video-29-div-2");
+  var div293 = $(".video-29-div-3");
+  var div294 = $(".video-29-div-4"); // single event with on
+
+  div291.on("click", function () {
+    $(this).css({
+      border: "2px solid #333"
+    });
+  }); // multi event with on
+
+  div291.on("mouseenter mouseleave", function () {
+    $(this).toggleClass("padding");
+  }); // custom Event on
+
+  div292.on("customEventDesign", function (event, myHeight, myWidth, myBack) {
+    $(this).height(myHeight).width(myWidth).css({
+      backgroundColor: myBack
+    });
+  });
+  div292.on("click", function () {
+    $(this).trigger("customEventDesign", ["200px", "100%", "#999"]);
+  }); // map event with bind
+
+  div293.on({
+    mouseenter: function mouseenter() {
+      $(this).css({
+        border: "2px solid #333"
+      });
+    },
+    mouseleave: function mouseleave() {
+      $(this).css({
+        border: "0px solid #333"
+      });
+    }
+  }); // add element with on
+
+  div294.on("click", function () {
+    $("<p class='add-video29-4'> add paragraph </p>").insertAfter($(this));
+  });
+  $("body").on("click", ".add-video29-4", function () {
+    $(this).hide();
+  }); // add element with on
+
+  $(".input-file-29").on("click", "span", function () {
+    $("<input type='file'> <span>+</span>").insertAfter($(this));
+  }); //  video 30
+
+  $(".video-30-div-1").on("click", ".lank301", function (event) {
+    event.preventDefault();
+    $(".display-none").fadeToggle(500);
+
+    if (event.isDefaultPrevented) {
+      $(".video-30-test").text("yes it is");
+    } else {
+      $(".video-30-test").text("yes it is");
+    }
   }); // end document
 }); // test chrome
 // function to add button reload page it is for test
