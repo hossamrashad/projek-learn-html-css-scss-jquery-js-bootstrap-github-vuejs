@@ -145,13 +145,47 @@
  *
  *
  *
- *
- *
- *
- *
- *
- *
- *
+ * ------------------------ CSS Selectors ---------------
+ * Element => [p, div, h2]
+ * Element OtherElement => div p
+ * .class-name & #id-name
+ * .parent .child
+ * element have .class-one.class-two
+ * .parent > .child => Direct Child
+ * Element + Other Element => [div + p] داف بعدو برجراف 
+ * Element ~ Other Elements => [p ~ div] برجراف بعدو داف و يكون العنصر المباشر يعنى لو جوة عنصر تانى مش هيطبق علية 
+ * [Attribute][title]{} تنصيق عن طريق الارتربيوت
+ * Element[Attribute]
+ * [Attribute="Value"] بتختار العنصر الارتربيوت و القيمة بتاعتو كمان
+ * Element[Attribute=Value] => input[type="submit"]
+ * [Attribute~=Value] => Contains A Word الاتربيوت يحتوى على كلمة
+ * [Attribute*=Value] => Contains A Atring علىمة النجمة بعنى اى كلمة حت لو موجودة من ضمن الحروف كلمة
+ * [Attribute^=Value] => Start With A String عنصر نبدا بى قيمة فى الارتربيوت
+ * :first-child الابن الاول 
+ * :last-child الابن الاخير 
+ * :first-of-type الاول من نوعة
+ * :last-of-type الاخر من نوعة
+ * :only-child الابن الوحيد للاب 
+ * :only-of-type الان الوحيد من نوعة
+ * :not(Selectors) ما عادا 
+ * :nth-child(n) الاول و بتختارو بى الارقام
+ * :nth-last-child(n) بيعد من الاخار 
+ * :nth-of-type(n)
+ * :nth-last-of-type(n)
+ * + يعنى العنصر اللى بعده
+ * :root
+ * :checked
+ * :empty
+ * :disabled
+ * :required
+ * :focus
+ * ::selection
+ * ::placeholder
+ * 
+ * 
+ * 
+ * 
+ * 
 */
 
 .cayan-111 {
@@ -3854,8 +3888,8 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   - [Attribute="Value"] بتختار العنصر بالارتربيوت و القيمة بتاعتو كمان
   - Element[Attribute=Value] => input[type="submit"]
   - [Attribute~=Value] => Contains A Word الاتربيوت يحتوى على كلمة
-  - [Attribute*=Value] => Contains A Atring علىمة النجمة بعنى اى كلمة حت لو موجودة من ضمن حروف كلمة
-  - [Attribute^=Value] => Start With A String عنصر بيبدا بى قيمة فى الارتربيوت
+  - [Attribute*=Value] => Contains A Atring علىمة النجمة بعنى اى كلمة حت لو موجودة من ضمن الحروف كلمة
+  - [Attribute^=Value] => Start With A String عنصر نبدا بى قيمة فى الارتربيوت
 */
 
 

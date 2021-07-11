@@ -1,3 +1,6 @@
+// ** filter :contains('6')
+//
+// -- $(".Element-parent").find($("div:contains('find')"))
 /**
  *
  * $                  = JQuery
@@ -132,7 +135,7 @@
  * ! $(".Element[title^='titleName']")        || ^=
  *
  *
- *
+ * 
  *
  *
  *

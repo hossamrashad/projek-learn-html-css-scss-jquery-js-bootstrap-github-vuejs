@@ -180,13 +180,47 @@ body {
  *
  *
  *
- *
- *
- *
- *
- *
- *
- *
+ * ------------------------ CSS Selectors ---------------
+ * Element => [p, div, h2]
+ * Element OtherElement => div p
+ * .class-name & #id-name
+ * .parent .child
+ * element have .class-one.class-two
+ * .parent > .child => Direct Child
+ * Element + Other Element => [div + p] داف بعدو برجراف 
+ * Element ~ Other Elements => [p ~ div] برجراف بعدو داف و يكون العنصر المباشر يعنى لو جوة عنصر تانى مش هيطبق علية 
+ * [Attribute][title]{} تنصيق عن طريق الارتربيوت
+ * Element[Attribute]
+ * [Attribute="Value"] بتختار العنصر الارتربيوت و القيمة بتاعتو كمان
+ * Element[Attribute=Value] => input[type="submit"]
+ * [Attribute~=Value] => Contains A Word الاتربيوت يحتوى على كلمة
+ * [Attribute*=Value] => Contains A Atring علىمة النجمة بعنى اى كلمة حت لو موجودة من ضمن الحروف كلمة
+ * [Attribute^=Value] => Start With A String عنصر نبدا بى قيمة فى الارتربيوت
+ * :first-child الابن الاول 
+ * :last-child الابن الاخير 
+ * :first-of-type الاول من نوعة
+ * :last-of-type الاخر من نوعة
+ * :only-child الابن الوحيد للاب 
+ * :only-of-type الان الوحيد من نوعة
+ * :not(Selectors) ما عادا 
+ * :nth-child(n) الاول و بتختارو بى الارقام
+ * :nth-last-child(n) بيعد من الاخار 
+ * :nth-of-type(n)
+ * :nth-last-of-type(n)
+ * + يعنى العنصر اللى بعده
+ * :root
+ * :checked
+ * :empty
+ * :disabled
+ * :required
+ * :focus
+ * ::selection
+ * ::placeholder
+ * 
+ * 
+ * 
+ * 
+ * 
 */
 .cayan-111 {
   width: 100px;
@@ -1951,8 +1985,8 @@ by the element's font size */
           box-shadow: initial;
   -webkit-box-shadow: unset;
           box-shadow: unset;
-  -webkit-box-shadow: 20px 0px 10px 0 #f10000, 0 0 10px 0 #000, -1px -20px 10px 0 #080, -20px 0px 10px 0 #00f, 0px 20px 10px 0 yellow;
-          box-shadow: 20px 0px 10px 0 #f10000, 0 0 10px 0 #000, -1px -20px 10px 0 #080, -20px 0px 10px 0 #00f, 0px 20px 10px 0 yellow;
+  -webkit-box-shadow: 20px 0px 10px 0 #f10000, 0 0 10px 0 #000, -1px -20px 10px 0 #080, -20px 0px 10px 0 #00f, 0px 20px 10px 0 yellow;
+          box-shadow: 20px 0px 10px 0 #f10000, 0 0 10px 0 #000, -1px -20px 10px 0 #080, -20px 0px 10px 0 #00f, 0px 20px 10px 0 yellow;
 }
 
 .video-41 .parent {
@@ -2909,7 +2943,7 @@ by the element's font size */
       grid-template-columns: repeat(10, 1fr);
   -ms-grid-rows: 50px auto 50px;
       grid-template-rows: 50px auto 50px;
-      grid-template-areas: "logo logo nav nav nav nav nav nav nav nav" "cont cont cont cont cont cont cont . side side" "foot foot foot foot foot foot foot foot foot foot";
+      grid-template-areas: "logo logo nav nav nav nav nav nav nav nav" "cont cont cont cont cont cont cont . side side" "foot foot foot foot foot foot foot foot foot foot";
 }
 
 .video-60 h2 {
@@ -4308,8 +4342,8 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   - [Attribute="Value"] بتختار العنصر بالارتربيوت و القيمة بتاعتو كمان
   - Element[Attribute=Value] => input[type="submit"]
   - [Attribute~=Value] => Contains A Word الاتربيوت يحتوى على كلمة
-  - [Attribute*=Value] => Contains A Atring علىمة النجمة بعنى اى كلمة حت لو موجودة من ضمن حروف كلمة
-  - [Attribute^=Value] => Start With A String عنصر بيبدا بى قيمة فى الارتربيوت
+  - [Attribute*=Value] => Contains A Atring علىمة النجمة بعنى اى كلمة حت لو موجودة من ضمن الحروف كلمة
+  - [Attribute^=Value] => Start With A String عنصر نبدا بى قيمة فى الارتربيوت
 */
 /*
   CSS Selectors
@@ -4590,5 +4624,14 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   -o-transform: rotateZ(0deg);
   z-index: 1;
   opacity: 1;
+}
+
+ul {
+  list-style: none;
+  display: block;
+  margin: 20px;
+  border: 2px solid #333;
+  background-color: #e8e3e3;
+  text-align: center;
 }
 /*# sourceMappingURL=projectCss2021.css.map */
