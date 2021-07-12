@@ -8,10 +8,43 @@
 
 /*jslint browser: true */
 /*global window */
+// !
+// ?
+// **
+// --
+// ++
+// 1
+// 2
+// 3
+// 4
+// 5
+// 6
+// 7
+// 8
+// 9
+// 10
+// &
+// todo
+// *
+// explain
+// =
 
-// ==                                   javascript Dom
+// todo                                console
 
-// 1= var ElementName = document.createElement("div");
-// 2= var ElementName = document.body.appendChild(ElementName);
+// todo console.dir(ElementName);
+// todo console.log(ElementName);
 
-// 1= Element.setAttribute('class', 'value');
+
+// =                                   javascript Dom
+
+// explain انشاء عنصر
+// 1 var ElementName = document.createElement("div");
+
+// explain اضافة العنصر فى المكان اللى انت عاوزة
+// 2  var ElementName = document.body.appendChild(ElementName);
+
+// explain  انشاء تاكست
+// 3 document.createTextNode(" Your Text ");
+
+// explain تغير الالتربيوت او انشاء لو مش موجود
+// 4  Element.setAttribute('class', 'value');
