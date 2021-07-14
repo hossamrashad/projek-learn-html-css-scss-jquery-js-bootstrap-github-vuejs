@@ -1,3 +1,43 @@
+@import "./helpers/mixin";
+body {
+    background: #999;
+}
+
+.parent {
+    width: 100%;
+    height: 100vh;
+    background-color: #eee;
+    z-index: 5000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    .child {
+        width: 50%;
+        height: 50%;
+        background-color: #27ae60;
+        text-align: center;
+        line-height: 100px;
+        color: #e8e8e8;
+        font-size: 2em;
+    }
+    .outSide {
+        background-color: #333;
+        color: #e8e8e8;
+        width: 50%;
+        height: 50%;
+        text-align: center;
+        line-height: 100px;
+    }
+}
+
+.Last {
+    position: relative;
+    // left: 100%;
+    background-color: #27ae60;
+    opacity: 0;
+}
+
 .test-one,
 .test-tow {
     background-color: #ccc;
@@ -14,11 +54,24 @@
     text-transform: capitalize;
     border-width: 5px;
     border-style: solid;
-    border-color: #2980b9;
+    border-color: #e8e8e8;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    @include xs-media {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    @include sm-md-media {
+        display: grid;
+    }
+}
+
+.test-one {
+    border-color: #b8baba;
+    margin-bottom: 20px;
+    min-height: 300px;
 }
 
 .test-tow {
@@ -45,12 +98,17 @@
     float: right !important;
 }
 
-.hr-style {
+.hr-style,
+.hr-style-one {
     height: 20px;
     margin: 20px auto;
     background-image: linear-gradient( to right, #2980b9 20%, #27ae60 20%, #27ae60 40%, #d35400 40%, #d35400 60%, #8e44ad 60%, #8e44ad 80%, #c0392b 80%);
     width: 98%;
     border-radius: 3px;
+}
+
+.hr-style-one {
+    background-image: linear-gradient(to right, #2980b9 20%, red 80%);
 }
 
 .disc {
@@ -78,5 +136,17 @@
     box-shadow: 0px px 7px #333;
     border-width: 20px;
     background: #333;
-    color: #fff
+    color: #fff;
+}
+
+.ss {
+    font-size: large;
+}
+
+#ulList ::marker {
+    color: rgba(39, 143, 94, 0.501);
+}
+
+header {
+    background-repeat: no-repeat;
 }

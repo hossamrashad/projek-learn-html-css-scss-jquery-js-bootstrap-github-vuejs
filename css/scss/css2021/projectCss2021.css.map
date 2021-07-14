@@ -1,9 +1,7 @@
 {
-    "version": 3,
-    "mappings": "AAAA,AAAA,IAAI,CAAC;EACH,UAAU,EAAE,IAAI;EAChB,WAAW,EAAE,KAAK;CACnB;;AAWD,AACE,OADK,CACL,OAAO,CAAC;EAEN,gBAAgB,EAAE,GAAG;CACtB;;AAJH,AAWE,OAXK,CAWL,OAAO,CAAC;EAEN,gBAAgB,EAAE,OAAO;CAC1B;;AAdH,AAgBE,OAhBK,CAgBL,OAAO,CAAC;EACN,gBAAgB,EAAE,uCAAuC;CAC1D",
-    "sources": [
-        "projectCss2021.scss"
-    ],
-    "names": [],
-    "file": "projectCss2021.css"
+"version": 3,
+"mappings": ";AAAA,IAAK;EACH,UAAU,EAAE,IAAI;EAChB,WAAW,EAAE,KAAK;;;;AAalB,eAAQ;EAEN,gBAAgB,EAAE,GAAG;;;AAQvB,eAAQ;EAEN,gBAAgB,EAAE,OAAO;;;AAG3B,eAAQ;EACN,gBAAgB,EAAE,uCAAuC",
+"sources": ["projectCss2021.scss"],
+"names": [],
+"file": "projectCss2021.css"
 }

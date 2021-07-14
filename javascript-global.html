@@ -43,15 +43,26 @@
     <title>Explain Javascript</title>
   </head>
   <body> 
+    <div class="parent fixed-top">  
+      <div class="child"> </div>
+      <div class="outSide"></div>
+    </div>
     <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left explain" id="Test"> 
-            <ul id="myList"></ul>
+      <div class="row bg">
+        <div class="col-sm-12">
+          <div class="test-tow text-left hossam" id="Test" data-name="data name" data-codings="data coding">Rovan
+            <ul id="ulList">
+              <li>Rovan</li>
+              <li>Hossam</li>
+              <li>Rashad</li>
+            </ul>
           </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-one" id="TestOne"> </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-one" id="TestTow"> </div>
         </div>
       </div>
     </div>
@@ -59,44 +70,60 @@
     <div class="explain">  انشاء عنصر | اضافة العنصر | انشاء تاكست | تغير الالتربيوت </div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id="">انشاء عنصر </div>
-        </div>
-        <div class="col-sm-8">
+        <div class="col-sm-12">
           <div class="test-tow text-left" id="">var Element = document.<span class="disc">createElement</span>("div") ;</div>
         </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
+          <div class="test-one" id="">انشاء عنصر </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-one" id=""> Create Element </div>
+        </div>
       </div>
     </div>
     <div class="hr-style"></div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> اضافة العنصر فى المكان اللى انت عاوزة  </div>
-        </div>
-        <div class="col-sm-8">
+        <div class="col-sm-12">
           <div class="test-tow text-left" id="">var Element = document.body.<span class="disc">appendChild</span>(child) ;</div>
         </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
+          <div class="test-one" id=""> اضافة العنصر فى جسم الصفحة فى المكان اللى تختار    </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-one text-left" id="">Add the element in the body of the page in the place you choose</div>
+        </div>
       </div>
     </div>
     <div class="hr-style"></div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id="">  انشاء تاكست او تغير التكاست موجود </div>
-        </div>
-        <div class="col-sm-8">
+        <div class="col-sm-12">
           <div class="test-tow text-left" id="">var Element = document.<span class="disc">createTextNode</span>(" Your Text ") ;</div>
         </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
+          <div class="test-one" id="">  انشاء تاكست     </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-one  text-left" id=""> Create a text </div>
+        </div>
       </div>
     </div>
     <div class="hr-style"></div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> تغير الالتربيوت او انشاء لو مش موجود</div>
-        </div>
-        <div class="col-sm-8">
+        <div class="col-sm-12">
           <div class="test-tow text-left" id="">var Element = Element.<span class="disc">setAttribute</span>('class', 'ClassName') ;</div>
+        </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
+          <div class="test-one" id=""> تغير (attr) صفة مميزة او انشاء لو مش موجود </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-one text-left" id="">Change the Attribute or create it if it is not available</div>
         </div>
       </div>
     </div>
@@ -104,667 +131,300 @@
     <div class="explain"> اختيار العنصار</div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> اختيار العنصر & اسم الايدى للعنصر </div>
-        </div>
-        <div class="col-sm-8">
+        <div class="col-sm-12">
           <div class="test-tow text-left" id="">document.<span class="disc">getElementById</span>("Id Name");</div>
         </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
+          <div class="test-one" id=""> اختيار العنصر & اسم الايدى للعنصر </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-one" id="">Item selection & item id name</div>
+        </div>
       </div>
     </div>
     <div class="hr-style"></div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> اختيار العنصر بى التاج اللى هو ان كان داف او برجراف او هيدار </div>
-        </div>
-        <div class="col-sm-8">
+        <div class="col-sm-12">
           <div class="test-tow text-left" id="">document.<span class="disc">getElementsByTagName</span>('div')[0];</div>
         </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
+          <div class="test-one" id=""> اختيار العنصر بى التاج اللى هو ان كان داف او برجراف او العلامات الدلالية html 5 </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-one text-left" id="">Choosing the element with the crown, whether it is div, paragraph, or html5 semantic </div>
+        </div>
       </div>
     </div>
     <div class="hr-style"></div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> اختيار العنصر من خلال الكلاس و ممكن تختار كمان انهو عنصر اللى هجيبو لانو الاكسلسات ممكن تكون على اكتار من عنصر و هو غير مدعم فى الانترنات اكسبلورال 8 </div>
-        </div>
-        <div class="col-sm-8">
+        <div class="col-sm-12">
           <div class="test-tow text-left" id="">document.<span class="disc">getElementsByClassName</span>('elementClass')[0];</div>
         </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
+          <div class="test-one" id=""> اختيار العنصر من خلال الكلاس و ممكن تختار كمان عنصر اللى هجيبو بى رقمو فى الكلاس يعنى العنصر رقم كام اللى واخد الكلاس  لانو الكلاس ممكن تكون على اكتار من عنصر و هو غير مدعم فى الانترنات اكسبلورال 8 </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-one text-left" id="">Choosing the item through the class, and you can also choose an item that you will bring with me numbered in the class. I mean, the item has the number of the class that took the class because the class can be on more than one item and it is not supported in the Internet. Explorer 8</div>
+        </div>
       </div>
     </div>
     <div class="hr-style"></div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id="">اختيار العنصر ان كان معرفة بى الكلاس او الايدى غير مدعم فى انتارنت اكسبلورال 8  </div>
-        </div>
-        <div class="col-sm-8">
+        <div class="col-sm-12">
           <div class="test-tow text-left" id="">document.<span class="disc">querySelectorAll</span>('div.class & div#id')[0];</div>
         </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id="">اختيار العنصر ان كان معرفة بى الكلاس او الايدى </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
+          <div class="test-one" id="">اختيار العنصر ان كان معرفة بى الكلاس او الايدى غير مدعم فى انتارنت اكسبلورال 8   و بتختار جميع العناصر اللى معرفة بى الاكلاس اللى تكتبو </div>
         </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">document.querySelector("#ElementName");</div>
+        <div class="col-sm-6">
+          <div class="test-one text-left" id=""> Choosing the item if the knowledge of me is a class or id is not supported in Internet Explorer 8</div>
         </div>
       </div>
     </div>
     <div class="hr-style"></div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-12">
+          <div class="test-tow text-left" id="">document.<span class="disc">querySelector</span>("#ElementName");</div>
+        </div>
+        <div class="hr-style"></div>
+        <div class="col-sm-6">
+          <div class="test-one" id="">اختيار العنصر ان كان معرفة بى الكلاس او الايدى و بيجيب اول عنصار لو بتجيب بى الكلاسات وممكن تكتاب الداف او الناف وتكتب بعدو الكلاس او الايدى </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-one text-left" id="">Choose the element if you know me as the class or the hands, and it will answer the first element if you answer me with the classes. You can write the duff or the naf and write with the enemy of the class or the hands</div>
+        </div>
+      </div>
+    </div>
+    <div class="hr-style"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="test-tow " id=""> 
+            <div class="disc-have-item text-left ">
+              <p>div(id="Test" data-name="date name" data-codings="data coding")</p>
+              <p>ElementName = document.querySelector("#Test");</p>
+              <p>ElementName.textContent = ElementName.<span class="disc">dataset</span>.codings;  <span class="explain">Get data </span></p>
+              <p>out side = data coding</p><br><br>
+              <p>ElementName.dataset.codings = "new data name";  <span class="explain">set data </span></p>
+              <p>out side = new data coding</p>
+              <hr>
+              <h3 class="text-center">if & else</h3>
+              <pre> <code>if (ElementName.dataset.name == "data name") { <br>   console.log('Yas'); <br>   } else { <br>     console.log("No"); <br> }</code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
+          <div class="test-one" id="">طريقة جلب قيمة الداتا اللى فى العنصر و تغيرها  </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-one text-left" id=""> How to get the value of the data in the element and change it</div>
+        </div>
+      </div>
+    </div>
+    <div class="hr-style"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="test-tow text-left" id="">ElementParent.<span class="disc">insertBefore</span>(Insert, before);</div>
+        </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
+          <div class="test-one" id=""> اضافة عنصار قبل عنصر & بتختار الاب للعنصار و بتحدد العنصر اللى تضيف و تختار تضيف قبل اى عنصر</div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-one text-left" id=""> Add an element before an element & choose the parent of the element and select the element to add and choose to add before any element</div>
+        </div>
+      </div>
+    </div>
+    <div class="hr-style"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="test-tow text-left" id=""> 
+            <div class="disc-have-item text-left">
+              <p>var copy = ElementWillCopy.<span class="disc">cloneNode(true);</span> </p>
+              <p>ElementYouWillCopyTo.appendChild(copy);</p>
+            </div>
+          </div>
+        </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
+          <div class="test-one" id="">نسخ عنصر بجميع خواصة اضافة جميع خواص العنصر تانى</div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-one text-left" id=""> Copy an element with all its properties, add all the properties of the element again</div>
+        </div>
+      </div>
+    </div>
+    <div class="hr-style"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="test-tow text-left" id=""> 
+            <div class="disc-have-item">
+              <p>Element .<span class="disc" >nextElementSibling</span>;</p>
+            </div>
+          </div>
+        </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
+          <div class="test-one" id="">العنصر اللى بعدو ميكنش  مسافة او استرانج لازم يكون عنصر</div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-one text-left" id="">The item that does not have an Strange distance must be an item</div>
+        </div>
+      </div>
+    </div>
+    <div class="hr-style"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="test-tow text-left" id=""> 
+            <div class="disc-have-item">
+              <p>Element .<span class="disc" >nextSibling</span>;</p>
+            </div>
+          </div>
+        </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
+          <div class="test-one" id="">العنصر اللى بعدو ممكن يكون  مسافة او استرانج   </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-one text-left" id="">The enemy element can be a space or a text</div>
+        </div>
+      </div>
+    </div>
+    <div class="hr-style"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="test-tow text-left" id=""> Element.<span class="disc">getBoundingClientRect()</span>;</div>
+        </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
+          <div class="test-one" id=""> 
+            <div class="disc-have-item">
+              <p>  بيجيب جميع خواص العنصار فى العرض و الطول و المساحة اللى فى العنصار منفوق و المسافة اللى بين العنصار و اول الصفحة </p>
+              <ul> 
+                <li>bottom: بيكون المسافات بين العناصر من فوق فى مساحة الصفحة لاخر العنصر من تحت </li>
+                <li>height: ارتفاع العناصر </li>
+                <li>left: المارجان اللى فى العناصر </li>
+                <li>right: بيحساب عرض العناصر و كمان بيضيف المارجان اللى على اليمين </li>
+                <li>top: المسافات اللى بين العناصر و اول الصفحة </li>
+                <li>width: عرض العنصر </li>
+                <li>x: اللى هو تباعد العنصر من الشمال </li>
+                <li>y: المسافات اللى بين العناصر و اول الصفحة </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-one text-left" id=""> 
+            <div class="disc-have-item text-left" dir="ltr">
+              <p>It gives all the properties of the wing in the width and length and the area in the wing is missing and the distance between the elements and the front of the page</p>
+              <ul> 
+                <li>Bottom: The spaces between the element above in the page area to the end of the element below</li>
+                <li>Height: the height of the elements</li>
+                <li>Left: margin in the Elements</li>
+                <li>Right: Calculates the width of the elements and also adds the margin on the right</li>
+                <li>Top: the spaces between the elements and the front of the page</li>
+                <li>Width: Width of the item</li>
+                <li>X: is the spacing of the element from the north</li>
+                <li>Y: the spaces between the elements and the front of the page</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hr-style"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="test-tow text-left" id=""> 
+            <div class="disc-have-item ">
+              <p>get OuterHTML var element = Element.<span class="disc">outerHTML</span>;</p>
+              <p>set OuterHTML element.<span class="disc">outerHTML</span> = 
+                <div class="outerExplainOne"> </div><span class="outerExplainTow"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
+          <div class="test-one" id="">outerHTML اللى هو العنصر بجميع خواصة زى مهو مكتوب فى صفحة html</div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-one" id="">OuterHTML which is the element with all the properties like what is written in the HTML page</div>
+        </div>
+      </div>
+    </div>
+    <div class="hr-style"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="test-tow text-left" id=""> </div>
+        </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
           <div class="test-one" id=""> </div>
         </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
+        <div class="col-sm-6">
+          <div class="test-one" id=""> </div>
+        </div>
+      </div>
+    </div>
+    <div class="hr-style"></div>
+    <div class="container" id="Last">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="test-tow text-left" id="header"> the Last</div>
+        </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
+          <div class="test-one" id=""> </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-one" id="">      </div>
         </div>
       </div>
     </div>
     <div class="hr-style"></div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-12">
+          <div class="test-tow text-left" id=""> </div>
+        </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
           <div class="test-one" id=""> </div>
         </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
+        <div class="col-sm-6">
+          <div class="test-one" id=""> </div>
         </div>
       </div>
     </div>
     <div class="hr-style"></div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-12">
+          <div class="test-tow text-left" id=""> </div>
+        </div>
+        <div class="hr-style-one"></div>
+        <div class="col-sm-6">
           <div class="test-one" id=""> </div>
         </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hr-style"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="test-one" id=""> </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="test-tow text-left" id="">
-             <span class="float-right">;</span></div>
         </div>
       </div>
     </div>

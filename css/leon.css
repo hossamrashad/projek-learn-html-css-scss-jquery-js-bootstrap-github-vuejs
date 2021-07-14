@@ -1,4 +1,5 @@
 /* Start Variables */
+/* line 2, leon.scss */
 :root {
   --main-color: #10cab7;
   --secondary-color: #2c4755;
@@ -9,19 +10,23 @@
 
 /* End Variables */
 /* Start Global Rules */
+/* line 11, leon.scss */
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+/* line 14, leon.scss */
 html {
   scroll-behavior: smooth;
 }
 
+/* line 17, leon.scss */
 body {
   font-family: "Work Sans", sans-serif;
 }
 
+/* line 20, leon.scss */
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -33,25 +38,26 @@ body {
 }
 
 @media (min-width: 768px) {
+  /* line 20, leon.scss */
   .container {
     width: 750px;
   }
 }
-
 @media (min-width: 992px) {
+  /* line 20, leon.scss */
   .container {
     width: 970px;
   }
 }
-
 @media (min-width: 1200px) {
+  /* line 20, leon.scss */
   .container {
     width: 1170px;
   }
 }
-
 /* End Global Rules */
 /* Start Components */
+/* line 41, leon.scss */
 .special-heading {
   color: #ebeced;
   font-size: 100px;
@@ -61,6 +67,7 @@ body {
   margin: 0;
 }
 
+/* line 49, leon.scss */
 .special-heading + p {
   margin: -30px 0 0;
   font-size: 20px;
@@ -69,60 +76,70 @@ body {
 }
 
 @media (max-width: 767px) {
+  /* line 56, leon.scss */
   .special-heading {
     font-size: 60px;
   }
+
+  /* line 59, leon.scss */
   .special-heading + p {
     margin-top: -20px;
   }
 }
-
 /* End Components */
 /* Start Header */
+/* line 65, leon.scss */
 .header {
   padding: 20px;
 }
 
+/* line 67, leon.scss */
 .header .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
+/* line 71, leon.scss */
 .header .container .logo {
   width: 60px;
 }
 
+/* line 74, leon.scss */
 .header .container .links {
   position: relative;
 }
 
+/* line 76, leon.scss */
 .header .container .links:hover .icon span:nth-child(2) {
   width: 100%;
 }
 
+/* line 79, leon.scss */
 .header .container .links:hover ul {
   display: block;
 }
 
+/* line 82, leon.scss */
 .header .container .links .icon {
   width: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
+/* line 87, leon.scss */
 .header .container .links .icon span {
   background-color: #333;
   margin-bottom: 5px;
@@ -130,6 +147,7 @@ body {
   width: 100%;
 }
 
+/* line 92, leon.scss */
 .header .container .links .icon span:nth-child(2) {
   width: 60%;
   transition: 0.3s;
@@ -139,6 +157,7 @@ body {
   -o-transition: 0.3s;
 }
 
+/* line 102, leon.scss */
 .header .container .links ul {
   list-style: none;
   margin: 0;
@@ -152,6 +171,7 @@ body {
   z-index: 1;
 }
 
+/* line 113, leon.scss */
 .header .container .links ul::before {
   content: "";
   border-width: 10px;
@@ -162,6 +182,7 @@ body {
   top: -20px;
 }
 
+/* line 123, leon.scss */
 .header .container .links ul li a {
   display: block;
   padding: 15px;
@@ -171,16 +192,19 @@ body {
   transition: var(--main-duration);
 }
 
+/* line 129, leon.scss */
 .header .container .links ul li a:hover {
   padding-left: 25px;
 }
 
+/* line 133, leon.scss */
 .header .container .links ul li:not(:last-child) a {
   border-bottom: 1px solid #ddd;
 }
 
 /* End Header */
 /* Start Landing Section */
+/* line 143, leon.scss */
 .landing {
   background-image: url(../images/landing.jpg);
   background-size: cover;
@@ -188,6 +212,7 @@ body {
   position: relative;
 }
 
+/* line 148, leon.scss */
 .landing .intro-text {
   position: absolute;
   left: 50%;
@@ -202,6 +227,7 @@ body {
   max-width: 100%;
 }
 
+/* line 161, leon.scss */
 .landing .intro-text h1 {
   margin: 0;
   font-weight: bold;
@@ -209,6 +235,7 @@ body {
   color: var(--main-color);
 }
 
+/* line 167, leon.scss */
 .landing .intro-text p {
   font-size: 19px;
   line-height: 1.8;
@@ -216,40 +243,44 @@ body {
 
 /* End Landing Section */
 /* Start Features */
+/* line 176, leon.scss */
 .features {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-color: var(--section-background);
 }
 
+/* line 180, leon.scss */
 .features .container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 20px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
+/* line 186, leon.scss */
 .features .container .feat {
   padding: 20px;
   text-align: center;
 }
 
+/* line 189, leon.scss */
 .features .container .feat i {
   color: var(--main-color);
 }
 
+/* line 192, leon.scss */
 .features .container .feat h3 {
   font-weight: 800;
   margin: 30px 0;
 }
 
+/* line 196, leon.scss */
 .features .container .feat p {
   line-height: 1.8;
   color: #777;
@@ -258,20 +289,21 @@ body {
 
 /* End Features */
 /* Start Services  */
+/* line 207, leon.scss */
 .services {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
 }
 
+/* line 210, leon.scss */
 .services .services-content {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 30px;
   margin-top: 100px;
 }
 
+/* line 215, leon.scss */
 .services .services-content .srv {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -280,42 +312,48 @@ body {
 }
 
 @media (max-width: 767px) {
+  /* line 215, leon.scss */
   .services .services-content .srv {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     text-align: center;
   }
 }
-
+/* line 222, leon.scss */
 .services .services-content .srv i {
   color: var(--main-color);
   -ms-flex-preferred-size: 60px;
-      flex-basis: 60px;
+  flex-basis: 60px;
 }
 
+/* line 226, leon.scss */
 .services .services-content .srv .text {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
+/* line 228, leon.scss */
 .services .services-content .srv .text h3 {
   margin: 0 0 20px;
 }
 
+/* line 231, leon.scss */
 .services .services-content .srv .text p {
   color: #444;
   font-weight: 300;
   line-height: 1.6;
 }
 
+/* line 239, leon.scss */
 .services .services-content .image {
   text-align: center;
   position: relative;
 }
 
+/* line 242, leon.scss */
 .services .services-content .image::before {
   content: "";
   background-color: var(--secondary-color);
@@ -327,49 +365,55 @@ body {
   z-index: -1;
 }
 
+/* line 252, leon.scss */
 .services .services-content .image img {
   width: 260px;
 }
 
 @media (max-width: 1199px) {
+  /* line 239, leon.scss */
   .services .services-content .image {
     display: none;
   }
 }
-
 /* Start Services  */
 /* Start Portfolio */
+/* line 264, leon.scss */
 .portfolio {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-color: var(--section-background);
 }
 
+/* line 268, leon.scss */
 .portfolio .portfolio-content {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 30px;
   margin-top: 80px;
 }
 
+/* line 273, leon.scss */
 .portfolio .portfolio-content .card {
   background-color: white;
 }
 
+/* line 275, leon.scss */
 .portfolio .portfolio-content .card img {
   max-width: 100%;
 }
 
+/* line 278, leon.scss */
 .portfolio .portfolio-content .card .info {
   padding: 20px;
 }
 
+/* line 281, leon.scss */
 .portfolio .portfolio-content .card .info h3 {
   margin: 0;
 }
 
+/* line 284, leon.scss */
 .portfolio .portfolio-content .card .info p {
   color: #777;
   line-height: 1.6;
@@ -378,33 +422,36 @@ body {
 
 /* End Portfolio */
 /* Start About */
+/* line 296, leon.scss */
 .about {
   padding-top: var(--section-padding);
   padding-bottom: calc(var(--section-padding) + 60px);
 }
 
+/* line 299, leon.scss */
 .about .about-content {
   margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media (max-width: 991px) {
+  /* line 299, leon.scss */
   .about .about-content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     text-align: center;
   }
 }
-
+/* line 308, leon.scss */
 .about .about-content .image {
   position: relative;
   width: 250px;
@@ -412,11 +459,12 @@ body {
 }
 
 @media (max-width: 991px) {
+  /* line 308, leon.scss */
   .about .about-content .image {
     margin: 0 auto 60px;
   }
 }
-
+/* line 315, leon.scss */
 .about .about-content .image::before {
   content: "";
   position: absolute;
@@ -428,6 +476,7 @@ body {
   z-index: -1;
 }
 
+/* line 325, leon.scss */
 .about .about-content .image::after {
   top: -40px;
   content: "";
@@ -441,32 +490,37 @@ body {
 }
 
 @media (max-width: 991px) {
+  /* line 337, leon.scss */
   .about .about-content .image::before, .about .about-content .image::after {
     display: none;
   }
 }
-
+/* line 342, leon.scss */
 .about .about-content .image img {
   max-width: 100%;
 }
 
+/* line 346, leon.scss */
 .about .about-content .text {
   -ms-flex-preferred-size: calc(100% - 500px);
-      flex-basis: calc(100% - 500px);
+  flex-basis: calc(100% - 500px);
 }
 
+/* line 348, leon.scss */
 .about .about-content .text p:first-of-type {
   font-weight: bold;
   line-height: 2;
   margin-bottom: 50px;
 }
 
+/* line 353, leon.scss */
 .about .about-content .text hr {
   width: 50%;
   display: inline-block;
   border-color: var(--main-color);
 }
 
+/* line 358, leon.scss */
 .about .about-content .text p:last-of-type {
   line-height: 2;
   color: #777;
@@ -474,18 +528,21 @@ body {
 
 /* End About */
 /* Start Contact */
+/* line 368, leon.scss */
 .contact {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-color: var(--section-background);
 }
 
+/* line 373, leon.scss */
 .contact .info {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   text-align: center;
 }
 
+/* line 378, leon.scss */
 .contact .info .label {
   font-size: 35px;
   font-weight: 800;
@@ -494,6 +551,7 @@ body {
   margin-bottom: 15px;
 }
 
+/* line 385, leon.scss */
 .contact .info .link {
   display: block;
   font-size: 35px;
@@ -502,31 +560,34 @@ body {
   text-decoration: none;
 }
 
+/* line 392, leon.scss */
 .contact .info .social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 20px;
   font-size: 16px;
 }
 
+/* line 398, leon.scss */
 .contact .info .social i {
   margin-left: 10px;
   color: var(--secondary-color);
 }
 
 @media (max-width: 767px) {
+  /* line 403, leon.scss */
   .contact .info .label,
-  .contact .info .link {
+.contact .info .link {
     font-size: 25px;
   }
 }
-
 /* End Contact */
 /* Start Footer */
+/* line 410, leon.scss */
 .footer {
   background-color: var(--secondary-color);
   color: white;
@@ -535,10 +596,13 @@ body {
   font-size: 18px;
 }
 
+/* line 416, leon.scss */
 .footer span {
   font-weight: bold;
   color: var(--main-color);
 }
 
 /* End Footer */
+/*# sourceMappingURL=leon.css.map */
+
 /*# sourceMappingURL=leon.css.map */

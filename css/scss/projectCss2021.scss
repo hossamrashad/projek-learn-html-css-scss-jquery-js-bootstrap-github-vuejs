@@ -5,13 +5,19 @@
 
 /*
  * color                       || red #f00 #ff0000 rgb(158, 158, 158) rgba(255, 0, 0, 1)
+
  * background-colo             || red #f00 #ff0000 rgb(255, 255, 0) rgba(255, 0, 0, 1)
+
  * background-image            || url() 
- | linear-gradient( to top, #2980b9 20%,#27ae60 40%, #d35400 60%, #3498db 80% );
-   linear-gradient( 90deg ,  #2980b9 , #27ae60 )
+  | linear-gradient( to top, #2980b9 20%,#27ae60 40%, #d35400 60%, #3498db 80% );
+  linear-gradient( 90deg ,  #2980b9 , #27ae60 )
+  
  * background-repeat           || repeat; no-repeat; repeat-x; repeat-y;
+
  * background-attachment       || scroll; fixed;
+
  * background-position         || Left Top; Left Center; Left Bottom; Center Top; 10px  50px; 30% 40%;
+
  * background-size             || auto; cover; contain; 100px 200px; 100% 100%;
  *
  * padding                     || top right bottom left 
@@ -25,6 +31,7 @@
  *
  * text-shadow                 || right & left || top & bottom || blur || color ; 0px -30px 0 red;
  * text-align                  || left; right; center; start; end;
+ 
  * direction                   || ltr; rtl;
  * vertical-align              || middle; sub; super; text-top; text-bottom; top; bottom;
  * text-decoration             || normal; none; line-through; overline; underline;
@@ -183,11 +190,13 @@
  * ::placeholder
  * 
  * 
- * 
+
  * 
  * 
 */
 
+// explain ul النقط 
+// -- ::marker { color: red;}
 .cayan-111 {
     width: 100px;
     height: 100px;

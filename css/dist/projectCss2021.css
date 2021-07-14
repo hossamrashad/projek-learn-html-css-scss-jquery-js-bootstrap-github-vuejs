@@ -1,0 +1,4336 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&family=Changa:wght@200;300;400;500;600;700;800&family=El+Messiri:wght@400;500;600;700&family=Lateef&family=Markazi+Text:wght@400;500;600;700&family=Mirza:wght@400;500;600;700&family=Scheherazade:wght@400;700&family=Short+Stack&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+:root {
+  --color-3498db: #3498db;
+  --color-ffffff: #ffffff;
+}
+
+body {
+  background: var(--color-ffffff);
+}
+
+.element-with-border {
+  position: relative;
+}
+
+.element-with-border .inner {
+  background-color: #0099e5;
+  text-align: center;
+  color: #fff;
+  margin: 40px auto;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  width: 300px;
+  padding: 10px 15px;
+}
+
+.element-with-border .inner:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #000000;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: -1;
+}
+
+/*
+ * color                       || red #f00 #ff0000 rgb(158, 158, 158) rgba(255, 0, 0, 1)
+ * background-colo             || red #f00 #ff0000 rgb(255, 255, 0) rgba(255, 0, 0, 1)
+ * background-image            || url() 
+ | linear-gradient( to top, #2980b9 20%,#27ae60 40%, #d35400 60%, #3498db 80% );
+   linear-gradient( 90deg ,  #2980b9 , #27ae60 )
+ * background-repeat           || repeat; no-repeat; repeat-x; repeat-y;
+ * background-attachment       || scroll; fixed;
+ * background-position         || Left Top; Left Center; Left Bottom; Center Top; 10px  50px; 30% 40%;
+ * background-size             || auto; cover; contain; 100px 200px; 100% 100%;
+ *
+ * padding                     || top right bottom left 
+ * margin                      || top right bottom lef auto
+ * border                      || border-color: ; border-style: ; border-width: ;
+ * outline                     || auto; none;
+ * display                     || block; inline-block; flex; grid; none;
+ * visibility                  || visible; hidden;
+ * width                       || 300px; 75%; max-width: 100px; min-width: 200px; fit-content; max-content; min-content; it-content(20em);
+ * overflow                    || hidden; visible; scroll; auto;
+ *
+ * text-shadow                 || right & left || top & bottom || blur || color ; 0px -30px 0 red;
+ * text-align                  || left; right; center; start; end;
+ * direction                   || ltr; rtl;
+ * vertical-align              || middle; sub; super; text-top; text-bottom; top; bottom;
+ * text-decoration             || normal; none; line-through; overline; underline;
+ * text-transform              || none; capitalize; uppercase; lowercase;
+ * letter-spacing              || normal; 3px; 0.3em;
+ * text-indent                 || 0px; 10px;
+ * Line-Height                 || normal; 100%; 1.6;
+ * word-spacing                || normal;
+ * white-space                 || normal; nowrap;
+ * word-break                  || normal; break-all;
+ * text-overflow               || clip; ellipsis;
+ *
+ * font-family                 || "Times New Roman", Times, serif; serif; sans-serif;
+ * font-size
+ * || 12px; from parent body 16px 1em; from html 32px 2rem; from width screen 100 = 1vw = 100%  5vw;
+ * 10vh; small; medium; large; smaller; larger;
+ * font-variant                || normal; small-caps; 
+ * font-weight                 || normal; bold; 700;
+ * font-style                  
+ * || normal; italic; list-style-type: "\f2cc"; font-family: fontawesome;
+ *
+ *                             || inherit
+ * cursor                      || pointer;
+ * float                       || none; left; right; 
+ * width                       || calc((100% - 60px) / 4);
+ * opacity                     || 1; 0.9; 0.8;
+ * position                    || sticky; relative; absolute; fixed; 
+ * z-index                     || 1; 2; 3;
+ * list-style                  || circle; none; 
+ * || :hover :focus :active :visited :empty :checked 
+ * || ::first-letter ::first-line ::selection
+ * || ::after ::before
+ *
+ * counter-increment           || members-counter;
+ * content                     || ""; attr(data-title); counter(members-counter);
+ * border-radius               || 0; 10px; 50%;
+ * box-shadow                  || 20px 0px 10px 0 #3498db
+ * offset-x width left & right | offset-y height top & bottom | blur-radius | spread-radius | color | inset
+ * box-sizing                  || content-box; border-box; -webkit- || -moz-
+ *
+ * transition-duration         || 6s; = time to do transition
+ * transition-delay            || 0.2s;
+ * transition-property         || all; width , height;
+ * transition-timing-function  || ease; ease-in-out; linear; ease-out; ease-in;
+ * transition                  || property = all | duration = 2s | delay = 0s | timing-function = ease;
+ *                             || !important
+ *************************** Flexible Box  ***************************
+ *************************** For Parent    ***************************
+ * display                     || flex; inline-flex;
+ * flex-direction              || row; row-reverse; column; column-reverse; work with direction
+ * للعنصار الزيادة لو عاوز يجو جانب العناصر او العنصار الزيادة ينزال تحتهم 
+ * flex-wrap                   || nowrap; wrap; wrap-reverse; item + 
+ * flex-flow                   || [Flex-Direction] + [Flex-Wrap]
+ * justify-content             || flex-start; flex-end; center; space-between; space-around; space-evenly; 
+ * align-items                 || stretch; center; flex-end; flex-start;
+ * align-content               || stretch; space-between; flex-start; flex-end; space-around; space-evenly;
+ *************************** For Child ****************************************
+ * flex-grow                   || 0; 1; بيتماداد
+ * flex-shrink                 || 1; بينكمش
+ * order                       || 0; 1; 
+ * flex-basis                  || auto; = width & height
+ * flex                        || [Flex Grow] [Flex Shrink] [Flex Basis] 0 1 Auto 
+ * align-self                  || auto; flex-start; flex-end; stretch;
+
+ *******************************************************************************
+
+ * filter                      || grayscale(100%); == black & white
+ * filter                      || blur(2px); == fog | blur
+ * filter                      || invert(100%);
+ * background-image            || linear-gradient( to top, #2980b9 20%,#27ae60 40%, #d35400 60%, #3498db 80% );
+ *              linear-gradient( 90deg ,  #2980b9 , #27ae60 )
+ * caret-color                 || red; لون الافالش اللى فى الكتابة 
+ * pointer-events              || all; none; 
+
+ *******************************************************************************
+ *************************** For Parent grid ****************************************
+ * display                     || grid | inline-grid
+ * grid-template-columns       || [Number Of Rows In] =>  [Px, %, Auto, Repeat, 1fr]
+  100px 100px ; 33% 33% 33%; auto auto auto auto; repeat(6, auto)
+ * grid-template-rows          || [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+ * row-gap                     || 0px; 10px; المسافات اللى فى العرض
+ * column-gap                  || 0px; 10px; المسافات اللى فى الطول
+ * gap                         || [Row Gap] [Column Gap] 10px 10px;
+ * grid-template-areas         || "logo logo nav nav nav nav nav nav nav nav"
+ * grid-template-areas         || "cont cont cont cont cont cont cont . side side"
+ * grid-template-areas         || repeat(auto-fill, minmax(200px, 1fr));
+ *
+
+ *************************** For Child grid ****************************************
+
+ * grid-area                   || logo;
+ * grid-column                 || [Grid-Column-Start] [Grid-Column-End] span 3; 2 / span 3; فى العرض
+ * grid-row                    || [Grid-Row-Start] [Grid-Row-End] span 3; 2 / span 3; فى الطول
+ * grid-row-start              || 2; الصف اللى هيبدا منو 
+ * grid-column-start           || 2; العمواد اللى هيبد منو 
+ * grid-row-end                || 5; الصف اللى هينتهى عندو 
+ * grid-area                   || [Grid-Row-Start] [Grid-Column-Start] [Grid-Row-End] [Grid-Column-End]
+ * transform                   || scaleX(2);  scaleY(2);  scale(2, 2);
+ * transform                   || rotate(45deg); rotate(1turn); rotate(0.5turn); rotate(0.25turn);
+ * transform                   || translate(-100px, -100px);
+ * transform                   || skewX(20deg);
+ * transform                   || matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+ * transform-origin            || center center;
+ * transform                   || rotate3d(0, 1, 1, 90deg); = x y z deg
+ *
+ * animation-name              || change-color;
+ * animation-duration          || 2s;
+ * animation-iteration-count   || infinite;
+ * animation-timing-function   || linear; ease; ease-in-out;
+ * animation-direction         || inherit; reverse; alternate;  alternate-reverse;
+ * animation-delay             || 2.1s;
+ * animation-fill-mode         || none; both; forwards; backwards;
+ * animation-play-state        || running; paused;
+ * animation                   || coloring 3s linear 2s infinite reverse;
+ *
+ *
+ *
+ *
+ *
+ *
+ * ------------------------ CSS Selectors ---------------
+ * Element => [p, div, h2]
+ * Element OtherElement => div p
+ * .class-name & #id-name
+ * .parent .child
+ * element have .class-one.class-two
+ * .parent > .child => Direct Child
+ * Element + Other Element => [div + p] داف بعدو برجراف 
+ * Element ~ Other Elements => [p ~ div] برجراف بعدو داف و يكون العنصر المباشر يعنى لو جوة عنصر تانى مش هيطبق علية 
+ * [Attribute][title]{} تنصيق عن طريق الارتربيوت
+ * Element[Attribute]
+ * [Attribute="Value"] بتختار العنصر الارتربيوت و القيمة بتاعتو كمان
+ * Element[Attribute=Value] => input[type="submit"]
+ * [Attribute~=Value] => Contains A Word الاتربيوت يحتوى على كلمة
+ * [Attribute*=Value] => Contains A Atring علىمة النجمة بعنى اى كلمة حت لو موجودة من ضمن الحروف كلمة
+ * [Attribute^=Value] => Start With A String عنصر نبدا بى قيمة فى الارتربيوت
+ * :first-child الابن الاول 
+ * :last-child الابن الاخير 
+ * :first-of-type الاول من نوعة
+ * :last-of-type الاخر من نوعة
+ * :only-child الابن الوحيد للاب 
+ * :only-of-type الان الوحيد من نوعة
+ * :not(Selectors) ما عادا 
+ * :nth-child(n) الاول و بتختارو بى الارقام
+ * :nth-last-child(n) بيعد من الاخار 
+ * :nth-of-type(n)
+ * :nth-last-of-type(n)
+ * + يعنى العنصر اللى بعده
+ * :root
+ * :checked
+ * :empty
+ * :disabled
+ * :required
+ * :focus
+ * ::selection
+ * ::placeholder
+ * 
+ * 
+ * 
+ * 
+ * 
+*/
+.cayan-111 {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  position: fixed;
+  bottom: 50%;
+  right: 0;
+}
+
+.cayan-111:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: -20px;
+  margin-top: -10px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent #009688 transparent transparent;
+}
+
+.cayan-112 {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  position: fixed;
+  top: 10%;
+  right: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: cairo;
+  font-size: 25px;
+  margin: 0px;
+  padding: 0;
+  text-transform: capitalize;
+  min-height: 20000px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.video-5 {
+  height: 500px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  background-color: red;
+  /* Color Name */
+  background-color: lime;
+  /* Red, Green, Blue, Alpha Channel */
+  background-color: #ff0000;
+  /* Color Hex Code */
+  background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url("../images/social/facebook.png");
+  /* Keyword values */
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  background-repeat: repeat;
+  background-repeat: space;
+  background-repeat: round;
+  background-repeat: no-repeat;
+  /* Two-value syntax: horizontal | vertical */
+  background-repeat: repeat space;
+  background-repeat: repeat repeat;
+  background-repeat: round space;
+  background-repeat: no-repeat round;
+  /* Global values */
+  background-repeat: inherit;
+  background-repeat: initial;
+  background-repeat: unset;
+  background-repeat: repeat;
+  /* Keyword values */
+  background-attachment: scroll;
+  background-attachment: fixed;
+  background-attachment: local;
+  /* Global values */
+  background-attachment: inherit;
+  background-attachment: initial;
+  background-attachment: unset;
+  background-attachment: fixed;
+  background-position: left top;
+  /* Keyword values */
+  background-size: cover;
+  background-size: contain;
+  /* One-value syntax */
+  /* the width of the image (height becomes 'auto') */
+  background-size: 50%;
+  background-size: 3.2em;
+  background-size: 12px;
+  background-size: auto;
+  /* Two-value syntax */
+  /* first value: width of the image, second value: height */
+  background-size: 50% auto;
+  background-size: 3em 25%;
+  background-size: auto 6px;
+  background-size: auto auto;
+  /* Multiple backgrounds */
+  background-size: auto, auto;
+  /* Not to be confused with `auto auto` */
+  background-size: 50%, 25%, 25%;
+  background-size: 6px, auto, contain;
+  /* Global values */
+  background-size: inherit;
+  background-size: initial;
+  background-size: unset;
+  background-size: auto;
+}
+
+.video-6 {
+  /* Keyword values */
+  color: currentcolor;
+  /* <named-color> values */
+  color: red;
+  color: orange;
+  color: tan;
+  color: rebeccapurple;
+  /* <hex-color> values */
+  color: #090;
+  color: #009900;
+  color: #090a;
+  color: #009900aa;
+  /* <rgb()> values */
+  color: rgba(34, 12, 64, 0.6);
+  /* <hsl()> values */
+  color: rgba(255, 128, 0, 0.6);
+  /* Global values */
+  color: inherit;
+  color: initial;
+  color: unset;
+}
+
+.video-6 .test-1 {
+  color: #f00;
+}
+
+.video-6 .test-2 {
+  background-color: lime;
+}
+
+.video-6 .test-3 {
+  background-color: #0000ff;
+  color: #fff;
+}
+
+.video-6 .test-4 {
+  background-image: url("../images/social/facebook.png");
+  height: 100px;
+}
+
+.video-6 .test-5 > div {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 100%;
+  height: 300px;
+  color: #34bf49;
+  font-size: 50px;
+  border: 3px solid #000;
+}
+
+.video-6 .test-5 > div:nth-child(1n) {
+  margin-right: 0;
+}
+
+.video-6 .test-5 .box-1 {
+  background-image: url("../images/social/instagram.png");
+  background-repeat: repeat;
+}
+
+.video-6 .test-5 .box-2 {
+  background-image: url("../images/social/instagram.png");
+  background-repeat: no-repeat;
+}
+
+.video-6 .test-5 .box-3 {
+  background-image: url("../images/social/instagram.png");
+  background-repeat: repeat-x;
+}
+
+.video-6 .test-5 .box-4 {
+  background-image: url("../images/social/instagram.png");
+  background-repeat: repeat-y;
+}
+
+.video-6 .test-6 > div {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 100%;
+  height: 300px;
+  color: #ed4c67;
+  font-size: 50px;
+  border: 3px solid #000;
+}
+
+.video-6 .test-6 > div:nth-child(1n) {
+  margin-right: 0;
+}
+
+.video-6 .test-6 .box-1 {
+  background-image: url("../images/social/instagram.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.video-6 .test-6 .box-2 {
+  background-image: url("../images/social/instagram.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.video-6 .test-7 > div {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 100%;
+  height: 300px;
+  color: #e67e22;
+  font-size: 50px;
+  border: 3px solid #000;
+}
+
+.video-6 .test-7 > div:nth-child(1n) {
+  margin-right: 0;
+}
+
+.video-6 .test-7 .box-1 {
+  background-image: url("../images/social/twitter.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.video-6 .test-7 .box-2 {
+  background-image: url("../images/social/twitter.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.video-6 .test-7 .box-3 {
+  background-image: url("../images/social/twitter.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.video-6 .test-7 .box-4 {
+  background-image: url("../images/social/twitter.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.video-6 .test-7 .box-5 {
+  background-image: url("../images/social/twitter.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.video-6 .test-7 .box-6 {
+  background-image: url("../images/social/twitter.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.video-6 .test-7 .box-7 {
+  background-image: url("../images/social/twitter.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.video-6 .test-7 .box-8 {
+  background-image: url("../images/social/twitter.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.video-6 .test-7 .box-9 {
+  background-image: url("../images/social/twitter.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.video-6 .test-8 > div {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 100%;
+  height: 300px;
+  color: #e4e932;
+  font-size: 50px;
+  border: 3px solid #000;
+}
+
+.video-6 .test-8 > div:nth-child(1n) {
+  margin-right: 0;
+}
+
+.video-6 .test-8 .box-1 {
+  background-image: url("https://placeimg.com/1000/1000/any");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.video-6 .test-8 .box-2 {
+  background-image: url("https://placeimg.com/1000/1000/any");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.video-6 .test-8 .box-3 {
+  background-image: url("https://placeimg.com/1000/1000/any");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.video-6 .test-8 .box-4 {
+  background-image: url("https://placeimg.com/1000/100/any");
+  background-repeat: no-repeat;
+  background-size: 50% 60%;
+}
+
+.video-7 {
+  background-color: #e4fbff;
+  padding: 10px;
+  /* Apply to all four sides */
+  padding: 1em;
+  /* vertical | horizontal */
+  padding: 5% 10%;
+  /* top | horizontal | bottom */
+  padding: 1em 2em 2em;
+  /* top | right | bottom | left */
+  padding: 5px 1em 0 2em;
+  /* Global values */
+  padding: inherit;
+  padding: initial;
+  padding: unset;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.video-9 {
+  background-color: #ddd;
+  padding: 10px;
+  width: 70%;
+  /* Apply to all four sides */
+  margin: 1em;
+  margin: -3px;
+  /* vertical | horizontal */
+  margin: 5% auto;
+  /* top | horizontal | bottom */
+  margin: 1em auto 2em;
+  /* top | right | bottom | left */
+  margin: 2px 1em 0 auto;
+  /* Global values */
+  margin: inherit;
+  margin: initial;
+  margin: unset;
+  margin: auto;
+  border-top-width: 20px;
+  border-left-width: 30px;
+  border-right-width: 50px;
+  border-bottom-width: 100px;
+  border-width: 10px;
+  border-top-color: #000;
+  border-right-color: #0000ff;
+  border-bottom-color: #ddd;
+  border-left-color: #f00;
+  border-color: red;
+  border-style: dashed;
+  border-style: dotted;
+  border-style: double;
+  border-style: groove;
+  border-style: hidden;
+  border-style: inherit;
+  border-style: initial;
+  border-style: inset;
+  border-style: none;
+  border-style: outset;
+  border-style: ridge;
+  border-style: unset;
+  border-style: solid;
+  border: 10px solid red;
+}
+
+.video-11 {
+  background-color: #89b3ac;
+  height: 300px;
+  margin: 50px auto;
+  /* legacy values */
+  display: block;
+  display: inline;
+  display: inline-block;
+  display: flex;
+  display: inline-flex;
+  display: grid;
+  display: inline-grid;
+  display: flow-root;
+  /* box generation */
+  display: none;
+  display: contents;
+  /* two-value syntax */
+  display: block flow;
+  display: inline flow;
+  display: inline flow-root;
+  display: block flex;
+  display: inline flex;
+  display: block grid;
+  display: inline grid;
+  display: block flow-root;
+  /* other values */
+  display: table;
+  /* all table elements have an equivalent CSS display value */
+  display: table-row;
+  display: list-item;
+  /* Global values */
+  display: inherit;
+  display: initial;
+  display: unset;
+  display: block;
+}
+
+.video-11 div {
+  background-color: #d35400;
+}
+
+.video-11 span {
+  background-color: #1b7935;
+  display: inline-block;
+}
+
+.video-12 div {
+  background-color: red;
+  margin: 10px 0;
+}
+
+.video-12 .first {
+  /* Keyword values */
+  visibility: visible;
+  visibility: hidden;
+  visibility: collapse;
+  /* Global values */
+  visibility: inherit;
+  visibility: initial;
+  visibility: unset;
+  visibility: hidden;
+}
+
+.project-work-9-12-1 {
+  margin-top: 20px;
+  border: 5px solid #3498db;
+}
+
+.project-work-9-12-1 > div {
+  display: inline-block;
+  padding: 35px;
+  background-color: #ddd;
+  font-size: 60px;
+}
+
+.project-work-9-12-1 .box-1 {
+  outline-color: #000;
+  margin: 20px 20px;
+  outline-style: solid;
+  outline-width: 5px;
+  border-color: #f00;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.project-work-9-12-1 .box-2 {
+  outline-color: #000;
+  margin: 20px 20px;
+  outline-style: solid;
+  outline-width: 5px;
+  border-color: #00f #080;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.project-work-9-12-1 .box-3 {
+  outline-color: #000;
+  margin: 20px 20px;
+  outline-style: solid;
+  outline-width: 5px;
+  border-color: #f00 #080 #00f #ff0;
+  border-style: dashed;
+  border-width: 5px;
+}
+
+.project-work-9-12-2 {
+  margin-top: 20px;
+  border: 5px solid #3498db;
+}
+
+.project-work-9-12-2 > div {
+  display: block;
+  padding: 35px;
+  background-color: #ddd;
+  font-size: 60px;
+}
+
+.project-work-9-12-2 .box-1 {
+  margin: 20px 20px;
+  border-color: #e91e63;
+  border-left-style: solid;
+  border-left-width: 15px;
+}
+
+.project-work-9-12-2 .box-2 {
+  visibility: hidden;
+}
+
+.project-work-9-12-2 .box-3 {
+  margin: 20px 20px;
+  border-color: #009688;
+  border-left-style: solid;
+  border-left-width: 15px;
+}
+
+.video-13 .one {
+  border-bottom: 2px solid red;
+  color: red;
+}
+
+.video-13 .two {
+  border-bottom: 2px solid green;
+  color: green;
+}
+
+.video-13 .three {
+  border-bottom: 2px solid blue;
+  color: blue;
+}
+
+.video-13 .four {
+  border-bottom: 2px solid black;
+  color: black;
+}
+
+.video-13 .one,
+.video-13 .two,
+.video-13 .three,
+.video-13 .four,
+.video-13 .my-p {
+  padding: 15px;
+  margin: 12px 0;
+  background-color: #ededed;
+}
+
+.width {
+  /* <length> values */
+  width: 300px;
+  width: 25em;
+  /* <percentage> value */
+  width: 75%;
+  /* Keyword values */
+  width: max-content;
+  width: min-content;
+  width: fit-content(20em);
+  width: auto;
+  /* Global values */
+  width: inherit;
+  width: initial;
+  width: unset;
+  width: 400px;
+  min-width: 500px;
+  max-width: 500px;
+  width: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.video-15 > div {
+  background-color: #999;
+  padding: 10px;
+  margin: 10px;
+}
+
+.video-15 .test-1 {
+  width: 500px;
+}
+
+.video-15 .test-2 {
+  width: 50%;
+}
+
+.video-15 .test-3 {
+  min-width: 600px;
+}
+
+.video-15 .test-4 {
+  max-width: 700px;
+  min-width: 300px;
+}
+
+.video-15 .test-5 {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.video-15 .test-6 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.video-15 .test-7 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #ffffff;
+}
+
+.video-15 .test-8 {
+  height: 100px;
+}
+
+.video-15 .test-9 {
+  height: 10%;
+}
+
+.video-15 .test-10 {
+  min-height: 150px;
+}
+
+.video-15 .test-11 {
+  max-height: 200px;
+}
+
+.video-15 .test-12 {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.video-15 .test-13 {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.video-15 .test-14 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.video-16 > div {
+  float: left;
+  width: 22%;
+  margin-bottom: 8%;
+  margin-right: 2%;
+  height: 200px;
+  background-color: #ddd;
+}
+
+.video-16 .test-1 {
+  /* Keyword values */
+  overflow: visible;
+  overflow: hidden;
+  overflow: clip;
+  overflow: scroll;
+  overflow: auto;
+  overflow: hidden visible;
+  /* Global values */
+  overflow: inherit;
+  overflow: initial;
+  overflow: unset;
+  overflow: visible;
+}
+
+.video-16 .test-2 {
+  overflow: hidden;
+}
+
+.video-16 .test-3 {
+  overflow: scroll;
+}
+
+.video-16 .test-4 {
+  overflow: auto;
+}
+
+.video-16 .test-5 {
+  overflow-y: hidden;
+}
+
+.video-16 .test-6 {
+  overflow-x: hidden;
+}
+
+.video-16::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.video-17 {
+  background-color: #9c9c9c;
+  color: #0099e5;
+  text-shadow: 0px -30px 0 #34bf49;
+}
+
+.video-18 {
+  /* Keyword values */
+  text-align: left;
+  text-align: right;
+  text-align: center;
+  text-align: justify;
+  text-align: justify-all;
+  text-align: start;
+  text-align: end;
+  text-align: match-parent;
+  /* Character-based alignment in a table column */
+  text-align: ".";
+  text-align: "." center;
+  /* Block alignment values (Non-standard syntax) */
+  text-align: -moz-center;
+  text-align: -webkit-center;
+  /* Global values */
+  text-align: inherit;
+  text-align: initial;
+  text-align: unset;
+  text-align: center;
+  direction: ltr;
+}
+
+.video-18 .box-test {
+  text-align: unset;
+  background-color: #009688;
+  color: #000;
+}
+
+.video-18 img {
+  /* Keyword values */
+  vertical-align: baseline;
+  vertical-align: sub;
+  vertical-align: super;
+  vertical-align: text-top;
+  vertical-align: text-bottom;
+  vertical-align: middle;
+  vertical-align: top;
+  vertical-align: bottom;
+  /* <length> values */
+  vertical-align: 10em;
+  vertical-align: 4px;
+  /* <percentage> values */
+  vertical-align: 20%;
+  /* Global values */
+  vertical-align: inherit;
+  vertical-align: initial;
+  vertical-align: unset;
+  vertical-align: middle;
+}
+
+.video-18 .test span {
+  vertical-align: top;
+}
+
+.video-19 .text-decoration > div {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 23.5%;
+  font-size: 17px;
+}
+
+.video-19 .text-decoration > div:nth-child(4n) {
+  margin-right: 0;
+}
+
+.video-19 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.video-19 ul li {
+  display: inline-block;
+  margin-left: -2px;
+  margin-right: 2em;
+}
+
+.video-19 > .text-decoration > div:nth-child(1) h3 {
+  text-decoration: line-through;
+}
+
+.video-19 .text-decoration > div:nth-child(2) h3 {
+  text-decoration: overline;
+}
+
+.video-19 > .text-decoration > div:nth-child(3) h3 {
+  text-decoration: underline;
+}
+
+.video-19 .text-decoration > div:nth-child(4) h3 {
+  text-decoration: none;
+}
+
+.video-19 .text-transform > div {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 23.5%;
+  font-size: 17px;
+  display: inline-block;
+  border: 1px solid #3498db;
+  text-align: center;
+}
+
+.video-19 .text-transform > div:nth-child(4n) {
+  margin-right: 0;
+}
+
+.video-19 > .text-transform > div:nth-child(1) h3 {
+  /* Keyword values */
+  text-transform: none;
+  text-transform: capitalize;
+  text-transform: uppercase;
+  text-transform: lowercase;
+  text-transform: full-width;
+  text-transform: full-size-kana;
+  /* Global values */
+  text-transform: inherit;
+  text-transform: initial;
+  text-transform: unset;
+  text-transform: capitalize;
+}
+
+.video-19 .text-transform > div:nth-child(2) h3 {
+  text-transform: lowercase;
+}
+
+.video-19 > .text-transform > div:nth-child(3) h3 {
+  text-transform: uppercase;
+}
+
+.video-19 .text-transform > div:nth-child(4) h3 {
+  text-transform: none;
+}
+
+.video-20::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.video-20 > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  font-size: 20px;
+  border: 1px solid #ed4c67;
+  margin-right: 1%;
+  gap: 10px 20px;
+}
+
+.video-20 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding: 20px;
+}
+
+.video-20 ul li {
+  display: inline-block;
+  margin-left: -2px;
+  margin-right: 2em;
+}
+
+.video-20 > div:nth-child(2) h3 {
+  /* Keyword value */
+  letter-spacing: normal;
+  /* <length> values */
+  letter-spacing: 0.3em;
+  letter-spacing: 3px;
+  letter-spacing: 0.3px;
+  /* Global values */
+  letter-spacing: inherit;
+  letter-spacing: initial;
+  letter-spacing: unset;
+  letter-spacing: 5px;
+  border: 2px solid #000000;
+}
+
+.video-20 > div:nth-child(3) h3 {
+  /* <length> values */
+  text-indent: 3mm;
+  text-indent: 40px;
+  /* <percentage> value
+  relative to the containing block width */
+  text-indent: 15%;
+  /* Keyword values */
+  text-indent: 5em each-line;
+  text-indent: 5em hanging;
+  text-indent: 5em hanging each-line;
+  /* Global values */
+  text-indent: inherit;
+  text-indent: initial;
+  text-indent: unset;
+  text-indent: 40px;
+  border: 2px solid #000000;
+}
+
+.video-20 > div:nth-child(4) p {
+  /* Keyword value */
+  line-height: normal;
+  /* Unitless values: use this number multiplied
+  by the element's font size */
+  line-height: 3.5;
+  /* <length> values */
+  line-height: 3em;
+  /* <percentage> values */
+  line-height: 34%;
+  /* Global values */
+  line-height: inherit;
+  line-height: initial;
+  line-height: unset;
+  line-height: 1.5;
+  border: 2px solid #000000;
+}
+
+.video-20 > div:nth-child(5) h3 {
+  word-spacing: normal;
+  word-spacing: 3px;
+  word-spacing: 0.3em;
+  word-spacing: 50%;
+  word-spacing: 200%;
+  word-spacing: inherit;
+  word-spacing: initial;
+  word-spacing: unset;
+  word-spacing: 75px;
+  border: 2px solid #000000;
+}
+
+.video-20 > div:nth-child(6) p {
+  white-space: normal;
+  white-space: nowrap;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  white-space: break-spaces;
+  white-space: inherit;
+  white-space: initial;
+  white-space: unset;
+  white-space: nowrap;
+  border: 2px solid #000000;
+}
+
+.video-20 > div:nth-child(7) p {
+  word-break: normal;
+  word-break: break-all;
+  word-break: keep-all;
+  word-break: break-word;
+  word-break: inherit;
+  word-break: initial;
+  word-break: unset;
+  word-break: break-all;
+  border: 2px solid #000000;
+}
+
+.video-21 div {
+  background-color: #ddd;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  text-overflow: inherit;
+  text-overflow: initial;
+  text-overflow: unset;
+  text-overflow: ellipsis;
+}
+
+.video-21 div:hover {
+  overflow: hidden;
+  width: 450px;
+}
+
+.video-22 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.video-22 div {
+  text-align: center;
+  padding: 20px;
+  background-color: #eee;
+  font-size: 20px;
+  border: 2px solid #460505;
+}
+
+.video-22 div p {
+  border: 2px solid;
+  border-color: inherit;
+  padding: inherit;
+}
+
+.video-23 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: Gill Sans Extrabold, sans-serif;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  font-family: "Times New Roman", Times, serif;
+  font-family: serif;
+  font-family: sans-serif;
+  font-family: monospace;
+  font-family: cursive;
+  font-family: fantasy;
+  font-family: system-ui;
+  font-family: ui-serif;
+  font-family: ui-sans-serif;
+  font-family: ui-monospace;
+  font-family: ui-rounded;
+  font-family: emoji;
+  font-family: math;
+  font-family: fangsong;
+  font-family: Bookman;
+  font-family: inherit;
+  font-family: initial;
+  font-family: unset;
+}
+
+.video-23 .with-ser {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.video-23 .with-ser span {
+  color: #3498db;
+}
+
+.video-23 .san-ser {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.video-23 .san-ser span {
+  color: #3498db;
+}
+
+.video-23 .with-ser,
+.video-23 .san-ser {
+  background-color: #eee;
+  padding: inherit;
+}
+
+.video-24 {
+  font-size: xx-small;
+  font-size: x-small;
+  font-size: small;
+  font-size: medium;
+  font-size: large;
+  font-size: x-large;
+  font-size: xx-large;
+  font-size: xxx-large;
+  font-size: smaller;
+  font-size: larger;
+  font-size: 12px;
+  font-size: 0.8em;
+  font-size: 80%;
+  font-size: inherit;
+  font-size: initial;
+  font-size: unset;
+}
+
+.video-24 div {
+  font-size: 40px;
+}
+
+.video-24 .test {
+  font-size: 1em;
+}
+
+.video-24 span {
+  font-size: 5vw;
+}
+
+.video-24 p {
+  font-size: 2rem;
+}
+
+.video-24 .vw {
+  font-size: 10vw;
+}
+
+.video-24 .vh {
+  font-size: 10vh;
+}
+
+.video-25 {
+  text-transform: none;
+}
+
+.video-25 div {
+  font-variant: small-caps;
+  font-variant: common-ligatures small-caps;
+  font-variant: inherit;
+  font-variant: initial;
+  font-variant: unset;
+  font-variant: small-caps;
+  font-weight: normal;
+  font-weight: bold;
+  font-weight: lighter;
+  font-weight: bolder;
+  font-weight: 100;
+  font-weight: 200;
+  font-weight: 300;
+  font-weight: 400;
+  font-weight: 500;
+  font-weight: 600;
+  font-weight: 700;
+  font-weight: 800;
+  font-weight: 900;
+  font-weight: inherit;
+  font-weight: initial;
+  font-weight: unset;
+  font-weight: bold;
+}
+
+.video-25 p {
+  font-family: "Short Stack", cursive;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.video-26 button {
+  background: transparent;
+  border: none;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  cursor: auto;
+  cursor: url(hand.cur), pointer;
+  cursor: url(cursor1.png) 4 12, auto;
+  cursor: url(cursor2.png) 2 2, pointer;
+  cursor: inherit;
+  cursor: initial;
+  cursor: unset;
+  cursor: pointer;
+  cursor: url(../images/social/facebook.png);
+}
+
+.video-26 .p-one {
+  cursor: url(../images/social/facebook.png);
+}
+
+.video-26 .p-tow {
+  cursor: cell;
+}
+
+.video-26 .p-three {
+  cursor: e-resize;
+}
+
+.video-27 .parent {
+  background-color: red;
+  padding: 10px;
+}
+
+.video-27 .parent::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.video-27 .parent div {
+  border: 2px solid #000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #eee;
+  width: 25%;
+  float: left;
+  float: right;
+  float: none;
+  float: inline-start;
+  float: inline-end;
+  float: inherit;
+  float: initial;
+  float: unset;
+  float: left;
+}
+
+.video-28 {
+  padding: 0;
+  margin: 0;
+  border: 1px solid #000000;
+}
+
+.video-28::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.video-28 div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #eee;
+  float: left;
+  margin-left: 10px;
+  width: calc((100% - 60px) / 4);
+}
+
+.video-29 {
+  margin-top: 20px;
+}
+
+.video-29 div {
+  color: white;
+  width: 100px;
+  padding: 10px;
+}
+
+.video-29 .one {
+  background-color: red;
+  opacity: 0.1;
+}
+
+.video-29 .two {
+  background-color: green;
+}
+
+.video-30 {
+  position: relative;
+}
+
+.video-30 div {
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+}
+
+.video-30 .one {
+  background-color: red;
+  top: 0px;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.video-30 .two {
+  background-color: green;
+  position: absolute;
+  left: calc(100% - 50%);
+  top: calc(100% - 87%);
+}
+
+.video-31 {
+  height: 200px;
+  display: inline-block;
+  position: relative;
+  width: 80%;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.video-31 div {
+  color: white;
+  width: 70%;
+  padding: 10px;
+  text-align: left;
+  position: absolute;
+}
+
+.video-31 .one {
+  background-color: red;
+  left: 135px;
+  top: 133px;
+  z-index: 3;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.video-31 .two {
+  background-color: green;
+  left: 75px;
+  top: 133px;
+  z-index: 2;
+}
+
+.video-31 .three {
+  background-color: blue;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.video-31:hover .one {
+  background-color: blue;
+  z-index: 1;
+  left: 0;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.video-31:hover .three {
+  background-color: red;
+  left: 135px;
+  top: 133px;
+  z-index: 3;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.video-32 ul {
+  list-style-type: disc;
+  list-style-type: circle;
+  list-style-type: square;
+  list-style-type: decimal;
+  list-style-type: georgian;
+  list-style-type: trad-chinese-informal;
+  list-style-type: kannada;
+  list-style-type: "-";
+  list-style-type: custom-counter-style;
+  list-style-type: none;
+  list-style-type: inherit;
+  list-style-type: initial;
+  list-style-type: unset;
+  list-style-type: lower-armenian;
+  list-style-type: armenian;
+  list-style-type: circle;
+  list-style-type: decimal;
+  list-style-type: decimal-leading-zero;
+  list-style-type: georgian;
+  list-style-type: lower-alpha;
+  list-style-type: lower-greek;
+  list-style-type: lower-latin;
+  list-style-type: lower-roman;
+  list-style-type: square;
+  list-style-type: upper-alpha;
+  list-style-type: none;
+  list-style-type: "";
+  font-family: fontawesome;
+  list-style-position: outside;
+  list-style-position: inside;
+  list-style: disc inside;
+}
+
+.video-32 li {
+  background-color: #eee;
+  margin-bottom: 20px;
+}
+
+.video-33 table {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-spacing: 0;
+}
+
+.video-33 table td {
+  padding: 15px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+
+.video-33 table thead td {
+  background-color: #f44336;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border-color: #f35246;
+}
+
+.video-34 .one {
+  background-color: red;
+  color: white;
+}
+
+.video-34 .two {
+  background-color: #eee;
+  width: 100px;
+  height: 100px;
+}
+
+.video-34 a {
+  color: green;
+  text-decoration: none;
+}
+
+.video-34 a:hover {
+  color: red;
+}
+
+.video-34 a:visited {
+  color: blue;
+}
+
+.video-34 p:empty {
+  border: 10px solid red;
+}
+
+.video-34 div:empty {
+  border: 10px solid red;
+}
+
+.video-34 .ch:checked + label {
+  border: 5px solid #000;
+}
+
+.video-34 .in {
+  border-color: #0004ff;
+  outline: none;
+}
+
+.video-34 .in:focus {
+  border-color: red;
+  outline: none;
+}
+
+.video-35 .one span {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.video-35 .two::first-letter {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.video-35 .three::first-line {
+  font-weight: bold;
+  color: green;
+}
+
+.video-35 ::-moz-selection {
+  background-color: black;
+  color: yellow;
+}
+
+.video-35 ::-moz-selection {
+  background-color: black;
+  color: yellow;
+}
+
+.video-35 ::selection {
+  background-color: black;
+  color: yellow;
+}
+
+.video-36 {
+  font-family: "Markazi Text", serif;
+}
+
+.video-36 .parent {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.video-36 .one {
+  background-color: #eee;
+  padding: 10px;
+  width: 600px;
+  float: left;
+  position: relative;
+}
+
+.video-36 .one::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  margin-top: -10px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent #009688 transparent transparent;
+}
+
+.video-36 .one::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  right: 0px;
+  top: 0;
+  background-color: #009688;
+}
+
+.video-36 .user {
+  background-color: #eee;
+  width: 50px;
+  margin-right: 20px;
+  padding: 10px;
+  height: 100px;
+  float: left;
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.video-36 .user::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50px;
+  margin-top: -5px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent transparent #009688;
+}
+
+.video-37 .parent {
+  margin-bottom: 20px;
+  overflow: hidden;
+  counter-increment: members-counter;
+}
+
+.video-37 .one {
+  background-color: #eee;
+  padding: 10px;
+  width: 600px;
+  float: left;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.video-37 .one .test-Font-Awesome {
+  position: relative;
+  color: #3498db;
+}
+
+.video-37 .one .test-Font-Awesome::before {
+  content: attr(data-text);
+  display: none;
+  top: 0%;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.video-37 .one .test-Font-Awesome:hover::before {
+  display: block;
+  position: absolute;
+  background-color: #3498db;
+  color: white;
+  width: max-content;
+  font-size: 13px;
+  text-align: center;
+  font-weight: bold;
+  left: -100%;
+  top: -50%;
+  padding: 5px 10px;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.video-37 .one::before {
+  content: attr(data-text);
+  display: none;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.video-37 .one:hover::before {
+  display: block;
+  position: absolute;
+  background-color: red;
+  color: white;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: bold;
+  right: -50px;
+  bottom: 10%;
+  margin-top: -50px;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.video-37 .one::after {
+  content: counter(members-counter);
+  position: absolute;
+  background-color: red;
+  color: white;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-weight: bold;
+  right: -25px;
+  top: 50%;
+  margin-top: -25px;
+}
+
+.video-37 .user {
+  background-color: #eee;
+  width: 70px;
+  margin-right: 20px;
+  padding: 10px;
+  height: 100px;
+  float: left;
+  font-size: 50px;
+  text-align: center;
+}
+
+.video-37 ul {
+  list-style: none;
+}
+
+.video-37 ul li {
+  position: relative;
+}
+
+.video-37 ul li::before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  margin-top: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #009688 transparent transparent;
+}
+
+.class {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.video-39 div {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  margin: 20px auto;
+  /* The syntax of the first radius allows one to four values */
+  /* Radius is set for all 4 sides */
+  border-radius: 10px;
+  /* top-left-and-bottom-right | top-right-and-bottom-left */
+  border-radius: 10px 5%;
+  /* top-left | top-right-and-bottom-left | bottom-right */
+  border-radius: 2px 4px 2px;
+  /* top-left | top-right | bottom-right | bottom-left */
+  border-radius: 1px 0 3px 4px;
+  /* The syntax of the second radius allows one to four values */
+  /* (first radius values) / radius */
+  border-radius: 10px/20px;
+  /* (first radius values) / top-left-and-bottom-right | top-right-and-bottom-left */
+  border-radius: 10px 5%/20px 30px;
+  /* (first radius values) / top-left | top-right-and-bottom-left | bottom-right */
+  border-radius: 10px 5px 2em/20px 25px 30%;
+  /* (first radius values) / top-left | top-right | bottom-right | bottom-left */
+  border-radius: 10px 5%/20px 25em 30px 35em;
+  /* Global values */
+  border-radius: inherit;
+  border-radius: initial;
+  border-radius: unset;
+  border-radius: 6px;
+  /* border-top-left-radius: 20px 20px;
+  border-bottom-right-radius: 20px; */
+}
+
+.video-40 div {
+  padding: 20px;
+  background-color: #eee;
+  margin: 20px auto;
+  width: 300px;
+  /* Keyword values */
+  box-shadow: none;
+  /* offset-x | offset-y | color */
+  box-shadow: 60px -16px teal;
+  /* offset-x | offset-y | blur-radius | color */
+  box-shadow: 10px 5px 5px black;
+  /* offset-x | offset-y | blur-radius | spread-radius | color | inset*/
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  /* inset | offset-x | offset-y | color */
+  box-shadow: inset 5em 1em gold;
+  /* Any number of shadows, separated by commas */
+  box-shadow: 3px 3px red, -1em 0 0.4em olive;
+  /* Global keywords */
+  box-shadow: inherit;
+  box-shadow: initial;
+  box-shadow: unset;
+  box-shadow: 20px 0px 10px 0 #f10000, 0 0 10px 0 #000, -1px -20px 10px 0 #080, -20px 0px 10px 0 #00f, 0px 20px 10px 0 yellow;
+}
+
+.video-41 .parent {
+  width: 90%;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ddd;
+}
+
+.video-41 .parent::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.video-41 .one {
+  background-color: white;
+  width: 50%;
+  float: left;
+  padding: 10px;
+  border: 10px solid #000;
+}
+
+.video-42::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.video-42 > div {
+  width: 30%;
+  float: left;
+}
+
+.video-42 > div:nth-child(2) {
+  float: right;
+  transition: all 2s linear;
+  -webkit-transition: all 2s linear;
+  -moz-transition: all 2s linear;
+  -ms-transition: all 2s linear;
+  -o-transition: all 2s linear;
+}
+
+.video-42 .one {
+  background-color: #eee;
+  height: 100px;
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+  transition-property: all;
+  transition-property: width;
+  /* Keyword values */
+  transition-timing-function: ease;
+  transition-timing-function: ease-in;
+  transition-timing-function: ease-out;
+  transition-timing-function: ease-in-out;
+  transition-timing-function: linear;
+  transition-timing-function: step-start;
+  transition-timing-function: step-end;
+  /* Function values */
+  transition-timing-function: steps(4, jump-end);
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+  /* Steps Function keywords */
+  transition-timing-function: steps(4, jump-start);
+  transition-timing-function: steps(10, jump-end);
+  transition-timing-function: steps(20, jump-none);
+  transition-timing-function: steps(5, jump-both);
+  transition-timing-function: steps(6, start);
+  transition-timing-function: steps(8, end);
+  /* Multiple timing functions */
+  transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+  /* Global values */
+  transition-timing-function: inherit;
+  transition-timing-function: initial;
+  transition-timing-function: unset;
+  transition-timing-function: ease-in-out;
+  transition: all 0.5s 0s linear;
+  -webkit-transition: all 0.5s 0s linear;
+  -moz-transition: all 0.5s 0s linear;
+  -ms-transition: all 0.5s 0s linear;
+  -o-transition: all 0.5s 0s linear;
+}
+
+.video-42 .one:hover {
+  width: 40%;
+  height: 120px;
+}
+
+.video-43 {
+  margin-bottom: 100px;
+}
+
+.video-43 .one {
+  background-color: #eee !important;
+}
+
+.video-44 {
+  /*
+    The Margin Collapse
+    [1] Only Vertical Margin Collapse
+    [2] Bigger Margin Wins
+    [3] Margin Collapsing With Elements Without Anything Between
+    [4] Nesting Does Not Prevent Collapse
+  */
+}
+
+.video-44 .parent {
+  overflow: hidden;
+  margin: auto;
+  width: 400px;
+  height: 200px;
+  padding: 10px;
+  background-color: #eee;
+}
+
+.video-44 .parent .one,
+.video-44 .parent .two {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.video-44 .one {
+  background-color: #ddd;
+  border: 1px solid #000000;
+}
+
+.video-44 .two {
+  background-color: #aaa;
+}
+
+.video-44 .up {
+  background-color: red;
+  color: white;
+  height: 80px;
+  margin-bottom: 40px;
+}
+
+.video-44 .down {
+  background-color: green;
+  color: white;
+  height: 80px;
+  margin-top: 40px;
+}
+
+.video-45 {
+  /*
+    CSS Variables
+    - Global Variable
+    - Local Variable
+    var(Variable Name, Fall Back Value)
+  */
+}
+
+.video-45 :root {
+  --main-color: blue;
+  --mainPadding: 10px;
+  --color-3498db: #3498db;
+}
+
+.video-45 .main {
+  background-color: var(--color-3498db, #f00);
+  color: white;
+  padding: calc(20px + var(--mainPadding));
+}
+
+.video-45 h2 {
+  color: var(--color-3498db);
+  background-color: #eee;
+  padding: var(--mainPadding);
+}
+
+.video-45 p {
+  color: var(--color-3498db);
+  border: 2px solid var(--mainColor);
+  padding: var(--mainPadding);
+}
+
+.video-45 a:hover {
+  color: var(--color-3498db);
+}
+
+.video-45 .local {
+  --color-3498db: black;
+  background-color: var(--color-3498db);
+  color: white;
+}
+
+.video-46 {
+  /*
+    Flexible Box
+    For Parent
+    - display: flex => To Start Flexible Box
+
+    - flex-direction: row => Default Value
+    - flex-direction: column;
+    - flex-direction: column-reverse;
+    - flex-direction: row;
+    - flex-direction: row-reverse;
+    - flex-direction: inherit;
+    - flex-direction: initial;
+    - flex-direction: unset;
+
+    - flex-wrap: nowrap => Default Value
+    - flex-wrap: nowrap;
+    - flex-wrap: wrap;
+    - flex-wrap: inherit;
+    - flex-wrap: initial;
+    - flex-wrap: unset;
+
+    - flex-flow: [Flex-Direction] + [Flex-Wrap]
+
+  */
+}
+
+.video-46 .flex {
+  background-color: #eee;
+  width: 90%;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  flex-direction: row-reverse;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+  flex-flow: row wrap;
+  direction: rtl;
+}
+
+@media (max-width: 767px) {
+  .video-46 .flex {
+    flex-direction: column;
+  }
+}
+.video-46 .flex div {
+  background-color: #2f00ff;
+  color: white;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  width: calc((97% - 1%) / 4);
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 767px) {
+  .video-46 .flex div {
+    width: calc((98% - 1%) / 1);
+  }
+}
+.video-46 .float {
+  overflow: hidden;
+  background-color: #eee;
+  width: 90%;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.video-46 .float div {
+  background-color: #f00;
+  color: white;
+  float: right;
+  width: 20%;
+  text-align: center;
+  padding: 20px;
+}
+
+.video-47 {
+  /*
+    Flexible Box
+    For Parent
+    - display: flex => To Start Flexible Box
+    - flex-direction: row => Default Value
+    - flex-wrap: nowrap => Default Value
+    - flex-flow: [Flex-Direction] + [Flex-Wrap]
+    ---
+    - justify-content: flex-start => Default Value
+  */
+}
+
+.video-47 * {
+  box-sizing: border-box;
+}
+
+.video-47 .flex {
+  background-color: #eee;
+  width: 90%;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  justify-content: space-between;
+  justify-self: start;
+  justify-content: flex-start;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.video-47 .flex div {
+  background-color: #f00;
+  color: white;
+  width: calc(99% / 4);
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 2%;
+}
+
+.video-47 .float {
+  overflow: hidden;
+  background-color: #eee;
+  width: 90%;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.video-47 .float div {
+  background-color: #f00;
+  color: white;
+  float: right;
+  width: 20%;
+  text-align: center;
+  padding: 20px;
+}
+
+.video-48 {
+  /*
+    Flexible Box
+    For Parent
+    - display: flex => To Start Flexible Box
+    - flex-direction: row => Default Value
+    - flex-wrap: nowrap => Default Value
+    - flex-flow: [Flex-Direction] + [Flex-Wrap]
+    ---
+    - justify-content: flex-start => Default Value
+    - align-items: stretch => Default Value
+  */
+}
+
+.video-48 .flex {
+  background-color: #eee;
+  width: 90%;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.video-48 .flex div {
+  background-color: #f00;
+  color: white;
+  width: calc(90% / 3);
+  text-align: center;
+  padding: 20px;
+}
+
+.video-48 .flex .one,
+.video-48 .float .one {
+  height: 80px;
+}
+
+.video-48 .flex .two,
+.video-48 .float .two {
+  height: 150px;
+}
+
+.video-48 .float {
+  overflow: hidden;
+  background-color: #eee;
+  width: 90%;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.video-48 .float div {
+  background-color: #f00;
+  color: white;
+  float: right;
+  width: calc(90% / 3);
+  text-align: center;
+  padding: 20px;
+}
+
+.video-48 .center {
+  background-color: #244961;
+  color: white;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.video-49 {
+  /*
+    Flexible Box
+    For Parent
+    - display: flex => To Start Flexible Box
+    - flex-direction: row => Default Value
+    - flex-wrap: nowrap => Default Value
+    - flex-flow: [Flex-Direction] + [Flex-Wrap]
+    ---
+    - justify-content: flex-start => Default Value
+    - align-items: stretch => Default Value
+
+    - align-content: stretch => Default Value
+  */
+}
+
+.video-49 * {
+  box-sizing: border-box;
+}
+
+.video-49 .flex {
+  background-color: #eee;
+  width: 90%;
+  height: 400px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-between;
+}
+
+.video-49 .flex div {
+  background-color: #f00;
+  color: white;
+  width: calc(100% / 3);
+  text-align: center;
+  padding: 20px;
+}
+
+.video-50 {
+  /*
+    Flexible Box
+    For Parent
+    - display: flex => To Start Flexible Box
+    - flex-direction: row => Default Value
+    - flex-wrap: nowrap => Default Value
+    - flex-flow: [Flex-Direction] + [Flex-Wrap]
+    - justify-content: flex-start => Default Value
+    - align-items: stretch => Default Value
+    - align-content: stretch => Default Value
+    For Child
+    - flex-grow: 0 => Default Value
+    - flex-shrink: 1 => Default Value
+    - order: 0 => Default Value
+  */
+}
+
+.video-50 .flex {
+  background-color: #eee;
+  width: 90%;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+}
+
+.video-50 .flex div {
+  background-color: #f00;
+  color: white;
+  width: 80px;
+  text-align: center;
+  padding: 20px;
+  margin-right: 5px;
+  flex-grow: 1;
+}
+
+.video-50 .flex div:nth-child(2) {
+  flex-grow: 3;
+  background-color: #0000ff;
+}
+
+.video-51 {
+  /*
+    Flexible Box
+    For Parent
+    - display: flex => To Start Flexible Box
+    - flex-direction: row => Default Value
+    - flex-wrap: nowrap => Default Value
+    - flex-flow: [Flex-Direction] + [Flex-Wrap]
+    - justify-content: flex-start => Default Value
+    - align-items: stretch => Default Value
+    - align-content: stretch => Default Value
+    For Child
+    - flex-grow: 0 => Default Value
+    - flex-shrink: 1 => Default Value
+    - order: 0 => Default Value
+    - flex-basis: auto => Default Value
+    - flex: [Flex Grow] [Flex Shrink] [Flex Basis] 0 1 Auto
+  */
+}
+
+.video-51 * {
+  box-sizing: border-box;
+}
+
+.video-51 .flex {
+  background-color: #eee;
+  width: 90%;
+  padding: 20px;
+  margin: 20px auto;
+  display: inline-flex;
+}
+
+.video-51 .flex div {
+  background-color: #f00;
+  color: white;
+  width: 80px;
+  text-align: center;
+  padding: 20px;
+  margin-right: 5px;
+  flex-grow: 1;
+}
+
+.video-51 .in {
+  display: inline-block;
+}
+
+.video-52 {
+  /*
+    Flexible Box
+    For Parent
+    - display: flex => To Start Flexible Box
+    - flex-direction: row => Default Value
+    - flex-wrap: nowrap => Default Value
+    - flex-flow: [Flex-Direction] + [Flex-Wrap]
+    - justify-content: flex-start => Default Value
+    - align-items: stretch => Default Value
+    - align-content: stretch => Default Value
+    For Child
+    - flex-grow: 0 => Default Value
+    - flex-shrink: 1 => Default Value
+    - order: 0 => Default Value
+    - flex-basis: auto => Default Value
+    - flex: [Flex Grow] [Flex Shrink] [Flex Basis] 0 1 Auto
+    - align-self: auto => Default Value
+  */
+}
+
+.video-52 * {
+  box-sizing: border-box;
+}
+
+.video-52 .flex {
+  background-color: #eee;
+  width: 90%;
+  height: 300px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  align-items: flex-start;
+}
+
+.video-52 .flex div {
+  background-color: #f00;
+  color: white;
+  width: 80px;
+  text-align: center;
+  padding: 20px;
+  margin-right: 5px;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-start;
+  justify-content: space-evenly;
+}
+
+.video-54 > div {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 32%;
+}
+
+.video-54 > div:nth-child(3n) {
+  margin-right: 0;
+}
+
+.video-54 .box-one img {
+  -webkit-filter: url("filters.svg#filter-id");
+  filter: url("filters.svg#filter-id");
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-filter: opacity(25%);
+  filter: opacity(25%);
+  -webkit-filter: saturate(30%);
+  filter: saturate(30%);
+  -webkit-filter: sepia(60%);
+  filter: sepia(60%);
+  -webkit-filter: contrast(175%) brightness(3%);
+  filter: contrast(175%) brightness(3%);
+  -webkit-filter: none;
+  filter: none;
+  -webkit-filter: inherit;
+  filter: inherit;
+  -webkit-filter: initial;
+  filter: initial;
+  -webkit-filter: unset;
+  filter: unset;
+  transition: 0.3s;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.video-54 .box-one img:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+.video-54 .box-tow img {
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+}
+
+.video-54 .box-tow img:hover {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}
+
+.video-54 .box-three img {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
+.video-54 .box-three img:hover {
+  filter: invert(0);
+  -webkit-filter: invert(0);
+}
+
+.clear::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.video-55 {
+  /*
+    Gradients
+    linear-gradient(Direction || Angle, Color Stop 1, Color Stop 2, ....)
+  */
+}
+
+.video-55 .box-1 {
+  width: 400px;
+  height: 200px;
+  color: #eee;
+  margin: 20px auto;
+  position: relative;
+  padding: 10px;
+  background-image: linear-gradient(to left, #2980b9, #27ae60);
+}
+
+.video-55 .box-2 {
+  width: 400px;
+  height: 200px;
+  background-color: #eee;
+  margin: 20px auto;
+  position: relative;
+  padding: 10px;
+}
+
+.video-55 .box-2::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  background-color: red;
+  height: 20px;
+  background-image: linear-gradient(to right, #2980b9 20%, #27ae60 20%, #27ae60 40%, #d35400 40%, #d35400 60%, #8e44ad 60%, #8e44ad 80%, #c0392b 80%);
+}
+
+.video-56 input {
+  caret-color: red;
+}
+
+.video-56 a {
+  pointer-events: none;
+}
+
+.video-56 p {
+  caret-color: red;
+}
+
+.video-57 {
+  /*
+    Grid
+    Parent
+    - display: grid | inline-grid
+    - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Repeat]
+  */
+}
+
+.video-57 * {
+  box-sizing: border-box;
+}
+
+.video-57 .parent {
+  margin: 0;
+  width: 100%;
+  height: 500px;
+  background-color: #ddd;
+  display: grid;
+  grid-template-columns: 100px 100px 200px;
+  grid-template-columns: 100px 100px 50%;
+  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(4, auto);
+  grid-template-columns: 100px 200px 25% auto;
+  grid-template-columns: repeat(2, auto) repeat(2, 1fr);
+}
+
+.video-57 .parent div {
+  background-color: red;
+  color: white;
+  padding: 0px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.video-58 {
+  /*
+    Grid
+    Parent
+    - display: grid | inline-grid
+    - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - gap: [Row Gap] [Column Gap]
+  */
+}
+
+.video-58 * {
+  box-sizing: border-box;
+}
+
+.video-58 .parent {
+  margin: 20px auto;
+  width: 100%;
+  height: 100vh;
+  background-color: #ddd;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px 10px;
+}
+
+.video-58 .parent div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.video-59 {
+  /*
+    Grid
+    Parent
+    - display: grid | inline-grid
+    - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - gap: [Row Gap] [Column Gap]
+    - justify-content
+    - align-content
+  */
+}
+
+.video-59 * {
+  box-sizing: border-box;
+}
+
+.video-59 .parent {
+  margin: 20px auto;
+  width: 100%;
+  height: 500px;
+  background-color: #ddd;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px 10px;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.video-59 .parent div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+.video-60 {
+  /*
+    Grid
+    Parent
+    - display: grid | inline-grid
+    - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - gap: [Row Gap] [Column Gap]
+    - justify-content
+    - align-content
+  */
+}
+
+.video-60 * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.video-60 ul {
+  list-style: none;
+}
+
+.video-60 ul li {
+  display: inline-block;
+}
+
+.video-60 .page {
+  height: 100vh;
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 50px auto 50px;
+  grid-template-areas: "logo logo nav nav nav nav nav nav nav nav" "cont cont cont cont cont cont cont . side side" "foot foot foot foot foot foot foot foot foot foot";
+}
+
+.video-60 h2 {
+  grid-area: logo;
+  background-color: red;
+  color: white;
+}
+
+.video-60 nav {
+  grid-area: nav;
+  background-color: blue;
+  color: white;
+}
+
+.video-60 section {
+  grid-area: cont;
+  background-color: yellow;
+  color: white;
+}
+
+.video-60 aside {
+  grid-area: side;
+  background-color: green;
+  color: white;
+}
+
+.video-60 footer {
+  grid-area: foot;
+  background-color: black;
+  color: white;
+}
+
+.video-61 {
+  /*
+    Grid
+    Parent
+    - display: grid | inline-grid
+    - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - gap: [Row Gap] [Column Gap]
+    - justify-content
+    - align-content
+    - grid-template-areas
+    Child
+    - grid-column: [Grid-Column-Start] [Grid-Column-End]
+    - grid-row: [Grid-Row-Start] [Grid-Row-End]
+  */
+}
+
+.video-61 * {
+  box-sizing: border-box;
+}
+
+.video-61 .parent {
+  margin: 20px auto;
+  width: 100%;
+  height: 100vh;
+  background-color: #ddd;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px 10px;
+}
+
+.video-61 .parent div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.video-61 .test-1 {
+  grid-column: 2/span 5;
+  grid-row: 2/span 5;
+}
+
+.video-62 {
+  /*
+    Grid
+    Parent
+    - display: grid | inline-grid
+    - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - gap: [Row Gap] [Column Gap]
+    - justify-content
+    - align-content
+    - grid-template-areas
+    Child
+    - grid-column: [Grid-Column-Start] [Grid-Column-End]
+    - grid-row: [Grid-Row-Start] [Grid-Row-End]
+    - grid-area: [Grid-Row-Start] [Grid-Column-Start] [Grid-Row-End] [Grid-Column-End]
+  */
+}
+
+.video-62 * {
+  box-sizing: border-box;
+}
+
+.video-62 .parent {
+  margin: 20px auto;
+  width: 90%;
+  height: 500px;
+  background-color: #ddd;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
+
+.video-62 .parent div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.video-62 .parent div:nth-child(9) {
+  background-color: green;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-area: 2/2/5/6;
+}
+
+.video-63 * {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.video-63 .parent {
+  margin: 20px auto;
+  height: 500px;
+  background-color: #ddd;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.video-63 .parent div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.video-65 {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+}
+
+.video-65 .parent {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translate(-10%, -50%);
+  -webkit-transform: translate(-10%, -50%);
+  -moz-transform: translate(-10%, -50%);
+  -ms-transform: translate(-10%, -50%);
+  -o-transform: translate(-10%, -50%);
+  width: 25%;
+  height: 250px;
+  background-color: #ddd;
+}
+
+.video-65 .parent .x-axis::before {
+  content: "X-axis";
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  background-color: #fff;
+  width: 90px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.video-65 .parent .x-axis::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  bottom: -50px;
+  left: 0;
+  position: absolute;
+}
+
+.video-65 .parent .y-axis::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #000;
+  left: -50px;
+  position: absolute;
+}
+
+.video-65 .parent .y-axis::after {
+  content: "Y-axis";
+  position: absolute;
+  left: -95px;
+  top: 50%;
+  transform: translateY(-50%) rotate(270deg);
+  -webkit-transform: translateY(-50%) rotate(270deg);
+  -moz-transform: translateY(-50%) rotate(270deg);
+  -ms-transform: translateY(-50%) rotate(270deg);
+  -o-transform: translateY(-50%) rotate(270deg);
+  background-color: #fff;
+  width: 90px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.video-65 .parent > div {
+  width: 70%;
+  height: 70%;
+  background-color: #cf2d63;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 15%;
+  margin-left: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.video-65 .parent > div:not([disabled]):hover {
+  transform: scale(2, 2);
+  -webkit-transform: scale(2, 2);
+  -moz-transform: scale(2, 2);
+  -ms-transform: scale(2, 2);
+  -o-transform: scale(2, 2);
+}
+
+.video-65 .parent:nth-child(2) {
+  left: 55%;
+  transform: translate(-55%, -50%);
+  -webkit-transform: translate(-55%, -50%);
+  -moz-transform: translate(-55%, -50%);
+  -ms-transform: translate(-55%, -50%);
+  -o-transform: translate(-55%, -50%);
+}
+
+.video-65 .parent:nth-child(2) > div {
+  background-color: #3e8147;
+}
+
+.video-65 .parent:nth-child(2) > div:not([disabled]):hover {
+  transform: scaleX(2);
+  -webkit-transform: scaleX(2);
+  -moz-transform: scaleX(2);
+  -ms-transform: scaleX(2);
+  -o-transform: scaleX(2);
+}
+
+.video-65 .parent:nth-child(3) {
+  left: 100%;
+  transform: translate(-100%, -50%);
+  -webkit-transform: translate(-100%, -50%);
+  -moz-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  -o-transform: translate(-100%, -50%);
+}
+
+.video-65 .parent:nth-child(3) > div {
+  background-color: #3489db;
+}
+
+.video-65 .parent:nth-child(3) > div:not([disabled]):hover {
+  transform: scaleY(2);
+  -webkit-transform: scaleY(2);
+  -moz-transform: scaleY(2);
+  -ms-transform: scaleY(2);
+  -o-transform: scaleY(2);
+}
+
+.video-66 {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #919191;
+}
+
+.video-66 .parent {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translate(-10%, -50%);
+  -webkit-transform: translate(-10%, -50%);
+  -moz-transform: translate(-10%, -50%);
+  -ms-transform: translate(-10%, -50%);
+  -o-transform: translate(-10%, -50%);
+  width: 25%;
+  height: 250px;
+  background-color: #ddd;
+}
+
+.video-66 .parent .x-axis::before {
+  content: "X-axis";
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  background-color: #fff;
+  width: 90px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.video-66 .parent .x-axis::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  bottom: -50px;
+  left: 0;
+  position: absolute;
+}
+
+.video-66 .parent .y-axis::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #000;
+  left: -50px;
+  position: absolute;
+}
+
+.video-66 .parent .y-axis::after {
+  content: "Y-axis";
+  position: absolute;
+  left: -95px;
+  top: 50%;
+  transform: translateY(-50%) rotate(270deg);
+  -webkit-transform: translateY(-50%) rotate(270deg);
+  -moz-transform: translateY(-50%) rotate(270deg);
+  -ms-transform: translateY(-50%) rotate(270deg);
+  -o-transform: translateY(-50%) rotate(270deg);
+  background-color: #fff;
+  width: 90px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.video-66 .parent > div {
+  width: 70%;
+  height: 70%;
+  background-color: #cf2d63;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 15%;
+  margin-left: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.video-66 .parent > div:not([disabled]):hover {
+  transform: translate(100%, 100%);
+  -webkit-transform: translate(100%, 100%);
+  -moz-transform: translate(100%, 100%);
+  -ms-transform: translate(100%, 100%);
+  -o-transform: translate(100%, 100%);
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+
+.video-66 .parent:nth-child(2) {
+  left: 55%;
+  transform: translate(-55%, -50%);
+  -webkit-transform: translate(-55%, -50%);
+  -moz-transform: translate(-55%, -50%);
+  -ms-transform: translate(-55%, -50%);
+  -o-transform: translate(-55%, -50%);
+}
+
+.video-66 .parent:nth-child(2) > div {
+  background-color: #3e8147;
+}
+
+.video-66 .parent:nth-child(2) > div:not([disabled]):hover {
+  transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+
+.video-66 .parent:nth-child(3) {
+  left: 100%;
+  transform: translate(-100%, -50%);
+  -webkit-transform: translate(-100%, -50%);
+  -moz-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  -o-transform: translate(-100%, -50%);
+}
+
+.video-66 .parent:nth-child(3) > div {
+  background-color: #3489db;
+}
+
+.video-66 .parent:nth-child(3) > div:not([disabled]):hover {
+  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+.video-67 {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #dda3a3;
+}
+
+.video-67 .parent {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translate(-10%, -50%);
+  -webkit-transform: translate(-10%, -50%);
+  -moz-transform: translate(-10%, -50%);
+  -ms-transform: translate(-10%, -50%);
+  -o-transform: translate(-10%, -50%);
+  width: 25%;
+  height: 250px;
+  background-color: #ddd;
+}
+
+.video-67 .parent .x-axis::before {
+  content: "X-axis";
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  background-color: #fff;
+  width: 90px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.video-67 .parent .x-axis::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  bottom: -50px;
+  left: 0;
+  position: absolute;
+}
+
+.video-67 .parent .y-axis::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #000;
+  left: -50px;
+  position: absolute;
+}
+
+.video-67 .parent .y-axis::after {
+  content: "Y-axis";
+  position: absolute;
+  left: -95px;
+  top: 50%;
+  transform: translateY(-50%) rotate(270deg);
+  -webkit-transform: translateY(-50%) rotate(270deg);
+  -moz-transform: translateY(-50%) rotate(270deg);
+  -ms-transform: translateY(-50%) rotate(270deg);
+  -o-transform: translateY(-50%) rotate(270deg);
+  background-color: #fff;
+  width: 90px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.video-67 .parent > div {
+  width: 70%;
+  height: 70%;
+  background-color: #cf2d63;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 15%;
+  margin-left: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.video-67 .parent > div:not([disabled]):hover {
+  transform: translate(100%, 100%);
+  -webkit-transform: translate(100%, 100%);
+  -moz-transform: translate(100%, 100%);
+  -ms-transform: translate(100%, 100%);
+  -o-transform: translate(100%, 100%);
+}
+
+.video-67 .parent:nth-child(2) {
+  left: 55%;
+  transform: translate(-55%, -50%);
+  -webkit-transform: translate(-55%, -50%);
+  -moz-transform: translate(-55%, -50%);
+  -ms-transform: translate(-55%, -50%);
+  -o-transform: translate(-55%, -50%);
+}
+
+.video-67 .parent:nth-child(2) > div {
+  background-color: #3e8147;
+}
+
+.video-67 .parent:nth-child(2) > div:not([disabled]):hover {
+  transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
+}
+
+.video-67 .parent:nth-child(3) {
+  left: 100%;
+  transform: translate(-100%, -50%);
+  -webkit-transform: translate(-100%, -50%);
+  -moz-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  -o-transform: translate(-100%, -50%);
+}
+
+.video-67 .parent:nth-child(3) > div {
+  background-color: #3489db;
+}
+
+.video-67 .parent:nth-child(3) > div:not([disabled]):hover {
+  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
+}
+
+.video-68 h2 {
+  position: relative;
+  color: white;
+  margin: 20px auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 20px;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.video-68 h2::before {
+  content: "";
+  background-color: red;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: skew(20deg, 10deg);
+  -webkit-transform: skew(20deg, 10deg);
+  -moz-transform: skew(20deg, 10deg);
+  -ms-transform: skew(20deg, 10deg);
+  -o-transform: skew(20deg, 10deg);
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.video-68 h2:hover::before {
+  transform: skewX(0deg);
+  -webkit-transform: skewX(0deg);
+  -moz-transform: skewX(0deg);
+  -ms-transform: skewX(0deg);
+  -o-transform: skewX(0deg);
+}
+
+.video-68 div {
+  margin: 200px auto;
+  width: 200px;
+  height: 200px;
+  background-color: #e78282;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  transform: skewX(10deg);
+  transform: skewX(-10deg);
+  transform: skewY(10deg);
+  transform: skewY(-10deg);
+  transform: skew(10deg, 10deg);
+  -webkit-transform: skewX(10deg);
+  -moz-transform: skewX(10deg);
+  -ms-transform: skewX(10deg);
+  -o-transform: skewX(10deg);
+}
+
+/*
+transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+*/
+.video-69 > div {
+  margin: 200px auto;
+  width: 200px;
+  height: 200px;
+  background-color: #3489db;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  transform: translateX(20px) translateY(20px) scaleX(1.2) skewY(15deg) skewX(0deg) scaleY(1.2);
+  transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
+  -webkit-transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
+  -moz-transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
+  -ms-transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
+  -o-transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
+}
+
+.video-70 {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  /*
+    transform-origin
+    Syntax
+    Default Values => 50% 50% 0
+    2D Transform => transform-origin(X, Y)
+    3D Transform => transform-origin(X, Y, Z)
+    X-Axis
+    - CSS Unit [px, em, rem]
+    - %
+    - Keyword
+    -- Left = 0%
+    -- Center = 50%
+    -- Right = 100%
+    Y-Axis
+    - CSS Unit [px, em, rem]
+    - %
+    - Keyword
+    -- Top = 0%
+    -- Center = 50%
+    -- Bottom = 100%
+  */
+  overflow: hidden;
+}
+
+.video-70 .parent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background-color: #ddd;
+}
+
+.video-70 .parent .x-axis::before {
+  content: "X-axis";
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  background-color: #fff;
+  width: 90px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.video-70 .parent .x-axis::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  bottom: -50px;
+  left: 0;
+  position: absolute;
+}
+
+.video-70 .parent .y-axis::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #000;
+  left: -50px;
+  position: absolute;
+}
+
+.video-70 .parent .y-axis::after {
+  content: "X-axis";
+  position: absolute;
+  left: -95px;
+  top: 50%;
+  transform: translateY(-50%) rotate(270deg);
+  -webkit-transform: translateY(-50%) rotate(270deg);
+  -moz-transform: translateY(-50%) rotate(270deg);
+  -ms-transform: translateY(-50%) rotate(270deg);
+  -o-transform: translateY(-50%) rotate(270deg);
+  background-color: #fff;
+  width: 90px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.video-70 .parent .origin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #f00;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  z-index: 2;
+}
+
+.video-70 .parent > div {
+  width: 90%;
+  height: 90%;
+  background-color: #3489db;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 5%;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transform-origin: center center;
+}
+
+.video-70 .parent > div:not([disabled]):hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+
+.video-71 div {
+  margin: 200px auto;
+  width: 200px;
+  height: 200px;
+  background-color: #349834;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  transform-origin: right top;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.video-71 div:not([disabled]):hover {
+  transform: rotate3d(0, 1, 1, 360deg);
+  -webkit-transform: rotate3d(0, 1, 1, 360deg);
+  -moz-transform: rotate3d(0, 1, 1, 360deg);
+  -ms-transform: rotate3d(0, 1, 1, 360deg);
+  -o-transform: rotate3d(0, 1, 1, 360deg);
+}
+
+.video-73 .parent-back-face {
+  perspective: 600px;
+}
+
+.video-73 .parent-back-face .box {
+  position: relative;
+  width: 50%;
+  min-height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
+  -ms-transition: transform 1s;
+  -o-transition: transform 1s;
+  transform-origin: right center;
+}
+
+.video-73 .parent-back-face .box:not([disabled]):hover {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.video-73 .parent-back-face .box .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.video-73 .parent-back-face .box .front {
+  background-color: red;
+}
+
+.video-73 .parent-back-face .box .back {
+  transform: rotateY(180deg);
+  color: #000;
+}
+
+.video-74 {
+  position: relative;
+  /*
+    Animation
+    - KeyFrames
+    - Name
+    - Duration
+  */
+  /* Code One */
+  /* Code Two */
+  /* Code Three */
+}
+
+.video-74 div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transform: translate(-50%, -50%);
+  -webkit-animation-name: change-color;
+  animation-name: change-color;
+  /* Single animation */
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  -webkit-animation-duration: 120ms;
+  animation-duration: 120ms;
+  /* Multiple animations */
+  -webkit-animation-duration: 1.64s, 15.22s;
+  animation-duration: 1.64s, 15.22s;
+  animation-duration: 10s, 35s, 230ms;
+  -webkit-animation-duration: 2s;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes change-color {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: blue;
+  }
+}
+@keyframes change-color {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: blue;
+  }
+}
+@keyframes change-color {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+@keyframes change-color {
+  0% {
+    background-color: red;
+  }
+  5% {
+    background-color: blue;
+  }
+  80% {
+    background-color: black;
+  }
+  100% {
+    background-color: red;
+  }
+}
+.video-75 {
+  position: relative;
+  /*
+    Animation
+    - Iteration Count
+    - Timing Function
+    - Spinner Loading
+  */
+}
+
+.video-75 div {
+  width: 100px;
+  height: 100px;
+  background-color: #e8e3e3;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  border-radius: 50%;
+  border: 5px solid #e91e63;
+  transition: transform 0.3s;
+  border-left-color: transparent;
+  -webkit-animation-name: spin;
+  animation-name: spin;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  /* Keyword value */
+  animation-iteration-count: infinite;
+  /* <number> values */
+  -webkit-animation-iteration-count: 3;
+  animation-iteration-count: 3;
+  -webkit-animation-iteration-count: 2.4;
+  animation-iteration-count: 2.4;
+  /* Multiple values */
+  animation-iteration-count: 2, 0, infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  /* Keyword values */
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-timing-function: linear;
+  -webkit-animation-timing-function: step-start;
+  animation-timing-function: step-start;
+  -webkit-animation-timing-function: step-end;
+  animation-timing-function: step-end;
+  /* Function values */
+  -webkit-animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+  animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+  -webkit-animation-timing-function: steps(4, end);
+  animation-timing-function: steps(4, end);
+  /* Steps Function keywords */
+  -webkit-animation-timing-function: steps(4, jump-start);
+  animation-timing-function: steps(4, jump-start);
+  -webkit-animation-timing-function: steps(10, jump-end);
+  animation-timing-function: steps(10, jump-end);
+  -webkit-animation-timing-function: steps(20, jump-none);
+  animation-timing-function: steps(20, jump-none);
+  -webkit-animation-timing-function: steps(5, jump-both);
+  animation-timing-function: steps(5, jump-both);
+  -webkit-animation-timing-function: steps(6, start);
+  animation-timing-function: steps(6, start);
+  -webkit-animation-timing-function: steps(8, end);
+  animation-timing-function: steps(8, end);
+  /* Multiple animations */
+  -webkit-animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+  animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+  /* Global values */
+  -webkit-animation-timing-function: inherit;
+  animation-timing-function: inherit;
+  -webkit-animation-timing-function: initial;
+  animation-timing-function: initial;
+  animation-timing-function: unset;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.video-76 {
+  position: relative;
+  /*
+    Animation
+    - Iteration Count
+    - Timing Function
+    - Spinner Loading
+  */
+}
+
+.video-76 div {
+  width: 100px;
+  height: 100px;
+  background-color: #e8e3e3;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  -webkit-animation-name: coloring;
+  animation-name: coloring;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  /* Single animation */
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+  animation-direction: reverse;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  animation-direction: alternate-reverse;
+  /* Multiple animations */
+  animation-direction: normal, reverse;
+  -webkit-animation-direction: alternate, reverse, normal;
+  animation-direction: alternate, reverse, normal;
+  /* Global values */
+  -webkit-animation-direction: inherit;
+  animation-direction: inherit;
+  -webkit-animation-direction: initial;
+  animation-direction: initial;
+  -webkit-animation-direction: unset;
+  animation-direction: unset;
+  animation-direction: reverse;
+  /* Single animation */
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-delay: -1500ms;
+  animation-delay: -1500ms;
+  /* Multiple animations */
+  animation-delay: 2.1s, 480ms;
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+  /* Single animation */
+  -webkit-animation-fill-mode: none;
+  animation-fill-mode: none;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+  animation-fill-mode: both;
+  /* Multiple animations */
+  -webkit-animation-fill-mode: none, backwards;
+  animation-fill-mode: none, backwards;
+  animation-fill-mode: both, forwards, none;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  /* Single animation */
+  animation-play-state: running;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  /* Multiple animations */
+  -webkit-animation-play-state: paused, running, running;
+  animation-play-state: paused, running, running;
+  /* Global values */
+  -webkit-animation-play-state: inherit;
+  animation-play-state: inherit;
+  -webkit-animation-play-state: initial;
+  animation-play-state: initial;
+  animation-play-state: unset;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  animation: coloring 3s linear 2s infinite reverse;
+}
+
+.video-76 div:hover {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+@-webkit-keyframes coloring {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: black;
+  }
+}
+@keyframes coloring {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: black;
+  }
+}
+.video-77 {
+  /*
+    Loading Animation
+  */
+}
+
+.video-77 * {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.video-77 body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #333;
+}
+
+.video-77 .load {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+}
+
+.video-77 .load div {
+  width: 20px;
+  height: 20px;
+  background-color: orchid;
+  border-radius: 50%;
+  margin: 0 5px;
+  -webkit-animation-name: up-and-down;
+  animation-name: up-and-down;
+  -webkit-animation-duration: 0.9s;
+  animation-duration: 0.9s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.video-77 .load .two {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.video-77 .load .three {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+@-webkit-keyframes up-and-down {
+  to {
+    opacity: 0.2;
+    transform: translateY(-20px);
+  }
+}
+@keyframes up-and-down {
+  to {
+    opacity: 0.2;
+    transform: translateY(-20px);
+  }
+}
+/*
+  CSS Selectors
+  - *
+  - Element => [p, div, h2]
+  - Element OtherElement => div p
+  - .class-name
+  - #id-name
+  - .parent .child
+  - .class-one.class-two
+  - .class-name div, .class-name p
+  - Element.class-name => p.class-name
+  - .parent > .child => Direct Child
+*/
+/*
+  CSS Selectors
+  - Element + Other Element => [div + p] داف بعدو برجراف 
+  - Element ~ Other Elements => [p ~ div] برجراف بعدو داف و يكون العنصر المباشر يعنى لو جوة عنصر تانى مش هيطبق علية 
+  - [Attribute][title]{} تنصيق عن طريق الارتربيوت
+  - Element[Attribute]
+  - [Attribute="Value"] بتختار العنصر بالارتربيوت و القيمة بتاعتو كمان
+  - Element[Attribute=Value] => input[type="submit"]
+  - [Attribute~=Value] => Contains A Word الاتربيوت يحتوى على كلمة
+  - [Attribute*=Value] => Contains A Atring علىمة النجمة بعنى اى كلمة حت لو موجودة من ضمن الحروف كلمة
+  - [Attribute^=Value] => Start With A String عنصر نبدا بى قيمة فى الارتربيوت
+*/
+/*
+  CSS Selectors
+  - :first-child الابن الاول 
+  - :last-child الابن الاخير 
+  - :first-of-type الاوال من نوعة
+  - :last-of-type الاخر من نوعة
+  - :only-child الابن الوحيد للاب 
+  - :only-of-type الان الوحيد من نوعة
+*/
+/*
+  CSS Selectors
+  - :not(Selectors) ما عادا 
+  - :nth-child(n) الاوال و بتختارو بى الارقام
+  - :nth-last-child(n) بيعد من الاخار 
+  - :nth-of-type(n)
+  - :nth-last-of-type(n)
+  + يعنى العنصر اللى بعده
+*/
+/*
+  CSS Selectors
+  - :root
+  - :checked
+  - :empty
+  - :disabled
+  - :required
+  - :focus
+  - ::selection
+  - ::placeholder
+*/
+.video-83 {
+  /*
+    Media Queries
+    Responsive Design
+  */
+}
+
+.video-83 .parent {
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+
+.video-83 .parent > div {
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  width: 200px;
+}
+
+@media print {
+  .video-83 .parent > div {
+    font-size: 100px;
+  }
+}
+@media print {
+  .video-83 .parent > div:first-child {
+    display: none;
+  }
+}
+@media (min-width: 1400px) {
+  .video-83 .parent > div {
+    background-color: blue;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1400px) {
+  .video-83 .parent > div {
+    background-color: blue;
+    width: 200px;
+  }
+}
+/* <link rel="stylesheet" href="css/print.css" media="print" /> */
+/* Mobile */
+/* Small Screens */
+/* Medium Screens */
+/* Large Screens */
+/* Custom */
+.video-85 {
+  /*
+    Media Queries
+    Responsive Design
+    - Mobile First
+    - Test Devices
+  */
+  /* Mobile */
+  /* Small Screens */
+  /* Medium Screens */
+  /* Large Screens */
+  /* Custom */
+}
+
+.video-85 * {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.video-85 .parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.video-85 .parent > div {
+  padding: 20px;
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+  .video-85 .parent > div {
+    width: calc(50% - 10px);
+  }
+}
+@media (min-width: 992px) {
+  .video-85 .parent > div {
+    width: calc(25% - 10px);
+  }
+}
+/*
+  CSS Global Values
+  - inherit
+  - initial
+  - unset
+  --- If Inherit => inherit
+  --- If Not => initial
+  - revert CSS Level [4]
+  - all
+*/
+.css-parent-grid {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px 1%;
+  /*
+  justify-content: space-between;
+  align-content: space-between;
+  */
+}
+
+.Parent-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.Parent-flex .child-flex {
+  flex-grow: 0;
+  flex-shrink: 1;
+  order: 0;
+  flex-basis: auto;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+.filter {
+  -webkit-filter: blur(4px);
+  filter: grayscale(0);
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+  -webkit-filter: invert(0);
+  filter: invert(0);
+}
+
+.parent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0px 0px;
+}
+
+.test-maraim {
+  width: 50%;
+  height: 300px;
+  position: relative;
+}
+
+.test-maraim .maraim-atef {
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.test-maraim .maraim-atef:nth-child(1) {
+  background-color: #2980b9;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.test-maraim .maraim-atef:nth-child(2) {
+  background-color: #29b4b9;
+  z-index: -1;
+  opacity: 0;
+  transform: rotateZ(90deg);
+  -webkit-transform: rotateZ(90deg);
+  -moz-transform: rotateZ(90deg);
+  -ms-transform: rotateZ(90deg);
+  -o-transform: rotateZ(90deg);
+  transform-origin: right center;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.test-maraim:hover .maraim-atef:nth-child(2) {
+  transform: rotateZ(0deg);
+  -webkit-transform: rotateZ(0deg);
+  -moz-transform: rotateZ(0deg);
+  -ms-transform: rotateZ(0deg);
+  -o-transform: rotateZ(0deg);
+  z-index: 1;
+  opacity: 1;
+}
+
+ul {
+  list-style: none;
+  display: block;
+  margin: 20px;
+  border: 2px solid #333;
+  background-color: #e8e3e3;
+  text-align: center;
+}
+
+/*# sourceMappingURL=projectCss2021.css.map */

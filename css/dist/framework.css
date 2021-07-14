@@ -1,0 +1,42 @@
+.icon-facebook {
+  background: url(../images/socila/facebook.png);
+  height: 200px;
+}
+
+.icon-twitter {
+  background: url(../images/socila/twitter.png);
+  height: 200px;
+}
+
+.icon-instagram {
+  background: url(../images/socila/instagram.png);
+  height: 200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.jqvideo13 {
+  background-color: aqua;
+  font-weight: bolder;
+}
+
+.jqvideo131 {
+  width: 50%;
+  margin: auto;
+}
+
+.price-pug {
+  font-size: 20px;
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  line-height: 50px;
+  background-color: #333;
+  color: #fff;
+  margin: 20px auto;
+  border: 3px solid #3498db;
+}
+
+/*# sourceMappingURL=framework.css.map */
