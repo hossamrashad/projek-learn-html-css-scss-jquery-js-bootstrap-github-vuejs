@@ -31,7 +31,7 @@
  *
  * text-shadow                 || right & left || top & bottom || blur || color ; 0px -30px 0 red;
  * text-align                  || left; right; center; start; end;
- 
+
  * direction                   || ltr; rtl;
  * vertical-align              || middle; sub; super; text-top; text-bottom; top; bottom;
  * text-decoration             || normal; none; line-through; overline; underline;
@@ -159,7 +159,9 @@
  * .parent .child
  * element have .class-one.class-two
  * .parent > .child => Direct Child
+
  * Element + Other Element => [div + p] داف بعدو برجراف 
+
  * Element ~ Other Elements => [p ~ div] برجراف بعدو داف و يكون العنصر المباشر يعنى لو جوة عنصر تانى مش هيطبق علية 
  * [Attribute][title]{} تنصيق عن طريق الارتربيوت
  * Element[Attribute]
@@ -365,8 +367,8 @@ body {
     }
     .test-5 {
         >div {
-            @include grid-left(1,
-            2%);
+            // @include grid-left(1,
+            // 2%);
             height: 300px;
             color: map-get($colors, 41);
             font-size: 50px;
@@ -391,8 +393,8 @@ body {
     }
     .test-6 {
         >div {
-            @include grid-left(1,
-            2%);
+            // @include grid-left(1,
+            // 2%);
             height: 300px;
             color: map-get($colors, 61);
             font-size: 50px;
@@ -411,8 +413,8 @@ body {
     }
     .test-7 {
         >div {
-            @include grid-left(1,
-            2%);
+            // @include grid-left(1,
+            // 2%);
             height: 300px;
             color: map-get($colors, 81);
             font-size: 50px;
@@ -468,8 +470,8 @@ body {
     }
     .test-8 {
         >div {
-            @include grid-left(1,
-            2%);
+            // @include grid-left(1,
+            // 2%);
             height: 300px;
             color: map-get($colors, 85);
             font-size: 50px;
@@ -967,8 +969,8 @@ body {
 // text-decoration ||  text-transform
 .video-19 {
     .text-decoration>div {
-        @include grid-left(4,
-        2%);
+        // @include grid-left(4,
+        // 2%);
         font-size: 17px;
     }
     ul {
@@ -996,8 +998,8 @@ body {
         }
     }
     .text-transform>div {
-        @include grid-left(4,
-        2%);
+        // @include grid-left(4,
+        // 2%);
         font-size: 17px;
         display: inline-block;
         border: 1px solid #3498db;
@@ -2486,8 +2488,8 @@ by the element's font size */
 // video 54 filter
 .video-54 {
     >div {
-        @include grid-left(3,
-        2%);
+        // @include grid-left(3,
+        // 2%);
     }
     .box-one {
         img {
@@ -3533,8 +3535,8 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
   - Duration
 */
     div {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
         background-color: red;
         position: absolute;
         left: 50%;

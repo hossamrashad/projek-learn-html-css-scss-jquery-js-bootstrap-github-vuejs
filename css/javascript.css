@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 * ********** Border Radius ***********
 
@@ -130,7 +131,7 @@ body {
 
 .parent {
   width: 100%;
-  height: 100vh;
+  height: 200px;
   background-color: #eee;
   z-index: 5000;
   display: flex;
@@ -222,21 +223,66 @@ body {
   float: right !important;
 }
 
-.hr-style,
-.hr-style-one {
+.hr-style {
   height: 20px;
   margin: 20px auto;
-  background-image: linear-gradient(to right, #2980b9 20%, #27ae60 20%, #27ae60 40%, #d35400 40%, #d35400 60%, #8e44ad 60%, #8e44ad 80%, #c0392b 80%);
+  background-image: linear-gradient(to right, #2196f3 10%, #fff 10%, #fff 90%, #2196f3 90%, #2196f3 100%);
   width: 98%;
-  border-radius: 3px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .hr-style-one {
-  background-image: linear-gradient(to right, #2980b9 20%, red 80%);
+  height: 50px;
+  width: 98%;
+  margin: 20px auto;
+  background-image: linear-gradient(to right, #fff 10%, #2196f3 10%, #2196f3 90%, #fff 90%, #fff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.hr-style-one::before {
+  content: "Explain || الشرح ";
+  font-size: 25px;
+  color: #fff;
+  font-weight: bolder;
+  direction: ltr;
+}
+
+.hr-style-tow {
+  height: 50px;
+  width: 98%;
+  margin: 20px auto;
+  background-image: linear-gradient(to right, #fff 10%, #2196f3 10%, #2196f3 90%, #fff 90%, #fff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.hr-style-tow::before {
+  content: "example || المثال ";
+  font-size: 25px;
+  color: #fff;
+  font-weight: bolder;
+  direction: ltr;
 }
 
 .disc {
-  color: #27ae60;
+  color: #2196f3;
 }
 
 .explain {
@@ -268,10 +314,6 @@ body {
 
 #ulList ::marker {
   color: rgba(39, 143, 94, 0.501);
-}
-
-header {
-  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=javascript.css.map */

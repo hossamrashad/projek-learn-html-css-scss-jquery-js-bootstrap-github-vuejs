@@ -8,11 +8,15 @@
 
 /*jslint browser: true */
 /*global window */
+// todo
+// explain
+// =
 // !
 // ?
-// **
+// *
 // --
 // ++
+// &
 // 1
 // 2
 // 3
@@ -23,17 +27,11 @@
 // 8
 // 9
 // 10
-// &
-// todo
-// *
-// explain
-// =
 
 // todo                                console
 // todo console.dir(ElementName);
-// todo console.log(ElementName);
 
-// explain طباعة الداتا اللى فى العنصر و علشان تجيب نوع داتا بعينو بتكتب اسمو
+// explain طباعة الداتا اللى فى العنصر و علشان تجيب نوع داتا بعينو بتكتب اسم الداتا
 // -- div(id="Test" data-name="Hossam" data-parent="Rashad")
 // ++ var ElementName = document.querySelector("#Test");
 // todo console.log(ElementName.dataset);
@@ -57,6 +55,19 @@
 
 // =                                   javascript Dom
 
+// todo Get Element اختيار العنصار
+
+// explain اختيار العنصر & اسم الايدى للعنصر
+// var Element = document.getElementById('IdName');
+// explain اختيار العنصر بى التاج
+// var Element = document.getElementsByTagName('TagName');
+// explain اختيار العنصر من خلال الكلاس
+// var Element = document.getElementsByClassName('ClassName');
+
+// var Element = document.querySelectorAll('div.ClassName');
+
+// var Element = document.querySelector('div.ClassName');
+
 // explain انشاء عنصر
 // 1 var ElementName = document.createElement("div");
 
@@ -69,20 +80,20 @@
 // explain تغير الالتربيوت او انشاء لو مش موجود
 // 4  Element.setAttribute('class', 'value');
 
-// explain بيجيب جميع خواص العنصار 
+// explain بيجيب جميع خواص العنصار
 /**
  * ++ Element.getBoundingClientRect();
- * -- bottom: بيكون المسافات بين العنصار من فوق فى مساحة الصفحة لاخر العنصر من تحت 
- * -- height: ارتفاع العنصار 
- * -- left: المارجان اللى فى العنصار 
- * -- right: بيحساب عرض العنصار و كمان بيضيف المارجان اللى على اليمين 
- * -- top: المسافات اللى بين العنصار و اول الصفحة 
- * -- width: عرض العنصر 
- * -- x: اللى هو المارجان 
- * -- y: المسافات اللى بين العنصار و اول الصفحة 
+ * -- bottom: بيكون المسافات بين العنصار من فوق فى مساحة الصفحة لاخر العنصر من تحت
+ * -- height: ارتفاع العنصار
+ * -- left: المارجان اللى فى العنصار
+ * -- right: بيحساب عرض العنصار و كمان بيضيف المارجان اللى على اليمين
+ * -- top: المسافات اللى بين العنصار و اول الصفحة
+ * -- width: عرض العنصر
+ * -- x: اللى هو المارجان
+ * -- y: المسافات اللى بين العنصار و اول الصفحة
  */
 
-// explain الاوتار تاكست اللى هو العنصر زاى مهو مكتوب فى صفحة html 
+// explain الاوتار تاكست اللى هو العنصر زاى مهو مكتوب فى صفحة html
 // 5 get outerHTML
 // 6 outSide.textContent = child.outerHTML;
 
@@ -160,9 +171,5 @@ var TestTow = document.querySelector("#TestTow");
 var ulList = document.querySelector("#ulList");
 var liFirst = document.querySelector("#ulList > li:first-of-type");
 var addLi = document.createElement("li");
-
-
-
-
 
 /************************** */

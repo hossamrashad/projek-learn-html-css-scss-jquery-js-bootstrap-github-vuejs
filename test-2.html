@@ -9,23 +9,24 @@
 </head>
 
 <body>
-    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dolorum voluptate ex possimus ullam magnam doloremque repellat aliquid amet autem earum vitae, ipsum reprehenderit atque nam quas impedit nulla aliquam!</p>
+    <p class="lead" id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dolorum voluptate ex possimus ullam magnam doloremque repellat aliquid amet autem earum vitae, ipsum reprehenderit atque nam quas impedit nulla aliquam!</p>
     <script>
         // console.log(window.parent);
 
         var parentDocument = window.parent.document;
         // console.log(parentDocument);
 
-        // var parentHeading = parentDocument.getElementById("heading010");
-        var parentHeading = parentDocument.getElementById("header");
+        var parentHeading = parentDocument.getElementById("header010");
         // console.log(parentHeading);
 
         var para = document.getElementById("para");
         // console.log(para);
 
-        para.textContent = parentHeading.textContent + " " + para.textContent;
-        var parentWindow = window.parent;
-        console.log(parentWindow);
+        para.textContent = para.textContent + parentHeading.textContent;
+
+        // var parentWindow = window.parent;
+
+        // console.log(parentWindow);
     </script>
 </body>
 

@@ -5,12 +5,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parent </title>
+    <title>Parent</title>
     <style>
         .one {
             background-color: #333;
-            height: 100px;
-            width: 49%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
         }
         
         .tow {
@@ -19,101 +25,29 @@
             height: 100%;
             line-height: 100px;
         }
+        
+        .Element {
+            border: 3px solid #fff;
+            margin: 30px;
+            padding: 20px;
+        }
     </style>
-    <!-- <style>
-      body {
-        background-color: #333;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-      }
-      h1 {
-        font-family: Bebus Neue;
-        font-size: 3rem;
-        color: #fff;
-      }
-      form {
-        max-width: 40vw;
-        display: flex;
-        flex-direction: column;
-      }
-      form label {
-        font-family: "Open Sans", sans-serif;
-        font-size: 1.2rem;
-        margin-bottom: 12px;
-      }
-      form input {
-        border: 2px solid lightslategray;
-        height: 40px;
-        border-radius: 3px;
-        padding: 5px;
-        font-size: 1rem;
-        outline: none;
-      }
-      #div11,
-      #div12,
-      #div13,
-      #div14,
-      #div15 {
-        height: 100vh;
-        width: 100%;
-        text-align: center;
-        margin-top: 30px;
-        border: 5px solid #3498db;
-        background-color: #eee;
-        color: #333;
-      }
-      #div-show {
-        display: block;
-        background-color: bisque;
-        height: 200px;
-        border: 5px solid#f00;
-        width: 100%;
-        font-size: 35px;
-        text-align: center;
-        line-height: 200px;
-        color: #333;
-      }
-    </style> -->
 </head>
 
 <body>
-    <!-- <form action="">
-      <label for="search">choose your magical house</label>
-      <input
-        list="input-search"
-        id="search"
-        name="search"
-        placeholder="type here..."
-      />
-      <datalist id="input-search">
-        <option value="how to become a hacker" data-element=".div11"></option>
-        <option value="how to become a coder" data-element=".div12"></option>
-        <option
-          value="how to become a programmer"
-          data-element=".div13"
-        ></option>
-        <option value="how to become a teacher" data-element=".div14"></option>
-        <option value="how to become a dancer" data-element=".div15"></option>
-         <option value="how to become a musician" data-element=""></option>
-        <option value="how to become a chefs" data-element=""></option>
-        <option value="how to become a rapper" data-element=""></option> 
-      </datalist>
-    </form> -->
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil laboriosam voluptates debitis veniam impedit aspernatur quia? Ipsam, at culpa provident maxime necessitatibus soluta aliquid omnis vel velit, quod similique tempore!
-    </p>
-    <div class="one">
-        <div class="tow" id="para">Rovan Hossam</div>
-    </div>
-    <div class="container">
-        <header id="header">Hossam Rashad</header>
-        <iframe src="test-2.html" frameborder="0" style="width: 100%; height: 600px"> </iframe>
-    </div>
+    <main class="one">
+        <div class="Element Element-one" id="Element">Rovan Hossam</div>
+        <div class="Element Element-tow">Rovan Hossam Rashad</div>
+        <p class="Element Element-three">Rovan Hossam Rashad Ahmed</p>
+        <p class="Element Element-four">Rovan Hossam Rashad Ahmed Abboud</p>
+        <div class="Element Element-five">Rovan Hossam Rashad Ahmed Abboud Abboud</div>
+
+    </main>
     <script src="js/test.js"></script>
     <script>
+        var ElementName = document.querySelector('div.Element');
+
+        console.log(ElementName[1]);
     </script>
 </body>
 
