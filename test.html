@@ -24,6 +24,7 @@
             text-align: center;
             height: 100%;
             line-height: 100px;
+            background-color: #333;
         }
         
         .Element {
@@ -40,14 +41,45 @@
         <div class="Element Element-tow">Rovan Hossam Rashad</div>
         <p class="Element Element-three">Rovan Hossam Rashad Ahmed</p>
         <p class="Element Element-four">Rovan Hossam Rashad Ahmed Abboud</p>
-        <div class="Element Element-five">Rovan Hossam Rashad Ahmed Abboud Abboud</div>
-
+        <div class="Element Element-five">
+            Rovan Hossam Rashad Ahmed Abboud Abboud
+        </div>
     </main>
+    <br /><br /><br />
+    <div class="parent-img">
+        <img src="http://placehold.it/200x300/333" alt="" />
+        <img src="http://placehold.it/200x300/eee" alt="" />
+        <img src="http://placehold.it/200x300/333" alt="" />
+        <img src="http://placehold.it/200x300/ddd" alt="" />
+    </div>
+    <div class="tow"></div>
     <script src="js/test.js"></script>
     <script>
-        var ElementName = document.querySelector('div.Element');
+        var ElementName = document.querySelector("div#Element");
+        var divTow = document.querySelector("div.tow");
+        var imgLength = document.images.length;
+        console.log(divTow);
+        // explain add to snippet
+        // var title = document.title;
+        // document.title = ElementName.textContent;
+        // ElementName.textContent = document.images.length;
+        // ElementName.textContent = document.images[1].src;
+        for (i = 0; i < imgLength; i++) {
+            // document.write(document.images[i].src + "<br>");
+            console.log(document.images[i].src);
+            // var item = document.images[i].src;
+            // divTow.textContent = document.images[i].src;
+            // divTow.textContent = item;
 
-        console.log(ElementName[1]);
+            let newListItem = document.createElement("p");
+            newListItem.textContent = i;
+            divTow.appendChild(newListItem);
+        }
+        // for (let fruit of imgLength) {
+        //     let newListItem = document.createElement("p");
+        //     newListItem.textContent = fruit;
+        //     divTow.appendChild(newListItem);
+        // }
     </script>
 </body>
 

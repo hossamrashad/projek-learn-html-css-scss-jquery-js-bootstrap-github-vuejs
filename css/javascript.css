@@ -236,7 +236,7 @@ body {
 }
 
 .hr-style-one {
-  height: 50px;
+  height: 40px;
   width: 98%;
   margin: 20px auto;
   background-image: linear-gradient(to right, #fff 10%, #2196f3 10%, #2196f3 90%, #fff 90%, #fff 100%);
@@ -259,7 +259,7 @@ body {
 }
 
 .hr-style-tow {
-  height: 50px;
+  height: 40px;
   width: 98%;
   margin: 20px auto;
   background-image: linear-gradient(to right, #fff 10%, #2196f3 10%, #2196f3 90%, #fff 90%, #fff 100%);

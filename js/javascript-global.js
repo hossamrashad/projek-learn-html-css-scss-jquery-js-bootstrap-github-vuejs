@@ -63,10 +63,16 @@
 // var Element = document.getElementsByTagName('TagName');
 // explain اختيار العنصر من خلال الكلاس
 // var Element = document.getElementsByClassName('ClassName');
-
+// explain اختيار العنصار من خلال الكويرى سلاكتار ان كان كلاس او ايدي 
 // var Element = document.querySelectorAll('div.ClassName');
-
+// explain اختيار العنصر من خلال الكويرى سلاكتار ان كان كلاس او ايدي 
 // var Element = document.querySelector('div.ClassName');
+
+// explain get 
+// var title = document.title;
+// explain set 
+// document.title = ElementName.textContent;
+
 
 // explain انشاء عنصر
 // 1 var ElementName = document.createElement("div");
