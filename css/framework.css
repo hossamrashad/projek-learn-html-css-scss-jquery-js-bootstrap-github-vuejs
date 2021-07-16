@@ -124,43 +124,35 @@
 *  
 *  
 */
-/* line 3, each/_each.scss */
 .icon-facebook {
   background: url(../images/socila/facebook.png);
   height: 200px;
 }
 
-/* line 3, each/_each.scss */
 .icon-twitter {
   background: url(../images/socila/twitter.png);
   height: 200px;
 }
 
-/* line 3, each/_each.scss */
 .icon-instagram {
   background: url(../images/socila/instagram.png);
   height: 200px;
 }
 
-/* line 17, framework.scss */
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 21, framework.scss */
 .jqvideo13 {
   background-color: aqua;
   font-weight: bolder;
 }
 
-/* line 25, framework.scss */
 .jqvideo131 {
   width: 50%;
   margin: auto;
 }
 
-/* line 32, framework.scss */
 .price-pug {
   font-size: 20px;
   padding: 20px;
@@ -172,7 +164,5 @@
   margin: 20px auto;
   border: 3px solid #3498db;
 }
-
-/*# sourceMappingURL=framework.css.map */
 
 /*# sourceMappingURL=framework.css.map */

@@ -1,24 +1,20 @@
-/* line 1, All-style.scss */
 html,
 body {
   font-size: 18px;
 }
 
-/* line 6, All-style.scss */
 .parent-grid-1 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
   gap: 0px 10px;
 }
 
-/* line 11, All-style.scss */
 .parent-grid-2 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
   gap: 0px 10px;
 }
 
-/* line 16, All-style.scss */
 .parent-grid-3 {
   color: #00bcd4;
   display: grid;
@@ -26,39 +22,30 @@ body {
   gap: 0px 10px;
 }
 
-/* line 22, All-style.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 25, All-style.scss */
 li {
   margin-bottom: 10px;
 }
 
-/* line 28, All-style.scss */
 .hrStyle {
   height: 10px;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, #2980b9), color-stop(20%, #27ae60), color-stop(40%, #27ae60), color-stop(40%, #d35400), color-stop(60%, #d35400), color-stop(60%, #8e44ad), color-stop(80%, #8e44ad), color-stop(80%, #c0392b));
   background-image: linear-gradient(to right, #2980b9 20%, #27ae60 20%, #27ae60 40%, #d35400 40%, #d35400 60%, #8e44ad 60%, #8e44ad 80%, #c0392b 80%);
   width: 100%;
   border-radius: 3px;
 }
 
-/* line 45, All-style.scss */
 .parent-disc-code {
   position: relative;
 }
-
-/* line 47, All-style.scss */
 .parent-disc-code pre.pre-language-html {
   position: relative;
   padding: 40px 20px 0px 20px;
   direction: ltr;
   background: #2d2d2d;
 }
-
-/* line 52, All-style.scss */
 .parent-disc-code pre.pre-language-html::before {
   content: "HTML";
   position: absolute;
@@ -71,8 +58,6 @@ li {
   padding: 1px 10px;
   letter-spacing: 3px;
 }
-
-/* line 64, All-style.scss */
 .parent-disc-code pre.pre-language-html code.code-language-html {
   direction: ltr;
   color: #ccc;
@@ -82,26 +67,18 @@ li {
   font-weight: bold;
   line-height: 1.5;
 }
-
-/* line 73, All-style.scss */
 .parent-disc-code pre.pre-language-html code.code-language-html .token,
 .parent-disc-code pre.pre-language-html code.code-language-html .equal,
 .parent-disc-code pre.pre-language-html code.code-language-html .punctuation {
   color: #ccc;
 }
-
-/* line 79, All-style.scss */
 .parent-disc-code pre.pre-language-html code.code-language-html .tag,
 .parent-disc-code pre.pre-language-html code.code-language-html .attr-name {
   color: #e2777a;
 }
-
-/* line 84, All-style.scss */
 .parent-disc-code pre.pre-language-html code.code-language-html .comment {
   color: #999;
 }
-
-/* line 89, All-style.scss */
 .parent-disc-code pre.pre-language-html code.code-language-html .attr-value,
 .parent-disc-code pre.pre-language-html code.code-language-html .token.string,
 .parent-disc-code pre.pre-language-html code.code-language-html .token.char,
@@ -110,21 +87,16 @@ li {
   color: #7ec699;
 }
 
-/* line 100, All-style.scss */
 .parent-disc-code {
   padding: 0;
   position: relative;
 }
-
-/* line 103, All-style.scss */
 .parent-disc-code pre.pre-language-css {
   position: relative;
   padding: 40px 20px 0px 20px;
   direction: ltr;
   background: #2d2d2d;
 }
-
-/* line 108, All-style.scss */
 .parent-disc-code pre.pre-language-css::before {
   content: "SCC & SCSS";
   position: absolute;
@@ -137,8 +109,6 @@ li {
   padding: 1px 10px;
   letter-spacing: 3px;
 }
-
-/* line 120, All-style.scss */
 .parent-disc-code pre.pre-language-css code.code-language-css {
   direction: ltr;
   color: #ccc;
@@ -148,52 +118,35 @@ li {
   font-weight: bold;
   line-height: 1.5;
 }
-
-/* line 129, All-style.scss */
 .parent-disc-code pre.pre-language-css code.code-language-css .element {
   color: #7ec699;
 }
-
-/* line 133, All-style.scss */
 .parent-disc-code pre.pre-language-css code.code-language-css .token {
   color: #ccc;
 }
-
-/* line 137, All-style.scss */
 .parent-disc-code pre.pre-language-css code.code-language-css .property {
   color: #00bcd4;
 }
-
-/* line 141, All-style.scss */
 .parent-disc-code pre.pre-language-css code.code-language-css .number {
   color: #ffeb3b;
 }
-
-/* line 145, All-style.scss */
 .parent-disc-code pre.pre-language-css code.code-language-css .unit {
   color: #fff;
 }
-
-/* line 149, All-style.scss */
 .parent-disc-code pre.pre-language-css code.code-language-css .comment {
   color: #9e9e9e;
 }
 
-/* line 156, All-style.scss */
 .parent-disc-code {
   padding: 0;
   position: relative;
 }
-
-/* line 159, All-style.scss */
 .parent-disc-code pre.pre-language-javascript {
   position: relative;
   padding: 40px 20px 0px 20px;
   direction: ltr;
   background: #2d2d2d;
 }
-
-/* line 164, All-style.scss */
 .parent-disc-code pre.pre-language-javascript::before {
   content: "JAVASCRIPT";
   position: absolute;
@@ -206,8 +159,6 @@ li {
   padding: 1px 10px;
   letter-spacing: 3px;
 }
-
-/* line 176, All-style.scss */
 .parent-disc-code pre.pre-language-javascript code.code-language-javascript {
   direction: ltr;
   color: #ccc;
@@ -217,55 +168,39 @@ li {
   font-weight: bold;
   line-height: 1.5;
 }
-
-/* line 185, All-style.scss */
 .parent-disc-code pre.pre-language-javascript code.code-language-javascript .comment {
   color: #999;
 }
-
-/* line 188, All-style.scss */
 .parent-disc-code pre.pre-language-javascript code.code-language-javascript .var {
   color: #2196f3;
 }
-
-/* line 191, All-style.scss */
 .parent-disc-code pre.pre-language-javascript code.code-language-javascript .var-name {
   color: #76efff;
 }
-
-/* line 194, All-style.scss */
 .parent-disc-code pre.pre-language-javascript code.code-language-javascript .document,
 .parent-disc-code pre.pre-language-javascript code.code-language-javascript .token,
 .parent-disc-code pre.pre-language-javascript code.code-language-javascript .innerHTML {
   color: #ffeb3b;
 }
-
-/* line 201, All-style.scss */
 .parent-disc-code pre.pre-language-javascript code.code-language-javascript .element {
   color: #7ec699;
 }
-
-/* line 204, All-style.scss */
 .parent-disc-code pre.pre-language-javascript code.code-language-javascript .string {
   color: #e2777a;
 }
 
-/* line 211, All-style.scss */
 .mune-fixed {
   list-style: none;
   position: fixed;
   z-index: 100000;
   left: calc(-330px);
-  -webkit-transition: 1s;
   transition: 1s;
 }
 
-/* line 218, All-style.scss */
 .mune-fixed:hover {
   left: 0%;
 }
 
-/* line 221, All-style.scss */
 .mune-fixed li {
   display: block;
   width: 300px;
@@ -273,38 +208,30 @@ li {
   height: 60px;
 }
 
-/* line 227, All-style.scss */
 .mune-fixed li:nth-child(1) {
   top: 0px;
 }
 
-/* line 230, All-style.scss */
 .mune-fixed li:nth-child(2) {
   top: 30px;
 }
 
-/* line 233, All-style.scss */
 .mune-fixed li:nth-child(3) {
   top: 60px;
 }
 
-/* line 236, All-style.scss */
 .mune-fixed li:nth-child(4) {
   top: 90px;
 }
 
-/* line 239, All-style.scss */
 .mune-fixed li:nth-child(5) {
   top: 120px;
 }
 
-/* line 242, All-style.scss */
 .mune-fixed li a {
   text-decoration: none;
   font-size: 30px;
   color: #fff;
 }
-
-/*# sourceMappingURL=All-style.css.map */
 
 /*# sourceMappingURL=All-style.css.map */

@@ -1,0 +1,29 @@
+doctype
+html(lang='en' dir='ltr')
+  head 
+    //- include pugjs/head/head.pug
+    meta(name="theme-color", content="#3498db")
+    block PageTitle
+      title Plugin Download 
+    link(rel="stylesheet" href="css/plugin-download.css")
+
+  body 
+    
+
+
+    div(class='demoContent output')
+      div(class='')
+        img(src="images/landing.jpg" alt="" class="unsizedImage" intrinsicsize="250 x 200")
+        img(src="images/about.jpg" alt="" class="unsizedImage" intrinsicsize="250 x 200")
+      div(class='')
+        button(id="Button") get size
+      div(id="unsizedOutput" class="output")
+        pre(id="log")
+    
+    div(class='parent-all')
+      //- div(class='item-one single-item')
+      //- div(class='item-tow single-item')
+      //- div(class='item-three single-item')
+
+    //- include pugjs/script/script.pug
+    script(src="js/plugin-download.js") 

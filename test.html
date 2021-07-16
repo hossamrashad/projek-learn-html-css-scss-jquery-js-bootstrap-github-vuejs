@@ -6,7 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parent</title>
+    <link rel="shortcut icon" href="http://placehold.it/200x300/333" type="image/x-icon" />
     <style>
+        * {
+            box-sizing: border-box;
+        }
+        
         .one {
             background-color: #333;
             height: 100vh;
@@ -32,7 +37,12 @@
             margin: 30px;
             padding: 20px;
         }
+        
+        img {
+            width: 300px;
+        }
     </style>
+    <link rel="stylesheet" href="css/plugin-download.css">
 </head>
 
 <body>
@@ -47,18 +57,25 @@
     </main>
     <br /><br /><br />
     <div class="parent-img">
-        <img src="http://placehold.it/200x300/333" alt="" />
+        <img src="images/landing.jpg" alt="" />
+        <img src="images/about.jpg" alt="" />
         <img src="http://placehold.it/200x300/eee" alt="" />
         <img src="http://placehold.it/200x300/333" alt="" />
         <img src="http://placehold.it/200x300/ddd" alt="" />
     </div>
-    <div class="tow"></div>
+    <br><br><br><br><br><br>
+    <div class="parent-all">
+        <div class="single-item"></div>
+    </div>
+    <br><br><br><br><br>
+
     <script src="js/test.js"></script>
     <script>
         var ElementName = document.querySelector("div#Element");
-        var divTow = document.querySelector("div.tow");
+        var singleItem = document.querySelector("div.single-item");
         var imgLength = document.images.length;
-        console.log(divTow);
+        var imgSrc = document.images.src;
+        console.log(singleItem);
         // explain add to snippet
         // var title = document.title;
         // document.title = ElementName.textContent;
@@ -71,15 +88,34 @@
             // divTow.textContent = document.images[i].src;
             // divTow.textContent = item;
 
-            let newListItem = document.createElement("p");
-            newListItem.textContent = i;
-            divTow.appendChild(newListItem);
+            let createImg = document.createElement("img");
+            createImg.title = document.images[i].src;
+            createImg.src = document.images[i].src;
+            singleItem.appendChild(createImg);
+
+
+            let createA = document.createElement("a");
+            createA.textContent = "download";
+            createA.setAttribute("class", "download");
+            createA.href = document.images[i].src;
+            createA.style.border = "3px solid #999";
+            createA.style.width = "fit-content";
+            createA.style.background = "#333";
+            createA.style.color = "#fff";
+            createA.style.padding = "15px 30px";
+            createA.style.textAlign = "center";
+            createA.style.textDecoration = "none";
+            createA.style.textTransform = "capitalize";
+            createA.style.margin = "20px auto";
+            // createA.style.display = "block";
+            singleItem.appendChild(createA);
+            createA.setAttribute('download', document.images[i].src);
+            // newListItem.setAttribute('style', "display: inline-block");
+            // newListItem.setAttribute('target', "_blank");
+
+
+
         }
-        // for (let fruit of imgLength) {
-        //     let newListItem = document.createElement("p");
-        //     newListItem.textContent = fruit;
-        //     divTow.appendChild(newListItem);
-        // }
     </script>
 </body>
 

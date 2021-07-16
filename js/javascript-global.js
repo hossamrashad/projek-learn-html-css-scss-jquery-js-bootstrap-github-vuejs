@@ -67,7 +67,6 @@
 // var Element = document.querySelectorAll('div.ClassName');
 // explain اختيار العنصر من خلال الكويرى سلاكتار ان كان كلاس او ايدي 
 // var Element = document.querySelector('div.ClassName');
-
 // explain get 
 // var title = document.title;
 // explain set 
