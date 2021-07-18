@@ -7,11 +7,14 @@
  * window.onload      =     javascript
  * document.ready     =     jquery
  *
+ * compressed  هش هتعادالى على الجى كويرى
+ * uncompressed  مش مدغوطو و هتعدل عليها 
+ * 
  * Events              || 1- click 2- dblclick 3- mouseenter 4- mouseleave 5- hover
  *
  * Effect              || hide, show, toggle, fadeIn, fadeOut , fadeToggle , fadeTo, animate, stop
  *
- *
+ * 
  *
  * get | set           || text(), html(), val(), attr()
  * set $(".input").val("hossam");
@@ -181,14 +184,18 @@
  *
  *
  */
+
+$('.parentElement').show();
+
 // code for function
 $(document).ready(function() {
-    // My Code Here
+    // My Code Here 
 });
 // short code for function
 $(function() {
     // My Code Here
 });
+
 // video 3
 $(document).ready(function() {
     // My Code Here
@@ -197,15 +204,10 @@ $(document).ready(function() {
         $(".video-3-p-1").hide();
     });
     //
-    $(".video-3-btn-2").click(function(e) {
+    $(".video-3-btn-2").dblclick(function(e) {
         e.preventDefault();
         $(".video-3-p-2").css("color", "#f00");
         $(this).css("backgroundColor", "#f00");
-    });
-    //
-    $(".video-3-btn-3").dblclick(function(e) {
-        e.preventDefault();
-        $(".video-3-p-3").css("color", "#f00");
     });
     //
     $(".video-3-btn-4").mouseenter(function(e) {
@@ -782,7 +784,7 @@ $(document).ready(function() {
         $("<input type='file'> <span>+</span>").insertAfter($(this));
     });
 
-    //  video 30
+    //  video 30 preventDefault
     $(".video-30-div-1").on("click", ".lank301", function(event) {
         event.preventDefault();
         $(".display-none").fadeToggle(500);
@@ -790,9 +792,9 @@ $(document).ready(function() {
             $(".video-30-test").text("yes it is");
         } else {
             $(".video-30-test").text("yes it is");
-
         }
     });
+    // video 31 Event keyDown, KeyPress, KeyUp
     // end document
 });
 
@@ -978,5 +980,23 @@ $(function() {
     $(".fontArBtn").on("click", function() {
         var setColorVideo14input1 = $(".fontAr").val();
         $("body").css("fontFamily", setColorVideo14input1);
+    });
+});
+// class for new style in scss
+var dirLang = document.getElementsByTagName("html");
+var pLead = document.querySelector("p.lead");
+
+$(document).ready(function() {
+    // code
+    $(".btn, .btn-info, .video-5-btn-4").css({ display: "block" });
+    $("p.lead").css({
+        textAlign: "left",
+        background: "#333",
+        color: "#fff",
+        padding: "30px 50px",
+        borderTop: "3px solid #bb2d3b",
+        borderBottom: "3px solid #bb2d3b",
+        borderLeft: "3px solid #fff",
+        borderRight: "3px solid #fff",
     });
 });

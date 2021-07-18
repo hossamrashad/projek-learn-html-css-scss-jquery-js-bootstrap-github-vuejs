@@ -281,6 +281,29 @@ body {
   direction: ltr;
 }
 
+.hr-style-three {
+  height: 40px;
+  width: 98%;
+  margin: 20px auto;
+  background-image: linear-gradient(to right, #fff 10%, #2196f3 10%, #2196f3 90%, #fff 90%, #fff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.hr-style-three::before {
+  content: "App || التطبيق  ";
+  font-size: 25px;
+  color: #fff;
+  font-weight: bolder;
+  direction: ltr;
+}
+
 .disc {
   color: #2196f3;
 }
@@ -316,8 +339,228 @@ body {
   color: rgba(39, 143, 94, 0.501);
 }
 
-.fdgfhf {
-  background-attachment: scroll;
+button {
+  width: fit-content !important;
+  margin: 20px auto !important;
+  display: block;
+}
+
+.btn-info {
+  width: fit-content !important;
+  margin: 20px auto !important;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.parent-disc-code {
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+.parent-disc-code pre.pre-language-html {
+  position: relative;
+  padding: 40px 20px 20px 20px;
+  direction: ltr;
+  background: #2d2d2d;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.parent-disc-code pre.pre-language-html::before {
+  content: "HTML";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #16a085;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px 10px;
+  letter-spacing: 3px;
+}
+.parent-disc-code pre.pre-language-html code.code-language-html {
+  direction: ltr;
+  color: #ccc;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 1em;
+  text-align: left;
+  font-weight: bold;
+  line-height: 1.5;
+  text-transform: none;
+  font-size: 16px;
+}
+.parent-disc-code pre.pre-language-html code.code-language-html .comment {
+  color: #999;
+}
+.parent-disc-code pre.pre-language-html code.code-language-html .token,
+.parent-disc-code pre.pre-language-html code.code-language-html .equal,
+.parent-disc-code pre.pre-language-html code.code-language-html .punctuation {
+  color: #ccc;
+}
+.parent-disc-code pre.pre-language-html code.code-language-html .tag,
+.parent-disc-code pre.pre-language-html code.code-language-html .attr-name {
+  color: #e2777a;
+}
+.parent-disc-code pre.pre-language-html code.code-language-html .attr-value,
+.parent-disc-code pre.pre-language-html code.code-language-html .token.string,
+.parent-disc-code pre.pre-language-html code.code-language-html .token.char,
+.parent-disc-code pre.pre-language-html code.code-language-html .token.regex,
+.parent-disc-code pre.pre-language-html code.code-language-html .token.variable {
+  color: #7ec699;
+}
+.parent-disc-code p {
+  margin: 0;
+  padding: 0;
+}
+.parent-disc-code .pl-10 {
+  padding-left: 10px;
+}
+
+.parent-disc-code {
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+.parent-disc-code pre.pre-language-javascript {
+  position: relative;
+  padding: 40px 20px 20px 20px;
+  direction: ltr;
+  background: #2d2d2d;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.parent-disc-code pre.pre-language-javascript::before {
+  content: "Javascript";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #c5b100;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px 10px;
+  letter-spacing: 3px;
+}
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript {
+  direction: ltr;
+  color: #ccc;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 1em;
+  text-align: left;
+  font-weight: bold;
+  line-height: 1.5;
+  text-transform: none;
+  font-size: 16px;
+}
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .comment {
+  color: #a4a4a4;
+}
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .var {
+  color: #2196f3;
+}
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .var-name {
+  color: #5fb7ff;
+}
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .equal {
+  color: #ccc;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .document {
+  color: #5fb7ff;
+}
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .getElement {
+  color: #c5b100;
+}
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .token {
+  color: #ccc;
+}
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .element {
+  color: #7ec699;
+}
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .jquery {
+  color: #2196f3;
+}
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .on {
+  color: #2196f3;
+}
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .event {
+  color: #c5b100;
+}
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .childElement {
+  color: #c5b100;
+}
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .function {
+  color: #2196f3;
+}
+.parent-disc-code pre.pre-language-javascript code.code-language-javascript .effect {
+  color: #c5b100;
+}
+.parent-disc-code p {
+  margin: 0;
+  padding: 0;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.pl-15 {
+  padding-left: 15px;
+}
+
+.pl-20 {
+  padding-left: 20px;
+}
+
+.pl-25 {
+  padding-left: 25px;
+}
+
+.pl-30 {
+  padding-left: 30px;
+}
+
+.pl-35 {
+  padding-left: 35px;
+}
+
+.pl-40 {
+  padding-left: 40px;
+}
+
+.pl-45 {
+  padding-left: 45px;
+}
+
+.pl-50 {
+  padding-left: 50px;
+}
+
+.pl-60 {
+  padding-left: 60px;
+}
+
+.pl-65 {
+  padding-left: 65px;
+}
+
+.pl-70 {
+  padding-left: 70px;
+}
+
+.disc-btn {
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=javascript.css.map */

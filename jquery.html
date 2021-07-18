@@ -5,30 +5,79 @@
     <title>Learn Jquery</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <style>body{height: 20000px} .width-100{width:100%} .style-test{border: 2px solid #333; border-radius:10px;padding:20px; background-color: #BB2D3B; color: #fafafa} .root-test{background-color: #111; color: #fff} .padding{color: #3498db; padding: 20px} .display-none{display: none}</style>
+    <link rel="stylesheet" href="css/javascript.css">
   </head>
   <body>
     <div class="container">
+      <div class="explain">Events || 1- click 2- dblclick 3- mouseenter 4- mouseleave 5- hover</div>
       <div class="row"> 
-        <div class="col-sm-6"> 
-          <button class="btn btn-info video-3-btn-1">Events click  </button>
+        <div class="col-sm-12">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-html"><code class="code-language-html"><span class="token">&lt;</span><span class="tag">button </span><span class="attr-name">class</span><span class="equal">=</span><span class="punctuation">'</span><span class="attr-value">ElementBtn</span><span class="punctuation">'</span><span class="token">&gt;</span>Events click = hide<span class="token">&lt;/</span><span class="tag">button</span><span class="token">&gt;</span></code></pre>
+              <pre class="pre-language-javascript"><code class="code-language-javascript"><span class="comment pl-20">// Event </span><br><span class="jquery">$</span><span class="element"><span class="token">(</span>'parentElement'<span class="token">)</span></span><span class="on">.on</span><span class="token">(</span><span class="event">'click'</span><span class="childElement">, 'button', </span><span class="function">function</span><span class="token">() {</span><br><span class="comment pl-20">// effect </span><br><span class="element pl-20"><span class="token">(</span>'Element'<span class="token">)</span></span><span class="effect">.hide<span class="token">(</span><span class="token">);</span></span><br><span class="comment pl-20">// effect for the element have event</span><br><span class="element pl-20"><span class="token">(</span>this<span class="token">)</span></span><span class="effect">.hide<span class="token">(</span><span class="token">);</span></span><br><span class="token">)};</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="hr-style-three"></div>
+        <div class="col-sm-12"> 
+          <button class="btn btn-outline-warning video-3-btn-1">Events <span class='disc-btn'>click</span>  = hide</button>
           <p class="video-3-p-1 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button class="btn btn-info video-3-btn-2">Events click  </button>
+        </div>
+        <div class="col-sm-12">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-html"><code class="code-language-html"><span class="token">&lt;</span><span class="tag">button </span><span class="attr-name">class</span><span class="equal">=</span><span class="punctuation">'</span><span class="attr-value">ElementBtn</span><span class="punctuation">'</span><span class="token">&gt;</span>Events dblclick = hide<span class="token">&lt;/</span><span class="tag">button</span><span class="token">&gt;</span></code></pre>
+              <div class="hr-style-tow"></div>
+              <pre class="pre-language-javascript"><code class="code-language-javascript"><span class="comment pl-20">// Event </span><br><span class="jquery">$</span><span class="element"><span class="token">(</span>'parentElement'<span class="token">)</span></span><span class="on">.on</span><span class="token">(</span><span class="event">'dblclick'</span><span class="childElement">, 'button', </span><span class="function">function</span><span class="token">() {</span><br><span class="comment pl-20">// effect </span><br><span class="element pl-20"><span class="token">(</span>'Element'<span class="token">)</span></span><span class="effect">.hide<span class="token">(</span><span class="token">);</span></span><br><span class="comment pl-20">// effect for the element have event</span><br><span class="element pl-20"><span class="token">(</span>this<span class="token">)</span></span><span class="effect">.hide<span class="token">(</span><span class="token">);</span></span><br><span class="token">)};</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="hr-style-three"></div>
+        <div class="col-sm-12">
+          <button class="btn btn-outline-primary  video-3-btn-2">Events <span class='disc-btn'>dblclick</span>  = css color : red</button>
           <p class="video-3-p-2 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div class="col-sm-6">
-          <button class="btn btn-info video-3-btn-3">Events dblclick  </button>
-          <p class="video-3-p-3 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="col-sm-12">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-html"><code class="code-language-html"><span class="token">&lt;</span><span class="tag">button </span><span class="attr-name">class</span><span class="equal">=</span><span class="punctuation">'</span><span class="attr-value">ElementBtn</span><span class="punctuation">'</span><span class="token">&gt;</span>Events mouseEnter = hide<span class="token">&lt;/</span><span class="tag">button</span><span class="token">&gt;</span></code></pre>
+              <div class="hr-style-tow"></div>
+              <pre class="pre-language-javascript"><code class="code-language-javascript"><span class="comment pl-20">// Event </span><br><span class="jquery">$</span><span class="element"><span class="token">(</span>'parentElement'<span class="token">)</span></span><span class="on">.on</span><span class="token">(</span><span class="event">'mouseEnter'</span><span class="childElement">, 'button', </span><span class="function">function</span><span class="token">() {</span><br><span class="comment pl-20">// effect </span><br><span class="element pl-20"><span class="token">(</span>'Element'<span class="token">)</span></span><span class="effect">.css{(color: 'red')}<span class="token"></span><span class="token">;</span></span><br><span class="comment pl-20">// effect for the element have event</span><br><span class="element pl-20"><span class="token">(</span>this<span class="token">)</span></span><span class="effect">.hide<span class="token">(</span><span class="token">);</span></span><br><span class="token">)};</span></code></pre>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-6">
-          <button class="btn btn-info video-3-btn-4">Events mouseenter  </button>
+        <div class="col-sm-12">
+          <div class="hr-style-three"></div>
+          <button class="btn btn-outline-primary   video-3-btn-4">Events <span class='disc-btn'>mouseEnter </span>  </button>
           <p class="video-3-p-4 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div class="col-sm-6">
-          <button class="btn btn-info video-3-btn-5">Events mouseleave  </button>
+        <div class="col-sm-12">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-html"><code class="code-language-html"><span class="token">&lt;</span><span class="tag">button </span><span class="attr-name">class</span><span class="equal">=</span><span class="punctuation">'</span><span class="attr-value">ElementBtn</span><span class="punctuation">'</span><span class="token">&gt;</span>Events mouseLeave = css<span class="token">&lt;/</span><span class="tag">button</span><span class="token">&gt;</span></code></pre>
+              <div class="hr-style-tow"></div>
+              <pre class="pre-language-javascript"><code class="code-language-javascript"><span class="comment pl-20">// Event </span><br><span class="jquery">$</span><span class="element"><span class="token">(</span>'parentElement'<span class="token">)</span></span><span class="on">.on</span><span class="token">(</span><span class="event">'mouseLeave'</span><span class="childElement">, 'button', </span><span class="function">function</span><span class="token">() {</span><br><span class="comment pl-20">// effect </span><br><span class="element pl-20"><span class="token">(</span>'Element'<span class="token">)</span></span><span class="effect">.css({color: 'red'})<span class="token">(</span><span class="token">);</span></span><br><span class="token">)};</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="hr-style-three"></div>
+        <div class="col-sm-12">
+          <button class="btn btn-outline-info video-3-btn-5">Events <span class='disc-btn'>ouseLeave</span>  </button>
           <p class="video-3-p-5 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div class="col-sm-6">
-          <button class="btn btn-info video-3-btn-6">Events hover  </button>
+        <div class="col-sm-12">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-html"><code class="code-language-html"><span class="token">&lt;</span><span class="tag">button </span><span class="attr-name">class</span><span class="equal">=</span><span class="punctuation">'</span><span class="attr-value">ElementBtn</span><span class="punctuation">'</span><span class="token">&gt;</span>Events hover = css<span class="token">&lt;/</span><span class="tag">button</span><span class="token">&gt;</span></code></pre>
+              <div class="hr-style-tow"></div>
+              <pre class="pre-language-javascript"><code class="code-language-javascript"><span class="comment pl-20">// Event </span><br><span class="jquery">$</span><span class="element"><span class="token">(</span>'parentElement'<span class="token">)</span></span><span class="on">.on</span><span class="token">(</span><span class="event">'hover'</span><span class="childElement">, 'button', </span><span class="function">function</span><span class="token">() {</span><br><span class="comment pl-20">// effect </span><br><span class="element pl-20"><span class="token">(</span>'Element'<span class="token">)</span></span><span class="effect">.css({color: "block"})<span class="token">(</span><span class="token">);</span></span><br><span class="token">)};</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="hr-style-three"></div>
+          <button class="btn btn-outline-info video-3-btn-6">Events <span class='disc-btn'>hover</span>  </button>
           <p class="video-3-p-6 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
         <hr class="hr-style">
@@ -669,12 +718,17 @@
             <a class="lank301" href="http://www.google.com" target="_blank">Google link</a><img class="img-fluid display-none" src="http://placehold.it/300x300/333" alt="">
             <div class="video-30-test"></div>
           </div>
+        </div><br><br><br>
+        <hr>
+        <h3 class="h3 text-center mb-5">video 31 Event keyDown, KeyPress, KeyUp</h3>
+        <div class="col-sm-4">
+          <input type="text" name="inputText" id="inputText" placeholder="Some Word">
         </div>
       </div>
     </div>
     <script src="js/jquery-3-6-0.min.js"> </script>
     <script src="js/popper-1.14.7.min.js"> </script>
     <script src="js/bootstrap.js"> </script>
-    <script src="js/learn-jquery.js"> </script>
+    <script src="js/jquery-learn.js"> </script>
   </body>
 </html>

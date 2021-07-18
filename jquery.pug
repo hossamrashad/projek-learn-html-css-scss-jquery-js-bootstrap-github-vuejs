@@ -6,26 +6,303 @@ html(lang="en")
       title Learn Jquery
     link(rel="stylesheet" href="css/bootstrap.css")
     style body{height: 20000px} .width-100{width:100%} .style-test{border: 2px solid #333; border-radius:10px;padding:20px; background-color: #BB2D3B; color: #fafafa} .root-test{background-color: #111; color: #fff} .padding{color: #3498db; padding: 20px} .display-none{display: none}
+    link(rel="stylesheet" href="css/javascript.css")
   body
     div(class="container")
+      div(class="explain") Events || 1- click 2- dblclick 3- mouseenter 4- mouseleave 5- hover
+
       .row 
-        .col-sm-6 
-          button(class="btn btn-info video-3-btn-1") Events click  
+        //- event click
+        div(class="col-sm-12")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-html')
+                code(class='code-language-html')
+                  span(class='token') &lt;
+                  span(class='tag') button 
+                  span(class='attr-name') class
+                  span(class='equal') =
+                  span(class='punctuation') '
+                  span(class='attr-value') ElementBtn
+                  span(class='punctuation') '
+                  span(class='token') &gt;
+                  |Events click = hide
+                  span(class='token') &lt;/
+                  span(class='tag') button
+                  span(class='token') &gt;
+              pre(class='pre-language-javascript')
+                code(class='code-language-javascript')
+                  //- Start Code
+                  span(class='comment pl-20') // Event 
+                  br
+                  span(class='jquery') $
+                  span(class='element')
+                    span(class='token') (
+                    |'parentElement'
+                    span(class='token') )
+                  span(class='on') .on
+                  span(class='token') (
+                  span(class='event') 'click'
+                  span(class='childElement') , 'button', 
+                  span(class='function') function
+                  span(class='token') () {
+                  br
+                  span(class='comment pl-20') // effect 
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |'Element'
+                    span(class='token') )
+                  span(class='effect') .hide
+                    span(class='token') (
+                    span(class='token') );
+                  br
+                  span(class='comment pl-20') // effect for the element have event
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |this
+                    span(class='token') )
+                  span(class='effect') .hide
+                    span(class='token') (
+                    span(class='token') );
+                  br
+                  span(class='token') )};
+                  //- End code
+        div(class='hr-style-three')
+        .col-sm-12 
+          button(class="btn btn-outline-warning video-3-btn-1") Events <span class='disc-btn'>click</span>  = hide
           p(class="video-3-p-1 lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          button(class="btn btn-info video-3-btn-2") Events click  
+        //- event dblclick
+        div(class="col-sm-12")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-html')
+                code(class='code-language-html')
+                  span(class='token') &lt;
+                  span(class='tag') button 
+                  span(class='attr-name') class
+                  span(class='equal') =
+                  span(class='punctuation') '
+                  span(class='attr-value') ElementBtn
+                  span(class='punctuation') '
+                  span(class='token') &gt;
+                  |Events dblclick = hide
+                  span(class='token') &lt;/
+                  span(class='tag') button
+                  span(class='token') &gt;
+              div(class='hr-style-tow')
+              pre(class='pre-language-javascript')
+                code(class='code-language-javascript')
+                  //- Start Code
+                  span(class='comment pl-20') // Event 
+                  br
+                  span(class='jquery') $
+                  span(class='element')
+                    span(class='token') (
+                    |'parentElement'
+                    span(class='token') )
+                  span(class='on') .on
+                  span(class='token') (
+                  span(class='event') 'dblclick'
+                  span(class='childElement') , 'button', 
+                  span(class='function') function
+                  span(class='token') () {
+                  br
+                  span(class='comment pl-20') // effect 
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |'Element'
+                    span(class='token') )
+                  span(class='effect') .hide
+                    span(class='token') (
+                    span(class='token') );
+                  br
+                  span(class='comment pl-20') // effect for the element have event
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |this
+                    span(class='token') )
+                  span(class='effect') .hide
+                    span(class='token') (
+                    span(class='token') );
+                  br
+                  span(class='token') )};
+                  //- End code
+        div(class='hr-style-three')
+        .col-sm-12
+          button(class="btn btn-outline-primary  video-3-btn-2") Events <span class='disc-btn'>dblclick</span>  = css color : red
           p(class="video-3-p-2 lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        .col-sm-6
-          button(class="btn btn-info video-3-btn-3") Events dblclick  
-          p(class="video-3-p-3 lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        .col-sm-6
-          button(class="btn btn-info video-3-btn-4") Events mouseenter  
+        //- event mouse enter
+        div(class="col-sm-12")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-html')
+                code(class='code-language-html')
+                  span(class='token') &lt;
+                  span(class='tag') button 
+                  span(class='attr-name') class
+                  span(class='equal') =
+                  span(class='punctuation') '
+                  span(class='attr-value') ElementBtn
+                  span(class='punctuation') '
+                  span(class='token') &gt;
+                  |Events mouseEnter = hide
+                  span(class='token') &lt;/
+                  span(class='tag') button
+                  span(class='token') &gt;
+              div(class='hr-style-tow')
+              pre(class='pre-language-javascript')
+                code(class='code-language-javascript')
+                  //- Start Code
+                  span(class='comment pl-20') // Event 
+                  br
+                  span(class='jquery') $
+                  span(class='element')
+                    span(class='token') (
+                    |'parentElement'
+                    span(class='token') )
+                  span(class='on') .on
+                  span(class='token') (
+                  span(class='event') 'mouseEnter'
+                  span(class='childElement') , 'button', 
+                  span(class='function') function
+                  span(class='token') () {
+                  br
+                  span(class='comment pl-20') // effect 
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |'Element'
+                    span(class='token') )
+                  span(class='effect') .css{(color: 'red')}
+                    span(class='token')
+                    span(class='token') ;
+                  br
+                  span(class='comment pl-20') // effect for the element have event
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |this
+                    span(class='token') )
+                  span(class='effect') .hide
+                    span(class='token') (
+                    span(class='token') );
+                  br
+                  span(class='token') )};
+                  //- End code
+        .col-sm-12
+          div(class='hr-style-three')
+          button(class="btn btn-outline-primary   video-3-btn-4") Events <span class='disc-btn'>mouseEnter </span>  
           p(class="video-3-p-4 lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        .col-sm-6
-          button(class="btn btn-info video-3-btn-5") Events mouseleave  
+        //- event mouseLeave
+        div(class="col-sm-12")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-html')
+                code(class='code-language-html')
+                  span(class='token') &lt;
+                  span(class='tag') button 
+                  span(class='attr-name') class
+                  span(class='equal') =
+                  span(class='punctuation') '
+                  span(class='attr-value') ElementBtn
+                  span(class='punctuation') '
+                  span(class='token') &gt;
+                  |Events mouseLeave = css
+                  span(class='token') &lt;/
+                  span(class='tag') button
+                  span(class='token') &gt;
+              div(class='hr-style-tow')
+              pre(class='pre-language-javascript')
+                code(class='code-language-javascript')
+                  //- Start Code
+                  span(class='comment pl-20') // Event 
+                  br
+                  span(class='jquery') $
+                  span(class='element')
+                    span(class='token') (
+                    |'parentElement'
+                    span(class='token') )
+                  span(class='on') .on
+                  span(class='token') (
+                  span(class='event') 'mouseLeave'
+                  span(class='childElement') , 'button', 
+                  span(class='function') function
+                  span(class='token') () {
+                  br
+                  span(class='comment pl-20') // effect 
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |'Element'
+                    span(class='token') )
+                  span(class='effect') .css({color: 'red'})
+                    span(class='token') (
+                    span(class='token') );
+                  br
+                  span(class='token') )};
+                  //- End code
+        div(class='hr-style-three')
+        .col-sm-12
+          button(class="btn btn-outline-info video-3-btn-5") Events <span class='disc-btn'>ouseLeave</span>  
           p(class="video-3-p-5 lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        .col-sm-6
-          button(class="btn btn-info video-3-btn-6") Events hover  
+        //- event hover
+        div(class="col-sm-12")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-html')
+                code(class='code-language-html')
+                  span(class='token') &lt;
+                  span(class='tag') button 
+                  span(class='attr-name') class
+                  span(class='equal') =
+                  span(class='punctuation') '
+                  span(class='attr-value') ElementBtn
+                  span(class='punctuation') '
+                  span(class='token') &gt;
+                  |Events hover = css
+                  span(class='token') &lt;/
+                  span(class='tag') button
+                  span(class='token') &gt;
+              div(class='hr-style-tow')
+              pre(class='pre-language-javascript')
+                code(class='code-language-javascript')
+                  //- Start Code
+                  span(class='comment pl-20') // Event 
+                  br
+                  span(class='jquery') $
+                  span(class='element')
+                    span(class='token') (
+                    |'parentElement'
+                    span(class='token') )
+                  span(class='on') .on
+                  span(class='token') (
+                  span(class='event') 'hover'
+                  span(class='childElement') , 'button', 
+                  span(class='function') function
+                  span(class='token') () {
+                  br
+                  span(class='comment pl-20') // effect 
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |'Element'
+                    span(class='token') )
+                  span(class='effect') .css({color: "block"})
+                    span(class='token') (
+                    span(class='token') );
+                  br
+                  span(class='token') )};
+                  //- End code
+          
+        .col-sm-12
+          div(class='hr-style-three')
+          button(class="btn btn-outline-info video-3-btn-6") Events <span class='disc-btn'>hover</span>  
           p(class="video-3-p-6 lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
         hr(class="hr-style")
         h3(class="h2 text-center mb-5") video 4 Effects
         .col-sm-6
@@ -586,7 +863,6 @@ html(lang="en")
           div(class="input-file-29")
             input(type="file" name="") 
             span +
-
         br
         br
         br
@@ -595,18 +871,26 @@ html(lang="en")
         .col-sm-4 
           .video-30-div-1 
             |
-            a(href="http://www.google.com", target="_blank" onclick="return false") link return false
+            a(href="http://www.google.com" target="_blank" onclick="return false") link return false
             |
             |
             br
             |
             |
-            a(href="http://www.google.com", target="_blank" class="lank301") Google link
+            a(href="http://www.google.com" target="_blank" class="lank301") Google link
             img(src="http://placehold.it/300x300/333" alt="" class="img-fluid display-none")
             div(class="video-30-test")
+        br
+        br
+        br
+        hr
+        h3(class="h3 text-center mb-5") video 31 Event keyDown, KeyPress, KeyUp
+        .col-sm-4
+          input(type='text' name='inputText' id='inputText' placeholder='Some Word' )
+
 
 
     script(src="js/jquery-3-6-0.min.js") 
     script(src="js/popper-1.14.7.min.js") 
     script(src="js/bootstrap.js")  
-    script(src="js/learn-jquery.js") 
+    script(src="js/jquery-learn.js")  
