@@ -4131,15 +4131,12 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
 }
 
 .filter {
-    -webkit-filter: blur(4px);
-    //wihte&black
-    filter: grayscale(0);
-    -webkit-filter: blur(4px);
-    // blur
-    filter: blur(4px);
     -webkit-filter: invert(0);
-    // no color
-    filter: invert(0);
+    //wihte&blackfilter: grayscale(0);
+    -webkit-filter: blur(4px);
+    //blurfilter: blur(4px);
+    -webkit-filter: invert(0);
+    //nocolorfilter: invert(0);
 }
 
 .parent-grid {

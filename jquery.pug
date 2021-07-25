@@ -2,6 +2,7 @@ doctype
 html(lang="en")
   head 
     link(rel="shortcut icon" href="images/logo/favicon.jpg" type="image/x-icon")
+    link(rel="stylesheet", href="https://hossamrashad.github.io/libraries/css/font-awesome/css/all.min.css")
     block pageTitle       
       title Learn Jquery
     link(rel="stylesheet" href="css/bootstrap.css")
@@ -12,6 +13,7 @@ html(lang="en")
       div(class="explain") Events || 1- click 2- dblclick 3- mouseenter 4- mouseleave 5- hover
 
       .row 
+
         //- event click
         div(class="col-sm-12")
           div(class="test-tow text-left") 
@@ -73,6 +75,7 @@ html(lang="en")
         .col-sm-12 
           button(class="btn btn-outline-warning video-3-btn-1") Events <span class='disc-btn'>click</span>  = hide
           p(class="video-3-p-1 lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
         //- event dblclick
         div(class="col-sm-12")
           div(class="test-tow text-left") 
@@ -135,6 +138,7 @@ html(lang="en")
         .col-sm-12
           button(class="btn btn-outline-primary  video-3-btn-2") Events <span class='disc-btn'>dblclick</span>  = css color : red
           p(class="video-3-p-2 lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
         //- event mouse enter
         div(class="col-sm-12")
           div(class="test-tow text-left") 
@@ -197,6 +201,7 @@ html(lang="en")
           div(class='hr-style-three')
           button(class="btn btn-outline-primary   video-3-btn-4") Events <span class='disc-btn'>mouseEnter </span>  
           p(class="video-3-p-4 lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
         //- event mouseLeave
         div(class="col-sm-12")
           div(class="test-tow text-left") 
@@ -249,6 +254,7 @@ html(lang="en")
         .col-sm-12
           button(class="btn btn-outline-info video-3-btn-5") Events <span class='disc-btn'>ouseLeave</span>  
           p(class="video-3-p-5 lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
         //- event hover
         div(class="col-sm-12")
           div(class="test-tow text-left") 
@@ -291,60 +297,659 @@ html(lang="en")
                     span(class='token') (
                     |'Element'
                     span(class='token') )
-                  span(class='effect') .css({color: "block"})
+                  span(class='effect') .hover({
+                    br
+                    |function(){
+                    |color: "black"},
+                    |function(){
+                    |color: "red"},
+                    |})
+                  br
+                  span(class='token') )};
+                  //- End code
+        .col-sm-12
+          div(class='hr-style-three')
+          button(class="btn btn-outline-info video-3-btn-6") Events <span class='disc-btn'>hover</span>  
+          p(class="video-3-p-6 lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        div(class="hr-style")
+        div(class="explain") video 4 Effects hide & show & toggle
+
+        //- effect hide
+        div(class="col-sm-12")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-html')
+                code(class='code-language-html')
+                  span(class='token') &lt;
+                  span(class='tag') button 
+                  span(class='attr-name') class
+                  span(class='equal') =
+                  span(class='punctuation') '
+                  span(class='attr-value') ElementBtn
+                  span(class='punctuation') '
+                  span(class='token') &gt;
+                  |effect hide
+                  span(class='token') &lt;/
+                  span(class='tag') button
+                  span(class='token') &gt;
+              div(class='hr-style-tow')
+              pre(class='pre-language-javascript')
+                code(class='code-language-javascript')
+                  //- Start Code
+                  span(class='comment pl-20') // Event 
+                  br
+                  span(class='jquery') $
+                  span(class='element')
+                    span(class='token') (
+                    |'parentElement'
+                    span(class='token') )
+                  span(class='on') .on
+                  span(class='token') (
+                  span(class='event') 'dblclick'
+                  span(class='childElement') , 'button', 
+                  span(class='function') function
+                  span(class='token') () {
+                  br
+                  span(class='comment pl-20') // effect 
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |'Element'
+                    span(class='token') )
+                  span(class='effect') .hide
+                    span(class='token') ("Fast"
+                    span(class='token') );
+                  br
+                  span(class='token') )};
+                  //- End code
+        .col-sm-12
+          button(class="btn btn-outline-info video-4-btn-1") Effects <span class='disc-btn'>hide</span>  
+          p(class="video-4-p-1 lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+        //- effect show
+        div(class="col-sm-6")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-html')
+                code(class='code-language-html')
+                  span(class='token') &lt;
+                  span(class='tag') button 
+                  span(class='attr-name') class
+                  span(class='equal') =
+                  span(class='punctuation') '
+                  span(class='attr-value') ElementBtn
+                  span(class='punctuation') '
+                  span(class='token') &gt;
+                  |Events show
+                  br
+                  span(class='token') &lt;/
+                  span(class='tag') button
+                  span(class='token') &gt;
+        div(class="col-sm-6")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-css')
+                code(class='code-language-css')
+                  span(class='element') .element 
+                  span(class='token') {
+                  br
+                  span(class='property pl-15') display:
+                  span(class='value')   none;
+                  br
+                  span(class='token') }
+        div(class="col-sm-12")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              div(class='hr-style-tow')
+              pre(class='pre-language-javascript')
+                code(class='code-language-javascript')
+                  //- Start Code
+                  span(class='comment pl-20') // Event 
+                  br
+                  span(class='jquery') $
+                  span(class='element')
+                    span(class='token') (
+                    |'parentElement'
+                    span(class='token') )
+                  span(class='on') .on
+                  span(class='token') (
+                  span(class='event') 'click'
+                  span(class='childElement') , 'button', 
+                  span(class='function') function
+                  span(class='token') () {
+                  br
+                  span(class='comment pl-20') // effect 
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |'Element'
+                    span(class='token') )
+                  span(class='effect') .show
                     span(class='token') (
                     span(class='token') );
                   br
                   span(class='token') )};
                   //- End code
-          
+        div(class='hr-style-three')
         .col-sm-12
-          div(class='hr-style-three')
-          button(class="btn btn-outline-info video-3-btn-6") Events <span class='disc-btn'>hover</span>  
-          p(class="video-3-p-6 lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          button(class="btn btn-outline-info video-4-btn-2") Effects <span class='disc-btn'>Show</span>  
+          p(class="video-4-p-2 display-none lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-        hr(class="hr-style")
-        h3(class="h2 text-center mb-5") video 4 Effects
-        .col-sm-6
-          button(class="btn btn-info video-4-btn-1") Effects Hide  
-          p(class="video-4-p-1 lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        .col-sm-6
-          button(class="btn btn-info video-4-btn-2") Effects Show  
-          p(class="video-4-p-2 d-none lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        .col-sm-6
+        //- effect toggle
+        div(class="col-sm-12")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-html')
+                code(class='code-language-html')
+                  span(class='token') &lt;
+                  span(class='tag') button 
+                  span(class='attr-name') class
+                  span(class='equal') =
+                  span(class='punctuation') '
+                  span(class='attr-value') ElementBtn
+                  span(class='punctuation') '
+                  span(class='token') &gt;
+                  |Effect Toggle
+                  span(class='token') &lt;/
+                  span(class='tag') button
+                  span(class='token') &gt;
+              div(class='hr-style-tow')
+              pre(class='pre-language-javascript')
+                code(class='code-language-javascript')
+                  //- Start Code
+                  span(class='comment pl-20') // Event 
+                  br
+                  span(class='jquery') $
+                  span(class='element')
+                    span(class='token') (
+                    |'parentElement'
+                    span(class='token') )
+                  span(class='on') .on
+                  span(class='token') (
+                  span(class='event') 'click'
+                  span(class='childElement') , 'button', 
+                  span(class='function') function
+                  span(class='token') () {
+                  br
+                  span(class='comment pl-20') // effect 
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |'Element'
+                    span(class='token') )
+                  span(class='effect') .toggle
+                    span(class='token') (
+                    span(class='token') );
+                  br
+                  span(class='token') )};
+                  //- End code
+        div(class='hr-style-three')
+        .col-sm-12
           button(class="btn btn-info video-4-btn-3") Effects Toggle  
           p(class="video-4-p-3  lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        hr
-        h3(class="h3 text-center mb-5") video 5 Effects || fadeIn , fadeOut , fadeToggle , fadeTo
-        .col-sm-6
-          button(class="btn btn-info video-5-btn-1") Effects fade In  
+          div(class='hr-style')
+
+        div(class="explain") video 5 Effects || fadeIn , fadeOut , fadeToggle , fadeTo
+        //- effect fadeIn
+        div(class="col-sm-6")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-html')
+                code(class='code-language-html')
+                  span(class='token') &lt;
+                  span(class='tag') button 
+                  span(class='attr-name') class
+                  span(class='equal') =
+                  span(class='punctuation') '
+                  span(class='attr-value') ElementBtn
+                  span(class='punctuation') '
+                  span(class='token') &gt;
+                  br
+                  |Events click = fadeIn 
+                  br
+                  span(class='token') &lt;/
+                  span(class='tag') button
+                  span(class='token') &gt;
+        div(class="col-sm-6")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-css')
+                code(class='code-language-css')
+                  span(class='element') .element 
+                  span(class='token') {
+                  br
+                  span(class='property pl-15') display:
+                  span(class='value')   none;
+                  br
+                  span(class='token') }
+        div(class="col-sm-12")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-javascript')
+                code(class='code-language-javascript')
+                  //- Start Code
+                  span(class='comment pl-20') // Event 
+                  br
+                  span(class='jquery') $
+                  span(class='element')
+                    span(class='token') (
+                    |'parentElement'
+                    span(class='token') )
+                  span(class='on') .on
+                  span(class='token') (
+                  span(class='event') 'click'
+                  span(class='childElement') , 'button', 
+                  span(class='function') function
+                  span(class='token') () {
+                  br
+                  span(class='comment pl-20') // effect 
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |'Element'
+                    span(class='token') )
+                  span(class='effect') .fadeIn
+                    span(class='token') (
+                    span(class='token') );
+                  br
+                  span(class='token') )};
+                  //- End code
+        div(class='hr-style-three')
+        .col-sm-12
+          button(class="btn btn-info video-5-btn-1") Effects <span class='disc-btn'>fadeIn</span>  
           p(class="video-5-p-1  lead" id="video-5-p-1") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        .col-sm-6
+
+        //- fadeout
+        div(class="col-sm-12")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-html')
+                code(class='code-language-html')
+                  span(class='token') &lt;
+                  span(class='tag') button 
+                  span(class='attr-name') class
+                  span(class='equal') =
+                  span(class='punctuation') '
+                  span(class='attr-value') ElementBtn
+                  span(class='punctuation') '
+                  span(class='token') &gt;
+                  |Events click = fadeout
+                  span(class='token') &lt;/
+                  span(class='tag') button
+                  span(class='token') &gt;
+              div(class='hr-style-tow')
+              pre(class='pre-language-javascript')
+                code(class='code-language-javascript')
+                  //- Start Code
+                  span(class='comment pl-20') // Event 
+                  br
+                  span(class='jquery') $
+                  span(class='element')
+                    span(class='token') (
+                    |'parentElement'
+                    span(class='token') )
+                  span(class='on') .on
+                  span(class='token') (
+                  span(class='event') 'click'
+                  span(class='childElement') , 'button', 
+                  span(class='function') function
+                  span(class='token') () {
+                  br
+                  span(class='comment pl-20') // effect 
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |'Element'
+                    span(class='token') )
+                  span(class='effect') .fadeout
+                    span(class='token') (3000
+                    span(class='token') );
+                  br
+                  span(class='token') )};
+                  //- End code
+        div(class='hr-style-three')
+        .col-sm-12
           button(class="btn btn-info video-5-btn-2") Effects fade Out 
           p(class="video-5-p-2  lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        .col-sm-6
-          button(class="btn btn-info video-5-btn-3") Effects fade toggle  
+
+        //- fadeToggle
+        div(class="col-sm-12")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-html')
+                code(class='code-language-html')
+                  span(class='token') &lt;
+                  span(class='tag') button 
+                  span(class='attr-name') class
+                  span(class='equal') =
+                  span(class='punctuation') '
+                  span(class='attr-value') ElementBtn
+                  span(class='punctuation') '
+                  span(class='token') &gt;
+                  |Events click = fade Toggle
+                  span(class='token') &lt;/
+                  span(class='tag') button
+                  span(class='token') &gt;
+              div(class='hr-style-tow')
+              pre(class='pre-language-javascript')
+                code(class='code-language-javascript')
+                  //- Start Code
+                  span(class='comment pl-20') // Event 
+                  br
+                  span(class='jquery') $
+                  span(class='element')
+                    span(class='token') (
+                    |'parentElement'
+                    span(class='token') )
+                  span(class='on') .on
+                  span(class='token') (
+                  span(class='event') 'click'
+                  span(class='childElement') , 'button', 
+                  span(class='function') function
+                  span(class='token') () {
+                  br
+                  span(class='comment pl-20') // effect 
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |'Element'
+                    span(class='token') )
+                  span(class='effect') .fadeToggle
+                    span(class='token') (3000
+                    span(class='token') );
+                  br
+                  span(class='token') )};
+                  //- End code
+        div(class='hr-style-three')
+        .col-sm-12
+          button(class="btn btn-info video-5-btn-3") Effects <span class='disc-btn'>fade toggle </span> 
           p(class="video-5-p-3  lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        .col-sm-6
-          button(class="btn btn-info video-5-btn-4") Effects fade to  
+
+        //- fadeTo
+        div(class="col-sm-12")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-html')
+                code(class='code-language-html')
+                  span(class='token') &lt;
+                  span(class='tag') button 
+                  span(class='attr-name') class
+                  span(class='equal') =
+                  span(class='punctuation') '
+                  span(class='attr-value') ElementBtn
+                  span(class='punctuation') '
+                  span(class='token') &gt;
+                  |Events click = fadeTo
+                  span(class='token') &lt;/
+                  span(class='tag') button
+                  span(class='token') &gt;
+              div(class='hr-style-tow')
+              pre(class='pre-language-javascript')
+                code(class='code-language-javascript')
+                  //- Start Code
+                  span(class='comment pl-20') // Event 
+                  br
+                  span(class='jquery') $
+                  span(class='element')
+                    span(class='token') (
+                    |'parentElement'
+                    span(class='token') )
+                  span(class='on') .on
+                  span(class='token') (
+                  span(class='event') 'click'
+                  span(class='childElement') , 'button', 
+                  span(class='function') function
+                  span(class='token') () {
+                  br
+                  span(class='comment pl-20') // effect 
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |'Element'
+                    span(class='token') )
+                  span(class='effect') .fadeTo
+                    span(class='token') ('fast', 0.5
+                    span(class='token') );
+                  br
+                  span(class='token') )};
+                  //- End code
+        .col-sm-12
+          button(class="btn btn-info video-5-btn-4") Effects <span class='disc-btn'>fade to </span>
           p(class="video-5-p-4  lead") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        hr
-        h3(class="h3 text-center mb-5") video 6 Effects || slideDown , slideUp , slideToggle 
-        .col-sm-6
-          button(class="btn btn-info video-6-btn-1") Effects slideDown  
+
+        div(class="explain") video 6 Effects || slideDown , slideUp , slideToggle 
+        //- slideDown 
+        div(class="col-sm-6")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-html')
+                code(class='code-language-html')
+                  span(class='token') &lt;
+                  span(class='tag') button 
+                  span(class='attr-name') class
+                  span(class='equal') =
+                  span(class='punctuation') '
+                  span(class='attr-value') ElementBtn
+                  span(class='punctuation') '
+                  span(class='token') &gt;
+                  br
+                  |Events slideDown
+                  br
+                  span(class='token') &lt;/
+                  span(class='tag') button
+                  span(class='token') &gt;
+        div(class="col-sm-6")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-css')
+                code(class='code-language-css')
+                  span(class='element') .element 
+                  span(class='token') {
+                  br
+                  span(class='property pl-15') display:
+                  span(class='value')   none;
+                  br
+                  span(class='token') }
+        div(class="col-sm-12")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              div(class='hr-style-tow')
+              pre(class='pre-language-javascript')
+                code(class='code-language-javascript')
+                  //- Start Code
+                  span(class='comment pl-20') // Event 
+                  br
+                  span(class='jquery') $
+                  span(class='element')
+                    span(class='token') (
+                    |'parentElement'
+                    span(class='token') )
+                  span(class='on') .on
+                  span(class='token') (
+                  span(class='event') 'click'
+                  span(class='childElement') , 'button', 
+                  span(class='function') function
+                  span(class='token') () {
+                  br
+                  span(class='comment pl-20') // effect 
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |'Element'
+                    span(class='token') )
+                  span(class='effect') .slideDown
+                    span(class='token') (3000
+                    span(class='token') );
+                  br
+                  span(class='token') )};
+                  //- End code
+        div(class='hr-style-three')
+        .col-sm-12
+          button(class="btn btn-info video-6-btn-1") Effects <span class='disc-btn'>slideDown</span>  
           p(class="video-6-p-1  lead" id="video-6-p-1") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        .col-sm-6
-          button(class="btn btn-info video-6-btn-2") Effects slideUp
+
+        //- slideUp
+        div(class="col-sm-12")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-html')
+                code(class='code-language-html')
+                  span(class='token') &lt;
+                  span(class='tag') button 
+                  span(class='attr-name') class
+                  span(class='equal') =
+                  span(class='punctuation') '
+                  span(class='attr-value') ElementBtn
+                  span(class='punctuation') '
+                  span(class='token') &gt;
+                  |Events click = slideUp
+                  span(class='token') &lt;/
+                  span(class='tag') button
+                  span(class='token') &gt;
+              div(class='hr-style-tow')
+              pre(class='pre-language-javascript')
+                code(class='code-language-javascript')
+                  //- Start Code
+                  span(class='comment pl-20') // Event 
+                  br
+                  span(class='jquery') $
+                  span(class='element')
+                    span(class='token') (
+                    |'parentElement'
+                    span(class='token') )
+                  span(class='on') .on
+                  span(class='token') (
+                  span(class='event') 'click'
+                  span(class='childElement') , 'button', 
+                  span(class='function') function
+                  span(class='token') () {
+                  br
+                  span(class='comment pl-20') // effect 
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |'Element'
+                    span(class='token') )
+                  span(class='effect') .slideUp
+                    span(class='token') (3000
+                    span(class='token') );
+                  br
+                  span(class='token') )};
+                  //- End code
+        div(class='hr-style-three')
+        .col-sm-12
+          button(class="btn btn-info video-6-btn-2") Effects <span class='disc-btn'>slideUp</span>
           p(class="video-6-p-2  lead" id="video-6-p-2") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        .col-sm-6
-          button(class="btn btn-info video-6-btn-3") Effects slideToggle
+        //- slideToggle
+        div(class="col-sm-12")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-html')
+                code(class='code-language-html')
+                  span(class='token') &lt;
+                  span(class='tag') button 
+                  span(class='attr-name') class
+                  span(class='equal') =
+                  span(class='punctuation') '
+                  span(class='attr-value') ElementBtn
+                  span(class='punctuation') '
+                  span(class='token') &gt;
+                  |Events click = slideToggle
+                  span(class='token') &lt;/
+                  span(class='tag') button
+                  span(class='token') &gt;
+              div(class='hr-style-tow')
+              pre(class='pre-language-javascript')
+                code(class='code-language-javascript')
+                  //- Start Code
+                  span(class='comment pl-20') // Event 
+                  br
+                  span(class='jquery') $
+                  span(class='element')
+                    span(class='token') (
+                    |'parentElement'
+                    span(class='token') )
+                  span(class='on') .on
+                  span(class='token') (
+                  span(class='event') 'click'
+                  span(class='childElement') , 'button', 
+                  span(class='function') function
+                  span(class='token') () {
+                  br
+                  span(class='comment pl-20') // effect 
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |'Element'
+                    span(class='token') )
+                  span(class='effect') .slideToggle
+                    span(class='token') (3000
+                    span(class='token') );
+                  br
+                  span(class='token') )};
+                  //- End code
+        div(class='hr-style-three')
+        .col-sm-12
+          button(class="btn btn-info video-6-btn-3") Effects <span class='disc-btn'>slideToggle</span>
           p(class="video-6-p-3  lead" id="video-6-p-3") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        hr
-        .col-sm-6
-          button(class="btn btn-info video-7-btn-1") Effects Animate
+        //- Animate
+        div(class="col-sm-12")
+          div(class="test-tow text-left") 
+            div(class='parent-disc-code')
+              pre(class='pre-language-html')
+                code(class='code-language-html')
+                  span(class='token') &lt;
+                  span(class='tag') button 
+                  span(class='attr-name') class
+                  span(class='equal') =
+                  span(class='punctuation') '
+                  span(class='attr-value') ElementBtn
+                  span(class='punctuation') '
+                  span(class='token') &gt;
+                  |Events click = hide
+                  span(class='token') &lt;/
+                  span(class='tag') button
+                  span(class='token') &gt;
+              div(class='hr-style-tow')
+              pre(class='pre-language-javascript')
+                code(class='code-language-javascript')
+                  //- Start Code
+                  span(class='comment pl-20') // Event 
+                  br
+                  span(class='jquery') $
+                  span(class='element')
+                    span(class='token') (
+                    |'parentElement'
+                    span(class='token') )
+                  span(class='on') .on
+                  span(class='token') (
+                  span(class='event') 'click'
+                  span(class='childElement') , 'button', 
+                  span(class='function') function
+                  span(class='token') () {
+                  br
+                  span(class='comment pl-20') // effect 
+                  br
+                  span(class='element pl-20')
+                    span(class='token') (
+                    |'Element'
+                    span(class='token') )
+                  span(class='effect') .Animate
+                    span(class='token') ({
+                    br
+                    span(class='pl-30') width: "80%", 
+                    br
+                    span(class='token pl-20') });
+                  br
+                  span(class='token') )};
+                  //- End code
+        div(class='hr-style-three')
+        .col-sm-12
+          button(class="btn btn-info video-7-btn-1") Effects <span class='disc-btn'>Animate</span>
           p(class="video-7-p-1  lead" id="video-7-p-1") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        hr
-        h3(class="h3 text-center mb-5") video 10 Get || set
+
+        div(class="explain") video 10 Get || set
+        
         .col-sm-6
           p(class="video-10-p-1  lead" id="video-10-p-1") Lorem  <b>sed</b> do eiusmod tempor 
           button(class="btn btn-info video-10-btn-1 d-block") Get & Set value 
@@ -368,16 +973,11 @@ html(lang="en")
           div(class="video-10-p-3" id="video-10-p-3")
           div(class="video-10-p-4" id="video-10-p-4")
           div(class="video-10-p-5" id="video-10-p-5")
-        br
-        br
-        br
-        hr
-        h3(class="h3 text-center mb-5") video 11 Add Element || append , prepend , before , after, appendTo, prependTo
+        div(class="explain") video 11 Add Element || append , prepend , before , after, appendTo, prependTo
         .col-sm-6 
           div(class="video-11-div-1" id="video-11-div-1") 
             h3(class="h2") Element
-        hr
-        h3(class="h3 text-center mb-5") video 12 Remove Element || remove , empty
+        div(class="explain") video 12 Remove Element || remove , empty
         .col-sm-6 
           button(class="btn btn-info video-12-btn-1" id="video-12-btn-1") click Remove
           div(class="video-12-div-1" id="video-12-div-1") 
@@ -393,8 +993,7 @@ html(lang="en")
             h3(class="h2") Empty
             h3(class="h2") Element Empty
             h3(class="h2") ElementE
-        hr
-        h3(class="h3 text-center mb-5") video 13 Css Class
+        div(class="explain") video 13 Css Class
         .col-sm-6 
           button(class="btn btn-info video-13-btn-1" id="video-13-btn-1") click Add Class
           div(class="video-13-div-1" id="video-13-div-1") 
@@ -427,8 +1026,7 @@ html(lang="en")
             h3(class="h3") Element Class filter eq
             h3(class="h3") Element Class 
             h3(class="h3") Element Class filter last
-        hr
-        h3(class="h3 text-center mb-5") video 14 Css Get & Set
+        div(class="explain") video 14 Css Get & Set
         .col-sm-6 
           button(class="btn btn-danger video-14-btn-1" id="video-14-btn-1") get css attr 
           p(class="lead style-test pt-5 pb-5 mb-2 mt-5 video-14-div-1") Rovan Hossam Rashad
@@ -437,26 +1035,23 @@ html(lang="en")
           button(class="btn btn-danger video-14-btn-2" id="video-14-btn-2") set css attr 
           p(class="lead style-test pt-5 pb-5 mb-2 mt-5 video-14-div-2") Rovan Hossam Rashad
           input(type="text" name="" id="video-14-input-2" class="video-14-input-2" placeholder="set background color ")
-        br 
-        hr
-        br
-        h3(class="h3 text-center mb-5") video 15 Dimensions width & height
-        //- .col-sm-6 
-        div(class="video-15-div-1") 
-        |
-        br
-        |
-        <br>
-        div(class="video-15-div-2") Element + width
-        div(class="video-15-div-3")
-        //- .col-sm-6 
-        div(class="video-15-div-4") Element + width
-        div(class="video-15-div-5") 
-        div(class="video-15-div-6") Element + width
-        div(class="video-15-div-7") 
-        br
-        hr
-        h3(class="h3 text-center mb-5") video 16 traversing parent & parents & parentsUntil
+        div(class="explain") video 15 Dimensions width & height
+        .col-sm-6 
+          div(class="video-15-div-1") 
+          |
+          br
+          |
+          <br>
+          div(class="video-15-div-2") Element + width
+          div(class="video-15-div-3")
+          //- .col-sm-6 
+          div(class="video-15-div-4") Element + width
+          div(class="video-15-div-5") 
+          div(class="video-15-div-6") Element + width
+          div(class="video-15-div-7") 
+          br
+          hr
+        div(class="explain") video 16 traversing parent & parents & parentsUntil
         .col-sm-6 
           .video-16-parent-one 
             .video-16-parent-tow 
@@ -469,18 +1064,14 @@ html(lang="en")
               .video-16-parent-three 
                 .video-16-parent-four 
                   .video-16-child-tow Parents
-        br
-        br
-        br
-        hr
         .col-sm-6 
           .video-16-parent-one 
             .video-16-parent-tow 
               .video-16-parent-three 
                 .video-16-parent-four 
                   .video-16-child-three parentsUntil
-        hr
-        h3(class="h3 text-center mb-5") video 17 traversing children & find 
+
+        div(class="explain") video 17 traversing children & find 
         .col-sm-6 
           .video-17-parent-one parent one
             .video-17-parent-tow parent tow
@@ -493,12 +1084,8 @@ html(lang="en")
               .video-17-parent-three 
                 .video-17-parent-four 
                   .video-17-child-tow find
-        br
-        br
-        br
-        hr
-        h3(class="h3 text-center mb-5") video 18 traversing siblings & next & prev
-        .col-sm-6 
+        div(class="explain") video 18 traversing siblings & next & prev
+        .col-sm-6  section(class="video-18-section")
           section(class="video-18-section")
             .video-18-parent-one parent one
             .video-18-parent-tow parent tow
@@ -512,10 +1099,7 @@ html(lang="en")
             .video-18-parent-three next 
             .video-18-parent-four parent four
             p(class="video-18-child") children 
-        br
-        br
-        br
-        hr
+        div(class='hr-style')
         .col-sm-6 
           section(class="video-18-section-three")
             .video-18-parent-one parent one
@@ -523,6 +1107,7 @@ html(lang="en")
             .video-18-parent-three prev 
             .video-18-parent-four parent four
             p(class="video-18-child") children 
+        
         .col-sm-6 
           section(class="video-18-section-four")
             .video-18-parent-one parent one
@@ -530,10 +1115,7 @@ html(lang="en")
             .video-18-parent-three Next All 
             .video-18-parent-four parent four
             p(class="video-18-child") children 
-        br
-        br
-        br
-        hr
+        div(class='hr-style')
         .col-sm-6 
           section(class="video-18-section-five")
             .video-18-parent-one parent one
@@ -541,6 +1123,7 @@ html(lang="en")
             .video-18-parent-three prev All 
             .video-18-parent-four parent four
             p(class="video-18-child") children 
+
         .col-sm-6 
           section(class="video-18-section-sex")
             .video-18-parent-one parent one
@@ -548,6 +1131,7 @@ html(lang="en")
             .video-18-parent-three next Until  
             .video-18-parent-four parent four
             p(class="video-18-child") children 
+        div(class='hr-style')
         .col-sm-6 
           section(class="video-18-section-seven")
             .video-18-parent-one parent one
@@ -555,11 +1139,7 @@ html(lang="en")
             .video-18-parent-three prev Until  
             .video-18-parent-four parent four
             p(class="video-18-child") children 
-        br
-        br
-        br
-        hr
-        h3(class="h3 text-center mb-5") video 19 traversing first & last & aq & Filter & not
+        div(class="explain") video 19 traversing first & last & aq & Filter & not
         .col-sm-6 
           section(class="video-19-section-one")
             .video-19-parent-one first eq ( 0 ) 1
@@ -594,11 +1174,7 @@ html(lang="en")
             .video-19-parent-thirteen eq ( 12 ) 13  
             .video-19-parent-fourteen eq ( 13 ) 14  
             .video-19-parent-four last parent four
-        br
-        br
-        br
-        hr
-        h3(class="h3 text-center mb-5") video 20 reference * & Element & Element.ClassName & Element.IdName & Element:first & Element:last & Element:even & Element:odd
+        div(class="explain") video 20 reference * & Element & Element.ClassName & Element.IdName & Element:first & Element:last & Element:even & Element:odd
         .col-sm-4 
           .video-20-div-1 
             p.lead rovan hossam *
@@ -635,15 +1211,11 @@ html(lang="en")
             p.lead odd rovan hossam
             p.lead rovan hossam
             p.lead odd rovan hossam
-        br
-        br
-        br
-        hr
-        h3(class="h3 text-center mb-5") video 21 reference first-child & last-child & first-of-Type & last-of-Type & nth-child(3) & nth-last-child(2) & nth-of-type(3) & nth-last-of-type(3) 
+        div(class="explain") video 21 reference first-child & last-child & first-of-Type & last-of-Type & nth-child(3) & nth-last-child(2) & nth-of-type(3) & nth-last-of-type(3) 
         .col-sm-3 
           div(class="video-21-parent-one  text-sm-start")
             p(lang="en") first child in parent div
-            div.parent 
+            div.words-21 
               p(lang="en") first child div
               p(lang="en") second  div
               p(lang="en")  last child div
@@ -652,7 +1224,7 @@ html(lang="en")
           div(class="video-21-parent-tow  text-sm-start")
             div(lang="en") first div child in parent div
             p(lang="en") first p child in parent div
-            div.parent 
+            div.parent-25 
               div(lang="en")  first div child div
               p(lang="en") first p child div
               p(lang="en") second  div
@@ -663,7 +1235,7 @@ html(lang="en")
           div(class="video-21-parent-three  text-sm-start")
             div(lang="en") first div child in parent div
             p(lang="en") first p child in parent div
-            div.parent 
+            div.parent-25 
               div(lang="en")  first div child div
               p(lang="en") first p child div
               p(lang="en") second  div
@@ -674,18 +1246,14 @@ html(lang="en")
           div(class="video-21-parent-four  text-sm-start")
             div(lang="en") first div child in parent div
             p(lang="en") first p child in parent div
-            div.parent 
+            div.parent-21 
               div(lang="en")  first div child div
               p(lang="en") first p child div
               p(lang="en") second  div
               p(lang="en")  last p child div
               div(lang="en")  last div child div
             p(lang="en") last p child in parent div
-        br
-        br
-        br
-        hr
-        h3(class="h3 text-center mb-5") video 22 reference only-child & only-of-type & > & + & ~ & gt(1) & lt(1) & not() 
+        div(class="explain") video 22 reference only-child & only-of-type & > & + & ~ & gt(1) & lt(1) & not() 
         .col-sm-3 
           .video-22-container 
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit 
@@ -728,11 +1296,7 @@ html(lang="en")
             p p is only child
             p p is only child
             p p is only child
-        br
-        br
-        br
-        hr
-        h3(class="h3 text-center mb-5") video 23 reference header & animated & focus & has & empty & parent & hidden & visible & root = html & lang
+        div(class="explain") video 23 reference header & animated & focus & has & empty & parent & hidden & visible & root = html & lang
         .col-sm-3 
           .video-23-parent-one 
             h1 header h1
@@ -770,11 +1334,7 @@ html(lang="en")
           div(class="video-23-visible") visible
           div(class="video-23-hidden") hidden
           button(class="video-23-btn-sex-2") click  root
-        br
-        br
-        br
-        hr
-        h3(class="h3 text-center mb-5") video 24 traversing attr & href & title & src & alt
+        div(class="explain") video 24 traversing attr & href & title & src & alt
         .col-sm-4
           <img src="//via.placeholder.com/300x300/333" alt="image 1" class="img-fluid" title="image 1" >
           p(lang="en" class="lead") هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
@@ -790,11 +1350,7 @@ html(lang="en")
           p(lang="en" class="lead" title="يمكن") هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
           p(lang="ar" class="lead" title=" مثال لنص يمكن") هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
           p(lang="en" class="lead" title="هو مثال لنص يمكن") هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
-        br
-        br
-        br
-        hr
-        h3(class="h3 text-center mb-5") video 25 traversing text & checked & enabled & disabled & password
+        div(class="explain") video 25 traversing text & checked & enabled & disabled & password
         .video-25-parent 
           input(type="checkbox" name="" checked)
           input(type="checkbox" name="")
@@ -805,11 +1361,7 @@ html(lang="en")
           input(type="password" name="" disabled)
           input(type="submit" value="send")
           input(type="text" name="")
-        br
-        br
-        br
-        hr
-        h3(class="h3 text-center mb-5") video 26 Event bind
+        div(class="explain") video 26 Event bind
         .col-sm-4 
           .video-26-div-one 
             div.one this is div one 
@@ -825,11 +1377,8 @@ html(lang="en")
           input(type="text" name="input-custom-video-26" value="")
           div(class="custom-event-video26-2") this is div four
           button(class="btn-video-26-2") click  custom div four
-        br
-        br
-        br
-        hr
-        h3(class="h3 text-center mb-5") video 27 Event live
+
+        div(class="explain") video 27 Event live
         .col-sm-4 
           div(class="parent-div-video-27")
             button(class="btn-video-27-1") click to add p
@@ -837,16 +1386,8 @@ html(lang="en")
           div(class="input-file")
             input(type="file" name="") 
             span +
-        br
-        br
-        br
-        hr
-        h3(class="h3 text-center mb-5") video 28 Event 
-        br
-        br
-        br
-        hr
-        h3(class="h3 text-center mb-5") video 29 Event  on 
+        div(class="explain") video 28 Event 
+        div(class="explain") video 29 Event  on 
         .col-sm-4 
           .video-29-div-1 
             div single multi on this is div 1
@@ -863,11 +1404,7 @@ html(lang="en")
           div(class="input-file-29")
             input(type="file" name="") 
             span +
-        br
-        br
-        br
-        hr
-        h3(class="h3 text-center mb-5") video 30 Event  PreventDefault() 
+        div(class="explain") video 30 Event  PreventDefault() 
         .col-sm-4 
           .video-30-div-1 
             |
@@ -880,14 +1417,13 @@ html(lang="en")
             a(href="http://www.google.com" target="_blank" class="lank301") Google link
             img(src="http://placehold.it/300x300/333" alt="" class="img-fluid display-none")
             div(class="video-30-test")
-        br
-        br
-        br
-        hr
-        h3(class="h3 text-center mb-5") video 31 Event keyDown, KeyPress, KeyUp
+        div(class="explain") video 31 Event keyDown, KeyPress, KeyUp
         .col-sm-4
           input(type='text' name='inputText' id='inputText' placeholder='Some Word' )
 
+        .parent 
+          div(class='Element')
+          .Element1
 
 
     script(src="js/jquery-3-6-0.min.js") 

@@ -185,11 +185,11 @@
  *
  */
 
-$('.parentElement').show();
+$(".parentElement").show();
 
 // code for function
 $(document).ready(function() {
-    // My Code Here 
+    // My Code Here
 });
 // short code for function
 $(function() {
@@ -209,12 +209,12 @@ $(document).ready(function() {
         $(".video-3-p-2").css("color", "#f00");
         $(this).css("backgroundColor", "#f00");
     });
-    //
+    // mouseenter
     $(".video-3-btn-4").mouseenter(function(e) {
         e.preventDefault();
         $(".video-3-p-4").css("color", "#f00");
     });
-    //
+    //mouseleave
     $(".video-3-btn-5").mouseleave(function(e) {
         e.preventDefault();
         $(".video-3-p-5").css("color", "#f00");
@@ -241,17 +241,18 @@ $(document).ready(function() {
             $(".video-4-p-1").show(5000);
         });
     });
+
     // show
     $(".video-4-btn-2").on("click", function(e) {
         e.preventDefault();
         $(".video-4-p-2").show();
     });
-    // show
+    // toggle
     $(".video-4-btn-3").on("click", function(e) {
         e.preventDefault();
         $(".video-4-p-3").toggle();
     });
-    // video 5
+    // video 5 Effects || fadeIn , fadeOut , fadeToggle , fadeTo
     // document.getElementById("video-5-p-1").style.opacity = 0.5;
     document.getElementById("video-5-p-1").style.backgroundColor = "#3498db";
     document.getElementById("video-5-p-1").style.color = "#fff";
@@ -267,6 +268,7 @@ $(document).ready(function() {
         e.preventDefault();
         $(".video-5-p-2").fadeOut(3000);
     });
+
     // fadeToggle
     $(".video-5-btn-3").on("click", function(e) {
         e.preventDefault();
@@ -275,9 +277,9 @@ $(document).ready(function() {
     // fadeTo
     $(".video-5-btn-4").on("click", function(e) {
         e.preventDefault();
-        $(".video-5-p-4").fadeTo(3000, 0.1);
+        $(".video-5-p-4").fadeTo(3000, 0.5);
     });
-    // video 6
+    // video 6 Effects || slideDown , slideUp , slideToggle
     document.getElementById("video-6-p-1").style.backgroundColor = "#3498db";
     document.getElementById("video-6-p-1").style.color = "#fff";
     document.getElementById("video-6-p-1").style.border = "2px solid #333";
@@ -306,14 +308,19 @@ $(document).ready(function() {
     // slideToggle
     $(".video-7-btn-1").on("click", function(e) {
         e.preventDefault();
+        // $(".video-7-p-1").animate({
+        //         height: "300px",
+        //         width: "80%",
+        //     },
+        //     2000
+        // );
         $(".video-7-p-1").animate({
-                height: "300px",
-                width: "80%",
-            },
-            2000
-        );
+            backgroundColor: "#ccc",
+            width: "80%",
+            color: "red",
+        });
         $(".video-7-p-1").animate({
-                height: "165px",
+                height: "fit-content",
                 width: "100%",
             },
             2000
@@ -326,10 +333,12 @@ $(document).ready(function() {
     var video103 = $(".video-10-p-3");
     video102.text(video100);
     video103.text(video101);
+
     // val
     $(".video-10-btn-1").on("click", function() {
         $(".video-10-input-1").val("hossam");
     });
+
     // Get attr
     $(".video-10-btn-2").on("click", function() {
         $(".video-10-input-2").val($(".video-10-a-1").attr("class"));
@@ -345,19 +354,27 @@ $(document).ready(function() {
             })
             .text("Now Go To Youtube");
     });
+
+    var varDataName = "active";
     // video 11 add element to element
     $(".video-11-div-1").append(" append ");
+
     $(".video-11-div-1").prepend(" prepend ");
     $(".video-11-div-1").before(" before ");
     $(".video-11-div-1").after(" after ");
-    $("<p>AppendTo</p>").appendTo(".video-11-div-1");
-    $("<p>prependTo</p>").prependTo(".video-11-div-1");
+    $("<div>AppendTo</div>").appendTo(".video-11-div-1");
+    $("<div>prependTo</div>").prependTo(".video-11-div-1");
     // طريقة اضافة العنصار بى المتغيرات و الكلاسات
-    $("<p></p>", {
-        text: "prependTo + class",
-        class: "hossam",
+    $("<div></div>", {
+        text: "prependTo + class hossam",
+        class: "hossam rashad",
+        dataName: varDataName,
     }).prependTo(".video-11-div-1");
-
+    $("<div></div>", {
+        text: "prependTo + class",
+        class: "yes i do",
+        dataName: varDataName,
+    }).prependTo(".video-11-div-1");
     // video 12 remove & Empty
     $(".video-12-btn-1").on("click", function() {
         // $(".video-12-div-1").remove();
@@ -381,6 +398,7 @@ $(document).ready(function() {
         // ممكن تختار اكتار من عنصر تنفز علية اد كلاس
         $(".video-13-div-1 .h2, .video-13-div-1 .h3").addClass("lead style-test");
     });
+    $(".Element").addClass(".className").removeClass(".className");
     // removeClass
     $(".video-13-btn-2").on("click", function() {
         $(".video-13-div-2 .h2").removeClass(" style-test");
@@ -400,7 +418,7 @@ $(document).ready(function() {
 
     // get css attr
     $(".video-14-btn-1").on("click", function() {
-        var getColorVideo14div1 = $(".video-14-div-1").css("color");
+        var getColorVideo14div1 = $(".Element").css("color");
         $(".video-14-input-1").val(getColorVideo14div1);
     });
 
@@ -411,8 +429,9 @@ $(document).ready(function() {
     });
 
     // video 15 Dimensions width & height
-    var documentWidth = $(document).innerWidth();
+    var documentWidth = $(document).width();
     $(".video-15-div-1").text("window width = " + documentWidth);
+
     $(".video-15-div-2").css({
         backgroundColor: "#BB2D3B",
         color: "#fff",
@@ -474,12 +493,12 @@ $(document).ready(function() {
         .parentsUntil(".video-16-parent-one")
         .css({ border: "4px solid #f00" });
 
-    //
+    // video 17 traversing children & find
+
     $(".video-17-parent-one")
         .find("*")
         .css({ border: "2px solid #666", padding: "10px" });
-
-    $(".video-17-parent-tow").children().css({ border: "4px solid #f00" });
+    $(".video-17-parent-tow").children().css({ border: "4px solid #ff0" });
     // find بيوصال لاخر العناصر الاب
     $(".video-17-parent-tow-find")
         // .find(".video-17-child-tow")
@@ -488,7 +507,6 @@ $(document).ready(function() {
         .css({ border: "4px solid #f00" });
 
     // video 18 traversing siblings & next & prev
-
     $(
             ".video-18-section, .video-18-section-tow, .video-18-section-three, .video-18-section-four, .video-18-section-five, .video-18-section-sex, .video-18-section-seven"
         )
@@ -499,6 +517,7 @@ $(document).ready(function() {
             backgroundColor: "#666",
             color: "#fafafa",
         });
+
     $(".video-18-section .video-18-parent-three")
         // .siblings(".video-18-parent-tow")
         .siblings()
@@ -569,6 +588,7 @@ $(document).ready(function() {
     $(".video-19-section-tow div")
         .not(":contains('four")
         .css({ border: "5px solid #00f" });
+
     // video 20 reference
     $(".video-20-div-1 *").css({ backgroundColor: "#ffc107" });
     $(".video-20-div-2 p ").css({ backgroundColor: "#ffc107" });
@@ -584,11 +604,11 @@ $(document).ready(function() {
     $(".video-21-parent-one  p:first-child").css({ backgroundColor: "#ffc107" });
     $(".video-21-parent-one  p:last-child").css({ backgroundColor: "#ffc107" });
     // :first-of-Type بيدوار على نوع معين انت مديهولو حت و لو قبلو عناصر
-    $(".video-21-parent-tow p:first-of-Type").css({ backgroundColor: "#ffc107" });
+    $(".video-21-parent-tow p:first-of-Type").css({ backgroundColor: "#333" });
     $(".video-21-parent-tow p:last-of-Type").css({ backgroundColor: "#ffc107" });
     // :nth-child(3)
     $(".video-21-parent-three p:nth-child(3)").css({
-        backgroundColor: "#ffc107",
+        backgroundColor: "#3489db",
     });
     $(".video-21-parent-three p:nth-last-child(2)").css({
         backgroundColor: "#ffc107",
@@ -613,7 +633,7 @@ $(document).ready(function() {
     // ~ معناها الاشقاء
     $(".video-22-container-five  div ~ p").css({ backgroundColor: "#ffc107" });
     //
-    $(".video-22-container-sex p:gt(1)").css({ backgroundColor: "#ffc107" });
+    $(".video-22-container-sex p:gt(1)").css({ backgroundColor: "#00f" });
     $(".video-22-container-sex p:lt(1)").css({ backgroundColor: "#ffc107" });
     // :not( :contains('6') لا يحتوى على كلمة معينة
     $(".video-22-container-seven p:not( :contains('6'))").css({
@@ -624,11 +644,11 @@ $(document).ready(function() {
     $(".video-23-parent-tow :animated").css({ backgroundColor: "#ffc107" });
     $("input[name='video32input']").focus();
     $(":focus").css({ padding: "10px" });
-    $(".video-23-four div:contains('rashad')")
+    $(".video-23-four div:contains('hossam')")
         .animate({ height: "200px" }, 5000)
         .css({ backgroundColor: "#666", color: "#fff" });
     $(".video-23-parent-five div:has('.test-video-23')").css({
-        backgroundColor: "#ffc107",
+        backgroundColor: "#080",
     });
 
     $(".video-23-btn-sex").css({
@@ -636,10 +656,10 @@ $(document).ready(function() {
         margin: "20px auto",
         display: "block",
     });
-    $(".video-23-visible").css({ backgroundColor: "#999", height: "200px" });
+    $(".video-23-visible").css({ backgroundColor: "#c3c3c3", height: "200px" });
     $(".video-23-hidden").css({
         display: "none",
-        backgroundColor: "#c3c3c3",
+        backgroundColor: "#ffd2d2",
         height: "200px",
     });
     $(".video-23-btn-sex").on("click", function() {
@@ -651,6 +671,7 @@ $(document).ready(function() {
     });
     $("p:lang('ar')").css({ textAlign: "right" });
     // ******************************************/
+
     // video 20 attr
     // اختيار العنصار عن طريق الالتربيوت
     $("[alt='image 1']").css({ borderRadius: "50% " });
@@ -665,7 +686,7 @@ $(document).ready(function() {
     // ^= عنصر يبدا بى كلمة معينة
     $("p[title*='مثال']").css({ border: "3px solid #3498db", padding: "10px" });
 
-    // video 25
+    // video 25 traversing text & checked & enabled & disabled & password
     $(".video-25-parent :input").css({ display: "block" });
     $(".video-25-parent :text").css({ border: "5px solid #f00" });
     $(".video-25-parent :disabled").css({ border: "5px solid #f00" });
@@ -741,7 +762,7 @@ $(document).ready(function() {
         $("<input type='file'> <span>+</span>").insertAfter($(this));
     });
 
-    // video 29
+    // video 29 Event on
     var div291 = $(".video-29-div-1");
     var div292 = $(".video-29-div-2");
     var div293 = $(".video-29-div-3");
@@ -758,8 +779,13 @@ $(document).ready(function() {
     div292.on("customEventDesign", function(event, myHeight, myWidth, myBack) {
         $(this).height(myHeight).width(myWidth).css({ backgroundColor: myBack });
     });
+    var HeightElementVideo29Div2 = "200px";
     div292.on("click", function() {
-        $(this).trigger("customEventDesign", ["200px", "100%", "#999"]);
+        $(this).trigger("customEventDesign", [
+            HeightElementVideo29Div2,
+            "100%",
+            "#999",
+        ]);
     });
 
     // map event with bind
@@ -938,6 +964,9 @@ $(function() {
     document.getElementsByTagName("head")[0].appendChild(fontAr);
 
     $("body").append(
+        "<input type='text' class='setFontAr' placeholder='set font Ar'>"
+    );
+    $("body").append(
         "<input list='fontAr' class='fontAr' placeholder='set font Ar'>"
     );
     $("body").append("<datalist id='fontAr'></datalist>");
@@ -954,15 +983,25 @@ $(function() {
     $("datalist#fontAr").append("<option value='Mirza, cursive'></option>");
     $("datalist#fontAr").append("<option value='Lateef, cursive'></option>");
     $("datalist#fontAr").append("<option value='Scheherazade, serif'></option>");
-    $(".fontAr").css({
+    $(".fontAr ").css({
         width: "fit-content",
         fontSize: "13px",
         border: "10px solid #333",
         borderRadius: "10px",
         padding: "5px 5px",
         position: "fixed",
-        bottom: "50px",
-        left: "5px",
+        bottom: "0px",
+        left: "140px",
+    });
+    $(".setFontAr ").css({
+        width: "fit-content",
+        fontSize: "13px",
+        border: "10px solid #333",
+        borderRadius: "10px",
+        padding: "5px 5px",
+        position: "fixed",
+        bottom: "0px",
+        left: "420px",
     });
     $("body").append("<button class='fontArBtn'>Test Font</button>");
     $(".fontArBtn").css({
@@ -976,9 +1015,27 @@ $(function() {
         position: "fixed",
         bottom: "0px",
         left: "50px",
+        display: "inline-block",
     });
     $(".fontArBtn").on("click", function() {
         var setColorVideo14input1 = $(".fontAr").val();
+        $("body").css("fontFamily", setColorVideo14input1);
+    });
+    $("body").append("<button class='fontArBtn1'>Test Font 1</button>");
+    $(".fontArBtn1").css({
+        width: "fit-content",
+        backgroundColor: "#bb2d3b",
+        fontSize: "13px ",
+        color: "#fff",
+        border: "10px solid #333",
+        borderRadius: "10px",
+        padding: "5px 5px",
+        position: "fixed",
+        bottom: "0px",
+        left: "320px",
+    });
+    $(".fontArBtn1").on("click", function() {
+        var setColorVideo14input1 = $(".setFontAr").val();
         $("body").css("fontFamily", setColorVideo14input1);
     });
 });
@@ -1000,3 +1057,27 @@ $(document).ready(function() {
         borderRight: "3px solid #fff",
     });
 });
+
+// explain test get anything about element
+
+
+// explain for div parent to slide toggle
+$(function() {
+    $("div.parent").after('<i class="fas fa-times close"></i>');
+    // code
+    $("body").on("click", ".close", function() {
+        $("div.parent").css({ opacity: "1" });
+        // code
+        setTimeout(function() {
+            "use strict";
+            // Code
+            $("div.parent").slideToggle(500);
+        }, 100);
+    });
+});
+
+// console.log("I am a console.log message");
+// console.error("I am a console.error message");
+// console.info("I am a console.info message");
+// console.warn("I am a console.warn message");
+// console.debug("I am a console.debug message");

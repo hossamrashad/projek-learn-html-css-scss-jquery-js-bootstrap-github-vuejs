@@ -2,6 +2,7 @@
 <html lang="en">
   <head> 
     <link rel="shortcut icon" href="images/logo/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://hossamrashad.github.io/libraries/css/font-awesome/css/all.min.css">
     <title>Learn Jquery</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <style>body{height: 20000px} .width-100{width:100%} .style-test{border: 2px solid #333; border-radius:10px;padding:20px; background-color: #BB2D3B; color: #fafafa} .root-test{background-color: #111; color: #fff} .padding{color: #3498db; padding: 20px} .display-none{display: none}</style>
@@ -71,7 +72,11 @@
             <div class="parent-disc-code">
               <pre class="pre-language-html"><code class="code-language-html"><span class="token">&lt;</span><span class="tag">button </span><span class="attr-name">class</span><span class="equal">=</span><span class="punctuation">'</span><span class="attr-value">ElementBtn</span><span class="punctuation">'</span><span class="token">&gt;</span>Events hover = css<span class="token">&lt;/</span><span class="tag">button</span><span class="token">&gt;</span></code></pre>
               <div class="hr-style-tow"></div>
-              <pre class="pre-language-javascript"><code class="code-language-javascript"><span class="comment pl-20">// Event </span><br><span class="jquery">$</span><span class="element"><span class="token">(</span>'parentElement'<span class="token">)</span></span><span class="on">.on</span><span class="token">(</span><span class="event">'hover'</span><span class="childElement">, 'button', </span><span class="function">function</span><span class="token">() {</span><br><span class="comment pl-20">// effect </span><br><span class="element pl-20"><span class="token">(</span>'Element'<span class="token">)</span></span><span class="effect">.css({color: "block"})<span class="token">(</span><span class="token">);</span></span><br><span class="token">)};</span></code></pre>
+              <pre class="pre-language-javascript"><code class="code-language-javascript"><span class="comment pl-20">// Event </span><br><span class="jquery">$</span><span class="element"><span class="token">(</span>'parentElement'<span class="token">)</span></span><span class="on">.on</span><span class="token">(</span><span class="event">'hover'</span><span class="childElement">, 'button', </span><span class="function">function</span><span class="token">() {</span><br><span class="comment pl-20">// effect </span><br><span class="element pl-20"><span class="token">(</span>'Element'<span class="token">)</span></span><span class="effect">.hover({<br>function(){
+color: "black"},
+function(){
+color: "red"},
+})</span><br><span class="token">)};</span></code></pre>
             </div>
           </div>
         </div>
@@ -80,59 +85,202 @@
           <button class="btn btn-outline-info video-3-btn-6">Events <span class='disc-btn'>hover</span>  </button>
           <p class="video-3-p-6 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <hr class="hr-style">
-        <h3 class="h2 text-center mb-5">video 4 Effects</h3>
-        <div class="col-sm-6">
-          <button class="btn btn-info video-4-btn-1">Effects Hide  </button>
+        <div class="hr-style"></div>
+        <div class="explain">video 4 Effects hide & show & toggle</div>
+        <div class="col-sm-12">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-html"><code class="code-language-html"><span class="token">&lt;</span><span class="tag">button </span><span class="attr-name">class</span><span class="equal">=</span><span class="punctuation">'</span><span class="attr-value">ElementBtn</span><span class="punctuation">'</span><span class="token">&gt;</span>effect hide<span class="token">&lt;/</span><span class="tag">button</span><span class="token">&gt;</span></code></pre>
+              <div class="hr-style-tow"></div>
+              <pre class="pre-language-javascript"><code class="code-language-javascript"><span class="comment pl-20">// Event </span><br><span class="jquery">$</span><span class="element"><span class="token">(</span>'parentElement'<span class="token">)</span></span><span class="on">.on</span><span class="token">(</span><span class="event">'dblclick'</span><span class="childElement">, 'button', </span><span class="function">function</span><span class="token">() {</span><br><span class="comment pl-20">// effect </span><br><span class="element pl-20"><span class="token">(</span>'Element'<span class="token">)</span></span><span class="effect">.hide<span class="token">("Fast"</span><span class="token">);</span></span><br><span class="token">)};</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <button class="btn btn-outline-info video-4-btn-1">Effects <span class='disc-btn'>hide</span>  </button>
           <p class="video-4-p-1 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
         <div class="col-sm-6">
-          <button class="btn btn-info video-4-btn-2">Effects Show  </button>
-          <p class="video-4-p-2 d-none lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-html"><code class="code-language-html"><span class="token">&lt;</span><span class="tag">button </span><span class="attr-name">class</span><span class="equal">=</span><span class="punctuation">'</span><span class="attr-value">ElementBtn</span><span class="punctuation">'</span><span class="token">&gt;</span>Events show<br><span class="token">&lt;/</span><span class="tag">button</span><span class="token">&gt;</span></code></pre>
+            </div>
+          </div>
         </div>
         <div class="col-sm-6">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-css"><code class="code-language-css"><span class="element">.element </span><span class="token">{</span><br><span class="property pl-15">display:</span><span class="value">  none;</span><br><span class="token">}</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <div class="hr-style-tow"></div>
+              <pre class="pre-language-javascript"><code class="code-language-javascript"><span class="comment pl-20">// Event </span><br><span class="jquery">$</span><span class="element"><span class="token">(</span>'parentElement'<span class="token">)</span></span><span class="on">.on</span><span class="token">(</span><span class="event">'click'</span><span class="childElement">, 'button', </span><span class="function">function</span><span class="token">() {</span><br><span class="comment pl-20">// effect </span><br><span class="element pl-20"><span class="token">(</span>'Element'<span class="token">)</span></span><span class="effect">.show<span class="token">(</span><span class="token">);</span></span><br><span class="token">)};</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="hr-style-three"></div>
+        <div class="col-sm-12">
+          <button class="btn btn-outline-info video-4-btn-2">Effects <span class='disc-btn'>Show</span>  </button>
+          <p class="video-4-p-2 display-none lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="col-sm-12">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-html"><code class="code-language-html"><span class="token">&lt;</span><span class="tag">button </span><span class="attr-name">class</span><span class="equal">=</span><span class="punctuation">'</span><span class="attr-value">ElementBtn</span><span class="punctuation">'</span><span class="token">&gt;</span>Effect Toggle<span class="token">&lt;/</span><span class="tag">button</span><span class="token">&gt;</span></code></pre>
+              <div class="hr-style-tow"></div>
+              <pre class="pre-language-javascript"><code class="code-language-javascript"><span class="comment pl-20">// Event </span><br><span class="jquery">$</span><span class="element"><span class="token">(</span>'parentElement'<span class="token">)</span></span><span class="on">.on</span><span class="token">(</span><span class="event">'click'</span><span class="childElement">, 'button', </span><span class="function">function</span><span class="token">() {</span><br><span class="comment pl-20">// effect </span><br><span class="element pl-20"><span class="token">(</span>'Element'<span class="token">)</span></span><span class="effect">.toggle<span class="token">(</span><span class="token">);</span></span><br><span class="token">)};</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="hr-style-three"></div>
+        <div class="col-sm-12">
           <button class="btn btn-info video-4-btn-3">Effects Toggle  </button>
           <p class="video-4-p-3  lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="hr-style"></div>
         </div>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 5 Effects || fadeIn , fadeOut , fadeToggle , fadeTo</h3>
+        <div class="explain">video 5 Effects || fadeIn , fadeOut , fadeToggle , fadeTo</div>
         <div class="col-sm-6">
-          <button class="btn btn-info video-5-btn-1">Effects fade In  </button>
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-html"><code class="code-language-html"><span class="token">&lt;</span><span class="tag">button </span><span class="attr-name">class</span><span class="equal">=</span><span class="punctuation">'</span><span class="attr-value">ElementBtn</span><span class="punctuation">'</span><span class="token">&gt;</span><br>Events click = fadeIn <br><span class="token">&lt;/</span><span class="tag">button</span><span class="token">&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-css"><code class="code-language-css"><span class="element">.element </span><span class="token">{</span><br><span class="property pl-15">display:</span><span class="value">  none;</span><br><span class="token">}</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-javascript"><code class="code-language-javascript"><span class="comment pl-20">// Event </span><br><span class="jquery">$</span><span class="element"><span class="token">(</span>'parentElement'<span class="token">)</span></span><span class="on">.on</span><span class="token">(</span><span class="event">'click'</span><span class="childElement">, 'button', </span><span class="function">function</span><span class="token">() {</span><br><span class="comment pl-20">// effect </span><br><span class="element pl-20"><span class="token">(</span>'Element'<span class="token">)</span></span><span class="effect">.fadeIn<span class="token">(</span><span class="token">);</span></span><br><span class="token">)};</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="hr-style-three"></div>
+        <div class="col-sm-12">
+          <button class="btn btn-info video-5-btn-1">Effects <span class='disc-btn'>fadeIn</span>  </button>
           <p class="video-5-p-1  lead" id="video-5-p-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-12">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-html"><code class="code-language-html"><span class="token">&lt;</span><span class="tag">button </span><span class="attr-name">class</span><span class="equal">=</span><span class="punctuation">'</span><span class="attr-value">ElementBtn</span><span class="punctuation">'</span><span class="token">&gt;</span>Events click = fadeout<span class="token">&lt;/</span><span class="tag">button</span><span class="token">&gt;</span></code></pre>
+              <div class="hr-style-tow"></div>
+              <pre class="pre-language-javascript"><code class="code-language-javascript"><span class="comment pl-20">// Event </span><br><span class="jquery">$</span><span class="element"><span class="token">(</span>'parentElement'<span class="token">)</span></span><span class="on">.on</span><span class="token">(</span><span class="event">'click'</span><span class="childElement">, 'button', </span><span class="function">function</span><span class="token">() {</span><br><span class="comment pl-20">// effect </span><br><span class="element pl-20"><span class="token">(</span>'Element'<span class="token">)</span></span><span class="effect">.fadeout<span class="token">(3000</span><span class="token">);</span></span><br><span class="token">)};</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="hr-style-three"></div>
+        <div class="col-sm-12">
           <button class="btn btn-info video-5-btn-2">Effects fade Out </button>
           <p class="video-5-p-2  lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div class="col-sm-6">
-          <button class="btn btn-info video-5-btn-3">Effects fade toggle  </button>
+        <div class="col-sm-12">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-html"><code class="code-language-html"><span class="token">&lt;</span><span class="tag">button </span><span class="attr-name">class</span><span class="equal">=</span><span class="punctuation">'</span><span class="attr-value">ElementBtn</span><span class="punctuation">'</span><span class="token">&gt;</span>Events click = fade Toggle<span class="token">&lt;/</span><span class="tag">button</span><span class="token">&gt;</span></code></pre>
+              <div class="hr-style-tow"></div>
+              <pre class="pre-language-javascript"><code class="code-language-javascript"><span class="comment pl-20">// Event </span><br><span class="jquery">$</span><span class="element"><span class="token">(</span>'parentElement'<span class="token">)</span></span><span class="on">.on</span><span class="token">(</span><span class="event">'click'</span><span class="childElement">, 'button', </span><span class="function">function</span><span class="token">() {</span><br><span class="comment pl-20">// effect </span><br><span class="element pl-20"><span class="token">(</span>'Element'<span class="token">)</span></span><span class="effect">.fadeToggle<span class="token">(3000</span><span class="token">);</span></span><br><span class="token">)};</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="hr-style-three"></div>
+        <div class="col-sm-12">
+          <button class="btn btn-info video-5-btn-3">Effects <span class='disc-btn'>fade toggle </span> </button>
           <p class="video-5-p-3  lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div class="col-sm-6">
-          <button class="btn btn-info video-5-btn-4">Effects fade to  </button>
+        <div class="col-sm-12">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-html"><code class="code-language-html"><span class="token">&lt;</span><span class="tag">button </span><span class="attr-name">class</span><span class="equal">=</span><span class="punctuation">'</span><span class="attr-value">ElementBtn</span><span class="punctuation">'</span><span class="token">&gt;</span>Events click = fadeTo<span class="token">&lt;/</span><span class="tag">button</span><span class="token">&gt;</span></code></pre>
+              <div class="hr-style-tow"></div>
+              <pre class="pre-language-javascript"><code class="code-language-javascript"><span class="comment pl-20">// Event </span><br><span class="jquery">$</span><span class="element"><span class="token">(</span>'parentElement'<span class="token">)</span></span><span class="on">.on</span><span class="token">(</span><span class="event">'click'</span><span class="childElement">, 'button', </span><span class="function">function</span><span class="token">() {</span><br><span class="comment pl-20">// effect </span><br><span class="element pl-20"><span class="token">(</span>'Element'<span class="token">)</span></span><span class="effect">.fadeTo<span class="token">('fast', 0.5</span><span class="token">);</span></span><br><span class="token">)};</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <button class="btn btn-info video-5-btn-4">Effects <span class='disc-btn'>fade to </span></button>
           <p class="video-5-p-4  lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 6 Effects || slideDown , slideUp , slideToggle </h3>
+        <div class="explain">video 6 Effects || slideDown , slideUp , slideToggle </div>
         <div class="col-sm-6">
-          <button class="btn btn-info video-6-btn-1">Effects slideDown  </button>
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-html"><code class="code-language-html"><span class="token">&lt;</span><span class="tag">button </span><span class="attr-name">class</span><span class="equal">=</span><span class="punctuation">'</span><span class="attr-value">ElementBtn</span><span class="punctuation">'</span><span class="token">&gt;</span><br>Events slideDown<br><span class="token">&lt;/</span><span class="tag">button</span><span class="token">&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-css"><code class="code-language-css"><span class="element">.element </span><span class="token">{</span><br><span class="property pl-15">display:</span><span class="value">  none;</span><br><span class="token">}</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <div class="hr-style-tow"></div>
+              <pre class="pre-language-javascript"><code class="code-language-javascript"><span class="comment pl-20">// Event </span><br><span class="jquery">$</span><span class="element"><span class="token">(</span>'parentElement'<span class="token">)</span></span><span class="on">.on</span><span class="token">(</span><span class="event">'click'</span><span class="childElement">, 'button', </span><span class="function">function</span><span class="token">() {</span><br><span class="comment pl-20">// effect </span><br><span class="element pl-20"><span class="token">(</span>'Element'<span class="token">)</span></span><span class="effect">.slideDown<span class="token">(3000</span><span class="token">);</span></span><br><span class="token">)};</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="hr-style-three"></div>
+        <div class="col-sm-12">
+          <button class="btn btn-info video-6-btn-1">Effects <span class='disc-btn'>slideDown</span>  </button>
           <p class="video-6-p-1  lead" id="video-6-p-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div class="col-sm-6">
-          <button class="btn btn-info video-6-btn-2">Effects slideUp</button>
+        <div class="col-sm-12">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-html"><code class="code-language-html"><span class="token">&lt;</span><span class="tag">button </span><span class="attr-name">class</span><span class="equal">=</span><span class="punctuation">'</span><span class="attr-value">ElementBtn</span><span class="punctuation">'</span><span class="token">&gt;</span>Events click = slideUp<span class="token">&lt;/</span><span class="tag">button</span><span class="token">&gt;</span></code></pre>
+              <div class="hr-style-tow"></div>
+              <pre class="pre-language-javascript"><code class="code-language-javascript"><span class="comment pl-20">// Event </span><br><span class="jquery">$</span><span class="element"><span class="token">(</span>'parentElement'<span class="token">)</span></span><span class="on">.on</span><span class="token">(</span><span class="event">'click'</span><span class="childElement">, 'button', </span><span class="function">function</span><span class="token">() {</span><br><span class="comment pl-20">// effect </span><br><span class="element pl-20"><span class="token">(</span>'Element'<span class="token">)</span></span><span class="effect">.slideUp<span class="token">(3000</span><span class="token">);</span></span><br><span class="token">)};</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="hr-style-three"></div>
+        <div class="col-sm-12">
+          <button class="btn btn-info video-6-btn-2">Effects <span class='disc-btn'>slideUp</span></button>
           <p class="video-6-p-2  lead" id="video-6-p-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div class="col-sm-6">
-          <button class="btn btn-info video-6-btn-3">Effects slideToggle</button>
+        <div class="col-sm-12">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-html"><code class="code-language-html"><span class="token">&lt;</span><span class="tag">button </span><span class="attr-name">class</span><span class="equal">=</span><span class="punctuation">'</span><span class="attr-value">ElementBtn</span><span class="punctuation">'</span><span class="token">&gt;</span>Events click = slideToggle<span class="token">&lt;/</span><span class="tag">button</span><span class="token">&gt;</span></code></pre>
+              <div class="hr-style-tow"></div>
+              <pre class="pre-language-javascript"><code class="code-language-javascript"><span class="comment pl-20">// Event </span><br><span class="jquery">$</span><span class="element"><span class="token">(</span>'parentElement'<span class="token">)</span></span><span class="on">.on</span><span class="token">(</span><span class="event">'click'</span><span class="childElement">, 'button', </span><span class="function">function</span><span class="token">() {</span><br><span class="comment pl-20">// effect </span><br><span class="element pl-20"><span class="token">(</span>'Element'<span class="token">)</span></span><span class="effect">.slideToggle<span class="token">(3000</span><span class="token">);</span></span><br><span class="token">)};</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="hr-style-three"></div>
+        <div class="col-sm-12">
+          <button class="btn btn-info video-6-btn-3">Effects <span class='disc-btn'>slideToggle</span></button>
           <p class="video-6-p-3  lead" id="video-6-p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <hr>
-        <div class="col-sm-6">
-          <button class="btn btn-info video-7-btn-1">Effects Animate</button>
+        <div class="col-sm-12">
+          <div class="test-tow text-left"> 
+            <div class="parent-disc-code">
+              <pre class="pre-language-html"><code class="code-language-html"><span class="token">&lt;</span><span class="tag">button </span><span class="attr-name">class</span><span class="equal">=</span><span class="punctuation">'</span><span class="attr-value">ElementBtn</span><span class="punctuation">'</span><span class="token">&gt;</span>Events click = hide<span class="token">&lt;/</span><span class="tag">button</span><span class="token">&gt;</span></code></pre>
+              <div class="hr-style-tow"></div>
+              <pre class="pre-language-javascript"><code class="code-language-javascript"><span class="comment pl-20">// Event </span><br><span class="jquery">$</span><span class="element"><span class="token">(</span>'parentElement'<span class="token">)</span></span><span class="on">.on</span><span class="token">(</span><span class="event">'click'</span><span class="childElement">, 'button', </span><span class="function">function</span><span class="token">() {</span><br><span class="comment pl-20">// effect </span><br><span class="element pl-20"><span class="token">(</span>'Element'<span class="token">)</span></span><span class="effect">.Animate<span class="token">({</span><br><span class="pl-30">width: "80%", </span><br><span class="token pl-20">});</span></span><br><span class="token">)};</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="hr-style-three"></div>
+        <div class="col-sm-12">
+          <button class="btn btn-info video-7-btn-1">Effects <span class='disc-btn'>Animate</span></button>
           <p class="video-7-p-1  lead" id="video-7-p-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 10 Get || set</h3>
+        <div class="explain">video 10 Get || set</div>
         <div class="col-sm-6">
           <p class="video-10-p-1  lead" id="video-10-p-1">Lorem  <b>sed</b> do eiusmod tempor </p>
           <button class="btn btn-info video-10-btn-1 d-block">Get & Set value </button><br>
@@ -146,16 +294,14 @@
           <div class="video-10-p-3" id="video-10-p-3"></div>
           <div class="video-10-p-4" id="video-10-p-4"></div>
           <div class="video-10-p-5" id="video-10-p-5"></div>
-        </div><br><br><br>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 11 Add Element || append , prepend , before , after, appendTo, prependTo</h3>
+        </div>
+        <div class="explain">video 11 Add Element || append , prepend , before , after, appendTo, prependTo</div>
         <div class="col-sm-6"> 
           <div class="video-11-div-1" id="video-11-div-1"> 
             <h3 class="h2">Element</h3>
           </div>
         </div>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 12 Remove Element || remove , empty</h3>
+        <div class="explain">video 12 Remove Element || remove , empty</div>
         <div class="col-sm-6"> 
           <button class="btn btn-info video-12-btn-1" id="video-12-btn-1">click Remove</button>
           <div class="video-12-div-1" id="video-12-div-1"> 
@@ -176,8 +322,7 @@
             <h3 class="h2">ElementE</h3>
           </div>
         </div>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 13 Css Class</h3>
+        <div class="explain">video 13 Css Class</div>
         <div class="col-sm-6"> 
           <button class="btn btn-info video-13-btn-1" id="video-13-btn-1">click Add Class</button>
           <div class="video-13-div-1" id="video-13-div-1"> 
@@ -218,8 +363,7 @@
             <h3 class="h3">Element Class filter last</h3>
           </div>
         </div>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 14 Css Get & Set</h3>
+        <div class="explain">video 14 Css Get & Set</div>
         <div class="col-sm-6"> 
           <button class="btn btn-danger video-14-btn-1" id="video-14-btn-1">get css attr </button>
           <p class="lead style-test pt-5 pb-5 mb-2 mt-5 video-14-div-1">Rovan Hossam Rashad</p>
@@ -229,18 +373,19 @@
           <button class="btn btn-danger video-14-btn-2" id="video-14-btn-2">set css attr </button>
           <p class="lead style-test pt-5 pb-5 mb-2 mt-5 video-14-div-2">Rovan Hossam Rashad</p>
           <input class="video-14-input-2" type="text" name="" id="video-14-input-2" placeholder="set background color ">
-        </div><br>
-        <hr><br>
-        <h3 class="h3 text-center mb-5">video 15 Dimensions width & height</h3>
-        <div class="video-15-div-1"> </div><br><br>
-        <div class="video-15-div-2">Element + width</div>
-        <div class="video-15-div-3"></div>
-        <div class="video-15-div-4">Element + width</div>
-        <div class="video-15-div-5"> </div>
-        <div class="video-15-div-6">Element + width</div>
-        <div class="video-15-div-7"> </div><br>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 16 traversing parent & parents & parentsUntil</h3>
+        </div>
+        <div class="explain">video 15 Dimensions width & height</div>
+        <div class="col-sm-6"> 
+          <div class="video-15-div-1"> </div><br><br>
+          <div class="video-15-div-2">Element + width</div>
+          <div class="video-15-div-3"></div>
+          <div class="video-15-div-4">Element + width</div>
+          <div class="video-15-div-5"> </div>
+          <div class="video-15-div-6">Element + width</div>
+          <div class="video-15-div-7"> </div><br>
+          <hr>
+        </div>
+        <div class="explain">video 16 traversing parent & parents & parentsUntil</div>
         <div class="col-sm-6"> 
           <div class="video-16-parent-one"> 
             <div class="video-16-parent-tow"> 
@@ -262,8 +407,7 @@
               </div>
             </div>
           </div>
-        </div><br><br><br>
-        <hr>
+        </div>
         <div class="col-sm-6"> 
           <div class="video-16-parent-one"> 
             <div class="video-16-parent-tow"> 
@@ -275,8 +419,7 @@
             </div>
           </div>
         </div>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 17 traversing children & find </h3>
+        <div class="explain">video 17 traversing children & find </div>
         <div class="col-sm-6"> 
           <div class="video-17-parent-one">parent one
             <div class="video-17-parent-tow">parent tow
@@ -298,10 +441,9 @@
               </div>
             </div>
           </div>
-        </div><br><br><br>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 18 traversing siblings & next & prev</h3>
-        <div class="col-sm-6"> 
+        </div>
+        <div class="explain">video 18 traversing siblings & next & prev</div>
+        <div class="col-sm-6"> section(class="video-18-section")
           <section class="video-18-section">
             <div class="video-18-parent-one">parent one</div>
             <div class="video-18-parent-tow">parent tow</div>
@@ -318,8 +460,8 @@
             <div class="video-18-parent-four">parent four</div>
             <p class="video-18-child">children </p>
           </section>
-        </div><br><br><br>
-        <hr>
+        </div>
+        <div class="hr-style"></div>
         <div class="col-sm-6"> 
           <section class="video-18-section-three">
             <div class="video-18-parent-one">parent one</div>
@@ -337,8 +479,8 @@
             <div class="video-18-parent-four">parent four</div>
             <p class="video-18-child">children </p>
           </section>
-        </div><br><br><br>
-        <hr>
+        </div>
+        <div class="hr-style"></div>
         <div class="col-sm-6"> 
           <section class="video-18-section-five">
             <div class="video-18-parent-one">parent one</div>
@@ -357,6 +499,7 @@
             <p class="video-18-child">children </p>
           </section>
         </div>
+        <div class="hr-style"></div>
         <div class="col-sm-6"> 
           <section class="video-18-section-seven">
             <div class="video-18-parent-one">parent one</div>
@@ -365,9 +508,8 @@
             <div class="video-18-parent-four">parent four</div>
             <p class="video-18-child">children </p>
           </section>
-        </div><br><br><br>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 19 traversing first & last & aq & Filter & not</h3>
+        </div>
+        <div class="explain">video 19 traversing first & last & aq & Filter & not</div>
         <div class="col-sm-6"> 
           <section class="video-19-section-one">
             <div class="video-19-parent-one">first eq ( 0 ) 1</div>
@@ -405,9 +547,8 @@
             <div class="video-19-parent-fourteen">eq ( 13 ) 14  </div>
             <div class="video-19-parent-four">last parent four</div>
           </section>
-        </div><br><br><br>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 20 reference * & Element & Element.ClassName & Element.IdName & Element:first & Element:last & Element:even & Element:odd</h3>
+        </div>
+        <div class="explain">video 20 reference * & Element & Element.ClassName & Element.IdName & Element:first & Element:last & Element:even & Element:odd</div>
         <div class="col-sm-4"> 
           <div class="video-20-div-1"> 
             <p class="lead">rovan hossam *</p>
@@ -457,13 +598,12 @@
             <p class="lead">rovan hossam</p>
             <p class="lead">odd rovan hossam</p>
           </div>
-        </div><br><br><br>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 21 reference first-child & last-child & first-of-Type & last-of-Type & nth-child(3) & nth-last-child(2) & nth-of-type(3) & nth-last-of-type(3) </h3>
+        </div>
+        <div class="explain">video 21 reference first-child & last-child & first-of-Type & last-of-Type & nth-child(3) & nth-last-child(2) & nth-of-type(3) & nth-last-of-type(3) </div>
         <div class="col-sm-3"> 
           <div class="video-21-parent-one  text-sm-start">
             <p lang="en">first child in parent div</p>
-            <div class="parent"> 
+            <div class="words-21"> 
               <p lang="en">first child div</p>
               <p lang="en">second  div</p>
               <p lang="en"> last child div</p>
@@ -475,7 +615,7 @@
           <div class="video-21-parent-tow  text-sm-start">
             <div lang="en">first div child in parent div</div>
             <p lang="en">first p child in parent div</p>
-            <div class="parent"> 
+            <div class="parent-25"> 
               <div lang="en"> first div child div</div>
               <p lang="en">first p child div</p>
               <p lang="en">second  div</p>
@@ -489,7 +629,7 @@
           <div class="video-21-parent-three  text-sm-start">
             <div lang="en">first div child in parent div</div>
             <p lang="en">first p child in parent div</p>
-            <div class="parent"> 
+            <div class="parent-25"> 
               <div lang="en"> first div child div</div>
               <p lang="en">first p child div</p>
               <p lang="en">second  div</p>
@@ -503,7 +643,7 @@
           <div class="video-21-parent-four  text-sm-start">
             <div lang="en">first div child in parent div</div>
             <p lang="en">first p child in parent div</p>
-            <div class="parent"> 
+            <div class="parent-21"> 
               <div lang="en"> first div child div</div>
               <p lang="en">first p child div</p>
               <p lang="en">second  div</p>
@@ -512,9 +652,8 @@
             </div>
             <p lang="en">last p child in parent div</p>
           </div>
-        </div><br><br><br>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 22 reference only-child & only-of-type & > & + & ~ & gt(1) & lt(1) & not() </h3>
+        </div>
+        <div class="explain">video 22 reference only-child & only-of-type & > & + & ~ & gt(1) & lt(1) & not() </div>
         <div class="col-sm-3"> 
           <div class="video-22-container"> 
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit </p>
@@ -568,9 +707,8 @@
             <p>p is only child</p>
             <p>p is only child</p>
           </div>
-        </div><br><br><br>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 23 reference header & animated & focus & has & empty & parent & hidden & visible & root = html & lang</h3>
+        </div>
+        <div class="explain">video 23 reference header & animated & focus & has & empty & parent & hidden & visible & root = html & lang</div>
         <div class="col-sm-3"> 
           <div class="video-23-parent-one"> 
             <h1>header h1</h1>
@@ -617,9 +755,8 @@
           <div class="video-23-visible">visible</div>
           <div class="video-23-hidden">hidden</div>
           <button class="video-23-btn-sex-2">click  root</button>
-        </div><br><br><br>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 24 traversing attr & href & title & src & alt</h3>
+        </div>
+        <div class="explain">video 24 traversing attr & href & title & src & alt</div>
         <div class="col-sm-4"><img src="//via.placeholder.com/300x300/333" alt="image 1" class="img-fluid" title="image 1" >
           <p class="lead" lang="en">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،</p>
           <p class="lead" lang="ar">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،</p>
@@ -634,9 +771,8 @@
           <p class="lead" lang="en" title="يمكن">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،</p>
           <p class="lead" lang="ar" title=" مثال لنص يمكن">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،</p>
           <p class="lead" lang="en" title="هو مثال لنص يمكن">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،</p>
-        </div><br><br><br>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 25 traversing text & checked & enabled & disabled & password</h3>
+        </div>
+        <div class="explain">video 25 traversing text & checked & enabled & disabled & password</div>
         <div class="video-25-parent"> 
           <input type="checkbox" name="" checked>
           <input type="checkbox" name="">
@@ -647,9 +783,8 @@
           <input type="password" name="" disabled>
           <input type="submit" value="send">
           <input type="text" name="">
-        </div><br><br><br>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 26 Event bind</h3>
+        </div>
+        <div class="explain">video 26 Event bind</div>
         <div class="col-sm-4"> 
           <div class="video-26-div-one"> 
             <div class="one">this is div one </div>
@@ -667,9 +802,8 @@
           <input type="text" name="input-custom-video-26" value="">
           <div class="custom-event-video26-2">this is div four</div>
           <button class="btn-video-26-2">click  custom div four</button>
-        </div><br><br><br>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 27 Event live</h3>
+        </div>
+        <div class="explain">video 27 Event live</div>
         <div class="col-sm-4"> 
           <div class="parent-div-video-27">
             <button class="btn-video-27-1">click to add p</button>
@@ -679,11 +813,9 @@
           <div class="input-file">
             <input type="file" name=""><span>+</span>
           </div>
-        </div><br><br><br>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 28 Event </h3><br><br><br>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 29 Event  on </h3>
+        </div>
+        <div class="explain">video 28 Event </div>
+        <div class="explain">video 29 Event  on </div>
         <div class="col-sm-4"> 
           <div class="video-29-div-1"> 
             <div>single multi on this is div 1</div>
@@ -708,9 +840,8 @@
           <div class="input-file-29">
             <input type="file" name=""><span>+</span>
           </div>
-        </div><br><br><br>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 30 Event  PreventDefault() </h3>
+        </div>
+        <div class="explain">video 30 Event  PreventDefault() </div>
         <div class="col-sm-4"> 
           <div class="video-30-div-1">
              <a href="http://www.google.com" target="_blank" onclick="return false">link return false</a>
@@ -718,11 +849,14 @@
             <a class="lank301" href="http://www.google.com" target="_blank">Google link</a><img class="img-fluid display-none" src="http://placehold.it/300x300/333" alt="">
             <div class="video-30-test"></div>
           </div>
-        </div><br><br><br>
-        <hr>
-        <h3 class="h3 text-center mb-5">video 31 Event keyDown, KeyPress, KeyUp</h3>
+        </div>
+        <div class="explain">video 31 Event keyDown, KeyPress, KeyUp</div>
         <div class="col-sm-4">
           <input type="text" name="inputText" id="inputText" placeholder="Some Word">
+        </div>
+        <div class="parent"> 
+          <div class="Element"></div>
+          <div class="Element1"></div>
         </div>
       </div>
     </div>

@@ -1,9 +1,50 @@
 @import "./helpers/mixin";
+// media b5
+@mixin media-b5($point) {
+    // 576 to Upper
+    @if $point==xs {
+        @media (min-width: 360px) {
+            @content;
+        }
+    }
+    // 576 to Upper
+    @if $point==sm {
+        @media (min-width: 576px) {
+            @content;
+        }
+    }
+    // 768 to Upper
+    @if $point==md {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+    // 998 to Upper
+    @if $point==lg {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+    // 1200 to Upper
+    @if $point==xlg {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+    // 1367 to Upper
+    @if $point==xxlg {
+        @media (min-width: 1566px) {
+            @content;
+        }
+    }
+}
+
 body {
     background: #999;
 }
 
-.parent {
+.parent,
+.parent-element {
     width: 100%;
     height: 200px;
     background-color: #eee;
@@ -12,7 +53,10 @@ body {
     align-items: center;
     justify-content: center;
     position: fixed;
-    .child {
+    top: 0px;
+    opacity: 0;
+    .child,
+    .Element {
         width: 50%;
         height: 50%;
         background-color: #27ae60;
@@ -21,7 +65,8 @@ body {
         color: #e8e8e8;
         font-size: 2em;
     }
-    .outSide {
+    .outSide,
+    .Element1 {
         background-color: #333;
         color: #e8e8e8;
         width: 50%;
@@ -273,8 +318,65 @@ button {
         margin: 0;
         padding: 0;
     }
-    .pl-10 {
-        padding-left: 10px;
+}
+
+.fdg {
+    color: #000;
+}
+
+// pre & code disc css
+.parent-disc-code {
+    padding: 0;
+    position: relative;
+    width: 100%;
+    pre.pre-language-css {
+        position: relative;
+        padding: 40px 20px 20px 20px;
+        direction: ltr;
+        background: #2d2d2d;
+        @include borderRadius(10px);
+        &::before {
+            content: "CSS & SCSS";
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #f83c23;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 5px 10px;
+            letter-spacing: 3px;
+        }
+        code.code-language-css {
+            direction: ltr;
+            color: #ccc;
+            font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+            font-size: 1em;
+            text-align: left;
+            font-weight: bold;
+            line-height: 1.5;
+            text-transform: none;
+            font-size: 16px;
+            .comment {
+                color: #9e9e9e;
+            }
+            .element {
+                color: #7ec699;
+            }
+            .token {
+                color: #ccc;
+            }
+            .property {
+                color: #00bcd4;
+            }
+            .value {
+                color: #c5b100;
+            }
+        }
+    }
+    p {
+        margin: 0;
+        padding: 0;
     }
 }
 
@@ -415,4 +517,32 @@ button {
     font-size: 20px;
     color: #000;
     font-weight: bold;
+}
+
+.display-none {
+    display: none;
+}
+
+.top10 {
+    top: -33%;
+}
+
+.close {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #6e6e6e;
+    z-index: 5000;
+    position: fixed;
+    top: 0px;
+    color: #00bcd4;
+    line-height: 50px;
+    text-align: center;
+    font-size: 2em;
+}
+
+// website snippet 
+.app__textarea {
+    height: 50vh;
+    white-space: break-spaces;
 }

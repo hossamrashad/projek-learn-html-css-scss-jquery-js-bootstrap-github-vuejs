@@ -4013,12 +4013,9 @@ transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY
 }
 
 .filter {
-  -webkit-filter: blur(4px);
-  filter: grayscale(0);
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
   -webkit-filter: invert(0);
-  filter: invert(0);
+  -webkit-filter: blur(4px);
+  -webkit-filter: invert(0);
 }
 
 .parent-grid {
