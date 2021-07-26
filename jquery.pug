@@ -1414,16 +1414,50 @@ html(lang="en")
             br
             |
             |
-            a(href="http://www.google.com" target="_blank" class="lank301") Google link
+            a(href="http://www.google.com" target="_blank" class="lank301 btn-primary btn") Google link
             img(src="http://placehold.it/300x300/333" alt="" class="img-fluid display-none")
             div(class="video-30-test")
         div(class="explain") video 31 Event keyDown, KeyPress, KeyUp
         .col-sm-4
-          input(type='text' name='inputText' id='inputText' placeholder='Some Word' )
+          input(type='text'  placeholder='Some Word' class="inputVideo31")
+          textarea(name='' id='' cols='30' rows='10' placeholder='text area' class="textareaVideo31")
+        .col-sm-6
+          div(class='divVideo31')
+            h4 
+            span.lead 
+
+        div(class="explain") video 32 Event change
+        .col-sm-4
+          input(type='text'  placeholder='Some Word' class="inputVideo32")
+          textarea(name='' id='' cols='30' rows='10' placeholder='text area' class="textareaVideo32")
+          select(name="" class="selectVideo32")
+            option(value="") one  
+            option(value="") tow  
+            option(value="") three  
+        .col-sm-6
+          div(class='divVideo32')
+            h4 
+            span.lead 
+        
+        .explain video 33 event blur & focus
+        .col-sm-6
+          input(type='text'  class='inputCheckLength' placeholder='Some Word' data-length="5")
+          
+        .col-sm-6
+          .divVideo330 Hossam Rashad
+          .divVideo331
+
+        .explain video 35 select
+        .col-xs-6 
+          textarea(name='' id='' cols='30' rows='10' placeholder='text area' class="video35textarea") select word
+
+
+
 
         .parent 
           div(class='Element')
           .Element1
+        a(href="#" class='goToButton' onclick="return false") down 
 
 
     script(src="js/jquery-3-6-0.min.js") 

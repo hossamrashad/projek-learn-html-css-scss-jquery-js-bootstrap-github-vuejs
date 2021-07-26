@@ -127,6 +127,7 @@
 */
 body {
   background: #999;
+  padding-bottom: 50px;
 }
 
 .parent,
@@ -636,6 +637,55 @@ button {
   display: none;
 }
 
+.displayNone {
+  display: none;
+}
+
+.outputCheck {
+  height: 50px;
+  line-height: 50px;
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  display: none;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.goToButton {
+  width: 70px;
+  height: 70px;
+  text-decoration: none;
+  text-transform: capitalize;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  background-color: #16a085;
+  border-width: 6px;
+  border-style: solid;
+  border-top-color: #ac1010;
+  border-right-color: #a10f7c;
+  border-bottom-color: #dbdf14;
+  border-left-color: #000;
+  position: fixed;
+  bottom: 100px;
+  left: 0%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.goToButton:hover {
+  color: #fff;
+}
+
 .top10 {
   top: -33%;
 }
@@ -654,9 +704,65 @@ button {
   font-size: 2em;
 }
 
-.app__textarea {
-  height: 50vh;
-  white-space: break-spaces;
+.divVideo31,
+.divVideo32,
+.divVideo331 {
+  width: 100%;
+  height: 200px;
+  border: 3px solid #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  word-break: break-all;
+}
+
+.divVideo330 {
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  display: none;
+}
+
+.inputVideo31,
+.inputVideo32,
+.selectVideo32 {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.inputVideo31:focus,
+.inputVideo32:focus,
+.selectVideo32:focus {
+  outline: none;
+  border: none;
+}
+
+.selectVideo32 {
+  height: 50px;
+}
+.selectVideo32 option {
+  background: #585858;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  font-family: cursive;
+}
+
+.textareaVideo31,
+.textareaVideo32 {
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 /*# sourceMappingURL=javascript.css.map */

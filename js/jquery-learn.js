@@ -179,13 +179,29 @@
  *   });
  *
  *
- *
- *
- *
+ * ++ event.preventDefault();                          || بتمناع الافتراضى 
+ * ++ Event keyDown, KeyPress, KeyUp                   || خاصة بى حقل الادخال 
+ * ++ Event change                                     || خاصة بى حقل الادخال 
+ * ++ event blur & focus                               || خاصة بى حقل الادخال 
+ * 
+ * ? one = on                                          ||الفرق انو هى بتتنفز مرة واحدة 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
  *
  */
 
-$(".parentElement").show();
 
 // code for function
 $(document).ready(function() {
@@ -776,18 +792,28 @@ $(document).ready(function() {
         $(this).toggleClass("padding");
     });
     // custom Event on
-    div292.on("customEventDesign", function(event, myHeight, myWidth, myBack) {
-        $(this).height(myHeight).width(myWidth).css({ backgroundColor: myBack });
+    // div292.on("customEventDesign", function(event, myHeight, myWidth, myBack) {
+    //     $(this).height(myHeight).width(myWidth).css({ backgroundColor: myBack });
+    // });
+    // var HeightElementVideo29Div2 = "200px";
+    // div292.on("click", function() {
+    //     $(this).trigger("customEventDesign", [
+    //         HeightElementVideo29Div2,
+    //         "100%",
+    //         "#999",
+    //     ]);
+    // });
+    $(".col-sm-4").on(
+        "CustomEvent",
+        ".video-29-div-2",
+        function(event, action1, action2, action3) {
+            // code
+            $(this).height(action1).width(action2).css({ backgroundColor: action3 });
+        }
+    );
+    $(".video-29-div-2").on("click", function() {
+        $(".video-29-div-2").trigger("CustomEvent", ["100px", "150px", "#3498db"]);
     });
-    var HeightElementVideo29Div2 = "200px";
-    div292.on("click", function() {
-        $(this).trigger("customEventDesign", [
-            HeightElementVideo29Div2,
-            "100%",
-            "#999",
-        ]);
-    });
-
     // map event with bind
     div293.on({
         mouseenter: function() {
@@ -797,7 +823,14 @@ $(document).ready(function() {
             $(this).css({ border: "0px solid #333" });
         },
     });
-
+    div293.on({
+        click: function() {
+            $(this).css({ color: "#55efc4" });
+        },
+        dblclick: function() {
+            $(this).css({ color: "#74b9ff" });
+        },
+    });
     // add element with on
     div294.on("click", function() {
         $("<p class='add-video29-4'> add paragraph </p>").insertAfter($(this));
@@ -821,6 +854,63 @@ $(document).ready(function() {
         }
     });
     // video 31 Event keyDown, KeyPress, KeyUp
+    $(".col-sm-4").on("keyup", ".inputVideo31", function() {
+        // code
+        $(".divVideo31 h4").text($(this).val());
+    });
+    $(".col-sm-4").on("keyup", ".textareaVideo31", function() {
+        // code
+        $(".divVideo31 .lead").text($(this).val());
+    });
+
+    // video 31 Event change
+    $(".col-sm-4").on("change", ".inputVideo32", function() {
+        // code
+        $(".divVideo32 h4").text($(this).val());
+    });
+    $(".col-sm-4").on("change", ".textareaVideo32", function() {
+        // code
+        $(".divVideo32 .lead").text($(this).val());
+    });
+
+    $(".selectVideo32 option:eq(0)").val("#3498db");
+    $(".selectVideo32 option:eq(1)").val("#55efc4");
+    $(".selectVideo32 option:eq(2)").val("#6c5ce7");
+
+    $(".col-sm-4").on("change", ".selectVideo32", function() {
+        // code
+        $(".divVideo32").css({
+            background: $(this).val(),
+        });
+    });
+
+    // video 33 event blur & focus
+
+    $("<div class='outputCheck'></div>").insertAfter(".inputCheckLength");
+    var dataLength = $(".inputCheckLength").data("length");
+    $("body").on("blur", ".inputCheckLength", function() {
+        // code
+        console.log($(this).data("length"));
+        if ($(this).val().length >= dataLength) {
+            $(".outputCheck")
+                .fadeIn(1000, function() {
+                    $(this).fadeOut(1000);
+                })
+                .text(
+                    "good characters must be greater than " + dataLength
+                );
+        } else {
+            $(".outputCheck")
+                .fadeIn(1000, function() {
+                    $(this).fadeOut(1000);
+                })
+                .text("characters must be greater than " + dataLength);
+        }
+    });
+    $("body").on("click", ".video35textarea", function() {
+        // code
+        $(this).select();
+    });
     // end document
 });
 
@@ -991,7 +1081,7 @@ $(function() {
         padding: "5px 5px",
         position: "fixed",
         bottom: "0px",
-        left: "140px",
+        left: "0px",
     });
     $(".setFontAr ").css({
         width: "fit-content",
@@ -1003,21 +1093,8 @@ $(function() {
         bottom: "0px",
         left: "420px",
     });
-    $("body").append("<button class='fontArBtn'>Test Font</button>");
-    $(".fontArBtn").css({
-        width: "fit-content",
-        backgroundColor: "#bb2d3b",
-        fontSize: "13px",
-        color: "#fff",
-        border: "10px solid #333",
-        borderRadius: "10px",
-        padding: "5px 5px",
-        position: "fixed",
-        bottom: "0px",
-        left: "50px",
-        display: "inline-block",
-    });
-    $(".fontArBtn").on("click", function() {
+
+    $(".fontAr").on("change", function() {
         var setColorVideo14input1 = $(".fontAr").val();
         $("body").css("fontFamily", setColorVideo14input1);
     });
@@ -1042,7 +1119,7 @@ $(function() {
 // class for new style in scss
 var dirLang = document.getElementsByTagName("html");
 var pLead = document.querySelector("p.lead");
-
+$(".container").css({ paddingBottom: "200px" });
 $(document).ready(function() {
     // code
     $(".btn, .btn-info, .video-5-btn-4").css({ display: "block" });
@@ -1059,7 +1136,6 @@ $(document).ready(function() {
 });
 
 // explain test get anything about element
-
 
 // explain for div parent to slide toggle
 $(function() {
@@ -1081,3 +1157,19 @@ $(function() {
 // console.info("I am a console.info message");
 // console.warn("I am a console.warn message");
 // console.debug("I am a console.debug message");
+// console.warn("I am a console.warn message");
+// console.debug("I am a console.debug message");
+// $("goToButton").on("click", function(event) {
+//     // code
+//     event.preventDefault();
+//     window.scrollBy(200);
+// });
+var btnToBottom = document.querySelector(".goToButton");
+
+btnToBottom.onclick = function() {
+    "use strict";
+    setTimeout(function() {
+        "use strict";
+        window.scrollBy(0, 200000);
+    }, 2000);
+};
