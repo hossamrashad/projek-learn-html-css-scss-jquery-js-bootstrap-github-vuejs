@@ -13,7 +13,7 @@
  * Events              || 1- click 2- dblclick 3- mouseenter 4- mouseleave 5- hover
  *
  * Effect              || hide, show, toggle, fadeIn, fadeOut , fadeToggle , fadeTo, animate, stop
- *
+ *                     || slideDown , slideUp , slideToggle
  * 
  *
  * get | set           || text(), html(), val(), attr()
@@ -21,7 +21,7 @@
  * get $(".input").val($(".Element").attr("class"));
  *
  * Add Element        || append , prepend , before , after, appendTo, prependTo
- * $(".Element").append(" append ");
+ *              $(".Element").append(" append ");
  *
  *
  * Remove Element     || remove(), empty()
@@ -30,7 +30,8 @@
  *
  *
  *
- * css class           || addClass("ElementName"), removeClass("ElementName"), toggleClass("ElementName")
+ * css class           || addClass("ElementName"), removeClass("ElementName"), 
+ *                     || toggleClass("ElementName")
  *
  * get & set css attr  ||
  * $(".Element").css("color");
@@ -186,22 +187,37 @@
  * 
  * ? one = on                                          ||الفرق انو هى بتتنفز مرة واحدة 
  * 
+ * * select()                                          || اللى هو تحديد العنصر 
+ * 
+ * ? resize                                            || اللى هو فى حالة تغير حجم الشاشة العرض 
+ * ? scroll                                            || فى حالة النزول فى الصفحة اسكرال 
+ * ? pageX pageY                                       || اللى هو مكان الموس فى الصفحة 
+ * * submit                                            || اللى هو حقل ارسال البينات 
+ * ++ delay                                            || اللى هو التاخير فى التنفيز
+ * -- clone                                            || اللى هو الاستنساخ و قيمة الترو يعنى ياخد العنصار بجميعى خواصو و الاطفال اللى جواه 
+ * 
+ * ? detach                                            || بيشيل العنصار من الصفحة زاى الرموف بس بيخلية محافظ على خواصو 
+ * 
+ * * hasClass                                           || بتدور على كلاس معين
+ * 
+ * 
+ * * .offset()                                          || اللوفسات بيجيب مكان العنصار من الصفحة الدكيومانت 
+ * * .position()                                        || البوزيشان بيجيب مكان العنصار من الاب اللى هو فية 
  * 
  * 
  * 
+ * * .prop()                                            || بيجيب نفس الخواص بتاعتو العنصر 
+ * 
+ * ? replaceWith                                        || بيغير محتو العنصر الى حاجة تانى 
+ * 
+ * ? each                                               || بتشيك على الحاجة تلقاى  
+ * 
+ * -- has()                                             || يعنى العنصر داه جواه عنصار او عنصر يحتوى على كلاس معين طبق علية الخواص دى 
+ * 
+ * * is                                                 || بيدور على عنصار او كلاس او كلمة فى العنصار 
  * 
  * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- *
  */
-
 
 // code for function
 $(document).ready(function() {
@@ -372,6 +388,7 @@ $(document).ready(function() {
     });
 
     var varDataName = "active";
+
     // video 11 add element to element
     $(".video-11-div-1").append(" append ");
 
@@ -709,7 +726,7 @@ $(document).ready(function() {
     $(".video-25-parent :enabled").css({ border: "5px solid #00f" });
     $(".video-25-parent :checked").css({ border: "5px solid #000" });
 
-    // video 26
+    // video 26 bind
     // single event with bind
     $(".video-26-div-one").bind("click", function() {
         $(this).css({ border: "2px solid #333" });
@@ -896,9 +913,7 @@ $(document).ready(function() {
                 .fadeIn(1000, function() {
                     $(this).fadeOut(1000);
                 })
-                .text(
-                    "good characters must be greater than " + dataLength
-                );
+                .text("good characters must be greater than " + dataLength);
         } else {
             $(".outputCheck")
                 .fadeIn(1000, function() {
@@ -907,13 +922,266 @@ $(document).ready(function() {
                 .text("characters must be greater than " + dataLength);
         }
     });
-    $("body").on("click", ".video35textarea", function() {
-        // code
-        $(this).select();
+
+    $("body").on("click", ".btnCopy", function() {
+        // Code
+        $(".video35textarea").select();
+        document.execCommand("copy");
     });
+    $(".video36Resize").css({
+        color: "#ccc",
+        width: "100%",
+        background: "#333",
+        textAlign: "center",
+        fontSize: "20px",
+        padding: "20px",
+        borderRadius: "10px",
+        border: "3px solid #f00",
+    });
+
+    // video 36 resize
+    var windowWidth = $(window).width(),
+        windowHeight = $(window).height();
+    // console.log(windowWidth);
+    // console.log(windowHeight);
+    $(".video36Resize").height(windowHeight);
+    $(window).on("resize", function() {
+        // code
+
+        var windowWidth = $(window).width(),
+            windowHeight = $(window).height();
+        $(".video36Resize").height(windowHeight - 300);
+        // console.log(windowWidth);
+        // console.log(windowHeight);
+        if (windowHeight > 300) {
+            $(".video36Resize").css({
+                background: "#3498",
+                color: "#fff",
+            });
+        }
+        if (windowHeight > 400) {
+            $(".video36Resize").css({
+                background: "#dfdf",
+                color: "#333",
+            });
+        }
+        if (windowHeight > 500) {
+            $(".video36Resize").css({
+                background: "#ccc",
+                color: "#333",
+            });
+        }
+        if (windowHeight > 600) {
+            $(".video36Resize").css({
+                background: "#999",
+                color: "#f00",
+            });
+        }
+    });
+
+    // video 37 scroll
+    $(".video37Scroll").css({
+        color: "#ccc",
+        width: "100%",
+        background: "#333",
+        textAlign: "center",
+        fontSize: "20px",
+        padding: "20px",
+        borderRadius: "10px",
+        border: "3px solid #f00",
+        display: "none",
+    });
+    $(window).on("scroll", function() {
+        // Code
+        var scrollTop = $(window).scrollTop();
+        // console.log(scrollTop);
+        if (scrollTop > 29376) {
+            $(".video37Scroll").css({ background: "#ccc", color: "#333" }).fadeIn();
+        } else {
+            $(".video37Scroll").css({ background: "#333", color: "#ccc" }).fadeOut();
+        }
+    });
+
+    // video 38 pageX pageY
+    $(".video38Page").css({
+        color: "#ccc",
+        width: "100%",
+        background: "#333",
+        textAlign: "center",
+        fontSize: "20px",
+        padding: "20px",
+        borderRadius: "10px",
+        border: "3px solid #f00",
+    });
+    $("html").on("mousemove", function(event) {
+        // code
+        $(".video38Page").text("X-Axis " + event.pageX + " Y-Axis " + event.pageY);
+    });
+    $(".video38Page1").on("click", function(event) {
+        // code
+        $(".circle").show().offset({
+            left: event.pageX,
+            top: event.pageY,
+        });
+    });
+
+    // video 39 submit
+    $("body").on("submit", ".formVideo39", function(event) {
+        // code
+        if ($(".formVideo39 input[name='userName']").val() === "Hossam") {
+            $(".outputFormVideo39").text("welcome Hossam").show();
+            return;
+        }
+        $(".outputFormVideo39")
+            .text("type Hossam")
+            .show()
+            .delay(5000)
+            .fadeOut(2000);
+
+        event.preventDefault();
+    });
+
+    // video 40 delay
+    $(".spanVideo40").css({ display: "none" });
+    $("body").on("click", ".btnVideo40", function() {
+        // code
+        $(".spanVideo40").text("it is delay").fadeIn().delay(3000).fadeOut(1000);
+    });
+
+    // video 41 clone
+
+    $("body").one("click", ".btnVideo41", function() {
+        // code
+        $(".video41Clone").clone(true).insertAfter(this);
+    });
+    $("body").one("click", ".video41Clone", function() {
+        // code
+        $(this).css({ color: "red" });
+    });
+    // video 42 detach
+
+    // video 43 hasClass
+    $("li").each(function() {
+        if ($(this).hasClass("activeHasClass")) {
+            $(this).css({
+                color: "#ccc",
+                background: "#333",
+                border: "3px solid #00f",
+            });
+        }
+    });
+    // طريقة انو انا اغير من مكان العنصار
+    $(".outputOffset").offset({
+        left: 200,
+    });
+    var top = $(".divVideo44").offset().top;
+    var left = $(".divVideo44").offset().left;
+    $(".outputOffset").text(top + "<br>" + left);
+
+    $(window).on("scroll", function() {
+        var scrollTop = $(window).scrollTop();
+        var EleOffsetTop = $(".divVideo44").offset().top;
+        if (scrollTop >= EleOffsetTop - 100) {
+            $(".divVideo44").css({ background: "#ccc" }).addClass("zoomIn");
+        } else {
+            $(".divVideo44")
+                .css({
+                    background: "#333",
+                })
+                .removeClass("zoomIn");
+        }
+    });
+    $("body").on("click", ".btnVideo46", function(event) {
+        // code
+        event.preventDefault();
+        $(".outputProp").text("disabled = " + $(".inputVideo46").prop("disabled"));
+        $(".outputProp1").text($(".inputVideo46").attr("disabled"));
+        $(".outputProp2").text($(".inputVideo46").prop("class"));
+
+        if ($(".inputVideo46").prop("disabled") === true) {
+            $(".outputProp").css({ background: "#ccc" });
+        }
+        if ($(".inputVideo46").prop("class") === "inputVideo46 ClassTest") {
+            $(".outputProp1").css({
+                background: "#333",
+                margin: "20px 0",
+                padding: "20px",
+                color: "#fff",
+            });
+        }
+    });
+
+    // video 47 replaceWith
+    $("body").on("click", ".btnReplaceWith", function() {
+        // code
+        $(".replaceWith").replaceWith("<h1>Rovan Hossam Rashad</h1>");
+        $(".replaceWith").css({ color: "red" });
+    });
+    // video 49 wrap unwrap
+    $("body").on("click", ".btnWrap", function() {
+        // code
+        $(".spanWrap").wrap("<div class='wrap'></div>");
+    });
+    $("body").on("click", ".btnUnWrap", function() {
+        // code
+        $(".spanWrap").unwrap();
+    });
+
+    // video 50 Each
+    $(".ulVideo50 li").each(function() {
+        if ($(this).hasClass("activeEach")) {
+            $(this).css({ background: "#333", padding: "20px" });
+        }
+    });
+    $(".video50has").has("span").css({ color: "#ccc" });
+    $(".video50has1").has(".spanHas").css({ background: "#333", color: "#ccc" });
+
+    // video 52 Is
+    $("body").on("click", ".spanIs", function() {
+        // code
+        if ($(this).is("span")) {
+            $(".outputIs").text("yes it is span");
+        }
+    });
+    $("body").on("click", ".spanIs1", function() {
+        // code
+        if ($(this).parent().is("div")) {
+            $(".outputIs1").text("yes it is div");
+        }
+    });
+    $("body").on("click", ".spanIs2", function() {
+        // code
+        if ($(this).parent().is("div")) {
+            $(".outputIs2").text("yes it is hav ClassName");
+        }
+    });
+    $("body").on("click", ".spanIs0", function() {
+        // code
+        if ($(this).is(":nth-of-type(2)")) {
+            $(".outputIs0").text("yes it is first child");
+        }
+    });
+    $(".spanIs3").each(function() {
+        // code
+        if ($(this).parent().is(":contains('Jquery')")) {
+            $(".outputIs3").text("yes it is have this word");
+            console.log("Yas");
+        }
+    });
+    $(".video53End")
+        .find("span")
+        .css({ background: "#333", padding: "20px", color: "#ccc" })
+        .end()
+        .find("strong")
+        .css({
+            background: "#333",
+            padding: "20px",
+            color: "#ccc",
+            marginLeft: "20px",
+        })
+        .end();
     // end document
 });
-
 // test chrome
 
 // function to add button reload page it is for test
@@ -1091,7 +1359,7 @@ $(function() {
         padding: "5px 5px",
         position: "fixed",
         bottom: "0px",
-        left: "420px",
+        left: "270px",
     });
 
     $(".fontAr").on("change", function() {
@@ -1108,8 +1376,8 @@ $(function() {
         borderRadius: "10px",
         padding: "5px 5px",
         position: "fixed",
-        bottom: "0px",
-        left: "320px",
+        bottom: "-20px",
+        left: "175px",
     });
     $(".fontArBtn1").on("click", function() {
         var setColorVideo14input1 = $(".setFontAr").val();
@@ -1159,17 +1427,24 @@ $(function() {
 // console.debug("I am a console.debug message");
 // console.warn("I am a console.warn message");
 // console.debug("I am a console.debug message");
-// $("goToButton").on("click", function(event) {
-//     // code
-//     event.preventDefault();
-//     window.scrollBy(200);
-// });
-var btnToBottom = document.querySelector(".goToButton");
 
-btnToBottom.onclick = function() {
-    "use strict";
-    setTimeout(function() {
-        "use strict";
-        window.scrollBy(0, 200000);
-    }, 2000);
-};
+// var btnToBottom = document.querySelector(".goToButton");
+
+// btnToBottom.onclick = function() {
+//     "use strict";
+//     setTimeout(function() {
+//         "use strict";
+//         window.scrollBy(0, 200000);
+//     }, 2000);
+// };
+
+$("html ,body").on("click", ".goToButton", function(event) {
+    // code
+    event.preventDefault();
+    $(window).scrollTop(200000);
+});
+$("html ,body").on("click", ".goToTop", function(event) {
+    // code
+    event.preventDefault();
+    $(window).scrollTop(0);
+});

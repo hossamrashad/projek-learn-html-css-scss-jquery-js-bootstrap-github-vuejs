@@ -2,7 +2,7 @@ doctype
 html(lang="en")
   head 
     link(rel="shortcut icon" href="images/logo/favicon.jpg" type="image/x-icon")
-    link(rel="stylesheet", href="https://hossamrashad.github.io/libraries/css/font-awesome/css/all.min.css")
+    link(rel="stylesheet" href="https://hossamrashad.github.io/libraries/css/font-awesome/css/all.min.css")
     block pageTitle       
       title Learn Jquery
     link(rel="stylesheet" href="css/bootstrap.css")
@@ -949,7 +949,7 @@ html(lang="en")
           p(class="video-7-p-1  lead" id="video-7-p-1") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
         div(class="explain") video 10 Get || set
-        
+
         .col-sm-6
           p(class="video-10-p-1  lead" id="video-10-p-1") Lorem  <b>sed</b> do eiusmod tempor 
           button(class="btn btn-info video-10-btn-1 d-block") Get & Set value 
@@ -1107,7 +1107,7 @@ html(lang="en")
             .video-18-parent-three prev 
             .video-18-parent-four parent four
             p(class="video-18-child") children 
-        
+
         .col-sm-6 
           section(class="video-18-section-four")
             .video-18-parent-one parent one
@@ -1419,7 +1419,7 @@ html(lang="en")
             div(class="video-30-test")
         div(class="explain") video 31 Event keyDown, KeyPress, KeyUp
         .col-sm-4
-          input(type='text'  placeholder='Some Word' class="inputVideo31")
+          input(type='text' placeholder='Some Word' class="inputVideo31")
           textarea(name='' id='' cols='30' rows='10' placeholder='text area' class="textareaVideo31")
         .col-sm-6
           div(class='divVideo31')
@@ -1428,7 +1428,7 @@ html(lang="en")
 
         div(class="explain") video 32 Event change
         .col-sm-4
-          input(type='text'  placeholder='Some Word' class="inputVideo32")
+          input(type='text' placeholder='Some Word' class="inputVideo32")
           textarea(name='' id='' cols='30' rows='10' placeholder='text area' class="textareaVideo32")
           select(name="" class="selectVideo32")
             option(value="") one  
@@ -1438,26 +1438,172 @@ html(lang="en")
           div(class='divVideo32')
             h4 
             span.lead 
-        
+
         .explain video 33 event blur & focus
         .col-sm-6
-          input(type='text'  class='inputCheckLength' placeholder='Some Word' data-length="5")
-          
+          input(type='text' class='inputCheckLength' placeholder='Some Word' data-length="5")
+
         .col-sm-6
           .divVideo330 Hossam Rashad
           .divVideo331
 
         .explain video 35 select
-        .col-xs-6 
-          textarea(name='' id='' cols='30' rows='10' placeholder='text area' class="video35textarea") select word
+        .col-sm-6 
+          textarea(name='' id='copyFromThis' cols='45' rows='10' placeholder='text area' class="video35textarea") Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum veniam maxime officiis assumenda at odio, ipsum debitis, tempora, laudantium natus expedita reiciendis. Officia provident facere rerum libero sed distinctio debitis. 
+          button(class="btn  btn-primary btnCopy") copy text 
 
 
+
+        .explain video 36 resize
+        .col-sm-6 
+          .video36Resize  resize
+
+        .explain video 37 scroll
+        .col-sm-6 
+          .video37Scroll  scroll
+
+        .explain video 38 pageX pageY
+        .col-sm-6 
+          .video38Page 
+          .video38Page1
+            .circle
+
+
+
+
+        .explain video 39 submit
+        .col-sm-6 
+          form(action="" class="formVideo39")
+            p(class=" text-start ") Please type Confirm Or Hossam
+            input(type="text" name="userName")
+            input(type="submit" value="submit")
+        .col-sm-6 
+          span(class="outputFormVideo39")
+
+
+        .explain video 40 Delay
+        .col-sm-6
+          button(class="btnVideo40") delay
+          span(class="spanVideo40") 
+
+
+        .explain video 41 Clone
+        .col-sm-6
+          div(class='video41Clone') you will clone this element 
+          button(class="btnVideo41") Clone Element
+
+
+        .explain video 42 detach
+        .col-sm-6
+          
+
+
+        .explain video 42 HasClass
+        .col-sm-6
+          ul 
+            li Item 1
+            li(class="activeHasClass") Item 2
+            li Item 3
+
+
+        .explain video 43 offset
+        .col-sm-6
+          .parentOffset 
+            div(class='divVideo44') offset
+        .col-sm-6
+          .outputOffset
+
+
+
+        .explain video 46 prop
+        .col-sm-6
+          form(action="")
+            input(type='text' class="inputVideo46 ClassTest" placeholder='Some Word' disabled ) 
+            button(class='btnVideo46 btn  btn-primary ') click prop
+
+        .col-sm-6
+          .outputProp
+          .outputProp1
+          .outputProp2
+          .outputProp3
+
+
+        .explain video 47 replaceWith
+        .col-sm-6
+          .replaceWith Rovan Hossam 
+          button(class="btnReplaceWith") click to Replace With
+
+
+
+
+        .explain video 49 wrap unwrap
+        .col-sm-6
+          span(class="spanWrap") Rovan
+          span(class="spanWrap") Hossam
+          span(class="spanWrap") Rashad 
+          button(class="btnWrap") Add Wrap
+          button(class="btnUnWrap") Remove Wrap
+
+
+
+        .explain video 50 each
+        .col-sm-6 
+          ul(class="ulVideo50") 
+            li Item 1
+            li(class="activeEach") Item 2
+            li Item 3
+            li(class="activeEach") Item 4
+            li() Item 5
+
+
+
+        .explain video 51 Has
+        .col-sm-6 
+          div(class='video50has')
+            span Rovan Hossam 
+
+          div(class='video50has1')
+            span(class="spanHas") Rovan Hossam Rashad
+
+
+
+        .explain video 51 Is
+        .col-sm-6 
+          .video52is.classNameIs 
+            | I Love Jquery
+            br
+            span(class='spanIs' ,style='color:#f00') if this is span
+            br
+            span(class='spanIs0' ,style='color:#f00') if this is span:first-child
+            br
+            span(class='spanIs1' ,style='color:#f00') if parent is div
+            br
+            span(class='spanIs2' ,style='color:#f00') if parent is Have ClassName 
+            br
+            span(class='spanIs3' ,style='color:#f00') if parent is Have word 
+        .col-sm-6
+          .outputIs
+          .outputIs0
+          .outputIs1 
+          .outputIs2
+          .outputIs3
+
+
+
+        .explain video 53 End
+        .col-sm-6
+          .video53End
+            | Hello 
+            span Jquery 
+            strong Hossam
 
 
         .parent 
           div(class='Element')
           .Element1
+        //- btn go to button
         a(href="#" class='goToButton' onclick="return false") down 
+        a(href="#" class='goToTop' ) Up 
 
 
     script(src="js/jquery-3-6-0.min.js") 

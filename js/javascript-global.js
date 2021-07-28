@@ -178,3 +178,10 @@ var liFirst = document.querySelector("#ulList > li:first-of-type");
 var addLi = document.createElement("li");
 
 /************************** */
+
+// الفنكشان دى لنسخ التكاست اللى بيكون مكتوب 
+// function Hello() {
+//     var copyText = document.getElementById("copyFromThis");
+//     copyText.select();
+//      document.execCommand("copy");
+// }

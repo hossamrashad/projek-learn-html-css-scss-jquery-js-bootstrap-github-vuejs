@@ -658,7 +658,8 @@ button {
   -o-border-radius: 5px;
 }
 
-.goToButton {
+.goToButton,
+.goToTop {
   width: 70px;
   height: 70px;
   text-decoration: none;
@@ -682,8 +683,14 @@ button {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-.goToButton:hover {
+.goToButton:hover,
+.goToTop:hover {
   color: #fff;
+}
+
+.goToTop {
+  bottom: 200px;
+  left: 0%;
 }
 
 .top10 {
@@ -763,6 +770,46 @@ button {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+
+.video38Page1 {
+  height: 100vh;
+  background-color: #333;
+  border: 2px solid #f00;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: #f83c23;
+  border: 5px solid #00f;
+  display: none;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.parentOffset {
+  position: relative;
+}
+
+.divVideo44 {
+  background-color: #2d2d2d;
+  color: #fff;
+  border: 3px solid #ff0;
+  padding: 20px;
+  font-size: 20px;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  height: 560px;
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
 }
 
 /*# sourceMappingURL=javascript.css.map */

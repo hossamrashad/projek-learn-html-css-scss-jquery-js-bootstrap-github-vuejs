@@ -557,14 +557,15 @@ var video131div = document.getElementById("video131div"),
     video133div = document.getElementById("video133div"),
     video134div = document.getElementById("video134div"),
     video135div = document.getElementById("video135div");
-
+// انشاء العنصر 
 var video13createElement = document.createElement("div"),
+    // انشاء التكست 
     video13text = document.createTextNode("Rovan Hossam");
-
+// اضافة التكست للعنصر اللى انشاتة 
 video13createElement.appendChild(video13text);
-
+// اضافة علاس للعنصر 
 video13createElement.className = "active";
-
+// اضافة العنصر الابنفى الاب 
 video131div.appendChild(video13createElement);
 
 // video 14
