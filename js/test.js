@@ -11,3 +11,16 @@
 
 /*jslint browser: true */
 /*global window */
+// ****
+
+// Data Types
+
+// string
+
+let stringName = `Rovan Hossam Rashad`;
+
+let output = document.getElementById("idName");
+
+output.innerHTML = stringName;
+
+console.log("Type of Data: " + typeof stringName);
