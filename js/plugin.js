@@ -306,9 +306,11 @@ document.getElementById("video-73").innerHTML = mainPrice - myBigDiscount;
  * NaN = not Anumber
  * symbol
  */
-// Boolean
-var hasdiscount = true;
-if (hasdiscount == true) {
+
+var hasDiscount = true;
+
+
+if (hasDiscount == true) {
     var mainprice = 400;
 } else {
     var mainprice = 450;
@@ -2204,7 +2206,7 @@ var i,
     video5010div = document.getElementById("video5010div"),
     x = Math.ceil(4.5);
 
-// .ceil(4.5); بيجيب اقراب رقم لفوق من العلامة العشرية
+// .ceil(4.5); بيجيب اقرب رقم لفوق من العلامة العشرية
 
 video501div.innerHTML = " <h3 >  " + x + " It Is Ceil</h3>";
 
@@ -2223,7 +2225,7 @@ var i,
     video5110div = document.getElementById("video5110div"),
     x = Math.floor(4.5);
 
-// .ceil(4.5); بيجيب اقراب رقم لتحت من العلامة العشرية
+// .ceil(4.5); بيجيب اقرب رقم لتحت من العلامة العشرية
 
 video511div.innerHTML = " <h3 >  " + x + " It Is floor</h3>";
 
@@ -2242,7 +2244,7 @@ var i,
     video5210div = document.getElementById("video5210div"),
     x = Math.round(4.4);
 
-// .round(4.5); بيجيب اقراب راقم من النص فى المية هل هو اقراب من فوق ولا من تحت
+// .round(4.5); بيجيب اقرب راقم من النص فى المية هل هو اقرب من فوق ولا من تحت
 
 video521div.innerHTML = " <h3 >  " + x + " It Is floor</h3>";
 
@@ -2277,7 +2279,7 @@ var i,
     video5410div = document.getElementById("video5410div"),
     x = Math.round(4.4);
 
-// .round(4.5); بيجيب اقراب راقم من النص فى المية هل هو اقراب من فوق ولا من تحت
+// .round(4.5); بيجيب اقرب راقم من النصى فى المية هل هو اقرب من فوق ولا من تحت
 
 video541div.innerHTML = " <h3 >  " + x + " It Is floor</h3>";
 
@@ -2365,11 +2367,11 @@ var i,
     result = string.replace(/L/gi, "@");
 
 /*
-  Regulat Expression Syntax
+  Regulate Expression Syntax
   /Pattern/Attributes
   Search | Replace | Match | Split | Test
   Attributes List
-  [ i ] => Case Insensetive
+  [ i ] => Case Insensitive
   [ g ] => Global Search
   [ m ] => Multi Line Search
   Brackets Use

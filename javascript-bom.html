@@ -1,231 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="images/social/facebook.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="images/social/facebook.png" type="image/x-icon" />
     <title>javascript Bom</title>
     <style>
-      body {
-        text-transform: capitalize;
-        font-size: 18px;
-        height: 4000px;
-      }
-      h2 {
-        text-align: center;
-      }
-      #video7btn {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-      }
-      #video71btn {
-        position: fixed;
-        top: 60px;
-        right: 20px;
-      }
-      #video91div {
-        background-color: beige;
-      }
-      button,a {
-        min-width: 200px;
-        height: auto;
-        padding: 20px;
-        font-size: 20px;
-        background: bottom;
-        outline: none;
-        border: 2px solid #f00;
-        display: block;
-        margin: 10px;
-      }
+        body {
+            text-transform: capitalize;
+            font-size: 18px;
+            height: 4000px;
+            padding-top: 200px;
+        }
+        
+        h2 {
+            text-align: center;
+        }
+        
+        #video7btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        
+        #video71btn {
+            position: fixed;
+            top: 60px;
+            right: 20px;
+        }
+        
+        #video91div {
+            background-color: beige;
+        }
+        
+        button,
+        a {
+            min-width: 200px;
+            height: auto;
+            padding: 20px;
+            font-size: 20px;
+            background: bottom;
+            outline: none;
+            border: 2px solid #f00;
+            display: block;
+            margin: 10px;
+        }
+        
+        .element-parents {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: fixed;
+            height: 30%;
+            background: #eee;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        
+        .element-parents>div {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .back-red {
+            background-color: red;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
+    <main class="main" id="main">
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <div class="element-parents" id="element-parent">
+            <div class="element-child-one class-name" id="">
+                <div class="class-name show hide cool main" id="IdName" data-name="">
+                    <a href="#" id="click">Click</a>
+                    <div id="show"></div>
+                </div>
+                <!-- <form action="" id="ElementForm">
+                    <input type="text" id="ElementInput">
+                    <input type="submit" value="Submit" id="ElementSubmit">
+                </form>
+                <div id="output"></div> -->
+            </div>
+            <div class="element-child-tow class-name" id="element-child-tow">Child Tow</div>
+        </div>
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+    </main>
     <div id="parent-video-1">
-      <div id="video11div"></div>
-      <div id="video12div"></div>
-      <div id="video13div"></div>
-      <div id="video14div"></div>
-      <div id="video15div"></div>
+        <div id="video11div"></div>
+        <div id="video12div"></div>
+        <div id="video13div"></div>
+        <div id="video14div"></div>
+        <div id="video15div"></div>
     </div>
     <div id="parent-video-3">
-      <h2>video 3 window methods -> alert, confirm, prompt</h2>
-      <div id="video31div"></div>
-      <div id="video32div"></div>
-      <div id="video33div"></div>
-      <div id="video34div"></div>
-      <div id="video35div"></div>
+        <h2>video 3 window methods -> alert, confirm, prompt</h2>
+        <div id="video31div"></div>
+        <div id="video32div"></div>
+        <div id="video33div"></div>
+        <div id="video34div"></div>
+        <div id="video35div"></div>
     </div>
     <div id="parent-video-4">
-      <h2>video 4 || setTime out , clear timeout</h2>
-      <div id="video41div"></div>
-      <div id="video42div"></div>
-      <div id="video43div"></div>
-      <div id="video44div"></div>
-      <div id="video45div"></div>
-      <button id="video4btn">click to clear time out</button>
+        <h2>video 4 || setTime out , clear timeout</h2>
+        <div id="video41div"></div>
+        <div id="video42div"></div>
+        <div id="video43div"></div>
+        <div id="video44div"></div>
+        <div id="video45div"></div>
+        <button id="video4btn">click to clear time out</button>
     </div>
     <div id="parent-video-5">
-      <h2>video 5 || set interval , clear interval</h2>
-      <div id="video51div"></div>
-      <div id="video52div"></div>
-      <div id="video53div"></div>
-      <div id="video54div">101</div>
-      <div id="video55div"></div>
-      <button id="video5btn">click to clear time out</button>
+        <h2>video 5 || set interval , clear interval</h2>
+        <div id="video51div"></div>
+        <div id="video52div"></div>
+        <div id="video53div"></div>
+        <div id="video54div">10</div>
+        <div id="video55div"></div>
+        <button id="video5btn">click to clear time out</button>
     </div>
     <div id="parent-video-6">
-      <h2>window => open</h2>
-      <div id="video61div"></div>
-      <div id="video62div"></div>
-      <div id="video63div"></div>
-      <div id="video64div"></div>
-      <div id="video65div"></div>
-      <button id="video6btn">click to open new tap</button>
-      <button id="video61btn">click to open url</button>
+        <h2>window => open</h2>
+        <div id="video61div"></div>
+        <div id="video62div"></div>
+        <div id="video63div"></div>
+        <div id="video64div"></div>
+        <div id="video65div"></div>
+        <button id="video6btn">click to open new tap</button>
+        <button id="video61btn">click to open url</button>
     </div>
     <div id="parent-video-7">
-      <h2>scrollBy , scrollTo</h2>
-      <div id="video71div"></div>
-      <div id="video72div"></div>
-      <div id="video73div"></div>
-      <div id="video74div"></div>
-      <div id="video75div"></div>
-      <button id="video7btn">click to scroll By</button>
-      <button id="video71btn">click to scroll Ty</button>
+        <h2>scrollBy , scrollTo</h2>
+        <div id="video71div"></div>
+        <div id="video72div"></div>
+        <div id="video73div"></div>
+        <div id="video74div"></div>
+        <div id="video75div"></div>
+        <button id="video7btn">click to scroll By</button>
+        <button id="video71btn">click to scroll Ty</button>
     </div>
     <div id="parent-video-8">
-      <h2>stop || close || focus</h2>
-      <div id="video81div"></div>
-      <div id="video82div"></div>
-      <div id="video83div"></div>
-      <div id="video84div"></div>
-      <div id="video85div"></div>
-      <button id="video8btn">click to stop</button>
-      <button id="video81btn">click to close</button>
+        <h2>stop || close || focus</h2>
+        <div id="video81div"></div>
+        <div id="video82div"></div>
+        <div id="video83div"></div>
+        <div id="video84div"></div>
+        <div id="video85div"></div>
+        <button id="video8btn">click to stop</button>
+        <button id="video81btn">click to close</button>
     </div>
     <div id="parent-video-9">
-      <h2>video 9 [inner,outer] Height , [inner,outer] Width</h2>
-      <div id="video91div"></div>
-      <div id="video92div"></div>
-      <div id="video93div"></div>
-      <div id="video94div"></div>
-      <div id="video95div"></div>
-      <button id="video9btn">click to see innerHeight</button>
-      <button id="video91btn">click to see outerHeight</button>
+        <h2>video 9 [inner,outer] Height , [inner,outer] Width</h2>
+        <div id="video91div"></div>
+        <div id="video92div"></div>
+        <div id="video93div"></div>
+        <div id="video94div"></div>
+        <div id="video95div"></div>
+        <button id="video9btn">click to see innerHeight</button>
+        <button id="video91btn">click to see outerHeight</button>
     </div>
     <div id="parent-video-10">
-      <h2>video 10 page X offset || page Y offset</h2>
-      <div id="video101div"></div>
-      <div id="video102div"></div>
-      <div id="video103div"></div>
-      <div id="video104div"></div>
-      <div id="video105div"></div>
-      <button id="video10btn">click to page X offset</button>
-      <button id="video101btn">click to page Y offset</button>
+        <h2>video 10 page X offset || page Y offset</h2>
+        <div id="video101div"></div>
+        <div id="video102div"></div>
+        <div id="video103div"></div>
+        <div id="video104div"></div>
+        <div id="video105div"></div>
+        <button id="video10btn">click to page X offset</button>
+        <button id="video101btn">click to page Y offset</button>
     </div>
     <div id="parent-video-11">
-      <h2>video 11 location => href</h2>
-      <div id="video111div"></div>
-      <div id="video112div"></div>
-      <div id="video113div"></div>
-      <div id="video114div"></div>
-      <div id="video115div"></div>
-      <button id="video11btn">click to location</button>
-      <button id="video111btn">click to location google</button>
-      <button id="video112btn">click to location tast.html</button>
-      <button id="video113btn">click to location div in page</button>
-      <button id="video114btn">click to location div in mail</button>
-      <button id="video115btn">click to location div in this page</button>
+        <h2>video 11 location => href</h2>
+        <div id="video111div"></div>
+        <div id="video112div"></div>
+        <div id="video113div"></div>
+        <div id="video114div"></div>
+        <div id="video115div"></div>
+        <button id="video11btn">click to location</button>
+        <button id="video111btn">click to location google</button>
+        <button id="video112btn">click to location tast.html</button>
+        <button id="video113btn">click to location div in page</button>
+        <button id="video114btn">click to location div in mail</button>
+        <button id="video115btn">click to location div in this page</button>
     </div>
     <div id="parent-video-12">
-      <h2>video 12 hash , host</h2>
-      <div id="video121div"></div>
-      <div id="video122div"></div>
-      <div id="video123div"></div>
-      <div id="video124div"></div>
-      <div id="video125div"></div>
-      <button id="video12btn">click to see location.host;</button>
-      <button id="video121btn">click to see location.host</button>
+        <h2>video 12 hash , host</h2>
+        <div id="video121div"></div>
+        <div id="video122div"></div>
+        <div id="video123div"></div>
+        <div id="video124div"></div>
+        <div id="video125div"></div>
+        <button id="video12btn">click to see location.host;</button>
+        <button id="video121btn">click to see location.host</button>
     </div>
     <div id="parent-video-13">
-      <h2>video 13 =>  protocol || search || pathName</h2>
-      <div id="video131div"></div>
-      <div id="video132div"></div>
-      <div id="video133div"></div>
-      <div id="video134div"></div>
-      <div id="video135div"></div>
-      <button id="video13btn">click to stop</button>
-      <button id="video131btn">click to close</button>
+        <h2>video 13 => protocol || search || pathName</h2>
+        <div id="video131div"></div>
+        <div id="video132div"></div>
+        <div id="video133div"></div>
+        <div id="video134div"></div>
+        <div id="video135div"></div>
+        <button id="video13btn">click to stop</button>
+        <button id="video131btn">click to close</button>
     </div>
     <div id="parent-video-14">
-      <h2>video 14 => replace || assign || reload</h2>
-      <div id="video141div"></div>
-      <div id="video142div"></div>
-      <div id="video143div"></div>
-      <div id="video144div"></div>
-      <div id="video145div"></div>
-      <button id="video14btn">click to assign to google</button>
-      <button id="video141btn">click to replace to google</button>
+        <h2>video 14 => replace || assign || reload</h2>
+        <div id="video141div"></div>
+        <div id="video142div"></div>
+        <div id="video143div"></div>
+        <div id="video144div"></div>
+        <div id="video145div"></div>
+        <button id="video14btn">click to assign to google</button>
+        <button id="video141btn">click to replace to google</button>
     </div>
     <div id="parent-video-15">
-      <h2>video 15 || back || forward || go</h2>
-      <div id="video151div"></div>
-      <div id="video152div"></div>
-      <div id="video153div"></div>
-      <div id="video154div"></div>
-      <div id="video155div"></div>
-      <a href="javascript:history.go(2)" id="video15btn" >click to back</a>
-      <a id="video151btn">click to forward</a>
+        <h2>video 15 || back || forward || go</h2>
+        <div id="video151div"></div>
+        <div id="video152div"></div>
+        <div id="video153div"></div>
+        <div id="video154div"></div>
+        <div id="video155div"></div>
+        <a href="javascript:history.go(2)" id="video15btn">click to back</a>
+        <a id="video151btn">click to forward</a>
     </div>
     <div id="parent-video-16">
-      <h2>video 16 || navigator </h2>
-      <div id="video161div"></div>
-      <div id="video162div"></div>
-      <div id="video163div"></div>
-      <div id="video164div"></div>
-      <div id="video165div"></div>
-      <div id="video166div"></div>
-      <div id="video167div"></div>
-      <div id="video168div"></div>
-      <button id="video16btn">click to book</button>
-      <button id="video161btn">click to close</button>
+        <h2>video 16 || navigator </h2>
+        <div id="video161div"></div>
+        <div id="video162div"></div>
+        <div id="video163div"></div>
+        <div id="video164div"></div>
+        <div id="video165div"></div>
+        <div id="video166div"></div>
+        <div id="video167div"></div>
+        <div id="video168div"></div>
+        <button id="video16btn">click to book</button>
+        <button id="video161btn">click to close</button>
     </div>
     <div id="parent-video-17">
-      <h2>video 17 window screen</h2>
-      <div id="video171div"></div>
-      <div id="video172div"></div>
-      <div id="video173div"></div>
-      <div id="video174div"></div>
-      <div id="video175div"></div>
-      <button id="video17btn">click to stop</button>
-      <button id="video171btn">click to close</button>
+        <h2>video 17 window screen</h2>
+        <div id="video171div"></div>
+        <div id="video172div"></div>
+        <div id="video173div"></div>
+        <div id="video174div"></div>
+        <div id="video175div"></div>
+        <button id="video17btn">click to stop</button>
+        <button id="video171btn">click to close</button>
     </div>
     <div id="parent-video-18">
-      <h2>video 18 cookies</h2>
-      <div id="video181div"></div>
-      <div id="video182div"></div>
-      <div id="video183div"></div>
-      <div id="video184div"></div>
-      <div id="video185div"></div>
-      <button id="video18btn">click to stop</button>
-      <button id="video181btn">click to close</button>
+        <h2>video 18 cookies</h2>
+        <div id="video181div"></div>
+        <div id="video182div"></div>
+        <div id="video183div"></div>
+        <div id="video184div"></div>
+        <div id="video185div"></div>
+        <button id="video18btn">click to stop</button>
+        <button id="video181btn">click to close</button>
     </div>
     <div id="parent-video-19">
-      <h2>video 19 cookies add || modify || delete</h2>
-      <div id="video191div"></div>
-      <div id="video192div"></div>
-      <div id="video193div"></div>
-      <div id="video194div"></div>
-      <div id="video195div"></div>
-      <button id="video19btn">click to stop</button>
-      <button id="video191btn">click to close</button>
+        <h2>video 19 cookies add || modify || delete</h2>
+        <div id="video191div"></div>
+        <div id="video192div"></div>
+        <div id="video193div"></div>
+        <div id="video194div"></div>
+        <div id="video195div"></div>
+        <button id="video19btn">click to stop</button>
+        <button id="video191btn">click to close</button>
     </div>
     <script src="js/javascript-bom.js"></script>
-  </body>
+    <script src="js/cookies/cookie.umd.min.js"></script>
+</body>
+
 </html>

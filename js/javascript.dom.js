@@ -301,7 +301,7 @@ video21div.innerHTML = "getElementById TEXT FROM JAVASCRIPT";
 
 var video22div = document.getElementsByTagName("div");
 
-video22div[3].innerHTML =
+video22div[8].innerHTML =
     video22div.length +
     " getElementsByTagName " +
     " بيجيب جميع العناصر اللى جوة الصفحة و ليها وسم داف ";
@@ -316,7 +316,7 @@ video24div[4].innerHTML = " querySelectorAll";
 
 /********************************************* */
 
-// video 3
+// video 3 Get Element By Objects
 
 var video31div = document.getElementById("video31div"),
     video32div = document.getElementById("video32div"),
@@ -326,7 +326,7 @@ var video31div = document.getElementById("video31div"),
     video38div = document.getElementById("video38div"),
     video39div = document.getElementById("video39div");
 
-video31div.innerHTML = "<h1>" + document.title + "</h1>";
+video31div.innerHTML = "<h1>" + "Page title " + document.title + "</h1>";
 
 video32div.innerHTML = "<h1>" + document.images[0].src + "</h1>";
 
@@ -361,7 +361,7 @@ function video3image() {
 
 video38div.innerText = document.forms.length + " عدد الفارم اللى فى الصفحة ";
 
-video39div.innerText = document.forms[0].test2.type;
+// video39div.innerText = document.forms[0].test2.type;
 
 /****************************************** */
 
@@ -380,8 +380,12 @@ function find() {
 
     // var inputtest4 = document.getElementById("inputtest4").value;
 
-    if (document.body.innerText.indexOf("hossam") > -1) {
+    if (document.body.innerText.indexOf("01091") > -1) {
         video44div.innerText = "yas";
+        console.log("Yas");
+    } else {
+        video44div.innerText = "No";
+        console.log("No");
     }
 }
 
@@ -557,15 +561,15 @@ var video131div = document.getElementById("video131div"),
     video133div = document.getElementById("video133div"),
     video134div = document.getElementById("video134div"),
     video135div = document.getElementById("video135div");
-// انشاء العنصر 
+// انشاء العنصر
 var video13createElement = document.createElement("div"),
-    // انشاء التكست 
+    // انشاء التكست
     video13text = document.createTextNode("Rovan Hossam");
-// اضافة التكست للعنصر اللى انشاتة 
+// اضافة التكست للعنصر اللى انشاتة
 video13createElement.appendChild(video13text);
-// اضافة علاس للعنصر 
+// اضافة علاس للعنصر
 video13createElement.className = "active";
-// اضافة العنصر الابنفى الاب 
+// اضافة العنصر الابنفى الاب
 video131div.appendChild(video13createElement);
 
 // video 14
@@ -891,14 +895,13 @@ window.onload = function() {
 window.onscroll = function() {
     "use strict";
     // بيحساب جميع المسافه اللى بيعملها الاسكرال
-    console.log(document.documentElement.scrollTop);
+    // console.log(document.documentElement.scrollTop);
     if (document.documentElement.scrollTop > 9755) {
         video342div.textContent = "yes";
         video341div.textContent = "rovan";
     } else {
         video342div.textContent = " ";
         video341div.textContent = "hossam ";
-
     }
 };
 
@@ -932,7 +935,7 @@ video35input.onblur = function() {
     // video352div.textContent = " ";
 
     if (video35input.value == "") {
-        video352div.textContent = " it is embty ";
+        video352div.textContent = " it is Empty ";
     } else if (video35input.value.length < 10) {
         video352div.textContent = " it is < 10 ";
     }
@@ -961,9 +964,8 @@ video361div.ondblclick = function() {
     "use strict";
     video362div.textContent = "you are dblclick";
 };
-// مينفعش تدوس كلاك يمين على العنصار 
+// مينفعش تدوس كلاك يمين على العنصار
 video361div.oncontextmenu = function(e) {
-
     "use strict";
 
     e.preventDefault();
@@ -972,22 +974,20 @@ video361div.oncontextmenu = function(e) {
 };
 
 video361div.onmouseenter = function() {
-
     "use strict";
-
 
     video362div.textContent = "you are onmouseenter";
 };
 video361div.onmouseleave = function() {
-
     "use strict";
 
     video362div.textContent = "you are onmouseleave";
 };
 
 video361div.onkeypress = function() {
-
     "use strict";
 
     video362div.textContent = "you are onmousedown";
 };
+
+// Start

@@ -12,110 +12,60 @@
             box-sizing: border-box;
         }
         
-        .one {
-            background-color: #333;
-            height: 100vh;
+        body {
+            background-color: #fafafa !important;
+        }
+        
+        .parent-element-explain {
             display: flex;
-            justify-content: center;
             align-items: center;
-            color: #fff;
-            font-size: 20px;
-            text-align: center;
-            font-weight: bold;
+            justify-content: space-around;
+            position: fixed;
+            height: 30%;
+            background: rgb(202, 202, 202);
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 500;
+            font-size: 3rem;
+            color: #f44336;
         }
         
-        .tow {
-            color: #fff;
-            text-align: center;
-            height: 100%;
-            line-height: 100px;
-            background-color: #333;
+        .element-left {
+            border: 3px solid #333;
+            padding: 30px;
         }
         
-        .Element {
-            border: 3px solid #fff;
-            margin: 30px;
-            padding: 20px;
+        .element-right {
+            border: 3px solid #333;
+            padding: 30px;
         }
         
-        img {
-            width: 300px;
+        .parent-iframe {
+            position: fixed;
+            height: 70%;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            z-index: 500;
         }
     </style>
-    <link rel="stylesheet" href="css/plugin-download.css">
+    <link rel="stylesheet" href="css/plugin-download.css" />
 </head>
 
 <body>
-    <main class="one">
-        <div class="Element Element-one" id="Element">Rovan Hossam</div>
-        <div class="Element Element-tow">Rovan Hossam Rashad</div>
-        <p class="Element Element-three">Rovan Hossam Rashad Ahmed</p>
-        <p class="Element Element-four">Rovan Hossam Rashad Ahmed Abboud</p>
-        <div class="Element Element-five">
-            Rovan Hossam Rashad Ahmed Abboud Abboud
+    <main class="main">
+        <div class="parent-element-explain">
+            <div class="element-left" id="idName">a</div>
+            <div class="element-right" id="idName2">s</div>
         </div>
     </main>
-    <br /><br /><br />
-    <div class="parent-img">
-        <img src="images/landing.jpg" alt="" />
-        <img src="images/about.jpg" alt="" />
-        <img src="http://placehold.it/200x300/eee" alt="" />
-        <img src="http://placehold.it/200x300/333" alt="" />
-        <img src="http://placehold.it/200x300/ddd" alt="" />
-    </div>
-    <br><br><br><br><br><br>
-    <div class="parent-all">
-        <div class="single-item"></div>
-    </div>
-    <br><br><br><br><br>
+    <!-- <div class="parent-iframe">
+        <iframe src="javascript.html" frameborder="0" width="100%" height="100%"></iframe>
+    </div> -->
 
     <script src="js/test.js"></script>
     <script>
-        var ElementName = document.querySelector("div#Element");
-        var singleItem = document.querySelector("div.single-item");
-        var imgLength = document.images.length;
-        var imgSrc = document.images.src;
-        console.log(singleItem);
-        // explain add to snippet
-        // var title = document.title;
-        // document.title = ElementName.textContent;
-        // ElementName.textContent = document.images.length;
-        // ElementName.textContent = document.images[1].src;
-        for (i = 0; i < imgLength; i++) {
-            // document.write(document.images[i].src + "<br>");
-            console.log(document.images[i].src);
-            // var item = document.images[i].src;
-            // divTow.textContent = document.images[i].src;
-            // divTow.textContent = item;
-
-            let createImg = document.createElement("img");
-            createImg.title = document.images[i].src;
-            createImg.src = document.images[i].src;
-            singleItem.appendChild(createImg);
-
-
-            let createA = document.createElement("a");
-            createA.textContent = "download";
-            createA.setAttribute("class", "download");
-            createA.href = document.images[i].src;
-            createA.style.border = "3px solid #999";
-            createA.style.width = "fit-content";
-            createA.style.background = "#333";
-            createA.style.color = "#fff";
-            createA.style.padding = "15px 30px";
-            createA.style.textAlign = "center";
-            createA.style.textDecoration = "none";
-            createA.style.textTransform = "capitalize";
-            createA.style.margin = "20px auto";
-            // createA.style.display = "block";
-            singleItem.appendChild(createA);
-            createA.setAttribute('download', document.images[i].src);
-            // newListItem.setAttribute('style', "display: inline-block");
-            // newListItem.setAttribute('target', "_blank");
-
-
-
-        }
     </script>
 </body>
 

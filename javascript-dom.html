@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
+    <title>Javascript Dom</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Javascript Dom</title>
     <link rel="shortcut icon" href="images/about.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha512-tDXPcamuZsWWd6OsKFyH6nAqh/MjZ/5Yk88T5o+aMfygqNFPan1pLyPFAndRzmOWHKT+jSDzWpJv8krj6x1LMA==" crossorigin="anonymous" />
     <style>
@@ -14,6 +14,7 @@
             font-size: 20px;
             font-weight: bolder;
             text-transform: capitalize;
+            margin-top: 300px;
         }
         
         img {
@@ -119,10 +120,60 @@
             overflow: scroll;
             direction: rtl;
         }
+        
+        .element-parent {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: fixed;
+            height: 30%;
+            background: #eee;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        
+        .element-parent>div {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .back-red {
+            background-color: red;
+        }
     </style>
 </head>
 
 <body>
+    <main class="main" id="main">
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <div class="element-parent" id="element-parent">
+            <div class="element-child-one class-name" id="">
+                <!-- <div class="class-name show hide cool main" id="IdName" data-name="">
+                    <button id="dblclick">dblClick</button>
+                    <button id="click">Click</button>
+                    <div id="one">one</div>
+                    <div id="tow">tow</div>
+                </div> -->
+                <form action="" id="ElementForm">
+                    <input type="text" id="ElementInput">
+                    <input type="submit" value="Submit" id="ElementSubmit">
+                </form>
+                <div id="output"></div>
+            </div>
+            <div class="element-child-tow class-name" id="element-child-tow">Child Tow</div>
+        </div>
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+    </main>
     <div id="test"></div>
     <div id="video2div">
         <div id="video21div" class="video2class">Hossam Rashad</div>
@@ -152,8 +203,9 @@
         <div id="video37form">
             <div id="video38div"></div>
             <form action="">
-                <input type="text" name="test1" value="hello input 1" />
+                <input type="text" name="test1 name" value="hello input 1" />
                 <input type="text" name="test2" value="hello input 2" />
+                <input type="text" name="inputName" value="Input Value" />
             </form>
             <form action="">
                 <input type="text" name="test3" value="hello input 3" autocomplete="username" />
