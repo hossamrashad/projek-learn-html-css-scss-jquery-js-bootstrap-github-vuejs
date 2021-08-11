@@ -583,10 +583,10 @@ var video14age = "50"; // Data Type Is String
 if (video14age != 50) {
     // Data Type Is Number
 
-    alert("Good");
+    // alert("Good");
     document.getElementById("video-14").innerHTML = "!= Good Not Equal";
 } else {
-    alert("Bad");
+    // alert("Bad");
     document.getElementById("video-14").innerHTML = "!= bad Not Equal";
 }
 
@@ -597,10 +597,10 @@ var video141age = "32"; // Data Type Is String
 if (video141age !== 32) {
     // Data Type Is Number
 
-    alert("Good");
+    // alert("Good");
     document.getElementById("video-141").innerHTML = "!==  Identical";
 } else {
-    alert("Bad");
+    // alert("Bad");
     document.getElementById("video-141").innerHTML = "!== Not Identical";
 }
 
@@ -610,13 +610,13 @@ var video142name = "Hossam",
     video142age = "32";
 
 if (video142age == 32) {
-    alert("Good Age");
+    // alert("Good Age");
     document.getElementById("video-142").innerHTML = "Good Age";
 } else if (video142name == "Hossam") {
-    alert("Good Name");
+    // alert("Good Name");
     document.getElementById("video-142").innerHTML = "Good Name";
 } else {
-    alert("Bad");
+    // alert("Bad");
     document.getElementById("video-142").innerHTML = "bad Name & age";
 }
 
@@ -627,10 +627,10 @@ var video143name = "hossam",
     video143address = "KSA";
 
 if (video143age == 32 && video143name == "hossam" && video143address == "KSA") {
-    alert("Good");
+    // alert("Good");
     document.getElementById("video-143").innerHTML = "Good";
 } else {
-    alert("Bad");
+    // alert("Bad");
     document.getElementById("video-143").innerHTML = "Bad";
 }
 
@@ -645,10 +645,10 @@ if (
     video144name == "hossam" && // If The Name Value Is Osama And Data Type Is String Then True
     video144address == "KSA" // If The Address Value Is KSA And Data Type Is String Then True
 ) {
-    alert("Good Your Name Is " + name);
+    // alert("Good Your Name Is " + name);
     document.getElementById("video-144").innerHTML = "Good Your Name Is " + name;
 } else {
-    alert("Bad");
+    // alert("Bad");
     document.getElementById("video-144").innerHTML = "Bad Your Name Is " + name;
 }
 
@@ -665,13 +665,13 @@ if (
     video145name === "Hassan" ||
     video145address === "Egypt"
 ) {
-    alert("Good");
+    // alert("Good");
     document.getElementById("video-145").innerHTML = "good";
 } else {
-    alert("Bad");
+    // alert("Bad");
     document.getElementById("video-145").innerHTML = "bad";
 }
-/*********************** */
+// ====================================
 // video 15
 // function
 /*
@@ -681,7 +681,7 @@ if (
 function sayHi15() {
     "use strict";
 
-    alert("Hello From Function");
+    // alert("Hello From Function");
 
     document.getElementById("video-15").innerHTML = "Hello From Function";
 }
@@ -693,7 +693,7 @@ function sayHi151() {
     var video151myName = "Hossam";
 
     if (video151myName === "Hossam") {
-        alert("Hello " + video151myName + " From Inside The Function");
+        // alert("Hello " + video151myName + " From Inside The Function");
 
         document.getElementById("video-151").innerHTML = "Hello From Function";
     }
@@ -709,9 +709,9 @@ function sayHi152() {
     var video152myName = "Sayed";
 
     if (video152myName === "Osama") {
-        alert("Hello " + video152myName + " You Are Welcome");
+        // alert("Hello " + video152myName + " You Are Welcome");
     } else {
-        alert("Hello " + video152myName + " You Are Not Welcome");
+        // alert("Hello " + video152myName + " You Are Not Welcome");
     }
 }
 sayHi152();
@@ -1291,7 +1291,7 @@ video3414div.innerHTML =
     video34array5.concat(video34array6).join(" ") + " || add array to array";
 
 // طريقة البحث
-var video34array7 = ["cayan", "hossam", "rashad", "ahmed"];
+var video34array7 = ["Rovan", "hossam", "rashad", "ahmed"];
 video3415div.innerHTML = video34array7.indexOf("hossam");
 video3416div.innerHTML = video34array7.lastIndexOf("cayan");
 

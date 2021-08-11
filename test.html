@@ -21,12 +21,11 @@
             align-items: center;
             justify-content: space-around;
             position: fixed;
-            height: 30%;
+            height: 100%;
             background: rgb(202, 202, 202);
             width: 100%;
             top: 0;
             left: 0;
-            z-index: 500;
             font-size: 3rem;
             color: #f44336;
         }
@@ -47,7 +46,6 @@
             width: 100%;
             bottom: 0;
             left: 0;
-            z-index: 500;
         }
     </style>
     <link rel="stylesheet" href="css/plugin-download.css" />
@@ -56,13 +54,13 @@
 <body>
     <main class="main">
         <div class="parent-element-explain">
-            <div class="element-left" id="idName">a</div>
-            <div class="element-right" id="idName2">s</div>
+            <div class="element-left" id="output"></div>
+            <div class="element-right">
+                <input type="text" id="input" />
+                <button id="Click">Click</button>
+            </div>
         </div>
     </main>
-    <!-- <div class="parent-iframe">
-        <iframe src="javascript.html" frameborder="0" width="100%" height="100%"></iframe>
-    </div> -->
 
     <script src="js/test.js"></script>
     <script>

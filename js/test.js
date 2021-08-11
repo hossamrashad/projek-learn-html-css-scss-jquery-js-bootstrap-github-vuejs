@@ -8,19 +8,52 @@
 /*global ADSAFE, report, jslint, bitwise, node*/
 
 /*property charAt, slicexs*/
+var jqueryToAdd = document.createElement("script");
 
+jqueryToAdd.src =
+    "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js";
+
+document.getElementsByTagName("head")[0].appendChild(jqueryToAdd);
 /*jslint browser: true */
 /*global window */
-// ****
+// ==
 
-// Data Types
+/*
 
-// string
+  For Loop Syntax
 
-let stringName = `Rovan Hossam Rashad`;
+  for ( Initialization; Condition; Final Expression ) {
 
-let output = document.getElementById("idName");
+    // Statement
 
-output.innerHTML = stringName;
+  }
+  التهيئة: تم تنفيذه قبل الحلقة مرة واحدة
+  Initialization: Executed Before The Loop Once
+  الشرط: حدد الشرط لتشغيل الحلقة
+  Condition: Define The Condition To Run The Loop
+  التعبير النهائي: يتم تنفيذه في كل مرة يتم فيها تشغيل الكود
+  Final Expression: Executed EveryTime The Code Run
 
-console.log("Type of Data: " + typeof stringName);
+*/
+// Example Simple
+
+// ============================================
+/*
+  = بيحول الرقم الى استرانج
+  toString()
+  = بيخرجلك الراقم زاى اللى مكتوب فى علم الحاسوب 
+  toExponential()
+  = بيخراج العلامة الاس 
+  toFixed()
+  = بيخرج الرقم و بيشيل الاسترانج اللى بعدو 
+  parseInt()
+*/
+let number = 99.5;
+
+console.log(number);
+
+let numberToString = parseInt("99.55px");
+
+console.log(typeof numberToString);
+
+console.log(numberToString);
