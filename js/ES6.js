@@ -37,6 +37,8 @@ const
 // -- Function Scope
 // -- Block Scope
 
+// const { set } = require("lodash");
+
 // - Can Be ReDeclare
 // - Can't Be ReDeclare
 
@@ -61,10 +63,55 @@ const
   endsWith => string.endsWith(Search String, End Position = string.length)
 */
 
-// = Destructuring Array
+// = Set هى شبيها بى الاراى وهى عباره عن ابجاكت بتخزن فية البينات
+// = ملهوش كية زاى الابجاكت مبيقرارش القيمة مرتين
+// = السات متقدارش تخرج نوع واحد من العناصر اللى جواه لازم تخرج جميع العناصر اللى جوه الست
+// =
 
-const food = ["Burger", "Pizza", "Chicken", "Meat", "Rice"];
+let mySet = new Set("Hossam");
 
-const [one, , , four] = food;
+// = نوع البينات اللى بيخرجها الست
 
-console.log(`The Food I Love Is: ${one}, ${four}`);
+console.log(" نوع البينات اللى بيخرجها الست " + typeof mySet);
+
+let myArray1 = ["Hossam", "Rashad"];
+
+for (let i = 0; i < myArray1.length; i++) {
+    console.log(myArray1[i]);
+}
+
+// = تحويل السات الى اراي
+
+console.log(" تحويل السات الى اراي " + [...mySet]);
+
+let SetToArray = [...mySet];
+
+console.log(SetToArray);
+
+// =  عدد العناصر اللى فى السات
+
+console.log("عدد العناصر اللى فى السات " + mySet.size);
+
+// = اضافة الى السات
+
+mySet.add("Rashad");
+
+console.log(mySet);
+
+// = حزف من السات
+
+mySet.delete("s");
+
+console.log(mySet);
+
+// = اشيك فن وجود عنصار فى السات و النتيجة يا ترو يا فالس
+
+console.log(mySet.has("o"));
+
+// = بتفاضى جميع العناصر اللى جوة السات 
+
+mySet.clear();
+
+console.log(mySet);
+
+// console.log(myArray);
